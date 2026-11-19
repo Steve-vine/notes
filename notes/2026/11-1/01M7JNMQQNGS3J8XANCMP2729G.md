@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMQQNGS3J8XANCMP2729G
 created: 2026-11-16T17:14:27.445141Z
-updated: 2026-11-16T17:14:50.15021Z
+updated: 2026-11-19T11:07:27.519039Z
 type: task
-title: Evidence of how candidates are recruited for job openings (e.g. recruiting policies and procedures and/or third-party agreements for staffing) (A2)
+title: R-1747 Evidence of how candidates are recruited for job openings (e.g. recruiting policies and procedures and/or third-party agreements for staffing) (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 120
 sprint: sd4e4pf

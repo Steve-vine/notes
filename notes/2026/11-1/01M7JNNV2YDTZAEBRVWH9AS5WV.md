@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNV2YDTZAEBRVWH9AS5WV
 created: 2026-11-16T17:15:03.646186Z
-updated: 2026-11-16T17:15:23.766597Z
+updated: 2026-11-19T11:07:55.01774Z
 type: task
-title: Evidence that management reviews key executive and operational personnel job roles and access to verify no incompatible duties/access exists (A2)
+title: R-1760 Evidence that management reviews key executive and operational personnel job roles and access to verify no incompatible duties/access exists (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 155
 sprint: sd4e4pf

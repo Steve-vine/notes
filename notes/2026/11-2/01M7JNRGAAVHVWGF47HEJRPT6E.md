@@ -1,9 +1,9 @@
 ---
 id: 01M7JNRGAAVHVWGF47HEJRPT6E
 created: 2026-11-16T17:16:30.922751Z
-updated: 2026-11-16T17:17:07.998621Z
+updated: 2026-11-19T11:06:38.074149Z
 type: task
-title: Audit log settings with a recent log extract for in-scope VPNs (A2)
+title: R-1184 Audit log settings with a recent log extract for in-scope VPNs (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 231
 sprint: sc5vbx1

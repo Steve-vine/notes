@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQ94F74BK1MTPSFXE7VMT
 created: 2026-11-16T17:15:50.799858Z
-updated: 2026-11-16T17:16:14.819915Z
+updated: 2026-11-19T11:07:55.154664Z
 type: task
-title: For an example file/document marked as confidential, evidence of the file / directory access permissions and the list of users with access to the confidential file/document (A2)
+title: R-1770 For an example file/document marked as confidential, evidence of the file / directory access permissions and the list of users with access to the confidential file/document (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 190
 sprint: stn2s8y

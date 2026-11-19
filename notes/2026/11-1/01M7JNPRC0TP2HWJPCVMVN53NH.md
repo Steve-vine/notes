@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPRC0TP2HWJPCVMVN53NH
 created: 2026-11-16T17:15:33.632218Z
-updated: 2026-11-16T17:15:58.508207Z
+updated: 2026-11-19T11:06:51.281646Z
 type: task
-title: Master list of system components / Inventory listing noting owners of in-scope devices and systems (A2)
+title: R-1370 Master list of system components / Inventory listing noting owners of in-scope devices and systems (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 183
 sprint: sn6r5dg

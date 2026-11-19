@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQJC55YHDHWMSHH8NWHWW
 created: 2026-11-16T17:16:00.261964Z
-updated: 2026-11-16T17:16:29.599144Z
+updated: 2026-11-19T11:07:55.10057Z
 type: task
-title: Example communication (i.e. newsletter, email, or announcement) made to both internal and external users regarding a change made to the system within the review period (A2)
+title: R-1427 Example communication (i.e. newsletter, email, or announcement) made to both internal and external users regarding a change made to the system within the review period (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 208
 sprint: s69k3fw

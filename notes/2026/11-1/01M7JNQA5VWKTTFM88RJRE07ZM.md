@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQA5VWKTTFM88RJRE07ZM
 created: 2026-11-16T17:15:51.867091Z
-updated: 2026-11-16T17:16:16.712644Z
+updated: 2026-11-19T11:06:31.103486Z
 type: task
-title: Job descriptions with revision date/revision history for applicable job roles within the organization and evidence of how those job descriptions are made available/communicated to employees (see A-LIGN's Guidance for further details on applicable job roles) (S2)(A1)(ST1-SOC)
+title: R-1019 Job descriptions with revision date/revision history for applicable job roles within the organization and evidence of how those job descriptions are made available/communicated to employees (see A-LIGN's Guidance for further details on applicable job roles) (S2)(A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 199
 sprint: sd4e4pf

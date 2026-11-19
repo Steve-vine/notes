@@ -1,9 +1,9 @@
 ---
 id: 01M7JNN8TPNCV7TKSRM0FRAWYB
 created: 2026-11-16T17:14:44.950378Z
-updated: 2026-11-16T17:14:51.89652Z
+updated: 2026-11-19T11:07:58.183506Z
 type: task
-title: User listings with roles and permissions for in-scope internal networks (e.g. Office 365, Google Workspace, Okta, Active Directory) and production networks (e.g. AWS IAM, Azure Active Directory) (S2)(A2)
+title: R-1157 User listings with roles and permissions for in-scope internal networks (e.g. Office 365, Google Workspace, Okta, Active Directory) and production networks (e.g. AWS IAM, Azure Active Directory) (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 139
 sprint: sz7xd2c

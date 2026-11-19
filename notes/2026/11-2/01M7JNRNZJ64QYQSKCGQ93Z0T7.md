@@ -1,9 +1,9 @@
 ---
 id: 01M7JNRNZJ64QYQSKCGQ93Z0T7
 created: 2026-11-16T17:16:36.722028Z
-updated: 2026-11-16T17:17:08.076046Z
+updated: 2026-11-19T11:07:01.089281Z
 type: task
-title: Encryption in transit configurations for all applicable data transfer points (i.e. VPN, SSH, SSL, TLS, SMTP, etc.) (S2)(A1)(ST1-SOC)
+title: R-1219 Encryption in transit configurations for all applicable data transfer points (i.e. VPN, SSH, SSL, TLS, SMTP, etc.) (S2)(A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 238
 sprint: s0wffw6

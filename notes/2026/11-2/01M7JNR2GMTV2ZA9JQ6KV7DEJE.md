@@ -1,9 +1,9 @@
 ---
 id: 01M7JNR2GMTV2ZA9JQ6KV7DEJE
 created: 2026-11-16T17:16:16.788099Z
-updated: 2026-11-16T17:16:46.671292Z
+updated: 2026-11-19T11:07:58.150239Z
 type: task
-title: Training materials and/or third-party agreement with outside vendor for security awareness training and applicable job responsibility training (A1)(ST1-SOC)
+title: R-1029 Training materials and/or third-party agreement with outside vendor for security awareness training and applicable job responsibility training (A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 219
 sprint: s7ebf5e

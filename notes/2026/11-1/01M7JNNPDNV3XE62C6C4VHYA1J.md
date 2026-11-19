@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNPDNV3XE62C6C4VHYA1J
 created: 2026-11-16T17:14:58.869176Z
-updated: 2026-11-16T17:15:22.318145Z
+updated: 2026-11-19T11:07:27.608196Z
 type: task
-title: Evidence that changes to commitments, requirements, and responsibilities are communicated to third parties, contractors, and customers via updated agreements, website notices, or mass notifications (A2)
+title: R-1754 Evidence that changes to commitments, requirements, and responsibilities are communicated to third parties, contractors, and customers via updated agreements, website notices, or mass notifications (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 151
 sprint: sykt8f6

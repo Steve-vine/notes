@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPENV0X96JAYR3SMTQNVG
 created: 2026-11-16T17:15:23.70707Z
-updated: 2026-11-16T17:15:50.778915Z
+updated: 2026-11-19T11:07:25.235818Z
 type: task
-title: Provide a list of all security control failures/gaps related to any security process and/or control that have occurred within the review period.
+title: P-135 Provide a list of all security control failures/gaps related to any security process and/or control that have occurred within the review period.
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 169
 sprint: speeeth

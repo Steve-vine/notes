@@ -1,9 +1,9 @@
 ---
 id: 01M7JNRF7K660QMKDG3932PMW0
 created: 2026-11-16T17:16:29.811125Z
-updated: 2026-11-16T17:17:05.088304Z
+updated: 2026-11-19T11:07:58.006777Z
 type: task
-title: Sample of HVAC maintenance and test reports for the defined frequency (S2)(A2)
+title: R-1440 Sample of HVAC maintenance and test reports for the defined frequency (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 229
 sprint: sxwytm0

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMHMVXCRE0CVR71EAT3NY
 created: 2026-11-16T17:14:21.21156Z
-updated: 2026-11-16T17:14:27.435117Z
+updated: 2026-11-19T11:07:00.797179Z
 type: task
-title: Backup notifications or backup log showing backup completions for the defined frequency (A1)
+title: R-1285 Backup notifications or backup log showing backup completions for the defined frequency (A1)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 118
 sprint: sxwytm0

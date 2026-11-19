@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQM99WC9DAHWGA1HR1E9R
 created: 2026-11-16T17:16:02.217582Z
-updated: 2026-11-16T17:16:21.781545Z
+updated: 2026-11-19T11:06:37.884621Z
 type: task
-title: Account lockout settings for in-scope production applications (S2)(A2)
+title: R-1176 Account lockout settings for in-scope production applications (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 210
 sprint: sz7xd2c

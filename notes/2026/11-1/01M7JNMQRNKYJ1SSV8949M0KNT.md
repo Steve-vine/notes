@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMQRNKYJ1SSV8949M0KNT
 created: 2026-11-16T17:14:27.477807Z
-updated: 2026-11-16T17:15:03.61444Z
+updated: 2026-11-19T11:07:25.24625Z
 type: task
-title: Provide an example backup log for each frequency (monthly and incremental)
+title: R-1286 Provide an example backup log for each frequency (monthly and incremental)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 121
 sprint: sxwytm0

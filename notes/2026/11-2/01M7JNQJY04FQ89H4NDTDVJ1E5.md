@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQJY04FQ89H4NDTDVJ1E5
 created: 2026-11-16T17:16:00.832901Z
-updated: 2026-11-16T17:16:29.629099Z
+updated: 2026-11-19T11:07:27.408581Z
 type: task
-title: Environmental Security policies and procedures (A1)(ST1-SOC)
+title: R-1436 Environmental Security policies and procedures (A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 209
 sprint: sxwytm0

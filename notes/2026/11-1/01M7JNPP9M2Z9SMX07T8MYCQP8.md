@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPP9M2Z9SMX07T8MYCQP8
 created: 2026-11-16T17:15:31.508948Z
-updated: 2026-11-16T17:15:50.749003Z
+updated: 2026-11-19T11:07:58.201012Z
 type: task
-title: User listings with roles and permissions for in-scope production databases (S2)(A2)
+title: R-1167 User listings with roles and permissions for in-scope production databases (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 177
 sprint: sz7xd2c

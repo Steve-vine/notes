@@ -1,9 +1,9 @@
 ---
 id: 01M7JNRF8WAY7DSYSEF1F5FDAB
 created: 2026-11-16T17:16:29.852486Z
-updated: 2026-11-16T17:17:05.143079Z
+updated: 2026-11-19T11:07:58.029741Z
 type: task
-title: Sample of UPS maintenance and test reports for the defined frequency (S2)(A2)
+title: R-1441 Sample of UPS maintenance and test reports for the defined frequency (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 230
 sprint: sxwytm0

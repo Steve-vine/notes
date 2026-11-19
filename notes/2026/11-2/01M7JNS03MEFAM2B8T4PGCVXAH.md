@@ -1,9 +1,9 @@
 ---
 id: 01M7JNS03MEFAM2B8T4PGCVXAH
 created: 2026-11-16T17:16:47.092015Z
-updated: 2026-11-16T17:17:01.694319Z
+updated: 2026-11-19T11:07:58.051294Z
 type: task
-title: Screenshot of the change control software settings showing that an alert is triggered when a change is implemented (i.e. pushed or promoted) to the production environment (with an example alert) (A2)
+title: R-1961 Screenshot of the change control software settings showing that an alert is triggered when a change is implemented (i.e. pushed or promoted) to the production environment (with an example alert) (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 244
 sprint: s69k3fw

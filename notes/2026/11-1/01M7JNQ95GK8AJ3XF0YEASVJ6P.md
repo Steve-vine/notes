@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQ95GK8AJ3XF0YEASVJ6P
 created: 2026-11-16T17:15:50.832976Z
-updated: 2026-11-16T17:16:15.21845Z
+updated: 2026-11-19T11:07:01.070778Z
 type: task
-title: Employee manual/handbook and code of conduct (with revision history) (A1)(ST1-SOC)
+title: R-1000 Employee manual/handbook and code of conduct (with revision history) (A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 191
 sprint: sd4e4pf

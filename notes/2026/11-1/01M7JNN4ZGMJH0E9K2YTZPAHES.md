@@ -1,9 +1,9 @@
 ---
 id: 01M7JNN4ZGMJH0E9K2YTZPAHES
 created: 2026-11-16T17:14:41.008097Z
-updated: 2026-11-16T17:15:03.732108Z
+updated: 2026-11-19T11:07:25.190812Z
 type: task
-title: Physical security policies and procedures, with revision date (S2)(A1)(ST1-SOC)
+title: R-1296 Physical security policies and procedures, with revision date (S2)(A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 134
 sprint: sz7xd2c

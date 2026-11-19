@@ -1,9 +1,9 @@
 ---
 id: 01M7JNSY9JVG0FT3YXM22J88C1
 created: 2026-11-16T17:17:18.002916Z
-updated: 2026-11-16T17:17:32.646616Z
+updated: 2026-11-19T11:07:00.985035Z
 type: task
-title: Contractor contract, SLA and/or service agreement template (S2)(A2)
+title: R-1973 Contractor contract, SLA and/or service agreement template (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 268
 sprint: sykt8f6

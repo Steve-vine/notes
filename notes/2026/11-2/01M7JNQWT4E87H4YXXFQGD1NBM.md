@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQWT4E87H4YXXFQGD1NBM
 created: 2026-11-16T17:16:10.948544Z
-updated: 2026-11-16T17:16:23.348554Z
+updated: 2026-11-19T11:07:25.143127Z
 type: task
-title: Password or authentication settings for in-scope VPNs (include screenshots of MFA in use if applicable) (S2)(A2)
+title: R-1182 Password or authentication settings for in-scope VPNs (include screenshots of MFA in use if applicable) (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 214
 sprint: sz7xd2c

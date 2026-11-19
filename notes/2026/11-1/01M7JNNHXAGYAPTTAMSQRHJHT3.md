@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNHXAGYAPTTAMSQRHJHT3
 created: 2026-11-16T17:14:54.250646Z
-updated: 2026-11-16T17:15:21.850136Z
+updated: 2026-11-19T11:06:51.097538Z
 type: task
-title: 'List of all system changes made during the review period, to include: - all in-scope production database changes (e.g. adding and removing data tables, and schema changes) - all in-scope operating system changes (e.g. patches and security updates)'
+title: 'P-20 List of all system changes made during the review period, to include: - all in-scope production database changes (e.g. adding and removing data tables, and schema changes) - all in-scope operating system changes (e.g. patches and security updates)'
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 143
 sprint: s69k3fw

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNN5138M9EWM08MWN5CBZ7
 created: 2026-11-16T17:14:41.059515Z
-updated: 2026-11-16T17:14:51.246674Z
+updated: 2026-11-19T11:06:31.089135Z
 type: task
-title: Internal controls matrix outlining entity controls in place and the respective owners of those controls (A1)(S1-9001)(ST1-SOC)
+title: R-1150 Internal controls matrix outlining entity controls in place and the respective owners of those controls (A1)(S1-9001)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 135
 sprint: sd4e4pf

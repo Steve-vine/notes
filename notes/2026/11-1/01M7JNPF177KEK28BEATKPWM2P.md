@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPF177KEK28BEATKPWM2P
 created: 2026-11-16T17:15:24.071613Z
-updated: 2026-11-16T17:15:50.727799Z
+updated: 2026-11-19T11:07:27.529843Z
 type: task
-title: Evidence of purchased insurance to offset a financial loss that could result from a security incident or vulnerability (A2)
+title: R-1768 Evidence of purchased insurance to offset a financial loss that could result from a security incident or vulnerability (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 174
 sprint: sg94dr8

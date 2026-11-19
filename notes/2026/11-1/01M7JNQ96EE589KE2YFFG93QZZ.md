@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQ96EE589KE2YFFG93QZZ
 created: 2026-11-16T17:15:50.862273Z
-updated: 2026-11-16T17:16:14.855172Z
+updated: 2026-11-19T11:07:55.137738Z
 type: task
-title: For an example change made to a system as a result of a capacity constraint/issue, evidence the change was documented, authorized, tested, and approved (A2)
+title: R-1771 For an example change made to a system as a result of a capacity constraint/issue, evidence the change was documented, authorized, tested, and approved (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 192
 sprint: sxwytm0

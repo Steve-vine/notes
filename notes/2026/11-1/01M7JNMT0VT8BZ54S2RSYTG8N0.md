@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMT0VT8BZ54S2RSYTG8N0
 created: 2026-11-16T17:14:29.787825Z
-updated: 2026-11-16T17:15:03.665339Z
+updated: 2026-11-19T11:07:58.13213Z
 type: task
-title: Third-party backup vendor (cloud or colocation) contract and most recent attestation report (S2)(A2)
+title: R-1287 Third-party backup vendor (cloud or colocation) contract and most recent attestation report (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 122
 sprint: sxwytm0

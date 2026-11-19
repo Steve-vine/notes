@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNV28TYYT91BE6S7TA494
 created: 2026-11-16T17:15:03.62498Z
-updated: 2026-11-16T17:15:16.606068Z
+updated: 2026-11-19T11:07:58.209303Z
 type: task
-title: User listings with roles and permissions for in-scope production servers (S2)(A2)
+title: R-1162 User listings with roles and permissions for in-scope production servers (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 154
 sprint: sz7xd2c

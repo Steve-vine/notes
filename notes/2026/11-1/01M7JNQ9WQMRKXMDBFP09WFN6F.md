@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQ9WQMRKXMDBFP09WFN6F
 created: 2026-11-16T17:15:51.575976Z
-updated: 2026-11-16T17:16:15.235448Z
+updated: 2026-11-19T11:07:27.442581Z
 type: task
-title: Evidence (e.g. meeting minutes, management reports, management notes, a PowerPoint deck, emails) that management reviews the methods of collecting personal information before they are implemented (A2)
+title: R-1775 Evidence (e.g. meeting minutes, management reports, management notes, a PowerPoint deck, emails) that management reviews the methods of collecting personal information before they are implemented (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 194
 sprint: s3ng44v

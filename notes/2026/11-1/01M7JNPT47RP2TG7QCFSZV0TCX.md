@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPT47RP2TG7QCFSZV0TCX
 created: 2026-11-16T17:15:35.431333Z
-updated: 2026-11-16T17:15:51.551794Z
+updated: 2026-11-19T11:06:37.897307Z
 type: task
-title: Account lockout settings for in-scope production databases (S2)(A2)
+title: R-1170 Account lockout settings for in-scope production databases (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 186
 sprint: sz7xd2c

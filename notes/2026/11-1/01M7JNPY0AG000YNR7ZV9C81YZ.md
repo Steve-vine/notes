@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPY0AG000YNR7ZV9C81YZ
 created: 2026-11-16T17:15:39.402678Z
-updated: 2026-11-16T17:15:51.796831Z
+updated: 2026-11-19T11:07:01.035363Z
 type: task
-title: Database schema info for in-scope production databases
+title: R-1172 Database schema info for in-scope production databases
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 188
 sprint: s0wffw6

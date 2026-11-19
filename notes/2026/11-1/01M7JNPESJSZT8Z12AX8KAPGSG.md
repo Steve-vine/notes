@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPESJSZT8Z12AX8KAPGSG
 created: 2026-11-16T17:15:23.826225Z
-updated: 2026-11-16T17:15:44.717695Z
+updated: 2026-11-19T11:07:58.110102Z
 type: task
-title: System generated listing of users with access to backup media and/or vendor provided listing of users with the ability to recall backup media from third party storage facility (A2)
+title: R-1761 System generated listing of users with access to backup media and/or vendor provided listing of users with the ability to recall backup media from third party storage facility (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 170
 sprint: sxwytm0

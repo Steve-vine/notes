@@ -1,9 +1,9 @@
 ---
 id: 01M7JNS22H54P5MPWPRHZE089X
 created: 2026-11-16T17:16:49.105135Z
-updated: 2026-11-16T17:17:05.114249Z
+updated: 2026-11-19T11:07:25.030261Z
 type: task
-title: Most recently completed vendor risk assessment (S2)(A1)
+title: R-1971 Most recently completed vendor risk assessment (S2)(A1)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 247
 sprint: sykt8f6

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNR7DSY0GXSZ86BH7DCX5J
 created: 2026-11-16T17:16:21.81714Z
-updated: 2026-11-16T17:16:51.216828Z
+updated: 2026-11-19T11:07:00.996358Z
 type: task
-title: Customer contract, SLA, and/or service agreement template used to provide to customers of services you provide (S2)(A2)
+title: R-1045 Customer contract, SLA, and/or service agreement template used to provide to customers of services you provide (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 225
 sprint: sykt8f6

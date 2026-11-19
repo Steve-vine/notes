@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNZ5JSDVVYBKG3YR1PRM1
 created: 2026-11-16T17:15:07.826211Z
-updated: 2026-11-16T17:15:18.588645Z
+updated: 2026-11-19T11:07:25.132701Z
 type: task
-title: Password or authentication settings for in-scope production servers (include screenshots of MFA in use if applicable) (S2)(A2)
+title: R-1164 Password or authentication settings for in-scope production servers (include screenshots of MFA in use if applicable) (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 159
 sprint: sz7xd2c

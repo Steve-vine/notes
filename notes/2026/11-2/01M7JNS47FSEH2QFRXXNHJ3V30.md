@@ -1,9 +1,9 @@
 ---
 id: 01M7JNS47FSEH2QFRXXNHJ3V30
 created: 2026-11-16T17:16:51.311829Z
-updated: 2026-11-16T17:17:13.126328Z
+updated: 2026-11-19T11:07:27.368733Z
 type: task
-title: Entity's most recent strategy and objective meetings notes or illustrations with corresponding budget plans (A1) (S1-9001)(ST1-SOC)
+title: R-1056 Entity's most recent strategy and objective meetings notes or illustrations with corresponding budget plans (A1) (S1-9001)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 251
 sprint: sd4e4pf

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQGQVDQC2BWT1FD1WGV7Q
 created: 2026-11-16T17:15:58.587724Z
-updated: 2026-11-16T17:16:29.397638Z
+updated: 2026-11-19T11:06:51.220651Z
 type: task
-title: List of users with the ability to develop / build changes (S2)(A1)(ST1-SOC)
+title: R-1420 List of users with the ability to develop / build changes (S2)(A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 202
 sprint: s69k3fw

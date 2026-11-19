@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPHDXCQ0W33PB34XM41P4
 created: 2026-11-16T17:15:26.525479Z
-updated: 2026-11-16T17:15:50.71374Z
+updated: 2026-11-19T11:06:38.066048Z
 type: task
-title: Audit log settings with a recent log extract for in-scope production servers (S2)(A2)
+title: R-1166 Audit log settings with a recent log extract for in-scope production servers (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 176
 sprint: sc5vbx1

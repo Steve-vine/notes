@@ -1,9 +1,9 @@
 ---
 id: 01M7JNS21NGFQW2YQHZ2F2FP8S
 created: 2026-11-16T17:16:49.077921Z
-updated: 2026-11-16T17:17:08.222484Z
+updated: 2026-11-19T11:07:55.187163Z
 type: task
-title: IDS/IPS configurations for network perimeter and at critical network points that include configuration of alert notifications with an example alert message (S2)(A1)(ST1-SOC)
+title: R-1248 IDS/IPS configurations for network perimeter and at critical network points that include configuration of alert notifications with an example alert message (S2)(A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 246
 sprint: s0wffw6

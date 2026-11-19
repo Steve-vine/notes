@@ -1,9 +1,9 @@
 ---
 id: 01M7JNN2A24470QPSRFFRE5FKQ
 created: 2026-11-16T17:14:38.274786Z
-updated: 2026-11-16T17:15:03.713735Z
+updated: 2026-11-19T11:07:25.056503Z
 type: task
-title: Offsite data replication configuration settings (A2)
+title: R-1290 Offsite data replication configuration settings (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 130
 sprint: sxwytm0

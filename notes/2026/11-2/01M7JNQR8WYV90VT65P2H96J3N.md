@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQR8WYV90VT65P2H96J3N
 created: 2026-11-16T17:16:06.300853Z
-updated: 2026-11-16T17:16:22.335099Z
+updated: 2026-11-19T11:07:58.218684Z
 type: task
-title: User listings with roles and permissions for in-scope VPNs (S2)(A2)
+title: R-1180 User listings with roles and permissions for in-scope VPNs (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 212
 sprint: sz7xd2c

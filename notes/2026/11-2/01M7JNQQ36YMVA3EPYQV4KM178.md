@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQQ36YMVA3EPYQV4KM178
 created: 2026-11-16T17:16:05.09457Z
-updated: 2026-11-16T17:16:21.885597Z
+updated: 2026-11-19T11:06:38.049329Z
 type: task
-title: Audit log settings with a recent log extract for in-scope production applications (S2)(A2)
+title: R-1177 Audit log settings with a recent log extract for in-scope production applications (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 211
 sprint: sc5vbx1

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNRZWA1ACJW0SSA14WV1Q1
 created: 2026-11-16T17:16:46.85886Z
-updated: 2026-11-16T17:17:08.197594Z
+updated: 2026-11-19T11:07:00.959999Z
 type: task
-title: Configuration settings of the centralized antivirus console including the scan schedule, update settings, and update log (S2)(A2)
+title: R-1238 Configuration settings of the centralized antivirus console including the scan schedule, update settings, and update log (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 243
 sprint: s0wffw6

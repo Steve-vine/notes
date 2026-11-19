@@ -1,9 +1,9 @@
 ---
 id: 01M7JNS08S2H3PQQVSNXM12N8W
 created: 2026-11-16T17:16:47.257969Z
-updated: 2026-11-16T17:17:01.734229Z
+updated: 2026-11-19T11:07:55.110447Z
 type: task
-title: Executive management job descriptions (e.g. President, CIO, CTO, CEO, CFO, etc.) and evidence they were reviewed annually (A2)
+title: R-1970 Executive management job descriptions (e.g. President, CIO, CTO, CEO, CFO, etc.) and evidence they were reviewed annually (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 245
 sprint: sd4e4pf

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNRD9TCV1H8HW7ESB2M7XE
 created: 2026-11-16T17:16:27.834725Z
-updated: 2026-11-16T17:17:07.934821Z
+updated: 2026-11-19T11:06:37.923499Z
 type: task
-title: Account lockout settings for in-scope VPNs (S2)(A2)
+title: R-1183 Account lockout settings for in-scope VPNs (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 226
 sprint: sz7xd2c

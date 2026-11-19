@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNP6MDJGF1MAHXQERSQ95
 created: 2026-11-16T17:14:58.644997Z
-updated: 2026-11-16T17:15:21.945892Z
+updated: 2026-11-19T11:06:51.136089Z
 type: task
-title: List of all transferred or reassigned employees during the review period
+title: P-28 List of all transferred or reassigned employees during the review period
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 150
 sprint: speeeth

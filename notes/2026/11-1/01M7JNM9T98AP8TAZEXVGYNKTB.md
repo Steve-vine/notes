@@ -1,9 +1,9 @@
 ---
 id: 01M7JNM9T98AP8TAZEXVGYNKTB
 created: 2026-11-16T17:14:13.193897Z
-updated: 2026-11-16T17:14:25.037221Z
+updated: 2026-11-19T11:07:27.573883Z
 type: task
-title: Evidence that a Network Address Translation (NAT) is used to place system components behind a proxy server and/or remove or filter route advertisements (A2)
+title: R-1267 Evidence that a Network Address Translation (NAT) is used to place system components behind a proxy server and/or remove or filter route advertisements (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 102
 sprint: s0wffw6

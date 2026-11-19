@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMGYJKCCGFF39K4ZXYDEC
 created: 2026-11-16T17:14:20.498799Z
-updated: 2026-11-16T17:14:25.177843Z
+updated: 2026-11-19T11:06:38.111371Z
 type: task
-title: Backup configurations for databases holding critical information, including the notification settings and an example backup alert (S2)(A1)(ST1-SOC)
+title: R-1284 Backup configurations for databases holding critical information, including the notification settings and an example backup alert (S2)(A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 114
 sprint: sxwytm0

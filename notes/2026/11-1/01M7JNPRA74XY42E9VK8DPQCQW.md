@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPRA74XY42E9VK8DPQCQW
 created: 2026-11-16T17:15:33.575065Z
-updated: 2026-11-16T17:15:58.479872Z
+updated: 2026-11-19T11:07:25.221743Z
 type: task
-title: Procedures for information labeling (e.g. PII labeling) and evidence of labeling in accordance with the procedure, with revision date (S2)(A2)
+title: R-1363 Procedures for information labeling (e.g. PII labeling) and evidence of labeling in accordance with the procedure, with revision date (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 182
 sprint: stn2s8y

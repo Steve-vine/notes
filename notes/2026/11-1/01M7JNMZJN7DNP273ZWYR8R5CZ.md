@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMZJN7DNP273ZWYR8R5CZ
 created: 2026-11-16T17:14:35.477963Z
-updated: 2026-11-16T17:15:03.688388Z
+updated: 2026-11-19T11:07:00.84013Z
 type: task
-title: Backup replication configurations and an example backup replication completion log and/or invoices or receipts from offsite backup vendor showing proof of backup rotations for the defined frequency (A2)
+title: R-1289 Backup replication configurations and an example backup replication completion log and/or invoices or receipts from offsite backup vendor showing proof of backup rotations for the defined frequency (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 126
 sprint: sxwytm0

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQ9Y82NMYV90TGQRKGBAT
 created: 2026-11-16T17:15:51.62411Z
-updated: 2026-11-16T17:16:15.342048Z
+updated: 2026-11-19T11:07:01.044Z
 type: task
-title: Disciplinary/Sanctions policies and procedures (S2)(A2)
+title: R-1005 Disciplinary/Sanctions policies and procedures (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 195
 sprint: sd4e4pf

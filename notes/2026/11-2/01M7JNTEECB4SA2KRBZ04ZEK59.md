@@ -1,9 +1,9 @@
 ---
 id: 01M7JNTEECB4SA2KRBZ04ZEK59
 created: 2026-11-16T17:17:34.540453Z
-updated: 2026-11-16T17:17:39.246002Z
+updated: 2026-11-19T11:07:55.089119Z
 type: task
-title: Example change ticket of an incident that required a permanent fix
+title: R-2279 Example change ticket of an incident that required a permanent fix
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 277
 sprint: sg94dr8

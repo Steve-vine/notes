@@ -1,9 +1,9 @@
 ---
 id: 01M7JNRTM3QGAFQNGXM2661265
 created: 2026-11-16T17:16:41.475231Z
-updated: 2026-11-16T17:17:08.147432Z
+updated: 2026-11-19T11:07:25.27373Z
 type: task
-title: Removable media configurations (A2)
+title: R-1233 Removable media configurations (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 240
 sprint: stn2s8y

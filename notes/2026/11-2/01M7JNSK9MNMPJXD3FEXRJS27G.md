@@ -1,9 +1,9 @@
 ---
 id: 01M7JNSK9MNMPJXD3FEXRJS27G
 created: 2026-11-16T17:17:06.740567Z
-updated: 2026-11-16T17:17:19.087228Z
+updated: 2026-11-19T11:06:51.291997Z
 type: task
-title: Mobile Device Policy and Configuration Standards Documentation, with revision date (S2)(A2)
+title: R-1473 Mobile Device Policy and Configuration Standards Documentation, with revision date (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 262
 sprint: s0wffw6

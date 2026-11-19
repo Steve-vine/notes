@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPD1V20A35NV71C05DKAH
 created: 2026-11-16T17:15:22.043478Z
-updated: 2026-11-16T17:15:45.212203Z
+updated: 2026-11-19T11:06:51.271759Z
 type: task
-title: Master asset inventory list for in-scope systems that includes all systems connected to the network and the network devices themselves (e.g. routers, switches, firewalls, VOIP telephones, printers, removable devices (USBs, CDs, etc.), laptops, desktops, digital media, backup media, SANs, physical and virtual servers, databases, approved BYOD devices, authorized WAP, etc.) *Will be used by the assessor for sampling of device configuration/hardening reviews
+title: P-38 Master asset inventory list for in-scope systems that includes all systems connected to the network and the network devices themselves (e.g. routers, switches, firewalls, VOIP telephones, printers, removable devices (USBs, CDs, etc.), laptops, desktops, digital media, backup media, SANs, physical and virtual servers, databases, approved BYOD devices, authorized WAP, etc.) *Will be used by the assessor for sampling of device configuration/hardening reviews
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 165
 sprint: sn6r5dg

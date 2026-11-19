@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMCW8252J0XG959YD6CDZ
 created: 2026-11-16T17:14:16.328894Z
-updated: 2026-11-16T17:14:25.049196Z
+updated: 2026-11-19T11:06:38.083387Z
 type: task
-title: Authentication policies and procedures (include password and lockout requirements), with revision date (S2)(A2)
+title: R-1535 Authentication policies and procedures (include password and lockout requirements), with revision date (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 106
 sprint: sz7xd2c

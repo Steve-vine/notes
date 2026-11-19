@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNZ7T0JFZGQM78V6G4C94
 created: 2026-11-16T17:15:07.89888Z
-updated: 2026-11-16T17:15:31.597431Z
+updated: 2026-11-19T11:07:58.254344Z
 type: task
-title: Visitor logs for all applicable areas of the facility (i.e. front entrance, server rooms/closets, data center, call centers, etc.) (A2)
+title: R-1306 Visitor logs for all applicable areas of the facility (i.e. front entrance, server rooms/closets, data center, call centers, etc.) (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 161
 sprint: sz7xd2c

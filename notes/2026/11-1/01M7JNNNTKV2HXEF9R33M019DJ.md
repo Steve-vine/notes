@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNNTKV2HXEF9R33M019DJ
 created: 2026-11-16T17:14:58.259914Z
-updated: 2026-11-16T17:15:16.416941Z
+updated: 2026-11-19T11:06:37.867296Z
 type: task
-title: Account lockout settings for in-scope internal networks (e.g. Office 365, Google Workspace, Okta, Active Directory) and production networks (e.g. AWS IAM, Azure Active Directory) (S2)(A2)
+title: R-1160 Account lockout settings for in-scope internal networks (e.g. Office 365, Google Workspace, Okta, Active Directory) and production networks (e.g. AWS IAM, Azure Active Directory) (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 149
 sprint: sz7xd2c

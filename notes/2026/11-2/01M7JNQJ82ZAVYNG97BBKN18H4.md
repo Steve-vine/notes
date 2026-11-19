@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQJ82ZAVYNG97BBKN18H4
 created: 2026-11-16T17:16:00.130482Z
-updated: 2026-11-16T17:16:29.535537Z
+updated: 2026-11-19T11:07:55.053835Z
 type: task
-title: Evidence that prior code is maintained in a code repository for rollback capabilities and/or evidence of version control (A2)
+title: R-1426 Evidence that prior code is maintained in a code repository for rollback capabilities and/or evidence of version control (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 207
 sprint: s69k3fw

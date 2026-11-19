@@ -1,9 +1,9 @@
 ---
 id: 01M7JNSK83WMKANGAAPCS2HQ9R
 created: 2026-11-16T17:17:06.691921Z
-updated: 2026-11-16T17:17:19.009799Z
+updated: 2026-11-19T11:07:58.090899Z
 type: task
-title: System configuration standard documents or "system hardening procedure documentation" for all in-scope system types (include router, firewall, servers (web, database, application, POS servers, etc.) (S1)(A2)
+title: R-1469 System configuration standard documents or "system hardening procedure documentation" for all in-scope system types (include router, firewall, servers (web, database, application, POS servers, etc.) (S1)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 261
 sprint: s0wffw6

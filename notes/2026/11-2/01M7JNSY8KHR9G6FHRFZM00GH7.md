@@ -1,9 +1,9 @@
 ---
 id: 01M7JNSY8KHR9G6FHRFZM00GH7
 created: 2026-11-16T17:17:17.971099Z
-updated: 2026-11-16T17:17:19.981646Z
+updated: 2026-11-19T11:07:55.120041Z
 type: task
-title: Firewall ruleset configuration (S2)(A2)
+title: R-1264 Firewall ruleset configuration (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 267
 sprint: s0wffw6

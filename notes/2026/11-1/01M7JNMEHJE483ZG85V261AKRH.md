@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMEHJE483ZG85V261AKRH
 created: 2026-11-16T17:14:18.034199Z
-updated: 2026-11-16T17:14:28.375792Z
+updated: 2026-11-19T11:06:31.150016Z
 type: task
-title: List of all current employees during the review period that includes job title and hire dates
+title: P-6 List of all current employees during the review period that includes job title and hire dates
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 109
 sprint: speeeth

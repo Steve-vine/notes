@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPRH3N9F79NFD8GDJNBXQ
 created: 2026-11-16T17:15:33.795118Z
-updated: 2026-11-16T17:15:58.559889Z
+updated: 2026-11-19T11:07:00.895138Z
 type: task
-title: Change management policies and procedures, with revision date (S2)(A1)(ST1-SOC)
+title: R-1397 Change management policies and procedures, with revision date (S2)(A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 185
 sprint: s69k3fw

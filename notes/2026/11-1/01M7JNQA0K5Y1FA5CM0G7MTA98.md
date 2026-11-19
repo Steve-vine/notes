@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQA0K5Y1FA5CM0G7MTA98
 created: 2026-11-16T17:15:51.699145Z
-updated: 2026-11-16T17:16:15.306895Z
+updated: 2026-11-19T11:07:55.167793Z
 type: task
-title: For an example third party that collects personal information, screenshot/evidence of the third party's website showing that the third party that collects personal information is a reliable source that collects information fairly and lawfully (A2)(ST1-SOC)
+title: R-1776 For an example third party that collects personal information, screenshot/evidence of the third party's website showing that the third party that collects personal information is a reliable source that collects information fairly and lawfully (A2)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 196
 sprint: s3ng44v

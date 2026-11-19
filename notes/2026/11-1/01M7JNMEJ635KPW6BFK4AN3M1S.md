@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMEJ635KPW6BFK4AN3M1S
 created: 2026-11-16T17:14:18.054511Z
-updated: 2026-11-16T17:14:25.105307Z
+updated: 2026-11-19T11:07:58.071737Z
 type: task
-title: Security logging policies and procedures, with revision date (A2)(S1-IRAP)
+title: R-1553 Security logging policies and procedures, with revision date (A2)(S1-IRAP)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 110
 sprint: sc5vbx1

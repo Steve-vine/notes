@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQJ50H0P9SCHC222EEF3H
 created: 2026-11-16T17:16:00.03264Z
-updated: 2026-11-16T17:16:29.499682Z
+updated: 2026-11-19T11:07:00.946944Z
 type: task
-title: Configuration evidence of change detection mechanism (e.g. File integrity monitoring (FIM) or Code Repository configurations, including the notification settings and an example alert) (A1)(ST1-SOC)
+title: R-1425 Configuration evidence of change detection mechanism (e.g. File integrity monitoring (FIM) or Code Repository configurations, including the notification settings and an example alert) (A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 206
 sprint: s69k3fw

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPEW7P98NAS1VGH1R4Y2M
 created: 2026-11-16T17:15:23.911087Z
-updated: 2026-11-16T17:15:50.221744Z
+updated: 2026-11-19T11:07:25.089791Z
 type: task
-title: ONLY IF CONFIDENTIALITY OR PRIVACY CATEGORIES ARE IN SCOPE Evidence showing that confidential and/or personal data are not used in development activities (e.g. data masking software, fictitious data, etc.) (A2)
+title: R-1766 ONLY IF CONFIDENTIALITY OR PRIVACY CATEGORIES ARE IN SCOPE Evidence showing that confidential and/or personal data are not used in development activities (e.g. data masking software, fictitious data, etc.) (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 172
 sprint: s69k3fw

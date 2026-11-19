@@ -1,9 +1,9 @@
 ---
 id: 01M7JNS463TNBE4K3GKXE5XHE6
 created: 2026-11-16T17:16:51.267082Z
-updated: 2026-11-16T17:17:13.091287Z
+updated: 2026-11-19T11:07:58.166775Z
 type: task
-title: Up-to-date registry of regulatory, statutory, and contractual requirements (A2)
+title: R-1053 Up-to-date registry of regulatory, statutory, and contractual requirements (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 250
 sprint: sd4e4pf

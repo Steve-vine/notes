@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNCCYM0QGT25VV47RH17G
 created: 2026-11-16T17:14:48.606069Z
-updated: 2026-11-16T17:15:21.789599Z
+updated: 2026-11-19T11:06:31.139567Z
 type: task
-title: List of all company owned laptops and/or BYOD devices utilized within or that can connect to the in-scope environments (this list could include out-of-scope components used to MFA into the in-scope environment).
+title: P-15 List of all company owned laptops and/or BYOD devices utilized within or that can connect to the in-scope environments (this list could include out-of-scope components used to MFA into the in-scope environment).
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 141
 sprint: s0wffw6

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNRHB0A6JR8Y2BMG6TNYTW
 created: 2026-11-16T17:16:31.96878Z
-updated: 2026-11-16T17:17:08.024145Z
+updated: 2026-11-19T11:07:27.284812Z
 type: task
-title: Encryption policies and procedures, with revision date (S2)(A2)
+title: R-1216 Encryption policies and procedures, with revision date (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 235
 sprint: s0wffw6

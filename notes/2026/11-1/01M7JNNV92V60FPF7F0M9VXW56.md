@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNV92V60FPF7F0M9VXW56
 created: 2026-11-16T17:15:03.842722Z
-updated: 2026-11-16T17:15:31.484075Z
+updated: 2026-11-19T11:06:51.211973Z
 type: task
-title: List of users that can administer the facilities badge access system (S2)(A2)
+title: R-1298 List of users that can administer the facilities badge access system (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 157
 sprint: sz7xd2c

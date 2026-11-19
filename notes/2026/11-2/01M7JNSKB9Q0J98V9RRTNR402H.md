@@ -1,9 +1,9 @@
 ---
 id: 01M7JNSKB9Q0J98V9RRTNR402H
 created: 2026-11-16T17:17:06.793728Z
-updated: 2026-11-16T17:17:19.135009Z
+updated: 2026-11-19T11:07:55.128779Z
 type: task
-title: Firewall/Router and/or other network security control (NSC) configuration policies, procedures, and related standards with revision dates (A2)
+title: R-1499 Firewall/Router and/or other network security control (NSC) configuration policies, procedures, and related standards with revision dates (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 263
 sprint: s0wffw6

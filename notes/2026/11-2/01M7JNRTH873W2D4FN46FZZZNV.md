@@ -1,9 +1,9 @@
 ---
 id: 01M7JNRTH873W2D4FN46FZZZNV
 created: 2026-11-16T17:16:41.384571Z
-updated: 2026-11-16T17:17:08.121921Z
+updated: 2026-11-19T11:07:25.282735Z
 type: task
-title: Removable media policies and procedures, with revision date (S2)(A2)(S1-IRAP)
+title: R-1232 Removable media policies and procedures, with revision date (S2)(A2)(S1-IRAP)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 239
 sprint: stn2s8y

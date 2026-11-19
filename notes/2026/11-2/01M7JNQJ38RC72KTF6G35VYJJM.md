@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQJ38RC72KTF6G35VYJJM
 created: 2026-11-16T17:15:59.976726Z
-updated: 2026-11-16T17:16:21.703229Z
+updated: 2026-11-19T11:07:25.112062Z
 type: task
-title: Password or authentication settings for in-scope production applications (include screenshots of MFA in use if applicable) (S2)(A2)
+title: R-1175 Password or authentication settings for in-scope production applications (include screenshots of MFA in use if applicable) (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 205
 sprint: sz7xd2c

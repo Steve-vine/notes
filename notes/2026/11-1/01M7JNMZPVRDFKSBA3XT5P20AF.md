@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMZPVRDFKSBA3XT5P20AF
 created: 2026-11-16T17:14:35.611832Z
-updated: 2026-11-16T17:14:51.574327Z
+updated: 2026-11-19T11:07:55.077667Z
 type: task
-title: Evidence that training needs for employees are assessed annually (A2)
+title: R-1750 Evidence that training needs for employees are assessed annually (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 128
 sprint: s7ebf5e

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQ93736E4VEYFJCGNDTCP
 created: 2026-11-16T17:15:50.759077Z
-updated: 2026-11-16T17:16:14.755214Z
+updated: 2026-11-19T11:07:25.067725Z
 type: task
-title: ONLY IF CONFIDENTIALITY OR PRIVACY CATEGORIES ARE IN SCOPE Evidence (e.g. meeting minutes, evaluation forms, reports, notes, a tracking tool/spreadsheet, a PowerPoint deck, or emails, etc.) that management evaluates third party agreements, compliance and performances annually (A2)
+title: R-1769 ONLY IF CONFIDENTIALITY OR PRIVACY CATEGORIES ARE IN SCOPE Evidence (e.g. meeting minutes, evaluation forms, reports, notes, a tracking tool/spreadsheet, a PowerPoint deck, or emails, etc.) that management evaluates third party agreements, compliance and performances annually (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 189
 sprint: sykt8f6

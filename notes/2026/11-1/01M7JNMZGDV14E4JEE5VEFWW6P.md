@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMZGDV14E4JEE5VEFWW6P
 created: 2026-11-16T17:14:35.405678Z
-updated: 2026-11-16T17:14:43.858025Z
+updated: 2026-11-19T11:06:51.173668Z
 type: task
-title: List of complaints from data subjects during the review period
+title: P-10 List of complaints from data subjects during the review period
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 125
 sprint: s3ng44v

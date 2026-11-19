@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMZMYYANTKP37P6NN736C
 created: 2026-11-16T17:14:35.550159Z
-updated: 2026-11-16T17:14:49.979843Z
+updated: 2026-11-19T11:07:58.23698Z
 type: task
-title: Vendor Management policies and procedures, with revision date (A1)(S1-IRAP)(ST1-SOC)
+title: R-1141 Vendor Management policies and procedures, with revision date (A1)(S1-IRAP)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 127
 sprint: sykt8f6

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPR612XVTFY53DBTHWSB1
 created: 2026-11-16T17:15:33.441023Z
-updated: 2026-11-16T17:15:50.852639Z
+updated: 2026-11-19T11:07:25.123099Z
 type: task
-title: Password or authentication settings for in-scope production databases (include screenshots of MFA in use if applicable) (S2)(A2)
+title: R-1169 Password or authentication settings for in-scope production databases (include screenshots of MFA in use if applicable) (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 180
 sprint: sz7xd2c

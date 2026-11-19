@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPPE5M70HBA7V4MAAW6KK
 created: 2026-11-16T17:15:31.65335Z
-updated: 2026-11-16T17:15:58.276396Z
+updated: 2026-11-19T11:07:01.025602Z
 type: task
-title: Data Retention and Disposal policies and procedures, with revision date (S2)(A1)(F1)(ST1-SOC)
+title: R-1352 Data Retention and Disposal policies and procedures, with revision date (S2)(A1)(F1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 179
 sprint: stn2s8y

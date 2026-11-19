@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNM3T5V4JCBN0E2TX3JCW
 created: 2026-11-16T17:14:56.506675Z
-updated: 2026-11-16T17:15:22.213676Z
+updated: 2026-11-19T11:07:27.463094Z
 type: task
-title: Evidence (e.g. meeting minutes, reports, notes, PowerPoint deck, emails, etc.) that executive management met with operational management annually to discuss the entity's objectives as well as roles and responsibilities (A2)
+title: R-1753 Evidence (e.g. meeting minutes, reports, notes, PowerPoint deck, emails, etc.) that executive management met with operational management annually to discuss the entity's objectives as well as roles and responsibilities (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 147
 sprint: sd4e4pf

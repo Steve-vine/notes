@@ -1,9 +1,9 @@
 ---
 id: 01M7JNSZ9V7BQD7ZX7QNAFDCTM
 created: 2026-11-16T17:17:19.035127Z
-updated: 2026-11-16T17:17:27.330476Z
+updated: 2026-11-19T11:07:58.018836Z
 type: task
-title: Sample of internal and external vulnerability scan reports for the defined frequency (S2)(A1)(S1-IRAP)(ST1-SOC)
+title: R-1089 Sample of internal and external vulnerability scan reports for the defined frequency (S2)(A1)(S1-IRAP)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 275
 sprint: sp7gyt3

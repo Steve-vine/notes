@@ -1,9 +1,9 @@
 ---
 id: 01M7JNN27MTECFAZR7HT08RKJ1
 created: 2026-11-16T17:14:38.196748Z
-updated: 2026-11-16T17:14:44.307533Z
+updated: 2026-11-19T11:06:51.202686Z
 type: task
-title: List of requests for deletion of personal information from data subjects during the review period
+title: P-11 List of requests for deletion of personal information from data subjects during the review period
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 129
 sprint: s3ng44v

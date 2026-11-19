@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMBEPHW514535VWSPEJEK
 created: 2026-11-16T17:14:14.870594Z
-updated: 2026-11-16T17:14:25.081157Z
+updated: 2026-11-19T11:07:27.563649Z
 type: task
-title: Evidence that a DMZ is established to limit inbound and outbound traffic to only protocols that are necessary for the covered data environment (A2)
+title: R-1273 Evidence that a DMZ is established to limit inbound and outbound traffic to only protocols that are necessary for the covered data environment (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 105
 sprint: s0wffw6

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPG65HGNTXVKXGR2474QX
 created: 2026-11-16T17:15:25.25378Z
-updated: 2026-11-16T17:15:50.680905Z
+updated: 2026-11-19T11:06:37.911037Z
 type: task
-title: Account lockout settings for in-scope production servers (S2)(A2)
+title: R-1165 Account lockout settings for in-scope production servers (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 175
 sprint: sz7xd2c

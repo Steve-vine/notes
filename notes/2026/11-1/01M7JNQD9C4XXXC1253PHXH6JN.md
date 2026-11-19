@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQD9C4XXXC1253PHXH6JN
 created: 2026-11-16T17:15:55.052415Z
-updated: 2026-11-16T17:16:20.425349Z
+updated: 2026-11-19T11:07:58.19239Z
 type: task
-title: User listings with roles and permissions for in-scope production applications (S2)(A2)
+title: R-1173 User listings with roles and permissions for in-scope production applications (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 200
 sprint: sz7xd2c

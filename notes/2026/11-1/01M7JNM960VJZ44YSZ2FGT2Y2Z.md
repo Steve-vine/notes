@@ -1,9 +1,9 @@
 ---
 id: 01M7JNM960VJZ44YSZ2FGT2Y2Z
 created: 2026-11-16T17:14:12.544791Z
-updated: 2026-11-17T12:09:53.288345Z
+updated: 2026-11-19T11:07:55.20324Z
 type: task
-title: Information Security policies and procedures, with revision date (S1)(A1)
+title: R-1105 Information Security policies and procedures, with revision date (S1)(A1)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 101
 sprint: sz7xd2c

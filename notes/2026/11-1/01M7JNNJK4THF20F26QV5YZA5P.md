@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNJK4THF20F26QV5YZA5P
 created: 2026-11-16T17:14:54.948437Z
-updated: 2026-11-16T17:15:16.395435Z
+updated: 2026-11-19T11:07:25.100717Z
 type: task
-title: Password or authentication settings for in-scope internal networks (e.g. Office 365, Google Workspace, Okta, Active Directory) and production networks (e.g. AWS IAM, Azure Active Directory) (include screenshots of MFA in use if applicable) (S2)(A2)
+title: R-1159 Password or authentication settings for in-scope internal networks (e.g. Office 365, Google Workspace, Okta, Active Directory) and production networks (e.g. AWS IAM, Azure Active Directory) (include screenshots of MFA in use if applicable) (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 146
 sprint: sz7xd2c

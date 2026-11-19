@@ -1,9 +1,9 @@
 ---
 id: 01M7JNSJXB4J34WQKWQT3KA4T5
 created: 2026-11-16T17:17:06.34762Z
-updated: 2026-11-16T17:17:17.991783Z
+updated: 2026-11-19T11:06:38.031389Z
 type: task
-title: Artifact that shows how the privacy notice is made available to external parties and data subjects and how changes to the policy are communicated (A2)
+title: R-1460 Artifact that shows how the privacy notice is made available to external parties and data subjects and how changes to the policy are communicated (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 257
 sprint: s3ng44v

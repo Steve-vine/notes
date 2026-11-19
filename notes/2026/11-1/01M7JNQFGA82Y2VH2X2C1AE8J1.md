@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQFGA82Y2VH2X2C1AE8J1
 created: 2026-11-16T17:15:57.322271Z
-updated: 2026-11-16T17:16:21.627708Z
+updated: 2026-11-19T11:06:37.963185Z
 type: task
-title: Admin listings with roles and permissions for in-scope production applications (A2)
+title: R-1174 Admin listings with roles and permissions for in-scope production applications (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 201
 sprint: sz7xd2c

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNV19QPJMNE8M9A5P5YKF
 created: 2026-11-16T17:15:03.593466Z
-updated: 2026-11-16T17:15:23.499872Z
+updated: 2026-11-19T11:07:25.200183Z
 type: task
-title: Policies and procedures related to identifying relevant statutory, regulatory, legislative, legal, and contractual requirements (A2)
+title: R-1756 Policies and procedures related to identifying relevant statutory, regulatory, legislative, legal, and contractual requirements (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 153
 sprint: sd4e4pf

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNSSPVX05JXCM02Y7G83PF
 created: 2026-11-16T17:17:13.307038Z
-updated: 2026-11-16T17:17:26.782327Z
+updated: 2026-11-19T11:07:27.34826Z
 type: task
-title: Entity's most recent risk assessment (S1)(A1)(S1-9001)
+title: R-1066 Entity's most recent risk assessment (S1)(A1)(S1-9001)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 266
 sprint: s2vt8zv

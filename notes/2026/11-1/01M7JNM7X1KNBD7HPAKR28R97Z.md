@@ -1,9 +1,9 @@
 ---
 id: 01M7JNM7X1KNBD7HPAKR28R97Z
 created: 2026-11-16T17:14:11.233221Z
-updated: 2026-11-16T17:14:13.214564Z
+updated: 2026-11-19T11:07:25.161896Z
 type: task
-title: Patch update configurations and evidence of an example system patching run
+title: R-1520 Patch update configurations and evidence of an example system patching run
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 100
 sprint: s69k3fw

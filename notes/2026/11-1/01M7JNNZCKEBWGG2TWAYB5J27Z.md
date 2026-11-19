@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNZCKEBWGG2TWAYB5J27Z
 created: 2026-11-16T17:15:08.051826Z
-updated: 2026-11-16T17:15:31.615505Z
+updated: 2026-11-19T11:07:58.245842Z
 type: task
-title: Video surveillance system retention configurations and oldest video image saved (A2)
+title: R-1311 Video surveillance system retention configurations and oldest video image saved (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 162
 sprint: sz7xd2c

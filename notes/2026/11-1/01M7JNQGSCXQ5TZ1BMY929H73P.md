@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQGSCXQ5TZ1BMY929H73P
 created: 2026-11-16T17:15:58.636491Z
-updated: 2026-11-16T17:16:29.43131Z
+updated: 2026-11-19T11:06:51.229507Z
 type: task
-title: List of users with the ability to promote / implement changes to the production environment (A1)(ST1-SOC)
+title: R-1422 List of users with the ability to promote / implement changes to the production environment (A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 203
 sprint: s69k3fw

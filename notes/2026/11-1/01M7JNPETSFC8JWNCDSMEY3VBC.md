@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPETSFC8JWNCDSMEY3VBC
 created: 2026-11-16T17:15:23.865123Z
-updated: 2026-11-16T17:15:45.115699Z
+updated: 2026-11-19T11:07:55.030031Z
 type: task
-title: Evidence that mobile devices (laptops, smart phones) used for accessing the in-scope system/environment are secured/protected using encrypted connections (e.g. SSL, TLS, VPN) (A2)
+title: R-1762 Evidence that mobile devices (laptops, smart phones) used for accessing the in-scope system/environment are secured/protected using encrypted connections (e.g. SSL, TLS, VPN) (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 171
 sprint: s0wffw6

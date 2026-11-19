@@ -1,9 +1,9 @@
 ---
 id: 01M7JNN4YD92PRZNYMC2JQ9WPC
 created: 2026-11-16T17:14:40.973968Z
-updated: 2026-11-16T17:14:44.975943Z
+updated: 2026-11-19T11:06:51.041172Z
 type: task
-title: List of all network security control ruleset changes (e.g. changes to the configurations of the firewalls, security groups, routers, or other network security controls utilized).
+title: P-13 List of all network security control ruleset changes (e.g. changes to the configurations of the firewalls, security groups, routers, or other network security controls utilized).
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 133
 sprint: s0wffw6

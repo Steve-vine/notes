@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPCZEMJ783YXVB63G28EW
 created: 2026-11-16T17:15:21.966268Z
-updated: 2026-11-16T17:15:45.064603Z
+updated: 2026-11-19T11:06:51.238285Z
 type: task
-title: List of vulnerabilities and deviations that required remediation during the review period
+title: P-29 List of vulnerabilities and deviations that required remediation during the review period
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 164
 sprint: sp7gyt3

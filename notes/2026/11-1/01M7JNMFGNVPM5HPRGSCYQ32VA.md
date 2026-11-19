@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMFGNVPM5HPRGSCYQ32VA
 created: 2026-11-16T17:14:19.029879Z
-updated: 2026-11-16T17:14:25.488185Z
+updated: 2026-11-19T11:07:24.970925Z
 type: task
-title: Most recent BCP, disaster recovery and/or contingency plan test results with applicable corrective action plans (S2)(A1)(ST1-SOC)
+title: R-1125 Most recent BCP, disaster recovery and/or contingency plan test results with applicable corrective action plans (S2)(A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 112
 sprint: sxwytm0

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNDSYHM2PVY7HTAX6905B
 created: 2026-11-16T17:14:50.046917Z
-updated: 2026-11-16T17:15:21.828646Z
+updated: 2026-11-19T11:06:51.078714Z
 type: task
-title: List of all new hires (with new hire date) during the review period
+title: P-18 List of all new hires (with new hire date) during the review period
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 142
 sprint: speeeth

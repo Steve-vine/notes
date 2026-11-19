@@ -1,9 +1,9 @@
 ---
 id: 01M7JNS40705C4PGFJ5S3CZFKC
 created: 2026-11-16T17:16:51.079909Z
-updated: 2026-11-16T17:17:08.248968Z
+updated: 2026-11-19T11:07:25.043508Z
 type: task
-title: Network diagrams that accurately documents all connections between in-scope environment and other networks (including connected wireless networks) and showing all network security controls (NSC's) protecting and segmenting the production servers, workstations, and other critical components under review (S2)(A1)(S1-IRAP)(ST1-SOC)
+title: R-1262 Network diagrams that accurately documents all connections between in-scope environment and other networks (including connected wireless networks) and showing all network security controls (NSC's) protecting and segmenting the production servers, workstations, and other critical components under review (S2)(A1)(S1-IRAP)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 248
 sprint: s0wffw6

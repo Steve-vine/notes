@@ -1,9 +1,9 @@
 ---
 id: 01M7JNS423ZEH74QMK43JCZWP0
 created: 2026-11-16T17:16:51.13989Z
-updated: 2026-11-16T17:17:05.16945Z
+updated: 2026-11-19T11:07:25.014629Z
 type: task
-title: Most recently completed fraud assessment (A2)
+title: R-1972 Most recently completed fraud assessment (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 249
 sprint: sd4e4pf

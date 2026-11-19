@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMFC1XAA6V8Y0YTJBQBET
 created: 2026-11-16T17:14:18.881025Z
-updated: 2026-11-16T17:14:28.840066Z
+updated: 2026-11-19T11:06:31.159934Z
 type: task
-title: List of all customers during the review period
+title: P-7 List of all customers during the review period
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 111
 sprint: sykt8f6

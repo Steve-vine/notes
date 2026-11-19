@@ -1,9 +1,9 @@
 ---
 id: 01M7JNR7B3W58KPK4KR4YMWF5A
 created: 2026-11-16T17:16:21.731266Z
-updated: 2026-11-16T17:16:51.063225Z
+updated: 2026-11-19T11:07:25.256091Z
 type: task
-title: Provide currently maintained data flow diagrams and/or process flowcharts that accurately narrates the relevant internal and external information sources and information flow across systems and networks (A1)(ST1-SOC)
+title: R-1040 Provide currently maintained data flow diagrams and/or process flowcharts that accurately narrates the relevant internal and external information sources and information flow across systems and networks (A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 224
 sprint: stn2s8y

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNR2J5BE5V054CWQ89BSQH
 created: 2026-11-16T17:16:16.837403Z
-updated: 2026-11-16T17:16:41.660345Z
+updated: 2026-11-19T11:07:27.49071Z
 type: task
-title: Evidence (e.g. reviewed reports, emails, evidence of a review/check, validation checklist, etc.) to determine that compliance with the privacy notice is reviewed and documented annually and the results of that review are provided to management (A2)
+title: R-1781 Evidence (e.g. reviewed reports, emails, evidence of a review/check, validation checklist, etc.) to determine that compliance with the privacy notice is reviewed and documented annually and the results of that review are provided to management (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 220
 sprint: s3ng44v

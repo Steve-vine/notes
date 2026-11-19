@@ -1,9 +1,9 @@
 ---
 id: 01M7JNSZ5X5WESWZY2S49WQQ9N
 created: 2026-11-16T17:17:18.909481Z
-updated: 2026-11-16T17:17:27.305585Z
+updated: 2026-11-19T11:07:55.211968Z
 type: task
-title: Internal and external vulnerability scanning policies and procedures, with revision date (A2)
+title: R-1088 Internal and external vulnerability scanning policies and procedures, with revision date (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 273
 sprint: sp7gyt3

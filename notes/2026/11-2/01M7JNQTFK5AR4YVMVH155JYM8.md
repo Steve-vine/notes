@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQTFK5AR4YVMVH155JYM8
 created: 2026-11-16T17:16:08.563736Z
-updated: 2026-11-16T17:16:22.485504Z
+updated: 2026-11-19T11:06:37.997789Z
 type: task
-title: Admin listings with roles and permissions for in-scope VPNs (A2)
+title: R-1181 Admin listings with roles and permissions for in-scope VPNs (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 213
 sprint: sz7xd2c

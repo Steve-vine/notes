@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNV9ZEBCGFPADSEG7Q39J
 created: 2026-11-16T17:15:03.871781Z
-updated: 2026-11-16T17:15:31.547586Z
+updated: 2026-11-19T11:07:58.175214Z
 type: task
-title: User listing for the badge access system with zone assignments (S2)(A2)
+title: R-1299 User listing for the badge access system with zone assignments (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 158
 sprint: sz7xd2c

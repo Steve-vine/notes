@@ -1,9 +1,9 @@
 ---
 id: 01M7JNSKCTM21EE90J516T9M2X
 created: 2026-11-16T17:17:06.842373Z
-updated: 2026-11-16T17:17:20.017692Z
+updated: 2026-11-19T11:07:25.152074Z
 type: task
-title: Patch Management policies and procedures, with revision date (S1-IRAP)
+title: R-1517 Patch Management policies and procedures, with revision date (S1-IRAP)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 264
 sprint: s0wffw6

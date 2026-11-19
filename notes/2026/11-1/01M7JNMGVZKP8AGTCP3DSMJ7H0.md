@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMGVZKP8AGTCP3DSMJ7H0
 created: 2026-11-16T17:14:20.415937Z
-updated: 2026-11-16T17:14:25.166078Z
+updated: 2026-11-19T11:07:00.97363Z
 type: task
-title: Configuration to only store and transmit encrypted representations of passwords (A2)
+title: R-1581 Configuration to only store and transmit encrypted representations of passwords (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 113
 sprint: s0wffw6

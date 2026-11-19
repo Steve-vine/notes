@@ -1,9 +1,9 @@
 ---
 id: 01M7JNSYBA9QF846N0CDGSJYWF
 created: 2026-11-16T17:17:18.058551Z
-updated: 2026-11-16T17:17:32.852331Z
+updated: 2026-11-19T11:07:55.065786Z
 type: task
-title: Evidence that the in-scope networks are properly segmented from each other (A2)
+title: R-1974 Evidence that the in-scope networks are properly segmented from each other (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 270
 sprint: s0wffw6

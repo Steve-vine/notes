@@ -1,9 +1,9 @@
 ---
 id: 01M7JNSK0V0TWTSS5XN2RMAGPE
 created: 2026-11-16T17:17:06.459698Z
-updated: 2026-11-16T17:17:18.0478Z
+updated: 2026-11-19T11:07:27.551548Z
 type: task
-title: Evidence showing that data subjects are given access to their personal information in a understandable format and can make changes to their personal information upon request (A2)
+title: R-1464 Evidence showing that data subjects are given access to their personal information in a understandable format and can make changes to their personal information upon request (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 258
 sprint: s3ng44v

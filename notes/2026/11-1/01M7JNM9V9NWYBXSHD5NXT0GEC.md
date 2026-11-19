@@ -1,9 +1,9 @@
 ---
 id: 01M7JNM9V9NWYBXSHD5NXT0GEC
 created: 2026-11-16T17:14:13.225507Z
-updated: 2026-11-16T17:14:16.277803Z
+updated: 2026-11-19T11:06:31.127512Z
 type: task
-title: List of all Business Associates (e.g. employees, contractors, or agents) that handle sensitive information, including PHI and PII, during the review period
+title: P-2 List of all Business Associates (e.g. employees, contractors, or agents) that handle sensitive information, including PHI and PII, during the review period
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 103
 sprint: speeeth

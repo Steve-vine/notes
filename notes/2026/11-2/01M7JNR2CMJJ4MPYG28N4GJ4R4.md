@@ -1,9 +1,9 @@
 ---
 id: 01M7JNR2CMJJ4MPYG28N4GJ4R4
 created: 2026-11-16T17:16:16.660116Z
-updated: 2026-11-16T17:16:41.569972Z
+updated: 2026-11-19T11:07:27.478836Z
 type: task
-title: Evidence (e.g. reviewed reports, emails, evidence of a review/check, validation checklist) to determine that the tool used to track and record detected or reported unauthorized disclosures of personal information was reviewed annually for completeness and accuracy (A2)
+title: R-1779 Evidence (e.g. reviewed reports, emails, evidence of a review/check, validation checklist) to determine that the tool used to track and record detected or reported unauthorized disclosures of personal information was reviewed annually for completeness and accuracy (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 217
 sprint: s3ng44v

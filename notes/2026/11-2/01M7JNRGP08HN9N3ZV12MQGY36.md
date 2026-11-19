@@ -1,9 +1,9 @@
 ---
 id: 01M7JNRGP08HN9N3ZV12MQGY36
 created: 2026-11-16T17:16:31.296876Z
-updated: 2026-11-16T17:17:05.194741Z
+updated: 2026-11-19T11:07:57.969063Z
 type: task
-title: Sample of fire suppression system maintenance and test reports for the defined frequency (S2)(A2)
+title: R-1442 Sample of fire suppression system maintenance and test reports for the defined frequency (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 232
 sprint: sxwytm0

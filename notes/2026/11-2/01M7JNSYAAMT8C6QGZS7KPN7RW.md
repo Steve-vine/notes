@@ -1,9 +1,9 @@
 ---
 id: 01M7JNSYAAMT8C6QGZS7KPN7RW
 created: 2026-11-16T17:17:18.02651Z
-updated: 2026-11-16T17:17:26.807506Z
+updated: 2026-11-19T11:07:58.061782Z
 type: task
-title: Screenshots of the various monitoring systems in place that are used to monitor for performance, capacity, security threats, changing resource utilization needs and unusual system activity with the notification settings and example notifications that were sent from those systems (S2)(A1)(ST1-SOC)
+title: R-1078 Screenshots of the various monitoring systems in place that are used to monitor for performance, capacity, security threats, changing resource utilization needs and unusual system activity with the notification settings and example notifications that were sent from those systems (S2)(A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 269
 sprint: sc5vbx1

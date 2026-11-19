@@ -1,9 +1,9 @@
 ---
 id: 01M7JNSK3RCMCT3MMQQBVFVWE3
 created: 2026-11-16T17:17:06.552336Z
-updated: 2026-11-16T17:17:18.718927Z
+updated: 2026-11-19T11:07:27.540918Z
 type: task
-title: Evidence showing a data subject being denied access to update their personal information (i.e. screenshot of error message prompt, email, notification, etc.) (A2)
+title: R-1465 Evidence showing a data subject being denied access to update their personal information (i.e. screenshot of error message prompt, email, notification, etc.) (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 259
 sprint: s3ng44v

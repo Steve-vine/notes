@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPF0B80PQ6VYFG670EPF0
 created: 2026-11-16T17:15:24.043444Z
-updated: 2026-11-16T17:15:50.691986Z
+updated: 2026-11-19T11:07:25.079595Z
 type: task
-title: ONLY IF CONFIDENTIALITY OR PRIVACY CATEGORIES ARE IN SCOPE Evidence of approval from appropriate data owners / management for any instances of the use of production, confidential and/or personal information in nonproduction environments (A2)
+title: R-1767 ONLY IF CONFIDENTIALITY OR PRIVACY CATEGORIES ARE IN SCOPE Evidence of approval from appropriate data owners / management for any instances of the use of production, confidential and/or personal information in nonproduction environments (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 173
 sprint: s69k3fw

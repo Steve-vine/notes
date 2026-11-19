@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNZ66A50TN8P18KFERZKH
 created: 2026-11-16T17:15:07.846707Z
-updated: 2026-11-16T17:15:31.579465Z
+updated: 2026-11-19T11:07:25.265046Z
 type: task
-title: Recent activity log from the badge access system (A2)
+title: R-1300 Recent activity log from the badge access system (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 160
 sprint: sz7xd2c

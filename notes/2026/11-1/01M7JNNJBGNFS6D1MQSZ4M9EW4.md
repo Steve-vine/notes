@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNJBGNFS6D1MQSZ4M9EW4
 created: 2026-11-16T17:14:54.704183Z
-updated: 2026-11-16T17:15:21.887948Z
+updated: 2026-11-19T11:06:51.110772Z
 type: task
-title: List of all terminated employees (with termination date) during the review period
+title: P-21 List of all terminated employees (with termination date) during the review period
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 145
 sprint: speeeth

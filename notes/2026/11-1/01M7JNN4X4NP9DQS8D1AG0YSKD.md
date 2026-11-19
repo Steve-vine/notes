@@ -1,9 +1,9 @@
 ---
 id: 01M7JNN4X4NP9DQS8D1AG0YSKD
 created: 2026-11-16T17:14:40.932793Z
-updated: 2026-11-16T17:14:50.480238Z
+updated: 2026-11-19T11:07:58.228059Z
 type: task
-title: Vendor contract, SLA and/or service agreement template (S2)(A2)
+title: R-1144 Vendor contract, SLA and/or service agreement template (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 131
 sprint: sykt8f6

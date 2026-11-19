@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNQ8PM2NG0RTQBEXF1DM4
 created: 2026-11-16T17:14:59.734326Z
-updated: 2026-11-16T17:15:16.579595Z
+updated: 2026-11-19T11:06:38.040576Z
 type: task
-title: Audit log settings with a recent log extract for in-scope internal networks (e.g. Office 365, Google Workspace, Okta, Active Directory) and production networks (e.g. AWS IAM, Azure Active Directory) (S2)(A2)
+title: R-1161 Audit log settings with a recent log extract for in-scope internal networks (e.g. Office 365, Google Workspace, Okta, Active Directory) and production networks (e.g. AWS IAM, Azure Active Directory) (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 152
 sprint: sc5vbx1

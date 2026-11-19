@@ -1,9 +1,9 @@
 ---
 id: 01M7JNNNRCP5KRP55ACH16AD9F
 created: 2026-11-16T17:14:58.188943Z
-updated: 2026-11-16T17:15:21.914674Z
+updated: 2026-11-19T11:06:51.147354Z
 type: task
-title: List of all vendors and contractors used for in-scope services during the review period
+title: P-22 List of all vendors and contractors used for in-scope services during the review period
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 148
 sprint: sykt8f6

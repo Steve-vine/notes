@@ -1,9 +1,9 @@
 ---
 id: 01M7JNMHFEG1Z5W1P2HTVNNJWA
 created: 2026-11-16T17:14:21.038437Z
-updated: 2026-11-16T17:14:29.90695Z
+updated: 2026-11-19T11:06:31.169019Z
 type: task
-title: List of all data disposals (e.g. system disposals, hardware purging, document destruction, etc.) during the review period
+title: P-8 List of all data disposals (e.g. system disposals, hardware purging, document destruction, etc.) during the review period
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 117
 sprint: stn2s8y

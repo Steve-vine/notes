@@ -1,9 +1,9 @@
 ---
 id: 01M7JNRKPGJ421ANTX8WR8V6M6
 created: 2026-11-16T17:16:34.384347Z
-updated: 2026-11-16T17:17:08.049396Z
+updated: 2026-11-19T11:07:01.079916Z
 type: task
-title: Encryption configurations for data at rest (e.g. DES, AES, Rivest Cipher, Diffie Hellman, ECC, RSA), including backups and removable media (S2)(A2)
+title: R-1218 Encryption configurations for data at rest (e.g. DES, AES, Rivest Cipher, Diffie Hellman, ECC, RSA), including backups and removable media (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 237
 sprint: s0wffw6

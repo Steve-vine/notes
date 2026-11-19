@@ -1,9 +1,9 @@
 ---
 id: 01M7JNPW5FM1TYYTAJ8QEGPBCW
 created: 2026-11-16T17:15:37.519658Z
-updated: 2026-11-16T17:15:51.674116Z
+updated: 2026-11-19T11:06:38.057716Z
 type: task
-title: Audit log settings with a recent log extract for in-scope production databases (S2)(A2)
+title: R-1171 Audit log settings with a recent log extract for in-scope production databases (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 187
 sprint: sc5vbx1

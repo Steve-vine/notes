@@ -1,9 +1,9 @@
 ---
 id: 01M7JNQ972G8TV6MA8QNB44QYP
 created: 2026-11-16T17:15:50.882579Z
-updated: 2026-11-16T17:16:15.271438Z
+updated: 2026-11-19T11:07:27.315831Z
 type: task
-title: Entity organizational chart that defines organizational structures, lines of reporting, and areas of authority (with revision history) (S2)(A1)
+title: R-1001 Entity organizational chart that defines organizational structures, lines of reporting, and areas of authority (with revision history) (S2)(A1)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 193
 sprint: sd4e4pf

@@ -1,9 +1,9 @@
 ---
 id: 01M7JNRF6118A30G6VQCH48MNY
 created: 2026-11-16T17:16:29.761251Z
-updated: 2026-11-16T17:17:01.719332Z
+updated: 2026-11-19T11:07:57.991625Z
 type: task
-title: Sample of generator maintenance and test reports for the defined frequency (S2)(A2)
+title: R-1439 Sample of generator maintenance and test reports for the defined frequency (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 228
 sprint: sxwytm0

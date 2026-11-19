@@ -1,9 +1,9 @@
 ---
 id: 01M7JNSK5YTAP3HZDQE5D982V1
 created: 2026-11-16T17:17:06.622549Z
-updated: 2026-11-16T17:17:18.88419Z
+updated: 2026-11-19T11:07:25.181707Z
 type: task
-title: Personal information repository, recordkeeping, or database showing a record of the personal information on file and a record of the personal information that was disclosed to third parties (A2)
+title: R-1466 Personal information repository, recordkeeping, or database showing a record of the personal information on file and a record of the personal information that was disclosed to third parties (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 260
 sprint: s3ng44v
