@@ -1,7 +1,7 @@
 ---
 id: 01M7JNSK9MNMPJXD3FEXRJS27G
 created: 2026-11-16T17:17:06.740567Z
-updated: 2026-11-19T11:06:51.291997Z
+updated: 2026-11-19T14:15:35.717197Z
 type: task
 title: R-1473 Mobile Device Policy and Configuration Standards Documentation, with revision date (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: system_operations
 soc2_core_control:
 - end_15
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1473
