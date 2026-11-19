@@ -1,7 +1,7 @@
 ---
 id: 01M7JNRHCHH3RC2QW1FNR4PCKT
 created: 2026-11-16T17:16:32.017221Z
-updated: 2026-11-19T11:07:25.209905Z
+updated: 2026-11-19T15:02:53.464593Z
 type: task
 title: R-1456 Privacy policies and procedures and/or Privacy Notice made available to external parties and data subjects (S2)(A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: privacy
 soc2_core_control:
 - pdh_23
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1456
