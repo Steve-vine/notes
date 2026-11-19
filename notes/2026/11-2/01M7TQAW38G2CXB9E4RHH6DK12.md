@@ -1,7 +1,7 @@
 ---
 id: 01M7TQAW38G2CXB9E4RHH6DK12
 created: 2026-11-19T20:17:56.840704Z
-updated: 2026-11-19T20:17:59.019921Z
+updated: 2026-11-19T21:27:40.018771Z
 type: task
 title: A picture's or diagram's settings open in a fixed floating panel on the right, readable with "Show as on paper"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Steve's smoke test of round 2: in the document editor, clicking an image or diagram opens a box under it. The box holds the alignment, the caption, and either the alt text or "Change the drawing".
 

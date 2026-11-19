@@ -1,17 +1,29 @@
 ---
 id: 01M7TPWG0WPB1AMEFC22YS3ZTH
 created: 2026-11-19T20:10:05.72418Z
-updated: 2026-11-19T21:01:19.376541Z
+updated: 2026-11-19T21:27:37.349027Z
 type: task
 title: A picture or diagram's resize handle sits on its bottom-right corner and follows it as it resizes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1997
 sprint: s6y6p7g
+comments:
+- id: 01M7TVACCGMMA51RMNNY1XS9D9
+  author: Steve Vine
+  at: 2026-11-19T21:27:35.0563Z
+  text: |-
+    Done — PR #1988, merged 58a6acc5.
+    A selected picture now has its round resize handle on its own bottom-right corner, on the picture itself, never by the caption or the settings under it. It stays on that corner while you drag, growing or shrinking, and afterwards.
+    Dragging keeps the picture's proportions (dragging down works as well as across) and the cursor is the diagonal one. A centred picture grows on both sides, so the corner follows the pointer.
+    This is one handle for every kind: uploaded images, drawings and text diagrams now; flowcharts use the same one when COM-1998 adds it. A text diagram can now be resized at all: while selected it shows its picture at its size, with the handle.
+    The size is saved exactly as before, so the Read tab, PDF and Word show it as before.
+    Assumptions: a Full width picture dragged smaller becomes centred at that size; a picture dragged to the column's whole width becomes Full width.
+    To check on staging: resize an image, a drawing and a text diagram, each with a caption, aligned left, centre, right and full width, and with "Show as on paper" on.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Steve's smoke test of round 2: in the document editor, images and diagrams have a round handle on the frame for resizing. As you shrink the picture, the handle doesn't move up with it, so it ends up below the now smaller picture.
 
