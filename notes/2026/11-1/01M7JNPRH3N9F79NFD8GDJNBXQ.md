@@ -1,7 +1,7 @@
 ---
 id: 01M7JNPRH3N9F79NFD8GDJNBXQ
 created: 2026-11-16T17:15:33.795118Z
-updated: 2026-11-19T11:07:00.895138Z
+updated: 2026-11-19T14:12:49.027405Z
 type: task
 title: R-1397 Change management policies and procedures, with revision date (S2)(A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: change_management
 soc2_core_control:
 - chm_1
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1397
