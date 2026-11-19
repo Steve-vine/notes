@@ -1,7 +1,7 @@
 ---
 id: 01M7JNR602XHS7JAJD586YEEH8
 created: 2026-11-16T17:16:20.354522Z
-updated: 2026-11-19T11:07:01.061997Z
+updated: 2026-11-19T11:18:34.73127Z
 type: task
 title: R-1033 Employee evaluation policies and procedures, with revision date (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: management
 soc2_core_control:
 - peo_12
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1033
