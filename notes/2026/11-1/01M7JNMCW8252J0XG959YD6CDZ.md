@@ -1,7 +1,7 @@
 ---
 id: 01M7JNMCW8252J0XG959YD6CDZ
 created: 2026-11-16T17:14:16.328894Z
-updated: 2026-11-19T11:06:38.083387Z
+updated: 2026-11-19T14:20:10.218397Z
 type: task
 title: R-1535 Authentication policies and procedures (include password and lockout requirements), with revision date (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: access_control
 soc2_core_control:
 - idm_12
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1535
