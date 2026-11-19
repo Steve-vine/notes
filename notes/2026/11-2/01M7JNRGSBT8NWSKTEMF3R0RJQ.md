@@ -1,7 +1,7 @@
 ---
 id: 01M7JNRGSBT8NWSKTEMF3R0RJQ
 created: 2026-11-16T17:16:31.403196Z
-updated: 2026-11-19T11:07:01.006424Z
+updated: 2026-11-19T14:14:23.411223Z
 type: task
 title: R-1454 Data classification policies and procedures, with revision date (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: data_management
 soc2_core_control:
 - inc_3
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1454
