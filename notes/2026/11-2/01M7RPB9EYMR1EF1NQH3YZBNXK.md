@@ -1,7 +1,7 @@
 ---
 id: 01M7RPB9EYMR1EF1NQH3YZBNXK
 created: 2026-11-19T01:22:13.086857Z
-updated: 2026-11-19T01:22:21.144202Z
+updated: 2026-11-19T01:24:02.468628Z
 type: task
 title: 'Leaving the Library reader returns to exactly where you were: no stray details pane, and a search keeps its results'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Found at pre-UAT of COM-1972 (staging 25f02b9c, 19 Nov). Since COM-1972, clicking a document opens the reader directly rather than the details pane, but the reader's own ways back still assume you came from the pane.
 
