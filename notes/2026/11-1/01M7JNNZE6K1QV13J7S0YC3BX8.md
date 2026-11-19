@@ -1,7 +1,7 @@
 ---
 id: 01M7JNNZE6K1QV13J7S0YC3BX8
 created: 2026-11-16T17:15:08.102275Z
-updated: 2026-11-19T11:07:55.177755Z
+updated: 2026-11-19T14:46:38.762742Z
 type: task
 title: R-1315 Hiring and termination policies and procedures, with revision date (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: access_control
 soc2_core_control:
 - peo_8
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1315
