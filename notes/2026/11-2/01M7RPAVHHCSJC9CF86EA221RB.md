@@ -1,7 +1,7 @@
 ---
 id: 01M7RPAVHHCSJC9CF86EA221RB
 created: 2026-11-19T01:21:58.83374Z
-updated: 2026-11-19T01:50:26.408524Z
+updated: 2026-11-19T02:48:49.73196Z
 type: task
 title: A green Library folder looks green, not the same as teal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,15 @@ comments:
     Checks: a new test makes sure all 13 folder colours look different from each other in both modes. Green and teal used to be identical. They are now well apart, and the leaf green is held to the same contrast standard as every other colour in the app.
 
     Assumption: the closest pair is now violet and grape in dark mode. They were already that close before this change, are still easy to tell apart, and I left them alone because they are also status colours.
+- id: 01M7RV9WA3R03ZK7GZKR9QKRJR
+  author: Steve Vine
+  at: 2026-11-19T02:48:49.731721Z
+  text: |-
+    Pre-UAT re-check (staging 0c012ebb, E2E Admin A): **Passed**.
+    - Green is now rgb(54,123,36) light and rgb(54,130,35) dark, against Teal's rgb(5,124,89) and rgb(36,129,96). All 13 swatches differ in both schemes. The closest pair is Violet and Grape, still easy to tell apart.
+    - A green "E2E" folder's card and pill read green in light and dark with good contrast. The folder was deleted afterwards.
+    - Status colours are unchanged: --mantine-color-green-6 is still #057c59.
+    Screenshots: ~/compass-uat/library/COM-1983/.
 assignee: steve
 label:
 - bug

@@ -1,7 +1,7 @@
 ---
 id: 01M7RPB9EYMR1EF1NQH3YZBNXK
 created: 2026-11-19T01:22:13.086857Z
-updated: 2026-11-19T01:46:29.923715Z
+updated: 2026-11-19T02:48:44.598546Z
 type: task
 title: 'Leaving the Library reader returns to exactly where you were: no stray details pane, and a search keeps its results'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,17 @@ comments:
     Assumption: the type chip travels with the search, so you come back to the same filtered page.
 
     Tests cover each case above, including round trips through the real reader from a Not in a folder card, a search row and a Pinned tile.
+- id: 01M7RV9Q9PVRQ1YG6WC5FW9EBF
+  author: Steve Vine
+  at: 2026-11-19T02:48:44.598397Z
+  text: |-
+    Pre-UAT re-check (staging 0c012ebb, E2E Admin A): **Passed**.
+    - From Not in a folder, a domain folder, the home, Recently viewed and Pinned: Esc, "Library" and "Back to the Library" each return to that page with no pane, scroll kept (150→150, 300→300, 250→250).
+    - From a home search ("Access Control Policy"), all three ways back return to ?q=… with the query and 31 results, no pane.
+    - Inside a folder with Everywhere, you return to ?q=policy&in=all with Everywhere still chosen. With the Decisions chip, the chip is kept.
+    - From the pane's "Read document", the way back reopens that document's pane.
+    - A reader opened in a new tab goes back to the right page, no pane. The browser's Back still works.
+    Screenshots: ~/compass-uat/library/COM-1984/.
 assignee: steve
 label:
 - bug

@@ -1,7 +1,7 @@
 ---
 id: 01M7R1S2TF2854YTMXQZYRK770
 created: 2026-11-18T19:22:44.943218Z
-updated: 2026-11-19T01:23:05.279995Z
+updated: 2026-11-19T02:49:02.728265Z
 type: task
 title: 'Library: clicking a document opens it to read; a small info icon opens its details'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,10 @@ comments:
     - **Defect 2:** from a search, those ways back drop the search: an empty box, with the pane open. Search rows carry no place in their link.
     - Not tried: drag-to-folder.
     Screenshots: ~/compass-uat/library/COM-1972/.
+- id: 01M7RVA908MS526YBAVP4NZ3S5
+  author: Steve Vine
+  at: 2026-11-19T02:49:02.727914Z
+  text: 'Pre-UAT follow-up (staging 0c012ebb): both defects are fixed by COM-1984, re-checked **Passed**. The reader''s ways back return to where you were with no pane, and a search keeps its results. Sanity re-check of this task: **Passed**. A plain click opens the reader, ⓘ opens the pane, and Ctrl-click opens the reader in a new tab with the page left as it was.'
 assignee: steve
 label:
 - improvement

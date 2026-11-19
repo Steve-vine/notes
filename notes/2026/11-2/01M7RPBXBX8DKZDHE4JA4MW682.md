@@ -1,7 +1,7 @@
 ---
 id: 01M7RPBXBX8DKZDHE4JA4MW682
 created: 2026-11-19T01:22:33.469083Z
-updated: 2026-11-19T02:18:01.825303Z
+updated: 2026-11-19T02:48:55.841009Z
 type: task
 title: 'Library polish from pre-UAT: focus returns to the button you used, a tooltip doesn''t linger, and Polaris describes Folders plainly'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,17 @@ comments:
     3. After unpinning a Pinned tile, focus moves to the next tile's Unpin. After the last tile it moves to the Pinned heading, and once nothing is pinned, to the next section's heading.
     4. Polaris's Library browse says plainly that the home has two sections: Folders (people's own folders, then Not in a folder) and Domains (each domain's folder).
     5. A cleared sort is removed from the saved Library choices instead of being saved as null.
+- id: 01M7RVA2918KV5N49EHJKT0V50
+  author: Steve Vine
+  at: 2026-11-19T02:48:55.840712Z
+  text: |-
+    Pre-UAT re-check (staging 0c012ebb, E2E Admin A): **Passed**.
+    1. Closing the reader's pane by Esc, ×, a click outside or the keyboard puts focus on the ⓘ, with no tooltip.
+    2. With the mouse resting on ⓘ, the first Esc closes the pane and the second leaves the reader. Reading width's tooltip hides once its menu is open.
+    3. Unpinning by keyboard from Pinned tiles: the middle tile moves focus to the next tile's Unpin, the last tile to the Pinned heading, and the only remaining tile to the Recently viewed heading.
+    4. Polaris: "The Library home has two sections: Folders, then Domains. 1. Folders: people's own folders, with Not in a folder last … 2. Domains: one folder for each domain." The confusing sentence is gone.
+    5. Setting then clearing sorts leaves `sorts: {}`; earlier nulls were dropped too.
+    Screenshots: ~/compass-uat/library/COM-1985/.
 assignee: steve
 label:
 - improvement

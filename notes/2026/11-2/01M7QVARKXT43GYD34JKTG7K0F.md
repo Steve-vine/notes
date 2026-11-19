@@ -1,7 +1,7 @@
 ---
 id: 01M7QVARKXT43GYD34JKTG7K0F
 created: 2026-11-18T17:30:04.285229Z
-updated: 2026-11-19T01:22:48.494087Z
+updated: 2026-11-19T02:49:06.054809Z
 type: task
 title: More icons and colours to choose from for a Library folder
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,10 @@ comments:
     - New folder and Edit folder offer 44 named icons and 13 colours, with the current choice marked. At 390 px the icon grid wraps with no sideways scroll. A Grape folder reads well in light and dark.
     - **Defect (COM-1983):** the Green swatch is identical to Teal: rgb(5,124,89) light and rgb(36,129,96) dark. The app's colour tokens map both to the same "good" tone, so a green folder looks exactly like a teal one, and there are really 12 colours.
     Screenshots: ~/compass-uat/library/COM-1969/ (01: swatches 3 and 8).
+- id: 01M7RVAC86JS0ESZ6HNFVMB3JR
+  author: Steve Vine
+  at: 2026-11-19T02:49:06.054535Z
+  text: 'Pre-UAT follow-up (staging 0c012ebb): the defect is fixed by COM-1983, re-checked **Passed**. Green is now its own leaf green, all 13 folder colours differ in light and dark, and status colours are unchanged.'
 assignee: steve
 label:
 - improvement
