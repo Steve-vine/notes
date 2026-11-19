@@ -1,7 +1,7 @@
 ---
 id: 01M7JNRTH873W2D4FN46FZZZNV
 created: 2026-11-16T17:16:41.384571Z
-updated: 2026-11-19T11:07:25.282735Z
+updated: 2026-11-19T13:51:07.432617Z
 type: task
 title: R-1232 Removable media policies and procedures, with revision date (S2)(A2)(S1-IRAP)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: data_management
 soc2_core_control:
 - kmc_1
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1232
