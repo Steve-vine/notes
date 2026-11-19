@@ -1,7 +1,7 @@
 ---
 id: 01M7QVWEGB5ZM6FKTGXQ3GXZ3F
 created: 2026-11-18T17:39:43.755133Z
-updated: 2026-11-18T23:31:27.039227Z
+updated: 2026-11-19T00:38:38.551009Z
 type: task
 title: 'The Library page offers a width: Normal, Wide or Full width'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,21 @@ sprint: s2q1gxe
 blocked_by:
 - 01M7QP5TK69FYSTHWZ2DG3Z6Z7
 - 01M7QV18EEP76MSWB8XSZ5F814
+comments:
+- id: 01M7RKVCQ9CJRQ9TVH64S62Y0K
+  author: Steve Vine
+  at: 2026-11-19T00:38:34.98544Z
+  text: |-
+    Merged: PR #1977, sha 25f02b9c. No migration. API: library_view.page_width in the person's preferences.
+
+    What changed: a width control in the Library page's header offers Normal (as before, 1040 px), Wide (1560 px) and Full width (the whole browser, keeping the usual side margin). It applies on the home, in a folder, in Not in a folder and in search results. Card grids fit more cards per row as the page widens, and the cards keep their size. The choice is remembered per person on any browser, separately from the reader's width. The reading pane keeps its own width.
+
+    For Steve to overturn: cards are at least 300 px wide, so three to a row at Normal (as before) and one on a phone.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing the Library on staging (18 Nov): the Library page gets the same width choice as the reader (COM-1962).
 
