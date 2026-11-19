@@ -1,7 +1,7 @@
 ---
 id: 01M7R266DWZWEA0N39TV2ZYP0Z
 created: 2026-11-18T19:29:54.620149Z
-updated: 2026-11-19T01:23:10.955561Z
+updated: 2026-11-19T18:45:37.39553Z
 type: task
 title: 'Library reader: a heading''s number is the same size as the heading, as in the PDF'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,7 +30,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 Steve, testing the Library (18 Nov): "On the Library document read screen, the heading number is in a smaller font than the heading (E.g. 2 Purpose), on the PDF version it's the same size, can you make the number and heading the same size. The size in the content list is fine."
 

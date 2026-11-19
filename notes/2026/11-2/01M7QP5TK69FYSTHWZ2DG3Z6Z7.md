@@ -1,7 +1,7 @@
 ---
 id: 01M7QP5TK69FYSTHWZ2DG3Z6Z7
 created: 2026-11-18T15:59:59.590082Z
-updated: 2026-11-19T01:21:04.372318Z
+updated: 2026-11-19T18:45:37.233716Z
 type: task
 title: 'The Library reader''s bar offers a reading width: Original, Wide or Full width'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve, testing the Library on staging (18 Nov): add a choice of reading width to the reader's bar.
 

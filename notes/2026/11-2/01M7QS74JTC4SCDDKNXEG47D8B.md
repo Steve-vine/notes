@@ -1,7 +1,7 @@
 ---
 id: 01M7QS74JTC4SCDDKNXEG47D8B
 created: 2026-11-18T16:53:08.314174Z
-updated: 2026-11-19T01:21:08.773342Z
+updated: 2026-11-19T18:45:37.250244Z
 type: task
 title: The Library doesn't show layout markers such as "Page break" and "Landscape page"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve, testing the Library on staging (18 Nov): layout markers show in documents read in the Library. They're there for writers, to mark where the printed page breaks or turns landscape, and mean nothing to someone reading on screen. Seen on staging: Access Control Policy in the reader shows "Page break" before "12 Controls" and before "13 Document Review".
 

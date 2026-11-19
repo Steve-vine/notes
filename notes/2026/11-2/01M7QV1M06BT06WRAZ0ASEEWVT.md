@@ -1,7 +1,7 @@
 ---
 id: 01M7QV1M06BT06WRAZ0ASEEWVT
 created: 2026-11-18T17:25:04.646932Z
-updated: 2026-11-19T01:22:42.212075Z
+updated: 2026-11-19T18:45:37.325548Z
 type: task
 title: Pin documents and folders to the top of the Library
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve, testing the Library on staging (18 Nov): a "Pinned" section above "Recently viewed", with a Pin action wherever a document or folder is.
 
