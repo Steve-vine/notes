@@ -1,17 +1,35 @@
 ---
 id: 01M7TKDS686F4DZJAZ4KSP3PWG
 created: 2026-11-19T19:09:37.864277Z
-updated: 2026-11-19T19:21:48.564845Z
+updated: 2026-11-19T20:31:33.233564Z
 type: task
 title: 'Library tiles: folders a shade darker, documents a shade lighter, in light and dark mode'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1988
 sprint: s2q1gxe
+comments:
+- id: 01M7TR3NV7PAPRJHAWKXK19H51
+  author: Steve Vine
+  at: 2026-11-19T20:31:29.639Z
+  text: |-
+    Merged: PR #1981, sha 6e8da3d6. No migration, no API change.
+
+    What changed: every Library tile now has a background that says what it is.
+    - **Folder tiles are a shade darker.** That's folder and domain cards, folder cards inside a folder, Not in a folder, and a pinned folder.
+    - **Document tiles are lighter.** That's document cards, search results, Recently viewed and a pinned document.
+    - **Light mode:** folders are pale grey and documents stay white.
+    - **Dark mode:** folders are a shade darker than the page and documents a shade lighter.
+    - Borders, folder colours, icons, text, hover and focus rings, the dragged card and the drop highlight are unchanged.
+    - Measured contrast of text and dimmed text: light folder 14.3 / 4.8, light document 16.0 / 5.3, dark folder 15.1 / 6.3, dark document 11.6 / 4.9. All pass AA.
+
+    For Steve to overturn: the document rows in search results had no background of their own before (the page showed through). They now take the document background too.
+
+    Also in this PR: a test that pins and unpins from Pinned sometimes failed under load. It now waits for the card's menu to close.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing the Library on staging (19 Nov): change the tile background colours slightly, so folder tiles are slightly darker and document tiles slightly lighter, in both modes.
 

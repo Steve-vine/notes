@@ -1,17 +1,35 @@
 ---
 id: 01M7TJT0NV5ZX7ACR938EPSGYV
 created: 2026-11-19T18:58:50.171996Z
-updated: 2026-11-19T19:21:45.301594Z
+updated: 2026-11-19T20:31:40.582765Z
 type: task
 title: The Library page's width button sits at the far right, directly below the profile icon
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1986
 sprint: s2q1gxe
+comments:
+- id: 01M7TR3YJADE4Z5VEW78P984KW
+  author: Steve Vine
+  at: 2026-11-19T20:31:38.570714Z
+  text: |-
+    Merged: PR #1982, sha 4ad4e855. No migration, no API change.
+
+    What changed: the Library's Page width button now sits at the far right of the window, just under the top bar, its right edge lined up with the profile icon's.
+    - **Same place everywhere:** the home, every folder (ones you made, domain folders, Not in a folder) and search results, at Normal, Wide and Full width.
+    - **Stays put as the page scrolls.**
+    - **Folder pages:** it's no longer beside New folder, which stays alone at the right of the folder's header.
+    - **Nothing scrolls under it:** the page keeps a strip clear beneath the button, so nothing passes under it at Full width or on a phone.
+    - **Layering:** the reading pane, dialogs and the Compass menu open over it.
+    - **Measured** (headless Chromium): at 1920 px the button's right edge and the profile icon's are both at 1900 px in every case. At 390 px there's no sideways scroll and it clears New folder.
+
+    For Steve to overturn:
+    - On a phone the clear strip is 48 px wide, so the page's content sits a little left of centre there.
+    - When the "restored company" notice shows above a page, the button can overlap it.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing the Library on staging (19 Nov): move the Library page's width button to the far right-hand side, so it sits directly below the user profile icon. Steve (19 Nov): it stays in view as the page scrolls, as in the reader (COM-1987). Steve (19 Nov): the same on folder pages. The button there, beside New folder, moves to the same position and doesn't scroll.
 
