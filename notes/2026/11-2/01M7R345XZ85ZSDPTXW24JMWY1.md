@@ -1,7 +1,7 @@
 ---
 id: 01M7R345XZ85ZSDPTXW24JMWY1
 created: 2026-11-18T19:46:17.151385Z
-updated: 2026-11-18T23:44:17.179526Z
+updated: 2026-11-19T01:23:23.487094Z
 type: task
 title: 'Library reader: the details under the title show the document''s Domain'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,16 @@ comments:
     Assumptions you may want to overturn:
     - While a domain is disabled, its Library folder is hidden. The reader then shows the domain's name as plain text, with no link.
     - I didn't add Domain to the "Document control" block at the foot of the reader. It's in the row under the title only.
+- id: 01M7RPDE6ZF9F1CX40G8X77PGA
+  author: Steve Vine
+  at: 2026-11-19T01:23:23.486896Z
+  text: |-
+    Pre-UAT (staging 25f02b9c, E2E Admin A): **Passed**.
+    - The row under the title reads Domain · Reviewers · Approved by · Next review, e.g. "Access Control" or "Information Security Governance". Clicking the domain opens its Library folder.
+    - A document with no domain shows "Domain —". Decision DEC-10's row is Decided by · Decided, with no Domain.
+    - The link reads well in dark mode. At 390 px the row wraps cleanly.
+    - Not tried: renaming a real domain on staging. The automated tests cover the name following a rename.
+    Screenshots: ~/compass-uat/library/COM-1975/.
 assignee: steve
 label:
 - improvement

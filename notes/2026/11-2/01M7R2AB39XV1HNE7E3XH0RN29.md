@@ -1,7 +1,7 @@
 ---
 id: 01M7R2AB39XV1HNE7E3XH0RN29
 created: 2026-11-18T19:32:10.473722Z
-updated: 2026-11-18T22:51:22.137466Z
+updated: 2026-11-19T01:23:18.91873Z
 type: task
 title: 'Library reader: an info icon in the top bar opens the document''s details pane'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,17 @@ comments:
     Layering: the reader now sits just above Compass's own top bar and menu, and below anything opened over a document. So this pane, its Add to another folder dialog and a flowchart's Full screen all open in front of it, which also fixes the cause of COM-1964. The reader's own menus and tooltips, and Compass's pop-up messages, still show above it. I checked the rest of the app for anything that could now show through or over the reader, and found nothing. One small change: pressing M in the reader now always opens the Compass menu in front of it, where before it could open hidden behind.
 
     Assumption you may want to overturn: the ⓘ sits just left of Contents in the bar.
+- id: 01M7RPD9R68YZKW9DS75T41136
+  author: Steve Vine
+  at: 2026-11-19T01:23:18.918498Z
+  text: |-
+    Pre-UAT (staging 25f02b9c, E2E Admin A and E2E Viewer): **Passed**.
+    - ⓘ opens the details pane over the reader for Access Control Policy, Test process and decision DEC-10, in light and dark and at 390 px (full width, no sideways scroll). There's no Read document button.
+    - Escape, × or a click outside closes only the pane, and the scroll stayed at 3059 px. A second Escape leaves the reader.
+    - Add to another folder from the pane opens in front and files the document. The Viewer's pane has no Add to another folder.
+    - M in the reader opens the Compass menu in front.
+    - Minor, fixed in COM-1985: focus returns to the page body rather than ⓘ. With the mouse still resting on ⓘ, its tooltip reappears and takes an extra Escape.
+    Screenshots: ~/compass-uat/library/COM-1974/.
 assignee: steve
 label:
 - improvement
