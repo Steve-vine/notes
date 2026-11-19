@@ -1,7 +1,7 @@
 ---
 id: 01M7TJT0NV5ZX7ACR938EPSGYV
 created: 2026-11-19T18:58:50.171996Z
-updated: 2026-11-19T20:31:40.582765Z
+updated: 2026-11-19T22:50:24.805566Z
 type: task
 title: The Library page's width button sits at the far right, directly below the profile icon
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,19 @@ comments:
     For Steve to overturn:
     - On a phone the clear strip is 48 px wide, so the page's content sits a little left of centre there.
     - When the "restored company" notice shows above a page, the button can overlap it.
+- id: 01M7V021N5CYRM3QZZ0RFARN6Q
+  author: Steve Vine
+  at: 2026-11-19T22:50:24.805415Z
+  text: |-
+    Pre-UAT: Passed. Staging e9c644cf, E2E Test Company, as E2E Admin A and E2E Viewer.
+
+    - At 1920 px, at Normal, Wide and Full width, the button sat at exactly the same spot on the home, a made folder, a domain folder, Not in a folder and search results. Its right edge is at 1900 px, the same as the profile icon's.
+    - It's no longer beside New folder. New folder and Add items sit together in the folder's header.
+    - It stayed put while I scrolled the home, 38 search results and a folder to the bottom. At Full width nothing passes under it: the rightmost content stops 6 px short of the button.
+    - The reading pane, the New folder dialog and the Compass menu (M) all open in front of it.
+    - At 390 px there's no sideways scroll on any of the five pages. The button doesn't overlap the title, the trail, New folder or Add items.
+
+    Screenshots: ~/compass-uat/library/COM-1986/
 assignee: steve
 label:
 - improvement

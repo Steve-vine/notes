@@ -1,7 +1,7 @@
 ---
 id: 01M7TJTBQY7NJRRA76CQ2KKTJ8
 created: 2026-11-19T18:59:01.50282Z
-updated: 2026-11-19T20:50:52.190426Z
+updated: 2026-11-19T22:50:32.228898Z
 type: task
 title: The reader's width button leaves the reader's bar for the far right, below it, matching the Library page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,22 @@ comments:
       - At 390 px: no corner button, no sideways scroll, and More lists the three widths.
 
     For Steve to overturn: the button is now the same size as the Library's (36 px), slightly larger than the 34 px bar icons it used to sit among.
+- id: 01M7V028X4PGW72FT31XXS0S7C
+  author: Steve Vine
+  at: 2026-11-19T22:50:32.228681Z
+  text: |-
+    Pre-UAT: Passed, with one check I couldn't make. Staging e9c644cf, E2E Test Company, as E2E Admin A.
+
+    - The Reading width icon is gone from the bar. The bar now has ← Library, title, Pin, Details, Contents, Export, Open in Content and the light/dark switch.
+    - The button sits in the identical box to the Library's Page width button: right edge 1900 px at 1920, and 1260 px at 1280.
+    - It stays put while scrolling the whole Access Control Policy, and text never runs under it. The closest text came was 17 px at Full width (1920) and 14 px at 1280.
+    - Choosing a width changes the column: Normal 744 px, Wide 1084 px, Full 1920 px. Wide was still chosen after a reload.
+    - In print the button is hidden.
+    - At 390 px there's no corner button and no sideways scroll. More lists Reading width with Normal / Wide / Full width.
+
+    Couldn't check that the button is absent for an uploaded PDF or a link: staging has no published uploaded or linked documents. Steve: open a PDF or link document in the reader and check there's no width button.
+
+    Screenshots: ~/compass-uat/library/COM-1987/
 assignee: steve
 label:
 - improvement

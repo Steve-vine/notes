@@ -1,7 +1,7 @@
 ---
 id: 01M7TKDS686F4DZJAZ4KSP3PWG
 created: 2026-11-19T19:09:37.864277Z
-updated: 2026-11-19T20:31:33.233564Z
+updated: 2026-11-19T22:50:39.103163Z
 type: task
 title: 'Library tiles: folders a shade darker, documents a shade lighter, in light and dark mode'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,27 @@ comments:
     For Steve to overturn: the document rows in search results had no background of their own before (the page showed through). They now take the document background too.
 
     Also in this PR: a test that pins and unpins from Pinned sometimes failed under load. It now waits for the card's menu to close.
+- id: 01M7V02FKZ7N44KRHVAJ1SEX5C
+  author: Steve Vine
+  at: 2026-11-19T22:50:39.102947Z
+  text: |-
+    Pre-UAT: Passed. Staging e9c644cf, E2E Test Company, as E2E Admin A, in light and dark mode.
+
+    - Light mode: the page is 243,244,248. Folder tiles are 236,238,244 (darker) and document tiles 251,251,253 (lighter).
+    - Dark mode: the page is 22,24,38. Folder tiles are 18,20,32 (darker) and document tiles 41,43,57 (lighter).
+    - It's the same on the home (Pinned with a folder and a document, Recently viewed, Folders, Domains), in a folder holding both kinds, in search results, in Not in a folder and in a domain folder.
+    - Contrast of text and dimmed text, all AA:
+      - light folder 14.3 / 4.8
+      - light document 16.0 / 5.3
+      - dark folder 15.1 / 6.3
+      - dark document 11.6 / 4.9
+    - In both modes:
+      - Hover turns the border to the accent colour.
+      - Keyboard focus shows a 2 px accent outline.
+      - Dragging a document over a folder card rings the folder and dims the dragged card. Esc cancelled it and nothing was filed.
+    - The two test pins were removed afterwards.
+
+    Screenshots: ~/compass-uat/library/COM-1988/
 assignee: steve
 label:
 - improvement
