@@ -1,7 +1,7 @@
 ---
 id: 01M7QBBX5T4RF4MZNA6PD30NGY
 created: 2026-11-18T12:51:04.506174Z
-updated: 2026-11-18T22:35:40.873436Z
+updated: 2026-11-19T18:45:28.886029Z
 type: task
 title: Moving a flowchart shape leaves other shapes' lines where they are
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -51,7 +51,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Steve, testing on staging, 2026-11-18: moving a shape sometimes makes a line on an unrelated shape above it move as well.
 

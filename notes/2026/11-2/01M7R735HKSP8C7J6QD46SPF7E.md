@@ -1,7 +1,7 @@
 ---
 id: 01M7R735HKSP8C7J6QD46SPF7E
 created: 2026-11-18T20:55:38.291985Z
-updated: 2026-11-18T22:32:01.397261Z
+updated: 2026-11-19T18:45:29.554608Z
 type: task
 title: 'Flowchart lane colour picker: Escape just closes it; words on a Transparent shape stay readable on the dark canvas'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Pre-UAT round 2 (tester B, staging cbacf0c2), COM-1952 and COM-1942:
 - **Escape:** in the editor with nothing selected, open a lane's paint-brush, then Background ▸ any colour, press Escape: the picker closes but "Leave without keeping your changes?" also appears. Escape in the shape Style panel is fine. Screenshot: ~/compass-uat/s6y6p7g/COM-1952/r2-02-escape-in-lane-picker.png

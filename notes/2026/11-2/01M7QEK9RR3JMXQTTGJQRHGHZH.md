@@ -1,7 +1,7 @@
 ---
 id: 01M7QEK9RR3JMXQTTGJQRHGHZH
 created: 2026-11-18T13:47:32.504105Z
-updated: 2026-11-18T20:54:43.473654Z
+updated: 2026-11-19T18:45:29.405764Z
 type: task
 title: A flowchart always fits on one page in PDF and Word, scaled down rather than split
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 Steve, testing on staging, 2026-11-18: flowcharts aren't being resized to fit the page. A single flowchart placed in a document should always be resized to fit on a page rather than split between two.
 

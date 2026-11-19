@@ -1,7 +1,7 @@
 ---
 id: 01M7PVG6J66RSKMDASE3VPPPDV
 created: 2026-11-18T08:13:47.974104Z
-updated: 2026-11-18T10:05:06.140322Z
+updated: 2026-11-19T18:45:28.671243Z
 type: task
 title: A standalone flowchart's PDF and Word follow its Page setting every time it's changed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Pre-UAT, 2026-11-18 (COM-1908's Page: Portrait / Landscape setting on a standalone flowchart):
 - Changing Page doesn't change the PDF or Word once that draft has been exported.

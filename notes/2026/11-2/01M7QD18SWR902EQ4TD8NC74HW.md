@@ -1,7 +1,7 @@
 ---
 id: 01M7QD18SWR902EQ4TD8NC74HW
 created: 2026-11-18T13:20:13.1162Z
-updated: 2026-11-18T23:50:41.658061Z
+updated: 2026-11-19T18:45:29.301548Z
 type: task
 title: 'Font options for flowchart text: size, colour, bold, italic, underline and alignment'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -54,7 +54,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve, testing on staging, 2026-11-18: add font options (size, colour, bold, italic, etc.) for shapes and text.
 

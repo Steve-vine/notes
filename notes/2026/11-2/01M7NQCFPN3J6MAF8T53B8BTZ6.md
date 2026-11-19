@@ -1,7 +1,7 @@
 ---
 id: 01M7NQCFPN3J6MAF8T53B8BTZ6
 created: 2026-11-17T21:42:37.525915Z
-updated: 2026-11-18T10:11:25.215099Z
+updated: 2026-11-19T18:45:28.521438Z
 type: task
 title: 'Flowchart steps link to Compass: a control, a document or a role, and a control shows the flows it appears in'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -49,7 +49,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Builds on COM-1905. The governance value of a flowchart: its steps point at the controls they carry out and the documents they follow.
 

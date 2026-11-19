@@ -1,7 +1,7 @@
 ---
 id: 01M7PVKAGVYDWC62B92V84JRQ3
 created: 2026-11-18T08:15:30.331777Z
-updated: 2026-11-18T10:11:00.863854Z
+updated: 2026-11-19T18:45:28.733823Z
 type: task
 title: 'Flowchart canvas: the keyboard keeps working on a selected shape, and lanes resize by dragging their edge'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,7 +41,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Pre-UAT, 2026-11-18 (tester A, COM-1904/1905):
 - **Keyboard:** after adding any shape, clicking a shape moves the cursor into the side panel's Label box. Delete, Tab, the arrow keys and Ctrl+C then do nothing to the shape. Backspace deletes the label's last letter ("End" became "En"), and the arrows move one shape once and stop. On a freshly opened canvas with nothing added, the keys work. Screenshot: ~/compass-uat/s6y6p7g/COM-1904/03-backspace-edits-label.png

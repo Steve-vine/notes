@@ -1,7 +1,7 @@
 ---
 id: 01M7NQBT1PQQHXG3JV194TXDE0
 created: 2026-11-17T21:42:15.35079Z
-updated: 2026-11-18T11:15:20.120868Z
+updated: 2026-11-19T18:45:28.492143Z
 type: task
 title: 'A flowchart in a document: draw one on a canvas, published and reviewed with its document'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -56,7 +56,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 The first piece of the flowchart sprint: a document's own flowchart, and the canvas every later task reuses. Built to COM-1903 (ADR 0160).
 

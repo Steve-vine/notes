@@ -1,7 +1,7 @@
 ---
 id: 01M7R73HGBXW7Y6M857VAQHBB4
 created: 2026-11-18T20:55:50.53972Z
-updated: 2026-11-18T23:50:39.557108Z
+updated: 2026-11-19T18:45:29.57056Z
 type: task
 title: 'Flowchart font options apply everywhere: free Lines, Group titles and lane names, drawn the same on canvas, reading view and picture'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,7 +48,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Pre-UAT round 2 (tester B, staging cbacf0c2), COM-1957 (and COM-1952 for lane names):
 1. **Line toggles:** select a free Line, press Bold/Italic/Underline/Strikethrough or Ctrl+B: the button doesn't light and nothing is saved (size and colour work). The toggle code doesn't look at Lines.

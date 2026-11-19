@@ -1,7 +1,7 @@
 ---
 id: 01M7QBH1EHBK335B2RXPTVE1Q4
 created: 2026-11-18T12:53:52.721261Z
-updated: 2026-11-18T22:35:45.086492Z
+updated: 2026-11-19T18:45:28.903516Z
 type: task
 title: Add a flowchart shape by dragging it from the toolbar onto the canvas, and a clicked one lands in view
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,7 +52,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve, testing on staging, 2026-11-18: with nothing selected, clicking a shape button adds the new shape at the bottom of the flowchart. It would help to add a shape by dragging a shape button onto the canvas.
 

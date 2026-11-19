@@ -1,7 +1,7 @@
 ---
 id: 01M7QCHFZR2JNMY6792MD6T656
 created: 2026-11-18T13:11:36.184687Z
-updated: 2026-11-18T20:54:17.270576Z
+updated: 2026-11-19T18:45:29.12003Z
 type: task
 title: 'A Group shape: a titled box that holds other shapes together, like a lane but standing on its own'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,7 +48,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve, testing on staging, 2026-11-18: add a new shape type, Group. It's a larger shape you put other shapes into to group them together, a bit like lanes but stand-alone. Steve, same day: Groups can also be connected to shapes outside the group.
 

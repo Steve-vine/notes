@@ -1,7 +1,7 @@
 ---
 id: 01M7RCP4Y8AV64RCHMBZW2AM13
 created: 2026-11-18T22:33:23.144305Z
-updated: 2026-11-18T23:50:36.96317Z
+updated: 2026-11-19T18:45:29.622013Z
 type: task
 title: Flowchart words in PDF and Word use the house style's font, italic included
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,7 +47,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Pre-UAT round 2 re-check (tester B, staging d6c281fe), COM-1957/1980: italic flowchart words print upright in the PDF, in a fallback font (DejaVu Sans), e.g. "Raise the request" in "E2E pre-UAT COM-1942 COM-1951 COM-1944 COM-1957 styles" and the Engineer lane name. Canvas, reading view, Word and PNG show italic.
 

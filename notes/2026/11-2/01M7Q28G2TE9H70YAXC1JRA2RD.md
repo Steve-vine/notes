@@ -1,7 +1,7 @@
 ---
 id: 01M7Q28G2TE9H70YAXC1JRA2RD
 created: 2026-11-18T10:11:55.610115Z
-updated: 2026-11-18T11:15:05.226128Z
+updated: 2026-11-19T18:45:28.765057Z
 type: task
 title: Flowchart connections never share a line or an arrowhead, so each one plainly leads to its own step
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Re-check on staging 27151cd9, 2026-11-18 (tester A, after COM-1931): lines no longer go through steps, but two connections can run along the same line, so the picture shows the wrong flow.
 - In a converted text diagram ("Known fix?" plus a long "Approve an emergency change…?" decision and a No loop back to Investigate):

@@ -1,7 +1,7 @@
 ---
 id: 01M7PVGENDYMKMQK9S97BYPNXH
 created: 2026-11-18T08:13:56.269826Z
-updated: 2026-11-18T10:07:10.647203Z
+updated: 2026-11-19T18:45:28.686415Z
 type: task
 title: Ask Polaris offers Draft from this document and Draft from a description on a new flowchart that only has its Start shape
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Pre-UAT, 2026-11-18 (COM-1909):
 - In a procedure with text, Insert ▸ Flowchart… then Ask Polaris. The canvas starts with a Start shape, so the panel offers only "Ask Polaris": neither Draft from this document nor Draft from a description appears.

@@ -1,7 +1,7 @@
 ---
 id: 01M7R61QYH37W55T8KXX1H5JFY
 created: 2026-11-18T20:37:23.02594Z
-updated: 2026-11-18T22:35:37.716387Z
+updated: 2026-11-19T18:45:29.515006Z
 type: task
 title: 'Flowcharts in dark: lane names line up on a standalone flowchart''s reading view, and canvas lines are easy to see'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Pre-UAT round 2 (tester A, staging cbacf0c2), COM-1953/1959/1947:
 - **Lane names misaligned (defect):** in Compass's dark colour scheme, a laned standalone flowchart's Read tab gives the picture a 4px white frame, but the lane-name boxes are placed as if it had none: about 4px up and left and slightly too wide (243 vs 241px), so heading borders are doubled and separators offset. Seen on two flowcharts incl. "E2E pre-UAT COM-1927 laned standalone flowchart". A flowchart shown in a document, full screen, and light are fine. Screenshots: ~/compass-uat/s6y6p7g/COM-1959/r2-05-DEFECT-read-dark-misaligned-zoom.png, r2-04-read-dark.png, r2-08-standalone-1927-dark.png

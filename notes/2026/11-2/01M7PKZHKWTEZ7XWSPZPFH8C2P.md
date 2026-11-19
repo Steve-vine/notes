@@ -1,7 +1,7 @@
 ---
 id: 01M7PKZHKWTEZ7XWSPZPFH8C2P
 created: 2026-11-18T06:02:22.204677Z
-updated: 2026-11-18T08:14:28.037441Z
+updated: 2026-11-19T18:45:28.642144Z
 type: task
 title: A flowchart in a document's reading view looks right without opening the canvas first
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found while building COM-1908 (lane D's report, 2026-11-18): the flowchart's zoom/pan controls and lane styles are loaded only with the canvas. So a document's reading view shows a flowchart without them until the person has opened a canvas somewhere in that session. A standalone flowchart's page loads them itself.
 
