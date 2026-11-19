@@ -1,7 +1,7 @@
 ---
 id: 01M7TM1MKB51ESVG1W53R2NB2C
 created: 2026-11-19T19:20:28.523789Z
-updated: 2026-11-19T22:14:44.841511Z
+updated: 2026-11-19T22:50:55.637935Z
 type: task
 title: Move a document to another folder, so it stops showing in the folder it was in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,25 @@ comments:
     - The Add/Move choice sits under the lists, so it's always in view.
 
     API: POST /library/folders/{id}/items gains move_documents and from_folder_id, and the response adds documents_left. A document never leaves its domain's folder. No migration.
+- id: 01M7V02ZRNZWXX6RE7SFR41FCT
+  author: Steve Vine
+  at: 2026-11-19T22:50:55.637681Z
+  text: |-
+    Pre-UAT: Passed. Staging e9c644cf, E2E Test Company, as E2E Admin A. I used test folders named "UAT r3 …" and deleted them afterwards. Every document is back in its old folders.
+
+    - **Move to… on a card.** Bring Your Own Device Policy was in folders A and C. In A, its card menu has Move to… under "Add to another folder…".
+      - The picker said "It leaves UAT r3 A. Any other folders it's in keep it." It marked A "Where it is now" and C "Already in it".
+      - Moving it to B gave the note "Moved 'Bring Your Own Device Policy' to UAT r3 B".
+      - It then showed in B, not in A, still in C and still in its domain folder (Endpoint & Mobile Security).
+      - Undo put it back in A and out of B.
+    - **Move here in Add items.** I ticked three documents. Each row showed where else it was ("Also in: UAT r3 C, UAT r3 A", and so on). The button read "Move 3 items".
+      - Afterwards each showed only in Target and its domain folder.
+      - Undo put every folder back as it was.
+    - **Add here** (the default) behaved exactly as COM-1989.
+    - **After a move:** the reading pane read "Appears in 2 folders: Endpoint & Mobile Security, UAT r3 Target". The Folders field in Content showed the same.
+    - **Not offered elsewhere:** Move to… isn't in a domain folder's card menu or in Not in a folder, and search results have no card menu.
+
+    Screenshots: ~/compass-uat/library/COM-1990/
 assignee: steve
 label:
 - improvement

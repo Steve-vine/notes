@@ -1,7 +1,7 @@
 ---
 id: 01M7TKNHRGFXKMJHE4WQF796A8
 created: 2026-11-19T19:13:52.40018Z
-updated: 2026-11-19T20:51:57.287432Z
+updated: 2026-11-19T22:50:47.933062Z
 type: task
 title: 'A folder''s "Add items" button: pick several existing folders and documents and add them to this folder in one go'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,27 @@ comments:
     - The type chip and domain sit under each document's name.
     - On a phone the button keeps its "Add items" label. The header's buttons wrap onto their own line there, and both labels fit at 390 px.
     - Unpublished drafts aren't offered, only what the Library shows.
+- id: 01M7V02R7XNP4WVEYHTZMKN5S7
+  author: Steve Vine
+  at: 2026-11-19T22:50:47.932842Z
+  text: |-
+    Pre-UAT: Passed. Staging e9c644cf, E2E Test Company, as E2E Admin A and E2E Viewer. I used test folders named "UAT r3 …" and deleted them all afterwards. Every document is back where it was.
+
+    - Add items sits right of New folder in a made folder.
+    - **Adding 7 items:** in "UAT r3 Target" I ticked 2 folders (one holding a sub-folder and a document), 3 documents under one search and 2 under another. The ticks were kept across searches. The foot read "2 folders and 5 documents" and the button "Add 7 items".
+      - The note read "Added 5 documents and moved 2 folders here", and all 7 showed in Target.
+      - The 5 documents were still in their other folder.
+      - Both folders left the home with their contents. The trail read Library › UAT r3 Target › UAT r3 A.
+    - **Rows that can't be ticked** are disabled with the reason: "This folder", "Holds this folder" (seen from the sub-folder) and "Already here". No domain folders are listed.
+    - **Undo:** I added another folder and a document, then pressed Undo. The folder went back to the top of the Library and the document left Target.
+    - **Activity log:** each filing, folder move and undo has its own line.
+    - **Viewer:** no Add items anywhere. As Admin A it isn't on the home, a domain folder, Not in a folder or search results.
+    - **Keyboard:** Enter opens the dialog with search focused. Typing filters, Tab and Space tick, Enter on Add adds, and Esc cancels.
+    - **390 px:** the dialog fills the screen, with no sideways scroll.
+
+    Steve, one thing to look at: the Undo note goes after about 20 seconds unless you hover it. So I undid a second, smaller add rather than the 7-item one.
+
+    Screenshots: ~/compass-uat/library/COM-1989/
 assignee: steve
 label:
 - improvement
