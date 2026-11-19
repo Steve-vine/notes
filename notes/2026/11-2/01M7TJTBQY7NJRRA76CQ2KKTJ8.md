@@ -1,7 +1,7 @@
 ---
 id: 01M7TJTBQY7NJRRA76CQ2KKTJ8
 created: 2026-11-19T18:59:01.50282Z
-updated: 2026-11-19T18:59:05.958943Z
+updated: 2026-11-19T20:40:34.657085Z
 type: task
 title: The reader's width button leaves the reader's bar for the far right, below it, matching the Library page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: backlog
+task_status: active
 ---
 Steve, testing the Library on staging (19 Nov): in the document reader, move the Reading width button off the reader's top bar to the same position as the Library page's width button (COM-1986): the far right, just under the bar.
 
