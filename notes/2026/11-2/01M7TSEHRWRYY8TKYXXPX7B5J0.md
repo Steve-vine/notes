@@ -1,17 +1,30 @@
 ---
 id: 01M7TSEHRWRYY8TKYXXPX7B5J0
 created: 2026-11-19T20:54:54.492216Z
-updated: 2026-11-19T22:07:09.492346Z
+updated: 2026-11-19T23:01:40.665368Z
 type: task
 title: Images, diagrams and flowcharts share the same reading tools and the same settings
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2004
 sprint: s6y6p7g
+comments:
+- id: 01M7V0PKTKXPM5XYMCFXS1AVCR
+  author: Steve Vine
+  at: 2026-11-19T23:01:38.770866Z
+  text: |-
+    Done — PR #1998, merged 7ea67f64.
+    On the Read tab (and anywhere else a document is read), images, drawings and text diagrams now have the same reading tools as flowcharts: Zoom out, Zoom in, Full screen and Download. Zoom steps from the size the picture is shown at. Download saves an image as its original file, and a drawing or text diagram as a PNG or SVG picture.
+    The tools look and sit the same for every kind, over the picture's top-right corner. They appear on hover or keyboard focus (always on a touch screen), so a small picture isn't covered. A flowchart's tools moved from the row above it onto the picture as well.
+    In the editor's settings panel, every kind now has alignment, caption and alt text. Drawings, text diagrams and flowcharts gained alt text, and flowcharts gained a caption beside their alignment. Size is still set with the corner handle.
+    A flowchart's alt text reads as its caption and step count (e.g. "Flowchart: Raising a change, 5 steps") until someone writes their own; the panel shows what will be read. Alt text now reaches Word as well as the PDF, for every picture. A flowchart's caption prints under it, with its Links kept with it, as before.
+    Saved settings are unchanged, and nothing published changes except that the reading tools appear.
+    Assumption: a standalone flowchart shown in a document keeps the caption and alt text of the flowchart itself; in the document it has the reading tools, size and alignment.
+    To check on staging: hover an image, a drawing, a text diagram and a flowchart on the Read tab, and try zoom, full screen and both downloads. Give a flowchart a caption and alt text in the editor, then check the PDF and the Word file (in Word: right-click the picture, View Alt Text).
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve's smoke test of round 2: the different kinds of picture in a document don't offer the same things.
 - In the Read tab, flowcharts have Zoom in/out, Full screen and Download, but images and diagrams don't.
