@@ -1,17 +1,32 @@
 ---
 id: 01M7RPAVHHCSJC9CF86EA221RB
 created: 2026-11-19T01:21:58.83374Z
-updated: 2026-11-19T01:34:51.75128Z
+updated: 2026-11-19T01:50:26.408524Z
 type: task
 title: A green Library folder looks green, not the same as teal
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1983
 sprint: s2q1gxe
+comments:
+- id: 01M7RQYY786TYJJJD37ATV1F8M
+  author: Steve Vine
+  at: 2026-11-19T01:50:25.512099Z
+  text: |-
+    Fixed in PR #1979, merged to main as cb56605e.
+
+    What changes for a person:
+    - In New folder and Edit folder, Green is now a leaf green that is clearly different from Teal. A green folder's card, icon and pill read green in light and dark mode.
+    - Nothing else in the app changes colour. Green still means "good" everywhere, the same as teal (badges, compliance and so on).
+    - Existing folders keep their colour. A folder saved as green just looks properly green now, and teal folders stay teal.
+
+    Checks: a new test makes sure all 13 folder colours look different from each other in both modes. Green and teal used to be identical. They are now well apart, and the leaf green is held to the same contrast standard as every other colour in the app.
+
+    Assumption: the closest pair is now violet and grape in dark mode. They were already that close before this change, are still easy to tell apart, and I left them alone because they are also status colours.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found at pre-UAT of COM-1969 (staging 25f02b9c, 19 Nov).
 
