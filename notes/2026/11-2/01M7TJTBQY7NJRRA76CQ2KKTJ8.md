@@ -1,7 +1,7 @@
 ---
 id: 01M7TJTBQY7NJRRA76CQ2KKTJ8
 created: 2026-11-19T18:59:01.50282Z
-updated: 2026-11-19T20:40:34.657085Z
+updated: 2026-11-19T20:50:52.190426Z
 type: task
 title: The reader's width button leaves the reader's bar for the far right, below it, matching the Library page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 1987
 sprint: s2q1gxe
 blocked_by:
 - 01M7TJT0NV5ZX7ACR938EPSGYV
+comments:
+- id: 01M7TS72KEWK8RG3PZZQKDW8ZM
+  author: Steve Vine
+  at: 2026-11-19T20:50:49.582436Z
+  text: |-
+    Merged: PR #1984, sha 93ebbeb1. No migration, no API change.
+
+    What changed: the Reading width icon is gone from the reader's bar. The button now sits at the far right of the window, just under the bar. That's the same spot as the Library page's Page width button (COM-1986), so it doesn't move when you open a document from the Library.
+    - **Unchanged:** its icon, tooltip and Normal / Wide / Full width menu, and the choice is still remembered.
+    - **Stays put** while you scroll.
+    - **Where it shows:** only for documents the reader lays out itself. It's hidden for uploaded PDFs and links, and in print. On a phone it stays in the bar's More menu.
+    - **Never over the text:** the column keeps a clear strip on the right where it needs one, at Full width or on a window too narrow for the centred column to leave room.
+    - **Measured** (real browser):
+      - At 1920 px the Library's button and the reader's sit in the identical box, right edge at 1900 px, in line with the profile icon. At 1280 px they're also identical.
+      - Text stays at least 27 px clear of the button at every width tried (700–1920 px).
+      - At 390 px: no corner button, no sideways scroll, and More lists the three widths.
+
+    For Steve to overturn: the button is now the same size as the Library's (36 px), slightly larger than the 34 px bar icons it used to sit among.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing the Library on staging (19 Nov): in the document reader, move the Reading width button off the reader's top bar to the same position as the Library page's width button (COM-1986): the far right, just under the bar.
 
