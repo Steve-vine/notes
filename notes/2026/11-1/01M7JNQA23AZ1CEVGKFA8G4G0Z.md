@@ -1,12 +1,17 @@
 ---
 id: 01M7JNQA23AZ1CEVGKFA8G4G0Z
 created: 2026-11-16T17:15:51.747103Z
-updated: 2026-11-19T11:08:16.982361Z
+updated: 2026-11-19T11:08:40.586643Z
 type: task
 title: R-1014 Background check policies and procedures, with revision date (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 197
 sprint: sd4e4pf
+comments:
+- id: 01M7SQX48AYE8DFPMB7Z4FHC6E
+  author: Steve Vine
+  at: 2026-11-19T11:08:40.584486Z
+  text: Waiting on offer letter from Steph with details of background check.
 assignee: steve
 company: null
 priority: medium
