@@ -1,7 +1,7 @@
 ---
 id: 01M7JNMEGZ9ARJNC6A81NM4NRS
 created: 2026-11-16T17:14:18.015522Z
-updated: 2026-11-19T11:07:00.823746Z
+updated: 2026-11-19T13:54:08.000863Z
 type: task
 title: R-1283 Backup policies and procedures, with revision date (S2)(A2)(S1-IRAP)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: availability
 soc2_core_control:
 - bcr_13
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1283
