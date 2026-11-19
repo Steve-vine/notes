@@ -1,7 +1,7 @@
 ---
 id: 01M7TRG7114NS14GX3BX1JKDR5
 created: 2026-11-19T20:38:20.449271Z
-updated: 2026-11-19T21:46:49.889526Z
+updated: 2026-11-19T23:46:51.767235Z
 type: task
 title: Each document remembers its own "Show as on paper" choice
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,20 @@ comments:
     Polaris's "Read a document" says how the document is shown on each tab.
     Assumption: the choice belongs to the document (as the task assumed). The Library's full-screen reader has no switch and isn't affected; PDF and Word are always on paper.
     To check on staging: set two documents differently, reload each, and open one as a reader to see the flip doesn't stick.
+- id: 01M7V39D7QR8Q91YP7VG7Z5H8B
+  author: Steve Vine
+  at: 2026-11-19T23:46:51.767035Z
+  text: |-
+    Pre-UAT on staging 7ea67f64 — Passed
+    Test documents "E2E pre-UAT COM-2002 paper doc one" and "… paper doc two", both published at v1.
+    - Each document remembers its own choice, separately for Edit and Read, on any browser and for anyone: Passed. As E2E Admin A, doc one was set to Edit on / Read off, and doc two to Edit off / Read on (flipped off and back on, so it was set on purpose). E2E Admin B then opened both in a separate browser: doc one Edit on (paper sheet showing) / Read off; doc two Edit off / Read on.
+    - An editor's flip is saved straight away, with no publish, no new version and nothing in Compare or the history: Passed. Each flip saved at once, with only the switch changed. The document stayed at v1 with no unpublished changes, the history still lists only v1, and there's nothing to compare.
+    - A reader's flip is for them only, while they're on the page: Passed. As E2E Viewer (Read tab only), doc one opened with paper off. Flipped on, it showed the sheet, and nothing was sent to the server (no save of any kind). After a reload it was off again, and the document still read Edit on / Read off.
+    - A document never set uses the starting points (Edit off, Read on), and the old browser choice isn't carried over: Passed. I put the old browser settings back into localStorage as "Edit on / Read off", then opened a never-set document ("E2E pre-UAT COM-2001 select a flowchart"). It still opened Edit off / Read on.
+    - Applies wherever the document's own Edit and Read tabs show, including from the Library; PDF/Word unchanged: Passed. Library search → the full-screen reader, which has no switch, as the PR says → "Open in Content" → the Read tab off and the Edit tab on, as set. PDF and Word of doc one (Read off) are still A4 on paper, with the flowchart at 672×92 px.
+    - Polaris returns the choice: Passed. "Read a document" on doc one returns shown_as_on_paper {edit_tab: true, read_tab: false}.
+    - Tests: covered in the PR (backend test_document_paper_choice and ContentDetailPage tests); not re-run here.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2002/
 assignee: steve
 label:
 - improvement
