@@ -1,17 +1,30 @@
 ---
 id: 01M7RPBXBX8DKZDHE4JA4MW682
 created: 2026-11-19T01:22:33.469083Z
-updated: 2026-11-19T01:39:48.182417Z
+updated: 2026-11-19T02:18:01.825303Z
 type: task
 title: 'Library polish from pre-UAT: focus returns to the button you used, a tooltip doesn''t linger, and Polaris describes Folders plainly'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1985
 sprint: s2q1gxe
+comments:
+- id: 01M7RSHC9BN67ADHGY3V4YTHAR
+  author: Steve Vine
+  at: 2026-11-19T02:17:58.314879Z
+  text: |-
+    Merged: PR #1980, sha 0c012ebb. No migration, no API change.
+
+    What changed:
+    1. Closing the reader's details pane (Esc, × or a click outside) puts focus back on the ⓘ.
+    2. The Details tooltip stays hidden after the pane closes until the pointer leaves the ⓘ, so two Escapes leave the reader. The Reading width tooltip hides while its menu is open.
+    3. After unpinning a Pinned tile, focus moves to the next tile's Unpin. After the last tile it moves to the Pinned heading, and once nothing is pinned, to the next section's heading.
+    4. Polaris's Library browse says plainly that the home has two sections: Folders (people's own folders, then Not in a folder) and Domains (each domain's folder).
+    5. A cleared sort is removed from the saved Library choices instead of being saved as null.
 assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Small things found at pre-UAT of sprint 119 (staging 25f02b9c, 19 Nov). None fails a task's "Done when", but each is worth fixing before Steve tests.
 
