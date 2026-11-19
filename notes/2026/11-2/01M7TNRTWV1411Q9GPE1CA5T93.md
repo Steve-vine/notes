@@ -1,17 +1,29 @@
 ---
 id: 01M7TNRTWV1411Q9GPE1CA5T93
 created: 2026-11-19T19:50:37.211011Z
-updated: 2026-11-19T21:37:00.386175Z
+updated: 2026-11-19T22:27:21.449869Z
 type: task
 title: Move a connection's end to any of several points on its shape, or to another shape
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1996
 sprint: s6y6p7g
+comments:
+- id: 01M7TYQJXMJA1EP9AMC8HKZC7R
+  author: Steve Vine
+  at: 2026-11-19T22:27:13.460721Z
+  text: |-
+    Done — PR #1997, merged 0bdfb906.
+    Every side of a shape now has connection points on its own outline: three per side, more on a long side, up to seven.
+    Select a connection and a handle shows on each end. Drag one and the shape under the pointer shows its points, with the nearest one highlighted. Drop it there to fix that end, on the same shape or on another one (that reconnects it, keeping its label, look and arrows). It's one Undo step. Dropped on empty canvas, a Note, Text, a Group or its own other shape, it goes back and nothing changes.
+    A fixed end stays on its point when shapes are moved or tidied up, and keeps its place along the side when a shape is resized. The connection's panel has "Leaves from" and "Arrives at" (a side and a point along it, or "Choose point automatically"), plus "Choose both points automatically", so it all works from the keyboard.
+    A new connection drawn from or to one of a shape's points keeps that point. The canvas, reading view, downloads and PDF/Word all draw from the chosen points. Compare says "now leads to …" when an end moves to another shape. Polaris can read and set the points, and draw.io imports keep their exit and entry points.
+    Assumptions: a new connection drawn from or to a side's middle handle is still left for Compass to choose, as before (fix the middle from the panel, or by dragging the end). Dropping on a shape's body uses its nearest point. Lucidchart's CSV doesn't record exit or entry points and Compass has no Visio import, so only draw.io keeps them.
+    To check on staging: select a connection, drag its arrow end to a corner-ish point and then onto another shape; resize and Tidy up; check the reading view and PDF match; try the panel's Leaves from / Arrives at.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Steve's smoke test of round 2: let people move a connection between connection points. Today Compass picks which side of a shape each connection leaves and arrives at, and the person can't change it. They should be able to drag either end of a connection to a different point on the same shape, or onto another shape. Each shape should have several connection points, not just one per side.
 
