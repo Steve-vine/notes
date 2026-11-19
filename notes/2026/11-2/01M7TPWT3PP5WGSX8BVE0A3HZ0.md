@@ -1,7 +1,7 @@
 ---
 id: 01M7TPWT3PP5WGSX8BVE0A3HZ0
 created: 2026-11-19T20:10:16.054997Z
-updated: 2026-11-19T20:34:58.851161Z
+updated: 2026-11-19T21:40:12.468862Z
 type: task
 title: A flowchart in a document is shown at its own size in the editor and can be resized from its corner
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Steve's smoke test of round 2: he created a small flowchart with 3 or 4 shapes in a document and pressed OK. In the editor it appeared across the full width of the page, so three shapes took up a whole A4 page. There's no way to resize it.
 
