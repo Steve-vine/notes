@@ -1,17 +1,27 @@
 ---
 id: 01M7TNHX1MJP9DSWY8DZN3RKQX
 created: 2026-11-19T19:46:50.036726Z
-updated: 2026-11-19T21:01:13.952917Z
+updated: 2026-11-19T21:20:32.235803Z
 type: task
 title: Remove the "How to build it" section from the flowchart editor's side panel
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1995
 sprint: s6y6p7g
+comments:
+- id: 01M7TTXD44N04A2WW2M34E3SYS
+  author: Steve Vine
+  at: 2026-11-19T21:20:29.828702Z
+  text: |-
+    Done — PR #1986, merged b8733382.
+    The flowchart editor's right-hand panel no longer has a "How to build it" section: the heading, the "Add shapes from the bar above…" paragraph, the list of keys and the note about Groups are gone.
+    With nothing selected the panel now shows the caption (in a document) and Lanes, with no divider or gap left behind.
+    Every key still works as before; only the instructions went. There is one editor, so a document's flowchart, a standalone flowchart and full screen all change together.
+    To check on staging: open any flowchart with nothing selected and look at the right-hand panel.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve's smoke test of round 2: remove the "How to build it" section and its instructions completely.
 
