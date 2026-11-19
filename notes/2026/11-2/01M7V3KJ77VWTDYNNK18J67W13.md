@@ -1,7 +1,7 @@
 ---
 id: 01M7V3KJ77VWTDYNNK18J67W13
 created: 2026-11-19T23:52:24.551914Z
-updated: 2026-11-19T23:52:48.089189Z
+updated: 2026-11-19T23:53:38.233558Z
 type: task
 title: The picture settings panel never covers the selected picture, and a picture isn't selected when the page opens
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Found in pre-UAT of round 3, by Tester B on staging 7ea67f64, against COM-1999.
 
