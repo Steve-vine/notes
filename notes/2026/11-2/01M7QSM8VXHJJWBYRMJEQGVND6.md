@@ -1,7 +1,7 @@
 ---
 id: 01M7QSM8VXHJJWBYRMJEQGVND6
 created: 2026-11-18T17:00:18.685826Z
-updated: 2026-11-19T01:21:27.165204Z
+updated: 2026-11-19T01:21:36.959017Z
 type: task
 title: A flowchart shown from another document has one link under it, not two
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,15 +24,6 @@ comments:
 - id: 01M7RP9KYK4410H6BSPM13HRVS
   author: Steve Vine
   at: 2026-11-19T01:21:18.291307Z
-  text: |-
-    Pre-UAT (staging 25f02b9c, E2E Admin A): **Passed**.
-    - "Test process" shows Test document's flowchart, with one link under it, "Test document, version 1", to /content/test-document, in both Content's Read view and the reader.
-    - No "Open the flowchart" link anywhere.
-    - Couldn't check: the "(version N is published)" wording, since no shown flowchart has a newer version on staging.
-    Screenshots: ~/compass-uat/library/COM-1965/.
-- id: 01M7RP9WKXV37P9QXKE9VQMR58
-  author: Steve Vine
-  at: 2026-11-19T01:21:27.164953Z
   text: |-
     Pre-UAT (staging 25f02b9c, E2E Admin A): **Passed**.
     - "Test process" shows Test document's flowchart, with one link under it, "Test document, version 1", to /content/test-document, in both Content's Read view and the reader.

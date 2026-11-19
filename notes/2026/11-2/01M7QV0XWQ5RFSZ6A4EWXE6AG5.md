@@ -1,7 +1,7 @@
 ---
 id: 01M7QV0XWQ5RFSZ6A4EWXE6AG5
 created: 2026-11-18T17:24:42.007663Z
-updated: 2026-11-18T22:55:31.643778Z
+updated: 2026-11-19T01:21:42.521545Z
 type: task
 title: Every domain is a fixed folder in the Library that always holds that domain's documents
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,23 @@ comments:
     - A disabled domain's folder is hidden while the domain is disabled, and comes back with it.
     - A domain whose name matches one of people's own top-level folders gets its code added: "Access Control (ACC)".
     - Domain folders sit after people's own folders at the top; COM-1967 splits them into a Domains section.
+- id: 01M7RPABKSBG9ARC64W0EX184Y
+  author: Steve Vine
+  at: 2026-11-19T01:21:42.521303Z
+  text: |-
+    Pre-UAT (staging 25f02b9c, E2E Admin A): **Passed**.
+    - "Test process" is in Information Security Governance, which holds 4 documents.
+    - A domain card's "…" menu offers only Pin. Inside a domain folder there's no New folder, Rename or Delete.
+    - Content's Folders field shows "Information Security Governance · Its domain" with no remove. The folder pickers never offer a domain folder.
+    - The API refuses every change to a domain folder with clear wording:
+      - rename, delete, move or reorder: 409 "…follows its domain… Change the domain instead";
+      - nesting a folder under it: 422;
+      - filing into it: 422 "…Change a document's domain to move it".
+      Nothing changed.
+    - Not in a folder lists 11: six documents with no domain and five unfiled decisions.
+    - Polaris refused to rename a domain folder with the same explanation, and searched within Information Security Governance correctly.
+    - Not tried: renaming, adding or deleting a real domain, to keep staging's domains intact. The automated tests cover it.
+    Screenshots: ~/compass-uat/library/COM-1966/.
 assignee: steve
 label:
 - improvement

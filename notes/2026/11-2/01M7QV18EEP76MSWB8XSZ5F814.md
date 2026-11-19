@@ -1,7 +1,7 @@
 ---
 id: 01M7QV18EEP76MSWB8XSZ5F814
 created: 2026-11-18T17:24:52.814141Z
-updated: 2026-11-18T23:19:11.261323Z
+updated: 2026-11-19T01:21:47.808807Z
 type: task
 title: 'Library home: a plain count, no Try row, "Recently viewed", then "Folders" and "Domains"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,17 @@ comments:
 
     Assumption for Steve to overturn:
     - With nothing published, the count reads "No documents yet" and Folders still shows "Not in a folder" (0 documents); Domains is left out when there are no domains.
+- id: 01M7RPAGS02TQ5JHWMAYEKC3W5
+  author: Steve Vine
+  at: 2026-11-19T01:21:47.808557Z
+  text: |-
+    Pre-UAT (staging 25f02b9c, E2E Admin A and E2E Viewer): **Passed**.
+    - Under the title, only "65 documents in 26 folders" (2 own + 24 domains). No Try row.
+    - Sections in order: Pinned (when anything is pinned), Recently viewed, Folders (E2E, Test folder, then Not in a folder last; New folder at the heading's right), Domains (24, in the domains' order).
+    - The Viewer sees the same with no New folder.
+    - At 390 px the sections stack with no sideways scroll.
+    - Polaris describes the home as Folders and Domains. One confusing sentence in its answer ("There's no separate section for people's own folders on this home") is being reworded in COM-1985.
+    Screenshots: ~/compass-uat/library/COM-1967/.
 assignee: steve
 label:
 - improvement
