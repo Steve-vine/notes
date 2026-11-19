@@ -1,7 +1,7 @@
 ---
 id: 01M7RPBXBX8DKZDHE4JA4MW682
 created: 2026-11-19T01:22:33.469083Z
-updated: 2026-11-19T01:22:38.813308Z
+updated: 2026-11-19T01:39:48.182417Z
 type: task
 title: 'Library polish from pre-UAT: focus returns to the button you used, a tooltip doesn''t linger, and Polaris describes Folders plainly'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: todo
+task_status: active
 ---
 Small things found at pre-UAT of sprint 119 (staging 25f02b9c, 19 Nov). None fails a task's "Done when", but each is worth fixing before Steve tests.
 
