@@ -1,7 +1,7 @@
 ---
 id: 01M7TMYNYNC0SKT2H4FEBQAYRQ
 created: 2026-11-19T19:36:20.181749Z
-updated: 2026-11-19T19:36:22.337743Z
+updated: 2026-11-19T19:44:12.952712Z
 type: task
 title: 'More flowchart shapes: Data (database cylinder) and the other common ones'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,7 +28,7 @@ New shapes, with the standard flowchart symbol for each:
 - **Connector**: a small circle. Joins one part of the flow to another on the same page.
 
 **Done when**
-- Each new shape is in the shape bar with a hint saying what it's for. You can click it or drag it in, and the bar stays tidy (grouped, or behind a "More shapes" choice if it gets long).
+- Each new shape is on the shapes bar down the left of the canvas (COM-1993) with a hint saying what it's for. You can click it or drag it in.
 - Each new shape is a step in the flow. It connects like any other step, takes styles (fill, border, text), resizes, and its words wrap and never hide.
 - Each looks the same on the canvas, in the reading view, in the PNG and SVG downloads, and in the PDF and Word files, on light and dark canvases.
 - The plain-text version of the flowchart names each one, e.g. "Data: Customer records".
