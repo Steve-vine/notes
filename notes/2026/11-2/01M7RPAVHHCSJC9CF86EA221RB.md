@@ -1,7 +1,7 @@
 ---
 id: 01M7RPAVHHCSJC9CF86EA221RB
 created: 2026-11-19T01:21:58.83374Z
-updated: 2026-11-19T01:22:01.650991Z
+updated: 2026-11-19T01:34:51.75128Z
 type: task
 title: A green Library folder looks green, not the same as teal
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found at pre-UAT of COM-1969 (staging 25f02b9c, 19 Nov).
 
