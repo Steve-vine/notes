@@ -1,7 +1,7 @@
 ---
 id: 01M7JNSKCTM21EE90J516T9M2X
 created: 2026-11-16T17:17:06.842373Z
-updated: 2026-11-19T11:07:25.152074Z
+updated: 2026-11-19T14:18:39.130456Z
 type: task
 title: R-1517 Patch Management policies and procedures, with revision date (S1-IRAP)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: system_operations
 soc2_core_control:
 - vum_4
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1517
