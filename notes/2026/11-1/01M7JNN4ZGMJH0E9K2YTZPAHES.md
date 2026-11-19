@@ -1,7 +1,7 @@
 ---
 id: 01M7JNN4ZGMJH0E9K2YTZPAHES
 created: 2026-11-16T17:14:41.008097Z
-updated: 2026-11-19T11:07:25.190812Z
+updated: 2026-11-19T13:55:12.252525Z
 type: task
 title: R-1296 Physical security policies and procedures, with revision date (S2)(A1)(ST1-SOC)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: access_control
 soc2_core_control:
 - pes_4
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1296
