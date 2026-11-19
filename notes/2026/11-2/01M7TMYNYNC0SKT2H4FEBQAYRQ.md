@@ -1,17 +1,30 @@
 ---
 id: 01M7TMYNYNC0SKT2H4FEBQAYRQ
 created: 2026-11-19T19:36:20.181749Z
-updated: 2026-11-19T21:14:27.577384Z
+updated: 2026-11-19T22:07:47.638693Z
 type: task
 title: 'More flowchart shapes: Data (database cylinder) and the other common ones'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1992
 sprint: s6y6p7g
+comments:
+- id: 01M7TXKWF7HV6QT8NGMJN4RG9Z
+  author: Steve Vine
+  at: 2026-11-19T22:07:43.591185Z
+  text: |-
+    Done — PR #1992, merged 0f6dc32b.
+    Eight new shapes are on the shapes bar down the left, each with a hint: Data (cylinder), Subprocess (box with bars), Documents (stack), Manual input (sloped top), Manual task (trapezium), Preparation (hexagon), Delay (D) and Connector (small circle). Click or drag them in.
+    Each is a step: it connects (lines meet its own outline), takes fill, border and text styles, resizes, and its words wrap and grow the shape rather than hide.
+    The canvas, reading view, PNG/SVG and PDF/Word all draw the same outline. The plain text names each one ("Data: Customer records"), and Compare says "changed from a Step to Data".
+    Polaris can draw and read them. Imports from draw.io, Lucidchart and Mermaid bring their matching symbols in as these shapes.
+    On the bar they're grouped: Start/End, Step, Decision · Subprocess, Manual task, Preparation, Delay · Document, Documents, Data, Input/Output, Manual input · Hand-off, Connector · Note, Text, Group.
+    Assumptions: Compass has no Visio import (ADR 0160 left it open), so "Visio" is covered where a Visio drawing has been opened in draw.io. draw.io's "process" shape (the one with bars down each side) now comes in as a Subprocess rather than a Step, and Mermaid's [[ ]] likewise.
+    To check on staging: add one of each, connect them, resize one with a long label, then look at the reading view and a PDF.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve's smoke test of round 2: add more flowchart shapes, including Data (a database cylinder) and a few other common ones.
 
