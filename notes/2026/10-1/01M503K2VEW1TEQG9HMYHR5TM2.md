@@ -1,7 +1,7 @@
 ---
 id: 01M503K2VEW1TEQG9HMYHR5TM2
 created: 2026-10-15T15:41:15.502874Z
-updated: 2026-11-16T17:13:27.600012Z
+updated: 2026-11-19T10:10:24.49858Z
 type: task
 title: DLP
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -15,7 +15,7 @@ soc2_class: null
 soc2_core_control: null
 soc2_req_type: null
 soc2_status: null
-task_status: backlog
+task_status: cancelled
 ---
 Configure data loss prevention enforcement across email, cloud storage, endpoints, and network egress points used to transmit or move customer PII, CRM data, call recordings, and customer content, including transfers between the UK and US offices, to EU/US cloud systems, and to third-party telecom, workflow, and AI-answering platforms. Require encrypted channels (TLS or equivalent) for all such transmission, and restrict export, extraction, or removable-media transfer of sensitive data to authorized roles with documented business need.
 
