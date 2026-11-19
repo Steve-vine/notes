@@ -1,7 +1,7 @@
 ---
 id: 01M7JNR76A22V8WM5BTEFEQE5B
 created: 2026-11-16T17:16:21.578214Z
-updated: 2026-11-19T11:07:58.158469Z
+updated: 2026-11-19T11:24:57.807779Z
 type: task
 title: R-1034 Training policies and procedures, with revision date (S1)(A2)(S1-IRAP)(S1-9001)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: training
 soc2_core_control:
 - sea_1
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1034
