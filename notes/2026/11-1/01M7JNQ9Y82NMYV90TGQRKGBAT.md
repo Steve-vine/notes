@@ -1,7 +1,7 @@
 ---
 id: 01M7JNQ9Y82NMYV90TGQRKGBAT
 created: 2026-11-16T17:15:51.62411Z
-updated: 2026-11-19T11:07:01.044Z
+updated: 2026-11-19T11:09:31.293087Z
 type: task
 title: R-1005 Disciplinary/Sanctions policies and procedures (S2)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: management
 soc2_core_control:
 - peo_4
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1005
