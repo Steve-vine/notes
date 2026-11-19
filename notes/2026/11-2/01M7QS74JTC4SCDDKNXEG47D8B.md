@@ -1,7 +1,7 @@
 ---
 id: 01M7QS74JTC4SCDDKNXEG47D8B
 created: 2026-11-18T16:53:08.314174Z
-updated: 2026-11-18T22:02:37.849444Z
+updated: 2026-11-19T01:21:08.773342Z
 type: task
 title: The Library doesn't show layout markers such as "Page break" and "Landscape page"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,15 @@ comments:
     Checked, nothing to fix: the Markdown export already leaves both markers out, and an existing test pins that. The reading pane shows only the Contents, never the text, so it never showed markers.
 
     Assumption you may want to overturn: printing from the reader (Export ▸ Print) now starts a new page at each marker, unmarked. A browser's own print can't turn just part of a document landscape, so a landscape section prints portrait from the reader. Export ▸ PDF still gives true landscape pages.
+- id: 01M7RP9AN5C23STJX4KPEG5YY3
+  author: Steve Vine
+  at: 2026-11-19T01:21:08.773144Z
+  text: |-
+    Pre-UAT (staging 25f02b9c, E2E Admin A): **Passed**.
+    - Access Control Policy shows no "Page break" before "12 Controls" or "13 Document Review"; the gap above each heading is normal (29 px).
+    - In print, each break still applies (break-after: page, no label).
+    - The reading pane's Contents shows only headings.
+    Screenshot: ~/compass-uat/library/COM-1963/.
 assignee: steve
 label:
 - improvement

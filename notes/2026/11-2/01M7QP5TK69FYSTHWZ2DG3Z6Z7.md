@@ -1,7 +1,7 @@
 ---
 id: 01M7QP5TK69FYSTHWZ2DG3Z6Z7
 created: 2026-11-18T15:59:59.590082Z
-updated: 2026-11-18T22:37:41.060347Z
+updated: 2026-11-19T01:21:04.372318Z
 type: task
 title: 'The Library reader''s bar offers a reading width: Original, Wide or Full width'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,18 @@ comments:
     The choice is remembered for the person and applies to every document they read, on any browser. As the task proposed, it's one setting for all documents, not one per document. The Library page's own width (COM-1971) and section sorts (COM-1970) will be saved alongside it.
 
     Assumption you may want to overturn: the icon has no text label in the bar. Its name, "Reading width", shows on hover.
+- id: 01M7RP96BM9ZYX78FWWZ1SAAVX
+  author: Steve Vine
+  at: 2026-11-19T01:21:04.372071Z
+  text: |-
+    Pre-UAT (staging 25f02b9c, E2E Admin A): **Passed**.
+    - Reading width offers Normal / Wide / Full width, with the current one ticked, and works by keyboard and mouse.
+    - Widths: Normal 680 px, Wide 1020 px (exactly 1.5×), Full 1376 px with 32 px margins at a 1440 px window. No sideways scroll at any width.
+    - The choice was kept after reload, in a fresh browser and across documents, and is separate from the Library page width.
+    - The Contents menu and Back to top work at Full width. Flowchart pictures follow the column.
+    - On a phone the control is under More.
+    - Couldn't check: that the control is absent for uploaded PDF, link and SharePoint documents (none on staging), and that small pictures aren't stretched (none on staging).
+    Screenshots: ~/compass-uat/library/COM-1962/.
 assignee: steve
 label:
 - improvement
