@@ -1,7 +1,7 @@
 ---
 id: 01M7JNQA23AZ1CEVGKFA8G4G0Z
 created: 2026-11-16T17:15:51.747103Z
-updated: 2026-11-19T11:06:38.09717Z
+updated: 2026-11-19T11:08:16.982361Z
 type: task
 title: R-1014 Background check policies and procedures, with revision date (A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: management
 soc2_core_control:
 - peo_2
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: missing
 task_status: backlog
 ---
 **A-SCEND request:** R-1014
