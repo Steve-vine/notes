@@ -1,17 +1,29 @@
 ---
 id: 01M7TPWT3PP5WGSX8BVE0A3HZ0
 created: 2026-11-19T20:10:16.054997Z
-updated: 2026-11-19T21:40:12.468862Z
+updated: 2026-11-19T22:24:21.060875Z
 type: task
 title: A flowchart in a document is shown at its own size in the editor and can be resized from its corner
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 1998
 sprint: s6y6p7g
+comments:
+- id: 01M7TYJ6YTJ012R01MXZ1ATDQK
+  author: Steve Vine
+  at: 2026-11-19T22:24:17.3704Z
+  text: |-
+    Done — PR #1996, merged 1ea4caf2.
+    In the Edit tab a document's own flowchart is now shown exactly as the Read tab and a standalone flowchart show it, with the same zoom, full screen and download, and never stretched: a flowchart is never drawn bigger than its own size, as in the PDF and Word.
+    Selected, either kind (a document's own or a standalone one) has the corner handle pictures have. Dragging keeps its proportions, down to half its own size so the words stay readable. Alignment (Left, Centre, Right, Full width) is in its settings panel.
+    The size and place are saved with the document, including for a standalone flowchart shown in it, and the Read tab, print preview, PDF and Word all show it at that size, still whole on one page. Editing the flowchart later keeps the chosen size. A flowchart never resized keeps today's size.
+    Word now follows a chosen size too, as the PDF already did.
+    Assumptions: "readable" means no smaller than half its own size; a flowchart more than twice the page's width can't be made smaller. Dragging bigger than its own size shows and prints at its own size, since print never enlarges.
+    To check on staging: draw a 3-box flowchart in a document; in the Edit tab it should be the same size as on the Read tab. Resize and align it and a standalone one, then check Read, print preview, PDF and Word.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Steve's smoke test of round 2: he created a small flowchart with 3 or 4 shapes in a document and pressed OK. In the editor it appeared across the full width of the page, so three shapes took up a whole A4 page. There's no way to resize it.
 
