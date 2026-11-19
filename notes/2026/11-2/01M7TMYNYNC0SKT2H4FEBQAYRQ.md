@@ -1,7 +1,7 @@
 ---
 id: 01M7TMYNYNC0SKT2H4FEBQAYRQ
 created: 2026-11-19T19:36:20.181749Z
-updated: 2026-11-19T19:44:12.952712Z
+updated: 2026-11-19T21:14:27.577384Z
 type: task
 title: 'More flowchart shapes: Data (database cylinder) and the other common ones'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve's smoke test of round 2: add more flowchart shapes, including Data (a database cylinder) and a few other common ones.
 
