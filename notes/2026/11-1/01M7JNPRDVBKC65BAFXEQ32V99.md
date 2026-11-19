@@ -1,7 +1,7 @@
 ---
 id: 01M7JNPRDVBKC65BAFXEQ32V99
 created: 2026-11-16T17:15:33.691086Z
-updated: 2026-11-19T11:07:55.195448Z
+updated: 2026-11-19T14:58:32.973873Z
 type: task
 title: R-1382 Incident response policies and procedures, with revision date (S1)(A1)(F1)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: incidents
 soc2_core_control:
 - ima_1
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1382
