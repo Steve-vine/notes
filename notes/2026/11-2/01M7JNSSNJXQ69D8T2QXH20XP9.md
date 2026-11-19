@@ -1,7 +1,7 @@
 ---
 id: 01M7JNSSNJXQ69D8T2QXH20XP9
 created: 2026-11-16T17:17:13.266565Z
-updated: 2026-11-19T11:07:25.29174Z
+updated: 2026-11-19T11:27:20.481218Z
 type: task
 title: R-1065 Risk assessment and treatment policies and procedures, with revision date (S1)(A1)(S1-9001)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -16,7 +16,7 @@ soc2_class: risk
 soc2_core_control:
 - rim_2
 soc2_req_type: evidence
-soc2_status: new
+soc2_status: submitted
 task_status: backlog
 ---
 **A-SCEND request:** R-1065
