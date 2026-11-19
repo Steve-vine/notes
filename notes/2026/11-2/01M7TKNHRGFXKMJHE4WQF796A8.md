@@ -1,7 +1,7 @@
 ---
 id: 01M7TKNHRGFXKMJHE4WQF796A8
 created: 2026-11-19T19:13:52.40018Z
-updated: 2026-11-19T20:31:43.223398Z
+updated: 2026-11-19T20:51:57.287432Z
 type: task
 title: 'A folder''s "Add items" button: pick several existing folders and documents and add them to this folder in one go'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,32 @@ number: 1989
 sprint: s2q1gxe
 blocked_by:
 - 01M7TJT0NV5ZX7ACR938EPSGYV
+comments:
+- id: 01M7TS933ASN5643ZKBJZ2CP01
+  author: Steve Vine
+  at: 2026-11-19T20:51:55.626405Z
+  text: |-
+    Merged: PR #1983, sha 47728695. No migration. API: a new route adds several folders and documents to a folder in one go, all or nothing.
+
+    What changed: in a folder people made, the header has **Add items** to the right of New folder. Anyone who can arrange the Library sees it. A viewer doesn't, and it isn't on the home, in a domain folder or in Not in a folder.
+    - **The dialog,** "Add items to <folder>", has a search box above two lists:
+      - **Folders:** every folder people made, with where it sits.
+      - **Documents:** every published document and decision, with its type chip and domain.
+    - **Can't be added:** these rows are greyed and say why: "This folder", "Holds this folder", or "Already here". Domain folders aren't listed.
+    - **Picking:** ticks are kept as you search. The foot counts what's ticked ("2 folders and 3 documents") and the button reads "Add 5 items". Esc cancels. On a phone the dialog fills the screen.
+    - **Adding:** each document is filed here too and stays in its other folders. Each folder moves here with everything in it, after this folder's own folders, in the order ticked.
+    - **Afterwards:** a note says e.g. "Added 3 documents and moved 2 folders here", with Undo, which puts every item back exactly. Each change has its own line in the activity log.
+    - **Refused as a whole:** a domain folder, the folder itself or one it sits inside, anything already here, or a folder whose name is already used here.
+
+    For Steve to overturn:
+    - The type chip and domain sit under each document's name.
+    - On a phone the button keeps its "Add items" label. The header's buttons wrap onto their own line there, and both labels fit at 390 px.
+    - Unpublished drafts aren't offered, only what the Library shows.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Steve, testing the Library on staging (19 Nov): in the folder view, add a new button to the right of New folder called Add items. Clicking it lets you add existing folders and documents into this folder, picking several at once.
 
