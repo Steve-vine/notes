@@ -1,7 +1,7 @@
 ---
 id: 01M7V90K9T9TRGHZ0KK1GTE585
 created: 2026-11-20T01:26:54.522013Z
-updated: 2026-11-20T01:26:58.72165Z
+updated: 2026-11-20T01:27:36.258479Z
 type: task
 title: A new standalone flowchart opens with its Start shape again
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: urgent
-task_status: todo
+task_status: active
 ---
 Found by the Browser smoke on staging 0ed475e8 (run 44651228349, journey 6b). It probably came in with COM-2014, which made a standalone flowchart's page wait for its house style before opening the canvas.
 
