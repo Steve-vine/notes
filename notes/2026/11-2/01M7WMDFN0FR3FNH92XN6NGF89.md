@@ -1,7 +1,7 @@
 ---
 id: 01M7WMDFN0FR3FNH92XN6NGF89
 created: 2026-11-20T14:05:25.536206Z
-updated: 2026-11-20T14:07:29.18205Z
+updated: 2026-11-20T14:11:27.019005Z
 type: task
 title: A standalone flowchart in a document shows its latest published version, with an option to pin an older one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 Steve (testing round 3): after editing a standalone flowchart and publishing it, the document it's linked in still shows version 1 of the chart. Underneath it says "Version 3 is published", but there's no way to change the chart to version 3. By default, a document should always show the flowchart's latest published version, with an option to pin it to an older version if needed.
 
