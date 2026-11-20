@@ -1,7 +1,7 @@
 ---
 id: 01M7TQGG2YQV31HFG95RS3Q3HM
 created: 2026-11-19T20:21:01.150801Z
-updated: 2026-11-20T01:56:45.266194Z
+updated: 2026-11-20T14:05:05.141282Z
 type: task
 title: The document editor shows flowcharts, diagrams and images at the same size as the Read tab and print, with "Show as on paper" on or off
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -53,7 +53,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Steve's smoke test of round 2: flowcharts, diagrams and images change size in the document editor when "Show as on paper" is switched on or off. They should stay the same size.
 

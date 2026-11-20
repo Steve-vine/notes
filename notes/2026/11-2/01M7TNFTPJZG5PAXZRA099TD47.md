@@ -1,7 +1,7 @@
 ---
 id: 01M7TNFTPJZG5PAXZRA099TD47
 created: 2026-11-19T19:45:42.098911Z
-updated: 2026-11-19T23:55:36.661345Z
+updated: 2026-11-20T14:05:05.094206Z
 type: task
 title: Each side panel of the flowchart editor has a small icon to hide and show it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve's smoke test of round 2: add a small icon on each side panel to hide and show it, to give the canvas more room.
 

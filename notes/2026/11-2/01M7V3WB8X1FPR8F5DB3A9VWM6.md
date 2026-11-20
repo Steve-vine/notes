@@ -1,7 +1,7 @@
 ---
 id: 01M7V3WB8X1FPR8F5DB3A9VWM6
 created: 2026-11-19T23:57:12.349977Z
-updated: 2026-11-20T02:24:50.400763Z
+updated: 2026-11-20T14:05:05.286775Z
 type: task
 title: A standalone flowchart's default shape colours are picker colours too
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in pre-UAT of round 3, by Tester A on staging 7ea67f64, against COM-1991. Tester C saw the same effect: one 3-box chart drawn grey as a document's own flowchart and light blue as a standalone one.
 

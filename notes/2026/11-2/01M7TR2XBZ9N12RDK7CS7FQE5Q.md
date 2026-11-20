@@ -1,7 +1,7 @@
 ---
 id: 01M7TR2XBZ9N12RDK7CS7FQE5Q
 created: 2026-11-19T20:31:04.575288Z
-updated: 2026-11-20T01:59:02.910271Z
+updated: 2026-11-20T14:05:05.149663Z
 type: task
 title: One click selects a flowchart in a document; double-click opens it for editing, as drawings do
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,7 +48,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 Steve's smoke test of round 2: in the document editor, clicking a flowchart opens it straight in the flowchart editor, so a flowchart can't be selected without editing it. It should work like drawings do today: one click selects, double-click edits.
 

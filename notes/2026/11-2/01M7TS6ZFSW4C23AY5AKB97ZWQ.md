@@ -1,7 +1,7 @@
 ---
 id: 01M7TS6ZFSW4C23AY5AKB97ZWQ
 created: 2026-11-19T20:50:46.393629Z
-updated: 2026-11-20T01:58:59.044902Z
+updated: 2026-11-20T14:05:05.189978Z
 type: task
 title: A flowchart's Zoom in and out steps are relative to the size it's shown at
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -46,7 +46,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve's smoke test of round 2: Zoom in on a flowchart in the Read tab isn't relative to the flowchart's size. A large flowchart gets about 50% bigger on the first click, but a small one gets 5 or 6 times bigger.
 

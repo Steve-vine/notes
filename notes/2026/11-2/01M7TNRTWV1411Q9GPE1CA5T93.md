@@ -1,7 +1,7 @@
 ---
 id: 01M7TNRTWV1411Q9GPE1CA5T93
 created: 2026-11-19T19:50:37.211011Z
-updated: 2026-11-20T02:25:13.829036Z
+updated: 2026-11-20T14:05:05.108886Z
 type: task
 title: Move a connection's end to any of several points on its shape, or to another shape
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -70,7 +70,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 Steve's smoke test of round 2: let people move a connection between connection points. Today Compass picks which side of a shape each connection leaves and arrives at, and the person can't change it. They should be able to drag either end of a connection to a different point on the same shape, or onto another shape. Each shape should have several connection points, not just one per side.
 

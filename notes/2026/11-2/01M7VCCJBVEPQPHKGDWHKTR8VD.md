@@ -1,7 +1,7 @@
 ---
 id: 01M7VCCJBVEPQPHKGDWHKTR8VD
 created: 2026-11-20T02:25:52.507641Z
-updated: 2026-11-20T03:48:32.811056Z
+updated: 2026-11-20T14:05:05.314041Z
 type: task
 title: The flowchart canvas takes the house style's colours even when the house style loads late
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -58,7 +58,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in the round 3 re-check, by Tester A on staging d8749c62, against COM-2016 and COM-2014.
 

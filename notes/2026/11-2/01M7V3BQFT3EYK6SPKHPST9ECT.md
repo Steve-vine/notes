@@ -1,7 +1,7 @@
 ---
 id: 01M7V3BQFT3EYK6SPKHPST9ECT
 created: 2026-11-19T23:48:07.802009Z
-updated: 2026-11-20T01:58:09.573727Z
+updated: 2026-11-20T14:05:05.206205Z
 type: task
 title: Zoom in on a flowchart in the Read tab enlarges the picture again
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in pre-UAT of round 3, by Tester C on staging 7ea67f64, against COM-2003.
 

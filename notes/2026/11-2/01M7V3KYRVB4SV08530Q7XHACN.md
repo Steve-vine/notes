@@ -1,7 +1,7 @@
 ---
 id: 01M7V3KYRVB4SV08530Q7XHACN
 created: 2026-11-19T23:52:37.403216Z
-updated: 2026-11-20T01:56:25.251456Z
+updated: 2026-11-20T14:05:05.260244Z
 type: task
 title: Pictures' alt text reaches the PDF, and a standalone flowchart's alt text is the same everywhere
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in pre-UAT of round 3, by Tester B on staging 7ea67f64, against COM-2004.
 

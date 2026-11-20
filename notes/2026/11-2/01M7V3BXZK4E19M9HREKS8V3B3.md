@@ -1,7 +1,7 @@
 ---
 id: 01M7V3BXZK4E19M9HREKS8V3B3
 created: 2026-11-19T23:48:14.45145Z
-updated: 2026-11-20T03:09:22.70316Z
+updated: 2026-11-20T14:05:05.215232Z
 type: task
 title: Copying, cutting and pasting a flowchart in a document keeps it a flowchart
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -50,7 +50,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in pre-UAT of round 3, by Tester C on staging 7ea67f64, against COM-2001.
 
