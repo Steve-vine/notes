@@ -1,7 +1,7 @@
 ---
 id: 01M7WZJAXRFAW5P5AHWZ3FX6FV
 created: 2026-11-20T17:20:18.872812Z
-updated: 2026-11-20T17:20:32.410811Z
+updated: 2026-11-20T17:21:10.312687Z
 type: task
 title: Moving between two published documents with different house styles that show the same standalone flowchart no longer sticks on loading
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: urgent
-task_status: todo
+task_status: active
 ---
 Found in Claude's pre-UAT of COM-2023/COM-2024 (staging b65d7ed8, tester B). This is exactly Steve's setup.
 
