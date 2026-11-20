@@ -1,7 +1,7 @@
 ---
 id: 01M7WMCZCH2N0BB6K8QMX4CX19
 created: 2026-11-20T14:05:08.881922Z
-updated: 2026-11-20T15:23:33.294646Z
+updated: 2026-11-20T17:19:31.447543Z
 type: task
 title: 'A flowchart''s colours always come from one house style: its document''s, or for a standalone flowchart, its own type''s'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,23 @@ comments:
     Assumption: in PDF and Word a flowchart's words print in the document's font, as every flowchart's do (COM-1982), so it reads like the text around it. Its colours are its own.
     Assumption: a flowchart whose picture was saved in the wrong colours before this fix (only during testing on staging) is put right the next time it's edited and published.
     To check on staging: add one standalone flowchart to two documents whose types have different house styles. Check it's in its own type's colours in both. Edit it from each and check the canvas colours. Then print both.
+- id: 01M7WZGWKQW809JH50GSXQA25D
+  author: Steve Vine
+  at: 2026-11-20T17:19:31.44729Z
+  text: |-
+    Pre-UAT on staging b65d7ed8 — Failed
+
+    Setup: the standalone flowchart "E2E pre-UAT COM-2024 standalone flowchart (Runbook type)" (two lanes, a decision; house style "Runbooks", red) is added to two published documents. "E2E pre-UAT COM-2023 Procedure document (A4-Policy-External style)" is grey/black. "E2E pre-UAT COM-2023 Runbook document (Runbooks style)" is red. Each document also has a flowchart of its own. I tested as E2E Admin A. No type was remapped.
+
+    - In its own type's colours in every document: Passed. In the grey Procedure document the standalone flowchart is red (Runbooks), while that document's own flowchart and text stay grey. This holds on the Read tab, the Edit tab, the picture, full screen and the SVG/PNG downloads, and in the browser's print view. PDF: in the Procedure PDF, "Standalone step" is drawn red and the document's own "Own step" grey. In the Runbook PDF both are red. Word: the same colours in both files.
+    - Editing it from either document, or from its own page, opens the canvas in its own type's colours: Passed. From either document, Edit flowchart opens its own page. Its Edit flowchart button then opens a red canvas with Runbooks swatches in the Style panel, every time. The builder's deviation stands: from a document you land on its page and need one more click to reach the canvas.
+    - A document's own flowchart shows and edits in that document's colours: Passed (Procedure grey, Runbook red, canvas and swatches included).
+    - Assumption (the document's type changes, so its flowchart follows): Failed. I changed "E2E pre-UAT COM-2023 same own flowchart (Procedure)" from Procedure to Runbook on the Edit tab. The canvas and the document's text turned red, but the flowchart picture on the Edit and Read tabs stayed grey until the flowchart is opened and Done. I set the type back to Procedure afterwards.
+    - Not marked as having unpublished changes from being shown or opened from another document: Passed. It's still "no unpublished changes", version 1, after opening it from both documents and cancelling the canvas.
+    - Tests: Passed. ownHouseStyle.test.tsx covers one flowchart in two documents.
+    - DEFECT, seen with this exact setup (logged in detail on COM-2023): moving inside the app from one of these two documents to the other leaves the page on loading placeholders forever, in both directions, by link, from the Library and from search. Refreshing shows it.
+    - Seen once and not again in 4 tries: Edit flowchart from the Runbook document opened the flowchart's page as "Compass couldn't load this — try again" (r4-O1-*.png).
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2024/ (r4-*; PDFs, Word files and downloads are there too)
 assignee: steve
 label:
 - bug
