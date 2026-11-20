@@ -1,7 +1,7 @@
 ---
 id: 01M7V3BXZK4E19M9HREKS8V3B3
 created: 2026-11-19T23:48:14.45145Z
-updated: 2026-11-20T01:58:40.371983Z
+updated: 2026-11-20T03:09:22.70316Z
 type: task
 title: Copying, cutting and pasting a flowchart in a document keeps it a flowchart
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,15 @@ comments:
     Observation: after a paste, the pasted flowchart stays selected, so a second Ctrl+V straight away replaces it rather than adding another; click elsewhere first. That's the editor's usual rule for a selected item; I didn't compare it with a picture.
     Steve: copy a flowchart from one document, paste it into another and publish without reloading. The published PDF says "Not yet drawn".
     Screenshots and PDFs: ~/compass-uat/s6y6p7g/COM-2006/ (r3re-*)
+- id: 01M7VEW7CFHZJ4B6YG0EHMHP8A
+  author: Steve Vine
+  at: 2026-11-20T03:09:22.702881Z
+  text: |-
+    Re-check on staging 85a42994: pasting into another document now Passed (fixed by COM-2017)
+    - As E2E Admin A, I copied the document's own flowchart from "E2E pre-UAT COM-2006 copy and paste" and pasted it into a new draft, "E2E pre-UAT COM-2017 paste target". The flowchart was saved with a picture of its own about 1 s later. I published straight away without reloading.
+    - Version 1's Read tab, PDF and Word all show the flowchart, and none of them says "Not yet drawn".
+    - A standalone flowchart pasted across documents is still the same reference: version 1, 50%, Left.
+    Files: ~/compass-uat/s6y6p7g/COM-2017/r3fin-published-v1.pdf and .docx
 assignee: steve
 label:
 - bug

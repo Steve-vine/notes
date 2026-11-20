@@ -1,7 +1,7 @@
 ---
 id: 01M7V90K9T9TRGHZ0KK1GTE585
 created: 2026-11-20T01:26:54.522013Z
-updated: 2026-11-20T02:25:09.063854Z
+updated: 2026-11-20T03:09:29.083623Z
 type: task
 title: A new standalone flowchart opens with its Start shape again
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,6 +45,16 @@ comments:
     - Browser smoke journey 6b is green on staging, including COM-2013's end-handle drag: Passed. The Browser smoke step of the d8749c62 staging deploy (run 44657555871) succeeded.
     - Unit test for Start when the house style arrives late and never: Passed. standaloneStart.test.tsx has "opens with Start when the house style arrives late" and "… never arrives". No test checks that the colours change when it arrives late.
     Screenshots: ~/compass-uat/s6y6p7g/COM-2016/r3re-*
+- id: 01M7VEWDKV2GKABABDV09ZAHT7
+  author: Steve Vine
+  at: 2026-11-20T03:09:29.083433Z
+  text: |-
+    Re-check on staging 85a42994: "the house style still applies once it loads", for a late load, now Passed (fixed by COM-2018)
+    - As E2E Admin A, I held up the house-style list and stylesheet by 4.5 s each, with the browser cache off. A new standalone flowchart's canvas opened with Start after 3.3 s, in the fallback #e7f5ff / #1971c2, with Style agreeing.
+    - When the stylesheet arrived, at about 10 s, the canvas turned #e9e9e9 / #212121, and Style ticked the same colours. Done saved a grey picture, and the Read tab shows it.
+    - On a normal load, a new standalone still opens with just Start, in #e9e9e9.
+    - One remaining gap, logged under COM-2018: a document's own flowchart that arrives without a picture gets a background picture saved before the house style loads, so its PDF prints it pale blue.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2018/r3fin-*
 assignee: steve
 label:
 - bug
