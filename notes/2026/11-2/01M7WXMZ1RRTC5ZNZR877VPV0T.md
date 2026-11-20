@@ -1,7 +1,7 @@
 ---
 id: 01M7WXMZ1RRTC5ZNZR877VPV0T
 created: 2026-11-20T16:46:47.864941Z
-updated: 2026-11-20T16:46:52.886611Z
+updated: 2026-11-20T17:03:28.499372Z
 type: task
 title: The "Show an existing flowchart" window describes following the latest version, not keeping one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found in Claude's pre-UAT of COM-2027 (staging b65d7ed8, tester C).
 
