@@ -1,17 +1,28 @@
 ---
 id: 01M7V3KQS7HGQRX0VC1RMFYV7W
 created: 2026-11-19T23:52:30.247227Z
-updated: 2026-11-19T23:53:40.736662Z
+updated: 2026-11-20T00:22:52.242482Z
 type: task
 title: A picture that has never been resized is the same size in the PDF as in the editor and the Read tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2009
 sprint: s6y6p7g
+comments:
+- id: 01M7V5B5R87J9XF6W2Q86RS35Z
+  author: Steve Vine
+  at: 2026-11-20T00:22:46.791642Z
+  text: |-
+    Done — PR #2002, merged f971e1705.
+    A picture nobody has resized (an image, a drawing or a text diagram) now prints in the PDF and Print preview at the size the editor, the Read tab and Word show it at, not stretched across the page. A text diagram that is 300×72 on screen is 300×72 in the PDF.
+    A picture wider than the page is still shrunk to the text width. Resized and Full width pictures are unchanged, and flowcharts already printed at their own size.
+    Cached PDFs are made afresh after the deploy, so published documents pick it up without being republished.
+    Assumption: "its own size" is the size the browser shows it at. That is the same number Word already uses.
+    To check on staging: export the PDF of a document with an unresized text diagram and an unresized drawing, and compare their size with the Read tab and Word.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found in pre-UAT of round 3, by Tester B on staging 7ea67f64, against COM-2000.
 
