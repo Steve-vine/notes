@@ -1,7 +1,7 @@
 ---
 id: 01M7WZJAXRFAW5P5AHWZ3FX6FV
 created: 2026-11-20T17:20:18.872812Z
-updated: 2026-11-20T17:57:33.346589Z
+updated: 2026-11-20T19:24:59.659646Z
 type: task
 title: Moving between two published documents with different house styles that show the same standalone flowchart no longer sticks on loading
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,20 @@ comments:
     Checked in a real browser against the pre-UAT documents (read only, through a local build): the minimal Procedure and Runbook with the standalone flowchart, 3 rounds each way plus Back and Forward, and the own-and-standalone pair, on the Read and Edit tabs. Every one opened in under 2 s in its own colours. Staging before this fix stays stuck on the same steps.
     A new Browser smoke test makes two published documents in two house styles that share one flowchart (made up in the browser, so nothing is created on staging) and moves between them through the Content list twice each way, then Back and Forward. It fails on the old code and passes now.
     To check on staging: Steve's original steps (Procedure with standalone, then Content, then Runbook with standalone, and back).
+- id: 01M7X6PMCBY2NY91JFSN41D023
+  author: Steve Vine
+  at: 2026-11-20T19:24:59.659451Z
+  text: |-
+    Re-check on staging 514c4649 — Passed
+
+    I tested as E2E Admin A in headless Chromium, plus one run as E2E Admin B in a fresh browser. A document counted as "opened" only when its title, its body and its flowchart picture were all showing, with no loading placeholders left. Saves were held back in the browser.
+    - Steve's steps, both directions, by link, Content list, Library, search and Back/Forward: Passed. Pair: "minimal Procedure with standalone" and "minimal Runbook with standalone". I made 3 round trips through the Content list. Back twice and Forward twice each landed on the other document. Both documents opened from the Library ("Not in a folder" → reader), then back to the first and Back again. I also moved between them by search (results page) three times. Every one opened in 0.5 s or less, each in its own house style: Procedure in A4-Policy-External, Runbook in Runbooks. They never stuck.
+    - The other pairs: Passed. I ran the same full set on "Procedure document (A4-Policy-External style)" with "Runbook document (Runbooks style)", and on "own and standalone (Procedure)" with "own and standalone (Runbook)". All opened. Headings were #212121 in the Procedure document and #eb0e3d in the Runbook one, and the shared flowchart was red in both.
+    - Edit tab: Passed. Going to a document through the Content list and opening its Edit tab worked both ways for all three pairs, with no hang.
+    - Fresh browser as Admin B (Runbook document ↔ Procedure document, two rounds plus Back and Forward): all opened.
+    - Browser test: Passed. app/e2e/tests/house-styles.spec.ts was added in this PR, and staging CI on 514c4649 is green.
+    - Observation, not this task (it happens with any documents): after you reach a document with Back or Forward, clicking its Read or Edit tab makes the "Content" link in the top trail disappear, until the page is refreshed. Steps: open document A, then Content, then document B, then Back, Back, Forward, Forward, then the Edit tab. Seen with this pair, and with "COM-1908 Document C" and "COM-2023 minimal Runbook no flowchart". Screenshots r4re-trail-gone-*.png.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2033/ (r4re-pair0/1/2-*)
 assignee: steve
 label:
 - bug

@@ -1,7 +1,7 @@
 ---
 id: 01M7WZJGMFCT7HJTMMCZW7ZDKC
 created: 2026-11-20T17:20:24.719888Z
-updated: 2026-11-20T18:40:22.335825Z
+updated: 2026-11-20T19:25:07.860658Z
 type: task
 title: A document's own flowchart picture takes the new house style when the document's type changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,21 @@ comments:
     Tests: a picture kept in one house style and recoloured into another matches the same chart drawn in it; a document's flowchart changes colour when its type changes, with nothing written; the PDF and Word print a document's own flowchart in its current house style and a standalone one in its own.
     Note: cached PDFs and Word files are made afresh after deploy (house-style renderer version 18).
     To check on staging: change "same own flowchart (Procedure)" to Runbook, look at the Edit and Read tabs and the PDF and Word, then set it back.
+- id: 01M7X6PWCM5X6J3WDNW74D2HSK
+  author: Steve Vine
+  at: 2026-11-20T19:25:07.860468Z
+  text: |-
+    Re-check on staging 514c4649 — Passed
+
+    I tested as E2E Admin A in headless Chromium, on "E2E pre-UAT COM-2023 same own flowchart (Procedure)". Section saves were held back in the browser; the type changes were real.
+    - Type changed to one with another house style, Edit and Read tabs: Passed. I chose Type → Runbook on the Edit tab. The flowchart picture turned red (#fde7ec fill, #eb0e3d line) straight away on that page, with no reload and without opening the flowchart, along with the text. The Read tab showed the same.
+    - PDF and Word: Passed. As a Runbook, the PDF's flowchart was drawn #fde7ec/#eb0e3d and the Word picture was pink and red. After I set the type back to Procedure, both came out grey again (#e9e9e9/#212121), so nothing was stuck in the cache.
+    - House style mapped to the type changed in Admin: Passed. I made a type "E2E pre-UAT COM-2034 type" mapped to A4-Standards-Internal and moved the document to it, and the picture turned navy (#1f3a5f). I then changed that type's house style to Runbooks on Content ▸ Mappings and opened the document from the Content list without a reload. Its picture was red on the Read and Edit tabs, and red in the PDF and Word too.
+    - No unpublished change from the redraw: Passed. The only writes the screen made were the type change itself and the usual section save on opening the Edit tab. That save carried the same picture, and no new picture was uploaded. Throughout, the document stayed "Published", version 1, with no unpublished changes.
+    - Test: Passed. typeChangeColours.test.tsx and test_flowchart_house_colours.py are in the PR.
+    - Print: the Print preview PDF was right, as above. The browser's own print (Ctrl+P) of a content page comes out blank. That isn't from this task (see the report): the Library reader prints this document fine, flowchart included, in the right colours.
+    Clean-up: the document is back on Procedure, and the E2E type has been deleted (no E2E type is left).
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2034/ (r4re-*; PDFs and Word files are alongside)
 assignee: steve
 label:
 - bug

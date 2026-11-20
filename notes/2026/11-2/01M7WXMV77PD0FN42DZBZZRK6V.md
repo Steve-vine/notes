@@ -1,7 +1,7 @@
 ---
 id: 01M7WXMV77PD0FN42DZBZZRK6V
 created: 2026-11-20T16:46:43.94332Z
-updated: 2026-11-20T17:20:25.810533Z
+updated: 2026-11-20T19:24:49.866314Z
 type: task
 title: A flowchart someone chose to Keep on an older version stays pinned to it when documents switch to following the latest
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,20 @@ comments:
     - Compass recorded that someone chose Keep, but not which version they kept. That version is read from the document's last published version, and only where it is certainly what the draft showed: older than the version kept through, and the draft not saved since that publish. A Keep that fails that check keeps following the latest; a person can pin it in the settings panel. On staging the one Keep passes the check.
     - Production has no flowcharts yet, so there it changes nothing. It's tested for the case where both migrations run together.
     To check on staging (after the next deploy): "E2E pre-UAT COM-1908 Document B (Keep)" should show version 3 on its Edit tab, with "Pinned to version 3" in the panel and the note "Pinned to version 3. Version 5 is published. Use latest". It should have no draft changes and no "Publish … to include" action, and its owner should have a "Take or keep" action for version 5.
+- id: 01M7X6PATAD2RF1AR09RGVJWSC
+  author: Steve Vine
+  at: 2026-11-20T19:24:49.866136Z
+  text: |-
+    Re-check on staging 514c4649 — Passed
+
+    I tested as E2E Admin A (the document's reviewer, so its owner) in headless Chromium. Saves were held back in the browser, so nothing on the document changed.
+    - Kept document pinned to its kept version: Passed. On the Edit tab, "E2E pre-UAT COM-1908 Document B (Keep)" shows "E2E pre-UAT COM-1907 Service request handling, version 3" with the note "Pinned to version 3. Version 5 is published. Use latest". In its settings panel, Version reads "Pinned to version 3" ("Stays on this version until you choose another"). The Read tab shows version 3 "(pinned; version 5 is published)", and the PDF prints version 3.
+    - Its draft changes and "Publish … to include" cleared: Passed. The header says only "Published", the document's review action is "Due" (not "Draft changes"), and there's no "Publish E2E pre-UAT COM-1908 Document B (Keep) to include…" action.
+    - The owner has a take-or-keep action for version 5: Passed. My Actions list shows "E2E pre-UAT COM-1907 Service request handling has a newer version (5) than E2E pre-UAT COM-1908 Document B (Keep) shows (3) — Take or keep the new version", owned by E2E Admin A.
+    - Everything else still follows the latest version: Passed. Document A (Take) still follows the latest: its draft shows version 5, its published version shows version 4, and it has the "Publish … to include" action. The COM-2027 document (no decision) follows version 4 and has no draft changes.
+    - Published versions untouched: Passed. Document B's published version is still V1 showing flowchart version 3.
+    - Production, and the test against a populated database: Couldn't check on staging. These rest on the builder's migration tests.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2030/ (r4re-*; r4re-docB.pdf)
 assignee: steve
 label:
 - bug
