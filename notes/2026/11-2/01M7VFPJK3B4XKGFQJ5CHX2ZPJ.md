@@ -1,7 +1,7 @@
 ---
 id: 01M7VFPJK3B4XKGFQJ5CHX2ZPJ
 created: 2026-11-20T03:23:46.147312Z
-updated: 2026-11-20T03:23:50.143747Z
+updated: 2026-11-20T03:24:25.465094Z
 type: task
 title: Browser smoke journey 6b selects the connection reliably before checking its end handles
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Found on the staging deploy of 85a42994 (run 44663682398). Journey 6b failed at its COM-2013 step: after Tidy up, the test works out the connection's middle point and clicks it, but the connection wasn't selected, so `.fc-edge-end[data-edge-end="from"]` never appeared. The screenshot shows Start → Step, with no connection panel open.
 
