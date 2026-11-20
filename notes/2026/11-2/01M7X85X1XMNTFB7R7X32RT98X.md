@@ -1,17 +1,18 @@
 ---
 id: 01M7X85X1XMNTFB7R7X32RT98X
 created: 2026-11-20T19:50:48.637702Z
-updated: 2026-11-20T19:50:48.637702Z
+updated: 2026-11-20T19:50:58.928276Z
 type: task
 title: One piece of evidence can be linked to many records; unlinking isn't archiving
-label: feature
-assignee: steve
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2040
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
-Built to the ADR in COM-2038, after COM-2039. This is the foundation the Add evidence window (COM-2040, COM-2041) and its rollout stand on. There's no new screen of its own beyond "Used in".
+Built to the ADR in COM-2038, after COM-2039. This is the foundation the Add evidence window (COM-2041, COM-2042) and its rollout stand on. There's no new screen of its own beyond "Used in".
 
 **What changes for people**
 - A piece of evidence (a file or a web address) can be linked to **any number of records**: controls, schedule entries, incidents (the evidence, a timeline entry, a notification), risks, vulnerabilities, audit requests and a finding's closing evidence. It's the same piece everywhere, never a copy.
