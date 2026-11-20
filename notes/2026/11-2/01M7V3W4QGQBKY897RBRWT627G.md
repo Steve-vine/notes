@@ -1,7 +1,7 @@
 ---
 id: 01M7V3W4QGQBKY897RBRWT627G
 created: 2026-11-19T23:57:05.648624Z
-updated: 2026-11-19T23:57:22.434215Z
+updated: 2026-11-20T00:16:45.072659Z
 type: task
 title: A selected connection's end handles can be grabbed and dragged
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Found in pre-UAT of round 3, by Tester A on staging 7ea67f64, against COM-1996.
 
