@@ -1,7 +1,7 @@
 ---
 id: 01M7X86QAR4TB98Y4NTZY0FCFP
 created: 2026-11-20T19:51:15.544996Z
-updated: 2026-11-20T19:52:41.439501Z
+updated: 2026-11-20T20:01:33.544763Z
 type: task
 title: 'The Add evidence window: Add new evidence tab (drop files or a web address, check each one''s details, upload)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,7 @@ Built to the ADR in COM-2038, after COM-2040. Steve's design (2026-11-20). This 
 - **Properties on the right**, for whichever row is selected. Steve clicks through each one; there's no editing several at once.
   - **Name:** the file name, which can be changed. For an address, a title, defaulting to the address.
   - **Evidence type:** from the Evidence types rubric. It's required.
+  - **Classification** (Steve, 2026-11-20): a level on the data sensitivity scale, the same scale and the same choice as Classify… in the register (ADR 0124 §5, COM-1248). It's optional and starts as **Not classified**, which a DDQ treats as Internal, as today. The level is recorded in the piece's history.
   - **Description:** optional.
   - **Dates:** filled in automatically, all changeable.
     - **Period** (from and to): where there's context, the context's own period. A schedule entry uses its due window; an audit request uses the audit's period. Otherwise it's the day it's added.
@@ -39,11 +40,12 @@ Built to the ADR in COM-2038, after COM-2040. Steve's design (2026-11-20). This 
 
 **Implementation notes**
 - One shared component, given the target record and the context (controls, period) by each place. Follow `brief/information-architecture.md` → Screen conventions; a row of fields with descriptions is a FieldRow (COM-1623).
-- One API to add evidence (files and addresses) to any record that takes evidence, applying that area's permission. It replaces the per-area upload routes, which stay until COM-2043 to COM-2045 move each place over.
+- One API to add evidence (files and addresses) to any record that takes evidence, applying that area's permission and accepting a classification. It replaces the per-area upload routes, which stay until COM-2043 to COM-2045 move each place over.
 
 **Done when**
 - The window opens nearly full screen with both tabs, Add new first.
 - Files can be dropped or chosen, and web addresses added. Each is listed on the left and its details edited on the right, with dates filled in and changeable.
+- Each file can be given a classification (or left Not classified), and it's saved with the piece.
 - Upload adds them all, with failures kept and explained, and the record then shows them with their EVD IDs.
 
 On the chain: API change.
