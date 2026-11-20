@@ -1,12 +1,12 @@
 ---
 id: 01M7X6RVVV9HY82XMTZ1PH1E0Q
 created: 2026-11-20T19:26:12.859162Z
-updated: 2026-11-20T19:26:19.947467Z
+updated: 2026-11-20T22:18:40.352511Z
 type: task
 title: Printing a content page from the browser prints the document, not a blank page
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2037
-sprint: s2q1gxe
+sprint: s9hexqn
 assignee: steve
 label:
 - bug
