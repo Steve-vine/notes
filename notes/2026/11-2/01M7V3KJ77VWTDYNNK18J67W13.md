@@ -1,17 +1,40 @@
 ---
 id: 01M7V3KJ77VWTDYNNK18J67W13
 created: 2026-11-19T23:52:24.551914Z
-updated: 2026-11-19T23:53:38.233558Z
+updated: 2026-11-20T00:39:11.83337Z
 type: task
 title: The picture settings panel never covers the selected picture, and a picture isn't selected when the page opens
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2008
 sprint: s6y6p7g
+comments:
+- id: 01M7V694BDAXYESB8WAKBVK05Y
+  author: Steve Vine
+  at: 2026-11-20T00:39:08.397644Z
+  text: |-
+    Done — PR #2007, merged a2c021bf.
+    The picture settings panel no longer covers the picture it's for:
+    - When a picture is selected, the panel goes top right or bottom right, wherever the picture is clear. If neither is clear, the page scrolls the picture clear, all of it in view, about half a second after the click (so a double-click still opens a flowchart or drawing).
+    - The scrolling now moves Compass's page itself, not the window.
+    - In a short window where the whole panel can't fit beside the picture, the panel is made shorter and its settings scroll inside it.
+    - While you scroll the page yourself, the panel only moves or shortens. It never scrolls the page back.
+    - It keeps clear of the picture and its caption, not the whole width of the page, so a small centred picture on a wide window doesn't make it move.
+    Opening a document's Edit tab selects nothing, even when the first block is a picture. The first click on the picture selects it and opens its panel.
+    Checked in a headless browser:
+    - 600×900, 800×600, 1100×700 and 1440×900, with paper on and off, for a picture at the top, middle and bottom of a long document, an image, a Full width image and a flowchart: 72 cases, the panel never covered the picture and the whole picture stayed in view.
+    - At 800×600 the panel was shortened to about 150–175 px.
+    Assumptions:
+    - A picture taller than the window can't be kept clear: the panel then sits where it covers the least.
+    - The panel is never made shorter than about 100 px.
+    To check on staging:
+    - In "E2E pre-UAT COM-2004 every kind of picture", at 600×900 select the document's own flowchart: the page scrolls it clear of the panel.
+    - At 1100×700, select the Full width image near the top: it isn't covered.
+    - Open a document whose first block is a picture: nothing is selected.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found in pre-UAT of round 3, by Tester B on staging 7ea67f64, against COM-1999.
 
