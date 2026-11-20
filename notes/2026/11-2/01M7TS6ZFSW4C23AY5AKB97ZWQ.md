@@ -1,7 +1,7 @@
 ---
 id: 01M7TS6ZFSW4C23AY5AKB97ZWQ
 created: 2026-11-19T20:50:46.393629Z
-updated: 2026-11-19T23:46:42.894063Z
+updated: 2026-11-20T01:58:59.044902Z
 type: task
 title: A flowchart's Zoom in and out steps are relative to the size it's shown at
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,14 @@ comments:
     - Tests: the frontend unit tests pass in jsdom, which doesn't apply CSS, so they can't catch this.
     Steve: on the Read tab, press Zoom in three times on any flowchart. The picture doesn't grow, and the lane names swell over it.
     Screenshots: ~/compass-uat/s6y6p7g/COM-2003/ (r3-zoom3-fig0-read.png, r3-zoom3-fig1-read-paper-off.png, r3-zoom3-fig0-standalone-page.png, r3-full-zoom3-doc-fig*.png)
+- id: 01M7VAVAQ4CPVC3P26V0WPV656
+  author: Steve Vine
+  at: 2026-11-20T01:58:59.044675Z
+  text: |-
+    Re-check on staging 0ed475e8 (after COM-2005): these points now Passed: zoom steps 1.5×/2×/3× on the Read tab; the frame pans over the grown picture; lane names, pinned lane headings and link spots stay put; standalone on its own page and shown in a document.
+    Measured as E2E Admin A in "E2E pre-UAT COM-2003 zoom small and large", paper on and off. Large: 680 → 1020 → 1361 → 2041 → back to 680. Small: 672 → 1008 → 1344 → 2016 → back. Lane and spot positions moved by at most 0.1% of the picture. The page never scrolled sideways (1440/1440).
+    Standalone: "…COM-2003 standalone large" on its own page went 680 → 2041; shown in the document, the same. Full screen is still correct (680 → 2041, 672 → 2016).
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2005/r3re-* and COM-2003/r3re-full-zoom3-*
 assignee: steve
 label:
 - bug

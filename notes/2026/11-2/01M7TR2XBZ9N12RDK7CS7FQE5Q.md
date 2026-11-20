@@ -1,7 +1,7 @@
 ---
 id: 01M7TR2XBZ9N12RDK7CS7FQE5Q
 created: 2026-11-19T20:31:04.575288Z
-updated: 2026-11-19T23:47:03.78581Z
+updated: 2026-11-20T01:59:02.910271Z
 type: task
 title: One click selects a flowchart in a document; double-click opens it for editing, as drawings do
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,13 @@ comments:
     - Tests: in the PR; not re-run here.
     Steve: select a flowchart in the editor, press Ctrl+C, then Ctrl+V somewhere else. The copy is a picture, not a flowchart. Seen in headless Chromium using the browser's own clipboard; worth repeating on your Mac.
     Screenshots: ~/compass-uat/s6y6p7g/COM-2001/ (r3-08-pasted-is-an-image.png for the defect)
+- id: 01M7VAVEFYF6E1TC3KZXFWD61C
+  author: Steve Vine
+  at: 2026-11-20T01:59:02.910033Z
+  text: |-
+    Re-check on staging 0ed475e8 (after COM-2006): Ctrl C / Ctrl X / Ctrl V on a selected flowchart now Passed, within a document. A copied or cut flowchart pastes as a flowchart: the Flowchart panel shows, double-click opens it in the flowchart editor, and the lanes, size, alignment, caption and alt text are kept. Undo works.
+    One gap remains, recorded on COM-2006: a flowchart pasted into another document has no saved picture until that document's Edit tab is opened again. Published straight away, its PDF says "Not yet drawn".
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2006/r3re-*
 assignee: steve
 label:
 - improvement
