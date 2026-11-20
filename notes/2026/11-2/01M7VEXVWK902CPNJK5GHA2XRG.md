@@ -1,7 +1,7 @@
 ---
 id: 01M7VEXVWK902CPNJK5GHA2XRG
 created: 2026-11-20T03:10:16.467756Z
-updated: 2026-11-20T03:31:28.317641Z
+updated: 2026-11-20T03:48:26.482252Z
 type: task
 title: A document's flowchart picture saved in the background uses the house style's colours
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,34 @@ comments:
     1. Open "E2E pre-UAT COM-2017 no picture yet". Its blue pictures should be redrawn in the house colours when the Edit tab opens.
     2. Publish it and export the PDF. The pictures should print in the house colours.
     3. Add a new flowchart through Polaris and open the Edit tab. The picture should be saved once, in the house colours.
+- id: 01M7VH3R7JFEMZ216T3X1CA6Y7
+  author: Steve Vine
+  at: 2026-11-20T03:48:26.482094Z
+  text: |-
+    Pre-UAT on staging 009a2b0d — Passed
+    Tested as E2E Admin A in E2E Test Company, in headless Chromium with its cache off. The pictures' colours were read from the saved pictures, and from the PDF and Word with python.
+    - A picture that arrives without one is saved in the house colours, once: Passed.
+      - I added a new flowchart to a fresh document through the Compass-staging connection ("E2E pre-UAT COM-2019 Polaris flowchart picture"), then opened its Edit tab on a normal connection.
+      - The house style loaded at 0.6–0.7 s. The picture was saved once at 0.71 s, in #e9e9e9 / #212121 (r3fin2-05).
+    - The background save waits for a late house style, within the canvas's limit: Passed.
+      - I added a second flowchart through the connection, and held up the house-style requests by 4.5 s each, so the stylesheet arrived at 9.5 s.
+      - The picture was saved in the fallback #e7f5ff / #1971c2 at 3.4 s, the 3-second limit. It was saved again in #e9e9e9 / #212121 at 9.5 s, as soon as the stylesheet arrived, with no Done. It ended in the house colours (r3fin2-06, r3fin2-07).
+    - Pictures already saved in the wrong colours are corrected the next time the Edit tab opens, without Done: Passed.
+      - "E2E pre-UAT COM-2017 no picture yet" had two blue pictures (#e7f5ff / #1971c2) and two grey ones.
+      - On opening its Edit tab, the house style was in by 0.97 s. Both blue pictures were redrawn and saved in #e9e9e9 / #212121 at 1.0 s. The two grey ones were left alone. Nobody pressed Done (r3fin2-01).
+    - PDF, Word and Read tab show the house colours: Passed.
+      - I published it as v2. The Read tab shows the four corrected pictures (r3fin2-02).
+      - PDF: every flowchart is drawn in #e9e9e9 fill and #212121 border, with no blue anywhere (r3fin2-03-pdf-p2/p3).
+      - Word: all four pictures are #e9e9e9 / #212121, with no blue pixels.
+    - A document whose pictures are already in the house colours gains no unpublished changes from opening Edit: Passed.
+      - I reopened the published v2 and stayed 10 s. No picture was redrawn. Unpublished changes stayed false and the version stayed v2 (r3fin2-04).
+    - Tests: not re-run here. They passed in the PR's CI.
+    - Smoke: Passed.
+      - A new standalone flowchart ("E2E pre-UAT COM-2019 smoke new standalone") opens with Start, in grey (r3fin2-08).
+      - A document's own flowchart goes Edit → Done → Read: both pictures load and nothing says "Not yet drawn". Its PDF prints them in the house colours (r3fin2-09).
+    Observation, not a defect:
+    - Opening the Edit tab sends one save of the section that changes nothing: the same content with its keys in a different order. The document doesn't gain unpublished changes from it.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2019/ (r3fin2-*)
 assignee: steve
 label:
 - bug

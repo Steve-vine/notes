@@ -1,7 +1,7 @@
 ---
 id: 01M7VCCJBVEPQPHKGDWHKTR8VD
 created: 2026-11-20T02:25:52.507641Z
-updated: 2026-11-20T03:09:17.156365Z
+updated: 2026-11-20T03:48:32.811056Z
 type: task
 title: The flowchart canvas takes the house style's colours even when the house style loads late
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,6 +44,16 @@ comments:
       - The builder's assumption covers re-saving a document's own background picture when the style arrives late. But this happens on every normal load, not only on a slow connection. Steve to decide.
     - Tests: Passed. lateHouseStyle.test.tsx covers a document's own flowchart, a standalone's canvas, Style and Done picture, and re-saving a missing picture. Not re-run here.
     Screenshots: ~/compass-uat/s6y6p7g/COM-2018/ (r3fin-*)
+- id: 01M7VH3YDBV7DXR1VJ816ASWNF
+  author: Steve Vine
+  at: 2026-11-20T03:48:32.810796Z
+  text: |-
+    Re-check on staging 009a2b0d: the background picture now Passes (fixed by COM-2019)
+    Tested as E2E Admin A in E2E Test Company.
+    - Normal connection: I added a flowchart to a document through the Compass-staging connection and opened its Edit tab. Its picture was saved once, after the house style had loaded, in #e9e9e9 / #212121.
+    - House style held up by 4.5 s: the picture was saved in the fallback at 3.4 s, then saved again in the house colours at 9.5 s when the stylesheet arrived. No Done needed.
+    - The two blue pictures in "E2E pre-UAT COM-2017 no picture yet" were corrected as its Edit tab opened. Its published PDF and Word print them grey.
+    So the one Failed point in my earlier comment now passes. Details are on COM-2019; screenshots in ~/compass-uat/s6y6p7g/COM-2019/ (r3fin2-*).
 assignee: steve
 label:
 - bug
