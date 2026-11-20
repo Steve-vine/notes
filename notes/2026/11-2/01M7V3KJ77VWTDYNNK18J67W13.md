@@ -1,7 +1,7 @@
 ---
 id: 01M7V3KJ77VWTDYNNK18J67W13
 created: 2026-11-19T23:52:24.551914Z
-updated: 2026-11-20T00:39:11.83337Z
+updated: 2026-11-20T01:56:04.919958Z
 type: task
 title: The picture settings panel never covers the selected picture, and a picture isn't selected when the page opens
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,24 @@ comments:
     - In "E2E pre-UAT COM-2004 every kind of picture", at 600×900 select the document's own flowchart: the page scrolls it clear of the panel.
     - At 1100×700, select the Full width image near the top: it isn't covered.
     - Open a document whose first block is a picture: nothing is selected.
+- id: 01M7VAP0NQSRDPVNPVX146HG7R
+  author: Steve Vine
+  at: 2026-11-20T01:56:04.919763Z
+  text: |-
+    Pre-UAT on staging 0ed475e8 — Passed
+    Tested as E2E Admin A, E2E Test Company, in a new document "E2E pre-UAT COM-2008 long document with pictures" (37 blocks: an image as the very first block, a Full width image, a text diagram, a drawing and the document's own flowchart in the middle, a 50% image near the end, lorem paragraphs between) and in "E2E pre-UAT COM-2004 every kind of picture". Own headless Chromium, sizes in pixels.
+    - Panel never covers the selected picture, on every window size: Passed. 4 sizes (600×900, 800×600, 1100×700, 1440×900) × paper on/off × 6 pictures × the picture scrolled to the top, middle and bottom of the window before the click = 144 cases. In all 142 cases where the picture could be clicked, the panel never overlapped the picture or its caption, and the whole picture stayed in the page's view. (The other 2: a 72 px diagram scrolled fully under the editor's toolbar, so there was nothing to click.)
+      - Wide windows: the panel goes top right or bottom right (e.g. 1440: x 1124, 300 px wide). At 600 px it runs across the window (568 px wide) and moves top or bottom, away from the picture.
+    - Scrolling uses Compass's page, not the window: Passed. Builder's check: at 600×900, selecting the own flowchart near the bottom: the panel moved to the top (y 72–420), the flowchart sat at y 520–862, clear of it. When I then scrolled the page myself by 250 px it stayed where I put it (not scrolled back), and the panel stayed open.
+    - 1100×700, Full width image near the top: Passed. Image at x 210–890, y 316–656; panel at x 784, y 72–300. Not covered.
+    - Short window: Passed. At 800×600 the flowchart's panel is 155 px tall and its settings scroll inside it (153 of 346 px shown); Remove can be scrolled to.
+    - Opening the Edit tab selects nothing, even when the first block is a picture: Passed. Two documents whose first block is a picture (an image; a drawing): no panel, nothing selected, 4 of 4 fresh loads. The first click on the picture selects it and opens its panel ("Picture" / "Drawing").
+    - Tests: Passed (pictureSettings.test.tsx adds the 600×900 / 1100×700 / short-window / every-size cases and "selects nothing when the picture is all there is").
+    Smoke (nearby): resizing an image with paper on: the corner stays under the pointer (0 px off), 340 → 272 px, and the Read tab shows 272 px. The panel with paper on uses the app's colours (#FBFBFD / #1C1E2B).
+    Observations, not defects:
+    - A picture partly hidden under the editor's sticky toolbar when you click it stays partly hidden: at 600×900 an image at y 70–220 under a toolbar ending at y 149. The panel avoids it, but the page doesn't scroll it fully into view. Screenshot r3re-obs-picture-under-toolbar.png.
+    - Clicking on a flowchart step that has links (its numbered badge area) in the editor doesn't select the flowchart, so no panel opens. Clicking anywhere else on it does.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2008/ (r3re-600x900-own-flowchart-clear.png, r3re-1100x700-fullwidth-not-covered.png, r3re-800x600-flowchart-short-panel.png, r3re-onload-nothing-selected.png, r3re-smoke-resize-paper-on.png)
 assignee: steve
 label:
 - bug
