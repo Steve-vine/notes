@@ -1,7 +1,7 @@
 ---
 id: 01M7X85FCF2REWD1JJSYCYX9BY
 created: 2026-11-20T19:50:34.639301Z
-updated: 2026-11-20T22:21:26.735222Z
+updated: 2026-11-20T23:43:55.254069Z
 type: task
 title: Every piece of evidence has an ID (EVD-n), shown wherever the evidence is
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,33 @@ number: 2039
 sprint: s9hexqn
 blocked_by:
 - 01M7X8522V25P8S181E9VCF5XK
+comments:
+- id: 01M7XNGHX641R64TZEYSDTTZA0
+  author: Steve Vine
+  at: 2026-11-20T23:43:49.158784Z
+  text: |-
+    Done and merged to main (PR #2034, migration 0887).
+
+    What changes:
+    - Every piece of evidence in Audit ▸ Evidence has an ID, EVD-n, numbered within its company. Existing evidence was numbered oldest first by date added, archived pieces included.
+    - A new piece takes the company's next number whichever way it arrives: an upload, a web address, Evidence Collection, a built-in check run or the User Portal. Numbers are never reused, and the deletion log keeps the ID a deleted piece had.
+    - The ID is its own sortable column in the register (and in Archived), and shows on the piece's page. It also shows on the evidence rows of a control, a plan entry, an incident, a risk, a vulnerability, an audit request, a finding's closing evidence and a vendor's certificate.
+    - The search box at the top of Compass and Audit ▸ Evidence's search both find a piece by its ID. The address /audit/evidence/EVD-12 goes straight to the piece.
+    - Packs and exports list the ID: the audit pack index, the plan export, the request-list spreadsheet, the auditor's zip and the zip downloaded before deleting archived evidence.
+    - Polaris shows each piece's ID, and every existing tool that takes evidence also accepts "EVD-12".
+
+    Calls for you to overturn:
+    - A piece keeps its number across versions: a replacement file, a renewed vendor certificate, and each new capture of a collected check (EVD-7 v3).
+    - A built-in check's results are one piece per check in each company, so that check's line in the register has one stable ID.
+    - Trust Centre documents and data subject request files get IDs, because they're in the register.
+    - The vendor portal doesn't show the ID, because it's Compass's own reference.
+
+    Left over: on a control's assessment card, the Automatic Collection rows don't show the ID yet. The same pieces show it on the control's Evidence tab and in the register. I've added it to COM-2040.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Built to the ADR in COM-2038. Steve asked for an ID on evidence that shows in the register and in the new Add evidence window (2026-11-20).
 
