@@ -1,17 +1,27 @@
 ---
 id: 01M7WXC9VCC9J3DPE4C038ZR17
 created: 2026-11-20T16:42:04.012498Z
-updated: 2026-11-20T16:42:43.307928Z
+updated: 2026-11-20T17:08:17.298989Z
 type: task
 title: Making a document's flowchart standalone takes the document's custom colours with it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2028
 sprint: s6y6p7g
+comments:
+- id: 01M7WYW784FZMZADSMW59S8KQD
+  author: Steve Vine
+  at: 2026-11-20T17:08:14.212107Z
+  text: |-
+    Done — PR #2023, merged a93750a1.
+    "Make it a standalone flowchart" on a document's own flowchart now makes it the same way Compass always does on the server. The section is saved first, so what's on screen is what gets made.
+    The new standalone flowchart has the same row of custom colours as the document. The document keeps its own row, unchanged.
+    Everything else is as before: a draft, owned by you, with the document's type and domain. The document keeps its own copy until the flowchart is published.
+    To check on staging: set a few custom colours on a document, make its flowchart standalone, open the new flowchart and select a shape. The custom row should match the document's.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found in Claude's pre-UAT of COM-2026 (staging b65d7ed8, tester A).
 
