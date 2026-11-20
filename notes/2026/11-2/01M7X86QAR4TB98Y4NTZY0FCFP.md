@@ -1,7 +1,7 @@
 ---
 id: 01M7X86QAR4TB98Y4NTZY0FCFP
 created: 2026-11-20T19:51:15.544996Z
-updated: 2026-11-20T20:03:11.783015Z
+updated: 2026-11-20T20:03:29.176247Z
 type: task
 title: 'The Add evidence window: Add new evidence tab (drop files or a web address, check each one''s details, upload)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,14 +39,14 @@ Built to the ADR in COM-2038, after COM-2040. Steve's design (2026-11-20). This 
 - Closing the window with files still in the list asks before discarding them.
 
 **Classification beyond this window (my calls, for Steve to overturn)**
-- **The server refuses** a new piece added by a person without a classification, so no other way of uploading gets round it. That covers the API and Polaris (COM-2046) linking a web address.
+- **The server refuses** a new piece a person adds without a classification. Each area's old upload goes when it moves to the window (COM-2043 to COM-2045), so once COM-2045 is done there's no way round it.
 - **Evidence nobody hands in** (filed by Evidence Collection or a built-in check run, or from the User Portal's Report an incident form) can't ask, so it arrives Not classified, as today. The register's Not classified filter (COM-2042) finds it for classifying.
 - **Existing evidence** isn't forced. Anything Not classified stays so until someone classifies it.
 - **Once classified**, a piece's level can be changed (in its details, or Classify… in the register) but not cleared back to Not classified.
 
 **Implementation notes**
 - One shared component, given the target record and the context (controls, period) by each place. Follow `brief/information-architecture.md` → Screen conventions; a row of fields with descriptions is a FieldRow (COM-1623).
-- One API to add evidence (files and addresses) to any record that takes evidence, applying that area's permission and requiring a classification. It replaces the per-area upload routes, which stay until COM-2043 to COM-2045 move each place over; while they remain, they require a classification too.
+- One API to add evidence (files and addresses) to any record that takes evidence, applying that area's permission and requiring a classification. It replaces the per-area upload routes, which stay as they are until COM-2043 to COM-2045 move each place over and retire them.
 
 **Done when**
 - The window opens nearly full screen with both tabs, Add new first.
