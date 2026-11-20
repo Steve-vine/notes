@@ -1,17 +1,29 @@
 ---
 id: 01M7V3BQFT3EYK6SPKHPST9ECT
 created: 2026-11-19T23:48:07.802009Z
-updated: 2026-11-19T23:49:06.39443Z
+updated: 2026-11-20T00:16:55.590798Z
 type: task
 title: Zoom in on a flowchart in the Read tab enlarges the picture again
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2005
 sprint: s6y6p7g
+comments:
+- id: 01M7V50CKF31YBCT67NMGFKHQP
+  author: Steve Vine
+  at: 2026-11-20T00:16:53.35935Z
+  text: |-
+    Done — PR #2000, merged d7876ac6.
+    On the Read tab, Zoom in now makes the picture itself bigger again: 1.5×, 2× and 3× the size it was first shown at, for a flowchart in a document, a standalone flowchart on its own page and one shown in a document, small and large alike. Zoom out steps back.
+    The lane names, pinned lane headings and link spots stay on their shapes at every zoom, because the picture now grows with the frame round it. The frame pans inside itself and the page never scrolls sideways.
+    The cause was the rule that keeps every picture within the page's text width; it still holds for pictures that aren't zoomed, so their sizes are unchanged.
+    Images, drawings and diagrams zoom the same way. A tall text diagram was also held to 600 px high when zoomed, so it didn't grow either; that's fixed too.
+    Checked in a real browser with the real stylesheets: a large flowchart went 680 → 680 → 680 → 680 px before and 680 → 1020 → 1360 → 2040 px after; a small one 672 → 1008 → 1344 → 2016 px. A new test checks the stylesheets so the cap can't come back on a zoomed picture.
+    To check on staging: press Zoom in three times on a large and a small flowchart in a document's Read tab and on a standalone flowchart's own page; the picture should grow and the lane names stay on their lanes. Do the same with a tall text diagram.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found in pre-UAT of round 3, by Tester C on staging 7ea67f64, against COM-2003.
 
