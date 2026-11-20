@@ -1,15 +1,17 @@
 ---
 id: 01M7X6RVVV9HY82XMTZ1PH1E0Q
 created: 2026-11-20T19:26:12.859162Z
-updated: 2026-11-20T19:26:12.859162Z
+updated: 2026-11-20T19:26:19.947467Z
 type: task
 title: Printing a content page from the browser prints the document, not a blank page
-task_status: todo
-label: bug
-priority: high
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2037
+sprint: s2q1gxe
+assignee: steve
+label:
+- bug
+priority: high
+task_status: todo
 ---
 Found by Claude's pre-UAT tester during sprint 118 round 4 checks (staging 514c4649). It isn't caused by the flowchart work. It looks like it comes from the Library reader (sprint 119).
 
