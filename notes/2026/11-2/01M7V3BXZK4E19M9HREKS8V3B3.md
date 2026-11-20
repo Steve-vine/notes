@@ -1,7 +1,7 @@
 ---
 id: 01M7V3BXZK4E19M9HREKS8V3B3
 created: 2026-11-19T23:48:14.45145Z
-updated: 2026-11-20T00:10:08.321941Z
+updated: 2026-11-20T01:58:40.371983Z
 type: task
 title: Copying, cutting and pasting a flowchart in a document keeps it a flowchart
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,22 @@ comments:
     Assumption: cut and paste are two separate actions. Undo after the paste takes the paste back in one step, and a second Undo puts the cut flowchart back.
     Assumption: a flowchart cut in one browser tab and pasted in another counts as a copy. It loses only the "being made standalone" mark.
     To check on staging: on the Edit tab, click a flowchart, copy it and paste it lower down. The panel should say Flowchart, not Picture. Double-click the copy, change it, and confirm the original is unchanged. Then cut a flowchart, paste it elsewhere and use Undo.
+- id: 01M7VAT8T71BB5AS09FNJ6ZZAZ
+  author: Steve Vine
+  at: 2026-11-20T01:58:24.327465Z
+  text: |-
+    Pre-UAT on staging 0ed475e8 — Failed (one point: pasting into another document)
+    Tested as E2E Admin A in E2E Test Company, headless Chromium, with the browser's own clipboard. Test documents: "E2E pre-UAT COM-2006 copy and paste" (a document's own two-lane flowchart at 60%, Right, with a caption and alt text, plus a standalone shown at 50%, Left) and "E2E pre-UAT COM-2006 paste target".
+    - A document's own flowchart pastes as a flowchart in the same document: Passed. I selected it, pressed Ctrl+C, and pasted further down with Ctrl+V. The copy's panel says Flowchart (Edit flowchart, Make it a standalone flowchart). It has the same lanes (Asker/Helper), 4 steps and 3 connections, 408 px wide (60%), aligned Right, with the caption "Laned copy me" and the alt text "E2E alt for copy me". Double-click opens it in the flowchart editor.
+    - The copy is independent, with its own identity: Passed. I renamed a lane in the copy to "Asker copy" and pressed Done. The original kept "Asker" and its own picture. The copy got a new picture of its own. Editing one of three copies that shared a picture also gave only that one a new picture; the other two were unchanged.
+    - Cut and paste moves it with nothing lost: Passed. Ctrl+X, then Ctrl+V lower down: it moved with the same lanes, steps, connections, size, alignment, caption, alt text and picture, and double-click still opens it. On Undo: the first Ctrl+Z takes the paste back and the second puts the cut flowchart back, as the builder's stated assumption says. The Done-when said "as one Undo step": Steve to confirm two steps is acceptable. Redo ×2 restores the move.
+    - A standalone shown in a document pastes as another view of the same flowchart: Passed. The saved text has two identical references to the same standalone, version 1, both at 50% and Left. The pasted one's panel offers Edit flowchart.
+    - Pasting into another document behaves the same way: FAILED, for the picture. In the target document, the pasted flowchart shows, edits and saves correctly in the editor, and a standalone pasted there is the same reference. But a document's own flowchart pasted from another document arrives with no saved picture, unlike a copy in the same document. Its PDF then says "Not yet drawn — open the document in Compass". I pasted it and published straight away: version 1's PDF has "Not yet drawn" in place of the flowchart (r3re-target-published-v1.pdf). The picture is only made the next time someone opens the document's Edit tab, or presses Done in the flowchart editor. After a reload of the Edit tab, the draft's PDF showed it.
+    - Pasting into a plain text field, or outside Compass, gives a sensible picture or text, as today: Passed, as today. Pasting into the tags box gives nothing, the same as copying a plain picture does today: both put empty plain text on the clipboard. The HTML copy holds the picture (img) and its caption. A standalone's HTML copy carries no picture (unchanged).
+    - Tests: in the PR; not re-run here.
+    Observation: after a paste, the pasted flowchart stays selected, so a second Ctrl+V straight away replaces it rather than adding another; click elsewhere first. That's the editor's usual rule for a selected item; I didn't compare it with a picture.
+    Steve: copy a flowchart from one document, paste it into another and publish without reloading. The published PDF says "Not yet drawn".
+    Screenshots and PDFs: ~/compass-uat/s6y6p7g/COM-2006/ (r3re-*)
 assignee: steve
 label:
 - bug
