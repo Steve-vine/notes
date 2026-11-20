@@ -1,7 +1,7 @@
 ---
 id: 01M7X86QAR4TB98Y4NTZY0FCFP
 created: 2026-11-20T19:51:15.544996Z
-updated: 2026-11-20T20:01:33.544763Z
+updated: 2026-11-20T20:03:11.783015Z
 type: task
 title: 'The Add evidence window: Add new evidence tab (drop files or a web address, check each one''s details, upload)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,27 +25,33 @@ Built to the ADR in COM-2038, after COM-2040. Steve's design (2026-11-20). This 
 **Add new evidence tab**
 - **A drop box:** drag files into it, or click it to open the file chooser (several files at once).
 - **A web address box:** paste an address and add it. It joins the list like a file (ADR 0122 web-address evidence).
-- **The list on the left:** every file and address added so far, with its name and size (or address). The first one is selected. A file can be taken off the list before uploading. A row that's still missing something required (the evidence type) carries a marker, so it's clear what's left to do.
+- **The list on the left:** every file and address added so far, with its name and size (or address). The first one is selected. A file can be taken off the list before uploading. A row that's still missing something required (its evidence type or classification) carries a marker, so it's clear what's left to do.
 - **Properties on the right**, for whichever row is selected. Steve clicks through each one; there's no editing several at once.
   - **Name:** the file name, which can be changed. For an address, a title, defaulting to the address.
   - **Evidence type:** from the Evidence types rubric. It's required.
-  - **Classification** (Steve, 2026-11-20): a level on the data sensitivity scale, the same scale and the same choice as Classify… in the register (ADR 0124 §5, COM-1248). It's optional and starts as **Not classified**, which a DDQ treats as Internal, as today. The level is recorded in the piece's history.
+  - **Classification: required** (Steve, 2026-11-20). A level on the data sensitivity scale, the same scale as Classify… in the register (ADR 0124 §5, COM-1248). It starts empty ("Choose a level…"), with no level picked for you and no Not classified option. The level is recorded in the piece's history.
   - **Description:** optional.
   - **Dates:** filled in automatically, all changeable.
     - **Period** (from and to): where there's context, the context's own period. A schedule entry uses its due window; an audit request uses the audit's period. Otherwise it's the day it's added.
     - **Valid until:** worked out from the evidence type's validity, as it is today, and moving if the type or period changes, until someone sets it by hand.
   - **EVD ID:** shown as "Given when uploaded" until it's added.
-- **Upload** (showing how many, e.g. "Upload 3") adds them all to the register and links them to the record. It stays disabled while any row is missing its type, with the reason beside it. Each file goes through today's checks (file type by its bytes, size, encrypted or unreadable PDFs). A file that fails stays in the list with the reason, and the rest are added. Once everything is in, the window closes and the record shows the new pieces with their EVD IDs.
+- **Upload** (showing how many, e.g. "Upload 3") adds them all to the register and links them to the record. It stays disabled while any row is missing its type or classification, with the reason beside it ("2 files still need a classification"). Each file goes through today's checks (file type by its bytes, size, encrypted or unreadable PDFs). A file that fails stays in the list with the reason, and the rest are added. Once everything is in, the window closes and the record shows the new pieces with their EVD IDs.
 - Closing the window with files still in the list asks before discarding them.
+
+**Classification beyond this window (my calls, for Steve to overturn)**
+- **The server refuses** a new piece added by a person without a classification, so no other way of uploading gets round it. That covers the API and Polaris (COM-2046) linking a web address.
+- **Evidence nobody hands in** (filed by Evidence Collection or a built-in check run, or from the User Portal's Report an incident form) can't ask, so it arrives Not classified, as today. The register's Not classified filter (COM-2042) finds it for classifying.
+- **Existing evidence** isn't forced. Anything Not classified stays so until someone classifies it.
+- **Once classified**, a piece's level can be changed (in its details, or Classify… in the register) but not cleared back to Not classified.
 
 **Implementation notes**
 - One shared component, given the target record and the context (controls, period) by each place. Follow `brief/information-architecture.md` → Screen conventions; a row of fields with descriptions is a FieldRow (COM-1623).
-- One API to add evidence (files and addresses) to any record that takes evidence, applying that area's permission and accepting a classification. It replaces the per-area upload routes, which stay until COM-2043 to COM-2045 move each place over.
+- One API to add evidence (files and addresses) to any record that takes evidence, applying that area's permission and requiring a classification. It replaces the per-area upload routes, which stay until COM-2043 to COM-2045 move each place over; while they remain, they require a classification too.
 
 **Done when**
 - The window opens nearly full screen with both tabs, Add new first.
 - Files can be dropped or chosen, and web addresses added. Each is listed on the left and its details edited on the right, with dates filled in and changeable.
-- Each file can be given a classification (or left Not classified), and it's saved with the piece.
+- Every file must be given a classification before Upload is allowed, and the server refuses one without.
 - Upload adds them all, with failures kept and explained, and the record then shows them with their EVD IDs.
 
 On the chain: API change.
