@@ -1,7 +1,7 @@
 ---
 id: 01M7TQGG2YQV31HFG95RS3Q3HM
 created: 2026-11-19T20:21:01.150801Z
-updated: 2026-11-19T23:51:24.567359Z
+updated: 2026-11-20T01:56:45.266194Z
 type: task
 title: The document editor shows flowcharts, diagrams and images at the same size as the Read tab and print, with "Show as on paper" on or off
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,6 +40,15 @@ comments:
     - Tests: Passed (pictureSizes.test.tsx).
     Note: the browser's own Print (Ctrl+P) of the Read tab prints a blank page, because Compass hides itself for print. The Print preview button (the PDF) is the real print.
     Screenshots and files: ~/compass-uat/s6y6p7g/COM-2000/ (r3-export2-pdf-page2.png shows the full-width diagram; r3-export2.pdf, r3-export2.docx)
+- id: 01M7VAQ82JFJJ1WBATP81RXX8V
+  author: Steve Vine
+  at: 2026-11-20T01:56:45.265926Z
+  text: |-
+    Re-check on staging 0ed475e8: "same as print preview" and "a size means the same everywhere" now Passed.
+    - A never-resized text diagram is 300×72 in the editor, on the Read tab, in the PDF / Print preview and in Word (it was ~640 px across the PDF).
+    - A never-resized image (300×150), drawing (182×182) and flowchart (192×502) also match in all four. An 800×400 image is capped at the text width (680.3 px) in all four.
+    - Resized pictures in "E2E pre-UAT COM-2004 every kind of picture" still match the PDF and Word.
+    Details on COM-2009. Files: ~/compass-uat/s6y6p7g/COM-2009/r3re-unresized.pdf/.docx
 assignee: steve
 label:
 - bug

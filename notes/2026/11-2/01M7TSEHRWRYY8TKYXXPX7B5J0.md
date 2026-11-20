@@ -1,7 +1,7 @@
 ---
 id: 01M7TSEHRWRYY8TKYXXPX7B5J0
 created: 2026-11-19T20:54:54.492216Z
-updated: 2026-11-19T23:51:39.438503Z
+updated: 2026-11-20T01:56:49.674375Z
 type: task
 title: Images, diagrams and flowcharts share the same reading tools and the same settings
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,6 +52,15 @@ comments:
     - Full screen shows a picture at its file's own size, not enlarged. A drawing shown at 272 px on the page is 182 px in full screen (smaller). A text diagram fills the width (1412 px).
     - On a phone with "Show as on paper" on, the tools shrink with the sheet to 10×10 px buttons.
     Screenshots and files: ~/compass-uat/s6y6p7g/COM-2004/ (r3-read-flowchart-tools-detached.png, r3-export3-pdf-page3.png, r3-read-phone-touch.png, r3-export3.pdf, r3-export3.docx, downloads/)
+- id: 01M7VAQCCAYYPJFB8HSF7KHVJY
+  author: Steve Vine
+  at: 2026-11-20T01:56:49.674085Z
+  text: |-
+    Re-check on staging 0ed475e8: "tools look and sit the same" and "alt text reaches the PDF" now Passed, and the standalone flowchart's alt text now matches everywhere.
+    - The flowchart saved at 60% in "E2E pre-UAT COM-2004 every kind of picture": its frame is the picture (192 px). On the Read tab its tools sit 6 px in from the picture's corner and its caption is centred under it, placed left, centre or right, and when zoomed. In the PDF the caption is centred under the flowchart.
+    - The PDF is tagged: every picture is a Figure carrying its alt text (or its caption, or the default "Picture" / "Diagram" / "Flowchart…, N steps"), the same text as in Word. Two published documents re-exported come out pixel-identical to their untagged round 3 PDFs.
+    - The standalone flowchart reads "Flowchart: E2E pre-UAT COM-1907 Service request handling, 4 steps" on the Read tab, in the PDF and in Word, without "version 5".
+    Details on COM-2010 and COM-2011. Files: ~/compass-uat/s6y6p7g/COM-2010/, ~/compass-uat/s6y6p7g/COM-2011/
 assignee: steve
 label:
 - improvement
