@@ -1,7 +1,7 @@
 ---
 id: 01M7VCCJBVEPQPHKGDWHKTR8VD
 created: 2026-11-20T02:25:52.507641Z
-updated: 2026-11-20T02:48:02.503589Z
+updated: 2026-11-20T03:09:17.156365Z
 type: task
 title: The flowchart canvas takes the house style's colours even when the house style loads late
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,28 @@ comments:
     1. Hold up the house-style requests by 4–5 s, then open a standalone flowchart's canvas. It opens pale blue and turns grey (#e9e9e9 / #212121) when the house style arrives.
     2. Style ticks "Default (Light shade)" and "Default (Primary)" on those colours.
     3. After Done, the Read tab picture is grey.
+- id: 01M7VEW1Z4GVSWF2PTMB1XJ756
+  author: Steve Vine
+  at: 2026-11-20T03:09:17.156093Z
+  text: |-
+    Pre-UAT on staging 85a42994 — Failed (one point: a document's own flowchart's background picture)
+    Tested as E2E Admin A in E2E Test Company, headless Chromium with its cache off. I held up the house-style list and its stylesheet by 4.5 s each, so the stylesheet arrived about 9.5 s after the page loaded. The test chart is the new standalone "E2E pre-UAT COM-2018 late house style".
+    - Canvas, Style and the picture saved on Done switch to the house colours without a reload; before the style arrives, canvas and Style agree on the fallback: Passed.
+      - Edit ▸ Draw the flowchart: the canvas opened with Start 3.3 s after the click, in the fallback colours: fill #e7f5ff, border #1971c2.
+      - Style ticked "Light shade" and "Primary", whose swatches were those same two colours (r3fin-05).
+      - When the stylesheet arrived (about 10.3 s), the shapes turned #e9e9e9 / #212121. The same two Style ticks now showed #e9e9e9 / #212121 (r3fin-06).
+      - Done: the saved picture is #e9e9e9 / #212121, and the Read tab shows that grey picture (r3fin-07).
+    - The picture saved on Done uses the colours in force when Done is pressed, and the next Done corrects an early one: Passed. With the delay on, I pressed Done at 4.2 s, before the style arrived: the picture was saved in #e7f5ff / #1971c2. It was not re-saved when the style arrived. The next Done, on a normal load, saved #e9e9e9 / #212121.
+    - The same for a document's own flowchart: canvas, Style and Done Passed; the picture drawn in the background Failed.
+      - Canvas, Style and Done, Passed. With the delay on, I opened a document's own flowchart in "E2E pre-UAT COM-2017 no picture yet" by double-click at 1.5 s. It showed fallback #e7f5ff / #1971c2, and Style ticked those swatches. It switched to #e9e9e9 / #212121 at 10 s, and Style switched with it. Done saved a grey picture (r3fin-09, r3fin-10).
+      - The background picture, FAILED. Steps:
+        1. Add a flowchart to a document through Polaris (I used the Compass-staging connection).
+        2. Open the document's Edit tab on a normal connection, with no delay.
+      - Seen: the Edit tab saves the missing picture at about 0.6 s. That's before the house-style list (0.86 s) and stylesheet (0.93 s) have loaded. All four such pictures are #e7f5ff / #1971c2, and the published PDF prints them pale blue (COM-2017/r3fin-10-polaris-pdf-p2.png). They are never saved again. Opening the same chart on the canvas shows grey, and Done saves #e9e9e9 / #212121.
+      - Expected: the picture in the house colours, as the canvas and Done give, and as a standalone flowchart now gets. A Polaris standalone flowchart's page-saved picture was saved in the fallback at 3.4 s and saved again in grey at 9.5 s once the style arrived. Passed for standalone.
+      - The builder's assumption covers re-saving a document's own background picture when the style arrives late. But this happens on every normal load, not only on a slow connection. Steve to decide.
+    - Tests: Passed. lateHouseStyle.test.tsx covers a document's own flowchart, a standalone's canvas, Style and Done picture, and re-saving a missing picture. Not re-run here.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2018/ (r3fin-*)
 assignee: steve
 label:
 - bug
