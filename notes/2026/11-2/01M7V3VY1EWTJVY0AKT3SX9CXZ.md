@@ -1,17 +1,28 @@
 ---
 id: 01M7V3VY1EWTJVY0AKT3SX9CXZ
 created: 2026-11-19T23:56:58.798959Z
-updated: 2026-11-19T23:58:09.386516Z
+updated: 2026-11-20T00:38:25.625489Z
 type: task
 title: A connection fixed to certain points no longer crashes the flowchart for good
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2012
 sprint: s6y6p7g
+comments:
+- id: 01M7V67PNNQACRGAQD6J09MFXX
+  author: Steve Vine
+  at: 2026-11-20T00:38:21.62177Z
+  text: |-
+    Done — PR #2004, merged cc845818.
+    A connection fixed on a point that isn't at a whole pixel (Data's bottom a sixth of the way along, or a draw.io line's exit point) no longer sends the line-drawing into an endless loop. Flowcharts that crashed now open and draw on the Read and Edit tabs as saved, with no re-save needed.
+    Drawing lines now always finishes. And if a line ever can't be routed, every line is drawn as a plain square-cornered line and the page still shows: one bad line can't take down the Read or Edit tab.
+    Tested on the saved chart that crashed (it fails before the fix and draws in under a second after), on a fixed point on every side of every shape in each line style, and on lines saved to a tenth of a pixel as the server keeps them.
+    The server doesn't route lines: the PDF and Word copies use the picture the canvas drew, so they follow.
+    To check on staging: open "E2E pre-UAT COM-1992 crash isolate e1" and "E2E pre-UAT COM-1996 crash isolate manual input". Both tabs should show the chart. Then set a Manual input's "Arrives at: Top side, Middle" and press Done.
 assignee: steve
 label:
 - bug
 priority: urgent
-task_status: active
+task_status: review
 ---
 Found in pre-UAT of round 3, by Tester A on staging 7ea67f64, against COM-1996 and COM-1992.
 
