@@ -1,7 +1,7 @@
 ---
 id: 01M7VEXVWK902CPNJK5GHA2XRG
 created: 2026-11-20T03:10:16.467756Z
-updated: 2026-11-20T03:10:20.15257Z
+updated: 2026-11-20T03:10:58.665083Z
 type: task
 title: A document's flowchart picture saved in the background uses the house style's colours
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: todo
+task_status: active
 ---
 Found in the final re-check of round 3, on staging 85a42994, against COM-2018 and COM-2017.
 
