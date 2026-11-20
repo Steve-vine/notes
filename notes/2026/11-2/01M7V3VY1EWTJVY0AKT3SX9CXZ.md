@@ -1,7 +1,7 @@
 ---
 id: 01M7V3VY1EWTJVY0AKT3SX9CXZ
 created: 2026-11-19T23:56:58.798959Z
-updated: 2026-11-20T02:24:31.608415Z
+updated: 2026-11-20T14:05:05.273491Z
 type: task
 title: A connection fixed to certain points no longer crashes the flowchart for good
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,7 +35,7 @@ assignee: steve
 label:
 - bug
 priority: urgent
-task_status: review
+task_status: done
 ---
 Found in pre-UAT of round 3, by Tester A on staging 7ea67f64, against COM-1996 and COM-1992.
 

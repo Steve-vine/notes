@@ -1,7 +1,7 @@
 ---
 id: 01M7V3M4H5J44J3MPBAVDM3S67
 created: 2026-11-19T23:52:43.301166Z
-updated: 2026-11-20T01:56:35.18069Z
+updated: 2026-11-20T14:05:05.26714Z
 type: task
 title: A flowchart can't be set wider than it can be shown, so its tools and caption stay on it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -46,7 +46,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in pre-UAT of round 3, by Tester B on staging 7ea67f64, against COM-2004 and COM-1998.
 

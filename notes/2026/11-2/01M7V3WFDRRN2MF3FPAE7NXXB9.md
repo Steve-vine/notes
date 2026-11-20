@@ -1,7 +1,7 @@
 ---
 id: 01M7V3WFDRRN2MF3FPAE7NXXB9
 created: 2026-11-19T23:57:16.600963Z
-updated: 2026-11-20T02:24:55.24855Z
+updated: 2026-11-20T14:05:05.293328Z
 type: task
 title: A shape added from the left bar always lands in view
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,7 +34,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in pre-UAT of round 3, by Tester A on staging 7ea67f64, after COM-1993. Round 2's COM-1946 promised that a clicked shape lands in view.
 

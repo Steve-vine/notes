@@ -1,7 +1,7 @@
 ---
 id: 01M7VAWTBHAJW4APHHSKESCEHX
 created: 2026-11-20T01:59:47.825987Z
-updated: 2026-11-20T03:09:03.638627Z
+updated: 2026-11-20T14:05:05.306891Z
 type: task
 title: A flowchart pasted into another document prints straight away, without reopening it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,7 +44,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in the round 3 re-check, by Tester C on staging 0ed475e8, against COM-2006.
 

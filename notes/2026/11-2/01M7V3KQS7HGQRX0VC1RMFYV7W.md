@@ -1,7 +1,7 @@
 ---
 id: 01M7V3KQS7HGQRX0VC1RMFYV7W
 created: 2026-11-19T23:52:30.247227Z
-updated: 2026-11-20T01:56:15.902539Z
+updated: 2026-11-20T14:05:05.252304Z
 type: task
 title: A picture that has never been resized is the same size in the PDF as in the editor and the Read tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in pre-UAT of round 3, by Tester B on staging 7ea67f64, against COM-2000.
 

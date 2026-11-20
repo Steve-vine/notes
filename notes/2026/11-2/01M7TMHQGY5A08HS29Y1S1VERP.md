@@ -1,7 +1,7 @@
 ---
 id: 01M7TMHQGY5A08HS29Y1S1VERP
 created: 2026-11-19T19:29:15.806184Z
-updated: 2026-11-20T02:25:17.418187Z
+updated: 2026-11-20T14:05:04.899849Z
 type: task
 title: A new shape's default colour is one you can pick, and the finished picture shows the same colour
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Steve's smoke test of round 2 (staging 5d1e1459): when he creates a flowchart, its shapes default to a blue background and border. That blue isn't any of the colours in the colour pickers. If he leaves the colour as it is and presses Done, the finished picture shows the shapes in black and grey instead.
 
