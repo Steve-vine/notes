@@ -1,7 +1,7 @@
 ---
 id: 01M7V3KQS7HGQRX0VC1RMFYV7W
 created: 2026-11-19T23:52:30.247227Z
-updated: 2026-11-20T00:22:52.242482Z
+updated: 2026-11-20T01:56:15.902539Z
 type: task
 title: A picture that has never been resized is the same size in the PDF as in the editor and the Read tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,22 @@ comments:
     Cached PDFs are made afresh after the deploy, so published documents pick it up without being republished.
     Assumption: "its own size" is the size the browser shows it at. That is the same number Word already uses.
     To check on staging: export the PDF of a document with an unresized text diagram and an unresized drawing, and compare their size with the Read tab and Word.
+- id: 01M7VAPBCY0NC4QVD6HK81E2TS
+  author: Steve Vine
+  at: 2026-11-20T01:56:15.902363Z
+  text: |-
+    Pre-UAT on staging 0ed475e8 — Passed
+    Tested as E2E Admin A, E2E Test Company. I made a new document, "E2E pre-UAT COM-2009 unresized pictures", with nothing resized: a 300×150 image, an 800×400 image (wider than the page), a text diagram, a drawing and the document's own 4-step flowchart. Measured in pixels in the editor (paper on and off) and on the Read tab (paper on and off); PDF via Export ▸ PDF (the same file as Print preview), checked with pymupdf; Word with python-docx.
+    - Each never-resized kind prints at its own size: Passed. Editor = Read tab = PDF = Word, for every one:
+      - image: 300×150 / 300×150 / 300×150 / 300×150;
+      - text diagram: 300×72 everywhere (it was ~640 px across the PDF before);
+      - drawing: 182×182 everywhere;
+      - flowchart: 192×502 everywhere.
+    - A picture wider than the text is still capped: Passed. The 800×400 image is 680.3×340.2 (the text width) in the editor, Read tab, PDF and Word.
+    - Resized pictures are unchanged: Passed, in "E2E pre-UAT COM-2004 every kind of picture". PDF and Word match the editor: 30% image 204.1, 50% image 340.2, 50% diagram 340.2×81.7, 40% drawing 272.1, own flowchart 192×342. The 20% standalone flowchart is 136.1 in all three.
+    - Cached PDFs of published documents made afresh: Passed. Two published E2E documents exported in round 3 (COM-1960 fit to page, COM-1904 flowchart document) now come back as the new tagged PDFs, so the old cache wasn't reused.
+    - Tests: Passed (test_picture_own_size.py covers an unresized text diagram, drawing and image, the cap, and resized/Full width unchanged).
+    Files: ~/compass-uat/s6y6p7g/COM-2009/ (r3re-unresized.pdf, r3re-unresized.docx, r3re-unresized-pdf-p2.png, r3re-read.png, r3re-edit-paper-on.png)
 assignee: steve
 label:
 - bug

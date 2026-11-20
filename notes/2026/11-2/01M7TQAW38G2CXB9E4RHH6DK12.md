@@ -1,7 +1,7 @@
 ---
 id: 01M7TQAW38G2CXB9E4RHH6DK12
 created: 2026-11-19T20:17:56.840704Z
-updated: 2026-11-19T23:51:14.516587Z
+updated: 2026-11-20T01:56:42.017395Z
 type: task
 title: A picture's or diagram's settings open in a fixed floating panel on the right, readable with "Show as on paper"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,6 +42,14 @@ comments:
     - Tests: Passed (pictureSettings.test.tsx covers each kind, placement, and dark mode with paper on).
     Minor defect: when a document's first block is a picture, the Edit tab opens with that picture already selected and its panel showing. The first click on the picture then closes the panel.
     Screenshots: ~/compass-uat/s6y6p7g/COM-1999/ (r3-narrow600-scroll-flowchart.png, r3-1100x700-fullwidth-image-covered.png, r3-panel-image-dark-paperon.png, r3-onload.png)
+- id: 01M7VAQ4X12K21680MJMV3YHHK
+  author: Steve Vine
+  at: 2026-11-20T01:56:42.017134Z
+  text: |-
+    Re-check on staging 0ed475e8: "doesn't cover the selected picture / fits a narrow window" now Passed, and the minor defect (a first-block picture already selected when the Edit tab opens) is gone.
+    - 600×900, 800×600, 1100×700 and 1440×900, paper on and off, with pictures at the top, middle and bottom of a long document, a Full width image and the own flowchart: 142 clickable cases, the panel never overlapped the picture or its caption, and each picture stayed in view. The 600×900 flowchart and the 1100×700 Full width image from round 3 are clear now. Compass's page scrolls, not the window.
+    - A document whose first block is a picture opens with nothing selected; the first click selects it.
+    Details on COM-2008. Screenshots: ~/compass-uat/s6y6p7g/COM-2008/r3re-*
 assignee: steve
 label:
 - improvement
