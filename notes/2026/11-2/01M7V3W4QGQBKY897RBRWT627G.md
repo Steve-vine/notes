@@ -1,7 +1,7 @@
 ---
 id: 01M7V3W4QGQBKY897RBRWT627G
 created: 2026-11-19T23:57:05.648624Z
-updated: 2026-11-20T00:52:23.108419Z
+updated: 2026-11-20T02:24:38.810699Z
 type: task
 title: A selected connection's end handles can be grabbed and dragged
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,23 @@ comments:
     Tested with real hit-testing in a browser, at zoom 0.5, 1 and 2 on light and dark canvases, where each handle sits right on top of a shape's connection point: the handle is what's under the pointer, and the drag lands. Before the fix, the same test found the shape's point on top. The Browser smoke now also selects a connection in the flowchart journey, checks both handles are on top and drags an end.
     Assumption: zoomed out, the handles keep a fixed size on screen rather than shrinking.
     To check on staging: select a connection, drag either end to another point on the same shape, then to another shape, at a couple of zoom levels and in the dark canvas.
+- id: 01M7VCAACTVZ4WE31XD3ZVTBAE
+  author: Steve Vine
+  at: 2026-11-20T02:24:38.810365Z
+  text: |-
+    Pre-UAT on staging d8749c62 — Passed
+    - With a connection selected, both end handles sit above everything and can be pressed anywhere on them: Passed. As E2E Admin A, on "E2E pre-UAT COM-2016 new standalone", I tested every pixel of each round handle in the browser. The handle was the thing under the pointer in every case (81 of 81 points at zoom 1). That includes where the handle sits right on a shape's connection point, on a Decision's top and on a Data cylinder's bottom.
+    - Dragging a handle moves that end, per COM-1996: Passed.
+      - Dragging the arrow end from the Decision's top showed the diamond's points, with the nearest one filled in. Dropping it fixed "Arrives at: Left side, Middle" (r3re-02, r3re-03).
+      - Dragging it onto the Records cylinder reconnected it ("Start → Records"), and one Ctrl+Z undid it (r3re-04, r3re-05).
+      - The start end can be dragged too: pressed near its edge at zoom 0.5, it moved to "Leaves from: Left side, Middle" (r3re-09, r3re-10).
+    - Pressing a shape's own connection point with nothing selected still starts a new connection: Passed. A drag from Records' bottom point to Check request made a new "Records → Check request" connection (r3re-06).
+    - Zoom 0.5, 1 and 2, light and dark canvases, full screen: Passed.
+      - Dark canvas: zoom 1, 0.48 and 2. Light canvas: zoom 1.05 and 0.51. At each one the handles were fully on top and a drag moved the end to a new point (Right side 25% ↔ Top side 25%).
+      - Zoomed out, the handles stay 12px on screen. At zoom 2 they're 24px (r3re-07, r3re-08).
+      - Full screen: the editor already fills the window and has no separate full-screen mode, so I checked it there.
+    - Tests use real hit-testing: Passed. The Browser smoke's flowchart journey now checks that each handle is what's under the pointer, then drags an end. That smoke passed on this deploy. connectionPoints.test.tsx has small additions.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2013/r3re-*
 assignee: steve
 label:
 - bug

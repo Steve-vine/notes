@@ -1,7 +1,7 @@
 ---
 id: 01M7V3VY1EWTJVY0AKT3SX9CXZ
 created: 2026-11-19T23:56:58.798959Z
-updated: 2026-11-20T00:38:25.625489Z
+updated: 2026-11-20T02:24:31.608415Z
 type: task
 title: A connection fixed to certain points no longer crashes the flowchart for good
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,6 +18,19 @@ comments:
     Tested on the saved chart that crashed (it fails before the fix and draws in under a second after), on a fixed point on every side of every shape in each line style, and on lines saved to a tenth of a pixel as the server keeps them.
     The server doesn't route lines: the PDF and Word copies use the picture the canvas drew, so they follow.
     To check on staging: open "E2E pre-UAT COM-1992 crash isolate e1" and "E2E pre-UAT COM-1996 crash isolate manual input". Both tabs should show the chart. Then set a Manual input's "Arrives at: Top side, Middle" and press Done.
+- id: 01M7VCA3BR3QGPMVJ29833JT5M
+  author: Steve Vine
+  at: 2026-11-20T02:24:31.608267Z
+  text: |-
+    Pre-UAT on staging d8749c62 — Passed
+    - Routing never loops; every stretch is straight; the walk always ends, for every shape, side, point and route style: Passed. As E2E Admin A, on a Process-type standalone flowchart, I fixed a connection's end in turn on every side and every point of Manual input, Preparation, Delay, Decision, Manual task, Hand-off, Connector and Documents. I did both the arriving end and the leaving end: 224 combinations. I also tried every side and point of a Data cylinder's leaving end, and Right-angled, Straight and Curved routes on the original crashing connection. None crashed. Every right-angled line was made only of straight pieces across and down, never a diagonal (r3re-08-*, r3re-14).
+    - A saved flowchart that can't be routed still opens, falling back to a plain line: Couldn't check in the browser. I found no line that fails to route, so I couldn't make the fallback happen. The PR adds tests that force a routing failure and check the page still draws ("draws every line plain when routing throws, rather than crash the page").
+    - The two crashing drafts open and draw correctly with no re-save: Passed. "E2E pre-UAT COM-1996 crash isolate manual input" and "E2E pre-UAT COM-1992 crash isolate e1" both show the chart on the Read tab, the Edit tab and the canvas, before anything was saved (r3re-01 to r3re-04). The console showed no errors.
+    - The steps that caused the crash: Passed. On e1, Data's bottom 17% point already led to the Manual input's "Arrives at: Top side, Middle". I changed it to 17%, set it back to Middle and pressed Done. Then I checked the Read tab, a reload, and the Edit tab and canvas again: no crash (r3re-06, r3re-07, r3re-09).
+    - draw.io import of a Step joined to a Manual input's top middle: Passed. I imported r3-step-to-manualinput.drawio into a new flowchart, "E2E pre-UAT COM-2012 drawio manual input". The preview drew it, then Import and Done. The Read tab, a reload and reopening the canvas all work, and the connection keeps "Bottom side, 17%" → "Top side, Middle" (r3re-10 to r3re-13).
+    - Server picture, PDF and Word: Passed. The PDF of e1, made fresh after Done, draws the Data → Manual input line from the fixed points (r3re-e1.pdf, r3re-e1-pdf-p2.png).
+    - Tests: Passed. routeEnds.test.ts covers the saved crashing chart, every point on every side of each shape, lines kept to a tenth of a pixel, and the plain-line fallback.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2012/r3re-*
 assignee: steve
 label:
 - bug
