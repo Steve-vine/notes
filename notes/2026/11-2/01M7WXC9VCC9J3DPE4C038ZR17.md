@@ -1,15 +1,17 @@
 ---
 id: 01M7WXC9VCC9J3DPE4C038ZR17
 created: 2026-11-20T16:42:04.012498Z
-updated: 2026-11-20T16:42:04.012498Z
+updated: 2026-11-20T16:42:13.335507Z
 type: task
 title: Making a document's flowchart standalone takes the document's custom colours with it
-task_status: todo
-priority: medium
-assignee: steve
-label: bug
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2028
+sprint: s6y6p7g
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: todo
 ---
 Found in Claude's pre-UAT of COM-2026 (staging b65d7ed8, tester A).
 
