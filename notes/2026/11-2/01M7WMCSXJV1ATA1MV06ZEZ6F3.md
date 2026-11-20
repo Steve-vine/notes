@@ -1,7 +1,7 @@
 ---
 id: 01M7WMCSXJV1ATA1MV06ZEZ6F3
 created: 2026-11-20T14:05:03.282699Z
-updated: 2026-11-20T17:19:18.526882Z
+updated: 2026-11-20T19:25:13.511139Z
 type: task
 title: Each document shows its own house style's colours, not the previous document's, until the page is refreshed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,18 @@ comments:
     - Leaving a document leaves no colours behind: Passed. After the Runbook document I opened the Content list, the House styles tab and a decision record in the Library. None of them had any Runbooks colour, and no house-style colour was set on the page.
     - Tests: Passed. houseStyleScope.test.tsx opens one house style, then another, and goes back. Being jsdom tests, they can't see the hang above.
     Screenshots: ~/compass-uat/s6y6p7g/COM-2023/ (r4-A*, r4-L*, r4-S*, r4-X*; the hang is r4-D1-stuck-*)
+- id: 01M7X6Q1X7X1PMVM4VZCWTX924
+  author: Steve Vine
+  at: 2026-11-20T19:25:13.510876Z
+  text: |-
+    Re-checked after fixes (staging 514c4649): now Passed
+
+    The round-4 defect, stuck loading between the two published documents that share a standalone flowchart, is fixed. See COM-2033: all three pairs open by Content list, Library, search and Back/Forward, on the Read and Edit tabs.
+    - Full pair ("full Procedure (no standalone)" ↔ "full Runbook (no standalone)"), through the Content list, Read and Edit tabs: each opened in its own colours with no refresh. Procedure: heading #212121, table header #e3eaf3, callouts #e8f1fb / #fdf2dc / #fbe5e5. Runbook: heading #eb0e3d, text #b5782b, table header #795ab7, callouts #511d82 / #1bcc20 / #40547a.
+    - Flowchart pictures: in the Procedure document its own flowchart is grey and the standalone red. In the Runbook document both are red. The same on Read and Edit, and in the PDF and Word.
+    - Leaving a document leaves no colours behind: after the Runbook document, the Content list, the House styles tab and another document ("Access Control Policy") had no Runbooks colour anywhere.
+    - Observation: the browser's own print (Ctrl+P) of a content page prints blank. The Library reader's print rule is in the main stylesheet and hides everything else. Print preview (the PDF) is fine. This isn't from this task.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2023/r4re-*
 assignee: steve
 label:
 - bug

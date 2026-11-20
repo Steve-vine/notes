@@ -1,7 +1,7 @@
 ---
 id: 01M7WMCZCH2N0BB6K8QMX4CX19
 created: 2026-11-20T14:05:08.881922Z
-updated: 2026-11-20T17:19:31.447543Z
+updated: 2026-11-20T19:25:18.265042Z
 type: task
 title: 'A flowchart''s colours always come from one house style: its document''s, or for a standalone flowchart, its own type''s'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,6 +38,18 @@ comments:
     - DEFECT, seen with this exact setup (logged in detail on COM-2023): moving inside the app from one of these two documents to the other leaves the page on loading placeholders forever, in both directions, by link, from the Library and from search. Refreshing shows it.
     - Seen once and not again in 4 tries: Edit flowchart from the Runbook document opened the flowchart's page as "Compass couldn't load this — try again" (r4-O1-*.png).
     Screenshots: ~/compass-uat/s6y6p7g/COM-2024/ (r4-*; PDFs, Word files and downloads are there too)
+- id: 01M7X6Q6HS66DF2MH7XGXE3SSA
+  author: Steve Vine
+  at: 2026-11-20T19:25:18.264628Z
+  text: |-
+    Re-checked after fixes (staging 514c4649): now Passed
+
+    Both round-4 failures are fixed. The type-change point is covered by COM-2034, and the stuck loading between the two documents by COM-2033.
+    - Standalone flowchart in its own type's colours in both documents: still Passed. In "Procedure document (A4-Policy-External style)" its picture is red (#fde7ec/#eb0e3d) while the document's own flowchart is grey (#e9e9e9/#212121). In "Runbook document (Runbooks style)" both are red. The same on Read and Edit. PDF: "Standalone step" is red and "Own step" grey in the Procedure PDF, and both are red in the Runbook PDF. The Word files match.
+    - Editing from either document: still Passed. Edit flowchart in the settings panel goes to the flowchart's own page, and its Edit flowchart opens a red Runbooks canvas, from both documents.
+    - Not marked as having unpublished changes: still Passed. The standalone flowchart is version 1 with no unpublished changes after I opened it from both documents and cancelled.
+    - A document's own flowchart follows a type change: now Passed (COM-2034).
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2024/r4re-* (PDFs and Word files alongside)
 assignee: steve
 label:
 - bug

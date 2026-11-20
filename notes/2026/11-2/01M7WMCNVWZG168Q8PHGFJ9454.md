@@ -1,7 +1,7 @@
 ---
 id: 01M7WMCNVWZG168Q8PHGFJ9454
 created: 2026-11-20T14:04:59.132767Z
-updated: 2026-11-20T17:19:38.799221Z
+updated: 2026-11-20T19:25:22.07069Z
 type: task
 title: On the Edit tab a flowchart scrolls under the section's toolbar, not over it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,18 @@ comments:
     - Tests: Passed. toolbarOnTop.test.ts checks that the toolbar stays above the content's divs and below the settings panel.
     - Observation: on the Edit tab the flowchart's own Zoom / Full screen / Download buttons sit under the picture, so you can neither see nor click them. I opened full screen by script for the last check. It looks like it was this way before this task (the Read tab is fine).
     Screenshots: ~/compass-uat/s6y6p7g/COM-2022/ (r4-paper-on/off-*, r4-full-screen-*)
+- id: 01M7X6QA8PMT1HYFJQFT8VT7QF
+  author: Steve Vine
+  at: 2026-11-20T19:25:22.070396Z
+  text: |-
+    Re-checked after fixes (staging 514c4649): still Passed
+
+    Document: "E2E pre-UAT COM-2023 Procedure document (A4-Policy-External style)", tested as E2E Admin A with saves held back. I scrolled each picture under the sticky section toolbar and checked what is on top at 36 points across the overlap.
+    - The text diagram, the document's own flowchart and the standalone flowchart, with "Show as on paper" both off and on, selected and not selected: the toolbar was on top at every point (12 of 12 cases).
+    - The flowchart's own Zoom out / Zoom in / Full screen / Download (now visible on the Edit tab, COM-2035) are clickable when the picture is in view, and go under the toolbar when scrolled into it.
+    - The settings panel is on top when a flowchart is selected (own: Edit flowchart and alignment; standalone: Edit flowchart, Version and alignment).
+    - Full screen (own and standalone) covers the whole window, toolbar included.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2022/r4re-*
 assignee: steve
 label:
 - bug
