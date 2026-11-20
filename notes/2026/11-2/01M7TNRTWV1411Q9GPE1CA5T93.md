@@ -1,7 +1,7 @@
 ---
 id: 01M7TNRTWV1411Q9GPE1CA5T93
 created: 2026-11-19T19:50:37.211011Z
-updated: 2026-11-19T23:56:20.293693Z
+updated: 2026-11-20T02:25:13.829036Z
 type: task
 title: Move a connection's end to any of several points on its shape, or to another shape
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,6 +52,20 @@ comments:
     - Tests: connectionPoints.test.tsx and backend tests were added. They run without a real browser layout, so they couldn't catch defect 1 (the handles are covered), and nothing covers a fixed point on a sloped outline (defect 2).
     Kept for reproduction: "E2E pre-UAT COM-1992 crash isolate e1" (crash made by ordinary editing) and "E2E pre-UAT COM-1996 crash isolate manual input" (two shapes, one connection). Both crash on open.
     Screenshots: ~/compass-uat/s6y6p7g/COM-1996/ (console log: r3-crash-console.log)
+- id: 01M7VCBCK5SPAZD17SKEMNJWYS
+  author: Steve Vine
+  at: 2026-11-20T02:25:13.828784Z
+  text: |-
+    Re-check on staging d8749c62: both failed points now Passed.
+    - Dragging an end shows the shape's points, highlights the nearest, and dropping fixes it: now Passed with the mouse alone, with nothing lifted in the browser.
+      - As E2E Admin A, the handles are on top everywhere I pressed. The diamond's points showed with the nearest filled in, and dropping fixed "Arrives at: Left side, Middle". Dropping on another shape reconnected the line, and Ctrl+Z undid it.
+      - I tried this at zoom 0.5, 1 and 2, on dark and light canvases (see COM-2013).
+    - Canvas, reading view, PDF and Word draw from the chosen points, including a connection fixed to a Manual input's top: now Passed.
+      - Both crash drafts open on the Read and Edit tabs.
+      - Setting "Arrives at: Top side, Middle" from Data's bottom 17% point and pressing Done no longer crashes. The Read tab and the fresh PDF draw the line from the fixed points.
+      - The draw.io import of a Step joined to a Manual input's top middle imports, saves and reopens (see COM-2012).
+      - Tidy up on a new chart kept the fixed points, and the Read tab picture matched the canvas.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2012/r3re-*, COM-2013/r3re-*
 assignee: steve
 label:
 - improvement

@@ -1,7 +1,7 @@
 ---
 id: 01M7TMHQGY5A08HS29Y1S1VERP
 created: 2026-11-19T19:29:15.806184Z
-updated: 2026-11-19T23:55:45.465488Z
+updated: 2026-11-20T02:25:17.418187Z
 type: task
 title: A new shape's default colour is one you can pick, and the finished picture shows the same colour
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,15 @@ comments:
     - Existing flowcharts with no colour show the same default everywhere: Passed. The saved pictures of COM-1907's and COM-1904's older flowcharts already use the same colours their canvases draw now.
     - Tests: Passed. defaultColour.test.tsx was added, but it always sets up a house-style sheet. The standalone case, with no sheet, isn't covered, which is where the mismatch shows.
     Screenshots: ~/compass-uat/s6y6p7g/COM-1991/
+- id: 01M7VCBG3AX4VFXD3GNWCNN0RQ
+  author: Steve Vine
+  at: 2026-11-20T02:25:17.417951Z
+  text: |-
+    Re-check on staging d8749c62: "a new shape's default background and border are picker colours, shown as the current choice" now Passed on a standalone flowchart.
+    - As E2E Admin A, on "E2E pre-UAT COM-1992 all shapes standalone" (the chart that failed), a shape on Default is drawn #e9e9e9 with a #212121 border. Style reads "Default (Light shade)" and "Default (Primary)", with those swatches (#e9e9e9, #212121) ticked (r3re-01).
+    - A new standalone ("E2E pre-UAT COM-2016 new standalone") does the same. Its Read tab, PDF and Word picture match the canvas (see COM-2014).
+    - One remaining edge case is logged under COM-2016: if the house style takes more than about 3 s to load, the canvas stays in the fallback light blue while Style ticks the grey house swatches.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-1991/r3re-01-standalone-style.png
 assignee: steve
 label:
 - bug

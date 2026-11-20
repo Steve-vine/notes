@@ -1,7 +1,7 @@
 ---
 id: 01M7V90K9T9TRGHZ0KK1GTE585
 created: 2026-11-20T01:26:54.522013Z
-updated: 2026-11-20T01:56:18.214226Z
+updated: 2026-11-20T02:25:09.063854Z
 type: task
 title: A new standalone flowchart opens with its Start shape again
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,32 @@ comments:
     Checked: journeys 6 and 6b both pass against a local copy of Compass, including COM-2013's end-handle drag. With the fix taken out, 6b fails at the same line as on staging.
     Assumption: a saved flowchart whose shapes were all deleted also reopens with a Start.
     To check on staging: the Browser smoke's journey 6b is green after the next deploy.
+- id: 01M7VCB7Y7VVSTQZ90YPMJ1AAF
+  author: Steve Vine
+  at: 2026-11-20T02:25:09.063572Z
+  text: |-
+    Pre-UAT on staging d8749c62 — Failed
+    One defect: when the house style takes longer than about 3 seconds, the canvas opens in the fallback colours and never switches to the house style once it arrives.
+    - A new standalone flowchart opens with its Start shape, whether the house style loads quickly, slowly or never: Passed.
+      - As E2E Admin A: New content ▸ Flowchart (Process), "E2E pre-UAT COM-2016 new standalone" ▸ Create draft ▸ Edit ▸ Draw the flowchart. The canvas opened in 0.8 s with a single "Start" (r3re-02).
+      - I then held up the house-style requests in the browser.
+        - 1 s delay: Start, opened after 3.4 s, in the house colours.
+        - 4–5 s delay: Start, opened after 3.1–3.6 s, four runs out of four.
+        - Request failed: Start, after 0.6 s.
+        - Request never answered: Start, after 3.6 s (r3re-05, r3re-06).
+      - Cancel on the untouched canvas closed it straight away, with no "discard?" question (r3re-03).
+      - Import (draw.io / Lucidchart) is still offered on the new canvas with its Start. A draw.io import replaced the Start with the imported chart (seen under COM-2012).
+    - An existing standalone flowchart opens with exactly its saved shapes: Passed. "E2E pre-UAT COM-1998 standalone three boxes" opened with exactly its saved Start, Do the thing and End (r3re-10). "E2E pre-UAT COM-1992 crash isolate e1" opened with its 8 shapes and no Start added.
+    - The house style still applies to the canvas once it loads: Failed when it loads late.
+      - Normal load: Passed. Shapes are #e9e9e9 / #212121, the house style's Light shade and Primary.
+      - Late load, as E2E Admin A on "E2E pre-UAT COM-2016 new standalone":
+        - Steps: delay /api/v1/house-styles by 4–5 s (the house-style list, then its stylesheet, about 8–11 s in all). Then Edit ▸ Draw the flowchart, or Edit flowchart on an existing chart.
+        - Expected: the canvas opens after about 3 s, and switches to the house colours when the stylesheet arrives.
+        - Seen: the canvas opens in the fallback #e7f5ff / #1971c2 and stays that way. 15 s after it opened, with the house stylesheet linked on the page, Start was still pale blue. Style meanwhile ticks "Default (Light shade)" and "Default (Primary)" on the house swatches, #e9e9e9 and #212121. That is the same mismatch COM-2014 fixed, back on a slow connection. An existing chart behaves the same way (r3re-07, r3re-08, r3re-09, r3re-11).
+      - Not tried: pressing Done in that state. It would presumably save the picture in the fallback colours.
+    - Browser smoke journey 6b is green on staging, including COM-2013's end-handle drag: Passed. The Browser smoke step of the d8749c62 staging deploy (run 44657555871) succeeded.
+    - Unit test for Start when the house style arrives late and never: Passed. standaloneStart.test.tsx has "opens with Start when the house style arrives late" and "… never arrives". No test checks that the colours change when it arrives late.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2016/r3re-*
 assignee: steve
 label:
 - bug
