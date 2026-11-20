@@ -1,7 +1,7 @@
 ---
 id: 01M7WXMZ1RRTC5ZNZR877VPV0T
 created: 2026-11-20T16:46:47.864941Z
-updated: 2026-11-20T17:38:08.374664Z
+updated: 2026-11-20T19:17:52.022779Z
 type: task
 title: The "Show an existing flowchart" window describes following the latest version, not keeping one
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,17 @@ comments:
       - Keep now confirms "<document> stays pinned to version M. You'll hear again when a version after N is published."
     - I found no other text describing the old keep-the-version behaviour.
     To check on staging: open a document's Edit tab, choose Insert ▸ An existing flowchart… and read the window.
+- id: 01M7X69JRPEGXZ2KRS4651TTTA
+  author: Steve Vine
+  at: 2026-11-20T19:17:52.022564Z
+  text: |-
+    Re-check on staging 514c4649: Passed
+    Checked as E2E Admin A in E2E Test Company, on "E2E pre-UAT COM-2029 lane keeps connections" (Edit tab ▸ Insert ▸ An existing flowchart…).
+    - The window's wording: Passed. "Show an existing flowchart" now reads: "The document shows the flowchart's latest published version, and its draft moves on each time the flowchart is published again. To keep one version, pin it in the flowchart's settings. Readers see a new version only once the document itself is published again." That covers following the latest version, pinning it in settings, and readers seeing a change only when the document is published again. (r4re-01)
+    - It agrees with the screen: Passed. I showed "E2E pre-UAT COM-1927 laned standalone flowchart" in the document. Its settings panel has a Version picker, "Moves on each time the flowchart is published", set to "Latest published (version 1)", where it can be pinned. (r4re-03)
+    - Other wording: Passed. A search of the deployed code (origin/main 514c4649) for "take a newer", "keeps that version" and "until you take" finds only code comments that describe pinning correctly. Polaris's description (instance.py) now says the draft follows the latest published version unless pinned, and the published document keeps its version until it's published again.
+    - Couldn't check on screen: the new Take and Keep confirmations ("…'s draft follows the latest again, version N. Publish it there." and "… stays pinned to version M. You'll hear again when a version after N is published."). They only show after publishing a newer version of a pinned standalone flowchart. I read them in PR #2026 only. Tester RB's COM-2030 check (Document B, Keep) goes through that page.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2031/ (r4re-*)
 assignee: steve
 label:
 - bug

@@ -1,7 +1,7 @@
 ---
 id: 01M7WMD99VRQSDMPTVPRPBHH0D
 created: 2026-11-20T14:05:19.035001Z
-updated: 2026-11-20T16:41:26.058169Z
+updated: 2026-11-20T19:18:08.717868Z
 type: task
 title: A row of custom colours under the flowchart colour palette, kept with the document
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,6 +45,20 @@ comments:
     - Make it a standalone flowchart takes the document's row (stated in the Done comment, not in the Done-when list): Failed. On Document A's second flowchart I used Make it a standalone flowchart. At that moment the document's row was blue, orange, red, green, yellow, pink, then white. The new standalone, "E2E pre-UAT COM-2026 Document A (custom colours) flowchart", opens with an all-white row (r4-09). Technical reason: the screen makes the new flowchart through ordinary "create content", not the "make standalone" route, and only the latter copies the row.
     - Tests: Passed. PR #2022 adds customColours.test.tsx and test_flowchart_custom_colours.py.
     Screenshots: ~/compass-uat/s6y6p7g/COM-2026/
+- id: 01M7X6A32DRVTHW256ZFQB3408
+  author: Steve Vine
+  at: 2026-11-20T19:18:08.717618Z
+  text: |-
+    Re-checked after fixes (staging 514c4649): still Passed, and the round-4 failure is now fixed (COM-2028)
+    A quick pass as E2E Admin A in E2E Test Company, in a new document "E2E pre-UAT COM-2028 make standalone with custom colours":
+    - Second row of 9 custom swatches, all white to start, under Fill, Border, Text colour and a connection's Line: still there.
+    - Setting a swatch through Any colour: still applies it. Custom 1 purple went on a fill, Custom 2 orange on a border, Custom 3 green on a fill, and Custom 4 yellow on text.
+    - One Undo after setting Custom 6: still turns both the swatch and the shape back. Redo brings both back. (r4re-01, r4re-02)
+    - Same row in every flowchart of the document: still the case. The document's second flowchart showed the 4 colours. Another document's row (COM-2026 Document B) is still all white.
+    - Making a document's own flowchart standalone: now takes the document's row with it. The document keeps its own row, and the two rows stay separate afterwards (details on COM-2028). This was the only point that failed in round 4.
+    - PDF: the custom fills, border and text colour all show correctly, including a pink custom fill. (r4re-com2028doc-draft.pdf, r4re-com2028doc-pdf-p2.png)
+    Not re-checked this pass: publish, Compare versions, Revert, and lane colours (nothing in the fixes touched them).
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2026/ (r4re-*)
 assignee: steve
 label:
 - improvement

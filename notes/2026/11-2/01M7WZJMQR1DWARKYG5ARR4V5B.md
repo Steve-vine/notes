@@ -1,7 +1,7 @@
 ---
 id: 01M7WZJMQR1DWARKYG5ARR4V5B
 created: 2026-11-20T17:20:28.920671Z
-updated: 2026-11-20T18:14:08.907546Z
+updated: 2026-11-20T19:18:01.211541Z
 type: task
 title: A flowchart's Zoom, Full screen and Download buttons can be seen and clicked on the Edit tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -20,6 +20,21 @@ comments:
     Images and text diagrams have no reading buttons on the Edit tab, only on the Read tab, where they were already on top (re-checked).
     Tests: a check that the buttons' layer beats the editor's and stays under the toolbar. The Browser smoke's journey 6 now checks that Full screen on a just-drawn flowchart is on top, and clicks it.
     To check on staging: hover a flowchart on the Edit tab and use each button.
+- id: 01M7X69VQVRXPYGBH6K1HSMRG5
+  author: Steve Vine
+  at: 2026-11-20T19:18:01.211274Z
+  text: |-
+    Re-check on staging 514c4649: Passed
+    All checks done as E2E Admin A in E2E Test Company, on the Edit tab of "E2E pre-UAT COM-2029 lane keeps connections". It shows a standalone flowchart (COM-1927 laned standalone) and two of its own flowcharts. For each button I checked that the topmost thing under its centre is the button itself, and clicked it with a real mouse click at that point.
+    - Buttons visible and on top: Passed, for all 3 flowcharts in all 4 states (Show as on paper off and on, selected and not). All 4 buttons were on top every time: Zoom out, Zoom in, Full screen, Download. (r4re-01, r4re-02)
+    - They work: Passed, for the standalone and both of the document's own flowcharts. Zoom in made the picture 1.5× larger (472×457 → 708×686), and Zoom out put it back. Full screen opened the flowchart full screen and Esc closed it (r4re-03, r4re-04). Download showed "Download the flowchart: PNG picture / SVG picture", and PNG downloaded a file (r4re-05). The document's saved text and sections were exactly the same before and after.
+    - Still under the sticky section toolbar: Passed. When I scrolled a flowchart's top up to the section toolbar, all 4 buttons went under the toolbar (r4re-06). A tall flowchart that scrolls under the toolbar when clicked behaves the same.
+    - Images and text diagrams: Passed, as the builder describes. In "E2E pre-UAT COM-2004 every kind of picture" on the Edit tab, only the two flowcharts (its own and a standalone) have reading buttons, and both are on top. Images, text diagrams and the drawing have none there. On the Read tab all 7 pictures have all 4 buttons, and all are on top. (r4re-08)
+    - Test: Passed. pictureToolsOnTop.test.ts was added, and the Browser smoke's journey 6 now clicks Full screen.
+    Observations:
+    - Clicking a reading button on the Edit tab also selects the flowchart and opens its settings panel. Nothing changes, but it's a little surprising.
+    - I couldn't get the buttons under the picture settings panel. At 1000 px wide the panel moves below the flowchart instead of covering it.
+    Screenshots: ~/compass-uat/s6y6p7g/COM-2035/ (r4re-*)
 assignee: steve
 label:
 - bug
