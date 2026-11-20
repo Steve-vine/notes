@@ -1,7 +1,7 @@
 ---
 id: 01M7X87F45TNR7FYPFNTPFFBT3
 created: 2026-11-20T19:51:39.909224Z
-updated: 2026-11-20T19:59:48.365839Z
+updated: 2026-11-20T20:00:00.347488Z
 type: task
 title: Controls, Audit ▸ Evidence and schedule entries use the Add evidence window; a schedule entry's evidence is its controls' evidence too
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,12 +15,12 @@ label:
 priority: medium
 task_status: todo
 ---
-Built to the ADR in COM-2038, after COM-2042. This is the first place the window goes, and it's Steve's RIM.9 case end to end (2026-11-20).
+Built to the ADR in COM-2038, after COM-2048, so the preview (COM-2047, COM-2048) comes with the window. This is the first place the window goes, and it's Steve's RIM.9 case end to end (2026-11-20).
 
 **Steve's case, as it should go**
 1. On RIM.9's assessment, Add evidence ▸ Add new: upload the cyber insurance certificate (EVD-n).
 2. In the schedule (Security Assurance Plan), the recurring "Assess and renew cyber insurance" entry linked to RIM.9 is due, and he chooses **Mark done**.
-3. The dialog's evidence section has **Add evidence**. Its Link tab opens filtered to evidence on RIM.9, the certificate is there, and he ticks it and links it. Mark done goes through with no upload and no No evidence tick.
+3. The dialog's evidence section has **Add evidence**. Its Link tab opens filtered to evidence on RIM.9, the certificate is there (previewed when he clicks it), and he ticks it and links it. Mark done goes through with no upload and no No evidence tick.
 
 **What changes**
 - **A control's evidence** (the assessment panel on a company's control, and a framework's control view) adds evidence with the window instead of its own upload.
