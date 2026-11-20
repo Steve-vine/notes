@@ -1,22 +1,24 @@
 ---
 id: 01M7X86QAR4TB98Y4NTZY0FCFP
 created: 2026-11-20T19:51:15.544996Z
-updated: 2026-11-20T19:51:15.544996Z
+updated: 2026-11-20T19:52:23.465757Z
 type: task
 title: 'The Add evidence window: Add new evidence tab (drop files or a web address, check each one''s details, upload)'
-priority: medium
-task_status: todo
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2041
+sprint: s9hexqn
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Built to the ADR in COM-2038, after COM-2040. Steve's design (2026-11-20). This task builds the window and its first tab. The second tab is COM-2042, and putting the button in each place is COM-2043 to COM-2045.
 
 **The button and the window**
 - One **Add evidence** button, the same everywhere Compass asks for evidence. It opens a large window, nearly the full size of the screen, titled with where the evidence is going ("Add evidence to RIM.9", "Add evidence to SAP-14 Renew cyber insurance").
 - Two tabs: **Add new evidence** (opens first) and **Link existing evidence** (COM-2042).
-- The window shows the people the evidence is for only what they may add there. Without the right to add, there's no button.
+- Only people who may add evidence to the record see the button.
 
 **Add new evidence tab**
 - **A drop box:** drag files into it, or click it to open the file chooser (several files at once).
