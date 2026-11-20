@@ -1,12 +1,14 @@
 ---
 id: 01M7X86QAR4TB98Y4NTZY0FCFP
 created: 2026-11-20T19:51:15.544996Z
-updated: 2026-11-20T19:52:23.465757Z
+updated: 2026-11-20T19:52:41.439501Z
 type: task
 title: 'The Add evidence window: Add new evidence tab (drop files or a web address, check each one''s details, upload)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2041
 sprint: s9hexqn
+blocked_by:
+- 01M7X85X1XMNTFB7R7X32RT98X
 assignee: steve
 label:
 - feature

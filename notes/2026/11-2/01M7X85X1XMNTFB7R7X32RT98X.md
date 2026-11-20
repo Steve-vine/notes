@@ -1,11 +1,14 @@
 ---
 id: 01M7X85X1XMNTFB7R7X32RT98X
 created: 2026-11-20T19:50:48.637702Z
-updated: 2026-11-20T19:50:58.928276Z
+updated: 2026-11-20T19:52:40.871036Z
 type: task
 title: One piece of evidence can be linked to many records; unlinking isn't archiving
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2040
+sprint: s9hexqn
+blocked_by:
+- 01M7X85FCF2REWD1JJSYCYX9BY
 assignee: steve
 label:
 - feature

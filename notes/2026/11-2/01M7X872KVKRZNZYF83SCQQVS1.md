@@ -1,15 +1,19 @@
 ---
 id: 01M7X872KVKRZNZYF83SCQQVS1
 created: 2026-11-20T19:51:27.099764Z
-updated: 2026-11-20T19:51:27.099764Z
+updated: 2026-11-20T19:52:41.511646Z
 type: task
 title: 'The Add evidence window: Link existing evidence tab (the register, sortable and filtered, pick several)'
-label: feature
-priority: medium
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2042
+sprint: s9hexqn
+blocked_by:
+- 01M7X86QAR4TB98Y4NTZY0FCFP
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Built to the ADR in COM-2038, after COM-2041. Steve's design (2026-11-20). It's the second tab of the Add evidence window, and it fixes his RIM.9 case: picking the certificate already on the control instead of uploading it again.
 

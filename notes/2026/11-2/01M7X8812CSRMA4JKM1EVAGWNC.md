@@ -1,15 +1,19 @@
 ---
 id: 01M7X8812CSRMA4JKM1EVAGWNC
 created: 2026-11-20T19:51:58.284052Z
-updated: 2026-11-20T19:51:58.284052Z
+updated: 2026-11-20T19:52:46.316659Z
 type: task
 title: Incidents, risks and vulnerabilities use the Add evidence window
-assignee: steve
-priority: medium
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2045
+sprint: s9hexqn
+blocked_by:
+- 01M7X87QSS7B1YJ51ZZ0V3Y0G7
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Built to the ADR in COM-2038, after COM-2044. This is the last of the places that hold the company's evidence.
 

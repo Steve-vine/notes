@@ -1,15 +1,19 @@
 ---
 id: 01M7X85FCF2REWD1JJSYCYX9BY
 created: 2026-11-20T19:50:34.639301Z
-updated: 2026-11-20T19:50:34.639301Z
+updated: 2026-11-20T19:52:38.801426Z
 type: task
 title: Every piece of evidence has an ID (EVD-n), shown wherever the evidence is
-priority: medium
-assignee: steve
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2039
+sprint: s9hexqn
+blocked_by:
+- 01M7X8522V25P8S181E9VCF5XK
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Built to the ADR in COM-2038. Steve asked for an ID on evidence that shows in the register and in the new Add evidence window (2026-11-20).
 

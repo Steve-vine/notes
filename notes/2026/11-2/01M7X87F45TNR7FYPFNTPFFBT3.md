@@ -1,15 +1,19 @@
 ---
 id: 01M7X87F45TNR7FYPFNTPFFBT3
 created: 2026-11-20T19:51:39.909224Z
-updated: 2026-11-20T19:51:39.909224Z
+updated: 2026-11-20T19:52:44.415808Z
 type: task
 title: Controls, Audit ▸ Evidence and schedule entries use the Add evidence window; a schedule entry's evidence is its controls' evidence too
-assignee: steve
-priority: medium
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2043
+sprint: s9hexqn
+blocked_by:
+- 01M7X872KVKRZNZYF83SCQQVS1
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Built to the ADR in COM-2038, after COM-2042. This is the first place the window goes, and it's Steve's RIM.9 case end to end (2026-11-20).
 
