@@ -1,15 +1,17 @@
 ---
 id: 01M7WMCZCH2N0BB6K8QMX4CX19
 created: 2026-11-20T14:05:08.881922Z
-updated: 2026-11-20T14:05:08.881922Z
+updated: 2026-11-20T14:05:29.751943Z
 type: task
 title: 'A flowchart''s colours always come from one house style: its document''s, or for a standalone flowchart, its own type''s'
-priority: high
-task_status: todo
-assignee: steve
-label: bug
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2024
+sprint: s6y6p7g
+assignee: steve
+label:
+- bug
+priority: high
+task_status: todo
 ---
 Steve (testing round 3): take two documents with different house styles, create a new standalone flowchart, and add it to both. In each document it shows in the colour scheme it was saved in. Edit it, though, and the editor opens in the colour scheme of whichever document it was opened from.
 

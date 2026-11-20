@@ -1,15 +1,17 @@
 ---
 id: 01M7WMCSXJV1ATA1MV06ZEZ6F3
 created: 2026-11-20T14:05:03.282699Z
-updated: 2026-11-20T14:05:03.282699Z
+updated: 2026-11-20T14:05:28.78309Z
 type: task
 title: Each document shows its own house style's colours, not the previous document's, until the page is refreshed
-assignee: steve
-label: bug
-priority: high
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2023
+sprint: s6y6p7g
+assignee: steve
+label:
+- bug
+priority: high
+task_status: todo
 ---
 Steve (testing round 3): the content viewer and editor seem to remember the colour scheme of the last document viewed. Steve made two house styles with different colour palettes and mapped them to different content types. Opening a document whose type uses the non-standard palette shows that palette, as expected. Going back to a document that uses the normal palette still shows the other palette until the screen is refreshed.
 

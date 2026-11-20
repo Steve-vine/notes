@@ -1,15 +1,17 @@
 ---
 id: 01M7WMCHVNQGEBXA62760BVFAK
 created: 2026-11-20T14:04:55.029608Z
-updated: 2026-11-20T14:04:55.029608Z
+updated: 2026-11-20T14:05:27.655605Z
 type: task
 title: Drag the Line onto the flowchart canvas, like every other shape
-assignee: steve
-label: improvement
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2021
+sprint: s6y6p7g
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Steve (testing round 3): every shape in the left-hand bar can be dragged onto the canvas except the Line, which has to be clicked. Make the Line draggable too.
 
