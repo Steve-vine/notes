@@ -1,17 +1,31 @@
 ---
 id: 01M7Z50SVW1F4Y3DFGKHNXKPFV
 created: 2026-11-21T13:34:04.668042Z
-updated: 2026-11-21T13:34:08.133022Z
+updated: 2026-11-21T14:00:35.343919Z
 type: task
 title: 'Assessment box at phone width: "Request exception" (and "Renew exception") labels are cut off'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2071
 sprint: s9hexqn
+comments:
+- id: 01M7Z6H866JM4SF6GPXHEH8SF4
+  author: Steve Vine
+  at: 2026-11-21T14:00:32.198346Z
+  text: |-
+    Done. Merged to main as PR #2064; it isn't on staging yet and goes out with the next deploy.
+
+    What changes for people
+    - On a phone (375 and 390 wide), "Request exception" in the assessment box is no longer cut off. A label too long for its half of the box wraps onto a second line, and the button beside it grows to the same height.
+    - "Renew exception" fits on one line at both widths.
+    - On a desktop nothing changes: four equal buttons in a 2×2.
+
+    Call Steve might overturn: the long label wraps, rather than the buttons stacking into one column on phones. That keeps the box compact, but "Request exception" reads as two lines in a taller second row.
+    Checked: measured in headless Chromium at 1440, 1280, 390 and 375 wide. Before, the label was clipped (106px of text in 85–92px). After, it wraps with nothing clipped. The desktop layout is unchanged.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Found in Claude's pre-UAT pass (staging 12bd442a5, 2026-11-21), on COM-2057 / COM-2070.
 
