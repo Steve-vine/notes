@@ -1,7 +1,7 @@
 ---
 id: 01M7WXMV77PD0FN42DZBZZRK6V
 created: 2026-11-20T16:46:43.94332Z
-updated: 2026-11-20T19:24:49.866314Z
+updated: 2026-11-21T08:10:17.616732Z
 type: task
 title: A flowchart someone chose to Keep on an older version stays pinned to it when documents switch to following the latest
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT of COM-2027 (staging b65d7ed8, tester C).
 
