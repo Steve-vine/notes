@@ -1,7 +1,7 @@
 ---
 id: 01M7YNC441C7GWMTBV5Z2K71C4
 created: 2026-11-21T09:00:38.40134Z
-updated: 2026-11-21T10:05:39.186177Z
+updated: 2026-11-21T10:57:07.459349Z
 type: task
 title: Office previews made by a separate, locked-down converter on Debian 13, for .docx, .xlsx and .pptx only, and optional in the Helm deploy
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,22 @@ comments:
     4. Optional: make the new "converter" check required in branch protection.
 
     Calls for you to overturn: the converter's packages are refreshed weekly, so trixie security fixes arrive without a code change; the wording of the two new reasons; and the converter's sizes (1 CPU and 1 GiB limits, 64 MiB maximum file, 90 seconds per file).
+- id: 01M7YW1DC3HNDA59DCQEJYAY30
+  author: Steve Vine
+  at: 2026-11-21T10:57:07.459119Z
+  text: |-
+    Passed, with two parts I couldn't check (pre-UAT recheck, staging d4a5f0b5a, 21 Nov, E2E Test Company, as E2E Admin A). I didn't repeat the converter pod's lockdown check: done from the cluster already.
+
+    Built small, valid files locally (Word, Excel and PowerPoint, each with a heading and a line of text or a little table) and uploaded them through Audit ▸ Evidence ▸ Add evidence, all in one go with a .doc, an .odt and a .doc renamed to .docx.
+
+    1. .docx (EVD-81), .xlsx (EVD-82) and .pptx (EVD-83) were added. Each piece's page shows the PDF view ("Page 1 of 1", zoom, Fit to width) with the right content: the Word heading and line, the Excel table, the PowerPoint title and bullet. Download returns the original file. Its fingerprint is identical to the file I uploaded, and it comes back as the Word/Excel/PowerPoint type, not a PDF.
+    2. "Preparing a preview…": never caught. Two more uploads (EVD-84 .docx, EVD-85 .pptx), opened within a second or two of uploading, went straight from "Opening the PDF…" to the preview. The converter is just quick on files this small.
+    3. The .doc renamed to .docx was refused at upload, before anything was converted: "E2E 20261121 recheck legacy Word renamed.docx isn't really an Office document — its contents don't match its type, so it can't be added".
+    4. .doc and .odt: Compass won't take them at all. Upload says "Compass doesn't take this kind of file. Use a PDF, an image, a text or CSV file, or a Word, Excel or PowerPoint file". The list of file types evidence uploads accept hasn't changed since well before this sprint, so this isn't new. It means "No preview for this file" for older Office and OpenDocument files can only appear for files that reach Compass some other way, and I couldn't check it on screen. (A related message does show: EVD-67, a damaged .docx, says "No preview for this file — It's damaged, or not a…".)
+
+    Small thing seen: after the partial upload, pressing Cancel left the window's unsent files behind. Leaving the page then raised the browser's "leave this page?" prompt.
+
+    Screenshots: ~/compass-uat/s9hexqn/COM-2052/ (docx-preview.png, xlsx-preview.png, pptx-preview.png, pptx-second-ready.png, upload-refusals-doc-odt-renamed.png)
 assignee: steve
 label:
 - improvement
