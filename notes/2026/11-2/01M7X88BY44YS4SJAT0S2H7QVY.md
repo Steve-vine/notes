@@ -1,7 +1,7 @@
 ---
 id: 01M7X88BY44YS4SJAT0S2H7QVY
 created: 2026-11-20T19:52:09.412229Z
-updated: 2026-11-21T07:41:26.221878Z
+updated: 2026-11-21T09:01:47.328032Z
 type: task
 title: Polaris links existing evidence by its EVD ID anywhere evidence is taken, including marking a schedule entry done
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,20 @@ comments:
     - Taking a piece off a record doesn't ask first, because it can be linked again. Linking several asks first.
     - "Mark done with EVD-…" is all or nothing. If any piece is refused, the entry isn't marked done, and the refusal names the piece.
     - The older control-only link tools stay, so nothing already set up breaks.
+- id: 01M7YNE7E0BT5YEBV9N23EQWKQ
+  author: Steve Vine
+  at: 2026-11-21T09:01:47.327659Z
+  text: |-
+    Couldn't check (pre-UAT, staging 7e04d3f5e). Polaris in Compass needs the AI provider. I checked the tools directly through the Compass-staging connector (it acts as Steve), in E2E Test Company only.
+
+    Checked through the connector:
+    - Find by EVD ID: audit_get_evidence "EVD-68" returned the certificate with evidence_id EVD-68, its type, period, valid until, status (Current, Unchecked), link, and "used_in": Control RIM.9 and "Schedule entry: SAP-85 … finished: true". audit_search "EVD-62" found exactly EVD-62. audit_get_control_evidence RIM.9 listed each piece with its EVD ID.
+    - "Mark SAP-n done with EVD-n": I made SAP-87 "E2E 20261121 Polaris mark-done check" (review, linked to RIM.8). sap_complete_entry with no evidence was refused: "SAP-87 has no evidence yet. Give evidence already in the register by its EVD ID (evidence=['EVD-12'] …), or give the reason there is none. A new file or web address isn't added in chat: the person adds it with Add evidence on SAP-87 …'s page, https://compass.citops.net/sap/entries/…". With evidence ["EVD-66"] it went to Done: "evidence_linked: EVD-66 …", "Evidence linked to the entry is its controls' evidence too."
+    - Existing tools take an EVD ID: audit_provide_evidence with "EVD-67" added it to AUD-1 request E2E-20261121-01. audit_link_evidence_to_control with "EVD-65" linked it to RIM.8.
+
+    Not checked:
+    - The two new general tools, audit_link_evidence and audit_unlink_evidence. They aren't in the connector's tool list in this session, and sap_complete_entry's listed parameters don't show "evidence" either (it still worked). The claude.ai connector probably needs its tool list refreshed after this deploy, and Copilot's areas may too.
+    - Polaris's own wording in chat ("asked to upload, it points to Add evidence", listing several pieces before linking, take off). Steve: in Polaris on staging, try "link EVD-62 to RSK-125", "take EVD-62 off VUL-3" and "upload this file", in E2E Test Company.
 assignee: steve
 label:
 - feature
