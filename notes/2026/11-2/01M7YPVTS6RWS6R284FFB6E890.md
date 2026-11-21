@@ -1,9 +1,9 @@
 ---
 id: 01M7YPVTS6RWS6R284FFB6E890
 created: 2026-11-21T09:26:41.702095Z
-updated: 2026-11-21T09:26:44.476464Z
+updated: 2026-11-21T09:29:05.338732Z
 type: task
-title: 'Assessment screen: the box''s four buttons sit in a 2×2 block — Add evidence, Raise gap, Add to SAP, Request Exception'
+title: 'Assessment screen: the box''s four buttons sit in a 2×2 block — Add evidence, Raise gap, Add to SAP, Request exception'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2057
 sprint: s9hexqn
@@ -25,12 +25,12 @@ Raised by Steve while testing sprint 120 (2026-11-21). Goes with COM-2056 (the b
   | | |
   |---|---|
   | Add evidence | Raise gap |
-  | Add to SAP | Request Exception |
+  | Add to SAP | Request exception |
 
 - **Renamed:**
   - "Add to the plan" becomes **Add to SAP**. Its confirmation says "{control} added to the SAP" to match.
-  - "Request an exception" becomes **Request Exception**.
-  - When the control already has an exception that is due for renewal, that slot shows **Renew Exception** instead. That's my call, capitalised to match (Steve to overturn).
+  - "Request an exception" becomes **Request exception**. This keeps Compass's sentence-case convention for buttons (Steve confirmed, 2026-11-21).
+  - When the control already has an exception that is due for renewal, that slot still shows **Renew exception**, unchanged.
 - **Buttons behave as they do now.** A disabled button is still disabled, for example Raise gap before the control is assessed or when it's out of scope. The reason lines ("Raise gap: assess it first." and so on) show under the block. The "Not assessed yet" hint also sits under the block.
 - **A button someone isn't allowed to use is left out, as now.** The remaining buttons fill the block in the same order without leaving a gap, so someone with only two shows one row.
 - **With COM-2056,** the box no longer lists evidence, so its separate Evidence heading goes. The block takes its place.
@@ -42,7 +42,7 @@ Raised by Steve while testing sprint 120 (2026-11-21). Goes with COM-2056 (the b
 - Frontend only. Independent: no migration or API change.
 
 **Done when**
-- On the Assessment screen, as someone with every permission, the four buttons sit in a 2×2 block reading Add evidence, Raise gap / Add to SAP, Request Exception, and each still opens what it opened before.
-- A control with an exception due for renewal shows Renew Exception in that slot.
+- On the Assessment screen, as someone with every permission, the four buttons sit in a 2×2 block reading Add evidence, Raise gap / Add to SAP, Request exception, and each still opens what it opened before.
+- A control with an exception due for renewal shows Renew exception in that slot.
 - With fewer permissions, the block shows only the allowed buttons, without gaps.
 - The disabled-reason lines still appear under the block.
