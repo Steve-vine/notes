@@ -1,7 +1,7 @@
 ---
 id: 01M7X8NRDEP9RTTQ0E9RR143GB
 created: 2026-11-20T19:59:28.174168Z
-updated: 2026-11-21T03:18:00.901392Z
+updated: 2026-11-21T04:13:43.268959Z
 type: task
 title: 'See the evidence itself: a preview beside its properties wherever a piece opens, and in the Add evidence window'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,41 @@ number: 2047
 sprint: s9hexqn
 blocked_by:
 - 01M7X872KVKRZNZYF83SCQQVS1
+comments:
+- id: 01M7Y4YN28T5WMKSERAX81RM40
+  author: Steve Vine
+  at: 2026-11-21T04:13:39.784102Z
+  text: |-
+    Done and merged to main (PR #2039). No migration.
+
+    What changes:
+    - Opening any piece of evidence (from the register, Archived or a record's row) shows the file beside its details, "Used in" and EVD ID. There's a Full screen view (Esc comes back), and Download stays.
+    - How each kind shows:
+      - PDF: every page, scrolling, with zoom, "Fit to width" and "Page 3 of 12".
+      - Image: fitted to the space, with zoom.
+      - Text: as text, wrapped, in a fixed-width font.
+      - CSV: a table with its header row. A big one shows the first 1,000 rows and says so.
+      - Web address: the address, its title and Open (new tab), never embedded.
+      - Collected evidence: what was captured, as the check's own page shows it.
+    - Word, Excel and PowerPoint preview from the PDF copy in COM-2048. The screen already shows "Preparing a preview…" and updates without a reload.
+    - In the Add evidence window:
+      - Add new: the chosen file previews before upload, between the list and its details (above the details on a phone). Office files say "Preview after upload".
+      - Link existing: clicking a row previews it beside the register, while ticking still only picks.
+    - Archived evidence previews, marked Archived. Restricted evidence previews only for people who may see it. Files are never shown as a page on Compass's own site: PDFs are drawn by a viewer, text is shown as text, and images only as images.
+
+    Checked in headless Chromium: PDF pages draw, nothing scrolls sideways at phone width, and both tabs of the window lay out from 1024 to 1680 px wide.
+
+    Calls for you to overturn:
+    1. Downloads inside the app aren't recorded anywhere today; only the auditor portal records its own. So each preview is written to the server log ("Evidence previewed", with who and which piece), not to the Activity log.
+    2. Someone who can see Audit but not collected checks sees the filed PDF of a capture rather than the capture table.
+    3. A Library document's preview space says "A document in the library." with "Open in the library".
+
+    Known limit: PDFs relying on fonts they don't embed fall back to system fonts, and some Chinese, Japanese or Korean text, or JPEG 2000 images, may not draw. Typical evidence PDFs show fine.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Built to the ADR in COM-2038, after COM-2042. Steve (2026-11-20): clicking a piece of evidence (in the register, for example) opens its properties, but you can't see the evidence itself. Downloading it just to look is clunky.
 
