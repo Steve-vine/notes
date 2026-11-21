@@ -1,17 +1,36 @@
 ---
 id: 01M7YSQAA3QQBE9GM28Q3MWAGG
 created: 2026-11-21T10:16:39.491356Z
-updated: 2026-11-21T10:46:39.399215Z
+updated: 2026-11-21T12:43:39.525491Z
 type: task
 title: 'Control screen is for viewing only: its add, link, raise and request buttons go (they live on the Assessment screen)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2061
 sprint: s9hexqn
+comments:
+- id: 01M7Z24CYNTAB4JC60HW7WAC71
+  author: Steve Vine
+  at: 2026-11-21T12:43:36.789776Z
+  text: |-
+    Done — merged to main as PR #2063 (not yet on staging; goes out with the round-5 deploy).
+
+    What changes for people
+    - The Control screen still lists everything, but no longer offers Add decision, Add to the plan, Link content, Ask Polaris to collect, Add evidence, Raise gap, or Request an exception / Renew. Unlinking a decision or a document is gone from it too.
+    - Each tab ends with one quiet line pointing to the Assessment screen, linked to this control there — "Raise gaps on the Assessment screen", "Request exceptions on…", "Add evidence, add to the plan and ask Polaris to collect on…", and on Overview "Link decisions on…". It shows only to people who may do those things, with a company chosen, on a switched-on control.
+    - Nobody's permissions change.
+
+    Calls Steve might overturn
+    - Other changing actions on the Evidence tab went too: the coverage answer's "Say how it is covered", a collected check's own menu, a built-in check's Run now / Switch off, and reviewing a proposed check. All are still on the Assessment screen.
+    - Set status, in a piece's history window under Manual Collection, stays on the Control screen — the task didn't name it.
+    - Known gap: someone who can manage evidence in the register but can't record assessments has lost Add evidence on the Control screen (the box offers it only to people who record assessments). They now add evidence from Audit ▸ Evidence.
+
+    Also: Browser smoke journey 8 now adds its web address with the box's Add evidence on the Assessment screen, then sets its status from the Overview's Evidence ▸ Manual Collection. It runs with the deploy.
+    Checked: Vitest as an administrator (none of those buttons on any tab; each pointer line links to the control on the Assessment screen); the collection, checks, queue and screen-conventions suites pass; Control screen tabs checked in headless Chromium at desktop and phone width.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve while testing sprint 120 (2026-11-21). Part of one change:
 - **the Control screen is purely for viewing a control;**

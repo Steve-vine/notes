@@ -1,17 +1,31 @@
 ---
 id: 01M7YSQNN54DGD87H7RJY3ZNNM
 created: 2026-11-21T10:16:51.109447Z
-updated: 2026-11-21T10:46:49.932503Z
+updated: 2026-11-21T12:43:29.513448Z
 type: task
 title: Flowcharts are listed under Managed Content with the control's other documents, not as a separate Flowcharts section (Control and Assessment screens)
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2062
 sprint: s9hexqn
+comments:
+- id: 01M7Z242SXK032T36W4HDW20M4
+  author: Steve Vine
+  at: 2026-11-21T12:43:26.397229Z
+  text: |-
+    Done — merged to main as PR #2062 (not yet on staging; goes out with the round-5 deploy).
+
+    What changes for people
+    - Flowcharts no longer have their own "Flowcharts" heading: each is a row under Managed Content among the control's documents.
+    - The row shows the flowchart's title (with its caption where it has one) linking to it, a Flowchart badge, and its steps beside it.
+    - The same on the Control screen's Overview and Evidence tab and on the Assessment screen — they share one component, so they changed together.
+
+    Call: flowcharts are sorted in among the documents by title; the domain policy stays first.
+    Checked: Vitest (the row, its badge and link, the by-title ordering, no Flowcharts heading on the Assessment screen) and headless Chromium at desktop and phone width.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve while testing sprint 120 (2026-11-21). Related: COM-2060 (Assessment screen Overview) and COM-2061 (Control screen view-only). If built alongside COM-2060, do it in the same component so both screens get it at once.
 
