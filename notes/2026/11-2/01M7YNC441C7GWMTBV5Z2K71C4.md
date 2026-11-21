@@ -1,7 +1,7 @@
 ---
 id: 01M7YNC441C7GWMTBV5Z2K71C4
 created: 2026-11-21T09:00:38.40134Z
-updated: 2026-11-21T11:00:06.228535Z
+updated: 2026-11-21T17:02:16.903084Z
 type: task
 title: Office previews made by a separate, locked-down converter on Debian 13, for .docx, .xlsx and .pptx only, and optional in the Helm deploy
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -59,6 +59,10 @@ comments:
     Correction to my "Done" comment above. I said older .doc, .xls and .ppt files and OpenDocument files "still upload". They don't: Compass's evidence upload refuses them ("Compass doesn't take this kind of file…"), and has done since well before this sprint. So the "No preview for this file" message for those formats only applies to any such files already held from before that upload rule. The pre-UAT recheck found this.
 
     For you to decide: keep refusing them at upload (my recommendation, and it fits this task's aim of keeping LibreOffice's older readers away), or allow them to be uploaded without a preview.
+- id: 01M7ZGY1A7YFE9B6FCD7KZ17SD
+  author: Steve Vine
+  at: 2026-11-21T17:02:16.902784Z
+  text: 'Steve''s decision (21 Nov): older .doc, .xls and .ppt files and OpenDocument files stay blocked at upload, as they are now. So "No preview for this file" for those formats only covers any such files Compass already holds. Nothing more to build. COM-2074 was logged to allow them and has been cancelled.'
 assignee: steve
 label:
 - improvement
