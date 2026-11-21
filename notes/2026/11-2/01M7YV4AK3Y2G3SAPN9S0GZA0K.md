@@ -1,17 +1,37 @@
 ---
 id: 01M7YV4AK3Y2G3SAPN9S0GZA0K
 created: 2026-11-21T10:41:14.339262Z
-updated: 2026-11-21T10:46:52.453779Z
+updated: 2026-11-21T11:23:21.727043Z
 type: task
 title: 'Add evidence window ▸ Link existing evidence: the preview stays in view while the register scrolls (today it scrolls off the top)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2065
 sprint: s9hexqn
+comments:
+- id: 01M7YXH69Y51FYAJ5ZFHF8BGFB
+  author: Steve Vine
+  at: 2026-11-21T11:23:13.085934Z
+  text: |-
+    Done and merged to main (PR #2055). This changes the screen only.
+
+    What changes:
+    - On Link existing evidence, the preview never moves. Only the register's rows scroll, in their own column.
+    - Clicking a row far down shows it in the preview at once.
+    - The search and filters stay at the top throughout, and the Previous/Next bar stays in view under the rows.
+    - A tall preview scrolls within itself. The title bar and bottom bar stay put.
+    - Moving through the rows with Tab keeps the current row in full view, below the column headings.
+    - In a window too narrow for two columns, it scrolls as one with the preview underneath, as before.
+
+    Checked in headless Chromium with 40 rows, at 900px and 700px tall: after scrolling the register from top to bottom, the preview and the search bar were exactly where they started, and highlighting the last row updated the preview in place. The narrow layout is unchanged, with no sideways scroll.
+
+    Calls for you to overturn:
+    - The search and filters stay fixed (the task's own call).
+    - Rows can't be highlighted with the arrow keys today, only by clicking, so "keyboard movement" here means tabbing through the ticks. I didn't add arrow keys, as that would be new behaviour.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve while testing sprint 120 (2026-11-21). Same kind of fix as COM-2063 (the Assessment screen's box).
 

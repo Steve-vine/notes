@@ -1,17 +1,31 @@
 ---
 id: 01M7YW4FEFCDSEC6ERZJKJ7EX6
 created: 2026-11-21T10:58:47.8872Z
-updated: 2026-11-21T10:58:57.138395Z
+updated: 2026-11-21T11:23:22.327229Z
 type: task
 title: 'Add evidence window: the Link tab filters to controls just linked, and Cancel after a partial upload clears what wasn''t sent'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2069
 sprint: s9hexqn
+comments:
+- id: 01M7YXH9MA25Q4AY637M1B5Z4E
+  author: Steve Vine
+  at: 2026-11-21T11:23:16.490596Z
+  text: |-
+    Done and merged to main (PR #2057). This changes the screen only.
+
+    What changes:
+    - Link a control to a schedule entry, then go straight to Mark done ▸ Add evidence ▸ Link existing: it now opens filtered "On RIM.9" without a reload. Linking or unlinking an entry's control used to refresh only its Controls list, not the entry itself. If the controls arrive after the window has opened, the filter takes them up, unless you've already changed it.
+    - After a partial upload, Cancel still asks first. Once you confirm, the refused files are gone, and leaving the page brings no "leave this page?" prompt.
+
+    Checked: new tests for the entry refreshing after a control change, controls arriving after the window opened, a changed filter left alone, and Cancel after a partial upload with no leave-page prompt. Two of them fail without the fix.
+
+    Worth re-checking: I couldn't find the exact screen where the recheck saw the leave-page prompt after Cancel. So the fix makes the window empty itself on a confirmed Cancel, whatever screen it's on. I'll check it in the next test pass.
 assignee: steve
 label:
 - bug
 priority: low
-task_status: active
+task_status: review
 ---
 Found in Claude's pre-UAT recheck (staging d4a5f0b5a, 2026-11-21).
 

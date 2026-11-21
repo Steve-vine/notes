@@ -1,17 +1,37 @@
 ---
 id: 01M7YV3X84S3R8268MCWF0RWPZ
 created: 2026-11-21T10:41:00.676576Z
-updated: 2026-11-21T10:46:52.404336Z
+updated: 2026-11-21T11:23:20.801418Z
 type: task
 title: 'Add evidence window ▸ Add new evidence: adding files and links, and editing their details, sit in two separate boxes, as the access request window lays out its sections'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2064
 sprint: s9hexqn
+comments:
+- id: 01M7YXH2K2GMF6XJAEKZ75MHRR
+  author: Steve Vine
+  at: 2026-11-21T11:23:09.282833Z
+  text: |-
+    Done and merged to main (PR #2052). This changes the screen only.
+
+    What changes:
+    - The Add new evidence tab is now two boxes with numbered headings, laid out like the access request window's sections (it uses the same building blocks):
+      1. Add files and links: the drop box and the Web address box.
+      2. Check each one's details: the list, the preview and the selected item's properties.
+    - On Audit ▸ Evidence, the Supports controls sit in box 1, and so does a testing entry's "Is this a pen test report?" tick.
+    - Before anything is added, box 2 says "Files and links you add appear here", so nothing jumps when the first file goes in.
+    - Adding, editing, clicking through and Upload work as before.
+
+    Checked in headless Chromium at desktop and phone width, light and dark. At desktop width the preview still fits in box 2 with all three columns on one row. At phone width the boxes stack, with no sideways scrolling. With files listed, the area under the tabs now scrolls by about 90px on a 900px-tall screen, because the box headings take a little room.
+
+    Calls for you to overturn:
+    - The task mentioned a shaded background, but the access request window itself has none: its boxes are bordered on the window's own colour. I matched the real window.
+    - Supports and the pen-test tick are in box 1.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve while testing sprint 120 (2026-11-21).
 
