@@ -1,17 +1,38 @@
 ---
 id: 01M7ZHND415CGTR0ZYM0DFXE4X
 created: 2026-11-21T17:15:02.657126Z
-updated: 2026-11-21T17:15:05.296086Z
+updated: 2026-11-21T17:46:46.654185Z
 type: task
 title: Evidence on a plan entry goes out of date by its evidence type, even once the entry is done
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2075
 sprint: s9hexqn
+comments:
+- id: 01M7ZKFB41XTEDKTMCV2YQZQQ6
+  author: Steve Vine
+  at: 2026-11-21T17:46:41.153636Z
+  text: |-
+    Done and merged to main (PR #2067). No migration, no API change.
+
+    What changes:
+    - A file or web address on a plan entry now goes out of date by its evidence type, just like evidence added straight on a control, whether the entry is open, Done or Cancelled. Its valid-until is the date someone set, or else the type's "Valid for" counted from the end of the period it covers. If it has no period, that's the end of the entry's due window.
+    - It shows Due soon, then Out of date, everywhere it appears: the control's Evidence tab and Assessment screen, Audit ▸ Evidence and its Out of date list, the piece's own page, packs and Polaris's answers. A piece still in date shows its valid-until date instead of "doesn't go out of date".
+    - The plan entry still reads Done, and a finished entry keeps the evidence it was finished with.
+    - Incident evidence, data subject request evidence and an approved risk assessment's PDF still never go out of date.
+    - Out of date still only warns. It never changes a control's status, maturity or gaps.
+
+    ADR 0122 §8 has an amendment appended. Polaris's out-of-date tool description is updated. Tests cover Done, Cancelled and open entries (a dated file, an undated file and a web address in each), plus incidents and data subject requests still never going out of date.
+
+    Calls for you to overturn:
+    - A plan piece going out of date doesn't raise a to-do of its own. The plan already reminds the owner when the next round is due, and that round's evidence brings the control back in date.
+    - A plan piece with no period counts from the end of the entry's due window, not from the day it was added. This only affects older pieces: Add evidence already fills the period in.
+
+    Possible follow-up: a plan piece's valid-until can only be set when it's added. As before, there's no way to push it out later in Audit ▸ Evidence or on the plan screen.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Steve's decision (21 Nov), option 2 of the valid-until mismatch found in sprint 120's pre-UAT.
 
