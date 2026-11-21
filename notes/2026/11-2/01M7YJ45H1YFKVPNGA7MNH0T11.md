@@ -1,7 +1,7 @@
 ---
 id: 01M7YJ45H1YFKVPNGA7MNH0T11
 created: 2026-11-21T08:03:51.969074Z
-updated: 2026-11-21T08:35:03.549478Z
+updated: 2026-11-21T09:01:54.885736Z
 type: task
 title: 'Browser smoke: the control evidence journey adds its web address through the Add evidence window'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,13 @@ comments:
     - Run 2: CollectionCard's field list and the DDQ library list each failed once.
     - Run 3: green.
     These are timing flakes under load, not caused by this change.
+- id: 01M7YNEET5K3M7HAZ0AEFX2BH5
+  author: Steve Vine
+  at: 2026-11-21T09:01:54.885504Z
+  text: |-
+    Passed (pre-UAT, staging 7e04d3f5e). The Browser smoke is green on staging: run 44883191868 ("Browser smoke", 21 Nov 2026 08:05 UTC, test code at 75b1953d1), completed successfully with 37 passed. That includes journey 8, which now adds its web address through the Add evidence window.
+
+    Separately, in this pre-UAT pass I added web addresses through the window by hand (Add new evidence ▸ Web address ▸ Add, then title, evidence type and classification, then Upload 1). They arrive Unchecked, as journey 8 expects.
 assignee: steve
 label:
 - bug
