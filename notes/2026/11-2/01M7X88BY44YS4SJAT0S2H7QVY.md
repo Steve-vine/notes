@@ -1,7 +1,7 @@
 ---
 id: 01M7X88BY44YS4SJAT0S2H7QVY
 created: 2026-11-20T19:52:09.412229Z
-updated: 2026-11-21T06:56:25.037923Z
+updated: 2026-11-21T07:41:04.421138Z
 type: task
 title: Polaris links existing evidence by its EVD ID anywhere evidence is taken, including marking a schedule entry done
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,26 @@ number: 2046
 sprint: s9hexqn
 blocked_by:
 - 01M7X8812CSRMA4JKM1EVAGWNC
+comments:
+- id: 01M7YGTE156T3TT9YGMY4ZKN9T
+  author: Steve Vine
+  at: 2026-11-21T07:41:04.420942Z
+  text: |-
+    Done and merged to main (PR #2044). No migration.
+
+    What Polaris can do now:
+    - Find evidence by its EVD ID, by words from it, or by what's on a control ("what evidence is on RIM.9?"). Each answer gives the EVD ID, type, period, valid until, status, controls and a link. Opening a piece also lists every record it's used in.
+    - Link evidence that's already in the register to a control, a schedule entry, an incident, a risk, a vulnerability, an audit request or a finding's closing evidence, with the same rights as on screen. For several pieces at once it lists them and asks first. A piece that's already there is left alone; one the record can't take is named with the reason.
+    - "Mark SAP-14 done with EVD-12" works. The piece is linked to the entry, and so to its controls, and then the entry is marked done. The old "Upload the evidence on screen first" refusal now offers an EVD ID, Add evidence on the entry's page (with its link), or the reason there's none.
+    - Take a piece off one record and say it stays in the register and everywhere else it's used. Archiving still takes it out of use everywhere.
+    - Asked to upload, it says it can't in chat, points to Add evidence on the record's page and gives the link.
+
+    How it fits the Copilot limit: two new general tools (link and unlink), not a pair per area. With find and read, they're offered in the Audit, plan, incidents, posture and vulnerabilities areas. Every area stays under the 128-tool limit; the largest, access, is unchanged at 105. That's recorded as an amendment to ADR 0144.
+
+    Calls for you to overturn:
+    - Taking a piece off a record doesn't ask first, because it can be linked again. Linking several asks first.
+    - "Mark done with EVD-…" is all or nothing. If any piece is refused, the entry isn't marked done, and the refusal names the piece.
+    - The older control-only link tools stay, so nothing already set up breaks.
 assignee: steve
 label:
 - feature
