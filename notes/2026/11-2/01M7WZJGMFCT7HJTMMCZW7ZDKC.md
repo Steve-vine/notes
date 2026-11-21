@@ -1,7 +1,7 @@
 ---
 id: 01M7WZJGMFCT7HJTMMCZW7ZDKC
 created: 2026-11-20T17:20:24.719888Z
-updated: 2026-11-20T19:25:07.860658Z
+updated: 2026-11-21T08:10:38.006754Z
 type: task
 title: A document's own flowchart picture takes the new house style when the document's type changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT of COM-2024 (staging b65d7ed8, tester B).
 

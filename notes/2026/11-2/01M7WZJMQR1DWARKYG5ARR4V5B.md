@@ -1,7 +1,7 @@
 ---
 id: 01M7WZJMQR1DWARKYG5ARR4V5B
 created: 2026-11-20T17:20:28.920671Z
-updated: 2026-11-20T19:18:01.211541Z
+updated: 2026-11-21T08:10:39.200227Z
 type: task
 title: A flowchart's Zoom, Full screen and Download buttons can be seen and clicked on the Edit tab
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT round 4 (staging b65d7ed8, tester B).
 
