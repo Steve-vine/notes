@@ -1,7 +1,7 @@
 ---
 id: 01M7YNH1KWBFACRKREDH27SQ53
 created: 2026-11-21T09:03:19.676202Z
-updated: 2026-11-21T09:43:37.709782Z
+updated: 2026-11-21T10:56:25.412673Z
 type: task
 title: Evidence that can't be deleted for good says why, and a control's History shows evidence taken off it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,19 @@ comments:
     Calls for you to overturn:
     - The control and risk History say "Taken off: X" rather than "Unlinked X", to match the button. The activity log's wording is unchanged.
     - Evidence lines on a risk's History are small and new; I read "the same holds for the other records that have a History" as covering them.
+- id: 01M7YW04A4JBS0C2BP3SQ15DWV
+  author: Steve Vine
+  at: 2026-11-21T10:56:25.412463Z
+  text: |-
+    Passed (pre-UAT recheck, staging d4a5f0b5a, 21 Nov, E2E Test Company, as E2E Admin A)
+
+    1. Archived EVD-70's page: where "Delete permanently…" would be, it says "Can't be deleted for good while a finished record relies on it: SAP-85 E2E 20261121 Assess and renew cyber insurance", and SAP-85 is a link to the schedule entry. EVD-69 (also on finished SAP-85) says the same.
+    2. RIM.9: linked EVD-66 (register Word file) through the Assessment screen's Add evidence ▸ Link existing, then took it off from EVD-66's Used in ▸ Take off RIM.9. The confirmation says RIM.9's history records it. RIM.9 ▸ History (count went from 14 to 16) now shows both lines at the top: "Linked from elsewhere: E2E 20261121 register Word file.docx · E2E Admin A · 21 Nov 2026" and "Taken off: E2E 20261121 register Word file.docx · E2E Admin A · 21 Nov 2026". The earlier linked/taken-off pair from the first pass is still there too, so a take-off no longer removes the linked line.
+    3. RSK-125's History shows evidence lines between its saves: "Added link E2E 20261121 risk note · E2E Admin A" and "Linked from elsewhere: E2E 20261121 insurer portal · E2E Admin A".
+
+    Small note: History lines show the date only (no time), as the rest of History does.
+
+    Screenshots: ~/compass-uat/s9hexqn/COM-2054/ (evd-70-cant-delete-reason.png, rim9-history-link-takeoff.png, rsk125-history.png)
 assignee: steve
 label:
 - bug

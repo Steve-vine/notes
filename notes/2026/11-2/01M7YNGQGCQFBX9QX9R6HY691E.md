@@ -1,7 +1,7 @@
 ---
 id: 01M7YNGQGCQFBX9QX9R6HY691E
 created: 2026-11-21T09:03:09.324389Z
-updated: 2026-11-21T10:00:48.995974Z
+updated: 2026-11-21T10:56:16.955852Z
 type: task
 title: 'A finding''s closing evidence can be added inside Compass: Add evidence shows once the corrective action plan is accepted'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,21 @@ comments:
     - The User Portal's corrective action page is unchanged.
 
     Call for you to overturn: Compass itself still accepts closing evidence at other stages (open, plan submitted, closure submitted), which is how the portal and Polaris work today. Only the screen holds to "plan accepted, not yet submitted for closure". Tightening Compass's own rule too would change what the portal allows, so I didn't.
+- id: 01M7YVZW1V7JGEYK8W21F7NFFF
+  author: Steve Vine
+  at: 2026-11-21T10:56:16.955668Z
+  text: |-
+    Passed (pre-UAT recheck, staging d4a5f0b5a, 21 Nov, E2E Test Company, as E2E Admin A)
+
+    Steps and what I saw:
+    1. Audits ▸ AUD-1 ▸ Findings ▸ AUD-1-F2 (status Plan accepted). Closing evidence now has Add evidence on its heading line, lists EVD-62 and EVD-73 with Take off, and has Submit for closure underneath.
+    2. Add evidence opens "Add evidence to AUD-1-F2". Link existing evidence opens filtered "On NES.1, NES.3" (the finding's controls; the chip clears the filter), 5 pieces. EVD-73, already on the finding, is ticked and greyed with "Already on AUD-1-F2".
+    3. Ticked Wireless Communication Policy and pressed Link 1. It appeared straight away under Closing evidence ("Policy or procedure · provided by E2E Admin A, 21 Nov 2026 · In the register") with Take off.
+    I didn't submit for closure, and left the policy linked to the finding.
+
+    Not checked: that someone who can only read the audit sees no buttons.
+
+    Screenshots: ~/compass-uat/s9hexqn/COM-2053/ (finding-closing-evidence-buttons.png, link-existing-filtered.png, closing-evidence-section.png, after-link.png)
 assignee: steve
 label:
 - bug
