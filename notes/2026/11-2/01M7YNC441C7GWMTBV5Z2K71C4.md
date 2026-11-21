@@ -1,7 +1,7 @@
 ---
 id: 01M7YNC441C7GWMTBV5Z2K71C4
 created: 2026-11-21T09:00:38.40134Z
-updated: 2026-11-21T10:57:07.459349Z
+updated: 2026-11-21T11:00:06.228535Z
 type: task
 title: Office previews made by a separate, locked-down converter on Debian 13, for .docx, .xlsx and .pptx only, and optional in the Helm deploy
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,6 +52,13 @@ comments:
     Small thing seen: after the partial upload, pressing Cancel left the window's unsent files behind. Leaving the page then raised the browser's "leave this page?" prompt.
 
     Screenshots: ~/compass-uat/s9hexqn/COM-2052/ (docx-preview.png, xlsx-preview.png, pptx-preview.png, pptx-second-ready.png, upload-refusals-doc-odt-renamed.png)
+- id: 01M7YW6VYM6QP425QMNMP8KBBS
+  author: Steve Vine
+  at: 2026-11-21T11:00:06.228125Z
+  text: |-
+    Correction to my "Done" comment above. I said older .doc, .xls and .ppt files and OpenDocument files "still upload". They don't: Compass's evidence upload refuses them ("Compass doesn't take this kind of file…"), and has done since well before this sprint. So the "No preview for this file" message for those formats only applies to any such files already held from before that upload rule. The pre-UAT recheck found this.
+
+    For you to decide: keep refusing them at upload (my recommendation, and it fits this task's aim of keeping LibreOffice's older readers away), or allow them to be uploaded without a preview.
 assignee: steve
 label:
 - improvement
