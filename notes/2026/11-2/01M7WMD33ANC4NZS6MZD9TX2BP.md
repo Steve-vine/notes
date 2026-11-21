@@ -1,7 +1,7 @@
 ---
 id: 01M7WMD33ANC4NZS6MZD9TX2BP
 created: 2026-11-20T14:05:12.682021Z
-updated: 2026-11-20T16:40:57.499549Z
+updated: 2026-11-21T08:06:41.270324Z
 type: task
 title: Linking a business role to a flowchart shape needs no Add button, like controls and documents
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve (testing round 3): in the flowchart editor, with a shape selected, linking a business role means picking it and then clicking Add. Linking a control or a document doesn't need the extra click. Unless there's a specific reason for the Add button, remove it.
 
