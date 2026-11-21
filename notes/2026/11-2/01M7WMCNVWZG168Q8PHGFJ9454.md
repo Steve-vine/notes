@@ -1,7 +1,7 @@
 ---
 id: 01M7WMCNVWZG168Q8PHGFJ9454
 created: 2026-11-20T14:04:59.132767Z
-updated: 2026-11-20T19:25:22.07069Z
+updated: 2026-11-21T08:04:11.236199Z
 type: task
 title: On the Edit tab a flowchart scrolls under the section's toolbar, not over it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -49,7 +49,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Steve (testing round 3): on the Content Edit tab, each section's toolbar stays fixed at the top so it's always visible while scrolling. When the page scrolls down, flowcharts pass over the top of the toolbar. Nothing else does this, only flowcharts.
 
