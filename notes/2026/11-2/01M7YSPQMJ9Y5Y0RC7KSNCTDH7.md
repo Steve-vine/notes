@@ -1,17 +1,37 @@
 ---
 id: 01M7YSPQMJ9Y5Y0RC7KSNCTDH7
 created: 2026-11-21T10:16:20.370685Z
-updated: 2026-11-21T10:46:38.836139Z
+updated: 2026-11-21T12:43:21.67959Z
 type: task
 title: 'Assessment screen Overview: sections divided by lines and laid out as on the Control screen; "Security Assurance Plan" shown once; Ask Polaris to collect moves here'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2060
 sprint: s9hexqn
+comments:
+- id: 01M7Z23VZ07EX7GRCXS03MW5XX
+  author: Steve Vine
+  at: 2026-11-21T12:43:19.392416Z
+  text: |-
+    Done — merged to main as PR #2061 (not yet on staging; goes out with the round-5 deploy).
+
+    What changes for people
+    - On the Assessment screen's Overview, Evidence, Gaps, Risks, Decisions and Framework mappings each sit open under a heading with a count, a line between each. None of them folds.
+    - Evidence is the Control screen's Evidence tab: the same four headings, rows, pills and dates. Manual Collection is the same evidence table, and it scrolls sideways in a narrow column or on a phone.
+    - "Security Assurance Plan" appears once, on both screens.
+    - Ask Polaris to collect this sits under Automated Collection here; Add decision is on the Decisions card for people who record decisions; each piece's actions sit in a column at the end of the table.
+    - Gaps and Risks use the Control screen's cards (no buttons); Framework mappings uses the Control screen's list grouped by framework. Gaps, Risks and Decisions now show their count beside the title on both screens.
+    - Archive, new version and edit details refresh the evidence table at once.
+
+    Calls Steve might overturn
+    - The four Evidence sub-headings (Security Assurance Plan, Managed Content, Automated, Manual) still fold, because they are the Control screen's own sections.
+    - Someone who records assessments but can't see the Evidence register (the starter Assessor role) sees the assessment's own pieces with their actions instead of the register table — otherwise they'd see nothing.
+
+    Checked: Vitest for the shared Evidence tab, the assessor's fallback, Add decision for admin vs viewer, no folding, a line above each section; headless Chromium at 1440 and 390 wide (nothing overflows).
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve while testing sprint 120 (2026-11-21). Part of one change, split across three tasks:
 - **the Control screen is for viewing a control;**

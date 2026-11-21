@@ -1,17 +1,33 @@
 ---
 id: 01M7YPERP6JYM2J3EV6YRXN6SD
 created: 2026-11-21T09:19:33.574401Z
-updated: 2026-11-21T10:46:35.703158Z
+updated: 2026-11-21T12:43:02.517695Z
 type: task
 title: 'Assessment screen: the assessment box keeps only Add evidence; the evidence is listed once, in the page''s Evidence section'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2056
 sprint: s9hexqn
+comments:
+- id: 01M7Z2385VKX9AVGW8849WV7YF
+  author: Steve Vine
+  at: 2026-11-21T12:42:59.131027Z
+  text: |-
+    Done — merged to main as PR #2054 (not yet on staging; goes out with the round-5 deploy).
+
+    What changes for people
+    - On the Assessment screen the assessment box keeps only Add evidence; it no longer lists evidence.
+    - The page's Evidence section is the one place evidence is listed, and a piece added with the box's button appears there straight away.
+    - Each piece under Manual Collection has its own actions there for people who record assessments: edit details, new version, archive, take off this control, and unlink a piece linked from elsewhere. Archived pieces fold away under "N archived". Viewers see no buttons.
+    - The "Not assessed yet" hint now says the evidence is listed in the Evidence section once the assessment is saved.
+    - An initiative's Assess drawer still lists evidence in its box (it has no Evidence section to point to).
+
+    Calls: none beyond the task's.
+    Checked: Vitest (box lists nothing but keeps Add evidence; each piece listed once with its actions; a viewer gets no buttons); Assessment panel and queue suites, type-check, lint and format all pass.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve while testing sprint 120 (2026-11-21).
 
