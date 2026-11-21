@@ -1,17 +1,22 @@
 ---
 id: 01M7ZGSKAWZ4TVWE0JR3STKJKG
 created: 2026-11-21T16:59:51.516875Z
-updated: 2026-11-21T16:59:54.175298Z
+updated: 2026-11-21T17:02:03.946946Z
 type: task
 title: Older Office and OpenDocument files can be added (no preview), as COM-2052 says
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2074
 sprint: s9hexqn
+comments:
+- id: 01M7ZGXKVKXRGK77T1XFDWGMGP
+  author: Steve Vine
+  at: 2026-11-21T17:02:03.122957Z
+  text: 'Cancelled on Steve''s instruction (21 Nov): the older Office and OpenDocument formats stay blocked at upload. Nothing was built. No code was changed, no branch was pushed and no PR was opened.'
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: cancelled
 ---
 Found by the COM-2052 pre-UAT recheck (21 Nov). COM-2052 says older .doc, .xls and .ppt files and OpenDocument files (.odt, .ods, .odp) "still upload, download and go in packs", with "No preview for this file". But adding one is refused: "Compass doesn't take this kind of file…". That rule is older than this sprint. Steve confirmed that COM-2052 stands (21 Nov), so these files are now accepted.
 
