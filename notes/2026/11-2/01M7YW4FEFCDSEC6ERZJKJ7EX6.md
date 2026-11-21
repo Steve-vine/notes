@@ -1,7 +1,7 @@
 ---
 id: 01M7YW4FEFCDSEC6ERZJKJ7EX6
 created: 2026-11-21T10:58:47.8872Z
-updated: 2026-11-21T11:23:22.327229Z
+updated: 2026-11-21T13:33:49.109589Z
 type: task
 title: 'Add evidence window: the Link tab filters to controls just linked, and Cancel after a partial upload clears what wasn''t sent'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,20 @@ comments:
     Checked: new tests for the entry refreshing after a control change, controls arriving after the window opened, a changed filter left alone, and Cancel after a partial upload with no leave-page prompt. Two of them fail without the fix.
 
     Worth re-checking: I couldn't find the exact screen where the recheck saw the leave-page prompt after Cancel. So the fix makes the window empty itself on a confirmed Cancel, whatever screen it's on. I'll check it in the next test pass.
+- id: 01M7Z50ANNG8KY0KB590B1M5AW
+  author: Steve Vine
+  at: 2026-11-21T13:33:49.109329Z
+  text: |-
+    Pre-UAT (staging 12bd442a5, E2E Test Company): Passed.
+    Steps:
+    - Filter: on SAP-89, Link controls ▸ RIM.9, then straight away Mark done ▸ Add evidence ▸ Link existing.
+    - Cancel on SAP-89 and on RIM.9's Assessment screen: added one good file and two bad ones, which gave a partial upload. Then Cancel ▸ Discard changes ▸ left the page.
+    Seen:
+    - The Link tab opened filtered "On INS.10, RIM.9" with no reload.
+    - Cancel asks "Unsaved changes… Discard changes" on both screens.
+    - After a confirmed Cancel, leaving the page brings no browser prompt, while leaving with unsent files still held does prompt.
+    - The file that did upload stays: EVD-91 on RIM.9, and e2e-r5-extra-1.txt on SAP-89.
+    Screenshots: ~/compass-uat/s9hexqn/COM-2069/
 assignee: steve
 label:
 - bug

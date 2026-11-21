@@ -1,7 +1,7 @@
 ---
 id: 01M7YW3MMDAFAKAV3852EVB1GN
 created: 2026-11-21T10:58:20.429557Z
-updated: 2026-11-21T11:22:57.829141Z
+updated: 2026-11-21T13:33:51.990137Z
 type: task
 title: Flowchart palettes tick the colour in use when Text colour is on Automatic and a lane's colours are on Default
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,18 @@ comments:
     - On the dark canvas, the tick follows the colour the document is published and printed with (e.g. Light shade), not the darker shade drawn for display.
     - A shaded lane band shows the Default button as selected rather than ticking a near-match.
     - The selected-button rule applies to every palette, not just Text colour and lanes.
+- id: 01M7Z50DFPY559V89CKS4KQ8HB
+  author: Steve Vine
+  at: 2026-11-21T13:33:51.989648Z
+  text: |-
+    Pre-UAT (staging 12bd442a5, E2E Test Company): Passed.
+    Steps: Opened the draft "E2E pre-UAT COM-2016 new standalone" ▸ Edit flowchart. Selected a step on Automatic, added two lanes and opened each lane's colours, then switched to the dark canvas. Left without keeping, so the draft is unchanged.
+    Seen:
+    - The step's Text colour ticks "Text" (hover "Text (Automatic)"). Fill ticks Light shade and Border ticks Primary.
+    - Lane 1: Header ticks Light shade (hover "Light shade (Default)"), Background ticks White, Name colour ticks Text.
+    - Lane 2: the Background "Default" button itself shows as chosen, tinted with a tick.
+    - On the dark canvas the step still ticks the same colours.
+    Screenshots: ~/compass-uat/s9hexqn/COM-2067/
 assignee: steve
 label:
 - bug

@@ -1,7 +1,7 @@
 ---
 id: 01M7YV4AK3Y2G3SAPN9S0GZA0K
 created: 2026-11-21T10:41:14.339262Z
-updated: 2026-11-21T11:23:21.727043Z
+updated: 2026-11-21T13:33:45.709976Z
 type: task
 title: 'Add evidence window ▸ Link existing evidence: the preview stays in view while the register scrolls (today it scrolls off the top)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,17 @@ comments:
     Calls for you to overturn:
     - The search and filters stay fixed (the task's own call).
     - Rows can't be highlighted with the arrow keys today, only by clicking, so "keyboard movement" here means tabbing through the ticks. I didn't add arrow keys, as that would be new behaviour.
+- id: 01M7Z507BDE4WHQ107N39PX58S
+  author: Steve Vine
+  at: 2026-11-21T13:33:45.709703Z
+  text: |-
+    Pre-UAT (staging 12bd442a5, E2E Test Company): Passed.
+    Steps: Opened Link existing on RIM.9 (68 pieces). Highlighted EVD-82, scrolled the register to the bottom, then clicked the last row (EVD-34). Also opened the tab at 390 wide.
+    Seen:
+    - The search box and the preview header stayed put the whole time (y=135 and y≈260).
+    - Clicking EVD-34 updated the preview in place, and Previous/Next stays under the rows.
+    - At 390 the columns stack, with no sideways scroll.
+    Screenshots: ~/compass-uat/s9hexqn/COM-2065/
 assignee: steve
 label:
 - bug

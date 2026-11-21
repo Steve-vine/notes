@@ -1,7 +1,7 @@
 ---
 id: 01M7YW4YNNJQSF34NE0MJ3TY6X
 created: 2026-11-21T10:59:03.477805Z
-updated: 2026-11-21T11:47:16.643093Z
+updated: 2026-11-21T13:33:40.710908Z
 type: task
 title: 'The Assessment screen works at phone width: the list, then the control and its assessment box, one at a time'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,20 @@ comments:
     Calls for you to overturn:
     - On a phone the box sits above the guidance, not underneath as the task said. The screen already puts the box first when it gets narrow, because the guidance and evidence can be very long. Swapping them is a one-line change.
     - The phone layout starts at 768px, the same point as the Add evidence window and the flowchart editor.
+- id: 01M7Z502F6T6TXFYV8M7GHNMFK
+  author: Steve Vine
+  at: 2026-11-21T13:33:40.710637Z
+  text: |-
+    Pre-UAT (staging 12bd442a5, E2E Test Company): Passed (one clipped label, logged as a fix-forward task).
+    Steps: At 390×844: Assessments list ▸ filter RIM.9 ▸ open it ▸ add a note ▸ Save. Add evidence ▸ web address (EVD-89) ▸ Upload. Back to the list. Opened INS.1, then Next control and the Down arrow.
+    Seen:
+    - Nothing scrolls sideways at any step, and the list drops its Maturity column.
+    - The control opens on its own, box first, with "Back to the list", Previous/Next and the Playbook icon in its bar.
+    - Save showed "RIM.9 saved · v2".
+    - The Add evidence window opens full width with its two boxes stacked, and EVD-89 appeared in Manual Collection at once.
+    - Back keeps the filter. Next and Down went INS.1 → INS.2 → INS.3.
+    - Defect (new task): the box's "Request exception" label is clipped to "Request exceptio".
+    Screenshots: ~/compass-uat/s9hexqn/COM-2070/
 assignee: steve
 label:
 - bug

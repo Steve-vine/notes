@@ -1,7 +1,7 @@
 ---
 id: 01M7YV3X84S3R8268MCWF0RWPZ
 created: 2026-11-21T10:41:00.676576Z
-updated: 2026-11-21T11:23:20.801418Z
+updated: 2026-11-21T13:33:43.208059Z
 type: task
 title: 'Add evidence window ▸ Add new evidence: adding files and links, and editing their details, sit in two separate boxes, as the access request window lays out its sections'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,17 @@ comments:
     Calls for you to overturn:
     - The task mentioned a shaded background, but the access request window itself has none: its boxes are bordered on the window's own colour. I matched the real window.
     - Supports and the pen-test tick are in box 1.
+- id: 01M7Z504X8K3EBFPSXBTQGFZSA
+  author: Steve Vine
+  at: 2026-11-21T13:33:43.207824Z
+  text: |-
+    Pre-UAT (staging 12bd442a5, E2E Test Company): Passed.
+    Steps: On RIM.9, opened Add evidence and looked at the window empty, then with two files added and filled in, then uploaded them. Repeated at 390 wide with a web address.
+    Seen:
+    - Box "1 Add files and links" holds the drop box and web address. Box "2 Check each one's details" says "Files and links you add appear here" until something is added, then shows the list, the preview and the properties side by side.
+    - Upload worked (EVD-87, EVD-88).
+    - At 390 the boxes stack, with no sideways scroll.
+    Screenshots: ~/compass-uat/s9hexqn/COM-2064/
 assignee: steve
 label:
 - improvement
