@@ -1,12 +1,30 @@
 ---
 id: 01M7YCMZ9BFCQ6JVD4H3CYPJQ1
 created: 2026-11-21T06:28:11.179934Z
-updated: 2026-11-21T06:28:15.638522Z
+updated: 2026-11-21T07:12:53.995377Z
 type: task
 title: 'User Portal: audit request owners and corrective-action owners add evidence through the Add evidence window, with a classification'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2049
 sprint: s9hexqn
+comments:
+- id: 01M7YF6V7BKQMN180WW9WTRAMB
+  author: Steve Vine
+  at: 2026-11-21T07:12:53.995205Z
+  text: |-
+    Done and merged to main (PR #2043). No migration.
+
+    What changes:
+    - On the User Portal, an audit request's owner and a corrective action's owner add evidence through the Add evidence window, Add new tab only. Upload stays blocked until each piece has an evidence type and a classification. Dates start on the audit's period: its observation period, otherwise its planned dates.
+    - Their old portal upload is gone, and so is what sat behind it.
+    - "Pick from your evidence" stays as its own button beside Add evidence. It has no upload of its own, only their evidence and a search of it.
+    - Who may add is unchanged: the request's owner, and for a corrective action, the finding's owner or the plan's owner.
+    - Fixed on the way: a corrective action's owner without View audit was refused by the window ("not found"), including on the finding panel inside Compass.
+    - A test now holds the portal to one file upload outside the window, the Report an incident form, so nothing else on the portal can add evidence without a classification.
+
+    Calls for you to overturn:
+    - "Pick from your evidence" stays, because owners can't see the register and it's their only way to reuse something they've already added.
+    - "Add more information" on your own incident report still takes files that arrive Not classified. I treated it as part of the Report an incident exception.
 assignee: steve
 label:
 - bug
