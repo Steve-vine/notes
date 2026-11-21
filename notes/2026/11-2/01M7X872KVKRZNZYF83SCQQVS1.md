@@ -1,7 +1,7 @@
 ---
 id: 01M7X872KVKRZNZYF83SCQQVS1
 created: 2026-11-20T19:51:27.099764Z
-updated: 2026-11-21T03:17:48.403611Z
+updated: 2026-11-21T08:59:59.144781Z
 type: task
 title: 'The Add evidence window: Link existing evidence tab (the register, sortable and filtered, pick several)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,24 @@ comments:
     - Kinds a record can't take yet aren't listed. A schedule entry isn't offered web addresses until COM-2043.
 
     One thing to tidy, in COM-2043: opened from a control's own Evidence tab, the starting "On RIM.9" view shows only what's already there, so it should start on the whole register instead.
+- id: 01M7YNAXS8DQ2G086EGB87FRYV
+  author: Steve Vine
+  at: 2026-11-21T08:59:59.144498Z
+  text: |-
+    Passed (pre-UAT, staging 7e04d3f5e, E2E Admin A, E2E Test Company).
+
+    Steps and what I saw:
+    - From RIM.9's assessment ▸ Add evidence ▸ Link existing evidence: the register showed 53 pieces. The columns are EVD ID, Evidence, Evidence type, Classification, Controls, Covers, Valid until, Added (date and who) and Where it came from, and every one sorts. EVD ID ascending gave EVD-1, 2, 3, 4, 5, 7, 10, 11; the archived EVD-6, 8 and 9 aren't offered. Classification ascending gave Public, Internal, Confidential, then Not classified; descending gave Confidential, Internal, Public, then Not classified.
+    - The filters are Evidence type, Classification, Status, Where it came from, Framework, Control and Added from/to. Classification includes Not classified, which showed 34 pieces (EVD-1, 16, 17…).
+    - Search: "EVD-66" found only EVD-66. "damaged" found EVD-67 by its name.
+    - Picking: I ticked EVD-66 ("1 picked"), searched again and ticked EVD-67, cleared the search, then set and cleared a classification filter. The footer still said "2 picked · Link 2". Link 2 closed the window, and the assessment panel then listed EVD-67 and EVD-66.
+    - Already here: pieces already on RIM.9 show ticked and greyed, with "Already on RIM.9", and can't be picked.
+    - Opened from a record with controls (Mark done on SAP-85, linked to RIM.9) it starts on a chip "On RIM.9" with 9 pieces. Clicking the chip ("On RIM.9 — clear this filter") showed all 53, and my pick was still kept ("1 picked · Link 1"). From an audit request it opened on "On END.7 and 2 more". From a control's own evidence and from an incident (no controls) it opened on the whole register.
+    - Clicking a row (not its tick) previews it beside the register.
+
+    For Steve to look at: Library documents are offered on the Link tab with no EVD ID, at least from an audit request. A Library policy's Controls cell lists every control one per line (END.1 to END.23), which makes that one row as tall as the window. Screenshot: COM-2044/request-link-tab.png
+
+    Screenshots: ~/compass-uat/s9hexqn/COM-2042/
 assignee: steve
 label:
 - feature

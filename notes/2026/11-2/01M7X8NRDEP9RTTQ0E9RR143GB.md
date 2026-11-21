@@ -1,7 +1,7 @@
 ---
 id: 01M7X8NRDEP9RTTQ0E9RR143GB
 created: 2026-11-20T19:59:28.174168Z
-updated: 2026-11-21T04:13:43.268959Z
+updated: 2026-11-21T09:00:09.704453Z
 type: task
 title: 'See the evidence itself: a preview beside its properties wherever a piece opens, and in the Add evidence window'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,31 @@ comments:
     3. A Library document's preview space says "A document in the library." with "Open in the library".
 
     Known limit: PDFs relying on fonts they don't embed fall back to system fonts, and some Chinese, Japanese or Korean text, or JPEG 2000 images, may not draw. Typical evidence PDFs show fine.
+- id: 01M7YNB83856X4882Q908X4QQ4
+  author: Steve Vine
+  at: 2026-11-21T09:00:09.704228Z
+  text: |-
+    Passed (pre-UAT, staging 7e04d3f5e, E2E Admin A, E2E Test Company), with two parts I couldn't check.
+
+    Opening a piece (from the register, or /audit/evidence/EVD-n):
+    - PDF: EVD-68 (2 pages) shows "Page 1 of 2", zoom − / + and "Fit to width". On EVD-61, zoom in went 165% → 206% and Fit to width went back to 165%. The details, "Used in" and Classification sit on the right. Download stays.
+    - Full screen shows the preview alone, with the name, Download and a close. Esc came back to the page.
+    - Image (EVD-62, PNG): shown in an image view at 100% with zoom and Fit.
+    - Text (EVD-65): shown as text in a fixed-width font. A long line in EVD-70 wraps.
+    - CSV (EVD-63, 1,500 rows): a table with its header row and "Showing 1,000 of 1,500 rows: download for all".
+    - Web address (EVD-64): its title, the address, Open and "Opens in a new tab". Nothing is embedded.
+    - Archived: EVD-9 and EVD-70 preview their text under the "Archived" banner.
+    - At phone width (390 px) the evidence page stacks with the PDF preview full width, and nothing scrolls sideways.
+
+    In the Add evidence window:
+    - Add new: the selected file previews between the list and its details. I checked a PDF ("Page 1 of 1"), a PNG, the CSV (with the 1,000-row note), a dropped .txt and the web address (Open). A Word file shows "Preview after upload".
+    - Link existing: clicking a row previewed EVD-68 beside the register ("EVD-68 · …", Download, Full screen, Page 1 of 2), and its tick was unchanged. In Mark done on SAP-85 the same preview showed the certificate before I linked it.
+
+    Couldn't check:
+    - Collected evidence: E2E Test Company has no Collection integration (none may be added there), so there's no collected capture. Built-in check pieces (EVD-21 to EVD-32) open the check's own page (e.g. CHB-4 "No dormant accounts" with its capture table) rather than the evidence page, so there's no "Used in" or EVD-ID heading for them. Steve: check that this is what you want for a check's line in the register.
+    - Restricted evidence previewing only for people who may see it: there's no restricted piece (such as a signed contract) in E2E Test Company to try.
+
+    Screenshots: ~/compass-uat/s9hexqn/COM-2047/
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M7X86QAR4TB98Y4NTZY0FCFP
 created: 2026-11-20T19:51:15.544996Z
-updated: 2026-11-21T02:37:57.53305Z
+updated: 2026-11-21T08:59:47.929454Z
 type: task
 title: 'The Add evidence window: Add new evidence tab (drop files or a web address, check each one''s details, upload)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,23 @@ comments:
     - The Link existing tab shows greyed out rather than hidden until it's built.
 
     Checked at desktop and phone width: on a phone the window goes full screen with the list and details stacked.
+- id: 01M7YNAJTSQT07P8A8ENNRXY9P
+  author: Steve Vine
+  at: 2026-11-21T08:59:47.929187Z
+  text: |-
+    Passed (pre-UAT, staging 7e04d3f5e, E2E Admin A, E2E Test Company).
+
+    Steps (RIM.9 ▸ Evidence ▸ Manual Collection ▸ Add evidence):
+    - The window is titled "Add evidence to RIM.9" and fills 1392×852 of a 1440×900 screen. It has two tabs, and Add new evidence opens first.
+    - With click to choose I added several files at once: a Word file (.docx I made), a PDF, a PNG, a 1,500-row CSV and a fake PDF (text renamed .pdf). I dropped a .txt into the drop box. I added https://www.example.com/e2e-uat-insurer-portal in the Web address box. All seven were listed on the left with their sizes (the address marked "Web address"), each with a marker until it was complete. I took duplicates off the list with "Take … off the list".
+    - Details on the right: Name (Title for the address, "Shown in place of the address"), Evidence type, Classification, Description, Covers from and to (today), Valid until, and "EVD ID: Given when uploaded". Classification starts on "Choose a level…" and offers only Public, Internal, Sensitive, Confidential and Restricted; there's no Not classified. Valid until filled in once a type was chosen (21/11/2027, "Worked out from its evidence type").
+    - Upload 7 stayed disabled with "7 pieces of evidence still need an evidence type · 7 pieces of evidence still need a classification". It counted down as I filled rows ("6 … still need an evidence type · 7 … still need a classification" after one type), and was enabled once all were done.
+    - Closing the window with rows still listed asked "Unsaved changes … Keep editing / Discard changes".
+    - Upload 7: "6 added. 1 couldn't be added — each one says why." The fake PDF stayed in the list with "e2e-uat-bad.pdf isn't really a PDF — its contents don't match its type, so it can't be added". The record then listed EVD-60 to EVD-65 with their IDs, classifications and "Unchecked". Renamed files kept their extension (e.g. "E2E 20261121 screenshot.png").
+    - Server: an add with no classification (missing or null), sent straight to the server, was refused with 422 "Every piece needs a classification".
+    - At phone width (390 px) the window is full screen and nothing scrolls sideways.
+
+    Screenshots: ~/compass-uat/s9hexqn/COM-2041/
 assignee: steve
 label:
 - feature
