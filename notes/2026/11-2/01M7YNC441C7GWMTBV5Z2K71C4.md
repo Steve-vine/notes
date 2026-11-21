@@ -1,17 +1,46 @@
 ---
 id: 01M7YNC441C7GWMTBV5Z2K71C4
 created: 2026-11-21T09:00:38.40134Z
-updated: 2026-11-21T09:10:33.991471Z
+updated: 2026-11-21T10:05:39.186177Z
 type: task
 title: Office previews made by a separate, locked-down converter on Debian 13, for .docx, .xlsx and .pptx only, and optional in the Helm deploy
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2052
 sprint: s9hexqn
+comments:
+- id: 01M7YS2W7R2ESD2Z9403DVQW0Y
+  author: Steve Vine
+  at: 2026-11-21T10:05:29.720239Z
+  text: |-
+    Done and merged to main (PR #2050). No migration, no API change.
+
+    What changes:
+    - A new .docx, .xlsx or .pptx previews exactly as before. The copy is now made by a separate converter running Debian 13 (trixie) LibreOffice 25.2.3, in its own locked-down pod. The server image no longer carries LibreOffice.
+    - Older .doc, .xls and .ppt files and OpenDocument files (.odt, .ods, .odp) still upload, download and go in packs. Their preview says "No preview for this file", because Compass previews Word, Excel and PowerPoint files saved in the current formats (.docx, .xlsx, .pptx). The backfill skips them.
+    - A .doc renamed to .docx is refused before it reaches the converter, with the same reason. Macro-enabled files are refused too: "It contains macros, which Compass doesn't convert". The converter checks every file again itself and names the Office format to read it as, so LibreOffice's old readers never see one. I checked by hand that a renamed .doc fails to load.
+    - With converter.enabled: false, nothing is deployed and Office files say "Preview not available". Everything else still previews.
+    - If the converter is briefly down or busy, copies stay "Preparing a preview…" and are retried (after 30 s, 1, 2 and 4 minutes, then by the 10-minute sweep). A copy fails only after about half an hour.
+
+    Sizes (compressed): the server image is back to about 288 MB from 437 MB. The converter image is about 216 MB.
+
+    Lockdown: no service-account token, no Compass secrets, non-root, read-only filesystem, all capabilities dropped, CPU and memory limits, one conversion at a time, and a NetworkPolicy allowing traffic only from the worker, with nothing outbound.
+    - Staging (g5, k3s) enforces NetworkPolicy: its built-in policy controller is running.
+    - Production (EKS) isn't confirmed. It depends on the VPC CNI add-on having network policy switched on, which I couldn't see from here.
+
+    ADR 0164 §5 has the amendment appended (separate converter, trixie, current formats only, optional, Microsoft 365 considered and why not). The ADR and briefs now also say archiving keeps the PDF copy, and use "Take off" as the screens do. The chart README and values document the converter. CI has a converter-off render, and a new check converts a real .docx, .xlsx and .pptx through the converter image.
+
+    For you:
+    1. Before the staging deploy: the staging deployer needs permission to manage NetworkPolicies, or the deploy fails. Run: KUBECONFIG=~/.kube/g5.yaml kubectl apply -n compass -f scripts/infra/ci-deployer-rbac.yaml (the only change is adding networkpolicies to its existing Role in the compass namespace).
+    2. Production: run aws eks describe-addon --cluster-name env-production-uk-pri --addon-name vpc-cni --query addon.configurationValues. If it doesn't show "enableNetworkPolicy":"true", switch that on.
+    3. At the first release that includes this, the new ghcr.io/rootcause-it/compass/converter package is created private. Make it public once, as with the other packages. RELEASE.md says so.
+    4. Optional: make the new "converter" check required in branch protection.
+
+    Calls for you to overturn: the converter's packages are refreshed weekly, so trixie security fixes arrive without a code change; the wording of the two new reasons; and the converter's sizes (1 CPU and 1 GiB limits, 64 MiB maximum file, 90 seconds per file).
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 Follows COM-2048. **Do this before sprint 120 is released.** COM-2048 is on main and staging but in no release (latest v0.25.0), so production has never run LibreOffice.
 
