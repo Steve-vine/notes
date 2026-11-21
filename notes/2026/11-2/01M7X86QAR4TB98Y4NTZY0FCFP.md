@@ -1,7 +1,7 @@
 ---
 id: 01M7X86QAR4TB98Y4NTZY0FCFP
 created: 2026-11-20T19:51:15.544996Z
-updated: 2026-11-21T01:21:50.297148Z
+updated: 2026-11-21T02:37:57.53305Z
 type: task
 title: 'The Add evidence window: Add new evidence tab (drop files or a web address, check each one''s details, upload)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,34 @@ number: 2041
 sprint: s9hexqn
 blocked_by:
 - 01M7X85X1XMNTFB7R7X32RT98X
+comments:
+- id: 01M7XZF9VAZEDT37N7JSAC88SB
+  author: Steve Vine
+  at: 2026-11-21T02:37:53.898044Z
+  text: |-
+    Done and merged to main (PR #2036). No migration.
+
+    What changes:
+    - One Add evidence window, nearly full screen, titled "Add evidence to <record>". "Add new evidence" opens first. "Link existing evidence" shows greyed out ("Coming next") until COM-2042.
+    - Drop files, click to choose several, or paste a web address. Each one appears in the list on the left with its size or address, and a cross takes it off. A row still missing its evidence type or classification carries a marker.
+    - The selected row's details are on the right: name or title, evidence type, classification, description, period, valid until, and "EVD ID: Given when uploaded". Classification starts on "Choose a level…", with no Not classified option.
+    - The period comes from the record's own period, otherwise today. Valid until is worked out from the evidence type and follows it until someone sets it by hand; "work it out again" undoes that.
+    - "Upload N" stays disabled and says why ("2 files still need a classification"). A file that fails a check stays in the list with its reason, and the rest go in. When everything's in, the window closes and the record shows the new pieces with their EVD IDs.
+    - Closing the window with files still listed asks first.
+    - Once classified, a piece can't go back to Not classified. Compass refuses it, and the piece's page no longer offers it.
+    - Where it's live now: a control's Evidence tab ▸ Manual Collection ▸ Add evidence. Every other place keeps its own upload until COM-2043 to COM-2045.
+
+    Calls for you to overturn:
+    - Password-protected or damaged PDFs are refused through the new window. Until now only the Trust Centre refused them.
+    - A renamed file keeps its extension, so it still opens once downloaded.
+    - The Link existing tab shows greyed out rather than hidden until it's built.
+
+    Checked at desktop and phone width: on a phone the window goes full screen with the list and details stacked.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Built to the ADR in COM-2038, after COM-2040. Steve's design (2026-11-20). This task builds the window and its first tab. The second tab is COM-2042, and putting the button in each place is COM-2043 to COM-2045.
 
