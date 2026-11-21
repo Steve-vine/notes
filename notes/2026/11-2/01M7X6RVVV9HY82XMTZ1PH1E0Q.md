@@ -1,7 +1,7 @@
 ---
 id: 01M7X6RVVV9HY82XMTZ1PH1E0Q
 created: 2026-11-20T19:26:12.859162Z
-updated: 2026-11-20T22:45:55.066516Z
+updated: 2026-11-21T08:26:02.24532Z
 type: task
 title: Printing a content page from the browser prints the document, not a blank page
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,21 @@ comments:
     The PDFs and screenshots are in ~/compass-uat/s9hexqn/COM-2037/. Tests cover the reader's print scoping and the content page's print mode, plus a check over all stylesheets that no print rule reaches the whole app without being tied to the page it's for.
 
     Calls for you to overturn: a content page prints the whole document, not one screenful (other screens still print one screen, as before), and the top bar is left off on paper.
+- id: 01M7YKCRM54DSSTXB37VB684PB
+  author: Steve Vine
+  at: 2026-11-21T08:26:02.245138Z
+  text: |-
+    Passed (pre-UAT, staging 7e04d3f5e, E2E Admin A, E2E Test Company).
+
+    Steps: opened the AI Risk Assessment Standard and printed it to PDF from the browser (headless Chromium's print-to-PDF, A4) on the Read tab, then on the Edit tab (opened only, nothing saved). Then I printed the same document from the Library reader, and the Risks register as an example of another screen.
+
+    Seen:
+    - Read tab: 5 pages, the whole document from the contents list through to the details panel. The top bar isn't on the paper.
+    - Edit tab: 3 pages. The details form, then the whole body in the editor, down to the last section and "Add a section".
+    - Library reader: 3 pages, the document alone (header, body, document control). Same as before.
+    - Risks register: 1 page, the screen as it prints normally. Not blank.
+
+    PDFs: ~/compass-uat/s9hexqn/COM-2037/uat/ (read-tab.pdf, edit-tab.pdf, library-reader.pdf, risks.pdf).
 assignee: steve
 label:
 - bug
