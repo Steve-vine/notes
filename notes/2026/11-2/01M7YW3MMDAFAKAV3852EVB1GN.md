@@ -1,15 +1,17 @@
 ---
 id: 01M7YW3MMDAFAKAV3852EVB1GN
 created: 2026-11-21T10:58:20.429557Z
-updated: 2026-11-21T10:58:20.429557Z
+updated: 2026-11-21T10:58:26.889581Z
 type: task
 title: Flowchart palettes tick the colour in use when Text colour is on Automatic and a lane's colours are on Default
-priority: medium
-label: bug
-task_status: active
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2067
+sprint: s9hexqn
+assignee: steve
+label:
+- bug
+priority: medium
+task_status: active
 ---
 Found in Claude's pre-UAT recheck (staging d4a5f0b5a, 2026-11-21), on COM-2050.
 
