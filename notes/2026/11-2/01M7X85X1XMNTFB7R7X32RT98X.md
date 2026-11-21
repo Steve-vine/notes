@@ -1,7 +1,7 @@
 ---
 id: 01M7X85X1XMNTFB7R7X32RT98X
 created: 2026-11-20T19:50:48.637702Z
-updated: 2026-11-20T23:43:58.509693Z
+updated: 2026-11-21T01:21:42.090797Z
 type: task
 title: One piece of evidence can be linked to many records; unlinking isn't archiving
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,34 @@ number: 2040
 sprint: s9hexqn
 blocked_by:
 - 01M7X85FCF2REWD1JJSYCYX9BY
+comments:
+- id: 01M7XV3P2NNJY3S1ZZC4CPJVHE
+  author: Steve Vine
+  at: 2026-11-21T01:21:38.901746Z
+  text: |-
+    Done and merged to main (PR #2035, migration 0888).
+
+    What changes:
+    - One file or web address can be linked to any number of records: controls, schedule entries, incidents (the evidence, a timeline entry, a notification), risks, vulnerabilities, audit requests and a finding's closing evidence. It's the same piece everywhere, so its details read the same everywhere.
+    - The evidence's page has a new "Used in" panel. It lists every record the piece is on, with a link to each. "Added here" marks where it was first added and "Finished" marks finished records. Take off removes it from that one record only, and that record's history says who did it.
+    - Archiving a piece shows it archived on every record it's on.
+    - A finished record (a done or cancelled schedule entry, an ended incident, a closed finding, an ended audit) can't have evidence taken off. Once it's reopened with a reason, it's open again. Deleting a piece for good is refused while a finished record relies on it, and the message names the records.
+    - Linking a piece to a control runs that control's workflows. A restricted piece stays hidden wherever it's linked.
+    - Nothing visible changed on day one. A migration test over a populated database shows every record lists the same pieces in the same order before and after.
+    - Left over from COM-2039: the Automatic Collection rows on a control's assessment card now show their EVD ID.
+
+    Calls for you to overturn:
+    1. A piece's status (Compliant / Non-compliant / Unchecked) is one per piece, as it is today under ADR 0155. It isn't one per control, as the task assumed. Linking a piece to another control re-runs that control's workflows, but if the piece already has a status, it doesn't reset to Unchecked. Status per control would change how workflows judge evidence, so it would need its own task.
+    2. A timeline entry's or notification's files can't be taken off, because those records are append-only.
+    3. Linking evidence to a closed incident needs a reason, the same as uploading to one.
+    4. Once a piece is deleted for good, only the record it was first added to lists it as deleted. Its other records stop showing it, and their history shows it being taken off.
+
+    Still to come in later tasks: each area's own Remove button still archives. COM-2043 to COM-2045 switch them to taking off. The Take off button can also show for audit evidence the auditor has already seen; pressing it explains that it must be withdrawn on the audit with a reason. COM-2044 will hide it there.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Built to the ADR in COM-2038, after COM-2039. This is the foundation the Add evidence window (COM-2041, COM-2042) and its rollout stand on. There's no new screen of its own beyond "Used in".
 
