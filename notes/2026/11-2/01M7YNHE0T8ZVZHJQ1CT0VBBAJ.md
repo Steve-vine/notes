@@ -1,12 +1,31 @@
 ---
 id: 01M7YNHE0T8ZVZHJQ1CT0VBBAJ
 created: 2026-11-21T09:03:32.378317Z
-updated: 2026-11-21T09:03:35.383547Z
+updated: 2026-11-21T10:11:22.491267Z
 type: task
 title: 'Evidence rows tidy-up: EVD IDs on timeline and notification files, evidence added before a first assessment shows on the panel, and rows that don''t overlap'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2055
 sprint: s9hexqn
+comments:
+- id: 01M7YSDMQV2AV3Q2H48R3Y2PZE
+  author: Steve Vine
+  at: 2026-11-21T10:11:22.49114Z
+  text: |-
+    Done and merged to main (PR #2049). No migration.
+
+    What changes:
+    - Each file on an incident timeline entry, and each notification's copy, shows its EVD ID before its name, as the incident's Evidence card does.
+    - Evidence added on a control's panel before its first assessment now appears on the assessment panel once the assessment is saved, in the existing order. That includes the Assessments screen, which used to say "No files attached". Nothing is moved: the panel reads it from the register.
+    - On the panel, such a piece can be described or taken off this control. It isn't replaced or archived from there, because it may support other controls; its own page does those.
+    - Long names on the panel's evidence rows wrap without running under the size or the icons. The same applies to "Linked from elsewhere" rows. Checked at the panel's 360px width and at 375px phone width. An untitled web address stays on one line, with the full address on hover.
+    - In the Add evidence window's Link existing tab, the Controls cell shows the first three controls and "+N more", with the full list on hover.
+
+    Calls for you to overturn:
+    1. The panel's own list now includes everything in the register that's linked by hand to the control, not only what was added before the first assessment; Compass can't tell the two apart. So evidence added in Audit ▸ Evidence for this control moves from "Linked from elsewhere" to the panel's main list. "Linked from elsewhere" now means evidence sitting on another record, such as a plan activity or a certificate. Collected captures stay where they were.
+    2. Long names wrap rather than being cut short.
+
+    Note: two date-and-time-sensitive data subject request tests failed once each in CI, unrelated to this change. Logged separately.
 assignee: steve
 label:
 - bug
