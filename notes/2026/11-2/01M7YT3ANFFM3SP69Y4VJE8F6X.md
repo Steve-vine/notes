@@ -1,7 +1,7 @@
 ---
 id: 01M7YT3ANFFM3SP69Y4VJE8F6X
 created: 2026-11-21T10:23:13.071481Z
-updated: 2026-11-21T10:23:15.867822Z
+updated: 2026-11-21T10:46:37.199306Z
 type: task
 title: 'Assessment screen: the assessment box never moves when the main content scrolls (today it slides up a little before it sticks)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Raised by Steve while testing sprint 120 (2026-11-21).
 

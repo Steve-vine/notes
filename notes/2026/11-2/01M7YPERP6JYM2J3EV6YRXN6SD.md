@@ -1,7 +1,7 @@
 ---
 id: 01M7YPERP6JYM2J3EV6YRXN6SD
 created: 2026-11-21T09:19:33.574401Z
-updated: 2026-11-21T09:19:36.450959Z
+updated: 2026-11-21T10:46:35.703158Z
 type: task
 title: 'Assessment screen: the assessment box keeps only Add evidence; the evidence is listed once, in the page''s Evidence section'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Raised by Steve while testing sprint 120 (2026-11-21).
 
