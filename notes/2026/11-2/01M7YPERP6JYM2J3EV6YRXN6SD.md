@@ -1,7 +1,7 @@
 ---
 id: 01M7YPERP6JYM2J3EV6YRXN6SD
 created: 2026-11-21T09:19:33.574401Z
-updated: 2026-11-21T12:43:02.517695Z
+updated: 2026-11-21T13:32:58.51804Z
 type: task
 title: 'Assessment screen: the assessment box keeps only Add evidence; the evidence is listed once, in the page''s Evidence section'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,20 @@ comments:
 
     Calls: none beyond the task's.
     Checked: Vitest (box lists nothing but keeps Add evidence; each piece listed once with its actions; a viewer gets no buttons); Assessment panel and queue suites, type-check, lint and format all pass.
+- id: 01M7Z4YS8PF114PXXN84W89YV2
+  author: Steve Vine
+  at: 2026-11-21T13:32:58.517889Z
+  text: |-
+    Pre-UAT (staging 12bd442a5, E2E Test Company): Passed.
+    Steps: As E2E Admin A, opened RIM.9 on the Assessment screen. From Evidence ▸ Manual Collection, on EVD-88: Edit details, New version, then Archive (reason "Wrong file uploaded"). Took EVD-66 off. Read RIM.8's "Not assessed yet" hint. Opened Assess from initiative INI-5's row menu. Then checked as E2E Viewer.
+    Seen:
+    - The box holds only its four buttons and lists no evidence. Each piece appears once, under Manual Collection, with its actions in an end column.
+    - Every action took effect at once, without a reload. "2 archived" folds away, showing the reason and the "Replaced by a newer version" line.
+    - The hint reads "…is listed in the Evidence section once the assessment is saved."
+    - The initiative's Assess drawer still lists the evidence, with its actions.
+    - The Viewer sees the list with no buttons.
+    Follow-up: at 1440 wide, the actions column sits off to the right of the table, so you have to scroll it sideways to reach the buttons. Logged as a fix-forward task.
+    Screenshots: ~/compass-uat/s9hexqn/COM-2056/
 assignee: steve
 label:
 - improvement

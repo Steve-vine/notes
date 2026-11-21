@@ -1,7 +1,7 @@
 ---
 id: 01M7YW3AXSXB0SP6TJSQ7YMWCX
 created: 2026-11-21T10:58:10.489352Z
-updated: 2026-11-21T12:43:11.844415Z
+updated: 2026-11-21T13:33:04.522634Z
 type: task
 title: A piece linked onto a control from elsewhere offers Take off, not New version and Archive
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,17 @@ comments:
     Note: a small API change (each file on an assessment now says whether it was added there), so it went on the chain; no migration.
     Could be tightened later: the replace and archive actions still accept a linked file if called directly through the API — the screen no longer offers them.
     Checked: a backend test (a file linked through the window vs one added on the assessment) and a Vitest case (each gets the right buttons; Take off targets this assessment). Backend lint, types, the unit suite (2900 passed) and the attachments integration tests pass.
+- id: 01M7Z4YZ4A5GKJDQ70ZMVJ4T6N
+  author: Steve Vine
+  at: 2026-11-21T13:33:04.522425Z
+  text: |-
+    Pre-UAT (staging 12bd442a5, E2E Test Company): Passed.
+    Steps: RIM.9 ▸ Add evidence ▸ Link existing ▸ EVD-66 ▸ Link 1, then a reload. Added two files with Add new (EVD-87, EVD-88) to compare. Checked the initiative's Assess drawer too. Took EVD-66 off again at the end.
+    Seen:
+    - EVD-66 offers only Edit details and "Take … off RIM.9", before and after the reload.
+    - EVD-60, 62–65, 67 and 68, all from Audit ▸ Evidence, also offer Edit and Take off. EVD-67 now offers Take off, which it didn't before.
+    - Pieces added on the panel offer Edit details, Upload a new version and Archive. The drawer splits them the same way.
+    Screenshots: ~/compass-uat/s9hexqn/COM-2066/
 assignee: steve
 label:
 - bug
