@@ -1,15 +1,17 @@
 ---
 id: 01M7ZKZFECD5CZKNMCJ88YT8ZS
 created: 2026-11-21T17:55:29.868183Z
-updated: 2026-11-21T17:55:29.868183Z
+updated: 2026-11-21T17:57:43.906078Z
 type: task
 title: Registers and their fields — someone who can edit Content makes a register (name, prefix, owner, editors, shared or per company) and defines its fields; Assurance ▸ Registers lists them
-priority: high
-label: feature
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2077
+sprint: s64t54m
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint "Registers" (ADR in COM-2076). The first build task: the register itself and its fields. Entries come in COM-2078.
 
