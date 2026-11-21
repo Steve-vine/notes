@@ -1,7 +1,7 @@
 ---
 id: 01M7ZN74NA0RN5N5RA0R5HX1MF
 created: 2026-11-21T18:17:09.546143Z
-updated: 2026-11-21T19:15:43.597458Z
+updated: 2026-11-21T19:42:16.531367Z
 type: task
 title: A control's summary box counts every out-of-date piece on its Evidence tab, including plan evidence
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,22 @@ comments:
     Calls for you to overturn:
     - The "links · files" counts are unchanged. They still count only what's on the assessment itself, not everything on the Evidence tab.
     - Someone who can't see a source isn't counted for it. For example, without Vulnerabilities access, a vulnerability's file doesn't add to their pill.
+- id: 01M7ZT2ZYK97SCSGKQZ86E5K5V
+  author: Steve Vine
+  at: 2026-11-21T19:42:16.531139Z
+  text: |-
+    Passed (pre-UAT, staging 1726d8daf, 21 Nov, E2E Test Company).
+
+    As E2E Admin A:
+    - RIM.9's box reads "2 links · 8 files" with a "1 out of date" pill. Its Evidence tab lists 13 pieces, one Out of date (EVD-94, from plan entry SAP-91, valid until 30 Jun 2025), so they match.
+    - INS.10 (37 pieces, all Current) and IDM.18 (no evidence) show no pill.
+    - RIM.9's Assessment screen still shows EVD-94 Out of date and EVD-95 Current. The "links · files" line is unchanged.
+
+    As E2E Viewer: RIM.9's box shows the same pill, with no errors.
+
+    Correction to my "Done" comment: I said someone who can't see a source isn't counted for it. That's not quite right for the Viewer. Their box shows "1 out of date", but their Evidence tab lists no pieces (it never has: it needs audit-evidence access), and they can't open SAP-91. So they're warned about a piece they can't find. This is the same gap as the earlier observation (the Viewer's Evidence heading counts pieces their tab doesn't show). It's put to Steve as a decision rather than logged as a defect.
+
+    Screenshots: ~/compass-uat/s9hexqn/COM-2085/ (01 to 09)
 assignee: steve
 label:
 - bug
