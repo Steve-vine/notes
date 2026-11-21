@@ -1,30 +1,32 @@
 ---
 id: 01M7YSQAA3QQBE9GM28Q3MWAGG
 created: 2026-11-21T10:16:39.491356Z
-updated: 2026-11-21T10:16:39.491356Z
+updated: 2026-11-21T10:17:15.315412Z
 type: task
 title: 'Control screen is for viewing only: its add, link, raise and request buttons go (they live on the Assessment screen)'
-task_status: todo
-assignee: steve
-priority: medium
-label: improvement
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2061
+sprint: s9hexqn
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: todo
 ---
 Raised by Steve while testing sprint 120 (2026-11-21). Part of one change:
 - **the Control screen is purely for viewing a control;**
 - **the Assessment screen is where it's assessed and evidence is added.**
 
-**Needs ASSESSMENT_TASK first**, which brings Ask Polaris to collect and Add decision to the Assessment screen, so nothing is lost. Related: COM-2056, COM-2057, FLOWCHART_TASK.
+**Needs COM-2060 first**, which brings Ask Polaris to collect and Add decision to the Assessment screen, so nothing is lost. Related: COM-2056, COM-2057, COM-2062.
 
 **What goes, and where each one is done instead**
 
 | Control screen | Button that goes | Done instead |
 |---|---|---|
-| Overview | **Add decision** (the box for linking a decision record) | Assessment screen ▸ Decisions ▸ Add decision (ASSESSMENT_TASK) |
+| Overview | **Add decision** (the box for linking a decision record) | Assessment screen ▸ Decisions ▸ Add decision (COM-2060) |
 | Evidence | **Add to plan** | Assessment screen ▸ assessment box ▸ Add to SAP (COM-2057) |
 | Evidence | **Link content** (the selector) | The document's own page ▸ Links ▸ Controls, as today |
-| Evidence | **Ask Polaris to collect this** | Assessment screen ▸ Evidence ▸ Automated Collection (ASSESSMENT_TASK) |
+| Evidence | **Ask Polaris to collect this** | Assessment screen ▸ Evidence ▸ Automated Collection (COM-2060) |
 | Evidence | **Add evidence** | Assessment screen ▸ assessment box ▸ Add evidence |
 | Gaps | **Raise gap** (both places it appears, including the empty state) | Assessment screen ▸ assessment box ▸ Raise gap |
 | Risks | **Request an exception** (and Renew exception) | Assessment screen ▸ assessment box ▸ Request exception / Renew exception |
