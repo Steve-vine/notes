@@ -1,7 +1,7 @@
 ---
 id: 01M7X872KVKRZNZYF83SCQQVS1
 created: 2026-11-20T19:51:27.099764Z
-updated: 2026-11-21T02:38:04.041444Z
+updated: 2026-11-21T03:17:48.403611Z
 type: task
 title: 'The Add evidence window: Link existing evidence tab (the register, sortable and filtered, pick several)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,32 @@ number: 2042
 sprint: s9hexqn
 blocked_by:
 - 01M7X86QAR4TB98Y4NTZY0FCFP
+comments:
+- id: 01M7Y1R83QG5C1Q8QD7EMF0ZC7
+  author: Steve Vine
+  at: 2026-11-21T03:17:44.183427Z
+  text: |-
+    Done and merged to main (PR #2037). No migration.
+
+    What changes:
+    - Add evidence ▸ Link existing evidence now works. It shows the evidence register with columns for EVD ID, name, evidence type, classification ("Not classified" when blank), controls, period, valid until (with Out of date or Due soon), added (date and who), and where it came from (Uploaded, Collected, Built-in check or Library). Every column sorts.
+    - Search covers the EVD ID, name, description and file name. Filters cover evidence type, classification (Not classified too), status, where it came from, framework, control and date added.
+    - Opened from a record with controls, the tab starts filtered to them, shown as a chip ("On RIM.9") that one click clears. A record without controls opens on the whole register.
+    - A tick picks a piece, and "Pick everything shown" picks the page. Picks stay while the search and filters change. The footer shows "N picked" and Link N. After linking, the window closes and the record refreshes. A piece that's refused stays picked, with its reason.
+    - Pieces already on the record show ticked and can't be picked. Archived pieces aren't offered, and restricted ones show only to people who may see them. Closing the window with picks asks first.
+    - A piece already on another control can now be linked to this control, end to end.
+
+    Calls for you to overturn:
+    - Someone without View audit can see the register in this tab, but only for a record they may add evidence to (an assessor on a control, for example). Audit ▸ Evidence itself still needs View audit.
+    - On a control, "already here" counts any piece that supports the control, including one that reaches it through a linked risk or schedule entry.
+    - Kinds a record can't take yet aren't listed. A schedule entry isn't offered web addresses until COM-2043.
+
+    One thing to tidy, in COM-2043: opened from a control's own Evidence tab, the starting "On RIM.9" view shows only what's already there, so it should start on the whole register instead.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Built to the ADR in COM-2038, after COM-2041. Steve's design (2026-11-20). It's the second tab of the Add evidence window, and it fixes his RIM.9 case: picking the certificate already on the control instead of uploading it again.
 
