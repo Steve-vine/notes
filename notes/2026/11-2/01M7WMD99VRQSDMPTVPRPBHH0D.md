@@ -1,7 +1,7 @@
 ---
 id: 01M7WMD99VRQSDMPTVPRPBHH0D
 created: 2026-11-20T14:05:19.035001Z
-updated: 2026-11-20T19:18:08.717868Z
+updated: 2026-11-21T08:06:49.051211Z
 type: task
 title: A row of custom colours under the flowchart colour palette, kept with the document
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -63,7 +63,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Steve (testing round 3): the flowchart colour palette shows 9 colours, Transparent included. Add a second row below it where a person can set their own colours.
 
