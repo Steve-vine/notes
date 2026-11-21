@@ -1,12 +1,12 @@
 ---
 id: 01M7YJ3TFDCH6W2P2VJHFFN5PD
 created: 2026-11-21T08:03:40.653929Z
-updated: 2026-11-21T08:03:46.286108Z
+updated: 2026-11-21T09:10:59.807512Z
 type: task
 title: 'Flowchart colour palettes: the Default/Automatic button replaces the selected-colour label, so the two swatch rows sit together'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2050
-sprint: s6y6p7g
+sprint: s9hexqn
 assignee: steve
 label:
 - improvement
