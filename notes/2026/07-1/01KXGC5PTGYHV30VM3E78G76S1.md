@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-21T17:15:02.660041Z
+updated: 2026-11-21T17:53:58.594238Z
 type: project
 title: Compass
 identifier: COM
@@ -1063,6 +1063,9 @@ sprints:
 - id: s9hexqn
   title: Evidence Improvements
   description: Improve how evidence works in Compass and how easily people can find and reach it. Scope to be planned with Steve (2026-11-20).
+- id: s64t54m
+  title: Registers
+  description: 'A new Registers page under Assurance: people define their own registers (fields, owner, editors, shared or per company), keep entries linked to controls, gaps, risks, evidence and SAP entries, import from a spreadsheet, review the register on a cycle and show an auditor any register as it stood on a date (ADR 0165). Starts with templates for the obligations, incident contacts and management review actions registers.'
 assignee: steve
 priority: medium
 project_status: active
