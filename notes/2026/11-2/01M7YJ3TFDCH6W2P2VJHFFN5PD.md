@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Steve (testing round 4): in the flowchart editor's right-hand panel, each colour palette has a label above it naming the selected colour (e.g. "Primary"). Remove that label completely from every palette, and put the "Default"/"Automatic" button there instead. That button currently sits between the two rows of swatches. Moving it lets the two rows sit directly one above the other.
 
