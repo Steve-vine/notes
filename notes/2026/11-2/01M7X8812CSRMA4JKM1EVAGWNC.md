@@ -1,7 +1,7 @@
 ---
 id: 01M7X8812CSRMA4JKM1EVAGWNC
 created: 2026-11-20T19:51:58.284052Z
-updated: 2026-11-21T06:56:23.939632Z
+updated: 2026-11-21T09:00:50.699444Z
 type: task
 title: Incidents, risks and vulnerabilities use the Add evidence window
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,24 @@ comments:
     Other uploads that still don't use the window (checked across Compass): those the ADR excludes (DDQ, contracts, Trust Centre documents, data subject request files, vendor certificates, house styles, icons, Library files), imports, "Upload a new version", and the portal's Report an incident. The User Portal's audit uploads are fixed in COM-2049.
 
     For you to decide: a DPIA's ICO prior consultation (what was sent, and the reply) is still uploaded on the risk assessment and shows in the register. Risk assessments aren't among the records ADR 0164 names, so I left it.
+- id: 01M7YNCG4BEXX42ZEYMTGW2BTV
+  author: Steve Vine
+  at: 2026-11-21T09:00:50.699212Z
+  text: |-
+    Failed (minor) (pre-UAT, staging 7e04d3f5e, E2E Admin A, E2E Test Company). Everything is added through the window, but timeline-entry files and a notification's copy don't show their EVD IDs.
+
+    Steps and what I saw:
+    - Incident: I recorded INC-125 "E2E 20261121 incident evidence check" (P4). The Evidence card has "Add evidence" and "Record evidence held elsewhere". The window "Add evidence to INC-125" has Add new (files only, no web address box) and Link existing (whole register, 20 file pieces). I linked EVD-65 and uploaded a PNG (EVD-74, Confidential). Both are listed as "EVD-65 …" and "EVD-74 …" with Take off and Archive. Take off on EVD-65 removed it at once, with no confirmation. The incident's History says "unlinked … from INC-125", and the timeline says "Evidence removed … Unlinked from this incident — it stays in the evidence register".
+    - Timeline entry: Add entry ▸ Files ▸ Add evidence opens "Add evidence to INC-125 timeline entry". I added a new PDF ("New · 593 B"), then used "Change evidence" ▸ Link existing for EVD-60 ("Linked"). Nothing was sent to the server until I pressed Add entry; the only request was the timeline save itself. The entry then shows both files.
+    - Notification: Record as sent (Law enforcement) ▸ "A copy of what was sent" ▸ Add evidence opens "Add evidence to INC-125 notification: Law enforcement". I added a .txt (Confidential), which was held until Record as sent. The notification shows "Sent … reference E2E-20261121-REF" with the file.
+    - Risk RSK-125: the Evidence card's Add evidence opens "Add evidence to RSK-125 …". I linked EVD-64 (a web address) and added a new web address (EVD-77). Both are listed with their IDs and addresses. This risk has no linked controls, so the Link tab opened on the whole register (58 pieces); I didn't check the chip for a risk with controls.
+    - Vulnerability VUL-3: the Files card's Add evidence opens "Add evidence to VUL-3". I linked EVD-62 and added a web address (EVD-78). Both are listed with their IDs. The History says "linked E2E 20261121 screenshot.png to VUL-3".
+
+    Defect (minor): timeline-entry files and a notification's copy show no EVD ID. The pieces have IDs in the register: the timeline PDF is EVD-75 and the notification copy EVD-76, both "Incident INC-125". On the incident they're listed only by name and size ("E2E 20261121 access review (Word).docx 956 B", "E2E 20261121 timeline PDF.pdf 593 B", "E2E 20261121 notification copy.txt 565 B"). Expected per the Done-when: with EVD IDs, as on the incident's Evidence card. Screenshot: COM-2045/timeline-entry-files-no-evd.png, COM-2045/notification-recorded.png
+
+    Partly checked: "no place that holds the company's evidence has its own upload left". Every place I opened (control, assessment panel, Audit ▸ Evidence, schedule entry and Mark done, audit request, incident, timeline entry, notification, risk, vulnerability, portal request and corrective action) has only Add evidence. I didn't sweep every screen.
+
+    Screenshots: ~/compass-uat/s9hexqn/COM-2045/
 assignee: steve
 label:
 - feature

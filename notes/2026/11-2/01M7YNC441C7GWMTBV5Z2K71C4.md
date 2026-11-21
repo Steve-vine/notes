@@ -1,15 +1,17 @@
 ---
 id: 01M7YNC441C7GWMTBV5Z2K71C4
 created: 2026-11-21T09:00:38.40134Z
-updated: 2026-11-21T09:00:38.40134Z
+updated: 2026-11-21T09:00:44.878239Z
 type: task
 title: Office previews made by a separate, locked-down converter on Debian 13, for .docx, .xlsx and .pptx only, and optional in the Helm deploy
-label: improvement
-assignee: steve
-priority: high
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2052
+sprint: s9hexqn
+assignee: steve
+label:
+- improvement
+priority: high
+task_status: todo
 ---
 Follows COM-2048. **Do this before sprint 120 is released.** COM-2048 is on main and staging but in no release (latest v0.25.0), so production has never run LibreOffice.
 
