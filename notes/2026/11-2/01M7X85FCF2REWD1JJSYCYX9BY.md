@@ -1,7 +1,7 @@
 ---
 id: 01M7X85FCF2REWD1JJSYCYX9BY
 created: 2026-11-20T19:50:34.639301Z
-updated: 2026-11-20T23:43:55.254069Z
+updated: 2026-11-21T08:59:26.867953Z
 type: task
 title: Every piece of evidence has an ID (EVD-n), shown wherever the evidence is
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,26 @@ comments:
     - The vendor portal doesn't show the ID, because it's Compass's own reference.
 
     Left over: on a control's assessment card, the Automatic Collection rows don't show the ID yet. The same pieces show it on the control's Evidence tab and in the register. I've added it to COM-2040.
+- id: 01M7YN9Y8KM3M729A9RD107VME
+  author: Steve Vine
+  at: 2026-11-21T08:59:26.867794Z
+  text: |-
+    Passed (pre-UAT, staging 7e04d3f5e, E2E Admin A, E2E Test Company).
+
+    Steps and what I saw:
+    - Audit ▸ Evidence: ID is the register's own column. Sorting it ascending gives EVD-1, 2, 3…; descending gives EVD-59, 58, 57… (the address becomes ?sort=ref / ?sort=-ref). Every uploaded, plan and check piece in E2E Test Company has an ID: 56 pieces, EVD-1 to EVD-59. EVD-6, 8 and 9 are under Archived, and the Archived tab has the ID column too.
+    - The register's search box: "evd-5" found only EVD-5, not EVD-50 to 59.
+    - The search at the top of Compass: "EVD-12" found one result, "EVD-12 · e2e-uat4-pentest.pdf", which opened the piece.
+    - Typing /audit/evidence/EVD-12 into the address bar went straight to the piece. Its page shows EVD-12 at the top and in the breadcrumb.
+    - New pieces took the next numbers (EVD-60 to EVD-78) whichever way they were added: a control, Audit ▸ Evidence, a schedule entry, an audit request, the portal, an incident, a risk or a vulnerability.
+    - The ID shows on the evidence rows of a control (Evidence tab and assessment panel), a schedule entry (and Mark done), an audit request, a finding's closing evidence, an incident's Evidence card, a risk and a vulnerability, and in the Add evidence window's Link tab.
+
+    For Steve to look at:
+    - About 90 rows in the register are Library documents ("Library · Policy" and so on) with "—" for ID. That fits "pieces of evidence" (they're the Playbook's documents), but they do sit in the register without an ID.
+    - An incident timeline entry's files and a notification's copy don't show their EVD IDs, though the pieces have them (EVD-75, EVD-76). Written up under COM-2045.
+    - Not checked: the ID in packs and exports (audit pack index, plan export, request spreadsheet, auditor zip).
+
+    Screenshots: ~/compass-uat/s9hexqn/COM-2039/
 assignee: steve
 label:
 - feature

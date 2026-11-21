@@ -1,7 +1,7 @@
 ---
 id: 01M7X85X1XMNTFB7R7X32RT98X
 created: 2026-11-20T19:50:48.637702Z
-updated: 2026-11-21T01:21:42.090797Z
+updated: 2026-11-21T08:59:37.457025Z
 type: task
 title: One piece of evidence can be linked to many records; unlinking isn't archiving
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,26 @@ comments:
     4. Once a piece is deleted for good, only the record it was first added to lists it as deleted. Its other records stop showing it, and their history shows it being taken off.
 
     Still to come in later tasks: each area's own Remove button still archives. COM-2043 to COM-2045 switch them to taking off. The Take off button can also show for audit evidence the auditor has already seen; pressing it explains that it must be withdrawn on the audit with a reason. COM-2044 will hide it there.
+- id: 01M7YNA8KHYY14B5CZRH07CX5T
+  author: Steve Vine
+  at: 2026-11-21T08:59:37.456824Z
+  text: |-
+    Failed (minor) (pre-UAT, staging 7e04d3f5e, E2E Admin A, E2E Test Company). Linking, "Used in", archiving and the server's refusal all work. Two things on screen don't match the task.
+
+    What works:
+    - One piece on many records: EVD-62 (a screenshot) is on RIM.9, AUD-1 request E2E-20261121-01, AUD-1-F2's closing evidence and VUL-3. Its "Used in" lists all four, each with a link and "linked 21 Nov 2026 by …". EVD-68 lists RIM.9 and "SAP-85 … FINISHED". EVD-69 marks SAP-85 "ADDED HERE · FINISHED".
+    - Details are the piece's own: I changed EVD-62's "What it is" and "Covers to" once (Edit details). VUL-3 and RIM.9 then showed the new text and dates.
+    - Take off: on EVD-66 (on RIM.8 and RIM.9), Take off RIM.9 asked "It is taken off RIM.9 only. It stays in the evidence register and wherever else it is used…". Afterwards RIM.9 no longer listed it, RIM.8 still did, and it stayed current in the register. A finished record (SAP-85) has no Take off.
+    - Archive: archiving EVD-69 (on finished SAP-85 and on RIM.9) showed "1 archived" folded away on SAP-85, and it left RIM.9's current list.
+    - Delete for good: an archived piece only on an open record (EVD-61, on RIM.9) offered "Delete permanently…", and deleting worked. For an archived piece a finished record relies on (EVD-70, on SAP-85), the server refuses: "Finished records rely on it, so it can't be deleted: SAP-85 E2E 20261121 Assess and renew cyber insurance".
+
+    Defects:
+    1. The refusal isn't shown on screen. On EVD-70's page the "Delete permanently…" button is just missing, with no text saying why or naming SAP-85. The page already receives that refusal text from the server; it isn't displayed. Expected: Compass says where it's used, naming the records. Screenshot: COM-2040/evd-70-after-archive.png
+    2. The record's own History doesn't show the take-off. The confirmation says "RIM.9's history says you took it off". RIM.9 ▸ History has no line for it, and the earlier "linked from elsewhere" line for EVD-66 has gone too. The activity log does record it ("unlinked E2E 20261121 register Word file.docx from RIM.9"), and an incident's History does show "unlinked … from INC-125". Screenshot: COM-2040/rim9-history.png
+
+    Not checked: that every record shows exactly what it did before the migration. Older E2E records (EVD-5 on the sprint 116 pen-test entry, EVD-12) still show as before.
+
+    Screenshots: ~/compass-uat/s9hexqn/COM-2040/
 assignee: steve
 label:
 - feature
