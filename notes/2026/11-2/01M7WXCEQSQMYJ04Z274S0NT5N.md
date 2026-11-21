@@ -1,7 +1,7 @@
 ---
 id: 01M7WXCEQSQMYJ04Z274S0NT5N
 created: 2026-11-20T16:42:09.017598Z
-updated: 2026-11-20T19:17:44.766545Z
+updated: 2026-11-21T08:10:05.404867Z
 type: task
 title: Adding a lane keeps a flowchart's connections on their shapes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT round 4 (staging b65d7ed8, tester A). This is probably older than this round.
 
