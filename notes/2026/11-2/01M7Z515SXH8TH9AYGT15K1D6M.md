@@ -1,7 +1,7 @@
 ---
 id: 01M7Z515SXH8TH9AYGT15K1D6M
 created: 2026-11-21T13:34:16.89371Z
-updated: 2026-11-21T14:00:42.069777Z
+updated: 2026-11-21T14:40:45.406099Z
 type: task
 title: 'Assessment screen: someone who can''t record assessments sees a read-only box, not an editable one that fails on Save'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,17 @@ comments:
     Checked:
     - Headless Chromium at 1440 and 390: as a Viewer the box has no buttons and no fields, and the Down arrow still moves to the next control. As an Admin it is unchanged.
     - Vitest cases for a Viewer (in scope, out of scope, never assessed) and for an Assessor.
+- id: 01M7Z8TWTYHXKAK2XHQKFJBANT
+  author: Steve Vine
+  at: 2026-11-21T14:40:45.405875Z
+  text: |-
+    Pre-UAT recheck (staging 095141ab4, E2E Test Company): Passed.
+    Steps: As E2E Viewer, opened the Assessment screen ▸ RIM.9 at 1440 and listed every button and field in the box. Used Next / Previous and the Down / Up arrows. Repeated as E2E Assessor and Admin A.
+    Seen:
+    - Viewer: the box is plain text, with no buttons and no fields. It shows In scope, Status (Implemented, green dot), Maturity "Not set", Owner "Unassigned", the notes, Last reviewed / Next review and "Saved · 21 Nov 2026".
+    - Next/Previous and the arrows moved RIM.9 → INA.1 → RIM.9.
+    - Assessor and Admin A: editable as before, with Save and Save & next.
+    Screenshots: ~/compass-uat/s9hexqn/COM-2072/r6-*.png
 assignee: steve
 label:
 - bug

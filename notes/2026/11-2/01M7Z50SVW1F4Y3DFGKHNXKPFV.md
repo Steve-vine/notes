@@ -1,7 +1,7 @@
 ---
 id: 01M7Z50SVW1F4Y3DFGKHNXKPFV
 created: 2026-11-21T13:34:04.668042Z
-updated: 2026-11-21T14:00:35.343919Z
+updated: 2026-11-21T14:40:39.765368Z
 type: task
 title: 'Assessment box at phone width: "Request exception" (and "Renew exception") labels are cut off'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,17 @@ comments:
 
     Call Steve might overturn: the long label wraps, rather than the buttons stacking into one column on phones. That keeps the box compact, but "Request exception" reads as two lines in a taller second row.
     Checked: measured in headless Chromium at 1440, 1280, 390 and 375 wide. Before, the label was clipped (106px of text in 85–92px). After, it wraps with nothing clipped. The desktop layout is unchanged.
+- id: 01M7Z8TQAN9RA8K3422R2E2X4H
+  author: Steve Vine
+  at: 2026-11-21T14:40:39.765156Z
+  text: |-
+    Pre-UAT recheck (staging 095141ab4, E2E Test Company): Passed.
+    Steps: As Admin A, opened the Assessment screen ▸ RIM.9 at 1440, 390×844 and 375×812, and measured each button in the box. There are no exceptions in the test company, so to try "Renew exception" I put those words into the button for a moment and measured.
+    Seen:
+    - 1440: 2×2 with four equal 162px buttons, as before.
+    - 390 and 375: every label reads in full. "Request exception" wraps onto two lines, its row grows to 40px with Add to SAP matching it, and the page has no sideways scroll.
+    - At 375 "Renew exception" also wraps to two lines (the Done comment said one), but nothing is clipped.
+    Screenshots: ~/compass-uat/s9hexqn/COM-2071/r6-*.png
 assignee: steve
 label:
 - bug

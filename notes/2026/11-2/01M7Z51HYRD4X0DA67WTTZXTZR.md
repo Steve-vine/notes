@@ -1,7 +1,7 @@
 ---
 id: 01M7Z51HYRD4X0DA67WTTZXTZR
 created: 2026-11-21T13:34:29.336185Z
-updated: 2026-11-21T14:13:07.020793Z
+updated: 2026-11-21T14:40:54.221834Z
 type: task
 title: 'Manual Collection: each piece''s actions reachable without scrolling sideways on a desktop; two wording leftovers'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,20 @@ comments:
     - Headless Chromium at 1440, 1280, 390, and 1440 in dark mode: all six action buttons went from none in view to all in view, and each can be clicked. The fixed cell matches the background in light and dark.
     - The Control screen's Evidence tab is unchanged.
     - Vitest covers the fixed column, the single confirmation and the new Exceptions wording. The frontend job hit the known CollectionCard flake once, and a rerun passed.
+- id: 01M7Z8V5EDS5NZVKMA1MDS0DSR
+  author: Steve Vine
+  at: 2026-11-21T14:40:54.221623Z
+  text: |-
+    Pre-UAT recheck (staging 095141ab4, E2E Test Company): Passed.
+    Steps: As Admin A on RIM.9 ▸ Evidence ▸ Manual Collection at 1440 and 1280. Opened Edit details on EVD-87, then Cancel. Checked 390 wide, the Control screen's Evidence tab and the empty Exceptions page. Used Add to SAP from the box, which made SAP-90 "E2E r6 20261121 COM-2073".
+    Seen:
+    - At 1440 and 1280, all 14 action buttons on the 11 rows were visible and clickable without scrolling sideways. Edit details opened, and Cancel closed it.
+    - At 390 the table scrolls sideways, with the actions fixed at the right.
+    - The Control screen's Evidence tab is unchanged: no actions column and no sideways scroll.
+    - The Exceptions page reads "…recorded with Request exception on the Assessment screen."
+    - Add to SAP showed one message, "RIM.9 added to the SAP". SAP-90 appears under the Security Assurance Plan.
+    - Minor: the message's accent bar looked purple, not green. Cosmetic.
+    Screenshots: ~/compass-uat/s9hexqn/COM-2073/
 assignee: steve
 label:
 - bug
