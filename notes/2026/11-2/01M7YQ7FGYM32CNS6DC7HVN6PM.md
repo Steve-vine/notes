@@ -1,7 +1,7 @@
 ---
 id: 01M7YQ7FGYM32CNS6DC7HVN6PM
 created: 2026-11-21T09:33:03.39069Z
-updated: 2026-11-21T09:33:06.83198Z
+updated: 2026-11-21T10:46:37.957538Z
 type: task
 title: 'Assessment screen: the History tab''s count leaves out evidence, exception and check entries, so it says 10 where the list (and the Control screen) has 12'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 Raised by Steve while testing sprint 120 (2026-11-21).
 

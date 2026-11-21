@@ -1,7 +1,7 @@
 ---
 id: 01M7YSQNN54DGD87H7RJY3ZNNM
 created: 2026-11-21T10:16:51.109447Z
-updated: 2026-11-21T10:17:20.084803Z
+updated: 2026-11-21T10:46:49.932503Z
 type: task
 title: Flowcharts are listed under Managed Content with the control's other documents, not as a separate Flowcharts section (Control and Assessment screens)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Raised by Steve while testing sprint 120 (2026-11-21). Related: COM-2060 (Assessment screen Overview) and COM-2061 (Control screen view-only). If built alongside COM-2060, do it in the same component so both screens get it at once.
 

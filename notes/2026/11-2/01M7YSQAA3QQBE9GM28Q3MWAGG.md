@@ -1,7 +1,7 @@
 ---
 id: 01M7YSQAA3QQBE9GM28Q3MWAGG
 created: 2026-11-21T10:16:39.491356Z
-updated: 2026-11-21T10:17:15.315412Z
+updated: 2026-11-21T10:46:39.399215Z
 type: task
 title: 'Control screen is for viewing only: its add, link, raise and request buttons go (they live on the Assessment screen)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Raised by Steve while testing sprint 120 (2026-11-21). Part of one change:
 - **the Control screen is purely for viewing a control;**
