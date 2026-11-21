@@ -1,15 +1,19 @@
 ---
 id: 01M7ZM0WDN6TFDBT24FZRD05YZ
 created: 2026-11-21T17:56:15.925064Z
-updated: 2026-11-21T17:56:15.925064Z
+updated: 2026-11-21T17:58:02.404304Z
 type: task
 title: Evidence on a register entry — the Add evidence window works on an entry, and the piece's "Used in" lists it
-priority: medium
-task_status: todo
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2080
+sprint: s64t54m
+blocked_by:
+- 01M7ZM0H3WQ90W4GMRNFDBEANS
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint "Registers" (ADR in COM-2076). Builds on COM-2079 and on ADR 0164 (Evidence Improvements: one piece of evidence held once and used in many places, and the Add evidence window from COM-2041 and COM-2042).
 

@@ -1,12 +1,14 @@
 ---
 id: 01M7ZKZFECD5CZKNMCJ88YT8ZS
 created: 2026-11-21T17:55:29.868183Z
-updated: 2026-11-21T17:57:43.906078Z
+updated: 2026-11-21T17:57:58.326265Z
 type: task
 title: Registers and their fields — someone who can edit Content makes a register (name, prefix, owner, editors, shared or per company) and defines its fields; Assurance ▸ Registers lists them
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2077
 sprint: s64t54m
+blocked_by:
+- 01M7ZKYVNWPJX322TKWFH428HY
 assignee: steve
 label:
 - feature

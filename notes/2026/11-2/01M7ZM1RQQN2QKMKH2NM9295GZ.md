@@ -1,15 +1,19 @@
 ---
 id: 01M7ZM1RQQN2QKMKH2NM9295GZ
 created: 2026-11-21T17:56:44.91962Z
-updated: 2026-11-21T17:56:44.91962Z
+updated: 2026-11-21T17:58:04.205769Z
 type: task
 title: Any register as it stood on a date, and export to CSV, Excel or PDF — what an auditor asks for
-assignee: steve
-label: feature
-priority: high
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2082
+sprint: s64t54m
+blocked_by:
+- 01M7ZM01R4WXTDT5YZ3SBHSXF7
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint "Registers" (ADR in COM-2076). Builds on COM-2078.
 

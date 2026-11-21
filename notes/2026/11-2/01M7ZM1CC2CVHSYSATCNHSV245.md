@@ -1,15 +1,19 @@
 ---
 id: 01M7ZM1CC2CVHSYSATCNHSV245
 created: 2026-11-21T17:56:32.258758Z
-updated: 2026-11-21T17:56:32.258758Z
+updated: 2026-11-21T17:58:02.827973Z
 type: task
 title: Import a register from a spreadsheet — match each column to a field, preview every row with its problems, and bring the good rows in as entries
-task_status: todo
-label: feature
-assignee: steve
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2081
+sprint: s64t54m
+blocked_by:
+- 01M7ZM01R4WXTDT5YZ3SBHSXF7
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint "Registers" (ADR in COM-2076). Builds on COM-2078. This is how Steve's current legal register spreadsheet gets into Compass.
 

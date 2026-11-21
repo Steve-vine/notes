@@ -1,12 +1,14 @@
 ---
 id: 01M7ZM0H3WQ90W4GMRNFDBEANS
 created: 2026-11-21T17:56:04.348541Z
-updated: 2026-11-21T17:57:45.878024Z
+updated: 2026-11-21T17:58:00.726422Z
 type: task
 title: Links — an entry links to controls, gaps, risks, SAP entries, documents, decisions, vendors and inventory assets; a register names the controls it's kept for; every linked record shows it back
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2079
 sprint: s64t54m
+blocked_by:
+- 01M7ZM01R4WXTDT5YZ3SBHSXF7
 assignee: steve
 label:
 - feature
