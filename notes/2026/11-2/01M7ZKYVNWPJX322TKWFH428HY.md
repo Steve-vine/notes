@@ -1,7 +1,7 @@
 ---
 id: 01M7ZKYVNWPJX322TKWFH428HY
 created: 2026-11-21T17:55:09.628498Z
-updated: 2026-11-21T17:57:43.204386Z
+updated: 2026-11-21T18:00:42.414455Z
 type: task
 title: 'ADR: Registers — people define their own registers, keep entries linked to the rest of Compass, review them on a cycle, and can show any register as it stood on a date'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 Write the ADR the rest of the Registers sprint is built to. ADR 0165 is the next free number on main as of 2026-11-21. The Guided procedures planning had its eye on 0165+, so check main and open branches before merging.
 

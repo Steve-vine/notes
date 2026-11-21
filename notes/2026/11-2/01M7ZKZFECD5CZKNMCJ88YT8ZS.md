@@ -1,7 +1,7 @@
 ---
 id: 01M7ZKZFECD5CZKNMCJ88YT8ZS
 created: 2026-11-21T17:55:29.868183Z
-updated: 2026-11-21T17:57:58.326265Z
+updated: 2026-11-21T18:00:41.520134Z
 type: task
 title: Registers and their fields — someone who can edit Content makes a register (name, prefix, owner, editors, shared or per company) and defines its fields; Assurance ▸ Registers lists them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -56,9 +56,9 @@ When there are no registers yet, the page explains what a register is and offers
 - A register with entries can be **archived**. It becomes read-only, is hidden from the list by default (an Archived filter shows it), and can still be opened and exported. It can be restored.
 - Every change to a register's details or fields is recorded in the activity log.
 
-**Who can do what**
-- **Seeing registers:** a new permission, given to every role that can see Assurance. Restricted registers are seen only by their owner, editors and administrators.
-- **Making registers and changing their fields:** a new permission, given to administrators and to roles that can edit Content.
+**Who can do what (ADR 0165 §10)**
+- **View registers** (`registers.view`): opens the page and every register that isn't Restricted. The migration gives it to every role holding View the playbook. Restricted registers are seen only by their owner, editors and administrators.
+- **Make registers and change their fields** (`registers.manage`): the migration gives it to every role holding Author playbook content, so administrators and the people who edit Content hold it.
 - **Changing a register's details:** the owner can change its description, editors and review settings. The name, prefix, fields and Shared or per company are changed only by someone who can make registers.
 
 ## Implementation notes (technical)
@@ -67,7 +67,7 @@ When there are no registers yet, the page explains what a register is and offers
 - A removed field is soft-deleted (it keeps a removed-at date), never dropped.
 - Choice values have stable IDs too, so renaming a value keeps the entries that use it.
 - Prefix uniqueness is checked against every register and Compass's own reserved prefixes, held as one list in code.
-- Permissions go in the permission catalogue and the role defaults. Add the page to the floating menu's Assurance group (ADR 0152 amendment, recorded in COM-2076) and to the Browser smoke.
+- Add both permissions to the catalogue, with a migration granting them as above. Add the page to the floating menu's Assurance group (ADR 0165 amends ADR 0152 §5) and to the Browser smoke.
 - Follow `brief/information-architecture.md` → Screen conventions. A row of fields with hints is a FieldRow (COM-1623). Sortable table headers use SortableTh.
 
 ## Done when
