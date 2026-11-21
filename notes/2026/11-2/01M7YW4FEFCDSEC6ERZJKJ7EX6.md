@@ -1,15 +1,17 @@
 ---
 id: 01M7YW4FEFCDSEC6ERZJKJ7EX6
 created: 2026-11-21T10:58:47.8872Z
-updated: 2026-11-21T10:58:47.8872Z
+updated: 2026-11-21T10:58:57.138395Z
 type: task
 title: 'Add evidence window: the Link tab filters to controls just linked, and Cancel after a partial upload clears what wasn''t sent'
-priority: low
-assignee: steve
-label: bug
-task_status: active
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2069
+sprint: s9hexqn
+assignee: steve
+label:
+- bug
+priority: low
+task_status: active
 ---
 Found in Claude's pre-UAT recheck (staging d4a5f0b5a, 2026-11-21).
 
