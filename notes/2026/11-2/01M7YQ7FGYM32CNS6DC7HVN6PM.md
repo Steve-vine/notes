@@ -1,17 +1,29 @@
 ---
 id: 01M7YQ7FGYM32CNS6DC7HVN6PM
 created: 2026-11-21T09:33:03.39069Z
-updated: 2026-11-21T10:46:37.957538Z
+updated: 2026-11-21T11:47:14.345914Z
 type: task
 title: 'Assessment screen: the History tab''s count leaves out evidence, exception and check entries, so it says 10 where the list (and the Control screen) has 12'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2058
 sprint: s9hexqn
+comments:
+- id: 01M7YYWNXM949QJ22WMPRC657R
+  author: Steve Vine
+  at: 2026-11-21T11:46:58.100749Z
+  text: |-
+    Done and merged to main (PR #2051). This changes the screen only.
+
+    What changes:
+    - The Assessment screen's History count now counts every entry in the list: saves, evidence added or taken off, exception events and Compass check events. Before, it counted only saves (INS.1 said 10 where the list had 12).
+    - The Control screen and the Assessment screen now always show the same number, matching what the tab lists. Both take the count from one place, worked out from the list itself, so a new kind of entry can't make them disagree again.
+
+    Checked: a new test with all four kinds of entry (shows 5, lists 5), and the existing saves-only case.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve while testing sprint 120 (2026-11-21).
 

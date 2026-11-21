@@ -1,17 +1,34 @@
 ---
 id: 01M7YPVTS6RWS6R284FFB6E890
 created: 2026-11-21T09:26:41.702095Z
-updated: 2026-11-21T10:46:36.398666Z
+updated: 2026-11-21T11:47:15.997404Z
 type: task
 title: 'Assessment screen: the box''s four buttons sit in a 2×2 block — Add evidence, Raise gap, Add to SAP, Request exception'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2057
 sprint: s9hexqn
+comments:
+- id: 01M7YYWWMCACPD749YB53FEBE8
+  author: Steve Vine
+  at: 2026-11-21T11:47:04.972129Z
+  text: |-
+    Done and merged to main (PR #2059). This changes the screen only.
+
+    What changes:
+    - The box's four buttons sit in one 2×2 block of equal widths: Add evidence and Raise gap on top, Add to SAP and Request exception below.
+    - "Add to the plan" is now Add to SAP, and its confirmation reads "{control} added to the SAP". "Request an exception" is now Request exception. A control whose exception is due for renewal still shows Renew exception there.
+    - Each button opens what it did before. Disabled buttons stay disabled, with their reason lines and the "Not assessed yet" hint under the block.
+    - Buttons someone can't use are left out and the rest close up in order. Someone with none sees no block.
+    - The box's separate Evidence heading has gone. Other screens that show the box keep Add evidence where it was.
+
+    Checked in headless Chromium at 1440 and 375 wide (no label cut off), plus tests for the order, Add evidence's window, Renew exception, and reduced permissions. No browser journey used the old names.
+
+    Call for you to overturn: all four buttons now look the same, plain with a plus icon. Add evidence used to be a tinted button.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve while testing sprint 120 (2026-11-21). Goes with COM-2056 (the box stops listing evidence). Build it after COM-2056 or in the same PR, since both change the same part of the box.
 

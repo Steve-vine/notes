@@ -1,17 +1,32 @@
 ---
 id: 01M7YT3ANFFM3SP69Y4VJE8F6X
 created: 2026-11-21T10:23:13.071481Z
-updated: 2026-11-21T10:46:37.199306Z
+updated: 2026-11-21T11:47:15.243441Z
 type: task
 title: 'Assessment screen: the assessment box never moves when the main content scrolls (today it slides up a little before it sticks)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2063
 sprint: s9hexqn
+comments:
+- id: 01M7YYWT391G97B0E86TJS0V8V
+  author: Steve Vine
+  at: 2026-11-21T11:47:02.377302Z
+  text: |-
+    Done and merged to main (PR #2053). This changes the screen only.
+
+    What changes:
+    - On a wide screen, the assessment box stays exactly where it is while the Overview or History scrolls, from the first pixel, like the list on the left. Only the middle column scrolls.
+    - A box taller than the window still scrolls inside itself, with Save always in reach.
+    - Narrow screens are unchanged.
+
+    Checked in headless Chromium, measuring the box's top edge while scrolling to the bottom. Before, it slid 24px up and then stuck. Now it doesn't move at all, at 1440×900 and 1280×720. Both tabs still scroll fully to the bottom, and the narrow layout measured the same as before.
+
+    Call for you to overturn: the middle column now has its own scrollbar, in the gap between the text and the box. Where scrollbars always show (Windows, or a Mac with a mouse), the box sits 15px further right than before. The text column is unchanged.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Raised by Steve while testing sprint 120 (2026-11-21).
 
