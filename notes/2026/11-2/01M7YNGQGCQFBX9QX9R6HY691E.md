@@ -1,17 +1,33 @@
 ---
 id: 01M7YNGQGCQFBX9QX9R6HY691E
 created: 2026-11-21T09:03:09.324389Z
-updated: 2026-11-21T09:03:12.910728Z
+updated: 2026-11-21T10:00:48.995974Z
 type: task
 title: 'A finding''s closing evidence can be added inside Compass: Add evidence shows once the corrective action plan is accepted'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2053
 sprint: s9hexqn
+comments:
+- id: 01M7YRT2ZBBQM0KSGWY66R5H1G
+  author: Steve Vine
+  at: 2026-11-21T10:00:41.707584Z
+  text: |-
+    Done and merged to main (PR #2046). No migration.
+
+    Cause: the screen was wrong. It showed the closing-evidence buttons only when the plan was still editable *and* already accepted, which can never both be true. That's been so since COM-1429 (29 Oct), before this sprint. An old test fixture hid it by giving an accepted plan a flag the server never sends.
+
+    What changes:
+    - Once the auditor accepts a finding's corrective action plan, the finding's Closing evidence shows Add evidence and Submit for closure. Add evidence opens "Add evidence to AUD-n-Fn", with Link existing filtered to the finding's controls.
+    - They show only to the people Compass already lets add closing evidence: the finding's owner, its corrective action's owner, and Manage audits. Someone who can only read the audit sees the evidence but no buttons.
+    - They show only between the plan being accepted and the finding being submitted for closure. After that the section is read-only.
+    - The User Portal's corrective action page is unchanged.
+
+    Call for you to overturn: Compass itself still accepts closing evidence at other stages (open, plan submitted, closure submitted), which is how the portal and Polaris work today. Only the screen holds to "plan accepted, not yet submitted for closure". Tightening Compass's own rule too would change what the portal allows, so I didn't.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Found in Claude's pre-UAT pass of the Evidence Improvements sprint (staging 7e04d3f5e, 2026-11-21), on COM-2044.
 
