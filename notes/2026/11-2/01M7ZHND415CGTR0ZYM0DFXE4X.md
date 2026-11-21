@@ -1,7 +1,7 @@
 ---
 id: 01M7ZHND415CGTR0ZYM0DFXE4X
 created: 2026-11-21T17:15:02.657126Z
-updated: 2026-11-21T17:46:46.654185Z
+updated: 2026-11-21T18:16:58.902732Z
 type: task
 title: Evidence on a plan entry goes out of date by its evidence type, even once the entry is done
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,28 @@ comments:
     - A plan piece with no period counts from the end of the entry's due window, not from the day it was added. This only affects older pieces: Add evidence already fills the period in.
 
     Possible follow-up: a plan piece's valid-until can only be set when it's added. As before, there's no way to push it out later in Audit ▸ Evidence or on the plan screen.
+- id: 01M7ZN6T8PFP72VPGQJ9GXHJ91
+  author: Steve Vine
+  at: 2026-11-21T18:16:58.902578Z
+  text: |-
+    Passed (pre-UAT, staging 816933877, 21 Nov, E2E Test Company, as E2E Admin A).
+
+    Steps: made plan entry SAP-91 "E2E r7 20261121 COM-2075" (due 1–30 Nov 2026), linked it to RIM.9, and added two files of type Report or export (valid for 12 months):
+    - EVD-94, covering 1 Jan – 30 Jun 2024;
+    - EVD-95, covering 1–20 Nov 2026.
+    Then marked SAP-91 Done.
+
+    Seen:
+    - EVD-94's own page: Out of date, "Valid until 30 Jun 2025 (from its type)". EVD-95: Current, valid until 20 Nov 2027.
+    - RIM.9's Evidence tab and Assessment screen: both rows show their dates and states. Nothing on either says "doesn't go out of date".
+    - Audit ▸ Evidence: the same. With Status set to Out of date it lists exactly EVD-94.
+    - SAP-91 still reads Done (Correct and Reopen offered).
+    - Incident evidence (INC-125's EVD-74 to 76) still reads "a record — doesn't go out of date".
+    - RIM.9's status and maturity are unchanged (Implemented, assessment v3).
+
+    Seen, logged separately: the summary box on RIM.9's Control screen doesn't count EVD-94 as out of date. It counts only evidence added straight on the control.
+
+    Screenshots: ~/compass-uat/s9hexqn/COM-2075/ (r7-01 to r7-12)
 assignee: steve
 label:
 - improvement
