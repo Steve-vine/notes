@@ -1,7 +1,7 @@
 ---
 id: 01M7YPVTS6RWS6R284FFB6E890
 created: 2026-11-21T09:26:41.702095Z
-updated: 2026-11-21T11:47:15.997404Z
+updated: 2026-11-21T13:33:27.559253Z
 type: task
 title: 'Assessment screen: the box''s four buttons sit in a 2×2 block — Add evidence, Raise gap, Add to SAP, Request exception'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,20 @@ comments:
     Checked in headless Chromium at 1440 and 375 wide (no label cut off), plus tests for the order, Add evidence's window, Renew exception, and reduced permissions. No browser journey used the old names.
 
     Call for you to overturn: all four buttons now look the same, plain with a plus icon. Add evidence used to be a tinted button.
+- id: 01M7Z4ZNM7H7CTV77607SM65PP
+  author: Steve Vine
+  at: 2026-11-21T13:33:27.558984Z
+  text: |-
+    Pre-UAT (staging 12bd442a5, E2E Test Company): Passed at desktop width. Failed at phone width (fix-forward task logged). One point Couldn't check.
+    Steps: Looked at the box on INS.10 and RIM.9 and opened each button. Created SAP-89 through Add to SAP. Checked the Assessor's box. Checked at 390 wide.
+    Seen:
+    - The four buttons form a 2×2 block, each 162px wide: Add evidence and Raise gap on top, Add to SAP and Request exception below. Each opens its window.
+    - Add to SAP confirms with "INS.10 added to the SAP". It also shows a second "Entry added" message, which is minor.
+    - On the Implemented RIM.9, Request exception is disabled and the block says why.
+    - The Assessor, who can't add to the SAP, sees three buttons with no gap.
+    - At 390 wide the label is clipped to "Request exceptio" (108px of text in a 102px button).
+    Couldn't check: Renew exception, because the test company has no exceptions.
+    Screenshots: ~/compass-uat/s9hexqn/COM-2057/, and COM-2070/390-control-open.png
 assignee: steve
 label:
 - improvement

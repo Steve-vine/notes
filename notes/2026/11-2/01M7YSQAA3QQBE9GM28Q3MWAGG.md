@@ -1,7 +1,7 @@
 ---
 id: 01M7YSQAA3QQBE9GM28Q3MWAGG
 created: 2026-11-21T10:16:39.491356Z
-updated: 2026-11-21T12:43:39.525491Z
+updated: 2026-11-21T13:33:21.938507Z
 type: task
 title: 'Control screen is for viewing only: its add, link, raise and request buttons go (they live on the Assessment screen)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,19 @@ comments:
 
     Also: Browser smoke journey 8 now adds its web address with the box's Add evidence on the Assessment screen, then sets its status from the Overview's Evidence ▸ Manual Collection. It runs with the deploy.
     Checked: Vitest as an administrator (none of those buttons on any tab; each pointer line links to the control on the Assessment screen); the collection, checks, queue and screen-conventions suites pass; Control screen tabs checked in headless Chromium at desktop and phone width.
+- id: 01M7Z4ZG4J7D669JAMAM63CTZ7
+  author: Steve Vine
+  at: 2026-11-21T13:33:21.938175Z
+  text: |-
+    Pre-UAT (staging 12bd442a5, E2E Test Company): Passed.
+    Steps: As Admin A, went tab by tab through RIM.9 and INS.10 (117 gaps, 1 risk, 40 evidence) on the Control screen. Followed a pointer link. Checked as Viewer.
+    Seen:
+    - No tab offers Add decision, Add to plan, Link content, Ask Polaris, Add evidence, Raise gap or Request exception. Unlink, "Say how it is covered" and the evidence actions are gone too.
+    - Every record is still listed.
+    - Each tab ends with a pointer line ("Link decisions…", "Add evidence, add to the plan and ask Polaris to collect…", "Raise gaps…", "Request exceptions… on the Assessment screen"). The one I clicked landed on RIM.9's assessment.
+    - The Viewer sees no pointer lines.
+    - Each action still works from the Assessment screen.
+    Screenshots: ~/compass-uat/s9hexqn/COM-2061/
 assignee: steve
 label:
 - improvement

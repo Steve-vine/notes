@@ -1,7 +1,7 @@
 ---
 id: 01M7YSQNN54DGD87H7RJY3ZNNM
 created: 2026-11-21T10:16:51.109447Z
-updated: 2026-11-21T12:43:29.513448Z
+updated: 2026-11-21T13:33:16.763581Z
 type: task
 title: Flowcharts are listed under Managed Content with the control's other documents, not as a separate Flowcharts section (Control and Assessment screens)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,17 @@ comments:
 
     Call: flowcharts are sorted in among the documents by title; the domain policy stays first.
     Checked: Vitest (the row, its badge and link, the by-title ordering, no Flowcharts heading on the Assessment screen) and headless Chromium at desktop and phone width.
+- id: 01M7Z4ZB2VVE59S72MW886SYPX
+  author: Steve Vine
+  at: 2026-11-21T13:33:16.763412Z
+  text: |-
+    Pre-UAT (staging 12bd442a5, E2E Test Company): Passed.
+    Steps: Used IMA.4, which has the published flowchart "E2E pre-UAT request flow". Opened Control screen ▸ Evidence ▸ Managed Content, then the Assessment screen, then clicked the row.
+    Seen:
+    - On both screens the flowchart is a row under Managed Content, after the Incident Management Policy. It shows its title and caption, a FLOWCHART badge and "Step: Do the work".
+    - There is no Flowcharts heading anywhere, and the row opens the flowchart.
+    Not seen: the Overview's linked-content panel, which shows only with no company chosen, and Admin A always has one.
+    Screenshots: ~/compass-uat/s9hexqn/COM-2062/
 assignee: steve
 label:
 - improvement

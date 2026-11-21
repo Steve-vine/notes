@@ -1,7 +1,7 @@
 ---
 id: 01M7YSPQMJ9Y5Y0RC7KSNCTDH7
 created: 2026-11-21T10:16:20.370685Z
-updated: 2026-11-21T12:43:21.67959Z
+updated: 2026-11-21T13:33:10.851389Z
 type: task
 title: 'Assessment screen Overview: sections divided by lines and laid out as on the Control screen; "Security Assurance Plan" shown once; Ask Polaris to collect moves here'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,21 @@ comments:
     - Someone who records assessments but can't see the Evidence register (the starter Assessor role) sees the assessment's own pieces with their actions instead of the register table — otherwise they'd see nothing.
 
     Checked: Vitest for the shared Evidence tab, the assessor's fallback, Add decision for admin vs viewer, no folding, a line above each section; headless Chromium at 1440 and 390 wide (nothing overflows).
+- id: 01M7Z4Z5A3530J64HYBZV6AP3S
+  author: Steve Vine
+  at: 2026-11-21T13:33:10.851171Z
+  text: |-
+    Pre-UAT (staging 12bd442a5, E2E Test Company): Passed, with one point Couldn't check.
+    Steps: Compared the Assessment screen Overview of RIM.9 and INS.10 with their Control screen tabs. Pressed Ask Polaris to collect this. Linked DEC-11 with Add decision, then unlinked it. Checked as Viewer and as Assessor.
+    Seen:
+    - Evidence, Gaps, Risks, Decisions and Framework mappings are open under a heading and count, divided by lines. None of them fold.
+    - Evidence matches the Control screen's tab: the same four headings and table, with counts that agree. "Security Assurance Plan" appears once.
+    - Gaps and Risks are the Control screen's cards, with no buttons.
+    - Add decision linked DEC-11 at once.
+    - The Viewer sees no Ask Polaris, Add decision, Unlink or evidence actions.
+    - The Assessor, who has no access to the register, sees the assessment's own pieces with their actions.
+    Couldn't check: an actual collection. Ask Polaris opens and correctly says the test company has nothing connected; a real collection needs a connection and Polaris's AI, so Steve should look at that on a company with one.
+    Screenshots: ~/compass-uat/s9hexqn/COM-2060/
 assignee: steve
 label:
 - improvement

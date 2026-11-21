@@ -1,7 +1,7 @@
 ---
 id: 01M7YT3ANFFM3SP69Y4VJE8F6X
 created: 2026-11-21T10:23:13.071481Z
-updated: 2026-11-21T11:47:15.243441Z
+updated: 2026-11-21T13:33:37.308102Z
 type: task
 title: 'Assessment screen: the assessment box never moves when the main content scrolls (today it slides up a little before it sticks)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,16 @@ comments:
     Checked in headless Chromium, measuring the box's top edge while scrolling to the bottom. Before, it slid 24px up and then stuck. Now it doesn't move at all, at 1440×900 and 1280×720. Both tabs still scroll fully to the bottom, and the narrow layout measured the same as before.
 
     Call for you to overturn: the middle column now has its own scrollbar, in the gap between the text and the box. Where scrollbars always show (Windows, or a Mac with a mouse), the box sits 15px further right than before. The text column is unchanged.
+- id: 01M7Z4ZZ4WRY2HNRSBSYGPVAWW
+  author: Steve Vine
+  at: 2026-11-21T13:33:37.307828Z
+  text: |-
+    Pre-UAT (staging 12bd442a5, E2E Test Company): Passed.
+    Steps: Opened INS.10 at 1440×900 and scrolled the Overview and History tabs to the bottom, in small steps (1, 5, 10, 24, 50px) and with the mouse wheel. Repeated at 1280×720.
+    Seen:
+    - The box's top edge stayed at exactly 146px at every step, on both tabs and both sizes. Both tabs reach the bottom.
+    - At 720 tall the box scrolls inside itself, and Save stays visible.
+    Screenshots: ~/compass-uat/s9hexqn/COM-2063/
 assignee: steve
 label:
 - bug

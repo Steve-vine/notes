@@ -1,7 +1,7 @@
 ---
 id: 01M7YQ7FGYM32CNS6DC7HVN6PM
 created: 2026-11-21T09:33:03.39069Z
-updated: 2026-11-21T11:47:14.345914Z
+updated: 2026-11-21T13:33:32.085287Z
 type: task
 title: 'Assessment screen: the History tab''s count leaves out evidence, exception and check entries, so it says 10 where the list (and the Control screen) has 12'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,6 +19,15 @@ comments:
     - The Control screen and the Assessment screen now always show the same number, matching what the tab lists. Both take the count from one place, worked out from the list itself, so a new kind of entry can't make them disagree again.
 
     Checked: a new test with all four kinds of entry (shows 5, lists 5), and the existing saves-only case.
+- id: 01M7Z4ZT1NA6WCR5ZD2J11W92Y
+  author: Steve Vine
+  at: 2026-11-21T13:33:32.085097Z
+  text: |-
+    Pre-UAT (staging 12bd442a5, E2E Test Company): Passed.
+    Steps: Compared the History count with the entries listed on the Assessment screen and the Control screen. INS.1 is "Not assessed yet" in E2E Test Company, so I used RIM.9, INS.10 and INS.6.
+    Seen:
+    - Assessment screen count, Control screen count and entries listed all agree: RIM.9 24/24/24 (saves plus evidence added, linked, taken off, archived and replaced), INS.10 144/144/144, INS.6 2/2/2.
+    Screenshots: ~/compass-uat/s9hexqn/COM-2058/
 assignee: steve
 label:
 - bug
