@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-22T08:31:47.033072Z
+updated: 2026-11-22T08:31:51.344872Z
 type: project
 title: Compass
 identifier: COM
@@ -296,7 +296,7 @@ roadmap:
   end: 2026-12-18
 - id: r83igc8
   title: Registers
-  description: 'Create a new feature to allow the creation '
+  description: Create a new feature to allow the creation of registers
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
