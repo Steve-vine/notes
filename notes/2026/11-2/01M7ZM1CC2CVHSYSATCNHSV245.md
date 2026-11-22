@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM1CC2CVHSYSATCNHSV245
 created: 2026-11-21T17:56:32.258758Z
-updated: 2026-11-22T10:24:43.182038Z
+updated: 2026-11-22T11:11:37.519011Z
 type: task
 title: Import a register from a spreadsheet — match each column to a field, preview every row with its problems, and bring the good rows in as entries
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,34 @@ number: 2081
 sprint: s64t54m
 blocked_by:
 - 01M7ZM01R4WXTDT5YZ3SBHSXF7
+comments:
+- id: 01M81F8K2THQTW9Q6FRC48FRJG
+  author: Steve Vine
+  at: 2026-11-22T11:11:34.490676Z
+  text: |-
+    Done — merged in PR #2075 (555aac50). No migration.
+
+    What changed for people:
+    - A register's owner, editors and administrators see Import beside Add entry. Choose a CSV or .xlsx file (pick the sheet if there are several); the first row is the headings. The file's real type is checked, with a limit of 5 MB and 5,000 rows. UTF-8 (with or without BOM) and Windows code page CSVs both read.
+    - Columns are matched to fields by name; the rest are chosen from a list or left as Don't import. Someone who can change fields gets New field from this column, with a suggested type (and, for a choice, the column's values). The Title field must be matched.
+    - The preview marks each row's problems: required value missing, a date it can't read (quoting what it read), a number that isn't one, a choice value not in the list, a person or company it can't find, and Possible duplicate (already in the register, or earlier in the file). Add these values to the list fixes a choice field's missing values at once. Fix edits a row in place and checks it again.
+    - Import N entries adds the chosen rows, each with the next ID. Each entry's History reads "Added the entry" with "Imported from <file>". The summary lists the IDs added and the rows left out with why. The activity log gets one line for the import.
+    - Dates: ISO, then UK day-first, then Excel serial numbers. A date that only makes sense month-first, a two-digit year, or a day that doesn't exist is flagged, never guessed.
+    - Browser smoke journey 11 imports a one-row CSV and checks the History names the file.
+
+    My calls (yours to overturn):
+    - New field from this column and Add these values to the list change the register's fields straight away, so they stay even if the import is cancelled.
+    - Two-digit years (01/02/25) are flagged rather than read as 2025.
+    - A row with problems can't be ticked in until it's fixed. A possible duplicate is left out unless ticked.
+    - Duplicate checking counts archived entries too.
+    - Only Excel serial numbers for roughly 1908–2199 are read as dates, so a bare "2025" is flagged.
+
+    Built ready for ADR 0167 §2 (updating entries by ID, next sprint): each preview row carries an action; this sprint every row is "add".
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Registers" (ADR in COM-2076). Builds on COM-2078. This is how Steve's current legal register spreadsheet gets into Compass.
 
