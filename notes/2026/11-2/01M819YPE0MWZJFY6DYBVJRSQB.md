@@ -1,17 +1,22 @@
 ---
 id: 01M819YPE0MWZJFY6DYBVJRSQB
 created: 2026-11-22T09:38:47.360146Z
-updated: 2026-11-22T09:38:52.147128Z
+updated: 2026-11-22T09:42:32.36966Z
 type: task
 title: 'ADR 0167 — registers reach the rest of Compass: links between registers, an import that updates, Polaris, a workflow lookup, audit packs and the auditor portal'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2087
 sprint: ssj8zkq
+comments:
+- id: 01M81A5J5HY2X48X3QKE5A2B53
+  author: Steve Vine
+  at: 2026-11-22T09:42:32.369485Z
+  text: 'ADR 0167 merged to main (PR #2072), with brief/feature-set-and-phasing.md §7a and brief/data-model.md updated. Build tasks COM-2088 to COM-2095 in "Registers - Phase 2". Chain: 2088 links → 2089 import updates → 2094 provide to a request → 2095 auditor portal. Branching from 2088: 2090 Polaris reads → 2091 Polaris writes. After phase 1 (COM-2084): 2092 workflow lookup and 2093 audit packs, both independent.'
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Registers - Phase 2". Records the second sprint ADR 0165 §11 and ADR 0166 §3 deferred, with Steve's answers of 2026-11-22.
 
