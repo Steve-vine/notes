@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-22T08:32:10.405044Z
+updated: 2026-11-22T09:38:32.204948Z
 type: project
 title: Compass
 identifier: COM
@@ -1077,6 +1077,9 @@ sprints:
 - id: s64t54m
   title: Registers
   description: 'A new Registers page under Assurance: people define their own registers (fields, owner, editors, shared or per company), keep entries linked to controls, gaps, risks, evidence and SAP entries, import from a spreadsheet, review the register on a cycle and show an auditor any register as it stood on a date (ADR 0165). Starts with templates for the obligations, incident contacts and management review actions registers.'
+- id: ssj8zkq
+  title: Registers - Phase 2
+  description: 'Registers reach the rest of Compass (ADR 0167): entries link across registers; an import can update entries, showing each change first; Polaris reads registers and adds and edits entries in its own area; a workflow can check evidence against a register; audit packs include the registers kept for their controls; and a register can be provided to an auditor''s request and read in the auditor portal as it stood on a chosen date.'
 assignee: steve
 priority: medium
 project_status: active
