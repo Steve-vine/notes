@@ -1,17 +1,31 @@
 ---
 id: 01M81D2CGW6Q47KBC0K7YG0WNZ
 created: 2026-11-22T10:33:14.012149Z
-updated: 2026-11-22T10:38:22.694191Z
+updated: 2026-11-22T11:08:35.942611Z
 type: task
 title: 'Design note: attestations are assigned to reading groups, not business roles — one place to assign, groups built from rules'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2096
 sprint: sdy0mr7
+comments:
+- id: 01M81F33V79MCF73HJ28BR94YM
+  author: Steve Vine
+  at: 2026-11-22T11:08:35.047582Z
+  text: |-
+    Done: ADR 0168 merged in PR #2074 (decisions/0168-attestations-are-assigned-to-reading-groups.md), and ADR 0117 has an amendment pointing to it.
+
+    Decided as agreed: content is assigned to reading groups only. A group is built from rules (everyone, holds any of these roles, a phrase in a role's name, a Microsoft detail), combined as any or all, then people included or left out by name, with leave-out winning. Compass keeps the members up to date, with the day each joined. The role page loses its Content card and shows the groups it feeds, read only. Existing role assignments move into one-role groups.
+
+    Calls for Steve to confirm:
+    - Once a group has had content assigned it can be archived but not deleted.
+    - Rules combine as "any" by default.
+    - The Microsoft details offered are department, job title, office, employee type and company name.
+    - Polaris reads groups and assigns content, but doesn't change a group's rules.
 assignee: steve
 label:
 - brief
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Attestations - Tweaks and Improvements". Raised by Steve while testing Attestations, 2026-11-22.
 
