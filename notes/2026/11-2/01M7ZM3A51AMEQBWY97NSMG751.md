@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM3A51AMEQBWY97NSMG751
 created: 2026-11-21T17:57:35.521469Z
-updated: 2026-11-21T17:58:09.753484Z
+updated: 2026-11-22T08:25:47.565091Z
 type: task
 title: Templates — start the Obligations, Incident contacts and Management review actions registers ready-made and linked to their controls; a register named like one Compass already keeps points there
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,7 @@ number: 2084
 sprint: s64t54m
 blocked_by:
 - 01M7ZM2F7JZ3N6PTQWXW4VNN6T
+- 01M815RVX08HB95ZW5QHTC8JHV
 assignee: steve
 label:
 - feature
