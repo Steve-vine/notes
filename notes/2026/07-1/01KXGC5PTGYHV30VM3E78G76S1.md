@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-22T09:41:40.128211Z
+updated: 2026-11-22T10:22:45.253754Z
 type: project
 title: Compass
 identifier: COM
@@ -1082,6 +1082,9 @@ sprints:
 - id: ssj8zkq
   title: Registers - Phase 2
   description: 'Registers reach the rest of Compass (ADR 0167): entries link across registers; an import can update entries, showing each change first; Polaris reads registers and adds and edits entries in its own area; a workflow can check evidence against a register; audit packs include the registers kept for their controls; and a register can be provided to an auditor''s request and read in the auditor portal as it stood on a chosen date.'
+- id: sdy0mr7
+  title: Attestations - Tweaks and Improvements
+  description: Tweaks and improvements to Attestations found while Steve tests it (logged 2026-11-22).
 assignee: steve
 priority: medium
 project_status: active
