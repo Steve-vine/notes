@@ -1,17 +1,22 @@
 ---
 id: 01M815RVX08HB95ZW5QHTC8JHV
 created: 2026-11-22T08:25:42.048574Z
-updated: 2026-11-22T08:25:46.191709Z
+updated: 2026-11-22T08:27:13.956042Z
 type: task
 title: 'ADR 0166 — obligations and interested parties can be kept separately or together: three templates instead of one, and a note when a control is already kept by another register'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2086
 sprint: s64t54m
+comments:
+- id: 01M815VNN47E46NHQCNH6XABPH
+  author: Steve Vine
+  at: 2026-11-22T08:27:13.95589Z
+  text: 'ADR 0166 merged to main (PR #2070), amending ADR 0165 §9 and answering its planning call 5. brief/feature-set-and-phasing.md §7a updated. COM-2084 rewritten for five templates (OBL, PTY, OIP, CON, MRA) and the note when a control is already kept by another register; it is now blocked by this task as well as COM-2083.'
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Registers". Steve, 2026-11-22: offer both options for INS.5 and INS.12, not only the combined register ADR 0165 §9 chose.
 
