@@ -1,7 +1,7 @@
 ---
 id: 01M81D2XKBVVVQQB2X4N5N5QCF
 created: 2026-11-22T10:33:31.499353Z
-updated: 2026-11-22T12:41:31.896029Z
+updated: 2026-11-22T13:26:24.680505Z
 type: task
 title: Reading groups — assign a document once to a group built from rules (everyone, roles, role-name phrase, Microsoft details, extras and exclusions); the role page's Content card goes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,24 @@ comments:
     - Old ?role= filter links on Attestations screens no longer filter.
 
     Done when: covered by integration tests. Those are: All managers by phrase, with the preview; sign once across groups; a new role holder joins and is asked straight away; a leaver drops out and keeps their signatures; the role page can't assign; and the migration test moves role assignments into one-role groups with history intact.
+- id: 01M81PZFN8BXMWSGTZ4XJ5HB2E
+  author: Steve Vine
+  at: 2026-11-22T13:26:24.680337Z
+  text: |-
+    Pre-UAT on staging (f71fdd72e), E2E Test Company, as E2E Admin A: **Passed**, with one part I couldn't check. The mail catcher was on throughout.
+
+    - **Phrase rule, preview, save: Passed.** New reading group "E2E Starters" with the rule "Holds a role whose name contains 'starter'". The preview showed 1 person, Compass Test (the E2E Starter role's holder). After saving, the group page showed its rule, its Content card, and Compass Test with why ("Holds a role whose name contains 'starter'", since 22 Nov).
+    - **Edit preview: Passed.** Edit who is in it, then Leave out Compass Test. The preview said "Removes: Compass Test. Their signatures are kept." I cancelled.
+    - **Sign once: Passed.** I assigned "Test document" to E2E Starters, made a second group "E2E Starter role" (rule: holds E2E Starter) and assigned the same document. Compass Test's attestations page shows **one** request, "In E2E Starter role and E2E Starters", with two rounds.
+    - **Role page: Passed.** E2E Starter has no Content card. It has a Reading groups card: "In reading groups: E2E Starter role, E2E Starters", each a link.
+    - **Existing role assignments: Passed.** Read-only check of staging's Test Company: its two earlier role assignments are now the groups "Service Desk Agents" and "Test Role 1", each with the rule "Holds <role>", 1 member, and their documents.
+    - **Couldn't check: a role change moving someone in or out live.** That needs an access request that changes Entra, so it's covered by the integration tests only. Steve: give or remove a role for a test person and see the group follow.
+
+    Cleanup: both test assignments are stopped (deadline 1 day). The groups are left in E2E Test Company for you to look at.
+
+    Defect found and fixed forward in COM-2099: the menu still described Attestations as "each role".
+
+    Screenshots: ~/compass-uat/attestations-tweaks/COM-2097/
 assignee: steve
 label:
 - feature
