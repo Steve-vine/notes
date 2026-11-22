@@ -1,7 +1,7 @@
 ---
 id: 01M7ZKZFECD5CZKNMCJ88YT8ZS
 created: 2026-11-21T17:55:29.868183Z
-updated: 2026-11-22T08:36:09.975605Z
+updated: 2026-11-22T09:33:05.110877Z
 type: task
 title: Registers and their fields — someone who can edit Content makes a register (name, prefix, owner, editors, shared or per company) and defines its fields; Assurance ▸ Registers lists them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 2077
 sprint: s64t54m
 blocked_by:
 - 01M7ZKYVNWPJX322TKWFH428HY
+comments:
+- id: 01M819M52AZ9E07D1C6BWB5KMF
+  author: Steve Vine
+  at: 2026-11-22T09:33:01.898366Z
+  text: |-
+    Done — merged in PR #2071 (e89e1b49), migration 0890_registers.
+
+    What changed for people:
+    - Assurance ▸ Registers is in the menu after Evidence. It lists the registers the person can see, with owner, Shared or Per company, entries and last/next review (filled in by COM-2078 and COM-2083). An Archived filter shows archived ones, and an empty page explains what a register is.
+    - New register (administrators and Content editors) asks for name, description, a three-letter prefix, owner, editors, One list for every company / A list for each company, and Restricted. A prefix already in use, or one of Compass's own, is refused with the reason.
+    - Settings ▸ Fields: every register starts with a Title field (rename, not remove). All ten field types, each with a hint and Required. Order by dragging (or arrow keys). A Date field can remind (default 30 days), and one Person field can be Responsible.
+    - Removing a field hides it and keeps its values. Removing a choice value retires it, shown "(retired)". Once there are entries, the only type changes are Text → Long text and Choice → Multiple choice.
+    - An empty register can be deleted. A register can be archived (read-only, hidden by default) and restored. Every change is in the activity log.
+    - A Restricted register is visible only to its owner, editors and administrators, checked on the server. The owner can change the description and editors.
+
+    My calls (yours to overturn):
+    - Marking a second Person field Responsible moves the mark to it rather than refusing.
+    - Even an empty register can be archived.
+    - Before a register has entries, a field can change to any type.
+    - Re-adding a removed choice value with the same words brings back the original value.
+    - Someone who can make registers doesn't see a Restricted register unless they own it, edit it or are an administrator.
+    - CVE and CWE are also reserved prefixes.
+
+    For later tasks: the note on New register for a name Compass already keeps ("Risk register" → Risks) comes with COM-2084. The controls a register is kept for come with COM-2079. Review dates come with COM-2083.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Registers" (ADR in COM-2076). The first build task: the register itself and its fields. Entries come in COM-2078.
 
