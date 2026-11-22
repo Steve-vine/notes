@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM0H3WQ90W4GMRNFDBEANS
 created: 2026-11-21T17:56:04.348541Z
-updated: 2026-11-22T10:24:42.135413Z
+updated: 2026-11-22T11:33:43.050688Z
 type: task
 title: Links — an entry links to controls, gaps, risks, SAP entries, documents, decisions, vendors and inventory assets; a register names the controls it's kept for; every linked record shows it back
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,33 @@ number: 2079
 sprint: s64t54m
 blocked_by:
 - 01M7ZM01R4WXTDT5YZ3SBHSXF7
+comments:
+- id: 01M81GH1GCG19EKZ0F7JARVEEW
+  author: Steve Vine
+  at: 2026-11-22T11:33:39.980634Z
+  text: |-
+    Done — merged in PR #2076 (5f58fce3), migration 0892_register_links.
+
+    What changed for people:
+    - An entry's Links section lists what it links to, grouped by kind, each with its reference and title as a link. Add link asks what kind (Control, Gap, Risk, SAP entry, Document, Decision, Vendor, Inventory asset), then finds records by reference or title, several at once. Unlink takes one off. Each is a line in the entry's History.
+    - A company's gaps, risks, SAP entries, vendors and assets are linked and seen only within that company. In a shared register each company sees only its own links. Controls, documents and decisions show everywhere.
+    - A register's Settings have a Controls panel ("This register is kept for INS.5 and INS.12"), and the controls show in its header.
+    - A control's page has a Registers section: the registers kept for it and the entries linked to it. A gap, risk, SAP entry, document, decision, vendor or inventory asset shows In registers. Only registers the person can see are listed.
+    - When a linked record is deleted, its links go and the entry's History says "RSK-12 deleted", from any screen that deletes it (including a vendor purge). Archiving or closing a record keeps its links.
+
+    My calls (yours to overturn):
+    - "In registers" sits beside the existing Incidents card on each record's page.
+    - Someone who can't see a kind of record finds none to link, and sees an existing link as "A vendor you can't open".
+    - An inventory asset deleted as a duplicate of another loses its register links (History says "AST-3 deleted") rather than moving them to the asset kept.
+    - A register's controls are chosen by its owner or someone who can make registers.
+    - A control's Registers section needs View the playbook.
+
+    Not done: no Browser smoke journey for links (covered by integration tests).
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Registers" (ADR in COM-2076). Builds on COM-2078.
 
