@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM3A51AMEQBWY97NSMG751
 created: 2026-11-21T17:57:35.521469Z
-updated: 2026-11-22T08:26:50.899251Z
+updated: 2026-11-22T22:13:44.325526Z
 type: task
 title: Templates — start the Obligations, Interested parties, Obligations and interested parties, Incident contacts and Management review actions registers ready-made and linked to their controls; a note when a control or a name is already kept elsewhere
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint "Registers" (ADR 0165 in COM-2076; ADR 0166 in COM-2086). Builds on COM-2083: the templates set a review cycle, reminder dates and a Responsible person, so everything they use has to exist first.
 
