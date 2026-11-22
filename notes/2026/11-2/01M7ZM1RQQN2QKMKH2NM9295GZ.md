@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM1RQQN2QKMKH2NM9295GZ
 created: 2026-11-21T17:56:44.91962Z
-updated: 2026-11-22T11:11:43.760518Z
+updated: 2026-11-22T12:02:00.578335Z
 type: task
 title: Any register as it stood on a date, and export to CSV, Excel or PDF — what an auditor asks for
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,36 @@ number: 2082
 sprint: s64t54m
 blocked_by:
 - 01M7ZM01R4WXTDT5YZ3SBHSXF7
+comments:
+- id: 01M81J4VBYNQBT3CN76KV5RF9T
+  author: Steve Vine
+  at: 2026-11-22T12:01:57.63021Z
+  text: |-
+    Done — merged in PR #2077. No migration.
+
+    What changed for people:
+    - The Entries tab has an As at date, today by default. A past day shows the register as it stood at the end of that day: only the entries that existed then, with their values then; entries archived by then under Archived with their reason; and fields removed since as columns with the values they held.
+    - A banner reads "Showing the register as it stood on 31 March 2026 · Back to today". The list is read-only then (no Add entry or Import), but filters, search, sort and columns still work. The day is in the address, so the view can be shared.
+    - Export offers CSV, Excel and PDF, each with "Columns on screen" or "All columns", following the as-at day, filters, search and order. One row per entry, ID first; Archived and its reason are added when archived entries are shown.
+    - CSV is UTF-8 with a BOM. Excel keeps dates and numbers as such and has a second "Register" sheet with the register's details.
+    - The PDF cover has the name, description, owner, editors, Shared or per company, the company (per-company registers), the controls it's kept for, the last review (from COM-2083) and "As at …". Every page carries "Exported by … on …" and "Page n of N". Long text wraps.
+    - Files are named like "OBL legal and regulatory obligations as at 2026-03-31.xlsx". Anyone who can see the register can export it, and each export is in the activity log.
+    - Browser smoke journey 12 shows a register on a past day and exports it.
+
+    My calls (yours to overturn):
+    - End of day is on the viewer's own clock: Compass keeps time zones per person, not per company (ADR 0121 §3).
+    - Fields added after the chosen day are hidden in the as-at view. Fields removed since show under their plain name, with no "removed" mark.
+    - "Incomplete" in the as-at view uses today's required-field rules.
+    - Opening an entry from the as-at list shows the entry as it is now.
+    - The CSV has no details block above the rows, so it stays one row per entry; Excel and the PDF carry the details.
+    - Dates in the CSV and PDF follow the exporter's date format (UK "31 Mar 2026" by default).
+
+    Worth knowing: an entry's links aren't shown as at a date (ADR 0167 replays them later). Exports are built while you wait, so a PDF of thousands of long rows could take a while.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Registers" (ADR in COM-2076). Builds on COM-2078.
 
