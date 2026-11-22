@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-22T09:38:47.36258Z
+updated: 2026-11-22T09:39:40.546535Z
 type: project
 title: Compass
 identifier: COM
@@ -300,6 +300,8 @@ roadmap:
   sprints:
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: s64t54m
+  - project: 01KXGC5PTGYHV30VM3E78G76S1
+    sprint: ssj8zkq
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
