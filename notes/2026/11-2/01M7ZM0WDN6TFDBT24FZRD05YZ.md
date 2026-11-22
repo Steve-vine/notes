@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM0WDN6TFDBT24FZRD05YZ
 created: 2026-11-21T17:56:15.925064Z
-updated: 2026-11-22T11:33:53.451905Z
+updated: 2026-11-22T12:25:48.587656Z
 type: task
 title: Evidence on a register entry — the Add evidence window works on an entry, and the piece's "Used in" lists it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,32 @@ number: 2080
 sprint: s64t54m
 blocked_by:
 - 01M7ZM0H3WQ90W4GMRNFDBEANS
+comments:
+- id: 01M81KGDP8T0H6700GNDEFJZGG
+  author: Steve Vine
+  at: 2026-11-22T12:25:45.41686Z
+  text: |-
+    Done — merged in PR #2078 (0fdb6478), migration 0893_register_evidence.
+
+    What changed for people:
+    - An entry's page has an Evidence section with the usual Add evidence button, opening the shared window titled "Add evidence to OBL-4 Data Protection Act 2018". Add new works as everywhere else, with the period defaulting to today. Link existing opens filtered to the controls the entry links to plus the controls its register is kept for; the filter can be cleared.
+    - Each piece shows its EVD ID, name, type, classification and status. Take off unlinks it from this entry only.
+    - A piece's Used in lists "OBL-4 Data Protection Act 2018 · Legal and regulatory obligations", linking to the entry.
+    - A per-company register's entry holds its own company's evidence. In a shared register, evidence is added within the company being viewed and shows only there, and so do its History lines.
+    - An archived entry keeps its evidence read-only. Once restored, it takes evidence again.
+    - Only the register's owner, its editors and administrators add or take off evidence. Anyone who can see the entry reads it, except restricted pieces. Each add and take-off is in the entry's History. People who can see the register can download the entry's files without needing View audit.
+
+    My calls (yours to overturn):
+    - Evidence added to an entry isn't also linked by hand to the register's controls or the entry's linked controls, unlike a plan entry's evidence. It's a small change if you want it.
+    - The entry's evidence card has Take off only (no Archive or New version), because entry editors don't manage evidence; pieces are archived from their own page.
+    - A shared register's entry viewed with no company chosen says "Choose a company to see its evidence for this entry."
+
+    Not done: no Browser smoke journey for entry evidence (the screen crawl visits the entry page).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Registers" (ADR in COM-2076). Builds on COM-2079 and on ADR 0164 (Evidence Improvements: one piece of evidence held once and used in many places, and the Add evidence window from COM-2041 and COM-2042).
 
