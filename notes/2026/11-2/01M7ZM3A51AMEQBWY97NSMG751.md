@@ -1,9 +1,9 @@
 ---
 id: 01M7ZM3A51AMEQBWY97NSMG751
 created: 2026-11-21T17:57:35.521469Z
-updated: 2026-11-22T08:25:47.565091Z
+updated: 2026-11-22T08:26:50.899251Z
 type: task
-title: Templates — start the Obligations, Incident contacts and Management review actions registers ready-made and linked to their controls; a register named like one Compass already keeps points there
+title: Templates — start the Obligations, Interested parties, Obligations and interested parties, Incident contacts and Management review actions registers ready-made and linked to their controls; a note when a control or a name is already kept elsewhere
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2084
 sprint: s64t54m
@@ -16,20 +16,20 @@ label:
 priority: medium
 task_status: todo
 ---
-Sprint "Registers" (ADR in COM-2076). Builds on COM-2083: the templates set a review cycle, reminder dates and a Responsible person, so everything they use has to exist first.
+Sprint "Registers" (ADR 0165 in COM-2076; ADR 0166 in COM-2086). Builds on COM-2083: the templates set a review cycle, reminder dates and a Responsible person, so everything they use has to exist first.
 
 ## What people see
 
-**New register ▸ From a template** offers three templates. Each shows its fields and controls before it's created. The name, prefix and owner can be changed, and fields can be changed afterwards like any register's.
+**New register ▸ From a template** offers five templates. Each shows its fields and controls before it's created. The name, prefix and owner can be changed, and fields can be changed afterwards like any register's.
+
+For INS.5 and INS.12 there are three, so they can be kept separately or together (ADR 0166, Steve 2026-11-22). Each has its own prefix, so any mix can be made side by side.
 
 **1. Legal, regulatory and contractual obligations**
-- Prefix OBL. One list for every company. Kept for INS.5 and INS.12. Reviewed every 12 months.
-- One register for obligations and the parties they come from, so INS.5 and INS.12 are met by the same list (Steve agreed, 2026-11-21).
+- Prefix OBL. One list for every company. Kept for INS.5. Reviewed every 12 months.
 - Fields:
   - **Obligation** (the Title)
-  - **Kind**: choice of Law, Regulation, Contract, Code of practice, Standard, Customer expectation
+  - **Kind**: choice of Law, Regulation, Contract, Code of practice, Standard
   - **Source**, e.g. "UK GDPR Art. 32" or a contract's name
-  - **Who it comes from**: the interested party, e.g. ICO, a customer, the card schemes
   - **Jurisdiction**: choice of UK, EU, US, International, Other
   - **What it requires of us** (long text)
   - **How we meet it** (long text). Links to the controls and documents go in Links.
@@ -38,7 +38,36 @@ Sprint "Registers" (ADR in COM-2076). Builds on COM-2083: the templates set a re
   - **Owner** (Person, Responsible)
   - **Next review** (Date, reminds 30 days before)
 
-**2. Incident contacts**
+**2. Interested parties**
+- Prefix PTY. One list for every company. Kept for INS.12. Reviewed every 12 months.
+- Fields:
+  - **Party** (the Title), e.g. ICO, Acme Ltd, our cyber insurer
+  - **Type**: choice of Customer, Regulator, Insurer, Investor or owner, Staff, Supplier, Certification body, Public, Other
+  - **What they expect of us** (long text)
+  - **Where it's set out**, e.g. "Master services agreement, schedule 4", "UK GDPR", "Not written down"
+  - **How we meet it** (long text)
+  - **Applies to** (Company)
+  - **Relationship owner** (Person, Responsible)
+  - **Next review** (Date, reminds 30 days before)
+
+**3. Obligations and interested parties**
+- Prefix OIP. One list for every company. Kept for INS.5 and INS.12. Reviewed every 12 months.
+- Every entry is an obligation or expectation together with the party it's owed to. Read as a list it answers INS.5; grouped or filtered by party it answers INS.12.
+- Fields:
+  - **Obligation or expectation** (the Title)
+  - **Kind**: choice of Law, Regulation, Contract, Code of practice, Standard, Expectation (not written down)
+  - **Source**
+  - **Owed to**: the interested party, e.g. ICO, a customer, the card schemes
+  - **Party type**: the same choices as Interested parties' Type
+  - **Jurisdiction**: choice of UK, EU, US, International, Other
+  - **What it requires of us** (long text)
+  - **How we meet it** (long text)
+  - **Applies to** (Company)
+  - **Status**: choice of Met, Partly met, Not met, Not yet assessed
+  - **Owner** (Person, Responsible)
+  - **Next review** (Date, reminds 30 days before)
+
+**4. Incident contacts**
 - Prefix CON. A list for each company. Kept for IMA.3. Reviewed every 6 months.
 - Fields:
   - **Contact** (the Title)
@@ -54,7 +83,7 @@ Sprint "Registers" (ADR in COM-2076). Builds on COM-2083: the templates set a re
   - **Owner** (Person, Responsible)
 - **Print this register** is offered on its page: IMA.3 asks where the list is held for a systems-down scenario. It's the COM-2082 PDF.
 
-**3. Management review actions**
+**5. Management review actions**
 - Prefix MRA. A list for each company. Kept for INS.6 and INS.19. Reviewed every 12 months.
 - Fields:
   - **Action** (the Title)
@@ -66,6 +95,12 @@ Sprint "Registers" (ADR in COM-2076). Builds on COM-2083: the templates set a re
   - **Notes** (long text)
 
 Making a register from a template whose prefix is taken (say, a second OBL register) asks for another prefix.
+
+**A control already kept by another register** (ADR 0166 §2)
+- When a register is about to be kept for a control that another register (not archived) already keeps, a note names it with a link: "INS.5 is already kept by Obligations and interested parties (OIP)".
+- It shows in the template preview and when someone adds a control to any register (the Controls links from COM-2079).
+- It advises; creating the register or adding the control is still allowed.
+- A Restricted register the person can't open is named only as "a Restricted register", without a name or link.
 
 **A register Compass already keeps**
 - On **New register**, a name that reads like a register Compass already holds shows a note under the name, with a link: "Compass already keeps this in Risks — open Risks". It only advises; creating the register is still allowed.
@@ -87,10 +122,14 @@ Making a register from a template whose prefix is taken (say, a second OBL regis
 
 - Templates are code-defined data (a list of definitions), not database rows. Creating from one makes an ordinary register; nothing stays tied to the template.
 - Controls are named by ref. A ref the library doesn't have is skipped, and the preview says so.
+- The control note: a query for other non-archived registers linked to the same control, returned as a `warnings` list beside the result (template preview, and the add-control-link response from COM-2079), never an error. Filter Restricted registers the caller can't see down to an anonymous mention.
 - The name-match note is a client-side keyword check with a server-provided list of (keywords → page) pairs, so the list lives in one place.
+- Linking an Interested parties entry to Obligations entries (entry-to-entry across registers) is second sprint, not here.
 
 ## Done when
-- Each of the three templates creates a register with its fields, prefix, Shared or per company setting, controls, review cycle, reminder dates and Responsible person as listed. Name, prefix and owner can be changed first.
+- Each of the five templates creates a register with its fields, prefix, Shared or per company setting, controls, review cycle, reminder dates and Responsible person as listed. Name, prefix and owner can be changed first.
+- OBL, PTY and OIP can all be made in the same Compass without a prefix clash.
+- Making OIP when OBL already exists shows "INS.5 is already kept by …" in the preview; so does adding INS.5 to any register's controls. Neither is blocked.
 - Incident contacts can be printed from its page.
 - Typing a name like "Risk register" or "Supplier list" on New register shows where Compass already keeps it, without blocking.
 
