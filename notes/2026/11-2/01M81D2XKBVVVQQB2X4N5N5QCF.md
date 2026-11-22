@@ -1,12 +1,14 @@
 ---
 id: 01M81D2XKBVVVQQB2X4N5N5QCF
 created: 2026-11-22T10:33:31.499353Z
-updated: 2026-11-22T10:33:35.480292Z
+updated: 2026-11-22T10:33:52.046442Z
 type: task
 title: Reading groups — assign a document once to a group built from rules (everyone, roles, role-name phrase, Microsoft details, extras and exclusions); the role page's Content card goes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2097
 sprint: sdy0mr7
+blocked_by:
+- 01M81D2CGW6Q47KBC0K7YG0WNZ
 assignee: steve
 label:
 - feature
