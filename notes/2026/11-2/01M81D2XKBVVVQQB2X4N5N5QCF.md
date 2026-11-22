@@ -1,7 +1,7 @@
 ---
 id: 01M81D2XKBVVVQQB2X4N5N5QCF
 created: 2026-11-22T10:33:31.499353Z
-updated: 2026-11-22T10:42:05.033274Z
+updated: 2026-11-22T12:41:31.896029Z
 type: task
 title: Reading groups — assign a document once to a group built from rules (everyone, roles, role-name phrase, Microsoft details, extras and exclusions); the role page's Content card goes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,33 @@ number: 2097
 sprint: sdy0mr7
 blocked_by:
 - 01M81D2CGW6Q47KBC0K7YG0WNZ
+comments:
+- id: 01M81MD8ABBDETPCWMT6C6Z8MC
+  author: Steve Vine
+  at: 2026-11-22T12:41:30.187313Z
+  text: |-
+    Done: merged in PR #2079 (migration 0900_reading_groups, after Registers' 0893).
+
+    What's in:
+    - **Attestations ▸ Reading groups:** a new tab listing each group with who's in it, how many people, how many documents, and its status.
+    - **The group builder:** rules (everyone, holds any of these roles, a role name contains…, Department / Job title / Office / Employee type / Company name is…), combined as any or all, then people included or left out by name, with leave-out winning. A live preview shows who the group holds now and who an edit adds and removes, before saving.
+    - **A group's page:** its rules, its members with why each is in it, and its Content card (the role's card, moved). Archive and restore are on it. Delete is offered only if content has never been assigned.
+    - **Kept members:** refreshed when the group is saved, when someone's roles change, after each directory read, and hourly. New members join any round running now with their own deadline. Leavers drop out of the counts and keep their signatures.
+    - **The role page:** the Content card is gone. It shows "In reading groups: …" as links instead.
+    - **Everywhere else:** Open, Compliance, exports and the portal's "why asked" are by reading group. Polaris reads groups and assigns, changes, stops and restarts content on them, but doesn't change a group's rules.
+    - **Existing role assignments:** each became a one-role group named after its role, with rounds, people and signatures unchanged.
+
+    Notes for Steve:
+    - "Holds these roles" still counts a disabled role's holders. Only a deleted role stops counting.
+    - "Everyone" means every enabled member account in the directory (no guests).
+    - Old ?role= filter links on Attestations screens no longer filter.
+
+    Done when: covered by integration tests. Those are: All managers by phrase, with the preview; sign once across groups; a new role holder joins and is asked straight away; a leaver drops out and keeps their signatures; the role page can't assign; and the migration test moves role assignments into one-role groups with history intact.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Attestations - Tweaks and Improvements". Builds on the design note (COM-2096, ADR 0168). Raised by Steve while testing Attestations, 2026-11-22.
 
