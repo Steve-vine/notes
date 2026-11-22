@@ -1,15 +1,19 @@
 ---
 id: 01M81A2A2EEFTA9WNY3N38KG9B
 created: 2026-11-22T09:40:45.774401Z
-updated: 2026-11-22T09:40:45.774401Z
+updated: 2026-11-22T09:42:15.421967Z
 type: task
 title: An import that updates — a spreadsheet row with an entry's ID updates that entry, and the preview shows every change, old value beside new, before anything is saved
-assignee: steve
-task_status: todo
-priority: high
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2089
+sprint: ssj8zkq
+blocked_by:
+- 01M81A1ZNSNWH7FM10E1J579E3
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 Sprint "Registers - Phase 2" (ADR 0167 §2, in COM-2087). Extends the add-only import from COM-2081.
 

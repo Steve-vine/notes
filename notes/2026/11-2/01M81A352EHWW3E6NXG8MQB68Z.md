@@ -1,15 +1,20 @@
 ---
 id: 01M81A352EHWW3E6NXG8MQB68Z
 created: 2026-11-22T09:41:13.422755Z
-updated: 2026-11-22T09:41:13.422755Z
+updated: 2026-11-22T09:42:18.678857Z
 type: task
 title: A workflow checks evidence against a register — a register lookup (is on, is not on, at least N are on), read once per run, with a warning before a field a workflow uses is changed
-assignee: steve
-label: feature
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2092
+sprint: ssj8zkq
+blocked_by:
+- 01M819YPE0MWZJFY6DYBVJRSQB
+- 01M7ZM3A51AMEQBWY97NSMG751
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint "Registers - Phase 2" (ADR 0167 §4, in COM-2087). Builds on the phase-1 registers (after COM-2084).
 

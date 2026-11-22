@@ -1,15 +1,19 @@
 ---
 id: 01M81A2KFVFRYRDEBCDQ2FT208
 created: 2026-11-22T09:40:55.419185Z
-updated: 2026-11-22T09:40:55.419185Z
+updated: 2026-11-22T09:42:16.325311Z
 type: task
 title: 'Polaris reads registers — its own Registers area: which registers there are, their entries, one entry with history and links, a register as it stood on a date, and what changed'
-assignee: steve
-task_status: todo
-label: feature
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2090
+sprint: ssj8zkq
+blocked_by:
+- 01M81A1ZNSNWH7FM10E1J579E3
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint "Registers - Phase 2" (ADR 0167 §3, in COM-2087). Builds on the links between registers (so an entry's links include other registers' entries).
 
