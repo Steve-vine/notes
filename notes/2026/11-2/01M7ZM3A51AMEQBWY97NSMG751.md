@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM3A51AMEQBWY97NSMG751
 created: 2026-11-21T17:57:35.521469Z
-updated: 2026-11-22T22:13:44.325526Z
+updated: 2026-11-22T22:56:32.685165Z
 type: task
 title: Templates — start the Obligations, Interested parties, Obligations and interested parties, Incident contacts and Management review actions registers ready-made and linked to their controls; a note when a control or a name is already kept elsewhere
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,31 @@ sprint: s64t54m
 blocked_by:
 - 01M7ZM2F7JZ3N6PTQWXW4VNN6T
 - 01M815RVX08HB95ZW5QHTC8JHV
+comments:
+- id: 01M82QK7M4EJP6R4NP5TCJ9DG7
+  author: Steve Vine
+  at: 2026-11-22T22:56:26.244051Z
+  text: |-
+    Built and merged to main (PR #2083, f73af7daf).
+
+    What changed for people
+    - New register ▸ From a template offers five ready-made registers: Legal, regulatory and contractual obligations (OBL), Interested parties (PTY), Obligations and interested parties (OIP), Incident contacts (CON) and Management review actions (MRA). Each shows its fields, controls, companies and review cycle first. The name, prefix and owner can be changed, and the result is an ordinary register.
+    - A taken prefix asks for another. A second OBL says who has it and waits for a new one. OBL, PTY and OIP sit side by side without a clash.
+    - A control already kept by another register gets a note, in the template preview and when controls are added to any register: "INS.5 is already kept by Obligations and interested parties (OIP)", with a link. It never blocks. A Restricted register the person can't open is named only as "a Restricted register".
+    - A name Compass already keeps gets a note on New register: "Compass already keeps this in Risks — open Risks". It never blocks.
+    - Print this register is on Incident contacts' page: a PDF of every current entry, for when systems are down. Any register's owner can switch it on or off in its details.
+    - A date can say when something was last done. Incident contacts' Last checked falls due again six months later and reminds 30 days before then. Any Date field can be set this way.
+
+    My calls (for Steve to overturn)
+    - This task added a small database change it didn't expect (migration 0895_register_templates). "30 days before it's six months old" couldn't be expressed otherwise, and it keeps Print as a setting on the register rather than code that knows about Incident contacts.
+    - "Key" alone would flag "Key contacts" as Secrets, so a Secrets match is dropped when the name also says contact, control, date, holder, people, person, personnel or role. "Incident contacts" isn't matched to Incidents either.
+    - Someone who owns a register but can't see registers generally is told "another register" for an unrestricted register they can't open, because "a Restricted register" would be untrue.
+    - Templates name controls by their on-screen reference, as the task says. If INS.5, INS.6, INS.12, INS.19 or IMA.3 are ever renumbered, the template data needs updating.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Registers" (ADR 0165 in COM-2076; ADR 0166 in COM-2086). Builds on COM-2083: the templates set a review cycle, reminder dates and a Responsible person, so everything they use has to exist first.
 
