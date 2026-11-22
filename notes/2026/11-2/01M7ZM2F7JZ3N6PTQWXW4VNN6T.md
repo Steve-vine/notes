@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM2F7JZ3N6PTQWXW4VNN6T
 created: 2026-11-21T17:57:07.954058Z
-updated: 2026-11-22T12:25:55.379319Z
+updated: 2026-11-22T22:13:40.622741Z
 type: task
 title: Reviewing a register — a review cycle, Mark as reviewed with a comment, the review filed as evidence on its controls and completing a due SAP entry; reminder dates on entries reach the person responsible
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,41 @@ sprint: s64t54m
 blocked_by:
 - 01M7ZM0WDN6TFDBT24FZRD05YZ
 - 01M7ZM1RQQN2QKMKH2NM9295GZ
+comments:
+- id: 01M82N4V3MXKZXE7VPT6G66A09
+  author: Steve Vine
+  at: 2026-11-22T22:13:37.524414Z
+  text: |-
+    Built and merged to main (PR #2081, da1be6cac).
+
+    What changed for people
+    - A register's Settings have a Reviews panel: Review every N months (12 by default, or off), the classification used for review evidence (Internal by default, Confidential for a Restricted register), and the register's SAP entry in the company being viewed.
+    - The Registers list and each register's header show Last reviewed and Next review. Next review turns amber within 30 days and red once it's overdue.
+    - Mark as reviewed is open to the owner, editors and administrators. It asks for an optional comment and shows what will happen before it does anything. It then:
+      - records the review on a new Reviews tab;
+      - files a PDF of the register as evidence of type "Register review", linked to each of the register's controls where they apply;
+      - completes the register's SAP entry if it's open and due. If it isn't due, it's left open and the confirmation says so.
+    - A review is permanent. Its comment can be corrected with a reason, and the original is kept in the activity log.
+    - Reminders on Actions and in the daily mail:
+      - "Review the … register — due …" reaches the owner 30 days before the date and stays until the register is reviewed.
+      - A Date field set to remind puts "OBL-4 … · Review by …" on the Responsible person's queue, or the owner's.
+
+    My calls (for Steve to overturn)
+    - There's a new evidence type, "Register review".
+    - Where the review is filed:
+      - A shared register with no controls files its review in the company being viewed.
+      - A shared register with controls files it in every company where one of its controls applies.
+      - A company whose named SAP entry is due also gets a copy.
+    - The review PDF is the register as it stands at that moment: every column, no filters, archived entries left out.
+    - Review settings and the SAP entry can be changed by the owner or someone who can make registers.
+    - Marking as reviewed completes the SAP entry even if the reviewer couldn't mark it done themselves, because the owner chose that entry. If the plan's own rules refuse (for example, an exercise that needs a result), the entry keeps the evidence and stays open, and the confirmation says why.
+
+    Migration 0894_register_reviews follows 0900_reading_groups (single head).
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Registers" (ADR in COM-2076). Builds on COM-2079 (a register's controls), COM-2080 (evidence on registers) and COM-2082 (the PDF of a register as at a date). INS.5, INS.12 and IMA.3 each ask for "the last review record". This task makes it.
 
