@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-22T09:39:40.546535Z
+updated: 2026-11-22T09:39:57.243528Z
 type: project
 title: Compass
 identifier: COM
@@ -288,12 +288,6 @@ roadmap:
     sprint: s6y6p7g
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: s2q1gxe
-- id: rp36o5z
-  title: Website
-  description: Create a full website for Compass
-  kind: phase
-  start: 2026-12-07
-  end: 2026-12-18
 - id: r83igc8
   title: Registers
   description: Create a new feature to allow the creation of registers
@@ -302,6 +296,12 @@ roadmap:
     sprint: s64t54m
   - project: 01KXGC5PTGYHV30VM3E78G76S1
     sprint: ssj8zkq
+- id: rp36o5z
+  title: Website
+  description: Create a full website for Compass
+  kind: phase
+  start: 2026-12-07
+  end: 2026-12-18
 sprints:
 - id: s8ayp7w
   title: Architectural standards, mission brief and features
