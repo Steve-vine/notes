@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM01R4WXTDT5YZ3SBHSXF7
 created: 2026-11-21T17:55:48.612932Z
-updated: 2026-11-22T09:33:11.524167Z
+updated: 2026-11-22T10:24:36.363242Z
 type: task
 title: Entries — add, edit and archive a register's entries, each with its own ID (OBL-4) and full change history, in a sortable, filterable list
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 2078
 sprint: s64t54m
 blocked_by:
 - 01M7ZKZFECD5CZKNMCJ88YT8ZS
+comments:
+- id: 01M81CJGFGH1FEPD09ZXFB9ZBS
+  author: Steve Vine
+  at: 2026-11-22T10:24:33.775973Z
+  text: |-
+    Done — merged in PR #2073 (32b55b78), migration 0891_register_entries.
+
+    What changed for people:
+    - A register opens on its Entries tab: a column for each field the person picks with Columns (remembered for them), every column sortable, a filter for each Choice, Multiple choice, Person, Company and Yes/No field, a search across text and IDs, and Incomplete and Archived filters, all kept in the address.
+    - Each entry gets an ID from the register's prefix (OBL-4): across Compass for a shared register, within each company for a per-company one. Numbers are never reused. Compass's search box finds an entry by ID or title, in registers the person can see.
+    - A per-company register shows the current company's entries. A shared register with a Company field offers "Only entries for <company>".
+    - Add entry and Edit show the fields in order with their hints. Required fields are checked. An edit can't empty a required value the entry had, and an entry already incomplete can still be saved and shows Incomplete.
+    - Each entry has its own page with its fields, Links and Evidence sections (filled in by COM-2079 and COM-2080), and a History tab: who, when, field, before → after, plus added, archived (with the reason) and restored. Renamed fields show their current name, and removed ones are marked "(field removed)".
+    - Archive needs a reason and Restore undoes it. Entries are never deleted. Only the owner, editors and administrators change entries; everyone else who can see the register reads it.
+    - Browser smoke opens a register and an entry on every tab. A new journey adds, edits, reads the history of and archives an entry in an "E2E browser tests register".
+
+    My calls (yours to overturn):
+    1. The Archived filter shows archived entries instead of current ones, as the Registers list does.
+    2. Default columns: Title plus the first three other fields, skipping Long text.
+    3. The Person filter offers every Compass user.
+    4. Polaris's search can find register entries by ID or title. A test requires every search-box result type to be in Polaris's search. It can only find them, not change them; the rest of Polaris is ADR 0167.
+    5. Adding, archiving and restoring an entry also write an activity-log line. Edits write one line, with the field-by-field detail in the entry's History.
+    6. A per-company entry opened by its link from another company still reads, and says which company it belongs to (as with other records: Compass doesn't limit which companies a person sees).
+    7. Changing a Choice field to Multiple choice turns each entry's single value into a one-item list, without a History line.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Registers" (ADR in COM-2076). Builds on COM-2077.
 
