@@ -1,7 +1,7 @@
 ---
 id: 01M81D2CGW6Q47KBC0K7YG0WNZ
 created: 2026-11-22T10:33:14.012149Z
-updated: 2026-11-22T11:08:35.942611Z
+updated: 2026-11-22T13:26:33.095797Z
 type: task
 title: 'Design note: attestations are assigned to reading groups, not business roles — one place to assign, groups built from rules'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,10 @@ comments:
     - Rules combine as "any" by default.
     - The Microsoft details offered are department, job title, office, employee type and company name.
     - Polaris reads groups and assigns content, but doesn't change a group's rules.
+- id: 01M81PZQW76CVX58ZN4R6QMX4E
+  author: Steve Vine
+  at: 2026-11-22T13:26:33.095616Z
+  text: 'Pre-UAT: **Passed**. ADR 0168 is on main (decisions/0168-attestations-are-assigned-to-reading-groups.md), and staging behaves as it describes: see COM-2097 and COM-2098.'
 assignee: steve
 label:
 - brief
