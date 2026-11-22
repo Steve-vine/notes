@@ -1,7 +1,7 @@
 ---
 id: 01M7YNHE0T8ZVZHJQ1CT0VBBAJ
 created: 2026-11-21T09:03:32.378317Z
-updated: 2026-11-21T10:56:43.856827Z
+updated: 2026-11-22T08:13:22.300067Z
 type: task
 title: 'Evidence rows tidy-up: EVD IDs on timeline and notification files, evidence added before a first assessment shows on the panel, and rows that don''t overlap'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -52,7 +52,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT pass of the Evidence Improvements sprint (staging 7e04d3f5e, 2026-11-21), on COM-2045 and COM-2043.
 

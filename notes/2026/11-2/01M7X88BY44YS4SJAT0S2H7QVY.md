@@ -1,7 +1,7 @@
 ---
 id: 01M7X88BY44YS4SJAT0S2H7QVY
 created: 2026-11-20T19:52:09.412229Z
-updated: 2026-11-21T09:01:47.328032Z
+updated: 2026-11-22T08:13:22.180465Z
 type: task
 title: Polaris links existing evidence by its EVD ID anywhere evidence is taken, including marking a schedule entry done
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,7 +47,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Built to the ADR in COM-2038, after COM-2045. Today, marking a schedule entry done through Polaris with no file on the entry gets "Upload the evidence on screen first, or give the reason there is none". That's the same dead end Steve hit on screen (2026-11-20).
 

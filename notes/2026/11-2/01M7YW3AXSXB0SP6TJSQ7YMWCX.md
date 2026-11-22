@@ -1,7 +1,7 @@
 ---
 id: 01M7YW3AXSXB0SP6TJSQ7YMWCX
 created: 2026-11-21T10:58:10.489352Z
-updated: 2026-11-21T13:33:04.522634Z
+updated: 2026-11-22T08:13:22.393556Z
 type: task
 title: A piece linked onto a control from elsewhere offers Take off, not New version and Archive
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT recheck (staging d4a5f0b5a, 2026-11-21), on COM-2055.
 

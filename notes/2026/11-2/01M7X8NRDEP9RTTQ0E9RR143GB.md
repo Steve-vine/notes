@@ -1,7 +1,7 @@
 ---
 id: 01M7X8NRDEP9RTTQ0E9RR143GB
 created: 2026-11-20T19:59:28.174168Z
-updated: 2026-11-21T09:00:09.704453Z
+updated: 2026-11-22T08:13:22.191749Z
 type: task
 title: 'See the evidence itself: a preview beside its properties wherever a piece opens, and in the Add evidence window'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -68,7 +68,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Built to the ADR in COM-2038, after COM-2042. Steve (2026-11-20): clicking a piece of evidence (in the register, for example) opens its properties, but you can't see the evidence itself. Downloading it just to look is clunky.
 

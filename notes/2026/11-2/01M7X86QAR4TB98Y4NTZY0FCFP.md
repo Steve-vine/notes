@@ -1,7 +1,7 @@
 ---
 id: 01M7X86QAR4TB98Y4NTZY0FCFP
 created: 2026-11-20T19:51:15.544996Z
-updated: 2026-11-21T08:59:47.929454Z
+updated: 2026-11-22T08:13:22.126999Z
 type: task
 title: 'The Add evidence window: Add new evidence tab (drop files or a web address, check each one''s details, upload)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -53,7 +53,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Built to the ADR in COM-2038, after COM-2040. Steve's design (2026-11-20). This task builds the window and its first tab. The second tab is COM-2042, and putting the button in each place is COM-2043 to COM-2045.
 

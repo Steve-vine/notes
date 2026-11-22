@@ -1,7 +1,7 @@
 ---
 id: 01M7Z51HYRD4X0DA67WTTZXTZR
 created: 2026-11-21T13:34:29.336185Z
-updated: 2026-11-21T14:40:54.221834Z
+updated: 2026-11-22T08:13:22.464588Z
 type: task
 title: 'Manual Collection: each piece''s actions reachable without scrolling sideways on a desktop; two wording leftovers'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,7 +47,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT pass (staging 12bd442a5, 2026-11-21), on COM-2056 / COM-2060.
 

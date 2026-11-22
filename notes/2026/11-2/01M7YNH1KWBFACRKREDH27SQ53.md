@@ -1,7 +1,7 @@
 ---
 id: 01M7YNH1KWBFACRKREDH27SQ53
 created: 2026-11-21T09:03:19.676202Z
-updated: 2026-11-21T10:56:25.412673Z
+updated: 2026-11-22T08:13:22.290252Z
 type: task
 title: Evidence that can't be deleted for good says why, and a control's History shows evidence taken off it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,7 +44,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT pass of the Evidence Improvements sprint (staging 7e04d3f5e, 2026-11-21), on COM-2040.
 

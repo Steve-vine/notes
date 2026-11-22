@@ -1,7 +1,7 @@
 ---
 id: 01M7Z515SXH8TH9AYGT15K1D6M
 created: 2026-11-21T13:34:16.89371Z
-updated: 2026-11-21T14:40:45.406099Z
+updated: 2026-11-22T08:13:22.449229Z
 type: task
 title: 'Assessment screen: someone who can''t record assessments sees a read-only box, not an editable one that fails on Save'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT pass (staging 12bd442a5, 2026-11-21). It probably predates this sprint, but it sits on the screen this sprint reworked.
 

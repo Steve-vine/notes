@@ -1,7 +1,7 @@
 ---
 id: 01M7YV4AK3Y2G3SAPN9S0GZA0K
 created: 2026-11-21T10:41:14.339262Z
-updated: 2026-11-21T13:33:45.709976Z
+updated: 2026-11-22T08:13:22.380072Z
 type: task
 title: 'Add evidence window ▸ Link existing evidence: the preview stays in view while the register scrolls (today it scrolls off the top)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Raised by Steve while testing sprint 120 (2026-11-21). Same kind of fix as COM-2063 (the Assessment screen's box).
 

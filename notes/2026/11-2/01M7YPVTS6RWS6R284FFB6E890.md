@@ -1,7 +1,7 @@
 ---
 id: 01M7YPVTS6RWS6R284FFB6E890
 created: 2026-11-21T09:26:41.702095Z
-updated: 2026-11-21T13:33:27.559253Z
+updated: 2026-11-22T08:13:22.316416Z
 type: task
 title: 'Assessment screen: the box''s four buttons sit in a 2×2 block — Add evidence, Raise gap, Add to SAP, Request exception'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Raised by Steve while testing sprint 120 (2026-11-21). Goes with COM-2056 (the box stops listing evidence). Build it after COM-2056 or in the same PR, since both change the same part of the box.
 

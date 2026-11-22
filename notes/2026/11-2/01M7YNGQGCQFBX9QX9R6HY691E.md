@@ -1,7 +1,7 @@
 ---
 id: 01M7YNGQGCQFBX9QX9R6HY691E
 created: 2026-11-21T09:03:09.324389Z
-updated: 2026-11-21T10:56:16.955852Z
+updated: 2026-11-22T08:13:22.271509Z
 type: task
 title: 'A finding''s closing evidence can be added inside Compass: Add evidence shows once the corrective action plan is accepted'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT pass of the Evidence Improvements sprint (staging 7e04d3f5e, 2026-11-21), on COM-2044.
 

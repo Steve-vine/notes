@@ -1,7 +1,7 @@
 ---
 id: 01M7YW4YNNJQSF34NE0MJ3TY6X
 created: 2026-11-21T10:59:03.477805Z
-updated: 2026-11-21T13:33:40.710908Z
+updated: 2026-11-22T08:13:22.428456Z
 type: task
 title: 'The Assessment screen works at phone width: the list, then the control and its assessment box, one at a time'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT recheck (staging d4a5f0b5a, 2026-11-21). Not caused by this sprint (the page's layout predates it), but the sprint moves more work onto this screen (COM-2056/2057/2060/2061), so it matters more now.
 

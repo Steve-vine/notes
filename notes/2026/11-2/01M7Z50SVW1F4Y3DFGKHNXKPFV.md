@@ -1,7 +1,7 @@
 ---
 id: 01M7Z50SVW1F4Y3DFGKHNXKPFV
 created: 2026-11-21T13:34:04.668042Z
-updated: 2026-11-21T14:40:39.765368Z
+updated: 2026-11-22T08:13:22.438885Z
 type: task
 title: 'Assessment box at phone width: "Request exception" (and "Renew exception") labels are cut off'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in Claude's pre-UAT pass (staging 12bd442a5, 2026-11-21), on COM-2057 / COM-2070.
 

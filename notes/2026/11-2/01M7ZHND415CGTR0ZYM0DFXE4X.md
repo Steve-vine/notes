@@ -1,7 +1,7 @@
 ---
 id: 01M7ZHND415CGTR0ZYM0DFXE4X
 created: 2026-11-21T17:15:02.657126Z
-updated: 2026-11-21T18:16:58.902732Z
+updated: 2026-11-22T08:13:22.475732Z
 type: task
 title: Evidence on a plan entry goes out of date by its evidence type, even once the entry is done
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -54,7 +54,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: review
+task_status: done
 ---
 Steve's decision (21 Nov), option 2 of the valid-until mismatch found in sprint 120's pre-UAT.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M7YSPQMJ9Y5Y0RC7KSNCTDH7
 created: 2026-11-21T10:16:20.370685Z
-updated: 2026-11-21T13:33:10.851389Z
+updated: 2026-11-22T08:13:22.332899Z
 type: task
 title: 'Assessment screen Overview: sections divided by lines and laid out as on the Control screen; "Security Assurance Plan" shown once; Ask Polaris to collect moves here'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -46,7 +46,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Raised by Steve while testing sprint 120 (2026-11-21). Part of one change, split across three tasks:
 - **the Control screen is for viewing a control;**

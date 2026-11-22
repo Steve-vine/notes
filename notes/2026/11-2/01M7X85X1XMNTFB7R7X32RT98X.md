@@ -1,7 +1,7 @@
 ---
 id: 01M7X85X1XMNTFB7R7X32RT98X
 created: 2026-11-20T19:50:48.637702Z
-updated: 2026-11-21T08:59:37.457025Z
+updated: 2026-11-22T08:13:22.11795Z
 type: task
 title: One piece of evidence can be linked to many records; unlinking isn't archiving
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -56,7 +56,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Built to the ADR in COM-2038, after COM-2039. This is the foundation the Add evidence window (COM-2041, COM-2042) and its rollout stand on. There's no new screen of its own beyond "Used in".
 

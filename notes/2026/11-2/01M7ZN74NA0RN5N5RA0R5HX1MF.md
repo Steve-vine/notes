@@ -1,7 +1,7 @@
 ---
 id: 01M7ZN74NA0RN5N5RA0R5HX1MF
 created: 2026-11-21T18:17:09.546143Z
-updated: 2026-11-21T19:42:16.531367Z
+updated: 2026-11-22T08:13:22.483629Z
 type: task
 title: A control's summary box counts every out-of-date piece on its Evidence tab, including plan evidence
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,7 +47,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found by the COM-2075 pre-UAT check (staging 816933877, 21 Nov).
 

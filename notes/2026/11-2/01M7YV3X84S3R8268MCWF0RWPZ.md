@@ -1,7 +1,7 @@
 ---
 id: 01M7YV3X84S3R8268MCWF0RWPZ
 created: 2026-11-21T10:41:00.676576Z
-updated: 2026-11-21T13:33:43.208059Z
+updated: 2026-11-22T08:13:22.37063Z
 type: task
 title: 'Add evidence window ▸ Add new evidence: adding files and links, and editing their details, sit in two separate boxes, as the access request window lays out its sections'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Raised by Steve while testing sprint 120 (2026-11-21).
 

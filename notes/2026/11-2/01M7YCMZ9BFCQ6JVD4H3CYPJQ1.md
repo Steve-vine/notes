@@ -1,7 +1,7 @@
 ---
 id: 01M7YCMZ9BFCQ6JVD4H3CYPJQ1
 created: 2026-11-21T06:28:11.179934Z
-updated: 2026-11-21T08:52:38.47219Z
+updated: 2026-11-22T08:13:22.223476Z
 type: task
 title: 'User Portal: audit request owners and corrective-action owners add evidence through the Add evidence window, with a classification'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,7 +44,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found while building COM-2044 (2026-11-21). On the User Portal, an audit request's owner and a corrective action's owner still use the old Add evidence: upload a file, or pick from their own evidence. That upload doesn't ask for a classification, so it gets round ADR 0164's rule that a person classifies what they add. COM-2043 already moved the portal's schedule entry owner onto the window, with the Add new tab only.
 
