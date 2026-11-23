@@ -1,7 +1,7 @@
 ---
 id: 01M84ESHDXP51FMA3BD2DT53FB
 created: 2026-11-23T15:01:04.573143Z
-updated: 2026-11-23T16:52:58.485216Z
+updated: 2026-11-23T16:53:10.884469Z
 type: task
 title: A register's Links column in an audit pack stays readable — short links, column headings on every page, whole words
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,11 +38,11 @@ comments:
 
     - The 22-link entry reads clearly: PASSED. UOB-1 is now one row on one page (page 2), with UOB-2 under it. Each link is short, e.g. "Control: AIG.14 · An AI system is verified and…".
     - Every page of the entries table has its headings: PASSED, on pages 2 and 3 of this pack. In a second pack I gave UOB-8 a 520-word note: pages 2 to 12 all have the headings.
-    - A row that runs over is marked: PASSED. UOB-8 runs from page 4 to page 12, and each page after the first reads "UOB-8 (continued)". All 520 numbered words are there, in order.
+    - A row that runs over is marked: PASSED. UOB-8 runs from page 4 to page 12, and each page after the first reads "UOB-8 (continued)". The numbered words run on from page to page with none missing.
     - No heading splits mid-word: PASSED on this 12-column register. "Regulated" and "Archived" are whole, and "Added later" wraps between its words. A much wider register (the 20-field case) wasn't tried.
     - Hidden wording is unchanged: COULDN'T CHECK. Among the test accounts only an administrator can build a pack, and an administrator can open every register, so the pack showed URS-1 by name as it should for them.
 
-    Defect (low), already noted as not covered in the fix's comment: a very long change in What changed still has the old layout. With the 520-word note, pages 14 and 15 have no column headings and don't repeat the entry's ID. See long-row-p15.png.
+    Defect (low), already noted as not covered in the fix's comment: a very long change in What changed still has the old layout. With the 520-word note, the row starts at the top of page 14 with no column headings, and page 15 has neither headings nor the entry's ID. See long-row-p15.png.
 
     Files: ~/compass-uat/sprint-122/COM-2107/ (uob-register-p2.png, -p3.png, long-row-p5.png, long-row-p15.png)
 assignee: steve
