@@ -1,7 +1,7 @@
 ---
 id: 01M81A3Z4XBBHWJBRZ6Q5EATBT
 created: 2026-11-22T09:41:40.125933Z
-updated: 2026-11-23T13:30:05.900495Z
+updated: 2026-11-23T14:59:26.106206Z
 type: task
 title: The auditor reads a provided register — a read-only table in the auditor portal as it stood on the date provided, with the period's changes and a watermarked PDF
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,6 +44,31 @@ comments:
     Tested against real Postgres: as at the date with the period's changes and a watermarked PDF; planted names, links, evidence, reasons and comments confirmed present inside Compass, then searched for in the full JSON, PDF text and metadata, file names, and the zip with its index; per-company registers; guessed, removed and other-audit IDs read as not found; first open locks it; open and download in Activity; withdrawn; a revoked auditor; the daily email count. CI and main build green.
 
     Not checked: the portal screen and the PDF's layout in a browser (pre-UAT pass); the daily email actually being sent; an expired auditor separately (same sign-in check as revoked); two auditors opening at the same instant.
+- id: 01M84EPH8TSS80HWZAWZ5R6K4R
+  author: Steve Vine
+  at: 2026-11-23T14:59:26.105924Z
+  text: |-
+    Pre-UAT on staging e2248892e: COULDN'T CHECK. Nothing on this task was seen in a browser.
+
+    Why: Admin ▸ Auditor portal, "Let invited auditors into the portal", is OFF on staging. While it's off, every link is refused and no auditor can be invited. The pass was told not to change Admin settings, so I left it off. The README provides no test auditor either. https://trust.citops.net/audit shows only "Sign in with the link from your invitation email."
+
+    - Auditor sees the register as at the date, the period's changes and a watermarked PDF: COULDN'T CHECK.
+    - No links, evidence, people's names or other companies' names, on screen or in the PDF: COULDN'T CHECK.
+    - First open locks it; open and download are in Activity: COULDN'T CHECK.
+    - A withdrawn one shows as withdrawn and can't be opened: COULDN'T CHECK.
+
+    What Steve should do: either switch the portal on for a short while so this can be re-run, or try it himself:
+    1. Mail catcher on (Admin ▸ Integrations ▸ Core), then Auditor portal on.
+    2. On an external audit in E2E Test Company, provide a shared register with a Person field and a Company field naming another company. Invite a test auditor at an example.com address and read the link from mailpit.
+    3. As the auditor, open it and download the PDF. Look for any person's name, any link or evidence, and the other company's name.
+    4. Back in Compass, check that Take off is now Withdraw. Withdraw it with a reason and check the auditor sees that and can't open it.
+    5. Switch the portal and the catcher back off.
+
+    Worth a close look: the audit pack does print another company's name from a shared register (defect on COM-2093), so the portal's hiding of it is the thing to confirm.
+
+    The test audit AUD-5 is now cancelled and its registers archived, so a re-run needs a new audit.
+
+    Screenshots: ~/compass-uat/sprint-122/COM-2095/
 assignee: steve
 label:
 - feature

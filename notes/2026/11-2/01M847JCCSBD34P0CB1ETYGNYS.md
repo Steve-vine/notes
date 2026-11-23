@@ -1,7 +1,7 @@
 ---
 id: 01M847JCCSBD34P0CB1ETYGNYS
 created: 2026-11-23T12:54:50.009581Z
-updated: 2026-11-23T14:08:16.811342Z
+updated: 2026-11-23T14:59:47.071268Z
 type: task
 title: Activity hides a Restricted register from people who can't open it — no name, prefix, entry ID or title in any activity line
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,6 +45,28 @@ comments:
     So until a release carries this fix (e2248892e, not in v0.26.0), anyone in production who can view Activity can see the names and entry titles of a Restricted register they can't open. It only matters if a Restricted register exists in production. Worth checking Assurance ▸ Registers there.
 
     No release has been made for this: that's Steve's call.
+- id: 01M84EPTMC1R5P1KKFT3SJYK5P
+  author: Steve Vine
+  at: 2026-11-23T14:59:35.691943Z
+  text: |-
+    Pre-UAT on staging e2248892e: the main check COULDN'T be done, and ONE LINE FAILED.
+
+    Accounts: E2E Admin A, E2E Viewer, E2E Analyst, E2E Assessor. E2E Test Company.
+
+    Why the main check couldn't be done: on staging only the Admin role has "View the activity log", and an administrator can open every register. So no test account can read Activity and also be barred from a Restricted register. E2E Analyst gets "You need an Admin permission" on the Activity page, E2E Viewer's request for Activity is refused, and E2E Assessor's account doesn't hold the permission. Analyst and Assessor get "Audit not found" on the test audit, so an audit's trail can't be read by them either; Viewer's role has no audit permission. Making a role for this would be an Admin change, which this pass doesn't do.
+
+    - A person who can't open the register sees no name, prefix, ID, title or value in any activity line: COULDN'T CHECK.
+    - A person who can open it, and an administrator, see the line in full: PASSED on the Activity page, FAILED on an audit's trail.
+      - Activity page, as Admin A: lines read in full, e.g. "archived register URS · E2E UAT 122 Restricted".
+      - Audit AUD-5's Activity tab and request UAT-4's History, as Admin A: "Added a Restricted register, as at 23 Nov 2026 to request UAT-4". The name is hidden from the register's own owner, who is also an administrator, though the same request lists it by name just above. See 03-admin-request-history.png. Low severity: it hides too much, not too little.
+    - A register restricted after the line was written is hidden from then on: COULDN'T CHECK, for the same reason.
+    - Tests cover each reader of the log: COULDN'T CHECK. Not visible in a browser.
+
+    Related, seen as E2E Viewer on COM-2088: an entry's History reads "Linked to a Restricted entry", with no name.
+
+    What Steve should try: give a test person a role with only "View the activity log", then read Activity for a Restricted register's lines, and again after restricting a register that wasn't. This matters most for production, where v0.26.0 doesn't yet carry this fix.
+
+    Screenshots: ~/compass-uat/sprint-122/COM-2104/
 assignee: steve
 label:
 - bug
