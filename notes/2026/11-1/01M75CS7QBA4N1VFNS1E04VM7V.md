@@ -1,7 +1,7 @@
 ---
 id: 01M75CS7QBA4N1VFNS1E04VM7V
 created: 2026-11-11T13:29:30.091463Z
-updated: 2026-11-23T17:10:02.398267Z
+updated: 2026-11-23T17:11:25.078285Z
 type: memo
 title: Risks, Issues and Challenges
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -14,6 +14,7 @@ company:
 R-1056 Entity's most recent strategy and objective meetings notes or illustrations with corresponding budget plans (A1) (S1-9001)(ST1-SOC)
 R-1063 Documentation of the results of the management reviews (e.g. meeting minutes or agenda) over the performance of applicable internal controls and audit results (S1)(A2)(S1-9001)
 R-1152 Shared drive/intranet/distribution process used to provide employees the current policy and procedure documents (S1)(A2)
+R-1753 Evidence (e.g. meeting minutes, reports, notes, PowerPoint deck, emails, etc.) that executive management met with operational management annually to discuss the entity's objectives as well as roles and responsibilities (A2)
 
 ## Challenges
 Master asset inventory is significant work
