@@ -1,7 +1,7 @@
 ---
 id: 01M82PJX1XBPHG7KMS9VSN3S3K
 created: 2026-11-22T22:38:46.845915Z
-updated: 2026-11-23T08:58:58.769672Z
+updated: 2026-11-23T08:59:07.544542Z
 type: task
 title: Take stock
 assignee: steve
