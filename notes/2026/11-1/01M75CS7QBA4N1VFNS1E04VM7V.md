@@ -1,7 +1,7 @@
 ---
 id: 01M75CS7QBA4N1VFNS1E04VM7V
 created: 2026-11-11T13:29:30.091463Z
-updated: 2026-11-23T17:28:14.303689Z
+updated: 2026-11-23T17:29:13.635431Z
 type: memo
 title: Risks, Issues and Challenges
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -24,6 +24,7 @@ R-1777 For an example data subject whose personal information is collected, evid
 R-1781 Evidence (e.g. reviewed reports, emails, evidence of a review/check, validation checklist, etc.) to determine that compliance with the privacy notice is reviewed and documented annually and the results of that review are provided to management (A2)
 
 ## Challenges
+Vendor Management
 Master asset inventory is significant work
 P-1  - List of code changes
 R-1353 Is the equipment disposal company onboarded
