@@ -1,7 +1,7 @@
 ---
 id: 01M84EST11VSJ57B8GPYDEW9V8
 created: 2026-11-23T15:01:13.377307Z
-updated: 2026-11-23T17:44:11.184566Z
+updated: 2026-11-23T19:36:29.576591Z
 type: task
 title: An audit's trail shows a Restricted register by name to people who can open it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -60,7 +60,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Registers - Phase 2". Found in the pre-UAT pass of COM-2104 on staging e2248892e (23 Nov 2026). Screenshot: `~/compass-uat/sprint-122/COM-2104/03-admin-request-history.png`.
 

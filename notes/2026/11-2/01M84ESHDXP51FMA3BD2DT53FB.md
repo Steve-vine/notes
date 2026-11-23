@@ -1,7 +1,7 @@
 ---
 id: 01M84ESHDXP51FMA3BD2DT53FB
 created: 2026-11-23T15:01:04.573143Z
-updated: 2026-11-23T16:53:10.884469Z
+updated: 2026-11-23T19:36:29.561764Z
 type: task
 title: A register's Links column in an audit pack stays readable — short links, column headings on every page, whole words
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -49,7 +49,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Registers - Phase 2". Found in the pre-UAT pass of COM-2093 on staging e2248892e (23 Nov 2026). Screenshots: `~/compass-uat/sprint-122/COM-2093/uob-register-p2.png`, `-p3.png`, `-p4.png`.
 

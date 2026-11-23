@@ -1,7 +1,7 @@
 ---
 id: 01M81A3Z4XBBHWJBRZ6Q5EATBT
 created: 2026-11-22T09:41:40.125933Z
-updated: 2026-11-23T17:44:00.892314Z
+updated: 2026-11-23T19:36:29.479231Z
 type: task
 title: The auditor reads a provided register — a read-only table in the auditor portal as it stood on the date provided, with the period's changes and a watermarked PDF
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -94,7 +94,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Registers - Phase 2" (ADR 0167 §6, in COM-2087). Builds on "Provide a register to an audit request" (COM-2094).
 

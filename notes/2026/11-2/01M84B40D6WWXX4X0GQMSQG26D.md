@@ -1,7 +1,7 @@
 ---
 id: 01M84B40D6WWXX4X0GQMSQG26D
 created: 2026-11-23T13:56:53.286091Z
-updated: 2026-11-23T14:22:44.597218Z
+updated: 2026-11-23T19:36:29.535311Z
 type: task
 title: Browser smoke's import journey expects the import preview's new counts
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,7 +19,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Registers - Phase 2". Found by the Browser smoke on staging e2248892e (run 45185622599, 23 Nov 2026): 40 journeys passed, 1 failed.
 

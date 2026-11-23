@@ -1,7 +1,7 @@
 ---
 id: 01M84N8WSCCVHWQEVAN7H27SVM
 created: 2026-11-23T16:54:19.180415Z
-updated: 2026-11-23T18:54:33.456972Z
+updated: 2026-11-23T19:36:29.630593Z
 type: task
 title: A provided register's "as at" date in an audit's trail follows the reader's date format
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -54,7 +54,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Sprint "Registers - Phase 2". Found re-testing COM-2108 on staging f6abe2fd5 (23 Nov 2026). Screenshot: `~/compass-uat/sprint-122/COM-2108/06-assessor-owner-request-history.png`.
 

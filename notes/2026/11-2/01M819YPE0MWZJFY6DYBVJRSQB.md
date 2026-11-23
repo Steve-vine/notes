@@ -1,7 +1,7 @@
 ---
 id: 01M819YPE0MWZJFY6DYBVJRSQB
 created: 2026-11-22T09:38:47.360146Z
-updated: 2026-11-22T09:42:32.36966Z
+updated: 2026-11-23T19:36:29.350813Z
 type: task
 title: 'ADR 0167 — registers reach the rest of Compass: links between registers, an import that updates, Polaris, a workflow lookup, audit packs and the auditor portal'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Registers - Phase 2". Records the second sprint ADR 0165 §11 and ADR 0166 §3 deferred, with Steve's answers of 2026-11-22.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M84ET3T8HHZCZM29RBKTWADA
 created: 2026-11-23T15:01:23.400229Z
-updated: 2026-11-23T16:53:32.524732Z
+updated: 2026-11-23T19:36:29.592433Z
 type: task
 title: The register entry picker finds entries by the start of their ID ("UOB-")
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Sprint "Registers - Phase 2". Found in the pre-UAT pass of COM-2088 on staging e2248892e (23 Nov 2026).
 

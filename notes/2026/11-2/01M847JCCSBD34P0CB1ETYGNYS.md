@@ -1,7 +1,7 @@
 ---
 id: 01M847JCCSBD34P0CB1ETYGNYS
 created: 2026-11-23T12:54:50.009581Z
-updated: 2026-11-23T14:59:47.071268Z
+updated: 2026-11-23T19:36:29.514326Z
 type: task
 title: Activity hides a Restricted register from people who can't open it — no name, prefix, entry ID or title in any activity line
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -71,7 +71,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Registers - Phase 2". Found while building COM-2091 (23 Nov 2026) and confirmed in the code. Registers haven't been released yet, so this should be fixed before they are.
 

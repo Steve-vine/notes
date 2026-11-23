@@ -1,7 +1,7 @@
 ---
 id: 01M84ETCYZJZ2BX572RS8K2TV8
 created: 2026-11-23T15:01:32.767959Z
-updated: 2026-11-23T16:53:39.701348Z
+updated: 2026-11-23T19:36:29.608224Z
 type: task
 title: Provide a register suggests live registers first — an archived one is never among the suggestions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,7 +43,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Sprint "Registers - Phase 2". Found in the pre-UAT pass of COM-2094 on staging e2248892e (23 Nov 2026). Screenshot: `~/compass-uat/sprint-122/COM-2094/02-suggested-registers-first.png`.
 

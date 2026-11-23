@@ -1,7 +1,7 @@
 ---
 id: 01M83R2FRW5G1TCPWH4RFTQHFJ
 created: 2026-11-23T08:24:00.540737Z
-updated: 2026-11-23T14:58:31.428339Z
+updated: 2026-11-23T19:36:29.497001Z
 type: task
 title: As at on a register — the heading's entry count and Last reviewed, and Print this register, follow the chosen date, as the list does
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,7 +48,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Registers - Phase 2". Found in Claude's pre-UAT pass of sprint 121 (Registers) on staging 29d0849fc; Steve asked for it to be logged here (23 Nov 2026), and for Print this register to be included.
 
