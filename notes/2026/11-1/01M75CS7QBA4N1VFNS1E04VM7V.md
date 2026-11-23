@@ -1,7 +1,7 @@
 ---
 id: 01M75CS7QBA4N1VFNS1E04VM7V
 created: 2026-11-11T13:29:30.091463Z
-updated: 2026-11-23T17:19:08.632558Z
+updated: 2026-11-23T17:19:29.01872Z
 type: memo
 title: Risks, Issues and Challenges
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -19,7 +19,7 @@ R1760 Evidence that management reviews key executive and operational personnel j
 R-1970 Executive management job descriptions (e.g. President, CIO, CTO, CEO, CFO, etc.) and evidence they were reviewed annually (A2)
 R1972 Most recently completed fraud assessment (A2)
 P-9 List of data subjects whose personal information was collected during the review period
-R-1755 Evidence (e.g. meeting minutes, management reports, management notes, a PowerPoint deck, emails) that management reviews the methods of collecting personal information before they are implemented (A2)
+R-1775 Evidence (e.g. meeting minutes, management reports, management notes, a PowerPoint deck, emails) that management reviews the methods of collecting personal information before they are implemented (A2)
 
 ## Challenges
 Master asset inventory is significant work
