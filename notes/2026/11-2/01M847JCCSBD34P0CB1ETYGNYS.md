@@ -1,7 +1,7 @@
 ---
 id: 01M847JCCSBD34P0CB1ETYGNYS
 created: 2026-11-23T12:54:50.009581Z
-updated: 2026-11-23T13:35:43.28312Z
+updated: 2026-11-23T14:08:16.811342Z
 type: task
 title: Activity hides a Restricted register from people who can't open it — no name, prefix, entry ID or title in any activity line
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,15 @@ comments:
     Tested against real Postgres: register, entry and link lines; owner, editor and administrator; restricted later; the review's filed PDF; the audit trail. The ten record histories use real records with the activity line inserted directly; only the Activity page and plan entry history are tested through a real review. CI green.
 
     Not yet checked in a browser on staging: that comes with the sprint's pre-UAT pass.
+- id: 01M84BRVXBPW9CKENM51P6W90E
+  author: Steve Vine
+  at: 2026-11-23T14:08:16.811064Z
+  text: |-
+    Correction to this task's opening line: Registers phase 1 HAS been released. v0.26.0 was published at 08:42 GMT on 23 Nov from 29d0849fc, and production's assistant tools now match that release, so production appears to be running it. I couldn't read production's version directly.
+
+    So until a release carries this fix (e2248892e, not in v0.26.0), anyone in production who can view Activity can see the names and entry titles of a Restricted register they can't open. It only matters if a Restricted register exists in production. Worth checking Assurance ▸ Registers there.
+
+    No release has been made for this: that's Steve's call.
 assignee: steve
 label:
 - bug
