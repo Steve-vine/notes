@@ -1,7 +1,7 @@
 ---
 id: 01M75CS7QBA4N1VFNS1E04VM7V
 created: 2026-11-11T13:29:30.091463Z
-updated: 2026-11-23T16:00:34.836414Z
+updated: 2026-11-23T16:12:05.756686Z
 type: memo
 title: Risks, Issues and Challenges
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,6 +10,8 @@ category:
 company:
 - moneypenny
 ---
+
+
 ## Risks
 TeamSupport are self-serving access to the system
 Only 2 roles - Agent and Admin (can create Admins plus operations work) 115 Admins, Can't view all users.
