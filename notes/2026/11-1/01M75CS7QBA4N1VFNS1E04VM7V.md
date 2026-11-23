@@ -1,7 +1,7 @@
 ---
 id: 01M75CS7QBA4N1VFNS1E04VM7V
 created: 2026-11-11T13:29:30.091463Z
-updated: 2026-11-23T16:12:11.424939Z
+updated: 2026-11-23T16:12:27.339172Z
 type: memo
 title: Risks, Issues and Challenges
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,7 +10,10 @@ category:
 company:
 - moneypenny
 ---
-## 
+## Issues
+
+## Challenges
+
 
 ## Risks
 TeamSupport are self-serving access to the system
