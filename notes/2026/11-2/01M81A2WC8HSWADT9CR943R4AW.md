@@ -1,7 +1,7 @@
 ---
 id: 01M81A2WC8HSWADT9CR943R4AW
 created: 2026-11-22T09:41:04.52049Z
-updated: 2026-11-23T12:09:18.339984Z
+updated: 2026-11-23T12:54:39.836982Z
 type: task
 title: Polaris adds and edits entries — add, update, archive with a reason, restore, link and unlink as the person; on a register's page "this register" is the one on screen
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,36 @@ number: 2091
 sprint: ssj8zkq
 blocked_by:
 - 01M81A2KFVFRYRDEBCDQ2FT208
+comments:
+- id: 01M847J05622SPTRWMXK927TZN
+  author: Steve Vine
+  at: 2026-11-23T12:54:37.478503Z
+  text: |-
+    Built and merged to main: PR #2096 (024f26294). No migration, no /api/v1 change.
+
+    What people see:
+    - Polaris changes entries where the person may edit them (owner, editors, administrators): add an entry, change values by field name, archive with a reason, restore, and link or unlink a control, gap, risk, SAP entry, document, decision, vendor, inventory asset or another register's entry.
+    - Every change is recorded as the person: History reads "<name> via Polaris", and the activity log records the person, via Polaris.
+    - It has no way to make, archive or delete a register, change fields or Mark as reviewed. It's told to say that's done on screen and give the link.
+    - In the Polaris window, Registers, a register's page and an entry's page offer these tools and know "this register" and "this entry". The Entries list gains a tick column where Polaris is on, and ticked rows are "these entries". There are no ticks on a past As at day.
+
+    Decisions made while building, for Steve to check:
+    1. Links made on screen now appear in the activity log too. They weren't logged before.
+    2. The five-entry rule is an instruction to Polaris, not enforced by Compass, as in the Library. Archive and unlink don't trigger a confirmation card, because both can be undone.
+    3. "Via Polaris" is stored with the person's name on the history line, because its own column would need a migration. It therefore also appears in audit packs.
+    4. Field names and choice values must match exactly. A link target named in words is linked only if one record matches, and the answer says which.
+    5. Polaris can't reach an archived company's per-company entries, to read or change. The screen can still read them.
+
+    Found while building: the activity log doesn't hide Restricted registers from people who can't open them. Confirmed in the code. Logged as its own task in this sprint.
+
+    Tested against real Postgres: every write, each in History and Activity as via Polaris; all link kinds; a view-only person refused; a Restricted register reads like one that doesn't exist; a hidden record can't be probed by linking it; bad values list the valid ones; company rules. CI green.
+
+    Not checked: a live AI provider or real Copilot agent, including the five-entry question, "add an entry to this register" and "these entries" in conversation; the tick column in a real browser; whether a Copilot agent picks up new tools by itself (check when setting up the Registers agent).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Registers - Phase 2" (ADR 0167 §3, in COM-2087). Builds on "Polaris reads registers".
 
