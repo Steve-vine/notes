@@ -1,7 +1,7 @@
 ---
 id: 01M75CS7QBA4N1VFNS1E04VM7V
 created: 2026-11-11T13:29:30.091463Z
-updated: 2026-11-23T17:04:58.405753Z
+updated: 2026-11-23T17:05:08.781867Z
 type: memo
 title: Risks, Issues and Challenges
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -18,7 +18,7 @@ P-1  - List of code changes
 R-1353 Is the equipment disposal company onboarded
 R-1363 Data classification labelling
 Evident required during the audit period such as users
-P-
+R-
 
 ## Risks
 TeamSupport are self-serving access to the system
