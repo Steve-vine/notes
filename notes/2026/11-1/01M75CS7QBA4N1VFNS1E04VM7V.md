@@ -1,7 +1,7 @@
 ---
 id: 01M75CS7QBA4N1VFNS1E04VM7V
 created: 2026-11-11T13:29:30.091463Z
-updated: 2026-11-23T17:13:02.681086Z
+updated: 2026-11-23T17:13:28.047566Z
 type: memo
 title: Risks, Issues and Challenges
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -17,6 +17,7 @@ R-1152 Shared drive/intranet/distribution process used to provide employees the 
 R-1753 Evidence (e.g. meeting minutes, reports, notes, PowerPoint deck, emails, etc.) that executive management met with operational management annually to discuss the entity's objectives as well as roles and responsibilities (A2)
 R1760 Evidence that management reviews key executive and operational personnel job roles and access to verify no incompatible duties/access exists (A2)
 R-1970 Executive management job descriptions (e.g. President, CIO, CTO, CEO, CFO, etc.) and evidence they were reviewed annually (A2)
+R1972 Most recently completed fraud assessment (A2)
 
 ## Challenges
 Master asset inventory is significant work
