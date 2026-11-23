@@ -1,7 +1,7 @@
 ---
 id: 01M81A2KFVFRYRDEBCDQ2FT208
 created: 2026-11-22T09:40:55.419185Z
-updated: 2026-11-23T12:09:12.559111Z
+updated: 2026-11-23T14:59:53.103385Z
 type: task
 title: 'Polaris reads registers — its own Registers area: which registers there are, their entries, one entry with history and links, a register as it stood on a date, and what changed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,28 @@ comments:
     Tested against real Postgres: the six tools; Restricted registers invisible in every tool, search, links and history; per-company registers; as-at equal to the screen's list on five past days, including archived entries and removed fields; named periods either side of a boundary. CI green.
 
     Not checked: a real Copilot Studio agent, or the Polaris window with a live AI provider choosing the named period from a question (please try "What changed in this register this quarter?" in UAT); very large registers (the Polaris window cuts a tool answer at 60,000 characters); past-date as-at on a per-company register; evidence that is a file. The Polaris window has no Registers section until COM-2091.
+- id: 01M84EQBMF5JB3MD4TFMH15CJC
+  author: Steve Vine
+  at: 2026-11-23T14:59:53.103133Z
+  text: |-
+    Pre-UAT on staging e2248892e: PASSED in the Polaris window with the live AI provider. Two lines COULDN'T be checked.
+
+    Account: E2E Admin A, E2E Test Company.
+
+    - The registers address lists the six tools, and a person connected there gets the answers: PARTLY.
+      - PASSED: the Connect Polaris page lists Registers at https://compass-mcp.citops.net/api/mcp/registers.
+      - COULDN'T CHECK: the tools that address offers, or a real Copilot Studio agent. Steve needs to set up the Registers agent and try it.
+      - PASSED in the Polaris window, each answer checked against the screen:
+        - "What registers do we keep?": all 8, with owner, shared or per company, entries and last review.
+        - The fields of UOB, with types and choices.
+        - "Which entries are Not met?": UOB-3, saying archived entries aren't included.
+        - "Tell me about UOB-2": values, history and links.
+        - "What changed in the UIM register this month?" and "What changed in this register this quarter?": correct, with the dates stated (1 Oct to today, marked as so far).
+        - Entry IDs in answers are links to the entry.
+    - A Restricted register is invisible to someone who can't open it: COULDN'T CHECK. None of the non-admin test roles has Use Polaris. Steve should try it with a person who has Use Polaris but isn't on the Restricted register.
+    - The as-at answer matches the screen for the same date: PASSED. For UOB on 23 Nov, Polaris gave the same 5 entries and values as the screen's As at, plus UOB-6 as archived by then, and said Source has been removed since.
+
+    Screenshots: ~/compass-uat/sprint-122/COM-2090/
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M81A2WC8HSWADT9CR943R4AW
 created: 2026-11-22T09:41:04.52049Z
-updated: 2026-11-23T12:54:39.836982Z
+updated: 2026-11-23T15:00:00.08686Z
 type: task
 title: Polaris adds and edits entries — add, update, archive with a reason, restore, link and unlink as the person; on a register's page "this register" is the one on screen
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,26 @@ comments:
     Tested against real Postgres: every write, each in History and Activity as via Polaris; all link kinds; a view-only person refused; a Restricted register reads like one that doesn't exist; a hidden record can't be probed by linking it; bad values list the valid ones; company rules. CI green.
 
     Not checked: a live AI provider or real Copilot agent, including the five-entry question, "add an entry to this register" and "these entries" in conversation; the tick column in a real browser; whether a Copilot agent picks up new tools by itself (check when setting up the Registers agent).
+- id: 01M84EQJEPC14CT5YSBEYKHYDF
+  author: Steve Vine
+  at: 2026-11-23T15:00:00.086634Z
+  text: |-
+    Pre-UAT on staging e2248892e: PASSED in the Polaris window with the live AI provider. One line COULDN'T be checked.
+
+    Account: E2E Admin A, E2E Test Company. Register E2E UAT 122 Import (UIM).
+
+    - Polaris adds, edits, archives, restores, links and unlinks, each in history as via Polaris: PASSED. On UIM-8 it did all six, including a link to control INS.5 and a link to another register's entry (UPA-3), then unlinked that. The entry's History reads "E2E Admin A via Polaris" on each line. The Activity page shows the same, e.g. "created register entry UIM-8 · Polaris added (UAT) … via Polaris".
+    - It refuses to change fields or mark a review, with the on-screen link: PASSED. "Add a field called Region": it says fields are changed on screen and links the Settings tab. "Mark this register as reviewed": it says that's done on screen and links the register's page. Neither happened.
+    - "Add an entry to this register" works without naming it: PASSED, from the register's page. It made UIM-8 in UIM.
+    - Someone who can only view a register can't change it through Polaris: COULDN'T CHECK. None of the non-admin test roles has Use Polaris. Steve should try it with a person who has Use Polaris and view-only access to a register.
+
+    Also seen:
+    - The Entries list has a tick column. With UIM-3 and UIM-5 ticked, Polaris read them as "these entries".
+    - Asked to change all 7 entries, it stopped, listed each with its current value, noted the archived one would be skipped, and asked whether to do all 7 or the 2 ticked. I said no and nothing changed.
+
+    Not tried: a real Copilot agent.
+
+    Screenshots: ~/compass-uat/sprint-122/COM-2091/
 assignee: steve
 label:
 - feature
