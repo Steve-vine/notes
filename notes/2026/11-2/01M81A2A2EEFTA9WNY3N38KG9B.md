@@ -1,7 +1,7 @@
 ---
 id: 01M81A2A2EEFTA9WNY3N38KG9B
 created: 2026-11-22T09:40:45.774401Z
-updated: 2026-11-23T11:52:52.869514Z
+updated: 2026-11-23T14:58:46.837142Z
 type: task
 title: An import that updates — a spreadsheet row with an entry's ID updates that entry, and the preview shows every change, old value beside new, before anything is saved
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,6 +41,20 @@ comments:
     Not checked: a file actually re-saved by desktop Excel (edits were made programmatically; a CSV saved by US-locale Excel could show a day-first date misread as a change in the preview), and the Activity log wording when an import changes a title.
 
     Not yet checked in a browser on staging: that comes with the sprint's pre-UAT pass.
+- id: 01M84ENAXN2TWNT95S18TWSBYQ
+  author: Steve Vine
+  at: 2026-11-23T14:58:46.836931Z
+  text: |-
+    Pre-UAT on staging e2248892e: PASSED, with one caveat on Excel itself.
+
+    Account: E2E Admin A, E2E Test Company. Register E2E UAT 122 Import (UIM), with every kind of field.
+
+    - An exported register, edited and re-imported, previews exactly the edited cells and applies them: PASSED, on a file edited by script. I exported All columns to Excel, changed cells with a spreadsheet library and imported it. The preview read "1 to add, 3 to update, 1 unchanged, 4 problems". UIM-1 showed Status Met → Not met and Score 10 → 15; UIM-2 showed Due 15 Feb → 20 Feb; UIM-3, untouched, showed No change and got no new History line. History reads "By import from uat-import-edited.xlsx". COULDN'T CHECK a file actually saved by desktop Excel: please try one.
+    - A blank cell doesn't clear a value: PASSED. UIM-2's Notes was blanked in the file and kept "Original note 2". The preview says once that a blank leaves the field as it is.
+    - Unknown ID, archived entry and duplicate ID are Problems and aren't applied: PASSED. "UIM-99 isn't in this register for the company you're viewing", "Restore UIM-6 first: it's archived", "UIM-5 is on more than one row (rows 6 and 10)". None changed.
+    - An entry edited on screen between preview and import isn't overwritten and is reported: PASSED. I changed UIM-4's Score to 44 in a second tab after the preview. The result said "1 row changed on screen since the preview, so not overwritten (row 5: UIM-4)" and it stayed 44. Preview again then showed 44 → 99.
+
+    Screenshots: ~/compass-uat/sprint-122/COM-2089/
 assignee: steve
 label:
 - feature

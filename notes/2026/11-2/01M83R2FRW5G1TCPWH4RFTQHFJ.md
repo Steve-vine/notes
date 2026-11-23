@@ -1,7 +1,7 @@
 ---
 id: 01M83R2FRW5G1TCPWH4RFTQHFJ
 created: 2026-11-23T08:24:00.540737Z
-updated: 2026-11-23T09:30:37.877274Z
+updated: 2026-11-23T14:58:31.428339Z
 type: task
 title: As at on a register — the heading's entry count and Last reviewed, and Print this register, follow the chosen date, as the list does
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,25 @@ comments:
     Tested: count, review and print on a past day, for shared and per-company registers, against real Postgres; a Restricted register's figures are refused to someone who can't open it; the screen's behaviour in frontend tests. CI green.
 
     Not yet checked in a browser on staging: that comes with the sprint's pre-UAT pass.
+- id: 01M84EMVW4D3ZC05E72T1K2YNH
+  author: Steve Vine
+  at: 2026-11-23T14:58:31.428167Z
+  text: |-
+    Pre-UAT on staging e2248892e: PASSED (one line not checkable in a browser).
+
+    Account: E2E Admin A, E2E Test Company. Test registers E2E UAT 122 Obligations (UOB, per company), Parties (UPA) and Shared (USH). To get a true past day I set Admin A's time zone to Darwin for the test, so 23 Nov had already ended at 14:30 UTC, then made changes after it. Time zone is back on UTC.
+
+    - Heading count equals the unfiltered list, with entries added and archived since: PASSED. UOB reads 6 entries today and 5 as at 23 Nov (UOB-1 to 5). UOB-5 was archived after that day and shows; UOB-6 was archived by then and doesn't; UOB-7 was added later and doesn't.
+    - Last reviewed shows the earlier review, or never: PASSED. UPA, first reviewed after that day, reads "Last reviewed never" as at 23 Nov and "23 Nov 2026 by E2E Admin A" today. UOB's pack and print show only the review made by then.
+    - Next review hidden on a past day: PASSED.
+    - Filtering or searching doesn't change the count: PASSED. Status = Met showed 2 rows and searching GDPR 1 row; the heading stayed at 5.
+    - Print gives that day's register: PASSED. Printed while filtered to Met: "As at 23 November 2026", all 5 entries, UOB-1 still Met / 10, the since-removed Source column present, the later "Added later" column absent, last review on the cover.
+    - Activity records the print as at that day: PASSED. Activity page: "exported register UOB · E2E UAT 122 Obligations as at 23 Nov 2026 to PDF (5 entries)".
+    - Clearing the date restores today's figures and print without a reload: PASSED. Back to today returned 6 entries and Next review with no page load; the next print was today's, 6 entries with the new column.
+    - Shared register: PASSED. USH reads 4 today and 3 as at 23 Nov.
+    - Tests cover the count, review and print: COULDN'T CHECK. Not visible in a browser.
+
+    Screenshots and PDFs: ~/compass-uat/sprint-122/COM-2103/
 assignee: steve
 label:
 - bug
