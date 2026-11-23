@@ -1,17 +1,46 @@
 ---
 id: 01M847JCCSBD34P0CB1ETYGNYS
 created: 2026-11-23T12:54:50.009581Z
-updated: 2026-11-23T12:54:53.965952Z
+updated: 2026-11-23T13:35:43.28312Z
 type: task
 title: Activity hides a Restricted register from people who can't open it — no name, prefix, entry ID or title in any activity line
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2104
 sprint: ssj8zkq
+comments:
+- id: 01M849X6RHX3M0GMN9Z29X7SF6
+  author: Steve Vine
+  at: 2026-11-23T13:35:41.841707Z
+  text: |-
+    Built and merged to main: PR #2098 (e2248892e). No migration, no API change.
+
+    What people see:
+    - Someone who can't open a Restricted register sees its activity lines as "A Restricted register" or "A Restricted entry": who and when, with no name, prefix, entry ID, title or changed values.
+    - Its owner, editors and administrators see every line in full.
+    - The check is made on read, so restricting a register hides its past lines, and lifting the mark shows them again.
+    - Asking Activity for a Restricted register's or entry's ID returns nothing, the same as an unknown ID.
+    - A line about something else loses the name, for example "linked a Restricted register's file to SAP-14".
+
+    Covered: the Activity page; the histories of plan entries, vulnerabilities, incidents, DDQs, Q&A entries, risk assessments, trust centre visitors, data subject requests, disclosures and requests to disclose; and the audit's trail and request and finding history.
+
+    Still able to name a Restricted register, for Steve to decide:
+    1. A plan entry completed by a review keeps the outcome "Done by the review of the register OBL · Name: comment" on the plan itself. Confirmed in the code (core/registers/reviews.py).
+    2. The review's PDF is named after the register, and that name appears wherever the evidence is listed, including a control's assessment history. From reading the code, not checked on screen.
+    3. Words someone typed, such as a register's name in a gap title or a reason. Nothing ties that text to the register.
+
+    Decisions made while building:
+    - Compass can't tell whether a deleted register was Restricted, so its lines read "A register no longer in Compass" to everyone but administrators.
+    - A hidden line still shows who, when, the action, the company, and that it concerns a register or entry. Its internal ID stays in the response, so someone could tell two hidden lines are about the same thing.
+    - Text elsewhere that happens to look like a hidden entry ID (such as "SAL-1") is hidden for people who can't open that register.
+
+    Tested against real Postgres: register, entry and link lines; owner, editor and administrator; restricted later; the review's filed PDF; the audit trail. The ten record histories use real records with the activity line inserted directly; only the Activity page and plan entry history are tested through a real review. CI green.
+
+    Not yet checked in a browser on staging: that comes with the sprint's pre-UAT pass.
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Registers - Phase 2". Found while building COM-2091 (23 Nov 2026) and confirmed in the code. Registers haven't been released yet, so this should be fixed before they are.
 
