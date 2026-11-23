@@ -1,7 +1,7 @@
 ---
 id: 01M81A2WC8HSWADT9CR943R4AW
 created: 2026-11-22T09:41:04.52049Z
-updated: 2026-11-22T09:42:17.178799Z
+updated: 2026-11-23T12:09:18.339984Z
 type: task
 title: Polaris adds and edits entries — add, update, archive with a reason, restore, link and unlink as the person; on a register's page "this register" is the one on screen
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint "Registers - Phase 2" (ADR 0167 §3, in COM-2087). Builds on "Polaris reads registers".
 
