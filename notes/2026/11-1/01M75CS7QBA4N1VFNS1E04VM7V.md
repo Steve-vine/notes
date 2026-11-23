@@ -1,7 +1,7 @@
 ---
 id: 01M75CS7QBA4N1VFNS1E04VM7V
 created: 2026-11-11T13:29:30.091463Z
-updated: 2026-11-23T17:13:28.047566Z
+updated: 2026-11-23T17:14:48.834511Z
 type: memo
 title: Risks, Issues and Challenges
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -26,6 +26,7 @@ R-1353 Is the equipment disposal company onboarded
 R-1363 Data classification labelling
 Evident required during the audit period such as users
 R-1001/R1019 Org charts and JD's
+R-1184 Audit log settings with a recent log extract for in-scope VPNs (A2)
 
 ## Risks
 TeamSupport are self-serving access to the system
