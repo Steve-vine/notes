@@ -1,7 +1,7 @@
 ---
 id: 01M84ESHDXP51FMA3BD2DT53FB
 created: 2026-11-23T15:01:04.573143Z
-updated: 2026-11-23T16:10:30.958617Z
+updated: 2026-11-23T16:52:58.485216Z
 type: task
 title: A register's Links column in an audit pack stays readable — short links, column headings on every page, whole words
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,23 @@ comments:
     Not covered: the What changed table and the pack's review copies are still on the old layout, so a very long What changed row could lose its headings on that page. Row height is estimated, so an unusual row, such as one enormous unbroken word, could still run over a page.
 
     Not yet checked on staging: that comes with the re-test.
+- id: 01M84N6DZNEWTPQ183Q076PC7B
+  author: Steve Vine
+  at: 2026-11-23T16:52:58.485Z
+  text: |-
+    Pre-UAT on staging f6abe2fd5: PASSED, except one line I couldn't check. One small defect remains in What changed.
+
+    Account: E2E Admin A, E2E Test Company. Register UOB, 12 columns in the PDF, with UOB-1 linked to 22 records again (12 controls, 2 gaps, 2 risks, 6 register entries). SOC 2 pack for CC5.3, 1 to 23 Nov. I opened the real PDF and looked at the rendered pages.
+
+    - The 22-link entry reads clearly: PASSED. UOB-1 is now one row on one page (page 2), with UOB-2 under it. Each link is short, e.g. "Control: AIG.14 · An AI system is verified and…".
+    - Every page of the entries table has its headings: PASSED, on pages 2 and 3 of this pack. In a second pack I gave UOB-8 a 520-word note: pages 2 to 12 all have the headings.
+    - A row that runs over is marked: PASSED. UOB-8 runs from page 4 to page 12, and each page after the first reads "UOB-8 (continued)". All 520 numbered words are there, in order.
+    - No heading splits mid-word: PASSED on this 12-column register. "Regulated" and "Archived" are whole, and "Added later" wraps between its words. A much wider register (the 20-field case) wasn't tried.
+    - Hidden wording is unchanged: COULDN'T CHECK. Among the test accounts only an administrator can build a pack, and an administrator can open every register, so the pack showed URS-1 by name as it should for them.
+
+    Defect (low), already noted as not covered in the fix's comment: a very long change in What changed still has the old layout. With the 520-word note, pages 14 and 15 have no column headings and don't repeat the entry's ID. See long-row-p15.png.
+
+    Files: ~/compass-uat/sprint-122/COM-2107/ (uob-register-p2.png, -p3.png, long-row-p5.png, long-row-p15.png)
 assignee: steve
 label:
 - bug
