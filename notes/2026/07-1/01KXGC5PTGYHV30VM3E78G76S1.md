@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-23T17:45:10.266924Z
+updated: 2026-11-23T19:23:31.111162Z
 type: project
 title: Compass
 identifier: COM
@@ -1085,6 +1085,9 @@ sprints:
 - id: sdy0mr7
   title: Attestations - Tweaks and Improvements
   description: Tweaks and improvements to Attestations found while Steve tests it (logged 2026-11-22).
+- id: szwetpq
+  title: Backup and Restore
+  description: An in-app copy of the database before a significant change, three ways to restore it (everything, keep the audit logs, or selected records), and recovery from a complete failure when Compass cannot start. ADR 0169.
 assignee: steve
 priority: medium
 project_status: active
