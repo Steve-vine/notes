@@ -1,7 +1,7 @@
 ---
 id: 01M81A3P9ZNH9RGYR8CHYF4TJK
 created: 2026-11-22T09:41:31.071467Z
-updated: 2026-11-22T09:42:20.930005Z
+updated: 2026-11-23T11:52:56.801372Z
 type: task
 title: Provide a register to an audit request — as it stood on a chosen date (default the audit period's end), pinned like provided evidence, removed or withdrawn the same way
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Registers - Phase 2" (ADR 0167 §6, in COM-2087). Builds on "An import that updates" in chain order. The auditor's side is the next task.
 
