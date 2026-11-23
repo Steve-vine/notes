@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM1RQQN2QKMKH2NM9295GZ
 created: 2026-11-21T17:56:44.91962Z
-updated: 2026-11-22T12:02:00.578335Z
+updated: 2026-11-23T00:37:34.095482Z
 type: task
 title: Any register as it stood on a date, and export to CSV, Excel or PDF — what an auditor asks for
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -34,6 +34,18 @@ comments:
     - Dates in the CSV and PDF follow the exporter's date format (UK "31 Mar 2026" by default).
 
     Worth knowing: an entry's links aren't shown as at a date (ADR 0167 replays them later). Exports are built while you wait, so a PDF of thousands of long rows could take a while.
+- id: 01M82XCD8F9B7FRN1Q0FJWM862
+  author: Steve Vine
+  at: 2026-11-23T00:37:34.095235Z
+  text: |-
+    Pre-UAT on staging f73af7daf: Partly. One defect, raised as COM-2101.
+
+    Method: I set the values on 22 Nov, changed them after midnight, then viewed 22 Nov.
+
+    - A past date shows exactly what existed at the end of that day, including archived entries and removed fields, read-only: Passed. As at 22 Nov: ZMA-1 had its old Source and Amount 10 (999 today), ZMA-2 was not yet archived, ZMA-3 was under Archived with its reason, ZMA-10 was absent, and the removed Web page column showed its value. No Add entry or Import. COM-2082/as-at-22-nov.png, as-at-archived.png
+    - CSV, Excel and PDF follow the date, filters and columns, and the PDF has the register's details on its cover and the exporter on every page: Partly. All three held the 22 Nov values. A filtered PDF held only the two "Not met" entries. The CSV starts with a byte-order mark, and Excel has a second Register sheet. Every PDF page carries the exporter and page number. The cover and the Excel details left out the last review (COM-2101). Files are in COM-2082/.
+
+    Screenshots and exports are under ~/compass-uat/s64t54m/.
 assignee: steve
 label:
 - feature

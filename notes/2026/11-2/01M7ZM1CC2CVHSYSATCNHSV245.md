@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM1CC2CVHSYSATCNHSV245
 created: 2026-11-21T17:56:32.258758Z
-updated: 2026-11-22T11:11:37.519011Z
+updated: 2026-11-23T00:37:29.655269Z
 type: task
 title: Import a register from a spreadsheet — match each column to a field, preview every row with its problems, and bring the good rows in as entries
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,17 @@ comments:
     - Only Excel serial numbers for roughly 1908–2199 are read as dates, so a bare "2025" is flagged.
 
     Built ready for ADR 0167 §2 (updating entries by ID, next sprint): each preview row carries an action; this sprint every row is "add".
+- id: 01M82XC8XQQDS3P9NADF9J0VCF
+  author: Steve Vine
+  at: 2026-11-23T00:37:29.654979Z
+  text: |-
+    Pre-UAT on staging f73af7daf: Passed.
+
+    - A CSV or Excel file imports with columns matched, including a new field from a column and adding missing choice values: Passed. Columns matched by name. New field from this column suggested Choice with its value. Add these values to the list fixed "Pending". Excel offered a sheet picker. COM-2081/preview-problems.png
+    - The preview shows each row's problems, only the chosen rows are added, each with an ID and "Imported from …": Passed. Bad date, bad number, unlisted value, unknown person, month-first date and possible duplicate were each marked. Fix cleared one. Import added ZMA-4 to 7 and listed the rows left out and why. History read "Imported from e2e-121-import.xlsx". A file where every row failed offered no import and the list stayed at 6 entries. COM-2081/summary.png, all-rows-bad.png, history-imported.png
+    - ISO, day-first UK and Excel serial dates are read, and anything ambiguous is flagged: Passed. 2027-01-15, 31/03/2027 and serial 46000 (9 Dec 2025) read correctly. 03/31/2027 and 31/02/2027 were flagged.
+
+    Screenshots are under ~/compass-uat/s64t54m/.
 assignee: steve
 label:
 - feature

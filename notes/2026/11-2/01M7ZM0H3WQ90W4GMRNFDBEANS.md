@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM0H3WQ90W4GMRNFDBEANS
 created: 2026-11-21T17:56:04.348541Z
-updated: 2026-11-22T11:33:43.050688Z
+updated: 2026-11-23T00:37:15.998907Z
 type: task
 title: Links — an entry links to controls, gaps, risks, SAP entries, documents, decisions, vendors and inventory assets; a register names the controls it's kept for; every linked record shows it back
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,18 @@ comments:
     - A control's Registers section needs View the playbook.
 
     Not done: no Browser smoke journey for links (covered by integration tests).
+- id: 01M82XBVJYGES0YSMC8EWW0801
+  author: Steve Vine
+  at: 2026-11-23T00:37:15.99866Z
+  text: |-
+    Pre-UAT on staging f73af7daf: Partly. No defects; the rest needs a second company.
+
+    - An entry links to and unlinks from each of the eight kinds, found by reference or title, each change in its history: Passed. ZMA-1 linked to INS.12, GAP-36, RSK-17, SAP-92, a published E2E document, DEC-10, E2E Test Vendor and AST-37. Each link is in History. I unlinked seven of the eight; SAP-92 stays linked. COM-2079/entry-links-eight-kinds.png, history-links-and-evidence.png
+    - Links to a company's records are made and seen within that company: Couldn't check. The pickers say "This company's … only", but proving it needs a second company.
+    - A register names its controls, and a control's page lists the registers kept for it and the entries linked to it: Passed. INS.5 listed its registers. INS.12 listed registers kept for it and, under Entries linked to it, ZMA-3. COM-2079/viewer-control-registers.png
+    - Each linked record shows the entries linking to it, and nobody sees what they couldn't otherwise see: Passed for what I opened. RSK-17 showed ZMA-1 and ZRS-1 to Admin A, but only ZMA-1 to Viewer. E2E Test Vendor showed ZMA-1. INS.5 hid ZRS from Viewer. Couldn't check: In registers on a gap, SAP entry, document, decision or asset. COM-2079/viewer-risk-in-registers.png
+
+    Screenshots are under ~/compass-uat/s64t54m/.
 assignee: steve
 label:
 - feature

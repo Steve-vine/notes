@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM0WDN6TFDBT24FZRD05YZ
 created: 2026-11-21T17:56:15.925064Z
-updated: 2026-11-22T12:25:48.587656Z
+updated: 2026-11-23T00:37:24.345564Z
 type: task
 title: Evidence on a register entry — the Add evidence window works on an entry, and the piece's "Used in" lists it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,20 @@ comments:
     - A shared register's entry viewed with no company chosen says "Choose a company to see its evidence for this entry."
 
     Not done: no Browser smoke journey for entry evidence (the screen crawl visits the entry page).
+- id: 01M82XC3QSCAW57CT3QS6ZWFR2
+  author: Steve Vine
+  at: 2026-11-23T00:37:24.345353Z
+  text: |-
+    Pre-UAT on staging f73af7daf: Partly. One defect, raised as COM-2102.
+
+    Correction to my earlier comment on this task: it said each piece shows its classification and status. On the card it didn't. COM-2102 adds them.
+
+    - Evidence can be added, new or linked, through the standard window, and the link tab opens filtered to the entry's and register's controls: Partly. The window was titled "Add evidence to ZMA-1 E2E 121 Alpha". New file EVD-100 was added. Link existing opened filtered "On INS.12, INS.5", the filter cleared, and EVD-99 linked. The card left out classification and status (COM-2102). COM-2080/evidence-card-two-pieces.png
+    - Used in lists the entry, and Take off unlinks it there only: Passed. EVD-99's Used in listed ZMA-1. After Take off it listed INS.10 alone, and History recorded both steps. COM-2080/used-in.png, used-in-after-take-off.png
+    - In a shared register, each company sees only the evidence added within it: Couldn't check. It needs a second company, and the test accounts stay in E2E Test Company.
+    - After a reload, an archived entry showed its evidence with no Add evidence or Take off.
+
+    Screenshots are under ~/compass-uat/s64t54m/.
 assignee: steve
 label:
 - feature

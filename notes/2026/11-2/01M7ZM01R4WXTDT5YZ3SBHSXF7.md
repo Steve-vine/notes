@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM01R4WXTDT5YZ3SBHSXF7
 created: 2026-11-21T17:55:48.612932Z
-updated: 2026-11-22T10:24:36.363242Z
+updated: 2026-11-23T00:37:10.498268Z
 type: task
 title: Entries — add, edit and archive a register's entries, each with its own ID (OBL-4) and full change history, in a sortable, filterable list
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,19 @@ comments:
     5. Adding, archiving and restoring an entry also write an activity-log line. Edits write one line, with the field-by-field detail in the entry's History.
     6. A per-company entry opened by its link from another company still reads, and says which company it belongs to (as with other records: Compass doesn't limit which companies a person sees).
     7. Changing a Choice field to Multiple choice turns each entry's single value into a one-item list, without a History line.
+- id: 01M82XBP72NWDGBCX4853PP4J0
+  author: Steve Vine
+  at: 2026-11-23T00:37:10.498018Z
+  text: |-
+    Pre-UAT on staging f73af7daf: Partly. One defect, raised as COM-2100.
+
+    - Entries can be added, edited, archived with a reason and restored by the owner, editors and administrators, and are read-only to everyone else: Passed. Admin A (owner) did all of these. E2E Access Manager (editor) added ZRS-2; I did not try an edit as an editor. A blank archive reason was refused. E2E Viewer and E2E Assessor saw only Columns and Export. After archiving an entry its buttons were out of date until a reload (COM-2100). COM-2078/editor-adds-entry.png, viewer-readonly-entry.png, assessor-readonly.png, entry-restored-history.png
+    - Each entry has an ID from the prefix, and search finds it by ID: Passed. ZMA-1 to ZMA-10, ZRS-1 and 2, ZSH-1 and 2. Search found ZMA-1 as Viewer, and ZRS-1 as Admin A. As Viewer, ZRS-1 gave "No results" and "Zebra" found only an unrelated control. Couldn't check: the same number being reused separately by a second company.
+    - The list sorts, filters, searches text and hides archived entries: Passed. Status, In force, Responsible and Applies to filters each returned the right rows. Amount sorted 500 down to 20 with blanks last. Text search found ZMA-5. Archived entries appeared only under the Archived filter, and chosen columns survived a reload. COM-2078/filter-yes-no.png, text-search.png
+    - History shows every change with who, when and before → after, including renamed and removed fields: Passed. ZMA-1 showed Source of duty, Amount, Notes and Status before and after, the renamed field under its new name and Web page as "(field removed)".
+    - A per-company register shows each company only its own entries; a shared one can be narrowed: Partly. "Only entries for E2E Test Company" narrowed ZSH correctly. Couldn't check the per-company half: it needs a second company, and the test accounts stay in E2E Test Company. COM-2078/shared-only-entries-for-company.png
+
+    Screenshots are under ~/compass-uat/s64t54m/.
 assignee: steve
 label:
 - feature
