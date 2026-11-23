@@ -1,17 +1,35 @@
 ---
 id: 01M83R2FRW5G1TCPWH4RFTQHFJ
 created: 2026-11-23T08:24:00.540737Z
-updated: 2026-11-23T08:57:00.901552Z
+updated: 2026-11-23T09:30:37.877274Z
 type: task
 title: As at on a register — the heading's entry count and Last reviewed, and Print this register, follow the chosen date, as the list does
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2103
 sprint: ssj8zkq
+comments:
+- id: 01M83VWC60C7CT8G5PWQCC4YXE
+  author: Steve Vine
+  at: 2026-11-23T09:30:34.560568Z
+  text: |-
+    Built and merged to main: PR #2087 (e503be778).
+
+    With As at set to a past day on the Entries tab:
+    - The heading shows that day's entry count, from the server by the list's own rule, so filters and search don't change it.
+    - Last reviewed shows the latest review by then, or "Last reviewed never".
+    - Next review is hidden.
+    - Print this register gives the register as it stood that day, and Activity records it as at that day.
+    - While that day's figures load, none are shown. If they can't be read, the heading says so rather than falling back to today's.
+    - Clearing the date, or leaving the Entries tab, goes back to today's figures and print.
+
+    Tested: count, review and print on a past day, for shared and per-company registers, against real Postgres; a Restricted register's figures are refused to someone who can't open it; the screen's behaviour in frontend tests. CI green.
+
+    Not yet checked in a browser on staging: that comes with the sprint's pre-UAT pass.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Registers - Phase 2". Found in Claude's pre-UAT pass of sprint 121 (Registers) on staging 29d0849fc; Steve asked for it to be logged here (23 Nov 2026), and for Print this register to be included.
 
