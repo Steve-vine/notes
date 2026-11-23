@@ -1,7 +1,7 @@
 ---
 id: 01M81A3P9ZNH9RGYR8CHYF4TJK
 created: 2026-11-22T09:41:31.071467Z
-updated: 2026-11-23T19:36:29.46203Z
+updated: 2026-11-23T19:41:21.590668Z
 type: task
 title: Provide a register to an audit request — as it stood on a chosen date (default the audit period's end), pinned like provided evidence, removed or withdrawn the same way
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -66,6 +66,22 @@ comments:
     - Once the auditor has opened a register, it can only be withdrawn with a reason: COULDN'T CHECK. The Auditor portal stayed off because Claude Code's permission check refused switching it on, so no auditor could open anything. Details are on COM-2095.
 
     A register for this check is already provided: UAW on AUD-7 request AQ-3. Nothing has been withdrawn.
+- id: 01M84YTR9P72EA4JXBNK6PWG0A
+  author: Steve Vine
+  at: 2026-11-23T19:41:21.590351Z
+  text: |-
+    Pre-UAT on staging d8a915977 (Auditor portal): PASSED. This finishes the withdraw line left open earlier.
+
+    Accounts: E2E Admin A in Compass, and a test auditor (Una Testauditor) in the portal, on AUD-7 request AQ-3 with register UAW.
+
+    - Before the auditor opens it, it can be removed: PASSED. With the request listed in the portal but UAW not opened, Compass still offered Take off.
+    - Afterwards only withdrawn with a reason: PASSED.
+      - Once the auditor opened UAW, Compass showed "Seen by the auditor" and Withdraw, with no Take off.
+      - The window says "The auditor has seen it, so it stays on the list marked withdrawn, with the reason." Withdrawing with the reason blank is refused ("Required.").
+      - With a reason, the request shows WITHDRAWN and "Withdrawn: <the reason>", and its History has the Withdrew line.
+      - In the portal, UAW stays listed with "Withdrawn: <the reason>" and no Open or Download. Opening or downloading it by address returns not found.
+
+    Screenshots: ~/compass-uat/sprint-122/COM-2094/ (20 to 24)
 assignee: steve
 label:
 - feature

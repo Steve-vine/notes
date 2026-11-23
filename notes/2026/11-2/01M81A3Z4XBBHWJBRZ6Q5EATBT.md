@@ -1,7 +1,7 @@
 ---
 id: 01M81A3Z4XBBHWJBRZ6Q5EATBT
 created: 2026-11-22T09:41:40.125933Z
-updated: 2026-11-23T19:36:29.479231Z
+updated: 2026-11-23T19:41:14.202653Z
 type: task
 title: The auditor reads a provided register — a read-only table in the auditor portal as it stood on the date provided, with the period's changes and a watermarked PDF
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -90,6 +90,33 @@ comments:
     Final state: Auditor portal OFF (confirmed in Admin), mail catcher OFF.
 
     Files: ~/compass-uat/sprint-122/COM-2095/ (EVD-112-filed-review-as-held.pdf, 14-portal-still-off.png)
+- id: 01M84YTH2TPG4CWB29D84PTPPC
+  author: Steve Vine
+  at: 2026-11-23T19:41:14.202397Z
+  text: |-
+    Pre-UAT on staging d8a915977 (Auditor portal): the auditor's view and all the hiding PASSED. TWO DEFECTS, one on each of two lines.
+
+    Steps: as E2E Admin A I invited one made-up auditor, Una Testauditor (uat122-auditor@example.com), to AUD-7, took the link and sign-in code from the caught mail, and worked through the portal at trust.citops.net/audit. Provided: UAS (shared, Company field naming E2E Test Company and Demo, Person fields, links, evidence, an archived entry, a field removed since), UAP (per company), UAW and UAR (both withdrawn later), plus EVD-112. The auditor's access is now revoked.
+
+    - Sees the register as at the date, with the period's changes, and downloads a watermarked PDF: PASSED, except controls.
+      - UAS shows the 4 entries as they stood, UAS-4 marked archived, and "Retired note (field removed)" with its old values. An edit and a new entry made after providing (PLANT-AFTER-PROVIDE, UAS-5) don't appear. Sort and search work.
+      - Changes during the audit period lists added, changed and archived, with who as "the company".
+      - The rendered PDF has the diagonal watermark "Provided to Una Testauditor, E2E UAT Example Firm, for AUD-7…" and a footer with the auditor's email.
+      - FAILED, DEFECT 1 (medium): Controls aren't pinned. I provided UAP while it was kept for INS.5 and the auditor saw INS.5. I then took the control off the register, and the same provided item now reads "Controls: None linked", on screen and in its PDF. See 26-control-removed-since-provided.png.
+    - No links, evidence, people's names or other companies' names, on screen or in the PDF: PASSED. I searched the saved API responses, page text, all 5 single downloads, both Download all zips and their index, with PDF metadata and file names, for Demo, E2E Viewer, E2E Analyst, E2E Assessor, E2E Admin, e2e- emails, BCR.14, RSK-17, EVD-113, UAX, NeverProvided and the planted archive reason, review comments and evidence: 0 hits in anything to do with a register. The only hits are the audit's own overview, which names its lead and email (E2E Admin A) as the auditor's contact. Text people typed (titles, Detail, description) shows as written, as the task said it would.
+    - First open locks it; open and download are in Activity: PASSED, with one gap.
+      - Listing didn't lock. After the auditor opened UAS, Compass showed "Seen by the auditor" and only Withdraw, while unopened UAW still had Take off.
+      - Activity shows Viewed and Downloaded for each register, with the auditor's name.
+      - FAILED, DEFECT 2 (low): a second provided copy's first open isn't logged. UAP was provided as at the same day on AQ-2 and AQ-5. The auditor opened both in one visit. AQ-5's copy became "Seen", but neither its History nor Activity has a Viewed line. See 28-second-copy-view-not-logged.png.
+    - A withdrawn one shows as withdrawn and can't be opened: PASSED. UAW and UAR show "Withdrawn: <reason>" with no Open or Download. Opening and downloading return not found. A Download all made before the withdrawal is now not found, and a new one leaves them out.
+
+    Other register or item by URL or API: PASSED. Register ids of UAX, UAS and URS, an entry id, provided items from AUD-5 and AUD-6, the file on UAS-1 and a made-up id all read not found. Compass's own API isn't reachable from the portal address.
+
+    After revoking: the portal's API returns 401, the old link reads "This link isn't valid", and no new code was mailed.
+
+    Not checked: the auditor's daily email.
+
+    Files: ~/compass-uat/sprint-122/COM-2095/
 assignee: steve
 label:
 - feature

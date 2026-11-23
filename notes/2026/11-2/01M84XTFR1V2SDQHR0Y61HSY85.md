@@ -1,12 +1,20 @@
 ---
 id: 01M84XTFR1V2SDQHR0Y61HSY85
 created: 2026-11-23T19:23:44.257812Z
-updated: 2026-11-23T19:28:01.120562Z
+updated: 2026-11-23T19:41:09.485757Z
 type: task
 title: 'ADR: Backup and restore — an Admin takes a copy before a significant change, restores it three ways, and can recover Compass from outside when it cannot start'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2114
 sprint: szwetpq
+comments:
+- id: 01M84YTCFDHPB0DJ9D7YGGM9HZ
+  author: Steve Vine
+  at: 2026-11-23T19:41:09.485608Z
+  text: |-
+    ADR 0169 accepted by Steve and merged (#2108, 44829303b), 23 Nov 19:40 GMT.
+
+    Steve's one change: copies stay in the same S3 bucket, because it is backed up externally. There is no second location. §11 now says that a lost bucket is restored from the external backup first, then recovered as normal. COM-2123 is re-scoped to making sure a deleted copy really goes, and COM-2120's runbook gains the lost-bucket step.
 assignee: steve
 label:
 - brief
