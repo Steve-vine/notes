@@ -1,15 +1,21 @@
 ---
 id: 01M84Y0F742W7XJ72GMVA1ZZJE
 created: 2026-11-23T19:27:00.324161Z
-updated: 2026-11-23T19:27:00.324161Z
+updated: 2026-11-23T19:27:44.178181Z
 type: task
 title: Backup and restore is proved end to end on a scratch Compass — all three options and a complete failure, timed, with nothing touching staging's or production's data
-assignee: steve
-priority: high
-label: chore
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2124
+sprint: szwetpq
+blocked_by:
+- 01M84XYPVZG3CMTX5BH2SX7FD7
+- 01M84XZ0MTCM83EZFJ91RP6ZDY
+- 01M84XZQ02JZCV60Z82NZXPE29
+assignee: steve
+label:
+- chore
+priority: high
+task_status: todo
 ---
 ADR 0169. The last task in the sprint: nobody should find out whether this works during an incident.
 

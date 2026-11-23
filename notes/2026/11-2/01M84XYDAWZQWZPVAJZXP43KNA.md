@@ -1,12 +1,16 @@
 ---
 id: 01M84XYDAWZQWZPVAJZXP43KNA
 created: 2026-11-23T19:25:52.860829Z
-updated: 2026-11-23T19:27:12.172919Z
+updated: 2026-11-23T19:27:40.646502Z
 type: task
 title: 'Restore option 1: Everything — the whole database goes back to the copy, logs included, with a safety copy first and no change to live data until the copy has been checked'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2118
 sprint: szwetpq
+blocked_by:
+- 01M84XXEFMFJGW424C95Z9M2ZK
+- 01M84XXPNAEX9CBTGXYT6F1CVZ
+- 01M84XY3275Z2QQ3TPQDGPY765
 assignee: steve
 label:
 - feature
@@ -26,7 +30,7 @@ ADR 0169 §3, §4, §8. The nuclear option, and the restore engine the other ful
 
 **Done when**
 
-- A restore on staging returns the data to the copy exactly, checked by row counts and a sample of records, and Compass works afterwards.
+- A restore on a **scratch Compass** (never staging's shared data, see COM-2124) returns the data to the copy exactly, checked by row counts and a sample of records, and Compass works afterwards.
 - A safety copy (a normal BKP, marked as such) exists first, and restoring it undoes the restore.
 - **Killing the restore at any step before the swap leaves Compass exactly as it was.**
 - Reference numbers are not reissued: counters end at the higher of the copy and the live data whenever the live data can be read.

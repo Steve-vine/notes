@@ -1,12 +1,14 @@
 ---
 id: 01M84XZDDRKWVYD86CQY2SVR8K
 created: 2026-11-23T19:26:25.720339Z
-updated: 2026-11-23T19:27:18.253226Z
+updated: 2026-11-23T19:27:44.022941Z
 type: task
 title: 'Restore option 3, part 1: open a copy beside live Compass, read-only, and see for each record whether it is missing, changed or the same'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2121
 sprint: szwetpq
+blocked_by:
+- 01M84XYDAWZQWZPVAJZXP43KNA
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M84XYPVZG3CMTX5BH2SX7FD7
 created: 2026-11-23T19:26:02.623351Z
-updated: 2026-11-23T19:27:13.432853Z
+updated: 2026-11-23T19:27:40.690229Z
 type: task
 title: 'Restore option 2: Keep audit logs — the data goes back to the copy, while the logs, signatures, legal holds and revocations made since are carried forward'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2119
 sprint: szwetpq
+blocked_by:
+- 01M84XYDAWZQWZPVAJZXP43KNA
 assignee: steve
 label:
 - feature

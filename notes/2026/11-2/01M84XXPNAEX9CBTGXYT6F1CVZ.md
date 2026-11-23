@@ -1,12 +1,14 @@
 ---
 id: 01M84XXPNAEX9CBTGXYT6F1CVZ
 created: 2026-11-23T19:25:29.642666Z
-updated: 2026-11-23T19:27:08.826781Z
+updated: 2026-11-23T19:27:35.019749Z
 type: task
 title: Compass can go into maintenance — everyone sees a notice and is signed out, background work stops, and it can be brought back
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2116
 sprint: szwetpq
+blocked_by:
+- 01M84XTFR1V2SDQHR0Y61HSY85
 assignee: steve
 label:
 - feature

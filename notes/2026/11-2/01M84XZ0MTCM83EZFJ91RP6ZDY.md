@@ -1,12 +1,14 @@
 ---
 id: 01M84XZ0MTCM83EZFJ91RP6ZDY
 created: 2026-11-23T19:26:12.634427Z
-updated: 2026-11-23T19:27:16.484654Z
+updated: 2026-11-23T19:27:42.154822Z
 type: task
 title: 'Complete failure: when Compass cannot start, a recovery command lists the copies from the store and restores one into an empty database, with a runbook to follow during an incident'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2120
 sprint: szwetpq
+blocked_by:
+- 01M84XYDAWZQWZPVAJZXP43KNA
 assignee: steve
 label:
 - feature
