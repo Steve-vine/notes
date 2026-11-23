@@ -1,7 +1,7 @@
 ---
 id: 01M75CS7QBA4N1VFNS1E04VM7V
 created: 2026-11-11T13:29:30.091463Z
-updated: 2026-11-23T15:59:09.571293Z
+updated: 2026-11-23T15:59:25.465887Z
 type: memo
 title: Risks, Issues and Challenges
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -10,7 +10,7 @@ category:
 company:
 - moneypenny
 ---
-
+## Risks
 Moneypennychat.appspot.com
 Only 2 roles - Agent and Admin (can create Admins plus operations work) 115 Admins, Can't view all users.
 No MFA/SSO
