@@ -1,7 +1,7 @@
 ---
 id: 01M81A3P9ZNH9RGYR8CHYF4TJK
 created: 2026-11-22T09:41:31.071467Z
-updated: 2026-11-23T14:59:15.239153Z
+updated: 2026-11-23T17:44:07.271269Z
 type: task
 title: Provide a register to an audit request — as it stood on a chosen date (default the audit period's end), pinned like provided evidence, removed or withdrawn the same way
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -57,6 +57,15 @@ comments:
     - Registers kept for the request's controls are listed first, but that group includes archived registers, among them one marked Restricted · Archived. Steve may want those lower or hidden.
 
     Screenshots: ~/compass-uat/sprint-122/COM-2094/
+- id: 01M84R42V7MHFYZ1X8RVJG1GT3
+  author: Steve Vine
+  at: 2026-11-23T17:44:07.271019Z
+  text: |-
+    Pre-UAT on staging f6abe2fd5 (Auditor portal): COULDN'T CHECK.
+
+    - Once the auditor has opened a register, it can only be withdrawn with a reason: COULDN'T CHECK. The Auditor portal stayed off because Claude Code's permission check refused switching it on, so no auditor could open anything. Details are on COM-2095.
+
+    A register for this check is already provided: UAW on AUD-7 request AQ-3. Nothing has been withdrawn.
 assignee: steve
 label:
 - feature

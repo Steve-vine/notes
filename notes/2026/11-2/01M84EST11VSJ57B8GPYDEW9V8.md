@@ -1,7 +1,7 @@
 ---
 id: 01M84EST11VSJ57B8GPYDEW9V8
 created: 2026-11-23T15:01:13.377307Z
-updated: 2026-11-23T16:53:24.68565Z
+updated: 2026-11-23T17:44:11.184566Z
 type: task
 title: An audit's trail shows a Restricted register by name to people who can open it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,6 +47,15 @@ comments:
     Small defect (low): the "as at" date inside these lines ignores the reader's date format. E2E Assessor, on US dates, sees the line's time as "Nov 23, 2026, 4:46 pm" but its text as "as at 23 Nov 2026". See 06-assessor-owner-request-history.png.
 
     Screenshots: ~/compass-uat/sprint-122/COM-2108/
+- id: 01M84R46NG9M1EZTNED3ENA51K
+  author: Steve Vine
+  at: 2026-11-23T17:44:11.184357Z
+  text: |-
+    Pre-UAT on staging f6abe2fd5 (Auditor portal): COULDN'T CHECK.
+
+    - The withdrawing line, on a request's History and the audit's Activity: COULDN'T CHECK. A register can only be withdrawn after an auditor has opened it, and the Auditor portal stayed off because Claude Code's permission check refused switching it on. Details are on COM-2095.
+
+    Ready for a re-run: Restricted register UAR is provided on AUD-7 request AQ-4, which E2E Viewer owns, so Viewer can read that request's History as someone who can't open the register. Nothing has been withdrawn.
 assignee: steve
 label:
 - bug

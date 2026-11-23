@@ -1,7 +1,7 @@
 ---
 id: 01M81A3Z4XBBHWJBRZ6Q5EATBT
 created: 2026-11-22T09:41:40.125933Z
-updated: 2026-11-23T14:59:26.106206Z
+updated: 2026-11-23T17:44:00.892314Z
 type: task
 title: The auditor reads a provided register — a read-only table in the auditor portal as it stood on the date provided, with the period's changes and a watermarked PDF
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -69,6 +69,27 @@ comments:
     The test audit AUD-5 is now cancelled and its registers archived, so a re-run needs a new audit.
 
     Screenshots: ~/compass-uat/sprint-122/COM-2095/
+- id: 01M84R3WKWJRFGSETQETY4X34W
+  author: Steve Vine
+  at: 2026-11-23T17:44:00.89194Z
+  text: |-
+    Pre-UAT on staging f6abe2fd5 (Auditor portal): COULDN'T CHECK. The portal was never switched on and no auditor was invited.
+
+    Why: the coordinator asked me to switch the Auditor portal on, relaying Steve's approval. When I tried, Claude Code's permission check refused the action. I did not try another way round it. Steve can switch the portal on himself, or allow this action for the session.
+
+    - Auditor sees the register as at the date, the period's changes and a watermarked PDF: COULDN'T CHECK.
+    - No links, evidence, people's names or other companies' names, on screen or in the PDF: COULDN'T CHECK.
+    - First open locks it; open and download are in Activity: COULDN'T CHECK.
+    - A withdrawn one shows as withdrawn and can't be opened: COULDN'T CHECK.
+    - Another register or provided item by URL or API reads as not found: COULDN'T CHECK.
+
+    One thing I could see, as E2E Admin A: the filed review PDF of a shared register (EVD-112, provided to AUD-7 request AQ-5) names "Demo" on 3 rows, and people (E2E Viewer, E2E Analyst). It is provided as ordinary evidence. Whether the auditor receives those names is NOT observed. Reading the portal's download code, it serves the stored file and adds a watermark, and I saw no step there that removes names. This needs checking in the portal before release.
+
+    Ready for a re-run: audit AUD-7 "E2E UAT 122 Auditor Audit" (SOC 2 Type II, still open, no auditors), requests AQ-1 to AQ-5, with registers UAS, UAP, UAW and UAR provided and planted values in them. Those registers are archived.
+
+    Final state: Auditor portal OFF (confirmed in Admin), mail catcher OFF.
+
+    Files: ~/compass-uat/sprint-122/COM-2095/ (EVD-112-filed-review-as-held.pdf, 14-portal-still-off.png)
 assignee: steve
 label:
 - feature
