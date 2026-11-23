@@ -1,7 +1,7 @@
 ---
 id: 01M84EST11VSJ57B8GPYDEW9V8
 created: 2026-11-23T15:01:13.377307Z
-updated: 2026-11-23T19:36:29.576591Z
+updated: 2026-11-23T19:41:27.813861Z
 type: task
 title: An audit's trail shows a Restricted register by name to people who can open it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -56,6 +56,21 @@ comments:
     - The withdrawing line, on a request's History and the audit's Activity: COULDN'T CHECK. A register can only be withdrawn after an auditor has opened it, and the Auditor portal stayed off because Claude Code's permission check refused switching it on. Details are on COM-2095.
 
     Ready for a re-run: Restricted register UAR is provided on AUD-7 request AQ-4, which E2E Viewer owns, so Viewer can read that request's History as someone who can't open the register. Nothing has been withdrawn.
+- id: 01M84YTYC57V9WQW08P7Q772K8
+  author: Steve Vine
+  at: 2026-11-23T19:41:27.813549Z
+  text: |-
+    Pre-UAT on staging d8a915977 (Auditor portal): the withdrawal lines PASSED for the readers I could test. Two readers COULDN'T be checked.
+
+    Steps: a test auditor opened Restricted register UAR on AUD-7 request AQ-4, then E2E Admin A withdrew it with a reason. E2E Viewer owns AQ-4 but can't open UAR.
+
+    - The owner and an administrator see the name, for withdrawing: PASSED for E2E Admin A, who is both on UAR. Request History and the audit's Activity read "Withdrew E2E UAT 122 Auditor Restricted (UAR), as at 23 Nov 2026 from request AQ-4: Withdrawn for the sprint 122 check". The auditor's lines read "Viewed…" and "Downloaded…" with the name too.
+    - An editor sees the name on a withdrawal line: COULDN'T CHECK. UAR had no separate editor on this audit. Providing and taking off were passed for an editor on the earlier re-test.
+    - Someone who can't open it sees only "A Restricted register":
+      - Request History: PASSED. E2E Viewer reads "Withdrew a Restricted register, as at 23 Nov 2026 from request AQ-4: Withdrawn for the sprint 122 check", and "Viewed a Restricted register" and "Downloaded a Restricted register" for the auditor. The name and prefix appear nowhere on the request.
+      - Audit's Activity: COULDN'T CHECK. Viewer has no Activity tab, and among the test accounts only an administrator does.
+
+    Screenshots: ~/compass-uat/sprint-122/COM-2108/ (10, 11)
 assignee: steve
 label:
 - bug

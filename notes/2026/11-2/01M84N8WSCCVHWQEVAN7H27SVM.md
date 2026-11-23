@@ -1,7 +1,7 @@
 ---
 id: 01M84N8WSCCVHWQEVAN7H27SVM
 created: 2026-11-23T16:54:19.180415Z
-updated: 2026-11-23T19:36:29.630593Z
+updated: 2026-11-23T19:41:33.725447Z
 type: task
 title: A provided register's "as at" date in an audit's trail follows the reader's date format
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -50,6 +50,23 @@ comments:
     AUD-7 unchanged: 5 requests, all open, 6 Activity lines, latest still 17:42.
 
     Screenshots: ~/compass-uat/sprint-122/COM-2112/
+- id: 01M84YV44XZ3JSYG2EP6WFP220
+  author: Steve Vine
+  at: 2026-11-23T19:41:33.725121Z
+  text: |-
+    Pre-UAT on staging d8a915977 (Auditor portal): the withdrawal line PASSED on request History for US and UK readers. Two parts still COULDN'T be checked.
+
+    Steps: on AUD-7 I made E2E Assessor (US dates) the owner of request AQ-3 so they could read it, then E2E Admin A withdrew UAW from it after a test auditor had opened it.
+
+    - US and UK readers each see the "as at" day in their own format, on both views:
+      - Request History, US: PASSED. E2E Assessor reads "Withdrew E2E UAT 122 Auditor Withdraw (UAW), as at Nov 23, 2026 from request AQ-3: …". The Added, Viewed and Downloaded lines also read "as at Nov 23, 2026".
+      - Request History, UK: PASSED. E2E Admin A reads "as at 23 Nov 2026" on the same lines.
+      - Audit's Activity, UK: PASSED. E2E Admin A, same wording.
+      - Audit's Activity, US: COULDN'T CHECK. E2E Assessor has no Activity tab on the audit.
+    - The day is the same for a reader in a far-off time zone: COULDN'T CHECK. I didn't change any account's time zone for this.
+    - Someone who can't open the register reads only "a Restricted register": PASSED, including on a withdrawal. E2E Viewer on AQ-4 reads "Withdrew a Restricted register, as at 23 Nov 2026 from request AQ-4: …".
+
+    Screenshot: ~/compass-uat/sprint-122/COM-2112/10-us-reader-withdrawal-line.png
 assignee: steve
 label:
 - bug
