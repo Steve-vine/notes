@@ -5,6 +5,7 @@ updated: 2026-10-21T09:49:35.974092Z
 type: memo
 title: Carbide engagement
 project: 01KY4JNC6MPPNNFXN416S398SG
+trashed: 2026-11-23T15:58:16.332658Z
 company:
 - moneypenny
 scope:
