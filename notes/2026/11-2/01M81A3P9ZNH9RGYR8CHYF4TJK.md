@@ -1,7 +1,7 @@
 ---
 id: 01M81A3P9ZNH9RGYR8CHYF4TJK
 created: 2026-11-22T09:41:31.071467Z
-updated: 2026-11-23T11:52:56.801372Z
+updated: 2026-11-23T12:42:56.291943Z
 type: task
 title: Provide a register to an audit request — as it stood on a chosen date (default the audit period's end), pinned like provided evidence, removed or withdrawn the same way
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,38 @@ number: 2094
 sprint: ssj8zkq
 blocked_by:
 - 01M81A2A2EEFTA9WNY3N38KG9B
+comments:
+- id: 01M846WH7CZJZG0B10GMSYMKP0
+  author: Steve Vine
+  at: 2026-11-23T12:42:54.060551Z
+  text: |-
+    Built and merged to main: PR #2095 (40d08cdee), with migration 0902_provided_registers.
+
+    What people see:
+    - On a request, Provide a register sits beside Add evidence. The person picks a register they can open, with those kept for the request's controls first, and a day. The day defaults to the end of the audit's period and can be any day up to today.
+    - The request lists it as "Obligations (OBL), as at 31 Mar 2026, 48 entries". Opening it shows a read-only table as it stood then, with archived entries marked and fields removed since still shown.
+    - If the register changes later, the request says "The register has changed since 31 Mar 2026" and offers Provide it again.
+    - A Restricted register warns first that the audit's auditors will see it, and the server refuses it without that confirmation.
+    - It can be taken off freely until the auditor opens it, then only withdrawn with a reason. Activity records all three.
+
+    Decisions made while building, for Steve to check:
+    1. A past day ends on the clock of the person providing it, as the register's own As at does. Today is the exact moment. Both are stored, so the date can't shift.
+    2. A day before the register existed is refused, rather than showing an empty register as if it had been kept then.
+    3. A provided register can't be deleted, even once withdrawn, because what the audit was given is read from it.
+    4. People who can't open the register see only "A Restricted register" or "A register you can't open" on the request. A Restricted register's name also stays out of Activity and the request list's export.
+    5. "Changed since" counts changes to entries only. A link or evidence added to an entry doesn't count, nor does an edit in another company's entries of a per-company register.
+    6. The button reads Provide a register rather than a Provide menu, because the request has no such menu today.
+
+    Important until COM-2095 lands: a request holding only a register can be marked Provided, but the auditor sees no evidence on it. This must not be released without COM-2095.
+
+    Tested against real Postgres: provided as at period end, a past day and now; a later edit the same day changes nothing provided; removing before opening and withdrawing after (opening simulated, since the auditor's side is COM-2095); refusal of a register the person can't open; per-company entries; suggestions; date limits; the deletion guard; nothing reaching the auditor; the migration up and down on a populated table. CI and main build green.
+
+    Not checked: an edit already in flight at the instant of providing (a fraction of a second) can count as before the moment. Not yet checked in a browser on staging: that comes with the sprint's pre-UAT pass.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Registers - Phase 2" (ADR 0167 §6, in COM-2087). Builds on "An import that updates" in chain order. The auditor's side is the next task.
 
