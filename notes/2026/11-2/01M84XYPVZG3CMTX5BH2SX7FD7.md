@@ -1,15 +1,17 @@
 ---
 id: 01M84XYPVZG3CMTX5BH2SX7FD7
 created: 2026-11-23T19:26:02.623351Z
-updated: 2026-11-23T19:26:02.623351Z
+updated: 2026-11-23T19:27:13.432853Z
 type: task
 title: 'Restore option 2: Keep audit logs — the data goes back to the copy, while the logs, signatures, legal holds and revocations made since are carried forward'
-task_status: todo
-assignee: steve
-label: feature
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2119
+sprint: szwetpq
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ADR 0169 §3, §4. For a significant change that went wrong, when the record of what happened must survive.
 

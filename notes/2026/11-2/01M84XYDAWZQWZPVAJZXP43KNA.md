@@ -1,15 +1,17 @@
 ---
 id: 01M84XYDAWZQWZPVAJZXP43KNA
 created: 2026-11-23T19:25:52.860829Z
-updated: 2026-11-23T19:25:52.860829Z
+updated: 2026-11-23T19:27:12.172919Z
 type: task
 title: 'Restore option 1: Everything — the whole database goes back to the copy, logs included, with a safety copy first and no change to live data until the copy has been checked'
-priority: high
-label: feature
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2118
+sprint: szwetpq
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ADR 0169 §3, §4, §8. The nuclear option, and the restore engine the other full restore and the recovery command reuse.
 

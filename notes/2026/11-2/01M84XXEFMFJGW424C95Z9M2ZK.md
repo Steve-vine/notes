@@ -1,15 +1,17 @@
 ---
 id: 01M84XXEFMFJGW424C95Z9M2ZK
 created: 2026-11-23T19:25:21.268886Z
-updated: 2026-11-23T19:25:21.268886Z
+updated: 2026-11-23T19:27:07.161345Z
 type: task
 title: Admin ▸ Backups — an Admin takes an encrypted copy of the database with a reason, sees it listed as BKP-n, and it deletes itself after 30 days
-task_status: todo
-assignee: steve
-priority: high
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2115
+sprint: szwetpq
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 ADR 0169 §1, §2, §10.
 
