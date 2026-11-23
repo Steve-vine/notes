@@ -1,17 +1,34 @@
 ---
 id: 01M84ETCYZJZ2BX572RS8K2TV8
 created: 2026-11-23T15:01:32.767959Z
-updated: 2026-11-23T15:01:41.195149Z
+updated: 2026-11-23T16:23:09.752503Z
 type: task
 title: Provide a register suggests live registers first — an archived one is never among the suggestions
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2110
 sprint: ssj8zkq
+comments:
+- id: 01M84KFR5XAE9A5VK737ERKWFC
+  author: Steve Vine
+  at: 2026-11-23T16:23:06.685575Z
+  text: |-
+    Fixed and merged to main: PR #2102 (5c258ff83). No migration or API change. Not on staging yet.
+
+    What people see:
+    - On a request, Provide a register suggests only live registers under "Kept for this request's controls".
+    - An archived register can still be chosen: it's listed after every live register, under Archived, and can be provided as at a day.
+    - A register the person can't open is still not offered, and providing it directly is refused.
+
+    For Steve to confirm: archived registers stay available to provide, because an audit may need one as it stood during its period.
+
+    Tested against real Postgres and in the screen's component tests: an archived register isn't suggested, is listed last under Archived, and can still be provided; a register the person can't open is refused. CI green.
+
+    Not yet checked on staging: that comes with the re-test.
 assignee: steve
 label:
 - bug
 priority: low
-task_status: active
+task_status: review
 ---
 Sprint "Registers - Phase 2". Found in the pre-UAT pass of COM-2094 on staging e2248892e (23 Nov 2026). Screenshot: `~/compass-uat/sprint-122/COM-2094/02-suggested-registers-first.png`.
 
