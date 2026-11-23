@@ -1,7 +1,7 @@
 ---
 id: 01M84XXEFMFJGW424C95Z9M2ZK
 created: 2026-11-23T19:25:21.268886Z
-updated: 2026-11-23T19:40:51.381101Z
+updated: 2026-11-23T21:15:03.432878Z
 type: task
 title: Admin ▸ Backups — an Admin takes an encrypted copy of the database with a reason, sees it listed as BKP-n, and it deletes itself after 30 days
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,32 @@ number: 2115
 sprint: szwetpq
 blocked_by:
 - 01M84XTFR1V2SDQHR0Y61HSY85
+comments:
+- id: 01M8546A4MWK1H63PE8GCWV2C6
+  author: Steve Vine
+  at: 2026-11-23T21:15:03.188754Z
+  text: |-
+    Merged: #2112, b6fc3829f, 23 Nov 21:14 GMT. Migration 0904_database_backups. Not on staging yet: the sprint deploys together.
+
+    Built: Admin ▸ Backups with BKP-n, Take a backup with a reason and progress, typed-number delete, no download, and the warning when the file store is set only on screen. Each copy is encrypted, read back and checked before it counts as Ready, and deletes itself after 30 days. A separate backup worker does the work, with its own 10Gi temporary disk.
+
+    Decisions made in the build:
+    - Custom roles can't be given Manage backups: it stays with the built-in Admin role.
+    - A copy's description sits unencrypted beside it, so it holds the reason and the taker's id but no name.
+    - "No room" shows as a Failed backup with the reason, not a refusal at the button.
+    - Staging's 2Gi file volume is unchanged, because its storage class can't expand a claim. The node's free disk is the real limit there.
+    - Postgres 16 only for now. A newer server is refused with a clear message.
+
+    Tested: a real copy of a 272 MB local database while a writer kept committing, restored to one consistent point; killing the worker mid-copy leaves nothing behind.
+
+    Couldn't check yet: the screen in a browser, the "on staging" Done when, and the complete built image. These go in the pre-UAT pass after the staging deploy.
+
+    For the release: the worker's S3 identity needs rights on compass-backups/, a bucket rule to abort incomplete uploads, and a check that the 10Gi work disk fits production's database.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ADR 0169 §1, §2, §10.
 
