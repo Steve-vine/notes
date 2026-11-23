@@ -1,7 +1,7 @@
 ---
 id: 01M81A352EHWW3E6NXG8MQB68Z
 created: 2026-11-22T09:41:13.422755Z
-updated: 2026-11-23T09:11:14.526674Z
+updated: 2026-11-23T09:58:21.137888Z
 type: task
 title: A workflow checks evidence against a register — a register lookup (is on, is not on, at least N are on), read once per run, with a warning before a field a workflow uses is changed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,38 @@ sprint: ssj8zkq
 blocked_by:
 - 01M819YPE0MWZJFY6DYBVJRSQB
 - 01M7ZM3A51AMEQBWY97NSMG751
+comments:
+- id: 01M83XF432RHHAM4F3K2X3WH8Q
+  author: Steve Vine
+  at: 2026-11-23T09:58:17.442075Z
+  text: |-
+    Built and merged to main: PR #2088 (309c9ad3b). No migration.
+
+    What people see:
+    - In a workflow's condition, Look up ▸ A register: choose a register and one of its fields, then is on, is not on, or at least N are on.
+    - It reads entries that aren't archived, once per run. A per-company register reads only the run's company. A shared register with a Company field offers Only entries that apply to the company.
+    - The run records what it read: register, field, number of entries and time.
+    - Restricted registers aren't offered, even to administrators.
+    - Removing or retyping a field a workflow reads, or archiving the register, warns first and names the workflows. The register's Settings tab lists Read by workflows, with links.
+
+    Decisions made while building, for Steve to check:
+    1. Deleting an empty register and making a register Restricted also warn, because both stop a workflow reading it.
+    2. If someone goes ahead with removing the field, archiving, deleting or restricting, the workflow shows a problem and its next run fails saying why, leaving the evidence Unchecked. A register made Restricted isn't named in that message.
+    3. Retyping a field warns but doesn't break anything: the workflow reads it as its new type.
+    4. Only entries that apply to the company counts entries whose Company field names that company. An entry with that field blank doesn't count.
+    5. Workflow names on Read by workflows are visible to anyone who can see the register, as on a document's page. Only people who can see Workflows get the link.
+    6. A run reads at most 5,000 entries and says so if it stopped there, as the document list does.
+
+    Not built: Polaris can't pick a register by name when drafting a workflow. A person chooses it on the canvas.
+
+    Tested against real Postgres: the verdict for each test, what the run records, the warnings, Restricted registers, per-company reads, and how each kind of value matches. CI green.
+
+    Not yet checked in a browser on staging: that comes with the sprint's pre-UAT pass.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Registers - Phase 2" (ADR 0167 §4, in COM-2087). Builds on the phase-1 registers (after COM-2084).
 
