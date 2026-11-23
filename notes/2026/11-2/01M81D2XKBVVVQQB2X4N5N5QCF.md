@@ -1,7 +1,7 @@
 ---
 id: 01M81D2XKBVVVQQB2X4N5N5QCF
 created: 2026-11-22T10:33:31.499353Z
-updated: 2026-11-22T13:26:24.680505Z
+updated: 2026-11-23T19:36:40.338204Z
 type: task
 title: Reading groups — assign a document once to a group built from rules (everyone, roles, role-name phrase, Microsoft details, extras and exclusions); the role page's Content card goes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -53,7 +53,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Attestations - Tweaks and Improvements". Builds on the design note (COM-2096, ADR 0168). Raised by Steve while testing Attestations, 2026-11-22.
 

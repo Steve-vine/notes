@@ -1,7 +1,7 @@
 ---
 id: 01M81PV0GQ1EANSP2GP1YNEXZZ
 created: 2026-11-22T13:23:58.103966Z
-updated: 2026-11-22T13:56:37.035353Z
+updated: 2026-11-23T19:36:40.368071Z
 type: task
 title: Attestations wording after reading groups — the menu says "roles", and Who reads what has a second Export beside the page's
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Attestations - Tweaks and Improvements". Found in Claude's pre-UAT pass on staging (f71fdd72e), 22 Nov.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M81D2CGW6Q47KBC0K7YG0WNZ
 created: 2026-11-22T10:33:14.012149Z
-updated: 2026-11-22T13:26:33.095797Z
+updated: 2026-11-23T19:36:40.31953Z
 type: task
 title: 'Design note: attestations are assigned to reading groups, not business roles — one place to assign, groups built from rules'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,7 +29,7 @@ assignee: steve
 label:
 - brief
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Attestations - Tweaks and Improvements". Raised by Steve while testing Attestations, 2026-11-22.
 
