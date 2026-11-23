@@ -1,7 +1,7 @@
 ---
 id: 01M81A3P9ZNH9RGYR8CHYF4TJK
 created: 2026-11-22T09:41:31.071467Z
-updated: 2026-11-23T12:42:56.291943Z
+updated: 2026-11-23T14:59:15.239153Z
 type: task
 title: Provide a register to an audit request — as it stood on a chosen date (default the audit period's end), pinned like provided evidence, removed or withdrawn the same way
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,27 @@ comments:
     Tested against real Postgres: provided as at period end, a past day and now; a later edit the same day changes nothing provided; removing before opening and withdrawing after (opening simulated, since the auditor's side is COM-2095); refusal of a register the person can't open; per-company entries; suggestions; date limits; the deletion guard; nothing reaching the auditor; the migration up and down on a populated table. CI and main build green.
 
     Not checked: an edit already in flight at the instant of providing (a fraction of a second) can count as before the moment. Not yet checked in a browser on staging: that comes with the sprint's pre-UAT pass.
+- id: 01M84EP6N7YBG4F6J5WWPNYMN7
+  author: Steve Vine
+  at: 2026-11-23T14:59:15.23895Z
+  text: |-
+    Pre-UAT on staging e2248892e: PASSED on the company's side. The auditor's half of the last line COULDN'T be checked.
+
+    Account: E2E Admin A, E2E Test Company. Audit AUD-5 "E2E UAT 122 Audit" (SOC 2 Type II, period ending 23 Nov), requests UAT-1 to UAT-4.
+
+    - Provided as at the period end, a past day and now, each with the right entries and values: PASSED.
+      - Period end: the day defaulted to 23 Nov, the audit's end. Listed as "E2E UAT 122 Obligations (UOB), as at 23 Nov 2026, 5 entries".
+      - A past day: the shared register as at 23 Nov, "3 entries" (it has 4 now). A day before the register existed is refused: "This register was made on 23 Nov 2026. Choose that day or later."
+      - Now: provided at 14:44. Opening it shows the entries as they stood, archived marked, and a since-removed field headed "Source (field removed)".
+    - Editing afterwards doesn't change what's provided, and the request says so: PASSED. After I changed UOB-1, added and archived entries and removed a field, the provided view still shows UOB-1 as Met / 10. The request says "The register has changed since 23 Nov 2026" and offers Provide it again.
+    - Before the auditor opens it, it can be removed: PASSED. Take off removed it from UAT-2. The request's History and the audit's Activity both record adding and taking off.
+    - Afterwards only withdrawn with a reason: COULDN'T CHECK. No auditor can open it, because the Auditor portal is switched off on staging (see COM-2095).
+
+    Also seen:
+    - A Restricted register warns first: "The auditors of AUD-5 will see this register. Provide E2E UAT 122 Restricted?" with Provide it / Don't.
+    - Registers kept for the request's controls are listed first, but that group includes archived registers, among them one marked Restricted · Archived. Steve may want those lower or hidden.
+
+    Screenshots: ~/compass-uat/sprint-122/COM-2094/
 assignee: steve
 label:
 - feature

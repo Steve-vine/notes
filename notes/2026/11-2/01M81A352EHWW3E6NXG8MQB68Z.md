@@ -1,7 +1,7 @@
 ---
 id: 01M81A352EHWW3E6NXG8MQB68Z
 created: 2026-11-22T09:41:13.422755Z
-updated: 2026-11-23T09:58:21.137888Z
+updated: 2026-11-23T14:58:55.336747Z
 type: task
 title: A workflow checks evidence against a register — a register lookup (is on, is not on, at least N are on), read once per run, with a warning before a field a workflow uses is changed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,27 @@ comments:
     Tested against real Postgres: the verdict for each test, what the run records, the warnings, Restricted registers, per-company reads, and how each kind of value matches. CI green.
 
     Not yet checked in a browser on staging: that comes with the sprint's pre-UAT pass.
+- id: 01M84ENK78S6PBYMPTDBDD93XZ
+  author: Steve Vine
+  at: 2026-11-23T14:58:55.33657Z
+  text: |-
+    Pre-UAT on staging e2248892e: PASSED.
+
+    Account: E2E Admin A, E2E Test Company. Workflow WFL-13 "E2E UAT 122 Register lookup", tested against CHC-2's capture of 6 Nov (8 captured items), matching each item's name to the Title of register E2E UAT 122 Lookup (ULK).
+
+    - The right verdict for each test: PASSED, using Test on the workflow.
+      - is on, all 8 on the register: Met, "All 8 items are on E2E UAT 122 Lookup (ULK)".
+      - is on, after archiving ULK-8: Not met, "1 of 8 items isn't on…: test-repo1". An archived entry doesn't count.
+      - is not on, all 8 on it: Not met, naming each item and its entry.
+      - is not on, against a register holding none of them (UPA): Met.
+      - at least 8: Met. At least 9: Not met.
+    - The run records the register, field, count and time: PASSED, on one real run. I enabled WFL-13 limited to ACC.13 evidence becoming Compliant, set that capture to Compliant, and the run's "What it read" says "E2E UAT 122 Lookup (ULK), Title, 7 entries, 23 Nov 14:36". It did nothing further (conditions not met). I then disabled the workflow and put the capture back to Unchecked, so that capture's history has two extra lines from me.
+    - Removing the field it reads warns and names the workflow: PASSED. "A workflow reads this: E2E UAT 122 Register lookup (E2E Test Company). If you go ahead, each one's next run fails until the workflow is changed." Archiving the register gives the same warning. I cancelled both. Settings ▸ Read by workflows lists it, with a link.
+    - A Restricted register isn't offered: PASSED. E2E UAT 122 Restricted is missing from the workflow's register list, which says why.
+
+    Not tried: Only entries that apply to the company, and retyping a field.
+
+    Screenshots: ~/compass-uat/sprint-122/COM-2092/
 assignee: steve
 label:
 - feature
