@@ -1,7 +1,7 @@
 ---
 id: 01M82WCES6X09GQFFFV29RXJXD
 created: 2026-11-23T00:20:07.078378Z
-updated: 2026-11-23T00:48:00.865753Z
+updated: 2026-11-23T01:21:22.42451Z
 type: task
 title: 'Registers: archiving or restoring a register or entry updates its buttons straight away, without a reload'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,18 @@ comments:
     Cause: the entries list, an entry's Links and its Evidence each say whether they can be changed, and archiving didn't refresh them. The server was always right: nothing could be saved to an archived register.
 
     Checked by automated tests so far. I'll re-test it in the browser once it's on staging.
+- id: 01M82ZWKZRAE2EBM8WR0QWDYRH
+  author: Steve Vine
+  at: 2026-11-23T01:21:22.424327Z
+  text: |-
+    Re-test on staging 29d0849fc: Passed.
+
+    As E2E Admin A, each sequence on one open page, with no reload between steps.
+
+    - Archiving a register removes Add entry and Import at once, and restoring brings them back, with no reload: Passed. On ZMA I chose Restore, Archive, Restore. After Restore, Import and Add entry appeared. After Archive, both went and the "read-only until it's restored" notice appeared. After the second Restore, both came back. COM-2100/retest-02-restored-buttons.png, retest-03-archived-buttons-gone.png
+    - Archiving an entry removes Add link, Unlink, Take off and Add evidence at once, and restoring brings them back, with no reload: Passed. On ZMA-1, which has both a link and evidence, I chose Restore, Archive, Restore. All four were there after Restore. After Archive, all four went and the card read "ZMA-1 is archived: it keeps its evidence as it is." After the second Restore, all four came back. COM-2100/retest-04-entry-restored-buttons.png, retest-05-entry-archived-buttons-gone.png, retest-06-entry-restored-again.png
+
+    Screenshots are under ~/compass-uat/s64t54m/.
 assignee: steve
 label:
 - bug
