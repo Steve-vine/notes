@@ -1,7 +1,7 @@
 ---
 id: 01M75CS7QBA4N1VFNS1E04VM7V
 created: 2026-11-11T13:29:30.091463Z
-updated: 2026-11-23T17:29:13.635431Z
+updated: 2026-11-23T17:29:45.683322Z
 type: memo
 title: Risks, Issues and Challenges
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -22,6 +22,7 @@ P-9 List of data subjects whose personal information was collected during the re
 R-1775 Evidence (e.g. meeting minutes, management reports, management notes, a PowerPoint deck, emails) that management reviews the methods of collecting personal information before they are implemented (A2)
 R-1777 For an example data subject whose personal information is collected, evidence (e.g. emails, newsletters, privacy notice) that the data subject was informed when the entity developed or acquired additional information about him/her for its use. NOTE: Please redact all actual personal information so we are unable to identify any particular data subject (A2)
 R-1781 Evidence (e.g. reviewed reports, emails, evidence of a review/check, validation checklist, etc.) to determine that compliance with the privacy notice is reviewed and documented annually and the results of that review are provided to management (A2)
+R-1754 Evidence that changes to commitments, requirements, and responsibilities are communicated to third parties, contractors, and customers via updated agreements, website notices, or mass notifications (A2)
 
 ## Challenges
 Vendor Management
