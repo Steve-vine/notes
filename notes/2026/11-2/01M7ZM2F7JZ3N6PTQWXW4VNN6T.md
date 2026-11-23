@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM2F7JZ3N6PTQWXW4VNN6T
 created: 2026-11-21T17:57:07.954058Z
-updated: 2026-11-22T22:13:40.622741Z
+updated: 2026-11-23T00:37:39.70568Z
 type: task
 title: Reviewing a register — a review cycle, Mark as reviewed with a comment, the review filed as evidence on its controls and completing a due SAP entry; reminder dates on entries reach the person responsible
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,6 +40,17 @@ comments:
     - Marking as reviewed completes the SAP entry even if the reviewer couldn't mark it done themselves, because the owner chose that entry. If the plan's own rules refuse (for example, an exercise that needs a result), the entry keeps the evidence and stays open, and the confirmation says why.
 
     Migration 0894_register_reviews follows 0900_reading_groups (single head).
+- id: 01M82XCJQS4Z04BXGZV3QFHKC9
+  author: Steve Vine
+  at: 2026-11-23T00:37:39.705449Z
+  text: |-
+    Pre-UAT on staging f73af7daf: Partly. No defects; three things weren't checked.
+
+    - A review cycle, with last and next review on the list and header, amber and red: Partly. Set to 1 month, Next review showed 22 Dec in amber on both. Couldn't check red: it needs a date in the past. COM-2083/next-review-amber.png
+    - Mark as reviewed records the review, files a PDF on its controls in each applicable company, and completes a due SAP entry: Partly. On per-company ZMA the preview named E2E Test Company alone. Confirming filed EVD-101, a real PDF of the register, type Register review, Internal, with the comment as its description, on INS.5 and SAP-92. SAP-92 became Finished. The Reviews tab lists it, and correcting the comment needed a reason and kept the original in the activity log. Couldn't check shared filing: ZOB's preview named four companies, so I cancelled rather than file test evidence in real companies. Steve should check that a shared review files one PDF in each company where the control applies. I also did not try an SAP entry that isn't yet due. COM-2083/review-preview.png, after-review.png, evidence-pdf-on-control.png, shared-preview-cancelled.png
+    - Reminders reach the right person's Actions and the daily mail: Partly. Admin A had "Review the E2E 121 Per-company main register — due 22 Dec" and ZMA-8 (no Responsible, so the owner). Admin B, the Responsible person, had "ZMA-1 E2E 121 Alpha · Review by 5 Dec". Reminders went once the registers were archived. Couldn't check the daily mail.
+
+    Screenshots are under ~/compass-uat/s64t54m/.
 assignee: steve
 label:
 - feature

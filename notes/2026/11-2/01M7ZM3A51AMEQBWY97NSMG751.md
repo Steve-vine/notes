@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM3A51AMEQBWY97NSMG751
 created: 2026-11-21T17:57:35.521469Z
-updated: 2026-11-22T22:56:32.685165Z
+updated: 2026-11-23T00:37:48.410838Z
 type: task
 title: Templates — start the Obligations, Interested parties, Obligations and interested parties, Incident contacts and Management review actions registers ready-made and linked to their controls; a note when a control or a name is already kept elsewhere
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,19 @@ comments:
     - "Key" alone would flag "Key contacts" as Secrets, so a Secrets match is dropped when the name also says contact, control, date, holder, people, person, personnel or role. "Incident contacts" isn't matched to Incidents either.
     - Someone who owns a register but can't see registers generally is told "another register" for an unrestricted register they can't open, because "a Restricted register" would be untrue.
     - Templates name controls by their on-screen reference, as the task says. If INS.5, INS.6, INS.12, INS.19 or IMA.3 are ever renumbered, the template data needs updating.
+- id: 01M82XCV7TW00DMY5XR8Y0K21M
+  author: Steve Vine
+  at: 2026-11-23T00:37:48.41029Z
+  text: |-
+    Pre-UAT on staging f73af7daf: Passed.
+
+    - Each of the five templates creates its register as listed, with name, prefix and owner changeable first: Passed. Previews matched the task's fields, Shared or per company, controls, cycle, reminders and Responsible. Default prefixes OBL, PTY, OIP, CON and MRA were offered, none already taken. I changed them to ZOB, ZPT, ZOI, ZCO and ZMR so the real prefixes stay free. I changed name and prefix but did not try changing the owner. COM-2084/template-obl-preview.png
+    - OBL, PTY and OIP can all exist without a clash: Passed, using ZOB, ZPT and ZOI. A second ZOB was refused with who holds it. COM-2084/taken-prefix.png
+    - "INS.5 is already kept by …" in the preview and when adding a control, neither blocked: Passed. A Restricted register appeared to Viewer only as "INS.5 is already kept by a Restricted register", with no name or link. COM-2084/template-oip-note.png, control-note-admin.png, kept-elsewhere-viewer.png
+    - Incident contacts can be printed: Passed. Print this register downloaded a two-page PDF with its entry. A Last checked of 10 Jun put "due again 10 Dec" on Actions. COM-2084/print-this-register.pdf, contacts-print-button.png
+    - A name like "Risk register" or "Supplier list" shows where Compass keeps it, without blocking: Passed. They pointed to Risks and Vendor Management. COM-2084/name-note-risk-register.png
+
+    Screenshots are under ~/compass-uat/s64t54m/.
 assignee: steve
 label:
 - feature
