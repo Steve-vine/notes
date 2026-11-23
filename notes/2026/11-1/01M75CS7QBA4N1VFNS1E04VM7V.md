@@ -1,7 +1,7 @@
 ---
 id: 01M75CS7QBA4N1VFNS1E04VM7V
 created: 2026-11-11T13:29:30.091463Z
-updated: 2026-11-23T16:19:17.922668Z
+updated: 2026-11-23T16:19:31.310041Z
 type: memo
 title: Risks, Issues and Challenges
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -14,7 +14,7 @@ company:
 
 ## Challenges
 Master asset inventory is significant work
-P-1  - Code changes
+P-1  - List of code changes
 
 ## Risks
 TeamSupport are self-serving access to the system
