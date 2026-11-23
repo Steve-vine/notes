@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM0H3WQ90W4GMRNFDBEANS
 created: 2026-11-21T17:56:04.348541Z
-updated: 2026-11-23T00:37:15.998907Z
+updated: 2026-11-23T19:36:19.331106Z
 type: task
 title: Links — an entry links to controls, gaps, risks, SAP entries, documents, decisions, vendors and inventory assets; a register names the controls it's kept for; every linked record shows it back
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,7 +47,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Registers" (ADR in COM-2076). Builds on COM-2078.
 

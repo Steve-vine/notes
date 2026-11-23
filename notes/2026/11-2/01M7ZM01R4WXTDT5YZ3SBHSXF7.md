@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM01R4WXTDT5YZ3SBHSXF7
 created: 2026-11-21T17:55:48.612932Z
-updated: 2026-11-23T00:37:10.498268Z
+updated: 2026-11-23T19:36:19.315224Z
 type: task
 title: Entries — add, edit and archive a register's entries, each with its own ID (OBL-4) and full change history, in a sortable, filterable list
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -50,7 +50,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Registers" (ADR in COM-2076). Builds on COM-2077.
 

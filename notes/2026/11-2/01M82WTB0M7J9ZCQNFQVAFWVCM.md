@@ -1,7 +1,7 @@
 ---
 id: 01M82WTB0M7J9ZCQNFQVAFWVCM
 created: 2026-11-23T00:27:41.972198Z
-updated: 2026-11-23T01:21:35.087449Z
+updated: 2026-11-23T19:36:19.460124Z
 type: task
 title: 'Register entry evidence: show each piece''s classification and status on the card'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in the pre-UAT pass of sprint "Registers" on staging f73af7daf. Fix-forward for COM-2080.
 

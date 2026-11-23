@@ -1,7 +1,7 @@
 ---
 id: 01M82WH6KER2QJ5PAD68ZZZFQB
 created: 2026-11-23T00:22:42.542768Z
-updated: 2026-11-23T01:21:28.104064Z
+updated: 2026-11-23T19:36:19.4502Z
 type: task
 title: 'Register export: show the last review on the PDF cover and the Excel Register sheet'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in the pre-UAT pass of sprint "Registers" on staging f73af7daf. Fix-forward for COM-2082.
 

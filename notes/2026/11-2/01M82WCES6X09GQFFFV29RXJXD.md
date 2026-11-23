@@ -1,7 +1,7 @@
 ---
 id: 01M82WCES6X09GQFFFV29RXJXD
 created: 2026-11-23T00:20:07.078378Z
-updated: 2026-11-23T01:21:22.42451Z
+updated: 2026-11-23T19:36:19.436336Z
 type: task
 title: 'Registers: archiving or restoring a register or entry updates its buttons straight away, without a reload'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,7 +37,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Found in the pre-UAT pass of sprint "Registers" on staging f73af7daf. Fix-forward for COM-2077 and COM-2078.
 

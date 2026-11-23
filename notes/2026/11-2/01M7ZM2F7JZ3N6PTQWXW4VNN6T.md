@@ -1,7 +1,7 @@
 ---
 id: 01M7ZM2F7JZ3N6PTQWXW4VNN6T
 created: 2026-11-21T17:57:07.954058Z
-updated: 2026-11-23T00:37:39.70568Z
+updated: 2026-11-23T19:36:19.390009Z
 type: task
 title: Reviewing a register — a review cycle, Mark as reviewed with a comment, the review filed as evidence on its controls and completing a due SAP entry; reminder dates on entries reach the person responsible
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -55,7 +55,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Registers" (ADR in COM-2076). Builds on COM-2079 (a register's controls), COM-2080 (evidence on registers) and COM-2082 (the PDF of a register as at a date). INS.5, INS.12 and IMA.3 each ask for "the last review record". This task makes it.
 
