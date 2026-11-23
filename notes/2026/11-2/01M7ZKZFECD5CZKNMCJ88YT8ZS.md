@@ -1,7 +1,7 @@
 ---
 id: 01M7ZKZFECD5CZKNMCJ88YT8ZS
 created: 2026-11-21T17:55:29.868183Z
-updated: 2026-11-22T09:33:05.110877Z
+updated: 2026-11-23T00:37:03.409027Z
 type: task
 title: Registers and their fields — someone who can edit Content makes a register (name, prefix, owner, editors, shared or per company) and defines its fields; Assurance ▸ Registers lists them
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,20 @@ comments:
     - CVE and CWE are also reserved prefixes.
 
     For later tasks: the note on New register for a name Compass already keeps ("Risk register" → Risks) comes with COM-2084. The controls a register is kept for come with COM-2079. Review dates come with COM-2083.
+- id: 01M82XBF9HHCSZH7W0XTB23CK9
+  author: Steve Vine
+  at: 2026-11-23T00:37:03.408844Z
+  text: |-
+    Pre-UAT on staging f73af7daf: Partly. One defect, raised as COM-2100.
+
+    - Someone who can edit Content can make a register with fields of every type, reorder them, and set Required, reminders and Responsible: Partly. As E2E Admin A I made "E2E 121 Per-company main" (ZMA) with all ten field types, moved Amount up with the arrow key, made Notes required, set a 30-day reminder and marked a Person field Responsible. Each showed correctly in Settings. Couldn't check: a Content editor who isn't an administrator (E2E Analyst's roles differ from plain Analyst, so I didn't rely on it), and reordering by dragging. COM-2077/all-field-types.png
+    - The list shows owner and Shared or per company, and a Restricted register is invisible to anyone not on it: Passed. E2E Viewer's list had no "E2E 121 Restricted Zebra" (ZRS). Its direct address showed "Register not found" and the server answered 404, as did a direct export address. E2E Access Manager, an editor of ZRS, could open it. COM-2077/viewer-list-no-restricted.png, viewer-restricted-direct-url.png, editor-sees-restricted.png
+    - Renaming, adding and removing fields and choice values behave as specified, and a removed field's values aren't lost: Passed. Renamed Source to "Source of duty". Removed the choice "Old value": ZMA-2 kept it as "Old value (retired)". Making Notes required marked existing entries Incomplete without changing them. Once there were entries, a Choice field offered only Choice and Multiple choice. After removing Web page, ZMA-1's History showed it as "(field removed)" and the 22 Nov view still showed its value. COM-2077/retired-value.png, incomplete-after-required.png
+    - A prefix in use, or one of Compass's own, is refused with the reason: Passed. RSK: "RSK is Compass's own prefix for risks. Choose another". MWG: "MWG is already used by the register E2E browser tests register". COM-2077/prefix-taken.png
+    - An empty register can be deleted; one with entries can only be archived and restored: Passed, with COM-2100. Deleted an empty test register (ZDL). ZMA, with entries, offered no Delete. Archiving ZSH made it read-only and moved it under the Archived filter, and Restore brought it back. The buttons on screen were out of date until a reload (COM-2100). COM-2077/archived-readonly.png
+    - Every change to the register and its fields was in its activity log, read through the log's address because I couldn't find its screen.
+
+    Screenshots are under ~/compass-uat/s64t54m/.
 assignee: steve
 label:
 - feature
