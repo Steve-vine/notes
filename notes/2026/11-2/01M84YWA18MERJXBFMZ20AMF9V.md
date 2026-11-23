@@ -1,7 +1,7 @@
 ---
 id: 01M84YWA18MERJXBFMZ20AMF9V
 created: 2026-11-23T19:42:12.520743Z
-updated: 2026-11-23T20:59:07.9118Z
+updated: 2026-11-23T22:13:09.877287Z
 type: task
 title: A register provided to an audit keeps the controls it had on the provided date
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Registers - Phase 2". Found in the auditor portal check of COM-2095 on staging d8a915977 (23 Nov 2026). Screenshot: `~/compass-uat/sprint-122/COM-2095/26-control-removed-since-provided.png`.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M84YWN85MGT72GGWJGQKB78K
 created: 2026-11-23T19:42:24.005502Z
-updated: 2026-11-23T20:59:14.305701Z
+updated: 2026-11-23T22:13:09.89087Z
 type: task
 title: Each provided register an auditor opens gets its own Viewed line in the audit's trail
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,7 +31,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Sprint "Registers - Phase 2". Found in the auditor portal check of COM-2095 on staging d8a915977 (23 Nov 2026). Screenshot: `~/compass-uat/sprint-122/COM-2095/28-second-copy-view-not-logged.png`.
 
