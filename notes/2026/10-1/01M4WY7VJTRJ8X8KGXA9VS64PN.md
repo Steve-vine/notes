@@ -1,7 +1,7 @@
 ---
 id: 01M4WY7VJTRJ8X8KGXA9VS64PN
 created: 2026-10-14T10:10:01.434555Z
-updated: 2026-11-24T17:11:53.604693Z
+updated: 2026-11-24T17:11:54.893373Z
 type: memo
 title: 2027 Objectives
 category:
@@ -19,7 +19,7 @@ scope:
 -  Deploy env-production-u*-sec
 -  Cloud cost (reservations etc.)
 -  Dev permissions in Azure prod
--  SRE Stand
+-  SRE Standards
 
 Joe
 - Shadow IT (Atlassian Loom and other applications, what strategies can we put in place)
