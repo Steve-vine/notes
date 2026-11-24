@@ -1,17 +1,39 @@
 ---
 id: 01M87NP509Q79GWHY7EYF0KVPQ
 created: 2026-11-24T20:59:16.873671Z
-updated: 2026-11-24T21:17:37.905341Z
+updated: 2026-11-24T21:21:40.926718Z
 type: task
 title: 'ADR 0178: business services: a per-company list linking vendors, Inventory, risks, incidents and content'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2149
 sprint: ss3ttbb
+comments:
+- id: 01M87PZ4JTPXGCP71NMHQGX0MW
+  author: Steve Vine
+  at: 2026-11-24T21:21:39.930648Z
+  text: |-
+    Merged to main: PR #2137 (1abae0f11). Docs only. `decisions/0178-business-services.md`, Status Proposed, added to CLAUDE.md's key-ADR line. ADR 0131 gains an "Amended by 0178 §7 (the BIA's rows)" line.
+
+    It records:
+    - Each company's own list of business services, each Internal or Client facing, with SVC-n, owner, description and its own criticality.
+    - SVC is reserved from user registers: if a register already uses SVC, the change stops with a clear message.
+    - Retire, not delete, once in use.
+    - The page is in the Exposure group after Inventory.
+    - Services link to vendor engagements (not vendors), Inventory, risks, incidents and content. Content links are per company, set by inventory managers.
+    - A vendor's blast radius comes from its engagements and through Inventory (systems it supplies, software it publishes, data it receives), followed through system dependencies, with every route shown.
+    - A service never changes a vendor's or engagement's criticality.
+    - The BIA assesses the services list instead of its own functions (option 2). Older approved BIAs keep theirs, and Continuity reads by service once a service-based BIA is approved.
+
+    For Steve (small calls the ADR proposes):
+    1. "Live" engagements for the blast radius means proposed and active, as elsewhere in vendors, so a proposed engagement counts before it starts.
+    2. A retired service still shows in a vendor's blast radius, marked Retired.
+    3. A decommissioned asset shows marked and is left out of worked-out vendor routes.
+    4. A service retired after a BIA is approved stays in that BIA, and the next BIA leaves it out.
 assignee: steve
 label:
 - brief
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Business Services" (Steve, 24 Nov 2026). Written first; the other tasks follow it.
 
