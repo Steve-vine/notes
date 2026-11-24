@@ -1,7 +1,7 @@
 ---
 id: 01M86VSPANP5B4NBW5TJYE172P
 created: 2026-11-24T13:26:49.941142Z
-updated: 2026-11-24T14:31:01.194357Z
+updated: 2026-11-24T14:31:28.394007Z
 type: memo
 title: SOC2 In-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -30,7 +30,6 @@ scope:
   * Kubernetes (openanswer namespace) - US
 * AWS (VoiceNation)
   * RDS Database master/slave - US
-
 
 ### AI Receptionist
 
