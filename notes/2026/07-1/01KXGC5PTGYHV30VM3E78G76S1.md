@@ -1,11 +1,11 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-24T19:49:11.466192Z
+updated: 2026-11-24T20:59:16.878117Z
 type: project
 title: Compass
 identifier: COM
-next_task_number: 2149
+next_task_number: 2150
 roadmap:
 - id: rboze66
   title: Internal POC
@@ -1091,6 +1091,9 @@ sprints:
 - id: sectbn9
   title: Vendor Departments
   description: Each company keeps its own editable list of departments (Admin → Companies, and when a company is created). Every vendor engagement records the one department it is for, chosen from that list when the engagement is added or requested. The department shows on the engagement card in Compass and the portal, and the portal vendor list gets a Department column and filter.
+- id: ss3ttbb
+  title: Business Services
+  description: 'Each company keeps a list of business services, each Internal or Client facing (for Moneypenny: TAS, LiveChat, AI Receptionist…). Services link to vendor engagements and to Inventory, so a vendor page shows its blast radius: which services it supports and by what route. Risks, incidents and content link to services, and the business impact analysis assesses them. A service never changes a vendor’s criticality. ADR 0178.'
 assignee: steve
 priority: medium
 project_status: active
