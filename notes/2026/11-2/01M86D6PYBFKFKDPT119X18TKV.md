@@ -1,12 +1,14 @@
 ---
 id: 01M86D6PYBFKFKDPT119X18TKV
 created: 2026-11-24T09:11:47.915218Z
-updated: 2026-11-24T09:11:50.712473Z
+updated: 2026-11-24T09:12:20.371059Z
 type: task
 title: A vendor engagement records its department, chosen when it's added, and shows it on the engagement card
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2133
 sprint: sectbn9
+blocked_by:
+- 01M86D5X2254AHKNKDQSAQBMDB
 assignee: steve
 label:
 - feature
