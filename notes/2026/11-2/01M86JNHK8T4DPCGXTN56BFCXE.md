@@ -1,7 +1,7 @@
 ---
 id: 01M86JNHK8T4DPCGXTN56BFCXE
 created: 2026-11-24T10:47:16.840179Z
-updated: 2026-11-24T11:49:14.057156Z
+updated: 2026-11-24T15:21:19.418445Z
 type: task
 title: A restore soon after a failed one goes ahead, and the recovery list shows each copy's full version
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,19 @@ comments:
     Known limit: a copy killed with its pod still blocks restores for 15 minutes, though the restore now refuses at once instead of going offline first. A follow-up could settle killed copies the way killed restores are.
 
     Couldn't check: a real killed pod in a cluster (tests only).
+- id: 01M872BAST87B645H9NAA8J6ZN
+  author: Steve Vine
+  at: 2026-11-24T15:21:19.418245Z
+  text: |-
+    Pre-UAT pass, 24 Nov 2026, staging 0234a65f3.
+
+    Couldn't check on staging, by design, part 1: a restore straight after a killed one goes ahead, and refuses at once if work is really running. Both need restores, and killing a restore, on staging's shared data. Not done.
+
+    Couldn't check on staging, by design, part 2: the recovery list shows the full version and schema. The recovery command runs as a cluster Job, which I'm not to run.
+
+    Not seen in the rehearsal either: COM-2124 ran on e034eaeed, before this fix (de82a9914). Its logs show the defect this task fixes. Rely on the build's tests (173 maintenance, restore, recovery and Keep audit logs tests) until a scratch rehearsal at 0234a65f3 or later.
+
+    On staging: Admin ▸ Backups listed BKP-1's full version, "staging-20261124-1443". That's the screen, not the recovery list.
 assignee: steve
 label:
 - bug
