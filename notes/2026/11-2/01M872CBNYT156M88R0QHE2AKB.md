@@ -1,7 +1,7 @@
 ---
 id: 01M872CBNYT156M88R0QHE2AKB
 created: 2026-11-24T15:21:53.086545Z
-updated: 2026-11-24T16:27:06.823386Z
+updated: 2026-11-24T16:27:28.51908Z
 type: task
 title: When a put-back finishes, the compare list shows the records as Same at once, not Missing for another 25 seconds
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,11 +43,18 @@ comments:
     - 04-second-put-back-300ms-before-finish.png: the brief in-progress state described above
     - 05-second-put-back-finished.png: banner 16:25, "0 missing", both Same
     - 06-after-reload.png
+- id: 01M8764E776R18RAE1VP02PPM3
+  author: Steve Vine
+  at: 2026-11-24T16:27:27.847009Z
+  text: |-
+    Merged: #2134, c7e9ad0d6, 24 Nov ~15:55 GMT. Frontend only. On staging c7e9ad0d6 since 16:20 GMT (deploy and Browser smoke 41/41 green). The re-check on staging passed; see the pre-UAT comment above.
+
+    Cause: the screen declared a put-back finished as soon as it read that, and only then asked again for the counts and records, reusing any read already in flight. Fix: when a put-back ends (done or failed), the screen drops in-flight reads, rereads the counts, list and any open record, and only then shows it finished. Ticks follow the put-back whether the window is open or closed, and records not put back stay ticked with their reason.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Fix-forward on COM-2139/COM-2122, found in the pre-UAT pass on staging 0234a65f3 (screenshot `~/compass-uat/backup-and-restore/COM-2139/03-finished-list-still-says-missing.png`).
 
