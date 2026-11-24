@@ -1,17 +1,41 @@
 ---
 id: 01M86D5X2254AHKNKDQSAQBMDB
 created: 2026-11-24T09:11:21.410321Z
-updated: 2026-11-24T10:59:04.698952Z
+updated: 2026-11-24T11:53:19.675756Z
 type: task
 title: Each company keeps its own list of departments, edited in Admin → Companies
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2131
 sprint: sectbn9
+comments:
+- id: 01M86PEEKWVV2TAT13GBW85QN5
+  author: Steve Vine
+  at: 2026-11-24T11:53:18.716593Z
+  text: |-
+    Built and merged to main: PR #2125 (27d21d61c), migration 0909_departments, ADR 0175 (Proposed; also listed in CLAUDE.md).
+
+    What people see:
+    - Admin → Companies → a company has a new "Departments · N" panel under Systems and applications. It lists the company's departments in their order, with retired ones kept in place, dimmed and marked Retired.
+    - Someone who can manage companies can add, rename, move up/down (↑/↓), retire and bring back a department.
+    - Names are unique within a company, ignoring case and spaces at the ends: "E2E Test Company already has a department called Finance". The same name in another company is fine.
+    - Delete only shows for a department no engagement uses. One in use shows "Used by N" and offers Retire. A refused delete says "Finance is used by 3 engagements — retire it instead". (The count starts working when COM-2133 links engagements.)
+    - An archived company's list is read-only.
+    - Each add, rename, retire, bring back and delete writes its own activity-log line against the company. A reorder writes one line.
+    - Anyone who can see the company's vendors (Compass or portal) or request a vendor can read the list. A recertifier-only account can't.
+
+    Tested: backend integration tests for every Done-when point, plus the migration up → down → up and the case-insensitive uniqueness. Vitest covers the panel (list, add/rename/retire/reorder/delete, read-only archived company). CI full suite green.
+
+    For Steve to decide:
+    1. Departments have their own panel at the bottom of the company page rather than sitting among the scope panels, because they aren't scope.
+    2. Retired departments stay in place in the list (dimmed) rather than moving to a separate section.
+    3. People who can request a vendor but can't see the register can still read the departments, because they pick one on the request form.
+
+    Not checked yet: seen in a browser (comes with the staging pre-UAT pass).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Vendor Departments" (Steve, 24 Nov 2026). The first of five: the list every other task picks from.
 
