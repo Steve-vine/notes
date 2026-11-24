@@ -1,7 +1,7 @@
 ---
 id: 01M86VSPANP5B4NBW5TJYE172P
 created: 2026-11-24T13:26:49.941142Z
-updated: 2026-11-24T15:24:55.025497Z
+updated: 2026-11-24T15:25:39.139529Z
 type: memo
 title: SOC2 In-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -58,4 +58,6 @@ scope:
 * Magrathea (Telephony)
 * Bandwidth (Telephony)
 * Google Places (Geo data)
+
+
 
