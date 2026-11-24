@@ -1,17 +1,45 @@
 ---
 id: 01M87R0HPZ4P7DA429RRR89NWV
 created: 2026-11-24T21:39:54.719303Z
-updated: 2026-11-24T21:52:13.154483Z
+updated: 2026-11-24T22:10:14.356727Z
 type: task
 title: Production is ready for Backup and Restore before the next release — room for a restore, a planned route for restoring the scheduled backup, and backups moved to the Barman Cloud plugin
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2157
 sprint: szwetpq
+comments:
+- id: 01M87SR2MFT5W14T207GTT4B6G
+  author: Steve Vine
+  at: 2026-11-24T22:10:14.287412Z
+  text: |-
+    Prepared, validated and STAGED, 24 Nov ~22:05 GMT. Nothing applied, committed or pushed. Steve was away and pre-approved preparation only.
+
+    1. Room for a restore. Read from AWS: both database volumes are 50 GiB (gp2, encrypted, eu-west-2a) and the database is 1.35 GB. A restore needs at least 2 × the database + 5 GiB free on each volume, about 7.5 GiB today against an estimated 47 GiB free. Rule of thumb: grow the volumes once the database passes a quarter of them (12 GB). WAL archiving is running (newest WAL 21:58 UTC). The readme's "Room for a restore" section has the kubectl commands to confirm real free space.
+
+    2. Restoring the scheduled backup into a new cluster. A `postgres.restore` switch in `base/`, off by default: production renders byte-for-byte the same as today. Switched on, it renders `compass-postgres-restored` from the backups, keeping the live owner's password. It points `DATABASE_URL` at the new cluster and gives it its own backup folder. It refuses reusing the live name or archiving into the folder it restores from. The IAM trust command for the new cluster's service account is in the readme and NOT run; best run before any incident. Validated with helm lint and template under Helm 3 and 4.
+
+    3. Barman Cloud plugin. Production runs CNPG 1.28.1 (as declared) with cert-manager v1.20.1. Plugin v0.15.1 (chart 0.8.1) supports CNPG 1.26+, so no operator upgrade is needed first; v0.16.0 needs CNPG 1.30. The operator is installed by Crossplane from devops.library.crossplane (appcluster-comp-v2), not devops.infrastructure.aws.
+    - Staged: an opt-in plugin Release in the library repo (branch feature/com-2157-barman-cloud-plugin from staging); the switch on env-staging-uk and env-production-uk-pri in the infra repo; and an ObjectStore (same folder, 30 days, IRSA), the cluster archiving through the plugin, and the nightly backup by plugin in the deployment repo.
+
+    Order (commands in the agent's report and the readme):
+    (1) commit the deployment repo's base/readme/CLAUDE.md (safe, renders nothing new) and run the IAM trust command;
+    (2) library branch → PR into staging;
+    (3) env-staging-uk key, then check the plugin there;
+    (4) library staging → main in a CAB window (it also carries other unreleased changes);
+    (5) env-production-uk-pri key;
+    (6) only then, not near 02:00 UTC, the production values switch to plugin, then check WAL and a base backup from the bucket, then COM-730.
+
+    Couldn't confirm without kubectl: real free space, the operator actually running, and whether IRSA reaches the plugin's sidecar. The bucket checks catch that. If the plugin can't archive, no WAL is lost (it queues on the volume), but point-in-time recovery stops advancing until it's fixed or reverted.
+
+    Also found:
+    - The complete-failure runbook named Argo CD's namespace `argocd`; production's is `argo-cd`. Fixed as COM-2158.
+    - The deployment readme's bootstrap still says ROLE=compass-prod-app; the real role is compass-app. Pre-existing, left as is.
+    - The staged deployment-repo CLAUDE.md gains two rules: never switch on `postgres.restore` to try it, and the plugin must be running before `method: plugin`.
 assignee: steve
 label:
 - chore
 priority: high
-task_status: active
+task_status: review
 ---
 Production readiness for the Backup and Restore sprint (ADRs 0169–0174, 0176, 0177). **This must be done before the release that carries the sprint.** The bucket rule (COM-2123) is already applied.
 
