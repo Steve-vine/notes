@@ -1,7 +1,7 @@
 ---
 id: 01M86VSPANP5B4NBW5TJYE172P
 created: 2026-11-24T13:26:49.941142Z
-updated: 2026-11-24T15:27:09.133877Z
+updated: 2026-11-24T15:27:15.626973Z
 type: memo
 title: SOC2 In-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -60,6 +60,6 @@ scope:
 * Google Places (Geo data)
 
 ### Integrations
-* AWS (Production) version 2
+* AWS (Production)
   * Kubernetes (integrations namespace) - UK
 
