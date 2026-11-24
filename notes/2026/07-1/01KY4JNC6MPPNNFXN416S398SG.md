@@ -1,7 +1,7 @@
 ---
 id: 01KY4JNC6MPPNNFXN416S398SG
 created: 2026-07-22T09:31:44.212218Z
-updated: 2026-11-24T17:02:05.832026Z
+updated: 2026-11-24T17:02:15.897085Z
 type: project
 title: SOC2
 identifier: SOC
@@ -47,6 +47,7 @@ sprints:
   title: Vulnerability Management
 - id: srluidz
   title: Actions
+  description: Things that need doing
 assignee: steve
 company: null
 priority: high
