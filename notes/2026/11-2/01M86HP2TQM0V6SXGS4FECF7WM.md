@@ -1,7 +1,7 @@
 ---
 id: 01M86HP2TQM0V6SXGS4FECF7WM
 created: 2026-11-24T10:30:05.911877Z
-updated: 2026-11-24T10:30:22.73897Z
+updated: 2026-11-24T13:34:19.922369Z
 type: task
 title: 'Compass vendor register: a Department column and a Department filter'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint "Vendor Departments" (Steve, 24 Nov 2026). Follows COM-2135. Steve asked for it after the sprint was planned: the same column and filter as the portal, on the vendor register inside Compass.
 
