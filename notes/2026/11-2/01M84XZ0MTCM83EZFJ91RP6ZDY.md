@@ -1,7 +1,7 @@
 ---
 id: 01M84XZ0MTCM83EZFJ91RP6ZDY
 created: 2026-11-23T19:26:12.634427Z
-updated: 2026-11-24T01:38:01.384152Z
+updated: 2026-11-24T03:52:32.950475Z
 type: task
 title: 'Complete failure: when Compass cannot start, a recovery command lists the copies from the store and restores one into an empty database, with a runbook to follow during an incident'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 2120
 sprint: szwetpq
 blocked_by:
 - 01M84XYDAWZQWZPVAJZXP43KNA
+comments:
+- id: 01M85TY4TTS07HD5SG1N25G92X
+  author: Steve Vine
+  at: 2026-11-24T03:52:32.857843Z
+  text: |-
+    Merged: #2118, 787af4848, 24 Nov ~03:45 GMT. No migration and no API change. Not on staging yet: the sprint deploys together. Runbook: docs/runbooks/complete-failure.md, linked from chart/README.md. ADR 0171 (recovering from outside Compass) is Proposed, for Steve to read.
+
+    Built: a recovery command in the Compass image that lists copies from the store with no database or Valkey, and restores one into an empty database. Compass then comes up on hold. The runbook covers stopping the app (in production, switching off Argo's sync first), restoring a lost bucket first, rebuilding the cluster, picking a copy before anything is dropped, restoring, starting, signing in and working through the hold. The recovery job can't fire by accident: it's off by default, isn't a deploy hook, and only renders for 15 minutes after it's asked for.
+
+    Decisions made in the build:
+    - Overwriting a database that isn't empty needs its name plus a code worked out from what's in it now, so the same command can't overwrite twice.
+    - It refuses while any Compass worker is answering or connected.
+    - Everything from before the restore is ignored afterwards: old queued work, sessions, portal visits and reset links. This holds even if Valkey was down during the restore.
+    - `create-admin --password-stdin` works on hold for a break-glass sign-in.
+    - Everyone is signed out once on any environment that has had a hold, because older sessions don't record when they began.
+
+    Tested: a real recovery on scratch containers. The database was dropped and recreated empty and Valkey flushed; the restore took about 36s and came back on hold with the copy's data. A break-glass Admin signed in. It refused a wrong key, a non-empty database, a connected app and a replayed overwrite. An independent review found 11 issues, all fixed.
+
+    Couldn't check yet: the production commands (Argo, the database cluster, the published chart), and the timings section, which COM-2124 fills in. Production's secret is confirmed as `prod-uk-compass-creds` (read from AWS), which is what the runbook uses.
+
+    For Steve:
+    - The build tried to add a CI check that the recovery job stays off and is never a deploy hook, but the permission system blocked the CI change. Nothing enforces that automatically yet.
+    - Restoring the database platform's own scheduled backup still places no hold, so Compass could re-run due access changes within five minutes. Logged as a separate task.
+    - Who runs the bucket's external backup, and how, isn't written down anywhere Compass can see.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ADR 0169 §6, §11.
 
