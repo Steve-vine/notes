@@ -1,7 +1,7 @@
 ---
 id: 01M86D6PYBFKFKDPT119X18TKV
 created: 2026-11-24T09:11:47.915218Z
-updated: 2026-11-24T11:53:37.575288Z
+updated: 2026-11-24T12:55:28.340533Z
 type: task
 title: A vendor engagement records its department, chosen when it's added, and shows it on the engagement card
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 2133
 sprint: sectbn9
 blocked_by:
 - 01M86D5X2254AHKNKDQSAQBMDB
+comments:
+- id: 01M86T07WW4NVPMCDV44C7W5DK
+  author: Steve Vine
+  at: 2026-11-24T12:55:27.388573Z
+  text: |-
+    Built and merged to main: PR #2127 (f7e56bec3), migration 0910_engagement_department.
+
+    What people see:
+    - Adding an engagement (a vendor → Engagements → Add) has a required Department drop-down of the company's active departments in their order. Without one: "Required." and nothing saved. The API refuses it too.
+    - Editing shows the same drop-down. An older engagement with none reads "Not recorded" and must be given one before a proposed or active engagement can be saved. An ended one can be saved without.
+    - A retired department stays on engagements that have it ("Finance (Retired)" in the form, a Retired mark on the card), but can't be newly picked.
+    - A company with no departments: "No departments set up for <company> yet. An administrator adds them in Admin → Companies.", and the engagement can't be added.
+    - The engagement card shows Department as its first fact, on the vendor page in Compass and in the portal ("Not recorded" when none). Renames show at once.
+    - A department from another company is refused.
+    - Deleting a department in use is refused with the count ("Finance is used by 2 engagements — retire it instead"). The Departments panel's "Used by N" now counts engagements.
+    - Polaris: adding an engagement needs a department, named in words. A missing or unmatched name is refused with the company's list. Polaris can change it, and lists show it.
+
+    Tested: backend integration for required, other company, change, rename, retire, live vs ended, the delete guard, register rows, a portal read, and migration up → down → up. The 280 vendor integration tests and 51 vendor assistant tests pass. Vitest covers the picker, the no-departments message, Not recorded, the retired value kept, and the portal card. CI green.
+
+    For Steve to decide:
+    1. An edit that doesn't touch the department (e.g. Polaris changing only the status) still goes through on an older engagement with none. The screen's edit form always requires it for live engagements.
+    2. Another company's department is refused as "Unknown department" rather than "belongs to another company", so one company's list isn't revealed to another.
+
+    Not checked yet: seen in a browser (staging pre-UAT). Restore ▸ Selected records: an engagement whose department has since been deleted is put back with the department left empty and a note, as for any other missing optional link. That was read in the code, not run.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Vendor Departments" (Steve, 24 Nov 2026). Follows COM-2131.
 
