@@ -1,7 +1,7 @@
 ---
 id: 01M86VSPANP5B4NBW5TJYE172P
 created: 2026-11-24T13:26:49.941142Z
-updated: 2026-11-24T15:07:48.126208Z
+updated: 2026-11-24T15:08:28.463268Z
 type: memo
 title: SOC2 In-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -33,7 +33,7 @@ scope:
 
 ### AI Receptionist
 * AWS (Production)
-  * Kubernetes (openanswer namespace) - UK
+  * Kubernetes ( namespace) - UK
 
 
 
