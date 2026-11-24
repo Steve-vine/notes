@@ -1,7 +1,7 @@
 ---
 id: 01M86VSPANP5B4NBW5TJYE172P
 created: 2026-11-24T13:26:49.941142Z
-updated: 2026-11-24T15:26:05.262836Z
+updated: 2026-11-24T15:27:09.133877Z
 type: memo
 title: SOC2 In-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -61,5 +61,5 @@ scope:
 
 ### Integrations
 * AWS (Production) version 2
-  * Kubernetes (chinwag-v2 namespace) - UK
+  * Kubernetes (integrations namespace) - UK
 
