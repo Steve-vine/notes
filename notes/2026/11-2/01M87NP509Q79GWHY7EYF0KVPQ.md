@@ -1,15 +1,17 @@
 ---
 id: 01M87NP509Q79GWHY7EYF0KVPQ
 created: 2026-11-24T20:59:16.873671Z
-updated: 2026-11-24T20:59:16.873671Z
+updated: 2026-11-24T21:00:27.544972Z
 type: task
 title: 'ADR 0178: business services: a per-company list linking vendors, Inventory, risks, incidents and content'
-label: brief
-priority: medium
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2149
+sprint: ss3ttbb
+assignee: steve
+label:
+- brief
+priority: medium
+task_status: todo
 ---
 Sprint "Business Services" (Steve, 24 Nov 2026). Written first; the other tasks follow it.
 
