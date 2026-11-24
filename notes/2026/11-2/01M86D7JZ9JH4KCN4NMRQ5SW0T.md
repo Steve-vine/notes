@@ -1,7 +1,7 @@
 ---
 id: 01M86D7JZ9JH4KCN4NMRQ5SW0T
 created: 2026-11-24T09:12:16.617249Z
-updated: 2026-11-24T12:55:30.609049Z
+updated: 2026-11-24T14:14:12.247072Z
 type: task
 title: 'Portal vendor list: a Department column and a Department filter'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 2135
 sprint: sectbn9
 blocked_by:
 - 01M86D6PYBFKFKDPT119X18TKV
+comments:
+- id: 01M86YGD1M09RDWRKGQB89JDJ2
+  author: Steve Vine
+  at: 2026-11-24T14:14:11.25249Z
+  text: |-
+    Built and merged to main: PR #2131 (f06eec21f). No migration. The API gains a Department filter on the vendor lists.
+
+    What people see:
+    - Portal → Vendors and My Vendors have a new sortable Department column: the departments of the vendor's live (proposed or active) engagements, each once, in the company's department order. "Not recorded" when its live engagements have none; blank when it has no live engagement.
+    - Each engagement sub-row shows its own department ("Finance (Retired)" for a retired one, or "Not recorded").
+    - A Department filter in the filter bar lists the company's departments (retired ones marked) plus "Not recorded". Several can be chosen; a vendor matches if any live engagement is in any of them.
+    - The filter is kept in the page address by department, not name, so a link still works after a rename or retirement.
+    - Ended engagements count for neither the column nor the filter: ending a vendor's only Finance engagement takes it out of the Finance filter.
+    - The server applies the filter, so counts and paging are right. The same filter is ready on the Compass vendor list (used by COM-2136).
+    - Polaris's "list vendors" takes departments by name (or "Not recorded") and shows each vendor's departments.
+
+    Tested: backend integration for both lists, several departments, Not recorded, a mixed vendor, a vendor with no engagement, ending an engagement, rename and retire, and counts. A Polaris test too. Vitest covers the column, sub-rows, filter choices, the repeated filter values sent, and the filter read back from the address. CI green.
+
+    For Steve to decide:
+    1. A vendor is under "Not recorded" only when none of its live engagements has a department. A vendor with one Finance engagement and one older engagement without one shows "Finance" and filters under Finance only.
+    2. A vendor with no live engagements shows a blank and isn't under "Not recorded".
+    3. Sorting goes by the vendor's first department in the company's order. "Not recorded" comes after every department, and blanks come last.
+
+    Not checked yet: seen in a browser (staging pre-UAT).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Vendor Departments" (Steve, 24 Nov 2026). Follows COM-2133.
 
