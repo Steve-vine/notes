@@ -1,7 +1,7 @@
 ---
 id: 01M86VSPANP5B4NBW5TJYE172P
 created: 2026-11-24T13:26:49.941142Z
-updated: 2026-11-24T15:10:56.109997Z
+updated: 2026-11-24T15:11:08.773565Z
 type: memo
 title: SOC2 In-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -40,5 +40,7 @@ scope:
 * AWS (Chinwag) version 1
   * Kubernetes (chinwag namespace) - UK
   * Kubernetes (deepgram namespace) - UK
+  * Kubernetes (chinwag namespace) - US
+  * Kubernetes (deepgram namespace) - US
 
 
