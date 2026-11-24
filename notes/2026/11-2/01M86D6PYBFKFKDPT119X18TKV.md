@@ -1,7 +1,7 @@
 ---
 id: 01M86D6PYBFKFKDPT119X18TKV
 created: 2026-11-24T09:11:47.915218Z
-updated: 2026-11-24T12:55:28.340533Z
+updated: 2026-11-24T15:17:33.571506Z
 type: task
 title: A vendor engagement records its department, chosen when it's added, and shows it on the engagement card
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,20 @@ comments:
     2. Another company's department is refused as "Unknown department" rather than "belongs to another company", so one company's list isn't revealed to another.
 
     Not checked yet: seen in a browser (staging pre-UAT). Restore ▸ Selected records: an engagement whose department has since been deleted is put back with the department left empty and a note, as for any other missing optional link. That was read in the code, not run.
+- id: 01M8724E83ETAQVJP6T8KB3MDS
+  author: Steve Vine
+  at: 2026-11-24T15:17:33.571313Z
+  text: |-
+    Pre-UAT on staging (0234a65f3), E2E Test Company, as E2E Admin A: **Passed**.
+    - Add engagement without a department: "Required." and nothing saved. The API also refuses it (422). An unknown department is refused: "Unknown department: pick one of this company's departments."
+    - The drop-down follows the company's order. Added with Finance: the card shows Department: Finance as the first fact. Edited to IT: the card shows IT.
+    - Retired IT: the card shows IT with a Retired mark, the edit form keeps "IT (Retired)", and Add engagement offers only Finance and Operations.
+    - Renamed IT → Information Technology: the card changed at once.
+    - Deleting a department in use is refused with the count.
+    - The portal vendor page shows Department on each engagement.
+    - Polaris (read-only): listing engagements returns each one's department.
+    - Couldn't check: another company's department by name (no other company has departments; an unknown ID was refused instead), or adding an engagement through Polaris (a write).
+    Screenshots: ~/compass-uat/sectbn9/COM-2133/ (01–07)
 assignee: steve
 label:
 - feature

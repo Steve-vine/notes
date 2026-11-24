@@ -1,7 +1,7 @@
 ---
 id: 01M86D5X2254AHKNKDQSAQBMDB
 created: 2026-11-24T09:11:21.410321Z
-updated: 2026-11-24T11:53:19.675756Z
+updated: 2026-11-24T15:17:26.774306Z
 type: task
 title: Each company keeps its own list of departments, edited in Admin → Companies
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,20 @@ comments:
     3. People who can request a vendor but can't see the register can still read the departments, because they pick one on the request form.
 
     Not checked yet: seen in a browser (comes with the staging pre-UAT pass).
+- id: 01M87247KPFYVN6Y2M71NB3671
+  author: Steve Vine
+  at: 2026-11-24T15:17:26.774066Z
+  text: |-
+    Pre-UAT on staging (0234a65f3), E2E Test Company, as E2E Admin A: **Passed**.
+    - Added Finance, IT, Operations and Facilities. " finance " was refused: "E2E Test Company already has a department called Finance".
+    - Renamed Facilities → Facilities Management. Moved Operations up (Finance, Operations, IT). Retired IT (dimmed, Retired mark, Bring back) and brought it back. Deleted Facilities Management.
+    - Activity log: one line per add, rename, retire, bring back and delete, plus one for the reorder.
+    - Demo's page shows its own empty, separate list (not changed).
+    - A department in use shows "Used by N" with no Delete. Deleting it anyway is refused: "IT is used by 1 engagement — retire it instead".
+    - Couldn't check: the same name allowed in another company (it would mean editing another company; backend tests cover it).
+    - Found: pressing Enter in the Add department window doesn't save (you have to click Add). Fix-forward task raised. Delete has no confirmation: for Steve (it only applies to unused departments, and it's in the activity log).
+    Left on staging: Finance, Operations, IT on E2E Test Company.
+    Screenshots: ~/compass-uat/sectbn9/COM-2131/
 assignee: steve
 label:
 - feature
