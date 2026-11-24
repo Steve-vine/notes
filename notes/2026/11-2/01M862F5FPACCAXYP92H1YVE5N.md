@@ -1,15 +1,17 @@
 ---
 id: 01M862F5FPACCAXYP92H1YVE5N
 created: 2026-11-24T06:04:10.614156Z
-updated: 2026-11-24T06:04:10.614156Z
+updated: 2026-11-24T21:39:31.612376Z
 type: task
 title: Two decision records created at the same moment no longer fail with an error over the same DEC number
-priority: low
-task_status: backlog
-assignee: steve
-label: bug
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2130
+sprint: szwetpq
+assignee: steve
+label:
+- bug
+priority: low
+task_status: todo
 ---
 Found by the COM-2124 rehearsal while seeding data. Outside the Backup and Restore sprint.
 
