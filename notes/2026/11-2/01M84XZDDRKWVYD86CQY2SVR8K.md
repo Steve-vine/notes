@@ -1,7 +1,7 @@
 ---
 id: 01M84XZDDRKWVYD86CQY2SVR8K
 created: 2026-11-23T19:26:25.720339Z
-updated: 2026-11-23T19:27:44.022941Z
+updated: 2026-11-24T01:38:02.382534Z
 type: task
 title: 'Restore option 3, part 1: open a copy beside live Compass, read-only, and see for each record whether it is missing, changed or the same'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 ADR 0169 §7, §8.
 

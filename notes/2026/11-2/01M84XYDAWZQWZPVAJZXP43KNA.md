@@ -1,7 +1,7 @@
 ---
 id: 01M84XYDAWZQWZPVAJZXP43KNA
 created: 2026-11-23T19:25:52.860829Z
-updated: 2026-11-23T23:22:07.917494Z
+updated: 2026-11-24T01:37:56.979196Z
 type: task
 title: 'Restore option 1: Everything — the whole database goes back to the copy, logs included, with a safety copy first and no change to live data until the copy has been checked'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,11 +11,36 @@ blocked_by:
 - 01M84XXEFMFJGW424C95Z9M2ZK
 - 01M84XXPNAEX9CBTGXYT6F1CVZ
 - 01M84XY3275Z2QQ3TPQDGPY765
+comments:
+- id: 01M85K7NJ7PSKMPVC8PPDE34B5
+  author: Steve Vine
+  at: 2026-11-24T01:37:56.295277Z
+  text: |-
+    Merged: #2114, c27e413df, 24 Nov 01:36 GMT. Migration 0906_database_restores. Not on staging yet: the sprint deploys together.
+
+    Built: Restore ▸ Everything, and the engine the other restores and the recovery command will reuse. It shows what will be lost, takes a safety copy, rebuilds the copy out of sight, brings it up to date, checks it, places the hold, and only then swaps it in with one short step.
+
+    For Steve to read: ADR 0170 (how the swap works). It amends ADR 0169 §4, because the planned approach of renaming the database's schema failed when tested with Compass's real permissions. The build marked it Accepted; I've set it back to Proposed until you've read it.
+
+    Decisions made in the build:
+    - The copy is brought up to date and given its hold BEFORE the swap, so a failed upgrade costs nothing and restored data never exists without its hold.
+    - A deployment and a restore now keep out of each other's way: a migration waits for a restore, and a restore refuses to start during one.
+    - Decision and audit finding numbers had no counter and would have been reissued. They are now protected too.
+    - "Go on without a safety copy" is an unticked box on the restore dialog.
+    - The Admin follows progress through a private link, because they are signed out as well.
+
+    Tested: real Postgres with Compass's real permission shape and default limits, 300k rows in about 30s. The restore was killed outright at every step: before the swap, live data was unchanged and parked work came back; just after it, the restored data and hold were in place. An independent review found 10 defects, 3 of them high, and all are fixed.
+
+    Couldn't check yet: a restore on a real deployment or database cluster (COM-2124), and the screens in a browser.
+
+    Known limit: a pod cut off from Valkey can still write between the safety copy and the swap. Those writes are lost and aren't in the safety copy.
+
+    For the release: the database needs free disk for a second full copy plus its logs while a restore runs. Compass can't check this, so production's headroom must be confirmed first.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ADR 0169 §3, §4, §8. The nuclear option, and the restore engine the other full restore and the recovery command reuse.
 
