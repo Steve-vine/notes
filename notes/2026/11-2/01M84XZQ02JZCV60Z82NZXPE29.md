@@ -1,7 +1,7 @@
 ---
 id: 01M84XZQ02JZCV60Z82NZXPE29
 created: 2026-11-23T19:26:35.522131Z
-updated: 2026-11-23T19:27:44.080368Z
+updated: 2026-11-24T05:18:08.960646Z
 type: task
 title: 'Restore option 3, part 2: put chosen records back from an opened copy, with their original reference numbers and anything they depend on'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 ADR 0169 §7.
 
