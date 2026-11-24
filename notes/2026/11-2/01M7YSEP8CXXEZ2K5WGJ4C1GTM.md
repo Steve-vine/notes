@@ -1,7 +1,7 @@
 ---
 id: 01M7YSEP8CXXEZ2K5WGJ4C1GTM
 created: 2026-11-21T10:11:56.812471Z
-updated: 2026-11-24T21:39:28.059327Z
+updated: 2026-11-24T21:52:13.05146Z
 type: task
 title: Two data subject request tests fail now and then because of the clock
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - tech_debt
 priority: low
-task_status: todo
+task_status: active
 ---
 Seen on PR #2049 (COM-2055) on 2026-11-21, which touched neither area. Each test failed once and passed on rerun.
 
