@@ -1,15 +1,17 @@
 ---
 id: 01M86JN94D9HG2Y0AC6VXGQEJV
 created: 2026-11-24T10:47:08.173144Z
-updated: 2026-11-24T10:47:08.173144Z
+updated: 2026-11-24T10:47:22.170405Z
 type: task
 title: Put back answers in seconds at production's size, and the screen never shows an error for a put-back that worked
-label: bug
-assignee: steve
-task_status: active
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2139
+sprint: szwetpq
+assignee: steve
+label:
+- bug
+priority: high
+task_status: active
 ---
 Fix-forward on COM-2122, found by the COM-2124 rehearsal.
 
