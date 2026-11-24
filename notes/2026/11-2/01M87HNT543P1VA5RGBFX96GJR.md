@@ -1,7 +1,7 @@
 ---
 id: 01M87HNT543P1VA5RGBFX96GJR
 created: 2026-11-24T19:49:11.460515Z
-updated: 2026-11-24T21:47:38.290989Z
+updated: 2026-11-24T23:15:24.594135Z
 type: task
 title: 'Requests carry several departments: new vendor, new engagement, edits and amendments'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,38 @@ number: 2148
 sprint: sectbn9
 blocked_by:
 - 01M87HNCQ8RWA88ZTR0B1TTZ03
+comments:
+- id: 01M87XFCDCAD4YCQ204YNGW7KV
+  author: Steve Vine
+  at: 2026-11-24T23:15:23.691932Z
+  text: |-
+    Built and merged to main: PR #2146 (21ef53664), migration 0914_request_departments.
+
+    What people see:
+    - Request a new vendor and Request an engagement (portal and the Requests tab) pick one or more of the company's active departments, at least one. The "No departments set up yet" message is unchanged.
+    - The approver's review shows every requested department.
+    - Summaries read "Departments: Finance, IT" (or "Department: Finance" for one). An amendment reads "Changed departments from Finance to Finance, Operations".
+    - Edit request shows the departments and can add or remove some, but not save with none.
+    - Amend engagement starts from the engagement's own departments and proposes a new set. The approver sees "departments: Finance → Finance, IT (adds IT)", and what's removed too. Approved, the engagement takes exactly that set; rejected, nothing changes.
+    - Another company's department, or a retired one being newly added, is refused on every route. A retired one already there can be kept.
+    - A department in any open request's proposed set can't be deleted.
+    - Polaris's request tools take one or several departments by name.
+    - Older requests still read correctly: one proposed department becomes a set of one.
+
+    Tested: backend integration for two departments on new vendor and new engagement, an amendment approved and rejected, edits can't empty the set, retired and other-company refusals, the delete guard, and the migration against seeded rows (up, read back, down, up). 212 tests in the touched files. Vitest covers the forms, Edit request, Amend engagement and the approver's diff. CI green after one fixed Polaris test.
+
+    For Steve to decide:
+    1. The approver's diff adds a dimmed note, "(adds IT; removes Operations)".
+    2. A missing department says "Pick at least one department." (same wording as the engagement form) rather than "Required.".
+    3. An engagement recorded before departments existed can still be amended without choosing any, so old engagements aren't blocked.
+    4. The engagement's activity line now reads "departments Finance → Finance, IT".
+
+    Not checked yet: seen in a browser (staging pre-UAT after both sprints).
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Vendor Departments". Steve's amendment while testing on staging (24 Nov 2026): an engagement can have several departments. Part 2 of 2; follows COM-2147.
 
