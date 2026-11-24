@@ -1,17 +1,22 @@
 ---
 id: 01M85TY7E1Y89T258PPKH1BMGQ
 created: 2026-11-24T03:52:35.521407Z
-updated: 2026-11-24T03:52:39.51846Z
+updated: 2026-11-24T17:35:31.169181Z
 type: task
 title: Restoring the scheduled Postgres backup also brings Compass back on hold, so a rolled-back database can't re-run real account changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2127
 sprint: szwetpq
+comments:
+- id: 01M87A11V147Z9SPKYJXTCB1S2
+  author: Steve Vine
+  at: 2026-11-24T17:35:31.169007Z
+  text: 'Steve, 24 Nov: "Complete COM-2127 now." Steve didn''t pick between the two approaches, so it''s built as the recommended one: a command the operator runs after restoring the scheduled backup and before starting Compass, plus the runbook step. Compass doesn''t try to detect the restore by itself on start-up; that can be added later if wanted.'
 assignee: steve
 label:
 - follow_up
 priority: high
-task_status: backlog
+task_status: active
 ---
 Found while building COM-2120 (ADR 0169 §5, ADR 0171).
 
