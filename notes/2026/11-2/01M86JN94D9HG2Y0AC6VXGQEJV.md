@@ -1,7 +1,7 @@
 ---
 id: 01M86JN94D9HG2Y0AC6VXGQEJV
 created: 2026-11-24T10:47:08.173144Z
-updated: 2026-11-24T14:37:45.296698Z
+updated: 2026-11-24T15:20:24.829769Z
 type: task
 title: Put back answers in seconds at production's size, and the screen never shows an error for a put-back that worked
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,33 @@ comments:
     Tested: the full integration suite locally (5,901 passed; 25 AD tests couldn't set up locally because the test domain's password has expired, and CI ran them fine), plus the full CI suite. One CI run hit an existing flaky test, logged as COM-2141.
 
     Couldn't check yet: the backup worker's memory during a put-back at production's size, and the window in a browser (pre-UAT).
+- id: 01M8729NFXC8ASPBKVS3TDHPCM
+  author: Steve Vine
+  at: 2026-11-24T15:20:24.829564Z
+  text: |-
+    Pre-UAT pass, 24 Nov 2026, staging 0234a65f3, E2E Test Company, E2E Admin A, from BKP-1. Screenshots: ~/compass-uat/backup-and-restore/COM-2139/
+
+    Couldn't check (build item): finding the real cause by measuring at production's size. The build measured it locally. Staging is small (14 people who get mail), so it can't repeat that.
+
+    Passed at staging's size: a handful of records finishes in seconds, in the background with progress on screen.
+    - Two records (AST-66 and SFT-30): about 20 s from the click (15:13:27) to "Last put-back: 2 records put back from BKP-1 by E2E Admin A" (about 15:13:47).
+    - One gap overwrite: about 18 s.
+    - The dialog answered at once with "Putting back 2 records from BKP-1. Seeing what each person is already owed: 0 of 14 people. You can close this. It carries on, and the compare screen shows how it ended." (01-progress)
+
+    Passed: the screen never reports failure for a put-back that worked, and shows the real outcome when it comes back.
+    - I reloaded part way through. The compare screen came back showing the same run still going, "9 of 14 people" (02), then its outcome.
+    - For the document I left the page about 0.3 s after clicking Put back. On return the compare screen showed "Last put-back: 1 record put back from BKP-1 … 15:15", the document read Same, and the result was done (04).
+    - No error appeared at any point.
+    - I didn't simulate a dropped connection or a proxy 502/504.
+
+    Couldn't check: reminder mail stays silenced. Staging's mail catcher was off, so I couldn't read what was sent. The build's two mail tests cover it.
+
+    Couldn't check on staging: a timed check at realistic size (staging is small). See the build's figures, about 20 s at production's size.
+
+    Defect, minor (reported to the orchestrator; no task made):
+    - When a put-back finished, the banner already said "Last put-back: 2 records put back", but for 10–25 s the area counts and rows still read "Inventory: Technology asset 1 missing" and "AST-66 … Missing".
+    - They corrected themselves by about 15:14:13. The server already answered "same" at 15:13:50.
+    - So an Admin could briefly read the record as still missing, and tick it again (03-finished-list-still-says-missing).
 assignee: steve
 label:
 - bug

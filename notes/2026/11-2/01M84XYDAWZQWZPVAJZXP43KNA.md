@@ -1,7 +1,7 @@
 ---
 id: 01M84XYDAWZQWZPVAJZXP43KNA
 created: 2026-11-23T19:25:52.860829Z
-updated: 2026-11-24T01:37:56.979196Z
+updated: 2026-11-24T15:20:41.757536Z
 type: task
 title: 'Restore option 1: Everything — the whole database goes back to the copy, logs included, with a safety copy first and no change to live data until the copy has been checked'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,21 @@ comments:
     Known limit: a pod cut off from Valkey can still write between the safety copy and the swap. Those writes are lost and aren't in the safety copy.
 
     For the release: the database needs free disk for a second full copy plus its logs while a restore runs. Compass can't check this, so production's headroom must be confirmed first.
+- id: 01M872A60XKF6BKV9GEYHYHH2T
+  author: Steve Vine
+  at: 2026-11-24T15:20:41.757324Z
+  text: |-
+    Pre-UAT pass, 24 Nov 2026, staging 0234a65f3.
+
+    Couldn't check on staging, by design: every Done when item. The task itself says a restore runs on a scratch Compass, never staging's shared data. No Everything restore was started.
+
+    Where it was proved instead: COM-2124 Phase B on build e034eaeed. Results in ~/compass-uat/backup-and-restore/COM-2124/logs/phase-b-summary.md.
+    - Scenario 2, Everything from BKP-4, PASS in 126.8 s: 522 of 529 tables identical to the moment of the copy, Compass worked afterwards and came up on hold.
+    - Scenario 6, killed part way, PASS: killed at stopping, safety, rebuilding and checking, each time back exactly as it was.
+
+    What I saw in the browser on staging:
+    - Restore ▸ Everything is on each Ready copy's Restore menu, next to Keep audit logs and Open to compare (COM-2121/01-restore-menu.png).
+    - I didn't open its dialog. My session's permission checks refused even the menu click once, and opening a restore dialog wasn't needed.
 assignee: steve
 label:
 - feature

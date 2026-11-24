@@ -1,7 +1,7 @@
 ---
 id: 01M84XZ0MTCM83EZFJ91RP6ZDY
 created: 2026-11-23T19:26:12.634427Z
-updated: 2026-11-24T03:52:32.950475Z
+updated: 2026-11-24T15:20:54.332642Z
 type: task
 title: 'Complete failure: when Compass cannot start, a recovery command lists the copies from the store and restores one into an empty database, with a runbook to follow during an incident'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,21 @@ comments:
     - The build tried to add a CI check that the recovery job stays off and is never a deploy hook, but the permission system blocked the CI change. Nothing enforces that automatically yet.
     - Restoring the database platform's own scheduled backup still places no hold, so Compass could re-run due access changes within five minutes. Logged as a separate task.
     - Who runs the bucket's external backup, and how, isn't written down anywhere Compass can see.
+- id: 01M872AJ9WSG351DPQV9MS82N2
+  author: Steve Vine
+  at: 2026-11-24T15:20:54.332351Z
+  text: |-
+    Pre-UAT pass, 24 Nov 2026, staging 0234a65f3.
+
+    Couldn't check on staging, by design: every Done when item. The recovery command drops and restores the database and needs a cluster Job. I'm not to run either on staging. No Job or helm was run.
+
+    Where it was proved instead: COM-2124 Phase B, scenario 5, complete failure from BKP-3 (an older build), PASS. Results in ~/compass-uat/backup-and-restore/COM-2124/logs/phase-b-summary.md, the runbook log in logs/phaseB-s5-runbook.log, and the review in screenshots/S5/review-after-recovery.png.
+    - It followed only the runbook, with step 0 adapted.
+    - 3 min 10 s from the database gone to an Admin at the review.
+    - The recovery restore took 85 s, including the upgrade from 0907.
+    - On hold 10:34–10:43 with 0 requests and 0 mail.
+
+    The refusals (newer version, wrong key, non-empty database) and the staging and production commands weren't exercised in my pass.
 assignee: steve
 label:
 - feature
