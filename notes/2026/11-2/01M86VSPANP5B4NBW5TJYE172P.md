@@ -1,7 +1,7 @@
 ---
 id: 01M86VSPANP5B4NBW5TJYE172P
 created: 2026-11-24T13:26:49.941142Z
-updated: 2026-11-24T15:33:44.536601Z
+updated: 2026-11-24T15:34:04.640564Z
 type: memo
 title: SOC2 In-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -22,8 +22,7 @@ scope:
 * Azure (Production)
 
 ## Systems
-### Telephone Answering Service (TAS)
-#### Kora
+### Telephone Answering Service (TAS) - Kora
 * AWS (Production)
   * Kubernetes (openanswer namespace) - UK
   * RDS Database master/slave - UK
