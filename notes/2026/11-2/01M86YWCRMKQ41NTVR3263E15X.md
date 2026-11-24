@@ -1,15 +1,17 @@
 ---
 id: 01M86YWCRMKQ41NTVR3263E15X
 created: 2026-11-24T14:20:44.180791Z
-updated: 2026-11-24T14:20:44.180791Z
+updated: 2026-11-24T21:39:36.33762Z
 type: task
 title: Two privacy tests stop failing at random when a generated id happens to contain the value they look for
-assignee: steve
-priority: low
-label: tech_debt
-task_status: backlog
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2141
+sprint: szwetpq
+assignee: steve
+label:
+- tech_debt
+priority: low
+task_status: todo
 ---
 Flaky tests seen on PRs in the Registers and Backup sprints. Outside both sprints.
 
