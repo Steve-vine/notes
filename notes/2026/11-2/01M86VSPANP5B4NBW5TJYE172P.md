@@ -1,7 +1,7 @@
 ---
 id: 01M86VSPANP5B4NBW5TJYE172P
 created: 2026-11-24T13:26:49.941142Z
-updated: 2026-11-24T15:20:07.397451Z
+updated: 2026-11-24T15:20:19.72022Z
 type: memo
 title: SOC2 In-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -45,7 +45,7 @@ scope:
 * MongoDB Altas (Database)
 * Cartesia (TTS)
 * LiveKit (Telephony)
-* RunPod (GPU Hosting)
+* RunPod (GPU hosting)
 * Cerebras (Inference)
-* Auth0 (User 
+* Auth0 (User authentication)
 
