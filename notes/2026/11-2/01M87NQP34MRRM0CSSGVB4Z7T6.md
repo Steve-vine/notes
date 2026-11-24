@@ -1,7 +1,7 @@
 ---
 id: 01M87NQP34MRRM0CSSGVB4Z7T6
 created: 2026-11-24T21:00:07.140847Z
-updated: 2026-11-24T21:17:19.053529Z
+updated: 2026-11-24T23:10:07.483275Z
 type: task
 title: 'Content links to a company''s business services: policies, procedures and runbooks for a service'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint "Business Services". Follows the Business services page.
 
