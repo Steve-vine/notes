@@ -1,15 +1,19 @@
 ---
 id: 01M87NQFSEBPW8TSMXJ091KHM8
 created: 2026-11-24T21:00:00.686156Z
-updated: 2026-11-24T21:00:00.686156Z
+updated: 2026-11-24T21:00:43.498741Z
 type: task
 title: An incident's "services affected" can name business services
-task_status: todo
-assignee: steve
-priority: medium
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2154
+sprint: ss3ttbb
+blocked_by:
+- 01M87NPDZVSSZPHJ5EJ6KND9G9
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint "Business Services". Follows the Business services page.
 

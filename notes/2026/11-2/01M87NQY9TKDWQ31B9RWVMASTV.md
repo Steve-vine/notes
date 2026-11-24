@@ -1,15 +1,20 @@
 ---
 id: 01M87NQY9TKDWQ31B9RWVMASTV
 created: 2026-11-24T21:00:15.54699Z
-updated: 2026-11-24T21:00:15.54699Z
+updated: 2026-11-24T21:00:45.700073Z
 type: task
 title: The business impact analysis assesses business services, and Continuity reads per service
-label: feature
-assignee: steve
-task_status: todo
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2156
+sprint: ss3ttbb
+blocked_by:
+- 01M87NPND8AN476F9PXXD35AMQ
+- 01M87NQ09XED3JVCD11CASC93A
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint "Business Services". Follows the Inventory links and the vendor blast radius. **Steve to confirm the approach before it's built** (see "The choice").
 

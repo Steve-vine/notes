@@ -1,12 +1,14 @@
 ---
 id: 01M87NPDZVSSZPHJ5EJ6KND9G9
 created: 2026-11-24T20:59:26.075054Z
-updated: 2026-11-24T21:00:27.820369Z
+updated: 2026-11-24T21:00:39.308005Z
 type: task
 title: 'A Business services page: each company''s list of Internal and Client facing services'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2150
 sprint: ss3ttbb
+blocked_by:
+- 01M87NP509Q79GWHY7EYF0KVPQ
 assignee: steve
 label:
 - feature

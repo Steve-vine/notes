@@ -1,15 +1,19 @@
 ---
 id: 01M87NQP34MRRM0CSSGVB4Z7T6
 created: 2026-11-24T21:00:07.140847Z
-updated: 2026-11-24T21:00:07.140847Z
+updated: 2026-11-24T21:00:44.54644Z
 type: task
 title: 'Content links to a company''s business services: policies, procedures and runbooks for a service'
-priority: medium
-label: feature
-task_status: todo
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2155
+sprint: ss3ttbb
+blocked_by:
+- 01M87NPDZVSSZPHJ5EJ6KND9G9
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint "Business Services". Follows the Business services page.
 

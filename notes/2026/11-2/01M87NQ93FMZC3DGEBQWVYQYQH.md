@@ -1,15 +1,19 @@
 ---
 id: 01M87NQ93FMZC3DGEBQWVYQYQH
 created: 2026-11-24T20:59:53.839333Z
-updated: 2026-11-24T20:59:53.839333Z
+updated: 2026-11-24T21:00:42.543382Z
 type: task
 title: Risks link to the business services they threaten
-task_status: todo
-label: feature
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2153
+sprint: ss3ttbb
+blocked_by:
+- 01M87NPDZVSSZPHJ5EJ6KND9G9
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint "Business Services". Follows the Business services page.
 
