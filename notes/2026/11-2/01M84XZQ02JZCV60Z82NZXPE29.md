@@ -1,7 +1,7 @@
 ---
 id: 01M84XZQ02JZCV60Z82NZXPE29
 created: 2026-11-23T19:26:35.522131Z
-updated: 2026-11-24T07:47:26.603659Z
+updated: 2026-11-24T15:20:15.16205Z
 type: task
 title: 'Restore option 3, part 2: put chosen records back from an opened copy, with their original reference numbers and anything they depend on'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,6 +38,51 @@ comments:
     Tested: 41 put-back tests through the API, plus the opened-copy, restore, Keep audit logs, hold, maintenance, backup and recovery suites (313), and the full CI suite.
 
     Couldn't check yet: the Put back window in a browser (pre-UAT), and how fast a very large install would be.
+- id: 01M8729C1TYN341ABWVAPBFVEY
+  author: Steve Vine
+  at: 2026-11-24T15:20:15.161846Z
+  text: |-
+    Pre-UAT pass, 24 Nov 2026, staging 0234a65f3, E2E Test Company, E2E Admin A, from BKP-1. Screenshots: ~/compass-uat/backup-and-restore/COM-2122/
+
+    Setup: before the copy I made four test records: draft policy "E2E UAT124 Put-back document", software asset SFT-30 "E2E UAT124 App", technology asset AST-66 "E2E UAT124 Server" with SFT-30 installed, and gap GAP-207. After the copy, through the screens, I deleted the document, AST-66 and SFT-30, and changed GAP-207's title and description.
+
+    Passed: a deleted record comes back with its original reference number and its links to records that still exist.
+    - I ticked only AST-66. It came back as AST-66, Live, with SFT-30 back under Installed software, and its audit trail reads "put back technology asset AST-66 · E2E UAT124 Server from BKP-1" (06).
+    - The deleted draft document came back as a Draft, V1, with its text (preview 05).
+    - I couldn't test a deleted risk or control: Compass can't delete a risk, and I left controls (Playbook, shared) alone.
+
+    Passed (first branch): a record depending on one that has gone brings it too, with the Admin's agreement.
+    - The preview listed under "Also needed": "Bring software asset SFT-30 · E2E UAT124 App too. Without it, AST-66 comes back without its link to it." (01)
+    - Ticking it changed the button to "Put back 2 records" (02). Both came back (result 03).
+    - The branch where a needed record is left behind wasn't run.
+
+    Couldn't check: a reference number since used by a different record is refused. I can't arrange that through the screens, because numbers are never reissued.
+
+    Couldn't check: evidence whose file has gone comes back marked as having no file. The screens can't remove only the file, and evidence deleted for good isn't put back by design.
+
+    Passed: each record put back is in the activity log as put back from BKP-n by that Admin, and search reflects it.
+    - Activity log lines, each by e2e-admin-a (08):
+      - "put back technology asset AST-66 … from BKP-1"
+      - "put back software asset SFT-30 … from BKP-1"
+      - "put back gap GAP-207 … from BKP-1", with Title and Description old → new
+      - "put back content item E2E UAT124 Put-back document from BKP-1"
+      - and per run, "Database backup: put back N records from BKP-1: <reason>"
+    - Search for "E2E UAT124" found all four records live (09).
+    - Posture and compliance figures don't involve these kinds of record, so they weren't checked.
+
+    Changed record:
+    - The preview showed GAP-207 under "Changed since the copy" with its differences, and an unticked "Overwrite today's version with the copy's". With it unticked the button read "Put back 0 records" (04).
+    - Ticked, the gap went back to "E2E UAT124 Gap (to change)" and "Original description before the copy." (07).
+
+    Couldn't check: nothing put back causes an email. Staging's mail catcher was off (mail is real SendGrid), so I couldn't read what was sent. No access change or integration was involved. The preview says "Nobody is emailed about it."
+
+    Passed: people, roles, access requests, tokens, credentials, settings and logs can't be put back through the API. The put-back preview refused users, roles, api_tokens, access_requests, settings, activity_log and integrations with 422: "Only records from Content, Controls, … Evidence details can be put back. People, roles, …". I didn't send the put-back call itself with a forbidden kind; my session's permission checks blocked it.
+
+    Observations:
+    - The document preview says deleting it took it out of folders, reading groups and runbook systems, and that putting it back doesn't redo those. Good.
+    - Ticks don't carry between areas. I ticked the document in Content, moved to Gaps and ticked GAP-207, and it said "1 record chosen", so a mixed put-back needs separate runs. Steve may want that differently.
+
+    Clean-up: AST-66, SFT-30 and the document are deleted again. GAP-207 is Cancelled with a note, because gaps can't be deleted.
 assignee: steve
 label:
 - feature

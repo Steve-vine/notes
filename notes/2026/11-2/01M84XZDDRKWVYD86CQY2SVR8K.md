@@ -1,7 +1,7 @@
 ---
 id: 01M84XZDDRKWVYD86CQY2SVR8K
 created: 2026-11-23T19:26:25.720339Z
-updated: 2026-11-24T05:32:05.042374Z
+updated: 2026-11-24T15:20:01.384519Z
 type: task
 title: 'Restore option 3, part 1: open a copy beside live Compass, read-only, and see for each record whether it is missing, changed or the same'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,36 @@ comments:
     Couldn't check yet: the screen in a browser, and a production-sized database.
 
     For the release: free database disk for about one more copy of those areas while a copy is open.
+- id: 01M8728YK8V1NESB3PS5RBVAQ4
+  author: Steve Vine
+  at: 2026-11-24T15:20:01.384306Z
+  text: |-
+    Pre-UAT pass, 24 Nov 2026, staging 0234a65f3, E2E Test Company, E2E Admin A. Screenshots: ~/compass-uat/backup-and-restore/COM-2121/
+
+    Before opening I checked staging's database had room. Its volume isn't capped (local-path), and the host disk had 856 GB free. The open dialog said it needed about 75.9 MB and that Compass can't see the disk (02-open-dialog).
+
+    Opening: Restore ▸ Open to compare ▸ Open to compare. It showed "BKP-1 is opening, Rebuilding its records…" with a Stop button, and was open about 30 s later: "BKP-1 is open to compare. Closes itself 25 Nov 2026, 15:11." (01-restore-menu, 03-opening, 04-open)
+
+    Passed: with a copy open, live Compass carries on normally, and nothing can write to the opened copy.
+    - While it was open, live edits went on: sprint 125's department and vendor changes, and my three put-backs.
+    - The compare screen offers no editing. The copy's records are only read and ticked.
+    - Caveat: that the database connection itself is read-only can't be seen from a browser. The build's tests cover it.
+
+    Passed: a deleted record shows Missing, an edited one shows Changed with its differences, and an untouched one shows Same.
+    - Content "1 missing" (my deleted draft document). Gaps "1 changed": GAP-207, with Title and Description side by side, "In the copy" against "Today" (06-gap-changed-diff). Technology asset AST-66 and Software asset SFT-30 Missing. Everything else Same.
+    - Only Missing and Changed rows have a tick box (05-compare-content).
+    - The area list has no People, Roles, Access, Tokens, Settings or Logs.
+
+    Partly checked: company scoping, and Restricted records staying restricted.
+    - With E2E Test Company chosen, all 27 technology assets listed were E2E Test Company's own.
+    - I didn't switch to other companies, to keep to E2E Test Company.
+    - Couldn't check Restricted: only Admins can open a copy, so there was no one without the right to compare against.
+
+    Couldn't check: after 24 hours the copy is gone from the database, including after a worker restart. That needs time, and no pod restarts on staging. Closing it sooner Passed: "Close it" closed it at once, and the opened-copy address then answered "No copy is open" (07-closed).
+
+    Couldn't check: a copy from an older schema. Staging has only one version.
+
+    Note: Vendors showed "0 missing, 1 changed" for a while. That was sprint 125's vendor changing, not my test.
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M84XXEFMFJGW424C95Z9M2ZK
 created: 2026-11-23T19:25:21.268886Z
-updated: 2026-11-23T21:15:03.432878Z
+updated: 2026-11-24T15:19:51.567422Z
 type: task
 title: Admin ▸ Backups — an Admin takes an encrypted copy of the database with a reason, sees it listed as BKP-n, and it deletes itself after 30 days
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -30,6 +30,29 @@ comments:
     Couldn't check yet: the screen in a browser, the "on staging" Done when, and the complete built image. These go in the pre-UAT pass after the staging deploy.
 
     For the release: the worker's S3 identity needs rights on compass-backups/, a bucket rule to abort incomplete uploads, and a check that the 10Gi work disk fits production's database.
+- id: 01M8728N0F86ZN9V1P15DEV953
+  author: Steve Vine
+  at: 2026-11-24T15:19:51.567211Z
+  text: |-
+    Pre-UAT pass, 24 Nov 2026, staging 0234a65f3 (build staging-20261124-1443), E2E Test Company, E2E Admin A. Screenshots: ~/compass-uat/backup-and-restore/COM-2115/
+
+    Passed: an Admin takes a copy on staging while someone else keeps editing, and the copy is consistent as of its start.
+    - Took a backup with the reason "E2E UAT124 pre-UAT: copy before changing test records". It showed Running "Copying the database" and was Ready about 35 s later: BKP-1, 178.0 MB, by E2E Admin A, version staging-20261124-1443, "Deletes itself 24 Dec 2026, 15:07" (02-take-dialog, 03-running, 04-ready).
+    - Edited test gap GAP-207's description while the copy was still copying, about 0.9 s after its "as of" time (15:07:34.9 UTC). Opening BKP-1 later showed the copy still had the original description, so the edit isn't in the copy. Sprint 125's session was also writing to the same company throughout. Caveat: the same account made my edit, not a second person.
+
+    Couldn't check: the stored copy can't be read without Compass's key, and the description beside it. I can't reach the file store from the browser, and the staging volume isn't readable from g5. The build's tests and the COM-2124 rehearsal cover this.
+
+    Couldn't check: a copy past 30 days is gone. That needs time. The screen shows the date it will delete itself.
+
+    Passed: evidence screens and Admin ▸ Files are unchanged by a copy existing. With BKP-1 Ready, Admin ▸ Files showed 93 files, 9.8 MB, with no 178 MB copy and no backup entry (05-admin-files-no-copy). Audit packs weren't checked separately.
+
+    Also checked:
+    - Viewer, Analyst, Assessor, Access Manager and Vendor Admin can't see Backups. Admin shows "You need an Admin permission to see this section". The backups, opened-copy and hold addresses answer 403 for every one of them, and the Viewer's menu has no Admin entry (viewer-*, analyst-*).
+    - Delete: wrong number "BKP-2" keeps "Delete copy" disabled. "BKP-1" deletes it, and the line stays as "Deleted 24 Nov 2026, 15:18, by E2E Admin A" (06, 07).
+    - No download anywhere on the screen.
+    - The "file store set only on screen" warning didn't show, correctly: staging's store is in its deployment settings. I couldn't see the warning itself without changing an Admin setting.
+
+    Wording reads well. One gap: progress is a stage name only ("Copying the database"), with no size or percentage.
 assignee: steve
 label:
 - feature
