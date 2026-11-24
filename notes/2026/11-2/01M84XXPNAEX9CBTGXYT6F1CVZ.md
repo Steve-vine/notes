@@ -1,7 +1,7 @@
 ---
 id: 01M84XXPNAEX9CBTGXYT6F1CVZ
 created: 2026-11-23T19:25:29.642666Z
-updated: 2026-11-23T21:46:35.24902Z
+updated: 2026-11-24T15:20:29.777505Z
 type: task
 title: Compass can go into maintenance — everyone sees a notice and is signed out, background work stops, and it can be brought back
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,21 @@ comments:
     Couldn't check yet: the notice in a browser, and a real backup running alongside maintenance. These go in the pre-UAT pass and COM-2124.
 
     Known limits, carried into COM-2118: an API pod cut off from Valkey alone could keep writing, so the swap must end other database connections. Nobody should deploy during a restore, because deploy jobs ignore the flag.
+- id: 01M8729TAHM9ZSEFR4TD473KE1
+  author: Steve Vine
+  at: 2026-11-24T15:20:29.777289Z
+  text: |-
+    Pre-UAT pass, 24 Nov 2026, staging 0234a65f3.
+
+    Couldn't check on staging, by design: every Done when item. Maintenance only starts with a full restore, which would take everyone's shared staging data offline and roll it back. Sprint 125 was testing on staging at the same time.
+
+    Where it was proved instead: the COM-2124 rehearsal on a scratch Compass at production's size, on build e034eaeed.
+    - Results: ~/compass-uat/backup-and-restore/COM-2124/logs/phase-b-summary.md
+    - Notice during maintenance: ~/compass-uat/backup-and-restore/COM-2124/screenshots/S2/during-maintenance.png
+    - Scenarios 2, 3 and 5 went into and out of maintenance.
+    - Scenario 6 killed a restore at stopping, safety, rebuilding and checking. Each time Compass came back as it was, and maintenance ended within 2–2.5 min.
+
+    On staging: Compass was never in maintenance during my pass, and the outbound-hold address reported on_hold false throughout.
 assignee: steve
 label:
 - feature

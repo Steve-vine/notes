@@ -1,7 +1,7 @@
 ---
 id: 01M84XYPVZG3CMTX5BH2SX7FD7
 created: 2026-11-23T19:26:02.623351Z
-updated: 2026-11-24T04:45:21.948446Z
+updated: 2026-11-24T15:20:46.546187Z
 type: task
 title: 'Restore option 2: Keep audit logs — the data goes back to the copy, while the logs, signatures, legal holds and revocations made since are carried forward'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,25 @@ comments:
     Couldn't check yet: the screens in a browser, and a full rehearsal (COM-2124). The last small fix (questionnaire handovers) is being given another independent read under COM-2128.
 
     For the release: the swap now checks the carried tables while they're locked, so a large activity log lengthens the time Compass is offline. COM-2124 will time it.
+- id: 01M872AAPJ2P0F7Q12YMTRNAP5
+  author: Steve Vine
+  at: 2026-11-24T15:20:46.545956Z
+  text: |-
+    Pre-UAT pass, 24 Nov 2026, staging 0234a65f3.
+
+    Couldn't check on staging, by design: every Done when item. A Keep audit logs restore would roll back everyone's shared staging data. None was started.
+
+    Where it was proved instead: COM-2124 Phase B, scenario 3, Keep audit logs from BKP-6, PASS in 447.4 s (about 5 min 40 s carrying 3.47M activity rows forward). Results in ~/compass-uat/backup-and-restore/COM-2124/logs/phase-b-summary.md.
+    - The data went back.
+    - Every activity entry since the copy was kept.
+    - The legal hold placed since the copy was still on.
+    - The revoked token stayed gone.
+    - Deleted evidence read as deleted.
+    - On hold 08:38–08:47 with 0 requests and 0 mail.
+
+    Signatures, NDAs and disabled people weren't individually called out in the summary, so rely on the build's tests for those.
+
+    On staging I only saw that Keep audit logs is on each Ready copy's Restore menu (COM-2121/01-restore-menu.png).
 assignee: steve
 label:
 - feature
