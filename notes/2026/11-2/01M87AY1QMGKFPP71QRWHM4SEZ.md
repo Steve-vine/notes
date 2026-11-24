@@ -1,9 +1,9 @@
 ---
 id: 01M87AY1QMGKFPP71QRWHM4SEZ
 created: 2026-11-24T17:51:21.332778Z
-updated: 2026-11-24T17:51:24.320476Z
+updated: 2026-11-24T19:49:23.487642Z
 type: task
-title: Mark ADR 0175 (vendor engagement departments) Accepted
+title: 'ADR 0175 (vendor engagement departments): one or more departments per engagement, then mark Accepted'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2146
 sprint: sectbn9
@@ -13,8 +13,11 @@ label:
 priority: low
 task_status: todo
 ---
-Sprint "Vendor Departments". Steve accepted ADR 0175 on 24 Nov 2026.
+Sprint "Vendor Departments". Steve accepted ADR 0175 on 24 Nov 2026, and the same evening amended it so that an engagement can have several departments (COM-2147, COM-2148).
 
-- Set `decisions/0175-vendor-engagement-departments.md` Status from Proposed to **Accepted (2026-11-24)**.
-- Note in it Steve's later decisions: the department is shown per engagement on the portal's expanded vendor list (COM-2145), while the Compass register shows a vendor's departments together because it lists no engagement lines; and a request's summary follows Edit request (COM-2143).
-- Can ride along with the next sprint-125 PR. Independent (docs only).
+The repo's copy of 0175 is still marked Proposed, so it's amended before being marked Accepted, rather than superseded:
+- "Each vendor engagement records exactly one department" becomes "one or more departments, at least one required".
+- Record Steve's other decisions: the portal's expanded vendor list shows departments on each engagement line, not the vendor's row (COM-2145); the Compass register shows a vendor's departments together because it lists no engagement lines; and a request's summary follows Edit request (COM-2143).
+- Then set Status to **Accepted (2026-11-24)**.
+
+Independent (docs only). Best merged with or just before COM-2147.

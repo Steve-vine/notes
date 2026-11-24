@@ -1,12 +1,17 @@
 ---
 id: 01M87AXVY33YGJ5JG8SC2M0GDV
 created: 2026-11-24T17:51:15.395388Z
-updated: 2026-11-24T17:51:17.402899Z
+updated: 2026-11-24T19:49:20.28486Z
 type: task
 title: 'Portal vendor list: the department shows on each engagement line, not on the vendor''s row'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2145
 sprint: sectbn9
+comments:
+- id: 01M87HP2RWMAZ90D1ZBSQ39QAX
+  author: Steve Vine
+  at: 2026-11-24T19:49:20.28469Z
+  text: 'Steve, 24 Nov: an engagement can now have several departments (COM-2147). Each engagement line shows all of its departments in the company''s order (e.g. "Finance, IT"), and the vendor''s row still shows none. Build this alongside or after COM-2147, which changes the same cell.'
 assignee: steve
 label:
 - improvement
