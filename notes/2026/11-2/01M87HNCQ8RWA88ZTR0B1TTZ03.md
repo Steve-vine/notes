@@ -1,7 +1,7 @@
 ---
 id: 01M87HNCQ8RWA88ZTR0B1TTZ03
 created: 2026-11-24T19:48:57.704384Z
-updated: 2026-11-24T19:49:02.560911Z
+updated: 2026-11-24T20:42:22.040249Z
 type: task
 title: 'An engagement can have several departments: chosen when it''s added or edited, and shown wherever its department shows today'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint "Vendor Departments". Steve's amendment while testing on staging (24 Nov 2026): "it should be possible to assign multiple departments to an engagement." Part 1 of 2; part 2 (COM-2148) covers requests.
 

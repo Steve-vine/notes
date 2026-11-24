@@ -1,7 +1,7 @@
 ---
 id: 01M87AY1QMGKFPP71QRWHM4SEZ
 created: 2026-11-24T17:51:21.332778Z
-updated: 2026-11-24T19:49:23.487642Z
+updated: 2026-11-24T20:42:21.342658Z
 type: task
 title: 'ADR 0175 (vendor engagement departments): one or more departments per engagement, then mark Accepted'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - chore
 priority: low
-task_status: todo
+task_status: active
 ---
 Sprint "Vendor Departments". Steve accepted ADR 0175 on 24 Nov 2026, and the same evening amended it so that an engagement can have several departments (COM-2147, COM-2148).
 
