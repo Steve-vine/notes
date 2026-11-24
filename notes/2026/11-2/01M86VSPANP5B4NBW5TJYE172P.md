@@ -1,7 +1,7 @@
 ---
 id: 01M86VSPANP5B4NBW5TJYE172P
 created: 2026-11-24T13:26:49.941142Z
-updated: 2026-11-24T16:59:43.454354Z
+updated: 2026-11-24T17:04:09.232137Z
 type: memo
 title: SOC2 In-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -38,16 +38,11 @@ scope:
 * Azure/EntraID (user authentication)
 
 ### AI Receptionist
-* AWS (Production) version 2
+* AWS (Production)
   * Kubernetes (chinwag-v2 namespace) - UK
   * Kubernetes (deepgram-flux namespace) - UK
   * Kubernetes (chinwag-v2 namespace) - US
   * Kubernetes (deepgram-flux namespace) - US
-* AWS (Chinwag) version 1
-  * Kubernetes (chinwag namespace) - UK
-  * Kubernetes (deepgram namespace) - UK
-  * Kubernetes (chinwag namespace) - US
-  * Kubernetes (deepgram namespace) - US
 * MongoDB Altas (Database)
 * Cartesia (TTS)
 * LiveKit (Telephony)
