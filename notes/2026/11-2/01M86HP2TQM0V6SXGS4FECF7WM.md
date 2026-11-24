@@ -1,7 +1,7 @@
 ---
 id: 01M86HP2TQM0V6SXGS4FECF7WM
 created: 2026-11-24T10:30:05.911877Z
-updated: 2026-11-24T14:36:50.516651Z
+updated: 2026-11-24T15:17:45.071565Z
 type: task
 title: 'Compass vendor register: a Department column and a Department filter'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,17 @@ comments:
     3. On narrow screens the column is hidden, as Criticality, Certified, Flags and Owner already are.
 
     Not checked yet: seen in a browser (staging pre-UAT).
+- id: 01M8724SFF0HACD6V56XE1403Z
+  author: Steve Vine
+  at: 2026-11-24T15:17:45.071379Z
+  text: |-
+    Pre-UAT on staging (0234a65f3), E2E Test Company, as E2E Admin A: **Passed**.
+    - The Department column sits between Certified and Flags and matches the portal.
+    - The filter is under More filters and shows on the first row once set. Finance → A and B, and after B's Finance engagement ended, A only. IT → A and B, as in the portal. Not recorded → none.
+    - The quick-filter chips and the "N vendors" line follow the filter.
+    - A bookmarked IT filter still worked after the rename. Sorting by Department works.
+    - A correction to my build comment: the Register tab's own count stays at all vendors under any filter (State included). It always has, and only the chips and the "N vendors" line follow filters.
+    Screenshots: ~/compass-uat/sectbn9/COM-2136/
 assignee: steve
 label:
 - feature

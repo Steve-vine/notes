@@ -1,7 +1,7 @@
 ---
 id: 01M86HPF3RR0MGQAEW9M9PG28Y
 created: 2026-11-24T10:30:18.488638Z
-updated: 2026-11-24T13:16:49.973499Z
+updated: 2026-11-24T15:17:47.927397Z
 type: task
 title: The vendor register report gains a Departments column
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,16 @@ comments:
     For Steve to decide: a retired department still shows under its name when a live engagement has it, matching the engagement card.
 
     Not checked yet: the report downloaded from the app on staging (the PDF was checked from a locally rendered sample).
+- id: 01M8724W8Q79F16AFZ5RZ52DVK
+  author: Steve Vine
+  at: 2026-11-24T15:17:47.927187Z
+  text: |-
+    Pre-UAT on staging (0234a65f3), E2E Test Company: **Passed**.
+    - CSV: nine columns. The original eight are unchanged in name and order, with Departments last. Vendor A "Finance, Operations, IT"; Vendor B "IT" (its ended Finance engagement isn't listed); E2E Test Vendor blank.
+    - PDF: landscape A4, one page, nine columns with Departments last.
+    - Polaris's vendor register overview returns Departments per row, and per-department counts.
+    - Couldn't check: the PDF's look by eye (no PDF viewer on the test machine; its text and page size were checked). Steve, please open one.
+    Files: ~/compass-uat/sectbn9/COM-2137/vendor-register.csv and .pdf
 assignee: steve
 label:
 - feature

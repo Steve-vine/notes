@@ -1,7 +1,7 @@
 ---
 id: 01M86D7JZ9JH4KCN4NMRQ5SW0T
 created: 2026-11-24T09:12:16.617249Z
-updated: 2026-11-24T14:14:12.247072Z
+updated: 2026-11-24T15:17:42.085135Z
 type: task
 title: 'Portal vendor list: a Department column and a Department filter'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,19 @@ comments:
     3. Sorting goes by the vendor's first department in the company's order. "Not recorded" comes after every department, and blanks come last.
 
     Not checked yet: seen in a browser (staging pre-UAT).
+- id: 01M8724PJ5871MX76FAQD96FRT
+  author: Steve Vine
+  at: 2026-11-24T15:17:42.084702Z
+  text: |-
+    Pre-UAT on staging (0234a65f3), E2E Test Company, as E2E Asset Owner: **Passed**.
+    - The Department column lists the vendor's departments in company order ("Finance, Operations, IT"). Sub-rows show each engagement's own. E2E Test Vendor (no live engagements) is blank.
+    - Filter choices: Finance, Operations, IT and Not recorded. Operations → Vendor A. Operations + IT → A and B ("2 selected"). Not recorded → none.
+    - The filter stays in the page address and survives going into a vendor and back. My Vendors has the same.
+    - Ending Vendor B's only Finance engagement took B out of the Finance filter and dropped Finance from its column.
+    - A bookmarked IT filter still worked after IT was renamed.
+    - The server applies the filter.
+    - Couldn't check: a vendor actually under "Not recorded". Every route now requires a department, so none could be made on staging. Older vendors on production will show it.
+    Screenshots: ~/compass-uat/sectbn9/COM-2135/
 assignee: steve
 label:
 - feature
