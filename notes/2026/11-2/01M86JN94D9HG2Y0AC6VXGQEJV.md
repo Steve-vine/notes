@@ -1,17 +1,35 @@
 ---
 id: 01M86JN94D9HG2Y0AC6VXGQEJV
 created: 2026-11-24T10:47:08.173144Z
-updated: 2026-11-24T10:47:22.170405Z
+updated: 2026-11-24T14:37:45.296698Z
 type: task
 title: Put back answers in seconds at production's size, and the screen never shows an error for a put-back that worked
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2139
 sprint: szwetpq
+comments:
+- id: 01M86ZVHVHWXJ91Y9NN7VB8V14
+  author: Steve Vine
+  at: 2026-11-24T14:37:45.201652Z
+  text: |-
+    Merged: #2128, 0234a65f3, 24 Nov 14:36 GMT. Migration 0912_put_back_runs (renumbered twice around sprint 125's migrations). API changed: put-back now runs in the background. ADR 0176 is Proposed, for Steve to read. Going to staging next with the rest of the sprint.
+
+    Cause, measured at production's size (1.46 GB, 3.46M activity entries, 121 people who get mail): one put-back took 151 s, almost all of it the reminder-mail check, which worked out every person's action list twice. The activity log's size played no part.
+
+    Built: the same put-back now takes about 20 s, and it runs in the background with progress, so the request answers at once. The mail check only works out what concerns the records being put back, and anything that's the same for everyone is worked out once. Silencing is exactly as strict as before: with it removed, both mail tests fail. The screen never reports failure for a put-back that worked. It follows the run by its own id after a dropped connection or a reload, and an unreceived request never runs late. The opened copy stays locked throughout, and a put-back is still refused during a hold or maintenance.
+
+    Three new status routes return status only, never a file. They were added to the "no download" route list, are behind Manage backups, and refuse assistants.
+
+    Reviews: three rounds of independent reads. Their findings were fixed with failing tests first, for example a handover error that could mark a successful put-back as failed.
+
+    Tested: the full integration suite locally (5,901 passed; 25 AD tests couldn't set up locally because the test domain's password has expired, and CI ran them fine), plus the full CI suite. One CI run hit an existing flaky test, logged as COM-2141.
+
+    Couldn't check yet: the backup worker's memory during a put-back at production's size, and the window in a browser (pre-UAT).
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Fix-forward on COM-2122, found by the COM-2124 rehearsal.
 
