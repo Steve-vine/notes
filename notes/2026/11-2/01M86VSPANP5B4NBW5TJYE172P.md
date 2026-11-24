@@ -1,7 +1,7 @@
 ---
 id: 01M86VSPANP5B4NBW5TJYE172P
 created: 2026-11-24T13:26:49.941142Z
-updated: 2026-11-24T13:27:26.357346Z
+updated: 2026-11-24T13:27:36.218103Z
 type: memo
 title: SOC2 In-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -11,4 +11,5 @@ scope:
 - work
 ---
 ## Products
-• Telephone Answering Service (TAS)
+* Telephone Answering Service (TAS)
+* 
