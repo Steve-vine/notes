@@ -1,7 +1,7 @@
 ---
 id: 01M86D5X2254AHKNKDQSAQBMDB
 created: 2026-11-24T09:11:21.410321Z
-updated: 2026-11-24T09:11:23.322225Z
+updated: 2026-11-24T10:59:04.698952Z
 type: task
 title: Each company keeps its own list of departments, edited in Admin → Companies
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint "Vendor Departments" (Steve, 24 Nov 2026). The first of five: the list every other task picks from.
 
