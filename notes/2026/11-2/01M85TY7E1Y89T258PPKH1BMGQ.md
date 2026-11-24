@@ -1,7 +1,7 @@
 ---
 id: 01M85TY7E1Y89T258PPKH1BMGQ
 created: 2026-11-24T03:52:35.521407Z
-updated: 2026-11-24T21:03:25.46148Z
+updated: 2026-11-24T21:31:06.822838Z
 type: task
 title: Restoring the scheduled Postgres backup also brings Compass back on hold, so a rolled-back database can't re-run real account changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,10 @@ comments:
   author: Steve Vine
   at: 2026-11-24T21:03:24.292967Z
   text: 'On staging bc5c320fc since 24 Nov ~21:03 GMT (run 45483638781: deploy and Browser smoke 41/41 green). Pre-UAT: Couldn''t check in the browser by design. COM-2127 is a recovery command and runbook with no screen, and running it on staging would put everyone''s shared staging data on hold. The proof is the g5 rehearsal and the 39 integration tests in the comment above. Not released.'
+- id: 01M87QGE66A80V27KAWWP5KFTC
+  author: Steve Vine
+  at: 2026-11-24T21:31:06.822635Z
+  text: 'Steve accepted ADR 0177, 24 Nov. PR #2139 marks it Accepted and corrects its wording: the command was recommended over start-up detection, and Steve asked for it to be built that way rather than choosing between the two himself. Auto-merge is on.'
 assignee: steve
 label:
 - follow_up
