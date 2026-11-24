@@ -1,7 +1,7 @@
 ---
 id: 01M7X5NPX43GCSRG591Z9BEGN2
 created: 2026-11-20T19:07:00.900986Z
-updated: 2026-11-20T19:47:02.118486Z
+updated: 2026-11-24T21:39:38.544102Z
 type: task
 title: The Reopen window's example reason fits what is being reopened, and an asset's reopening reads "Was decommissioned on …"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,7 +27,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Found in the pre-UAT pass of COM-2032 on staging 514c4649 (20 Nov).
 
