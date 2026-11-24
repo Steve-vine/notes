@@ -1,17 +1,41 @@
 ---
 id: 01M87HNCQ8RWA88ZTR0B1TTZ03
 created: 2026-11-24T19:48:57.704384Z
-updated: 2026-11-24T20:42:22.040249Z
+updated: 2026-11-24T21:47:36.444166Z
 type: task
 title: 'An engagement can have several departments: chosen when it''s added or edited, and shown wherever its department shows today'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2147
 sprint: sectbn9
+comments:
+- id: 01M87REKMRCNDK7NK14SPCZ8NP
+  author: Steve Vine
+  at: 2026-11-24T21:47:35.44807Z
+  text: |-
+    Built and merged to main: PR #2138 (ea648d16a), migration 0913_engagement_departments.
+
+    What people see:
+    - Adding or editing an engagement in Compass: Departments is a multi-select of the company's active departments, in order. A proposed or active engagement needs at least one, with no upper limit. Removing the last one from a live engagement is refused; only an ended engagement can have none.
+    - Engagements that had a department keep it as their only one. The migration carried every existing one across.
+    - A retired department stays on engagements that have it (marked Retired) and can be kept, but not newly added.
+    - The engagement card (Compass and portal), the portal list's engagement lines and the approver's review show every department in company order, e.g. "Finance, IT". The label reads "Departments" when there are several.
+    - The portal and Compass filters (and the counts) find a vendor when any live engagement has any chosen department. "Not recorded" means none has one.
+    - The register's Department column and the report's Departments column list every department across a vendor's live engagements, each once.
+    - "Used by N" and the delete guard count every engagement that has the department among its several.
+    - Polaris adds and updates engagements with one or several departments by name, and shows them all.
+
+    Tested: 459 backend integration tests plus the unit suite. The migration was tested against seeded rows: carried on upgrade, first-in-order on downgrade, then up again. 1804 Vitest tests, including the multi-select, "Finance, IT" on the card, refusing removal of the last one, and a two-department portal line. CI green.
+
+    For Steve to decide:
+    1. Until COM-2148, a request still names one department, and an approved amendment replaces the engagement's whole set with that one (Finance + IT amended to IT leaves IT). COM-2148 makes requests carry a set.
+    2. Restore ▸ Selected records: an engagement put back from a copy comes back without its departments. Its data types and data entities already behave this way, because put-back only writes rows directly under the vendor. Engagements are never deleted except by a vendor purge, so it rarely matters. Changing it would mean reworking put-back (Backup and Restore's code), so it's left as a known gap.
+
+    Not checked yet: seen in a browser (staging pre-UAT after both sprints).
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Vendor Departments". Steve's amendment while testing on staging (24 Nov 2026): "it should be possible to assign multiple departments to an engagement." Part 1 of 2; part 2 (COM-2148) covers requests.
 

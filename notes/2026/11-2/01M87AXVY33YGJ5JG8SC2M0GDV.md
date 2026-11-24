@@ -1,7 +1,7 @@
 ---
 id: 01M87AXVY33YGJ5JG8SC2M0GDV
 created: 2026-11-24T17:51:15.395388Z
-updated: 2026-11-24T19:49:20.28486Z
+updated: 2026-11-24T21:47:37.444692Z
 type: task
 title: 'Portal vendor list: the department shows on each engagement line, not on the vendor''s row'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -16,7 +16,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint "Vendor Departments". Steve's change from testing COM-2135 on staging (24 Nov 2026).
 
