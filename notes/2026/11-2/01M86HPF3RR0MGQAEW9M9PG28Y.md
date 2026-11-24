@@ -1,7 +1,7 @@
 ---
 id: 01M86HPF3RR0MGQAEW9M9PG28Y
 created: 2026-11-24T10:30:18.488638Z
-updated: 2026-11-24T10:30:23.489842Z
+updated: 2026-11-24T12:29:49.208504Z
 type: task
 title: The vendor register report gains a Departments column
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint "Vendor Departments" (Steve, 24 Nov 2026). Follows COM-2133. Steve asked for it after the sprint was planned.
 
