@@ -1,7 +1,7 @@
 ---
 id: 01M86HPF3RR0MGQAEW9M9PG28Y
 created: 2026-11-24T10:30:18.488638Z
-updated: 2026-11-24T12:29:49.208504Z
+updated: 2026-11-24T13:16:49.973499Z
 type: task
 title: The vendor register report gains a Departments column
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,30 @@ number: 2137
 sprint: sectbn9
 blocked_by:
 - 01M86D6PYBFKFKDPT119X18TKV
+comments:
+- id: 01M86V7BMN7WXC8G6HFFYNT5MH
+  author: Steve Vine
+  at: 2026-11-24T13:16:49.172992Z
+  text: |-
+    Built and merged to main: PR #2129 (ec1f62fee). No migration, no API change.
+
+    What people see:
+    - Reports → Vendor register (CSV and PDF) has a new Departments column after the existing eight, which keep their names and order.
+    - It lists the departments of each vendor's live (proposed or active) engagements, each once, in the company's department order, comma-separated. An ended engagement's department isn't listed, and the cell is blank when there are none.
+    - The PDF's column widths were rebalanced so all nine fit on landscape A4. Long names, emails and a four-department list wrap cleanly in a rendered sample.
+    - Polaris's vendor register overview returns each vendor's departments, and its summary counts vendors per department.
+    - The Vendor register card on Reports now mentions departments.
+
+    Tested: backend integration covers two departments (with a repeat and an ended engagement in a third), one department, none, and order by the company's arrangement. The register test pins the nine columns, and the Polaris report test checks the rows and per-department counts. CI green.
+
+    For Steve to decide: a retired department still shows under its name when a live engagement has it, matching the engagement card.
+
+    Not checked yet: the report downloaded from the app on staging (the PDF was checked from a locally rendered sample).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Vendor Departments" (Steve, 24 Nov 2026). Follows COM-2133. Steve asked for it after the sprint was planned.
 
