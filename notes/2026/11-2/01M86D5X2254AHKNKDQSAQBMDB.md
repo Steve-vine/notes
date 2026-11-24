@@ -1,7 +1,7 @@
 ---
 id: 01M86D5X2254AHKNKDQSAQBMDB
 created: 2026-11-24T09:11:21.410321Z
-updated: 2026-11-24T15:17:26.774306Z
+updated: 2026-11-24T17:51:22.640721Z
 type: task
 title: Each company keeps its own list of departments, edited in Admin → Companies
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,6 +45,10 @@ comments:
     - Found: pressing Enter in the Add department window doesn't save (you have to click Add). Fix-forward task raised. Delete has no confirmation: for Steve (it only applies to unused departments, and it's in the activity log).
     Left on staging: Finance, Operations, IT on E2E Test Company.
     Screenshots: ~/compass-uat/sectbn9/COM-2131/
+- id: 01M87AY30GEEHJ3G9H4DP1QRZ5
+  author: Steve Vine
+  at: 2026-11-24T17:51:22.640173Z
+  text: Steve accepted ADR 0175 on 24 Nov 2026. The status change in the repo is tracked as its own task in this sprint.
 assignee: steve
 label:
 - feature
