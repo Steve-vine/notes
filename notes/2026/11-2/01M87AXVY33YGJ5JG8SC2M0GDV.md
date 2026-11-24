@@ -1,7 +1,7 @@
 ---
 id: 01M87AXVY33YGJ5JG8SC2M0GDV
 created: 2026-11-24T17:51:15.395388Z
-updated: 2026-11-24T21:47:37.444692Z
+updated: 2026-11-24T22:08:14.952871Z
 type: task
 title: 'Portal vendor list: the department shows on each engagement line, not on the vendor''s row'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,11 +12,26 @@ comments:
   author: Steve Vine
   at: 2026-11-24T19:49:20.28469Z
   text: 'Steve, 24 Nov: an engagement can now have several departments (COM-2147). Each engagement line shows all of its departments in the company''s order (e.g. "Finance, IT"), and the vendor''s row still shows none. Build this alongside or after COM-2147, which changes the same cell.'
+- id: 01M87SMD5SBD221S0Y0ZZRVYTA
+  author: Steve Vine
+  at: 2026-11-24T22:08:14.009019Z
+  text: |-
+    Built and merged to main: PR #2141 (2b18988f8). Screen only.
+
+    What people see:
+    - Portal → Vendors and My Vendors: the Department column is empty on each vendor's own row.
+    - Each engagement line shows all its departments in company order ("IT, Finance"), a retired one as "Facilities (Retired)", or "Not recorded".
+    - The Department heading stays but no longer sorts. An old link asking to sort by department just shows the normal order.
+    - The Department filter works as before. The Compass register, the report and Polaris are unchanged.
+
+    Tested: Vitest checks blank vendor rows, engagement lines with one, several, a retired or no department, and no sort button; the filter tests still pass. Screen conventions and the Compass register tests pass unchanged. CI green.
+
+    Not checked yet: seen in a browser (staging pre-UAT).
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Vendor Departments". Steve's change from testing COM-2135 on staging (24 Nov 2026).
 
