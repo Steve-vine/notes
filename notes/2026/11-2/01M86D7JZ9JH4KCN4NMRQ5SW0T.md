@@ -1,7 +1,7 @@
 ---
 id: 01M86D7JZ9JH4KCN4NMRQ5SW0T
 created: 2026-11-24T09:12:16.617249Z
-updated: 2026-11-24T09:12:21.828882Z
+updated: 2026-11-24T12:55:30.609049Z
 type: task
 title: 'Portal vendor list: a Department column and a Department filter'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint "Vendor Departments" (Steve, 24 Nov 2026). Follows COM-2133.
 
