@@ -1,7 +1,7 @@
 ---
 id: 01M84XYPVZG3CMTX5BH2SX7FD7
 created: 2026-11-23T19:26:02.623351Z
-updated: 2026-11-24T01:38:00.241793Z
+updated: 2026-11-24T04:45:21.948446Z
 type: task
 title: 'Restore option 2: Keep audit logs — the data goes back to the copy, while the logs, signatures, legal holds and revocations made since are carried forward'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,34 @@ number: 2119
 sprint: szwetpq
 blocked_by:
 - 01M84XYDAWZQWZPVAJZXP43KNA
+comments:
+- id: 01M85XYVCNZD28M6251Q18BF08
+  author: Steve Vine
+  at: 2026-11-24T04:45:21.685282Z
+  text: |-
+    Merged: #2117, 00ba56c9f, 24 Nov 04:44 GMT. Migration 0907_restore_kept_records. Not on staging yet: the sprint deploys together. ADR 0172 (Keep audit logs) is Proposed, for Steve to read.
+
+    Built: Restore ▸ Keep audit logs. The data goes back to the copy. These made since the copy are carried forward: the activity log, the evidence deletion and privacy retention logs, signatures, NDA acceptances, legal holds, revocations (tokens, disabled people, removed privileges, per-record access), tightened restrictions, switched-off portals and sign-in, and erased personal data. A carried row that can't fit the older data is kept aside and listed in the review. If anything carried changes between being read and the swap, the swap is undone and Compass stays as it was.
+
+    Reviews: an independent review of the build found 6 defects, 3 of them high: a rollback could make a whole group Admin again, the lock-out check counted Admins who couldn't sign in, and a former owner could get back into a Restricted register. All 6 were reproduced with failing tests and fixed. Two further fresh reads found 8 more, then 2 more, all fixed with tests.
+
+    Decisions made in the build, for Steve:
+    - It refuses rather than guessing when the live data can't be read, when a held record can't come back, when nobody could sign in as an Admin afterwards, or when a disclosure was restricted only by a request made since the copy.
+    - A company purged since the copy comes back, unless the copy holds privacy records old enough to have been erased since. Then it refuses, because it can't tell which were.
+    - Owning an ordinary record (a risk, vendor, secret, initiative or audit request) goes back with the data, so the old owner returns. Only being named on a restricted record is carried. Where an owner change would have kept someone out of a Restricted register or contract, the record is left with no owner and listed.
+    - A legal hold lifted since the copy comes back on: a restore never takes a hold off.
+    - These go back with the data rather than being carried: a signed NDA recorded on a DDQ, and rotated integration credentials (that connection fails until re-entered).
+
+    Tested: 187 restore, Keep audit logs, access, hold and recovery tests on real Postgres with Compass's real permission shape, and the full CI suite.
+
+    Couldn't check yet: the screens in a browser, and a full rehearsal (COM-2124). The last small fix (questionnaire handovers) is being given another independent read under COM-2128.
+
+    For the release: the swap now checks the carried tables while they're locked, so a large activity log lengthens the time Compass is offline. COM-2124 will time it.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 ADR 0169 §3, §4. For a significant change that went wrong, when the record of what happened must survive.
 
