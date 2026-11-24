@@ -1,7 +1,7 @@
 ---
 id: 01M86VSPANP5B4NBW5TJYE172P
 created: 2026-11-24T13:26:49.941142Z
-updated: 2026-11-24T14:22:38.08235Z
+updated: 2026-11-24T14:22:54.788658Z
 type: memo
 title: SOC2 In-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -22,8 +22,8 @@ scope:
 * Azure (Production)
 
 ## Systems
-### 
-
+### Telephone Answering Service (TAS)
+* 
 
 ### AI Receptionist
 
