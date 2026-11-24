@@ -1,17 +1,32 @@
 ---
 id: 01M872522KS94MA5JQ5EHMZFBZ
 created: 2026-11-24T15:17:53.875138Z
-updated: 2026-11-24T15:17:58.998807Z
+updated: 2026-11-24T15:34:29.467999Z
 type: task
 title: Pressing Enter in the Add department window saves it, as it does in the Create company window
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2142
 sprint: sectbn9
+comments:
+- id: 01M8733E2EERZDHJEYA85Y8SK0
+  author: Steve Vine
+  at: 2026-11-24T15:34:29.198469Z
+  text: |-
+    Built and merged to main: PR #2133 (754ee7623). Screen only.
+
+    What people see:
+    - Admin → Companies → a company → Departments: in Add department, pressing Enter adds the name, as clicking Add does. In Rename, Enter saves.
+    - An empty name does nothing on Enter, like the greyed-out button, and Enter pressed twice while saving doesn't send twice.
+    - A duplicate still shows its message, and the window stays open.
+
+    Tested: Vitest for Enter adds (and empty sends nothing), Enter renames, and Enter on a duplicate shows the message. CI green.
+
+    Not checked yet: in a browser. It's re-checked on staging after the next deploy.
 assignee: steve
 label:
 - bug
 priority: low
-task_status: active
+task_status: review
 ---
 Sprint "Vendor Departments". Found in the pre-UAT pass of COM-2131 on staging 0234a65f3 (24 Nov 2026).
 
