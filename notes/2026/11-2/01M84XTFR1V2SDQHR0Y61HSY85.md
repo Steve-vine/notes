@@ -1,7 +1,7 @@
 ---
 id: 01M84XTFR1V2SDQHR0Y61HSY85
 created: 2026-11-23T19:23:44.257812Z
-updated: 2026-11-23T19:41:09.485757Z
+updated: 2026-11-24T21:32:44.49911Z
 type: task
 title: 'ADR: Backup and restore — an Admin takes a copy before a significant change, restores it three ways, and can recover Compass from outside when it cannot start'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,6 +15,10 @@ comments:
     ADR 0169 accepted by Steve and merged (#2108, 44829303b), 23 Nov 19:40 GMT.
 
     Steve's one change: copies stay in the same S3 bucket, because it is backed up externally. There is no second location. §11 now says that a lost bucket is restored from the external backup first, then recovered as normal. COM-2123 is re-scoped to making sure a deleted copy really goes, and COM-2120's runbook gains the lost-bucket step.
+- id: 01M87QKDJKAZDJW2Z7XZ8SH41P
+  author: Steve Vine
+  at: 2026-11-24T21:32:44.49895Z
+  text: '24 Nov: Steve accepted all of the sprint''s remaining ADRs. 0177 merged as Accepted in #2139. PR #2140 (auto-merge) marks 0170 (how a full restore swaps), 0171 (recovering from outside Compass), 0172 (Keep audit logs), 0173 (opening a copy to compare), 0174 (putting records back) and 0176 (putting records back in the background) Accepted. Once it lands, every Backup and Restore ADR, 0169–0174, 0176 and 0177, is Accepted.'
 assignee: steve
 label:
 - brief
