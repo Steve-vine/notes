@@ -1,7 +1,7 @@
 ---
 id: 01M86VSPANP5B4NBW5TJYE172P
 created: 2026-11-24T13:26:49.941142Z
-updated: 2026-11-24T14:23:20.375537Z
+updated: 2026-11-24T14:26:50.834581Z
 type: memo
 title: SOC2 In-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -23,6 +23,7 @@ scope:
 
 ## Systems
 ### Telephone Answering Service (TAS)
+
 * AWS Production
   * 
 
