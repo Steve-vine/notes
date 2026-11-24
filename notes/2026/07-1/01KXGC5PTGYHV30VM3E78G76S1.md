@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-24T06:04:10.617912Z
+updated: 2026-11-24T09:11:02.850416Z
 type: project
 title: Compass
 identifier: COM
@@ -1088,6 +1088,9 @@ sprints:
 - id: szwetpq
   title: Backup and Restore
   description: An in-app copy of the database before a significant change, three ways to restore it (everything, keep the audit logs, or selected records), and recovery from a complete failure when Compass cannot start. ADR 0169.
+- id: sectbn9
+  title: Vendor Departments
+  description: Each company keeps its own editable list of departments (Admin → Companies, and when a company is created). Every vendor engagement records the one department it is for, chosen from that list when the engagement is added or requested. The department shows on the engagement card in Compass and the portal, and the portal vendor list gets a Department column and filter.
 assignee: steve
 priority: medium
 project_status: active
