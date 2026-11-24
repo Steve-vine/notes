@@ -1,7 +1,7 @@
 ---
 id: 01M87NPDZVSSZPHJ5EJ6KND9G9
 created: 2026-11-24T20:59:26.075054Z
-updated: 2026-11-24T21:17:37.960348Z
+updated: 2026-11-24T23:42:03.438076Z
 type: task
 title: 'A Business services page: each company''s list of Internal and Client facing services'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,37 @@ number: 2150
 sprint: ss3ttbb
 blocked_by:
 - 01M87NP509Q79GWHY7EYF0KVPQ
+comments:
+- id: 01M87Z05MQQEF5RFF9MEH98D4V
+  author: Steve Vine
+  at: 2026-11-24T23:42:02.391515Z
+  text: |-
+    Built and merged to main: PR #2143 (a8818ed80), migration 0915_business_services.
+
+    What people see:
+    - Exposure → Business services (after Inventory, same access) lists SVC-n, name, type (Internal or Client facing), owner, criticality and status. It filters by type, criticality and status, searches, and sorts every column. It opens on Active; Status: All shows retired ones, marked.
+    - Someone who can manage the inventory can add (name unique within the company, ignoring case), edit, retire and bring back a service.
+    - Delete appears only for a service nothing links to, and asks first. One in use says what links to it and offers Retire. A deleted service's SVC number is never reused, and its history stays.
+    - A service's page shows its description, details and history. Later tasks add their cards there.
+    - Global search finds services by name, description or SVC-n, in the selected company only.
+    - Every add, change, retire, bring-back and delete is in the activity log.
+    - Polaris can list, read, add, update, retire and bring back services. Deleting stays on screen.
+    - SVC is reserved: no register can use it.
+
+    Tested: backend integration for every Done-when point, permissions, an archived company, migration up → down → up and the SVC guard, and the Polaris tools. Vitest covers the list and service pages. CI green.
+
+    For Steve to decide:
+    1. Only name and type are required. Once a criticality is set it can be changed but not cleared (the shared picker has no clear option).
+    2. Delete hides the service but keeps the record, so its SVC number and history survive and a backup can put it back.
+    3. Retire and Bring back take effect at once with no reason asked, as departments do.
+    4. Page addresses use the number (SVC-3 is /business-services/3).
+
+    Not checked yet: seen in a browser (staging pre-UAT after both sprints).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Business Services". Follows the ADR.
 
