@@ -1,7 +1,7 @@
 ---
 id: 01M72VZD9E7TS7Z2T1TBB1SPJK
 created: 2026-11-10T13:57:17.742256Z
-updated: 2026-11-25T12:46:43.218019Z
+updated: 2026-11-25T13:15:56.224009Z
 type: task
 title: CIS Controls v8.1 crosswalk completeness review — every library control that serves a safeguard is linked to it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,7 +33,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: active
+task_status: review
 ---
 Follows the SOC 2 finding (COM-1669, `audit/soc2-mapping.md`): COM-428 built every crosswalk requirement-first, choosing the smallest set of controls that satisfies each requirement, and the tests check coverage, not completeness. So relevant library controls can be missing from a requirement. Example: safeguards 7.3/7.4 (automated OS and application patch management) don't link the automated patching controls VUM.1/VUM.2.
 
