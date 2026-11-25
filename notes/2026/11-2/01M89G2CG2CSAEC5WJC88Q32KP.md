@@ -1,7 +1,7 @@
 ---
 id: 01M89G2CG2CSAEC5WJC88Q32KP
 created: 2026-11-25T13:59:35.170484Z
-updated: 2026-11-25T15:30:11.466882Z
+updated: 2026-11-25T18:47:46.450049Z
 type: task
 title: An Access Admin's own request goes through when they submit it, approved by them (not expedited, nothing owed afterwards)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,20 @@ comments:
     2. Admin holds the permission too. Anyone holding every permission counts as an Admin, so it can't be left off without demoting Admins.
 
     Not checked yet: in a browser (staging pre-UAT once the sprint is deployed).
+- id: 01M8A0J2GJMRKVN059A95RC97J
+  author: Steve Vine
+  at: 2026-11-25T18:47:46.449851Z
+  text: |-
+    Pre-UAT on staging 2016209cf (Browser smoke 41/41), E2E Test Company: **Passed**, with one wording defect fixed forward in COM-2171.
+
+    Steps and what was seen:
+    - As E2E Admin A (holds the new permission): New request → Leaver shows "This goes through as soon as you submit — as an Access Admin you approve your own requests." The button still read "Submit for approval" → COM-2171 makes it "Submit".
+    - Admin A raised a leaver for Compass Test scheduled 30 Dec (ACR-198). It was approved as raised: self-approved, decided by Admin A, shown as Scheduled. Its timeline reads "Approved — own request (Access Admin)", and the Requests list row shows a SELF-APPROVED pill. I then cancelled it ("Cancel this change"); it never ran.
+    - E2E Access Manager does not hold the permission (after COM-2170). Their requests still wait: Browser smoke journey 5 raised ACR-196 as the Access Manager, and Admin B rejected it.
+
+    Couldn't check: a self-approved request running at once. I didn't run one on purpose, because it would change the real directory. The integration tests cover it.
+
+    Screenshots: ~/compass-uat/s4qjpqd/COM-2166/
 assignee: steve
 label:
 - feature
