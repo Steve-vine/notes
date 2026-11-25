@@ -1,7 +1,7 @@
 ---
 id: 01M878HGKS9BDCYYV70ZJPP5DK
 created: 2026-11-24T17:09:33.433788Z
-updated: 2026-11-25T11:43:33.768107Z
+updated: 2026-11-25T11:43:39.343677Z
 type: task
 title: Setup recertifications for all in-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -40,4 +40,4 @@ task_status: todo
 
 Already in place
 - [x] Sage 200
-- [ ]  
+- [x]  
