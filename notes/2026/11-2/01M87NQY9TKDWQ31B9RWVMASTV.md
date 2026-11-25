@@ -1,7 +1,7 @@
 ---
 id: 01M87NQY9TKDWQ31B9RWVMASTV
 created: 2026-11-24T21:00:15.54699Z
-updated: 2026-11-25T00:15:32.333642Z
+updated: 2026-11-25T03:09:46.19569Z
 type: task
 title: The business impact analysis assesses the business services list, replacing its own list of functions, and Continuity reads per service
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,37 @@ sprint: ss3ttbb
 blocked_by:
 - 01M87NPND8AN476F9PXXD35AMQ
 - 01M87NQ09XED3JVCD11CASC93A
+comments:
+- id: 01M88AWGK8J73Y5K1P3JK20TJH
+  author: Steve Vine
+  at: 2026-11-25T03:09:45.447871Z
+  text: |-
+    Built and merged to main: PR #2154 (a63d542b2), migration 0921_bia_service_assessments. ADR 0178 §7 gained "as built" notes; ADR 0131 already carries "Amended by 0178 §7".
+
+    What people see:
+    - A new business impact analysis lists every active business service (Internal and Client facing, never a retired one). Each is assessed as a function was: impact over time, tolerable period (suggested, or set with a reason), RTO and RPO, busiest times, minimum service, people and sites.
+    - A service added during the draft appears under "Not in this analysis yet" with Add / Add all. Any service can be left out with a reason, and put back. Submit needs every service assessed or left out.
+    - What a service depends on (its Inventory links, the systems they reach, and its vendors with their routes) comes from the service, shown live while the BIA is worked and kept when approved. Changing the service afterwards (links or name) changes nothing in the approved BIA or Continuity. Approved BIAs are frozen.
+    - Older approved function-based BIAs read exactly as before. A draft with functions offers, per function, to carry it across: to the matching service (pre-picked), another service, or a new service started from it (Internal by default; needs Manage the Inventory). Answers move, and its systems and data become the service's links. Anything that can't come across (e.g. a vendor) is shown in a notice.
+    - Start the next one carries each service's answers forward. A service left out last time is asked about again; retired ones are dropped.
+    - Continuity reads by service: the Continuity page groups by service (linked to its page), system and vendor cards name the service, and the CSV/PDF say "Service".
+    - A service's page has a Recovery targets card: tolerable period, RTO, RPO, minimum service, each system it needs against IT's RTO/RPO with Continuity flags, or why the approved BIA left it out.
+    - Polaris reads a BIA's services, assesses one / leaves it out / puts it back, adds services to a draft, carries a function across, and its Continuity tools read by service.
+
+    Tested: backend integration for a new BIA listing services, add / leave out / put back, assess and approve, frozen, Continuity by service and the service / system / vendor cards, approved BIA unchanged after a service's links and name change, Start the next one, an old function BIA unchanged, carrying functions across (with the permission refusal), Polaris, and migration up → down → up with seeded function rows. Vitest covers the services card, assess, leave out, read-only approved, carry across, Recovery targets and Continuity By service. CI green.
+
+    For Steve to decide:
+    1. Continuity reads what each service depended on when the BIA was approved, not its links today. A system linked to TAS after approval gets no targets until the next BIA, as with functions before. The alternative is to read the service's links live.
+    2. Carrying functions across is offered, not required. A draft can be approved with leftover functions, and Continuity then shows functions and services side by side.
+    3. Any service can be left out with a reason (not only one retired during the draft).
+    4. A service a BIA has assessed can't be deleted, only retired.
+
+    Not checked yet: seen in a browser; the BIA's PDF (now with a Business services section) not opened. Staging pre-UAT next.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Business Services". Follows the Inventory links and the vendor blast radius.
 
