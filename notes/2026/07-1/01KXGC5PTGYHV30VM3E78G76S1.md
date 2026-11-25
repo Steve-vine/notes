@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-25T09:03:23.369026Z
+updated: 2026-11-25T13:58:48.602344Z
 type: project
 title: Compass
 identifier: COM
@@ -1094,6 +1094,9 @@ sprints:
 - id: ss3ttbb
   title: Business Services
   description: 'Each company keeps a list of business services, each Internal or Client facing (for Moneypenny: TAS, LiveChat, AI Receptionist…). Services link to vendor engagements and to Inventory, so a vendor page shows its blast radius: which services it supports and by what route. Risks, incidents and content link to services, and the business impact analysis assesses them. A service never changes a vendor’s criticality. ADR 0178.'
+- id: s4qjpqd
+  title: Access Control Review
+  description: Two changes to how access changes are approved. Every completed recertification with removals raises a request on the Requests tab, approved there by someone with the right access however many people reviewed it. And Access Admins' own requests go through on submission without a second person (unlike expedited, nothing is owed afterwards).
 assignee: steve
 priority: medium
 project_status: active
