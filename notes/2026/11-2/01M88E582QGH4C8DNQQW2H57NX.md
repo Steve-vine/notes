@@ -1,12 +1,11 @@
 ---
 id: 01M88E582QGH4C8DNQQW2H57NX
 created: 2026-11-25T04:06:57.367699Z
-updated: 2026-11-25T04:07:04.047802Z
+updated: 2026-11-25T08:47:02.615571Z
 type: task
 title: 'Some screens ask for data the account can''t see: dashboard for Analyst and Vendor Admin, portal vendor flags for a requester'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2163
-sprint: spsp226
 assignee: steve
 label:
 - bug
