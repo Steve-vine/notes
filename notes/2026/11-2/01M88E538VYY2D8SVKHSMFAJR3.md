@@ -1,17 +1,35 @@
 ---
 id: 01M88E538VYY2D8SVKHSMFAJR3
 created: 2026-11-25T04:06:52.443151Z
-updated: 2026-11-25T04:07:03.442517Z
+updated: 2026-11-25T04:38:41.572708Z
 type: task
 title: 'Business services touch-ups: BIA submit wording and PDF left-out row, a document''s empty services card, and the vendor''s criticality tile refreshing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2162
 sprint: ss3ttbb
+comments:
+- id: 01M88FZAKPYYVPPB4SWBPRBZ4C
+  author: Steve Vine
+  at: 2026-11-25T04:38:40.502002Z
+  text: |-
+    Built and merged to main: PR #2157 (ce762f6d2). No migration or API change.
+
+    What people see:
+    1. Submitting a services BIA: the dialog reads "Every business service is assessed or left out with a reason, and each one assessed has a full impact over time, a tolerable period and its RTO and RPO". Nothing is asked of a left-out service, owner included. An older functions-only draft keeps the function wording. It matches what Submit checks.
+    2. BIA PDF: the Business services table lists only assessed services, with columns intact. Left-out services get their own table, "Business services left out" (Service, Type, Reason). Only assessed services get an impact section.
+    3. A document's empty card reads "None of <company>'s business services are linked to this document." A service's empty Content card reads "No documents are linked to this business service yet."
+    4. Adding, editing or ending an engagement refreshes the vendor header's Criticality, Risk tier and Annual spend tiles at once, plus the register and its counts.
+
+    Tested: a backend test builds the PDF content for one assessed and one left-out service. Vitest covers both Submit wordings, both empty cards, and the refresh after saving an engagement. CI green.
+
+    For Steve to decide: in the PDF, left-out services are in a separate table under the assessed ones (on screen they share one table with a LEFT OUT tag).
+
+    Not checked yet: in a browser, and a rendered PDF (recheck on staging next).
 assignee: steve
 label:
 - bug
 priority: low
-task_status: active
+task_status: review
 ---
 Sprint "Business Services". Found in the round 2 pre-UAT on staging a63d542b2 (25 Nov 2026).
 
