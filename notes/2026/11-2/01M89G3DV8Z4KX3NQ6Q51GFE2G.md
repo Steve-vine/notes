@@ -1,7 +1,7 @@
 ---
 id: 01M89G3DV8Z4KX3NQ6Q51GFE2G
 created: 2026-11-25T14:00:09.320584Z
-updated: 2026-11-25T16:03:42.92836Z
+updated: 2026-11-25T17:26:05.66116Z
 type: task
 title: A recertification review shows its removal request instead of its own Approve button, on screen, on an asset's page and through Polaris
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,30 @@ number: 2168
 sprint: s4qjpqd
 blocked_by:
 - 01M89G2Z64WRQGRM2VJVR6NVZ5
+comments:
+- id: 01M89VWGJXJ4RMS0X75GDGZGH4
+  author: Steve Vine
+  at: 2026-11-25T17:26:05.660967Z
+  text: |-
+    Built and merged to main: PR #2173.
+
+    What people see:
+    - The review's "N removal(s) awaiting approval" badge and its "Approve N removal(s)" button are gone. The Instances list, the review and an asset's page show "Removals: ACR-n awaiting approval" instead, linking to the request. It follows the request: approved, being removed, done, failed or rejected.
+    - The evidence CSV gains five columns at the end: the request, its decision, who decided, when, and whether it was self-approved.
+    - Polaris: "approve recertification removals" is retired. The review tools report the request (reference, state, approver, link), and Polaris approves it with the request tools.
+    - The portal tells owners "Removals sent for approval" once a review they signed off completes with flags.
+
+    Differences from the task:
+    - Directory-role rows are still confirmed on the review ("Confirm removed in Entra"), because that's where the Entra step is done. Confirming finishes the request. The Polaris confirm tool stays for the same reason.
+
+    Tested: integration tests for the review naming its request and the CSV carrying the approval, Polaris before and after approval, and Vitest for the link and the missing Approve button. 2,549 integration tests across recert, Polaris and portal; unit suite; CI green.
+
+    Not checked yet: in a browser (staging pre-UAT next).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Access Control Review". After COM-2167.
 
