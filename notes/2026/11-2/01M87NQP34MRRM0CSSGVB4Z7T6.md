@@ -1,7 +1,7 @@
 ---
 id: 01M87NQP34MRRM0CSSGVB4Z7T6
 created: 2026-11-24T21:00:07.140847Z
-updated: 2026-11-24T23:10:07.483275Z
+updated: 2026-11-25T02:15:24.015656Z
 type: task
 title: 'Content links to a company''s business services: policies, procedures and runbooks for a service'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,11 +14,34 @@ comments:
   author: Steve Vine
   at: 2026-11-24T21:17:19.053365Z
   text: 'Steve agreed (24 Nov 2026): reading a document''s service links needs View inventory, and linking or unlinking needs Manage the inventory register, as with runbooks. Content editors don''t get it separately.'
+- id: 01M887RYQCS6SCYJ3R9RQA3T3B
+  author: Steve Vine
+  at: 2026-11-25T02:15:23.116251Z
+  text: |-
+    Built and merged to main: PR #2152 (718872136), migration 0919_content_business_services.
+
+    What people see:
+    - Every document page (policy, standard, procedure, runbook, flowchart) has a Business services card for the company in the top bar: only that company's linked services, retired ones marked. People who manage the inventory link and unlink there.
+    - Switching company shows none of another company's links.
+    - A service's page has a Content card: each linked document with type, version (or Draft) and next review, with Link a document and unlink.
+    - Linking doesn't change, publish or review the document; drafts can be linked.
+    - Each link and unlink is a line in the service's History. A service with documents can be retired, not deleted. A deleted document comes off every service.
+    - Reading needs View inventory; linking needs Manage the inventory register (as agreed).
+    - Polaris answers "what's our documentation for TAS?" and links and unlinks.
+
+    Tested: backend integration for both sides, per-company isolation, the document unchanged, History, retired refused, the delete guard, deleted documents dropped, permissions, migration up → down → up, and Polaris. Vitest covers both cards. CI green.
+
+    For Steve to decide:
+    1. Documents can also be linked from the service's page (as runbooks can from a system).
+    2. A retired service can't be newly linked from either side, but can be unlinked.
+    3. The activity lines go on the service's History, not the document's.
+
+    Not checked yet: seen in a browser (staging pre-UAT). The link table isn't in the backup catalogue, as with runbook links today.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Business Services". Follows the Business services page.
 
