@@ -1,7 +1,7 @@
 ---
 id: 01M878HGKS9BDCYYV70ZJPP5DK
 created: 2026-11-24T17:09:33.433788Z
-updated: 2026-11-25T11:44:43.607225Z
+updated: 2026-11-25T11:44:53.285427Z
 type: task
 title: Setup recertifications for all in-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -44,4 +44,5 @@ Already in place
 - [ ] Firewall rules
 - [ ] Data restore
 - [ ] Sage database
-- [ ] Sage Intacct 
+- [ ] Sage Intacct
+- [ ] Kill Bill 
