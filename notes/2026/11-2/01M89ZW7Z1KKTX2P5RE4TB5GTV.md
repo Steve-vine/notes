@@ -1,17 +1,31 @@
 ---
 id: 01M89ZW7Z1KKTX2P5RE4TB5GTV
 created: 2026-11-25T18:35:51.137415Z
-updated: 2026-11-25T18:35:54.934775Z
+updated: 2026-11-25T19:24:07.883413Z
 type: task
 title: Access request screens name a review's removals properly, never offer to raise one, and don't tell an Access Admin they're submitting for approval
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2171
 sprint: s4qjpqd
+comments:
+- id: 01M8A2MMTBFE8JVKATMRRK84GA
+  author: Steve Vine
+  at: 2026-11-25T19:24:07.883243Z
+  text: |-
+    Merged: PR #2176. Deployed to staging 586a75bd6 (Browser smoke 41/41).
+
+    Pre-UAT as E2E Admin A, E2E Test Company: **Passed**.
+    1. ACR-197's page is headed "Recertification removals".
+    2. New request lists only Joiner, Mover, Leaver, Group create, Group delete and Membership change.
+    3. ACR-197's Requester reads "Compass" on the Requests list.
+    4. On Admin A's leaver form the button reads "Submit". The Access Manager still sees "Submit for approval": journey 5 raised that way in the smoke, and the vitest pins it.
+
+    Screenshots: ~/compass-uat/s4qjpqd/COM-2171/
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Access Control Review". Fix-forward from the pre-UAT pass on staging 2016209cf (COM-2166, COM-2167).
 
