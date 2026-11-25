@@ -1,7 +1,7 @@
 ---
 id: 01M89G2CG2CSAEC5WJC88Q32KP
 created: 2026-11-25T13:59:35.170484Z
-updated: 2026-11-25T15:30:03.862558Z
+updated: 2026-11-25T15:30:11.466882Z
 type: task
 title: An Access Admin's own request goes through when they submit it, approved by them (not expedited, nothing owed afterwards)
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,33 @@ number: 2166
 sprint: s4qjpqd
 blocked_by:
 - 01M89G1WPC942TTFE0S0S3WQ5P
+comments:
+- id: 01M89N89CA4PG0NHQCVHABRP0T
+  author: Steve Vine
+  at: 2026-11-25T15:30:11.466626Z
+  text: |-
+    Built and merged to main: PR #2171, migration 0922_approve_own_requests.
+
+    What people see:
+    - A new permission, "Approve their own requests", under Access Control. It went to every role that already approves privileged changes: Access Admin, Admin, and any role with everything ticked, so none stops counting as an administrator.
+    - A standard request raised by someone holding it is approved as they submit it, by them, and runs at once (or at its scheduled time). It is not expedited, so nothing is owed afterwards.
+    - The raise form says so before Submit. The request page reads "Approved — own request (Access Admin)". The Requests list shows a "Self-approved" pill. Polaris reports it.
+    - A privileged change still needs "Approve a privileged change". Someone with self-approval but not that right waits for an Access Admin.
+    - An Access Admin can also approve a request of their own that is still waiting (raised before this, or held at the privileged gate). It reads self-approved.
+    - Everyone else still needs a second person.
+
+    Tested:
+    - Integration tests for each point above, including taking the permission away.
+    - The old ADR 0061 test ("an Access Admin cannot approve their own privileged request") rewritten for the reversed rule.
+    - Nine older suites that raise as one person and approve as another now run with the permission taken away for the test, so they still exercise the approval.
+    - Vitest for the pill, the timeline wording and the Approve button.
+    - CI green.
+
+    For Steve to decide:
+    1. The access reports have no subject that lists requests, so "self-approved in the access reports" isn't possible yet. It shows on the request, in the Requests list, in the activity log and in Polaris. Want a Requests subject in the reports as a follow-up?
+    2. Admin holds the permission too. Anyone holding every permission counts as an Admin, so it can't be left off without demoting Admins.
+
+    Not checked yet: in a browser (staging pre-UAT once the sprint is deployed).
 assignee: steve
 label:
 - feature
