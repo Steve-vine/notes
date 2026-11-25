@@ -1,7 +1,7 @@
 ---
 id: 01M89G1WPC942TTFE0S0S3WQ5P
 created: 2026-11-25T13:59:18.988521Z
-updated: 2026-11-25T14:00:12.058044Z
+updated: 2026-11-25T14:18:52.129365Z
 type: task
 title: 'ADR 0179: who approves an access change — Access Admins approve their own, and recertification removals go through Requests'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: medium
-task_status: todo
+task_status: active
 ---
 Sprint "Access Control Review". Docs only. Merged before the build tasks start.
 
