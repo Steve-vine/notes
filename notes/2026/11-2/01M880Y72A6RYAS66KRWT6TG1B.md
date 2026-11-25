@@ -1,7 +1,7 @@
 ---
 id: 01M880Y72A6RYAS66KRWT6TG1B
 created: 2026-11-25T00:15:55.466635Z
-updated: 2026-11-25T01:47:20.182091Z
+updated: 2026-11-25T03:09:52.209452Z
 type: task
 title: Polaris can set an engagement's business services when adding or editing it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,30 @@ number: 2159
 sprint: ss3ttbb
 blocked_by:
 - 01M87NQ09XED3JVCD11CASC93A
+comments:
+- id: 01M88AWNF9HYCMKBC9R1KHS718
+  author: Steve Vine
+  at: 2026-11-25T03:09:50.441355Z
+  text: |-
+    Built and merged to main: PR #2155 (121acc569). Polaris only; no migration or API change.
+
+    What people see:
+    - Polaris can add an engagement with its business services named in words, by name or reference ("TAS", "SVC-4"), ignoring case.
+    - On an existing engagement it can replace them, or clear them with an empty list. Not mentioning them leaves them as they are.
+    - A name that isn't one of the company's active services is refused, listing the active services. A retired service already on the engagement can be kept, not newly added.
+    - Choosing services needs View inventory, as on screen. Without it Polaris saves the rest of the change and says the services were left alone, or refuses if they were the only change.
+    - The engagement Polaris reports back names its services. The vendor's blast radius shows each one through the engagement, and the routes go when cleared.
+
+    Tested: integration test adding an engagement with three services (all in the blast radius), an unknown name refused, a retired one kept but refused elsewhere, clearing (blast radius empty), and the no-permission note and refusal. Area and unit suites pass. CI green.
+
+    For Steve to decide: without the inventory right, Polaris saves the other changes rather than refusing the whole add or edit.
+
+    Not checked: a real Polaris conversation.
 assignee: steve
 label:
 - follow_up
 priority: low
-task_status: active
+task_status: review
 ---
 Sprint "Business Services". Follow-up from COM-2152 (24/25 Nov 2026): on screen, adding or editing a vendor engagement can pick the business services it helps deliver, and Polaris now reads them, but Polaris's `vendors_add_engagement` and `vendors_update_engagement` can't set them.
 
