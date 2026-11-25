@@ -1,7 +1,7 @@
 ---
 id: 01M84XTFR1V2SDQHR0Y61HSY85
 created: 2026-11-23T19:23:44.257812Z
-updated: 2026-11-24T21:32:44.49911Z
+updated: 2026-11-25T09:17:31.67288Z
 type: task
 title: 'ADR: Backup and restore — an Admin takes a copy before a significant change, restores it three ways, and can recover Compass from outside when it cannot start'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: review
+task_status: done
 ---
 Write the ADR the rest of the Backup and Restore sprint is built to. ADR 0169 is the next free number on main as of 2026-11-23.
 

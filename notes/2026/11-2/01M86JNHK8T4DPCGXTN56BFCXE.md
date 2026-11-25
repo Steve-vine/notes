@@ -1,7 +1,7 @@
 ---
 id: 01M86JNHK8T4DPCGXTN56BFCXE
 created: 2026-11-24T10:47:16.840179Z
-updated: 2026-11-24T15:21:19.418445Z
+updated: 2026-11-25T09:17:31.80481Z
 type: task
 title: A restore soon after a failed one goes ahead, and the recovery list shows each copy's full version
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -41,7 +41,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Two small fix-forwards found by the COM-2124 rehearsal, on COM-2116/2118 and COM-2120.
 

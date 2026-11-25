@@ -1,7 +1,7 @@
 ---
 id: 01M84XXPNAEX9CBTGXYT6F1CVZ
 created: 2026-11-23T19:25:29.642666Z
-updated: 2026-11-24T15:20:29.777505Z
+updated: 2026-11-25T09:17:31.697068Z
 type: task
 title: Compass can go into maintenance — everyone sees a notice and is signed out, background work stops, and it can be brought back
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -48,7 +48,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 ADR 0169 §4 (step 2) and Consequences. The foundation for every full restore.
 

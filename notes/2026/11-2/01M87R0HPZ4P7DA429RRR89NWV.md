@@ -1,7 +1,7 @@
 ---
 id: 01M87R0HPZ4P7DA429RRR89NWV
 created: 2026-11-24T21:39:54.719303Z
-updated: 2026-11-24T22:10:14.356727Z
+updated: 2026-11-25T09:17:31.823415Z
 type: task
 title: Production is ready for Backup and Restore before the next release — room for a restore, a planned route for restoring the scheduled backup, and backups moved to the Barman Cloud plugin
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,7 +39,7 @@ assignee: steve
 label:
 - chore
 priority: high
-task_status: review
+task_status: done
 ---
 Production readiness for the Backup and Restore sprint (ADRs 0169–0174, 0176, 0177). **This must be done before the release that carries the sprint.** The bucket rule (COM-2123) is already applied.
 

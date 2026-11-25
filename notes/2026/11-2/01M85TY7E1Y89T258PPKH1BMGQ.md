@@ -1,7 +1,7 @@
 ---
 id: 01M85TY7E1Y89T258PPKH1BMGQ
 created: 2026-11-24T03:52:35.521407Z
-updated: 2026-11-24T21:31:06.822838Z
+updated: 2026-11-25T09:17:31.764317Z
 type: task
 title: Restoring the scheduled Postgres backup also brings Compass back on hold, so a rolled-back database can't re-run real account changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -44,7 +44,7 @@ assignee: steve
 label:
 - follow_up
 priority: high
-task_status: review
+task_status: done
 ---
 Found while building COM-2120 (ADR 0169 §5, ADR 0171).
 
