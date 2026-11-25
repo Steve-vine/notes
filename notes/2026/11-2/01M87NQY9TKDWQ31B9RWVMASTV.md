@@ -1,7 +1,7 @@
 ---
 id: 01M87NQY9TKDWQ31B9RWVMASTV
 created: 2026-11-24T21:00:15.54699Z
-updated: 2026-11-25T04:06:29.670954Z
+updated: 2026-11-25T09:17:49.950304Z
 type: task
 title: The business impact analysis assesses the business services list, replacing its own list of functions, and Continuity reads per service
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -54,7 +54,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Business Services". Follows the Inventory links and the vendor blast radius.
 

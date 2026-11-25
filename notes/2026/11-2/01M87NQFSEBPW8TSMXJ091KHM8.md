@@ -1,7 +1,7 @@
 ---
 id: 01M87NQFSEBPW8TSMXJ091KHM8
 created: 2026-11-24T21:00:00.686156Z
-updated: 2026-11-25T04:06:22.721267Z
+updated: 2026-11-25T09:17:49.933508Z
 type: task
 title: An incident's "services affected" can name business services
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -46,7 +46,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Business Services". Follows the Business services page.
 

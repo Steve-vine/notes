@@ -1,7 +1,7 @@
 ---
 id: 01M87NPDZVSSZPHJ5EJ6KND9G9
 created: 2026-11-24T20:59:26.075054Z
-updated: 2026-11-25T04:06:11.766724Z
+updated: 2026-11-25T09:17:49.897687Z
 type: task
 title: 'A Business services page: each company''s list of Internal and Client facing services'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -49,7 +49,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Business Services". Follows the ADR.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M880Y72A6RYAS66KRWT6TG1B
 created: 2026-11-25T00:15:55.466635Z
-updated: 2026-11-25T04:06:31.622066Z
+updated: 2026-11-25T09:17:49.958137Z
 type: task
 title: Polaris can set an engagement's business services when adding or editing it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - follow_up
 priority: low
-task_status: review
+task_status: done
 ---
 Sprint "Business Services". Follow-up from COM-2152 (24/25 Nov 2026): on screen, adding or editing a vendor engagement can pick the business services it helps deliver, and Polaris now reads them, but Polaris's `vendors_add_engagement` and `vendors_update_engagement` can't set them.
 

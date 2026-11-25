@@ -1,7 +1,7 @@
 ---
 id: 01M87NQ09XED3JVCD11CASC93A
 created: 2026-11-24T20:59:44.829852Z
-updated: 2026-11-25T04:06:17.568271Z
+updated: 2026-11-25T09:17:49.916857Z
 type: task
 title: 'A vendor''s blast radius: services link to vendor engagements, and a vendor''s page shows every service it supports and how'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -54,7 +54,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Business Services". Follows the Inventory links. The heart of Steve's ask.
 

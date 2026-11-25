@@ -1,7 +1,7 @@
 ---
 id: 01M87NPND8AN476F9PXXD35AMQ
 created: 2026-11-24T20:59:33.672164Z
-updated: 2026-11-25T04:06:14.119128Z
+updated: 2026-11-25T09:17:49.908383Z
 type: task
 title: 'Business services link to Inventory: the systems, software and data a service depends on'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -49,7 +49,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Business Services". Follows the Business services page.
 

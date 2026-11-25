@@ -1,7 +1,7 @@
 ---
 id: 01M88E538VYY2D8SVKHSMFAJR3
 created: 2026-11-25T04:06:52.443151Z
-updated: 2026-11-25T05:16:42.085992Z
+updated: 2026-11-25T09:17:49.971076Z
 type: task
 title: 'Business services touch-ups: BIA submit wording and PDF left-out row, a document''s empty services card, and the vendor''s criticality tile refreshing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -40,7 +40,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Sprint "Business Services". Found in the round 2 pre-UAT on staging a63d542b2 (25 Nov 2026).
 

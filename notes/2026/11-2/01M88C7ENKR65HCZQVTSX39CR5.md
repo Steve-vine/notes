@@ -1,7 +1,7 @@
 ---
 id: 01M88C7ENKR65HCZQVTSX39CR5
 created: 2026-11-25T03:33:12.499743Z
-updated: 2026-11-25T05:16:35.334187Z
+updated: 2026-11-25T09:17:49.965056Z
 type: task
 title: The incident register's Business service filter shows only to people who can view the inventory, so it doesn't fail for others
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Business Services". Found by the Browser smoke on staging a63d542b2 (25 Nov 2026, run 45538339299): "every screen opens for analyst › Incidents ▸ Register" failed with `GET /api/v1/business-services?company=… → 403`.
 
