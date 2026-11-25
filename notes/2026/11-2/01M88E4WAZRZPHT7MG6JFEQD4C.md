@@ -1,7 +1,7 @@
 ---
 id: 01M88E4WAZRZPHT7MG6JFEQD4C
 created: 2026-11-25T04:06:45.343593Z
-updated: 2026-11-25T05:16:38.384058Z
+updated: 2026-11-25T09:17:39.629905Z
 type: task
 title: Editing an amendment request only asks for and shows what it actually changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Vendor Departments". Found in the round 2 pre-UAT of COM-2143 on staging a63d542b2 (25 Nov 2026). Screenshots: `~/compass-uat/sectbn9/COM-2143/03*`, `04*`, `06*`, `07*`.
 

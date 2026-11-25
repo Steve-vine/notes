@@ -1,7 +1,7 @@
 ---
 id: 01M86D6PYBFKFKDPT119X18TKV
 created: 2026-11-24T09:11:47.915218Z
-updated: 2026-11-24T15:17:33.571506Z
+updated: 2026-11-25T09:17:39.536768Z
 type: task
 title: A vendor engagement records its department, chosen when it's added, and shows it on the engagement card
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -51,7 +51,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Vendor Departments" (Steve, 24 Nov 2026). Follows COM-2131.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M872522KS94MA5JQ5EHMZFBZ
 created: 2026-11-24T15:17:53.875138Z
-updated: 2026-11-24T16:28:37.054145Z
+updated: 2026-11-25T09:17:39.582103Z
 type: task
 title: Pressing Enter in the Add department window saves it, as it does in the Create company window
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,7 +36,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: review
+task_status: done
 ---
 Sprint "Vendor Departments". Found in the pre-UAT pass of COM-2131 on staging 0234a65f3 (24 Nov 2026).
 

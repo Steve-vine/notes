@@ -1,7 +1,7 @@
 ---
 id: 01M87HNT543P1VA5RGBFX96GJR
 created: 2026-11-24T19:49:11.460515Z
-updated: 2026-11-25T04:06:05.41599Z
+updated: 2026-11-25T09:17:39.624266Z
 type: task
 title: 'Requests carry several departments: new vendor, new engagement, edits and amendments'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -50,7 +50,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Vendor Departments". Steve's amendment while testing on staging (24 Nov 2026): an engagement can have several departments. Part 2 of 2; follows COM-2147.
 
