@@ -1,7 +1,7 @@
 ---
 id: 01M87NP509Q79GWHY7EYF0KVPQ
 created: 2026-11-24T20:59:16.873671Z
-updated: 2026-11-24T21:21:40.926718Z
+updated: 2026-11-25T08:52:26.866016Z
 type: task
 title: 'ADR 0178: business services: a per-company list linking vendors, Inventory, risks, incidents and content'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,10 @@ comments:
     2. A retired service still shows in a vendor's blast radius, marked Retired.
     3. A decommissioned asset shows marked and is left out of worked-out vendor routes.
     4. A service retired after a BIA is approved stays in that BIA, and the next BIA leaves it out.
+- id: 01M88YG03JXDJ51GH5F1M6EVK8
+  author: Steve Vine
+  at: 2026-11-25T08:52:26.865827Z
+  text: 'Steve accepted ADR 0178 on 25 Nov 2026. Merged as PR #2159 (f477fca5b): Status Accepted (2026-11-25). The three small questions are recorded as settled as built: a retired service still counts in a blast radius, marked; decommissioned assets are left out of worked-out routes; a service retired after a BIA is approved stays in that BIA. CLAUDE.md''s key-ADR line no longer says Proposed. Docs only; staging unchanged.'
 assignee: steve
 label:
 - brief
