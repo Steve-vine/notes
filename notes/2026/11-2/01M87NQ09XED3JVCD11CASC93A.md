@@ -1,7 +1,7 @@
 ---
 id: 01M87NQ09XED3JVCD11CASC93A
 created: 2026-11-24T20:59:44.829852Z
-updated: 2026-11-24T23:34:47.03179Z
+updated: 2026-11-25T02:41:52.028648Z
 type: task
 title: 'A vendor''s blast radius: services link to vendor engagements, and a vendor''s page shows every service it supports and how'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,6 +10,34 @@ sprint: ss3ttbb
 blocked_by:
 - 01M87NPND8AN476F9PXXD35AMQ
 - 01M87HNCQ8RWA88ZTR0B1TTZ03
+comments:
+- id: 01M8899ECWWT52EXT13X0RJH92
+  author: Steve Vine
+  at: 2026-11-25T02:41:52.028493Z
+  text: |-
+    Built and merged to main: PR #2153 (b8208908e), migration 0920_engagement_services.
+
+    What people see:
+    - Adding or editing a vendor engagement in Compass has an optional Business services multi-select (the company's active services; a retired one already linked stays, marked). The engagement card lists them, and each link and unlink shows in the service's History.
+    - A vendor's page has a Blast radius card: every service the vendor supports, with its type and criticality, and every route:
+      - through a live (proposed or active) engagement;
+      - worked out through Inventory: supplies a system the service depends on, publishes software linked to it or installed on one of its systems, or receives data linked to it or held on one, followed through system dependencies, e.g. "TAS → AST-4 · Call platform → AST-7 · SIP trunks → supplied by Twilio".
+      - Several routes to one service are all listed.
+    - Ending an engagement removes its route and keeps the Inventory ones. Decommissioned systems and data are left out. A retired service still shows, marked.
+    - No criticality changes anywhere: the card shows the vendor's own criticality beside each service's, for comparison only.
+    - A service's page has a Vendors card: every vendor supporting it, with its criticality and the routes.
+    - Polaris answers "what's the blast radius of Twilio?" and "which vendors does LiveChat rely on?".
+    - Compass only: the portal vendor page doesn't show Continuity, so it doesn't show the blast radius. The portal's engagement card names its services as text.
+
+    Tested: backend integration for an engagement route, supplier, publisher and recipient routes (direct and through dependencies), ending an engagement, criticality unchanged, decommissioned assets left out, other-company and retired rules, the delete guard, History, migration up → down → up, and Polaris. Vitest covers both cards and the engagement form. CI green. An earlier CI failure (a sprint 125 migration test reaching the new table) was fixed by loading an engagement's services only when they're read.
+
+    For Steve to decide:
+    1. The engagement's Business services field only shows to people who can view the inventory. For others it's hidden and saving leaves the links alone.
+    2. The Blast radius card needs only vendor viewing (like Assets). The service's Vendors card needs inventory viewing.
+    3. The card always shows, with "No business service depends on this vendor" when empty.
+    4. Vendor requests and amendments don't carry services; only adding or editing an engagement directly does.
+
+    Not checked yet: seen in a browser (staging pre-UAT). Polaris setting services on an engagement is COM-2159.
 assignee: steve
 label:
 - feature
