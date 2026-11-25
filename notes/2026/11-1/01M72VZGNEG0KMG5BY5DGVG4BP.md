@@ -1,7 +1,7 @@
 ---
 id: 01M72VZGNEG0KMG5BY5DGVG4BP
 created: 2026-11-10T13:57:21.198516Z
-updated: 2026-11-25T12:28:17.205145Z
+updated: 2026-11-25T14:18:17.836563Z
 type: task
 title: Cyber Essentials 3.3 crosswalk completeness review — every library control that serves a requirement is linked to it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,7 +32,7 @@ assignee: steve
 label:
 - improvement
 priority: low
-task_status: review
+task_status: done
 ---
 Follows the SOC 2 finding (COM-1669, `audit/soc2-mapping.md`): COM-428 built every crosswalk requirement-first, choosing the smallest set of controls that satisfies each requirement, and the tests check coverage, not completeness. So relevant library controls can be missing from a requirement.
 
