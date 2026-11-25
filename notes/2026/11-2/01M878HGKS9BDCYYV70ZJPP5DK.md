@@ -1,7 +1,7 @@
 ---
 id: 01M878HGKS9BDCYYV70ZJPP5DK
 created: 2026-11-24T17:09:33.433788Z
-updated: 2026-11-25T11:42:22.317717Z
+updated: 2026-11-25T11:43:02.380106Z
 type: task
 title: Setup recertifications for all in-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -19,22 +19,22 @@ soc2_status: null
 task_status: todo
 ---
 - [ ] AWS (Production)
-Kora RDS UK
-AWS (VoiceNation)
-Kora RDS US
-SendGrid
-Twilio UK
-Twilio US
-Genesys
-Megrathea
-Bandwidth
-Azure/EntraID (Production)
-MongoDB
-Cartesia
-LiveKit
-RunPod
-Cerebras
-Auth0
-Composio
-Google Places
+- [ ] Kora RDS UK
+- [ ] AWS (VoiceNation)
+- [ ] Kora RDS US
+- [ ] SendGrid
+- [ ] Twilio UK
+- [ ] Twilio US
+- [ ] Genesys
+- [ ] Megrathea
+- [ ] Bandwidth
+- [ ] Azure/EntraID (Production)
+- [ ] MongoDB
+- [ ] Cartesia
+- [ ] LiveKit
+- [ ] RunPod
+- [ ] Cerebras
+- [ ] Auth0
+- [ ] Composio
+- [ ] Google Places
 
