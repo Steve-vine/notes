@@ -1,7 +1,7 @@
 ---
 id: 01M878HGKS9BDCYYV70ZJPP5DK
 created: 2026-11-24T17:09:33.433788Z
-updated: 2026-11-25T17:31:10.089794Z
+updated: 2026-11-25T17:32:00.98578Z
 type: task
 title: Setup recertifications for all in-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -46,8 +46,8 @@ Already in place in FreshService
 - [x] Data restore
 - [x] Sage database
 - [x] Sage Intacct
-- [ ] Kill Bill dashboard
-- [ ] Kill Bill database
+- [x] Kill Bill dashboard
+- [x] Kill Bill database
 - [ ] Billing permissions
 - [ ] MPUK Billing
 - [ ] Privileged roles 
