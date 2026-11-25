@@ -1,7 +1,7 @@
 ---
 id: 01M7JNMB123HPRBMKWEMS5CN2R
 created: 2026-11-16T17:14:14.434662Z
-updated: 2026-11-19T11:06:37.833711Z
+updated: 2026-11-25T15:06:12.492885Z
 type: task
 title: R-1122 Access Control policies and procedures, with revision date (S1)(A2)
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -12,6 +12,10 @@ comments:
   author: Steve Vine
   at: 2026-11-19T09:29:42.863038Z
   text: Waiting on Movers process from Natasha.
+- id: 01M89KW928MD92KFV205R761N6
+  author: Steve Vine
+  at: 2026-11-25T15:06:09.350056Z
+  text: Got the Movers processes.
 assignee: steve
 company: null
 priority: medium
@@ -21,7 +25,7 @@ soc2_class: access_control
 soc2_core_control:
 - acc_1
 soc2_req_type: evidence
-soc2_status: missing
+soc2_status: submitted
 task_status: backlog
 ---
 104**A-SCEND request:** R-1122
