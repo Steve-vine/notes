@@ -1,24 +1,24 @@
 ---
 id: 01M878HGKS9BDCYYV70ZJPP5DK
 created: 2026-11-24T17:09:33.433788Z
-updated: 2026-11-24T17:09:33.433788Z
+updated: 2026-11-25T11:42:22.317717Z
 type: task
 title: Setup recertifications for all in-scope systems
-assignee: steve
-priority: medium
-sprint: srluidz
-task_status: todo
 project: 01KY4JNC6MPPNNFXN416S398SG
 number: 280
+sprint: srluidz
+assignee: steve
 company: null
+priority: medium
 scope: null
 soc2_category: null
 soc2_class: null
 soc2_core_control: null
 soc2_req_type: null
 soc2_status: null
+task_status: todo
 ---
-AWS (Production)
+- [ ] AWS (Production)
 Kora RDS UK
 AWS (VoiceNation)
 Kora RDS US
