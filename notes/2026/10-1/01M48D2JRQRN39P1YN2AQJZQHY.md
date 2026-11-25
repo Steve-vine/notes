@@ -1,7 +1,7 @@
 ---
 id: 01M48D2JRQRN39P1YN2AQJZQHY
 created: 2026-10-06T10:45:14.135607Z
-updated: 2026-10-10T12:02:07.094746Z
+updated: 2026-11-25T22:33:14.364006Z
 type: task
 title: Review mirror contents
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,7 +9,7 @@ number: 850
 assignee: steve
 label: null
 priority: medium
-task_status: backlog
+task_status: todo
 ---
 Review what contents from AD, Entra ID and Exchange are recorded in the mirror and which are read in real time, E.g. Directory roles.
 Consider adding these to the mirror.
