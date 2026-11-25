@@ -1,12 +1,15 @@
 ---
 id: 01M89G2Z64WRQGRM2VJVR6NVZ5
 created: 2026-11-25T13:59:54.3084Z
-updated: 2026-11-25T14:00:13.459336Z
+updated: 2026-11-25T14:00:23.526699Z
 type: task
 title: A completed recertification with removals raises a request on the Requests tab, approved there however many people reviewed it
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2167
 sprint: s4qjpqd
+blocked_by:
+- 01M89G1WPC942TTFE0S0S3WQ5P
+- 01M89G2CG2CSAEC5WJC88Q32KP
 assignee: steve
 label:
 - feature

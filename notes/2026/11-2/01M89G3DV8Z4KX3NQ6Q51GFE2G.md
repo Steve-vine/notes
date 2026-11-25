@@ -1,12 +1,14 @@
 ---
 id: 01M89G3DV8Z4KX3NQ6Q51GFE2G
 created: 2026-11-25T14:00:09.320584Z
-updated: 2026-11-25T14:00:14.01701Z
+updated: 2026-11-25T14:00:23.984848Z
 type: task
 title: A recertification review shows its removal request instead of its own Approve button, on screen, on an asset's page and through Polaris
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2168
 sprint: s4qjpqd
+blocked_by:
+- 01M89G2Z64WRQGRM2VJVR6NVZ5
 assignee: steve
 label:
 - feature
