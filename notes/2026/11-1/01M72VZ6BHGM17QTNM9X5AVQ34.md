@@ -1,15 +1,15 @@
 ---
 id: 01M72VZ6BHGM17QTNM9X5AVQ34
 created: 2026-11-10T13:57:10.64172Z
-updated: 2026-11-10T13:57:10.64172Z
+updated: 2026-11-25T11:33:49.788046Z
 type: task
 title: UK GDPR crosswalk completeness review — every library control that serves a requirement is linked to it
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 1675
 assignee: steve
 label: improvement
 priority: medium
-task_status: backlog
-project: 01KXGC5PTGYHV30VM3E78G76S1
-number: 1675
+task_status: todo
 ---
 Follows the SOC 2 finding (COM-1669, `audit/soc2-mapping.md`): COM-428 built every crosswalk requirement-first, choosing the smallest set of controls that satisfies each requirement, and the tests check coverage, not completeness. So relevant library controls can be missing from a requirement.
 
