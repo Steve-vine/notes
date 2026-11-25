@@ -1,7 +1,7 @@
 ---
 id: 01M88E538VYY2D8SVKHSMFAJR3
 created: 2026-11-25T04:06:52.443151Z
-updated: 2026-11-25T04:38:41.572708Z
+updated: 2026-11-25T05:16:42.085992Z
 type: task
 title: 'Business services touch-ups: BIA submit wording and PDF left-out row, a document''s empty services card, and the vendor''s criticality tile refreshing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,17 @@ comments:
     For Steve to decide: in the PDF, left-out services are in a separate table under the assessed ones (on screen they share one table with a LEFT OUT tag).
 
     Not checked yet: in a browser, and a rendered PDF (recheck on staging next).
+- id: 01M88J4YQ5NPASZXSB32PSHY5X
+  author: Steve Vine
+  at: 2026-11-25T05:16:42.085699Z
+  text: |-
+    Pre-UAT recheck on staging 82c0bf7e4: **Passed**.
+    - Submit on a services BIA (draft RAS-6) reads "Every business service is assessed or left out with a reason, and each one assessed has a full impact over time, a tolerable period and its RTO and RPO." Nothing is asked of left-out Payroll, and the "not ready" list is worded by service. RAS-6 was then withdrawn (not submitted).
+    - PDF: the RAS-6 draft's PDF has TAS alone in Business services, and a separate "Business services left out" table (Service, Type, Reason) with Payroll. RAS-5's PDF still shows the old layout, because an approved BIA keeps the file made at approval (before this fix). That's expected.
+    - A document with no services reads "None of E2E Test Company's business services are linked to this document."
+    - Vendor tiles: adding a High engagement changed Criticality and Risk tier to High at once; ending it set them back to Low, with no reload.
+    - Cosmetic only: the left-out table's Reason cell repeats "Left out:".
+    Screenshots: ~/compass-uat/ss3ttbb/COM-2162/recheck-*
 assignee: steve
 label:
 - bug
