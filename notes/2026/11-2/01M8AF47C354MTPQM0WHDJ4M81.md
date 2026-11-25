@@ -1,16 +1,33 @@
 ---
 id: 01M8AF47C354MTPQM0WHDJ4M81
 created: 2026-11-25T23:02:21.315891Z
-updated: 2026-11-25T23:05:19.277956Z
+updated: 2026-11-25T23:36:49.996742Z
 type: task
 title: A shared mailbox and a directory role open in a popup like a person, group or device — and all five popups are wider
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2175
+comments:
+- id: 01M8AH35B2GN2MH30MFFWRH0TE
+  author: Steve Vine
+  at: 2026-11-25T23:36:43.61837Z
+  text: |-
+    Done — PR #2177, merged to main (a20153e29). Goes to staging with the rest of the sprint-0 batch.
+
+    What to look at:
+    - **Access Control ▸ Shared mailboxes / Directory roles:** clicking a row opens the mailbox or role in a popup over the list instead of going to a page. Escape or closing it puts you back on the list as you left it.
+    - **A person's popup:** a role pill, and a mailbox under *Shared mailboxes*, now open over the person. Escape goes back to the person and nothing reloads.
+    - **Two deep:** from a role or mailbox popup, clicking a holder opens the person on top. A link inside that second popup replaces what it shows instead of stacking a third. This now applies to all five popups; before, person → group → device → … could stack without limit.
+    - **Links still work as links:** ctrl/cmd-click opens a new tab. A pasted role or mailbox address still opens its full page.
+    - **Width:** person, group, device, shared mailbox and directory role popups are all about 960px (were about 620px). They stay inside a smaller window and fill the screen on a phone.
+
+    Found while doing this, not changed: in a group's popup, the "Grants directory roles" pill still goes to the Directory roles list, so it leaves the popup. It names no single role; the roles it grants are listed in the orange note just below it. The Conditional access popup keeps its old width, since it never opens beside these five.
+
+    Technical: one shared popup frame, `access/AccessPopup.tsx`, with the width constant in `accessPopupContext.ts`. The role and mailbox pages are now a thin route plus a content component used by both the page and the popup. A note was added to `brief/information-architecture.md`. No migration, no API change.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 **Independent** (screens only — no migration, no API change).
 
