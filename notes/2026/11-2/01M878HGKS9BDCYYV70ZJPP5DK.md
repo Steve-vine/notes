@@ -1,7 +1,7 @@
 ---
 id: 01M878HGKS9BDCYYV70ZJPP5DK
 created: 2026-11-24T17:09:33.433788Z
-updated: 2026-11-25T11:44:06.999251Z
+updated: 2026-11-25T11:44:20.839425Z
 type: task
 title: Setup recertifications for all in-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -43,4 +43,4 @@ Already in place
 - [x] Billing database
 - [ ] Firewall rules
 - [ ] Data restore
-- [ ]  
+- [ ] Sage sd 
