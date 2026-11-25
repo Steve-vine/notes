@@ -1,7 +1,7 @@
 ---
 id: 01M89G2Z64WRQGRM2VJVR6NVZ5
 created: 2026-11-25T13:59:54.3084Z
-updated: 2026-11-25T15:02:18.681534Z
+updated: 2026-11-25T17:07:07.833175Z
 type: task
 title: A completed recertification with removals raises a request on the Requests tab, approved there however many people reviewed it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,40 @@ sprint: s4qjpqd
 blocked_by:
 - 01M89G1WPC942TTFE0S0S3WQ5P
 - 01M89G2CG2CSAEC5WJC88Q32KP
+comments:
+- id: 01M89TSSDS8DVHKYW2B4R0FR4Z
+  author: Steve Vine
+  at: 2026-11-25T17:07:07.832977Z
+  text: |-
+    Built and merged to main: PR #2172, migration 0923_recert_removal_requests.
+
+    What people see:
+    - Every review that completes with flagged rows raises one "Recertification removals" request on the Requests tab, however many owners signed off and whatever kind of review it is. Compass raises it (no requester). Nothing is removed until it's approved; the two-owner path that removed straight away is gone.
+    - The request page names the review (with a link) and who signed it off, and lists each row: person, what they lose, and where the removal stands.
+    - Approving needs Approve requests. Privileged rows (a group granting directory roles, or a directory role) need an Access Admin, and the refusal says why. An owner who signed the review off can't approve it unless they're an Access Admin, in which case it reads self-approved.
+    - On approval, each row goes down the path it always has. The request reads Executed when all rows are removed, or Failed if one fails; Retry re-runs only the failed rows.
+    - Reject needs a reason. Each row reads Rejected with the reason, and nothing is removed. Cancel and gate edits are refused.
+    - It appears in approvers' Actions, and so in the approval mail.
+    - The migration raised a request for every completed review still waiting on the old approval. On production, that includes the Domain Admins review with its 4 removals.
+
+    Two bugs found and fixed on the way:
+    - Actions hid any request with no requester, so this kind would never have reached an approver.
+    - The sweep that fails a request stuck in "executing" would have failed a review's request waiting days for an Entra step. This kind is now excluded.
+
+    Differences from the task:
+    - There's no per-row reviewer comment in Compass to show, so rows show the person and what they lose.
+    - Steps for people stay where they're confirmed today: directory roles via "Confirm removed in Entra" on the review, asset entries on the asset's page, AD steps as before. Confirming finishes the request.
+
+    Tested: integration tests for each point (two-owner, single-owner, Access Admin self-approval, rejection, Actions, privileged directory role, the migration's carry-over plus down/up), with older recert suites rewritten for the new rule. 1,112 integration tests across 80 files, unit suite, vitest. CI green.
+
+    For Steve to decide: approving an asset review's removals needs Access's Approve requests (the request lives in Access), so Inventory-only people can't approve them.
+
+    Not checked yet: in a browser (staging pre-UAT next).
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Access Control Review". Follows ADR 0179 (COM-2165) and COM-2166 (the self-approval rule it reuses).
 
