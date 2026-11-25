@@ -1,17 +1,39 @@
 ---
 id: 01M88C7ENKR65HCZQVTSX39CR5
 created: 2026-11-25T03:33:12.499743Z
-updated: 2026-11-25T03:33:18.099428Z
+updated: 2026-11-25T03:52:58.302827Z
 type: task
 title: The incident register's Business service filter shows only to people who can view the inventory, so it doesn't fail for others
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2160
 sprint: ss3ttbb
+comments:
+- id: 01M88DBM00Q7KN71MV0RRGJ75K
+  author: Steve Vine
+  at: 2026-11-25T03:52:57.600525Z
+  text: |-
+    Built and merged to main: PR #2156 (eabef231e). Screen only.
+
+    What people see:
+    - People who can view the inventory still see the incident register's Business service filter. People who can't (e.g. an Analyst) see no filter and the register makes no services request. A service left in the address doesn't narrow their register.
+    - On an incident's Service impact card, "Add a service" offers business services and systems to people who can view the inventory, and systems only (labelled "System") to everyone else.
+    - Found while checking every screen that loads the services list:
+      - A risk's Business services card is read-only (no picker, no unlink, no request) for someone who manages risks but can't view the inventory.
+      - A document's Business services card now loads services only when the person can both view and manage the inventory.
+    - Already correct and left alone: the risk register filter, the engagement form's services field, the service page and its cards, the BIA services card, and incident suggestions.
+
+    Tested: Vitest for an incident viewer without inventory (no filter, no request, even with a service in the address), an admin (filter and request), the picker without inventory, and the risk card read-only. CI green.
+
+    For Steve to decide:
+    1. Without inventory access, the incident register ignores a service in the address. The risk register still filters by it and shows the filter so it can be cleared.
+    2. The risk card is fully read-only for a risk manager without inventory access, so they can't unlink either.
+
+    Not checked yet: the Browser smoke after redeploy (it should now pass for the Analyst).
 assignee: steve
 label:
 - bug
 priority: high
-task_status: active
+task_status: review
 ---
 Sprint "Business Services". Found by the Browser smoke on staging a63d542b2 (25 Nov 2026, run 45538339299): "every screen opens for analyst › Incidents ▸ Register" failed with `GET /api/v1/business-services?company=… → 403`.
 
