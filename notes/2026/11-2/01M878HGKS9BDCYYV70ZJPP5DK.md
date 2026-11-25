@@ -1,7 +1,7 @@
 ---
 id: 01M878HGKS9BDCYYV70ZJPP5DK
 created: 2026-11-24T17:09:33.433788Z
-updated: 2026-11-25T11:48:48.122762Z
+updated: 2026-11-25T11:48:56.73029Z
 type: task
 title: Setup recertifications for all in-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -39,8 +39,8 @@ task_status: todo
 - [ ] Google Places
 
 Already in place
-- [x] Sage 200
-- [x] Billing database
+- [ ] Sage 200
+- [ ] Billing database
 - [ ] Firewall rules
 - [ ] Data restore
 - [ ] Sage database
