@@ -1,7 +1,7 @@
 ---
 id: 01M87NQY9TKDWQ31B9RWVMASTV
 created: 2026-11-24T21:00:15.54699Z
-updated: 2026-11-25T03:09:46.19569Z
+updated: 2026-11-25T04:06:29.670954Z
 type: task
 title: The business impact analysis assesses the business services list, replacing its own list of functions, and Continuity reads per service
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,20 @@ comments:
     4. A service a BIA has assessed can't be deleted, only retired.
 
     Not checked yet: seen in a browser; the BIA's PDF (now with a Business services section) not opened. Staging pre-UAT next.
+- id: 01M88E4D16ZW48T7YG92R8P81C
+  author: Steve Vine
+  at: 2026-11-25T04:06:29.670686Z
+  text: |-
+    Pre-UAT on staging a63d542b2: **Passed** for the new flow. **Couldn't check** the older-BIA points.
+    - RAS-5 (assessor Admin A, approver Admin B) listed TAS and Payroll. TAS assessed (suggested tolerable period 1 day; RTO 4 h, RPO 1 h); Payroll left out with a reason. Submitted and approved.
+    - TAS's Recovery targets card shows the targets plus AST-54 and AST-42 with their Continuity flags. Payroll's card says why it was left out.
+    - The Continuity page groups by service.
+    - Frozen: AST-59 linked to TAS after approval didn't appear in Continuity or RAS-5.
+    - The PDF has a Business services section.
+    - Couldn't check: an older approved function BIA opening unchanged, and "Carry across" (E2E Test Company has no function BIA or draft).
+    - Found (low): the Submit dialog still says "Every business function has an owner…". In the BIA PDF, a left-out service's row is in the wrong columns (Type shows "Left out", and the reason sits under the tolerable period). Fix-forward task raised.
+    - RAS-5 is now E2E Test Company's current BIA.
+    Screenshots: ~/compass-uat/ss3ttbb/COM-2156/
 assignee: steve
 label:
 - feature

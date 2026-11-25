@@ -1,7 +1,7 @@
 ---
 id: 01M880Y72A6RYAS66KRWT6TG1B
 created: 2026-11-25T00:15:55.466635Z
-updated: 2026-11-25T03:09:52.209452Z
+updated: 2026-11-25T04:06:31.622066Z
 type: task
 title: Polaris can set an engagement's business services when adding or editing it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,10 @@ comments:
     For Steve to decide: without the inventory right, Polaris saves the other changes rather than refusing the whole add or edit.
 
     Not checked: a real Polaris conversation.
+- id: 01M88E4EY61CWRHH89V3P3MFPC
+  author: Steve Vine
+  at: 2026-11-25T04:06:31.621876Z
+  text: 'Pre-UAT on staging a63d542b2: **Couldn''t check.** It needs a Polaris conversation, and Polaris writes through Steve''s own account. Steve: ask Polaris to add an engagement on E2E Test Vendor with business services "TAS, Payroll". The vendor''s Blast radius should show both through that engagement, and clearing them should remove those routes.'
 assignee: steve
 label:
 - follow_up
