@@ -1,7 +1,7 @@
 ---
 id: 01M878HGKS9BDCYYV70ZJPP5DK
 created: 2026-11-24T17:09:33.433788Z
-updated: 2026-11-25T17:04:16.040924Z
+updated: 2026-11-25T17:04:20.979175Z
 type: task
 title: Setup recertifications for all in-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -42,7 +42,7 @@ task_status: todo
 Already in place in FreshService
 - [x] Sage 200
 - [x] Billing database
-- [ ] Firewall rules (One so far but
+- [ ] Firewall rules (One so far but no evidence)
 - [ ] Data restore
 - [ ] Sage database
 - [ ] Sage Intacct
