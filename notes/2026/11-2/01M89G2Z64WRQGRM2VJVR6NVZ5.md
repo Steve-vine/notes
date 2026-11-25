@@ -1,7 +1,7 @@
 ---
 id: 01M89G2Z64WRQGRM2VJVR6NVZ5
 created: 2026-11-25T13:59:54.3084Z
-updated: 2026-11-25T14:00:23.526699Z
+updated: 2026-11-25T15:02:18.681534Z
 type: task
 title: A completed recertification with removals raises a request on the Requests tab, approved there however many people reviewed it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 Sprint "Access Control Review". Follows ADR 0179 (COM-2165) and COM-2166 (the self-approval rule it reuses).
 

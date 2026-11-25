@@ -1,17 +1,35 @@
 ---
 id: 01M89G1WPC942TTFE0S0S3WQ5P
 created: 2026-11-25T13:59:18.988521Z
-updated: 2026-11-25T14:18:52.129365Z
+updated: 2026-11-25T15:02:15.032814Z
 type: task
 title: 'ADR 0179: who approves an access change — Access Admins approve their own, and recertification removals go through Requests'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2165
 sprint: s4qjpqd
+comments:
+- id: 01M89KN47RF7ANNP0ZBYSGKZ2A
+  author: Steve Vine
+  at: 2026-11-25T15:02:15.032607Z
+  text: |-
+    Merged: PR #2170, decisions/0179-who-approves-an-access-change.md, plus the CLAUDE.md ADR line.
+
+    Marked Accepted (25 Nov) because Steve said "go ahead and complete those 4 tasks". Steve: please read it, and say if anything should change.
+
+    The ADR records:
+    - §1 Approve their own requests: a permission held by Access Admin and Admin. Self-approved requests are marked and not expedited, and the privileged gate still applies.
+    - §2 One "Recertification removals" request per completed review, whatever the number of owners. It has no requester and can't be cancelled.
+    - §3 The approver must not be one of the owners who signed off, unless they are an Access Admin.
+    - §4 Approval releases each row down today's path. Rejection needs a reason and covers the whole request, never single rows.
+    - §5 The review points at its request, and reviews already waiting are carried over.
+    - §6 Segregation of duties stated plainly.
+
+    Note: the access reports have no requests subject, so "self-approved in the access reports" isn't possible yet. It shows on the request, the Requests list, the activity log and Polaris.
 assignee: steve
 label:
 - brief
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Access Control Review". Docs only. Merged before the build tasks start.
 
