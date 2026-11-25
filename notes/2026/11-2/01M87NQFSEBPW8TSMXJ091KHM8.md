@@ -1,7 +1,7 @@
 ---
 id: 01M87NQFSEBPW8TSMXJ091KHM8
 created: 2026-11-24T21:00:00.686156Z
-updated: 2026-11-25T01:47:09.119942Z
+updated: 2026-11-25T04:06:22.721267Z
 type: task
 title: An incident's "services affected" can name business services
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -32,6 +32,16 @@ comments:
     2. Without View inventory, people (and Polaris for them) can't read business services, so adding falls back to a system or a typed name.
 
     Not checked yet: seen in a browser (staging pre-UAT).
+- id: 01M88E4681C4RAN40M1Q0R16HF
+  author: Steve Vine
+  at: 2026-11-25T04:06:22.720997Z
+  text: |-
+    Pre-UAT on staging a63d542b2: **Passed**.
+    - INC-144: "Add a service" lists business services first, then systems. TAS, AST-54 and a typed name were added.
+    - On INC-125, typing "tas" shows "This is the name of a business service. Link to SVC-1 TAS". Accepting replaces it, and the timeline reads "Linked affected service: SVC-1 · TAS, in place of the typed name "tas"".
+    - TAS's Incidents card lists both, and the register's TAS filter returns both.
+    - The Analyst's picker made a failed services request; that's fixed in COM-2160.
+    Screenshots: ~/compass-uat/ss3ttbb/COM-2154/
 assignee: steve
 label:
 - feature

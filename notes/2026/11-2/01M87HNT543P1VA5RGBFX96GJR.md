@@ -1,7 +1,7 @@
 ---
 id: 01M87HNT543P1VA5RGBFX96GJR
 created: 2026-11-24T19:49:11.460515Z
-updated: 2026-11-24T23:15:24.594135Z
+updated: 2026-11-25T04:06:05.41599Z
 type: task
 title: 'Requests carry several departments: new vendor, new engagement, edits and amendments'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,16 @@ comments:
     4. The engagement's activity line now reads "departments Finance → Finance, IT".
 
     Not checked yet: seen in a browser (staging pre-UAT after both sprints).
+- id: 01M88E3NB7AFZNESKJ89JFBTEY
+  author: Steve Vine
+  at: 2026-11-25T04:06:05.415714Z
+  text: |-
+    Pre-UAT on staging a63d542b2 (requester E2E Asset Owner, approver E2E Vendor Admin): **Passed**.
+    - A new-engagement request with Finance and IT: My requests and the approver's review read "Departments: Finance, IT". Once approved, the portal card shows both.
+    - Amendment on A4, Finance → Finance + Operations: the diff reads "departments: Finance → Finance, Operations (adds Operations)". Rejected, A4 unchanged. Re-sent and approved, A4 shows "Finance, Operations".
+    - Edit request can't empty the set ("Pick at least one department."). A new-vendor request refuses none.
+    - Older requests still read correctly.
+    Screenshots: ~/compass-uat/sectbn9/COM-2148/
 assignee: steve
 label:
 - improvement

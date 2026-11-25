@@ -1,7 +1,7 @@
 ---
 id: 01M87HNCQ8RWA88ZTR0B1TTZ03
 created: 2026-11-24T19:48:57.704384Z
-updated: 2026-11-24T21:47:36.444166Z
+updated: 2026-11-25T04:06:00.365321Z
 type: task
 title: 'An engagement can have several departments: chosen when it''s added or edited, and shown wherever its department shows today'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,18 @@ comments:
     2. Restore ▸ Selected records: an engagement put back from a copy comes back without its departments. Its data types and data entities already behave this way, because put-back only writes rows directly under the vendor. Engagements are never deleted except by a vendor purge, so it rarely matters. Changing it would mean reworking put-back (Backup and Restore's code), so it's left as a known gap.
 
     Not checked yet: seen in a browser (staging pre-UAT after both sprints).
+- id: 01M88E3GDD4F0AGFZMD4HMJYQT
+  author: Steve Vine
+  at: 2026-11-25T04:06:00.365129Z
+  text: |-
+    Pre-UAT on staging a63d542b2, E2E Test Company: **Passed**.
+    - Add engagement with no department: "Pick at least one department." With Finance and IT it saves, and the card reads "Departments: Finance, IT".
+    - Removing IT leaves "Department: Finance". Removing the last one is refused.
+    - Older engagements (A1–A4, B1, B2) kept their single department after the migration.
+    - Department = IT finds the vendor in the Compass register and the portal. The report CSV/PDF reads "Finance, IT", and an ended engagement's department isn't listed.
+    - Departments in use show "Used by 3" with no Delete. The portal card reads "Departments Finance, IT".
+    - Couldn't check: Polaris adding an engagement with two departments (needs a Polaris conversation).
+    Screenshots: ~/compass-uat/sectbn9/COM-2147/
 assignee: steve
 label:
 - improvement

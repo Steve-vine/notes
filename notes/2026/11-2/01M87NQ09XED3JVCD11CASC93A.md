@@ -1,7 +1,7 @@
 ---
 id: 01M87NQ09XED3JVCD11CASC93A
 created: 2026-11-24T20:59:44.829852Z
-updated: 2026-11-25T02:41:52.920375Z
+updated: 2026-11-25T04:06:17.568271Z
 type: task
 title: 'A vendor''s blast radius: services link to vendor engagements, and a vendor''s page shows every service it supports and how'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,6 +38,18 @@ comments:
     4. Vendor requests and amendments don't carry services; only adding or editing an engagement directly does.
 
     Not checked yet: seen in a browser (staging pre-UAT). Polaris setting services on an engagement is COM-2159.
+- id: 01M88E4170HZ1XH4YJ369Q4RVY
+  author: Steve Vine
+  at: 2026-11-25T04:06:17.568063Z
+  text: |-
+    Pre-UAT on staging a63d542b2: **Passed**.
+    - Engagement "E2E BS 0335 Call routing" linked to TAS: E2E Test Vendor's Blast radius shows TAS through that engagement.
+    - Making the vendor AST-42's supplier adds the route "TAS → AST-54 → AST-42 → supplied by E2E Test Vendor".
+    - A second engagement linked to TAS was ended: only its route went.
+    - Criticality unchanged: engagements kept Low and Medium, and the vendor's criticality followed only its own engagements, never TAS's Critical.
+    - TAS's Vendors card lists the vendor with both routes.
+    - Found (low, probably older than this sprint): the vendor's Criticality tile doesn't refresh after an engagement is added or ended until the page is reloaded. In the fix-forward task.
+    Screenshots: ~/compass-uat/ss3ttbb/COM-2152/
 assignee: steve
 label:
 - feature

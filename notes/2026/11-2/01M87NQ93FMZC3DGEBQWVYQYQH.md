@@ -1,7 +1,7 @@
 ---
 id: 01M87NQ93FMZC3DGEBQWVYQYQH
 created: 2026-11-24T20:59:53.839333Z
-updated: 2026-11-25T01:05:04.586189Z
+updated: 2026-11-25T04:06:20.069685Z
 type: task
 title: Risks link to the business services they threaten
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,15 @@ comments:
     2. Linking needs the right to manage risks. Reading needs the right to view risks. The register filter and picker show only to people who can view the Inventory.
 
     Not checked yet: seen in a browser (staging pre-UAT).
+- id: 01M88E43N5WNS141KP60J1Z4RV
+  author: Steve Vine
+  at: 2026-11-25T04:06:20.069494Z
+  text: |-
+    Pre-UAT on staging a63d542b2: **Passed**.
+    - RSK-144 linked to TAS. TAS's Risks card lists it (residual 9), and the register's TAS filter finds only it.
+    - Payroll linked then retired: it shows marked RETIRED and isn't offered again. Unlinking clears both. History lines on both.
+    - Couldn't see "Open risks only" hide anything, because every E2E risk is Open.
+    Screenshots: ~/compass-uat/ss3ttbb/COM-2153/
 assignee: steve
 label:
 - feature

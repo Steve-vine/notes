@@ -1,7 +1,7 @@
 ---
 id: 01M87NQP34MRRM0CSSGVB4Z7T6
 created: 2026-11-24T21:00:07.140847Z
-updated: 2026-11-25T02:15:24.015656Z
+updated: 2026-11-25T04:06:25.322932Z
 type: task
 title: 'Content links to a company''s business services: policies, procedures and runbooks for a service'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -37,6 +37,17 @@ comments:
     3. The activity lines go on the service's History, not the document's.
 
     Not checked yet: seen in a browser (staging pre-UAT). The link table isn't in the backup catalogue, as with runbook links today.
+- id: 01M88E48SA5Y40V3MZ5DVD4SGG
+  author: Steve Vine
+  at: 2026-11-25T04:06:25.322654Z
+  text: |-
+    Pre-UAT on staging a63d542b2: **Passed**.
+    - A procedure linked from TAS's Content card shows on TAS (Procedure, v1, next review), and on the document's card as "SVC-1 · TAS".
+    - With Demo selected, the card shows none of E2E's links (Demo not changed).
+    - Unlinking from the document side clears both.
+    - The document's record is byte-identical before and after linking.
+    - Found (copy, low): the empty card reads "No business services of E2E Test Company yet." even though the company has services. In the fix-forward task.
+    Screenshots: ~/compass-uat/ss3ttbb/COM-2155/
 assignee: steve
 label:
 - feature

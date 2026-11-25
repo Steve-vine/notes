@@ -1,7 +1,7 @@
 ---
 id: 01M87AXVY33YGJ5JG8SC2M0GDV
 created: 2026-11-24T17:51:15.395388Z
-updated: 2026-11-24T22:08:14.952871Z
+updated: 2026-11-25T04:06:02.565731Z
 type: task
 title: 'Portal vendor list: the department shows on each engagement line, not on the vendor''s row'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,12 @@ comments:
     Tested: Vitest checks blank vendor rows, engagement lines with one, several, a retired or no department, and no sort button; the filter tests still pass. Screen conventions and the Compass register tests pass unchanged. CI green.
 
     Not checked yet: seen in a browser (staging pre-UAT).
+- id: 01M88E3JJ5B725Q63J5H27Y7F4
+  author: Steve Vine
+  at: 2026-11-25T04:06:02.565489Z
+  text: |-
+    Pre-UAT on staging a63d542b2, as E2E Asset Owner: **Passed**. Portal Register and My Vendors: every vendor row's Department cell is empty, and each engagement line shows its own ("Finance, IT", "Operations"). The heading has no sort button. Filtering by IT finds the same 3 vendors as the Compass register, which is unchanged.
+    Screenshots: ~/compass-uat/sectbn9/COM-2145/
 assignee: steve
 label:
 - improvement

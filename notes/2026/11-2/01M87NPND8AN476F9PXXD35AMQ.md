@@ -1,7 +1,7 @@
 ---
 id: 01M87NPND8AN476F9PXXD35AMQ
 created: 2026-11-24T20:59:33.672164Z
-updated: 2026-11-25T00:35:23.529129Z
+updated: 2026-11-25T04:06:14.119128Z
 type: task
 title: 'Business services link to Inventory: the systems, software and data a service depends on'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,16 @@ comments:
     4. Links are made only from the service's page; the asset's card is read-only.
 
     Not checked yet: seen in a browser (staging pre-UAT).
+- id: 01M88E3XV7K1KVD7EWA2R8ZNE8
+  author: Steve Vine
+  at: 2026-11-25T04:06:14.118932Z
+  text: |-
+    Pre-UAT on staging a63d542b2: **Passed**.
+    - TAS linked to AST-54 (note "call platform"), SFT-19 and DAT-11 (note "call recording"). The card adds "AST-42 … through AST-54".
+    - AST-42's Supports services shows "TAS Through AST-54"; the others show "Directly".
+    - Unlinking clears both sides and writes History.
+    - AST-54's Delete is disabled: "In use: … supports SVC-1 TAS".
+    Screenshots: ~/compass-uat/ss3ttbb/COM-2151/
 assignee: steve
 label:
 - feature

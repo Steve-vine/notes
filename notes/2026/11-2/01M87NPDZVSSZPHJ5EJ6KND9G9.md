@@ -1,7 +1,7 @@
 ---
 id: 01M87NPDZVSSZPHJ5EJ6KND9G9
 created: 2026-11-24T20:59:26.075054Z
-updated: 2026-11-24T23:42:03.438076Z
+updated: 2026-11-25T04:06:11.766724Z
 type: task
 title: 'A Business services page: each company''s list of Internal and Client facing services'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,16 @@ comments:
     4. Page addresses use the number (SVC-3 is /business-services/3).
 
     Not checked yet: seen in a browser (staging pre-UAT after both sprints).
+- id: 01M88E3VHP84YZNDCV2H35RT25
+  author: Steve Vine
+  at: 2026-11-25T04:06:11.766499Z
+  text: |-
+    Pre-UAT on staging a63d542b2, as E2E Admin A: **Passed**.
+    - Added SVC-1 TAS (Client facing, Critical) and SVC-2 Payroll (Internal, High). " tas " is refused as a duplicate.
+    - The type filter works. Payroll retired (gone from Active, shown marked under Status All) and brought back.
+    - An unused service was deleted after confirmation. History shows each step.
+    - Global search "SVC-1" finds TAS. Other companies see no services.
+    Screenshots: ~/compass-uat/ss3ttbb/COM-2150/
 assignee: steve
 label:
 - feature
