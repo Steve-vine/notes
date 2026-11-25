@@ -1,17 +1,38 @@
 ---
 id: 01M88E4WAZRZPHT7MG6JFEQD4C
 created: 2026-11-25T04:06:45.343593Z
-updated: 2026-11-25T04:07:02.739505Z
+updated: 2026-11-25T04:41:43.577888Z
 type: task
 title: Editing an amendment request only asks for and shows what it actually changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2161
 sprint: sectbn9
+comments:
+- id: 01M88G4VYYBH00V0CW7N5HBAMD
+  author: Steve Vine
+  at: 2026-11-25T04:41:42.110322Z
+  text: |-
+    Built and merged to main: PR #2158 (82c0bf7e4). No migration. One small API addition (an amendment edit can withdraw a proposed field).
+
+    What people see:
+    - Edit request on an amendment opens with what the amendment proposes and the engagement's own values for the rest. Criticality and annual cost aren't required: a criticality-only amendment on an engagement with no cost saves without one. The cost field says "Leave blank to keep it as it is".
+    - Only fields that differ from the engagement are proposed. Clearing a field the amendment proposed takes that change back out (e.g. a mistaken £500).
+    - After an edit, My requests' summary, the approver's diff and the activity log list only real changes, never "none → none" or "X → X".
+    - The pre-UAT's open amendment on Engagement A1 now drops the no-change lines. Its typed £500 still shows because it is part of the amendment; clearing the cost in Edit request removes it.
+    - New-vendor and new-engagement edits are unchanged. Amendments proposing cost or departments still edit and show correctly.
+
+    Tested: backend integration for a criticality-only amendment edit (no cost needed, only criticality in summary, proposal and log), withdrawing a mistaken cost, withdraw allowed only on amendments, plus the existing edit, request, department, approval and Polaris tests. Vitest covers the amendment edit form and the approver's diff hiding unchanged fields. CI green first time.
+
+    For Steve to decide:
+    1. Clearing a proposed field withdraws that change (the engagement keeps its value). It doesn't blank the field; amendments still can't clear one.
+    2. Proposing a value the engagement already has is saved as "unchanged", from the form or Polaris.
+
+    Not checked yet: in a browser (recheck on staging next). Polaris can't use the new "withdraw" option, though its edits get the same "same value = unchanged" handling.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 Sprint "Vendor Departments". Found in the round 2 pre-UAT of COM-2143 on staging a63d542b2 (25 Nov 2026). Screenshots: `~/compass-uat/sectbn9/COM-2143/03*`, `04*`, `06*`, `07*`.
 
