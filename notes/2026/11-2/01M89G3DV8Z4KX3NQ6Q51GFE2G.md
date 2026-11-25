@@ -1,7 +1,7 @@
 ---
 id: 01M89G3DV8Z4KX3NQ6Q51GFE2G
 created: 2026-11-25T14:00:09.320584Z
-updated: 2026-11-25T18:47:55.601588Z
+updated: 2026-11-25T22:31:43.030162Z
 type: task
 title: A recertification review shows its removal request instead of its own Approve button, on screen, on an asset's page and through Polaris
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -49,7 +49,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Sprint "Access Control Review". After COM-2167.
 

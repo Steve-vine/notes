@@ -1,7 +1,7 @@
 ---
 id: 01M89TVAHZZYN71N1GP4SMY91W
 created: 2026-11-25T17:07:58.143007Z
-updated: 2026-11-25T18:48:03.259435Z
+updated: 2026-11-25T22:31:43.043495Z
 type: task
 title: Browser journey 5 raises its leaver as the Access Manager, so a self-approving Admin never runs it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,7 +23,7 @@ assignee: steve
 label:
 - bug
 priority: urgent
-task_status: review
+task_status: done
 ---
 Sprint "Access Control Review". Fix-forward found before the staging deploy (from COM-2166).
 

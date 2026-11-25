@@ -1,7 +1,7 @@
 ---
 id: 01M89ZW7Z1KKTX2P5RE4TB5GTV
 created: 2026-11-25T18:35:51.137415Z
-updated: 2026-11-25T19:24:07.883413Z
+updated: 2026-11-25T22:31:43.065373Z
 type: task
 title: Access request screens name a review's removals properly, never offer to raise one, and don't tell an Access Admin they're submitting for approval
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,7 +25,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 Sprint "Access Control Review". Fix-forward from the pre-UAT pass on staging 2016209cf (COM-2166, COM-2167).
 
