@@ -1,7 +1,7 @@
 ---
 id: 01M89G3DV8Z4KX3NQ6Q51GFE2G
 created: 2026-11-25T14:00:09.320584Z
-updated: 2026-11-25T17:26:05.66116Z
+updated: 2026-11-25T18:47:55.601588Z
 type: task
 title: A recertification review shows its removal request instead of its own Approve button, on screen, on an asset's page and through Polaris
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,23 @@ comments:
     Tested: integration tests for the review naming its request and the CSV carrying the approval, Polaris before and after approval, and Vitest for the link and the missing Approve button. 2,549 integration tests across recert, Polaris and portal; unit suite; CI green.
 
     Not checked yet: in a browser (staging pre-UAT next).
+- id: 01M8A0JBEHG5ACP16SQE1Y2EGJ
+  author: Steve Vine
+  at: 2026-11-25T18:47:55.601247Z
+  text: |-
+    Pre-UAT on staging 2016209cf, E2E Test Company: **Passed**.
+
+    What was seen:
+    - The review (Recertification → Instances) shows "Completed" and "Removals: ACR-197 awaiting approval", linking to the request. There's no Approve button.
+    - After Admin B rejected it, the pill read "Removals: ACR-197 rejected".
+    - The evidence CSV's last five columns read: ACR-197, rejected, E2E Admin B, the time, no.
+    - The API's removal_request on the review carries the same.
+
+    Couldn't check:
+    - Polaris answering "where are the removals?" — it needs Polaris's AI provider. The tool test covers the output.
+    - An asset's page — there's no asset review in E2E Test Company. It uses the same view.
+
+    Screenshots: ~/compass-uat/s4qjpqd/COM-2168/
 assignee: steve
 label:
 - feature

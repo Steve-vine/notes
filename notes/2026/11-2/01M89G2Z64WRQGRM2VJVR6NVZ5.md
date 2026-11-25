@@ -1,7 +1,7 @@
 ---
 id: 01M89G2Z64WRQGRM2VJVR6NVZ5
 created: 2026-11-25T13:59:54.3084Z
-updated: 2026-11-25T17:07:07.833175Z
+updated: 2026-11-25T18:47:52.202833Z
 type: task
 title: A completed recertification with removals raises a request on the Requests tab, approved there however many people reviewed it
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -39,6 +39,25 @@ comments:
     For Steve to decide: approving an asset review's removals needs Access's Approve requests (the request lives in Access), so Inventory-only people can't approve them.
 
     Not checked yet: in a browser (staging pre-UAT next).
+- id: 01M8A0J84AY1KTBF9AG9G2NZM9
+  author: Steve Vine
+  at: 2026-11-25T18:47:52.202401Z
+  text: |-
+    Pre-UAT on staging 2016209cf, E2E Test Company: **Passed**, with three screen defects fixed forward in COM-2171.
+
+    Steps and what was seen:
+    - As E2E Admin A: made a review of the group "Intune.Users.Application.UniPrintDownRight" (one member) with Admin A as sole owner, started it, flagged the member and signed off. It completed and raised ACR-197, Recertification removals, Pending approval.
+    - The request page says "Raised by Compass for the review of Intune.Users.Application.UniPrintDownRight (2026-11-25), signed off by E2E Admin A." with a link to the review, and lists the row (Sian Williams2, loses the group, Awaiting approval).
+    - Admin A (an Access Admin who signed off) is offered Approve. Reject stays disabled until a reason is typed. There's no Cancel and no Edit.
+    - E2E Access Manager has "ACR-197 · Recertification removals request" in their Actions.
+    - E2E Admin B rejected it with a reason. The request reads Rejected; the row reads "Rejected by E2E Admin B: …"; nothing was removed; the review stays complete.
+    - I deleted the test schedule afterwards.
+
+    Defects (→ COM-2171): the page was headed "Recert removal"; New request offered "Recertification removals"; Requester read "—" rather than Compass.
+
+    Couldn't check: approving one, because it would remove a real person's access. Steve: approve a review's request on production once released, or trust the integration tests (two-owner, single-owner, self-approval, directory role).
+
+    Screenshots: ~/compass-uat/s4qjpqd/COM-2167/
 assignee: steve
 label:
 - feature
