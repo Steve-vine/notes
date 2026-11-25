@@ -1,7 +1,7 @@
 ---
 id: 01M88E582QGH4C8DNQQW2H57NX
 created: 2026-11-25T04:06:57.367699Z
-updated: 2026-11-25T08:47:02.615571Z
+updated: 2026-11-25T22:31:48.111899Z
 type: task
 title: 'Some screens ask for data the account can''t see: dashboard for Analyst and Vendor Admin, portal vendor flags for a requester'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,7 +10,7 @@ assignee: steve
 label:
 - bug
 priority: low
-task_status: backlog
+task_status: todo
 ---
 Seen during the sprint 125/126 round 2 pre-UAT on staging a63d542b2 (25 Nov 2026), and probably older than those sprints. **Not built; for Steve to schedule.**
 
