@@ -1,15 +1,17 @@
 ---
 id: 01M89G2CG2CSAEC5WJC88Q32KP
 created: 2026-11-25T13:59:35.170484Z
-updated: 2026-11-25T13:59:35.170484Z
+updated: 2026-11-25T14:00:12.756447Z
 type: task
 title: An Access Admin's own request goes through when they submit it, approved by them (not expedited, nothing owed afterwards)
-label: feature
-assignee: steve
-priority: medium
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2166
+sprint: s4qjpqd
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 Sprint "Access Control Review". Follows ADR 0179 (COM-2165).
 
