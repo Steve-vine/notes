@@ -1,7 +1,7 @@
 ---
 id: 01M878HGKS9BDCYYV70ZJPP5DK
 created: 2026-11-24T17:09:33.433788Z
-updated: 2026-11-25T11:44:57.830568Z
+updated: 2026-11-25T11:45:06.383735Z
 type: task
 title: Setup recertifications for all in-scope systems
 project: 01KY4JNC6MPPNNFXN416S398SG
@@ -46,4 +46,5 @@ Already in place
 - [ ] Sage database
 - [ ] Sage Intacct
 - [ ] Kill Bill dashboard
+- [ ] Kill Bill database
 - [ ]  
