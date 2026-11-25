@@ -1,15 +1,17 @@
 ---
 id: 01M89X6BHZ0A896EZF8V0RGQ7S
 created: 2026-11-25T17:48:56.76786Z
-updated: 2026-11-25T17:48:56.76786Z
+updated: 2026-11-25T17:48:58.482131Z
 type: task
 title: Approve their own requests goes only to Access Admin and Admin (and everything-ticked roles), not every role that approves privileged changes
-label: bug
-assignee: steve
-priority: urgent
-task_status: active
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2170
+sprint: s4qjpqd
+assignee: steve
+label:
+- bug
+priority: urgent
+task_status: active
 ---
 Sprint "Access Control Review". Fix-forward found by the staging Browser smoke (from COM-2166).
 
