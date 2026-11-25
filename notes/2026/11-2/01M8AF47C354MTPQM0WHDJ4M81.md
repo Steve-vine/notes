@@ -1,15 +1,16 @@
 ---
 id: 01M8AF47C354MTPQM0WHDJ4M81
 created: 2026-11-25T23:02:21.315891Z
-updated: 2026-11-25T23:02:21.315891Z
+updated: 2026-11-25T23:05:19.277956Z
 type: task
 title: A shared mailbox and a directory role open in a popup like a person, group or device — and all five popups are wider
-task_status: todo
-label: improvement
-priority: medium
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2175
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: active
 ---
 **Independent** (screens only — no migration, no API change).
 
