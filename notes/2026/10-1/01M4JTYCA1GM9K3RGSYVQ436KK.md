@@ -1,16 +1,34 @@
 ---
 id: 01M4JTYCA1GM9K3RGSYVQ436KK
 created: 2026-10-10T12:00:00.833462Z
-updated: 2026-11-25T23:05:18.383634Z
+updated: 2026-11-25T23:54:28.31638Z
 type: task
 title: Trusted accounts — changes made by an account an Access admin trusts are recorded, not sent for validation
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 902
+comments:
+- id: 01M8AJ3HC7NNDZVM87CGWCJVKJ
+  author: Steve Vine
+  at: 2026-11-25T23:54:24.519086Z
+  text: |-
+    Done — PR #2178, merged to main (d9b95dfa). Goes to staging with the rest of the sprint-0 batch.
+
+    What to look at:
+    - **Access Control ▸ Admin ▸ Trusted accounts** (new card under *What Compass watches*): **Add trusted account** opens a picker over people and apps from the directory. A reason is required. The list shows each account, its reason, and who added it and when. The bin icon removes one in a single action. A line says only changes made in Entra can be recognised (AD and Exchange changes are raised as usual), and that nothing already raised moves either way.
+    - **Validation ▸ Recorded changes:** a change made by a trusted account moves here by itself once Microsoft says who made it, labelled "Made by trusted account *name* — *reason*". It's never in anyone's Actions and never goes overdue. Admin roles are included.
+    - **Activity log:** "trusted *name*: its changes are recorded, not validated — *reason*" and "stopped trusting *name*".
+    - **Polaris:** can list the trusted accounts, and a recorded change says why it was recorded. Adding and removing stay on screen.
+
+    Decided while building:
+    - Trust applies to changes **raised after** the account was added. A change raised before, even if Microsoft only names its maker later, is still validated as normal.
+    - Trusted accounts is its own card directly under *What Compass watches*, with its own link (`#trusted-accounts`) that Polaris uses.
+
+    Technical: migration 0926 (the trusted accounts table; each unrequested change now keeps the Entra id of whoever made it, plus the trust's name and reason); ADR 0180; matched on the Entra id (an app also by its application id), never the sign-in name; new Polaris tool access_list_trusted_accounts. The item's due date is kept but nothing reads it once the item is recorded.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **On the chain** (migration + API). Independent of the COM-850 group of tasks.
 
