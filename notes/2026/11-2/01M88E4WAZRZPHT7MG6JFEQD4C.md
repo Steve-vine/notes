@@ -1,7 +1,7 @@
 ---
 id: 01M88E4WAZRZPHT7MG6JFEQD4C
 created: 2026-11-25T04:06:45.343593Z
-updated: 2026-11-25T04:41:43.577888Z
+updated: 2026-11-25T05:16:38.384058Z
 type: task
 title: Editing an amendment request only asks for and shows what it actually changes
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,16 @@ comments:
     2. Proposing a value the engagement already has is saved as "unchanged", from the form or Polaris.
 
     Not checked yet: in a browser (recheck on staging next). Polaris can't use the new "withdraw" option, though its edits get the same "same value = unchanged" handling.
+- id: 01M88J4V3G05XD338GT1A1BZP6
+  author: Steve Vine
+  at: 2026-11-25T05:16:38.383883Z
+  text: |-
+    Pre-UAT recheck on staging 82c0bf7e4: **Passed**.
+    - The existing A1 amendment: the approver's diff and My requests list only criticality and the typed £500, with no "none → none" lines.
+    - After "Request info", Edit request opened with "Leave blank to keep it as it is". Clearing the £500 saved without "Required"; the summary and diff then show only "criticality Low → High", and the log reads "annual cost £500.00 → unchanged".
+    - A new criticality-only amendment on A2 (no cost) was edited to High with the cost blank: it saved, and the summary, diff and log show only the criticality change.
+    - Regression: editing a new-vendor request still updates its summary (cost £3,000), and a new-vendor request still requires a cost.
+    Screenshots: ~/compass-uat/sectbn9/COM-2161/recheck-*
 assignee: steve
 label:
 - bug

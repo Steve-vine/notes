@@ -1,7 +1,7 @@
 ---
 id: 01M88C7ENKR65HCZQVTSX39CR5
 created: 2026-11-25T03:33:12.499743Z
-updated: 2026-11-25T03:52:58.302827Z
+updated: 2026-11-25T05:16:35.334187Z
 type: task
 title: The incident register's Business service filter shows only to people who can view the inventory, so it doesn't fail for others
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -29,6 +29,15 @@ comments:
     2. The risk card is fully read-only for a risk manager without inventory access, so they can't unlink either.
 
     Not checked yet: the Browser smoke after redeploy (it should now pass for the Analyst).
+- id: 01M88J4R46D3R2Q6MFPEDDM0M3
+  author: Steve Vine
+  at: 2026-11-25T05:16:35.333991Z
+  text: |-
+    Pre-UAT recheck on staging 82c0bf7e4 (Browser smoke 41/41, Analyst included): **Passed**.
+    - E2E Analyst: the incident register has no Business service filter, no services request and no console errors. On INC-144, "Add a service" is labelled "System" and lists systems only, with no failed request.
+    - E2E Admin A: the filter is still there, and the picker reads "Business service or system" with business services first.
+    - TAS's Incidents card still lists INC-144 and INC-125.
+    Screenshots: ~/compass-uat/ss3ttbb/COM-2160/recheck-*
 assignee: steve
 label:
 - bug
