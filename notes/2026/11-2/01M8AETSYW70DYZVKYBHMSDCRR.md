@@ -1,16 +1,33 @@
 ---
 id: 01M8AETSYW70DYZVKYBHMSDCRR
 created: 2026-11-25T22:57:12.668332Z
-updated: 2026-11-25T23:36:55.810963Z
+updated: 2026-11-26T00:39:55.093913Z
 type: task
 title: Send on behalf on a shared mailbox is held, shown and watched — like Full Access and Send As
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2173
+comments:
+- id: 01M8AMPRKR7XHJD155EEBG243N
+  author: Steve Vine
+  at: 2026-11-26T00:39:51.672426Z
+  text: |-
+    Done — PR #2181, merged to main (23223765). Goes to staging with the rest of the sprint-0 batch.
+
+    What to look at:
+    - **Access ▸ Shared mailboxes ▸ a mailbox (page or popup):** a third list, **Can send on behalf**, beside Can open and Can send as. For a mailbox synchronised from AD, the list comes from AD and the column reads *Identity in AD*. If Compass isn't connected to AD it says *Not read — needs the AD connection* instead of listing nobody. If it can't find the mailbox in AD, it says that. If AD doesn't answer, the last read stays, marked as such.
+    - **Access ▸ Shared mailboxes list:** a *Can send on behalf* count. A mailbox that hasn't been read shows *Not read*.
+    - **A person's popup ▸ Shared mailboxes:** shows *can send on behalf*.
+    - **Unrequested changes:** a right given or removed by hand shows the next hour, e.g. "Ada can now send on behalf of Accounts" / "…can no longer send on behalf of…". It goes under *Needs validation* if a role gives rights on that mailbox, otherwise *For information*. It follows the existing **Shared mailboxes** switch. The first read after the deploy raises nothing.
+    - **Polaris:** "who can send on behalf of accounts@?" is answered, or it says why it wasn't read.
+
+    Not yet: requesting it, roles, leavers and recertification (COM-2174). Until then nothing removes it or asks why someone has it.
+
+    Technical: migration 0927 (a third mailbox access kind, plus when send on behalf was last read and why not); ADR 0181 (supersedes the last sentence of ADR 0075 §5; amendment appended to 0075); Exchange script reads GrantSendOnBehalfTo; AD read of publicDelegates per synchronised mailbox in the same hourly pass. A synchronised mailbox outside the parts of AD Compass reads shows "not found in AD". The PowerShell change can't run in CI — the first real hourly read on staging is its proof.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Split out of COM-850 (review of what the mirror holds). **On the chain** (migration + API). The second half — requesting, roles, carrying it out, recertification — follows in its own task.
 
