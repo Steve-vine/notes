@@ -1,7 +1,7 @@
 ---
 id: 01M8AW5X8V7GAQ6JMT5B49B2F4
 created: 2026-11-26T02:50:27.995656Z
-updated: 2026-11-26T03:28:11.234434Z
+updated: 2026-11-26T03:28:14.754315Z
 type: task
 title: A role's Shared mailboxes card names send on behalf, and says where each right is changed
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,9 +21,10 @@ comments:
 
     Technical: screen text only; the role editor already had the count. The COM-829 test in RolesPage.test.tsx checks both the counted and the not-read line. No migration, no API change.
 assignee: steve
-label: bug
+label:
+- bug
 priority: low
-task_status: active
+task_status: review
 ---
 Found in the pre-UAT pass of the sprint-0 batch on staging 30d00690 (26 Nov), on COM-2174. **Independent** (screen text only).
 
