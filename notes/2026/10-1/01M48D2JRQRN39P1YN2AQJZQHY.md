@@ -1,7 +1,7 @@
 ---
 id: 01M48D2JRQRN39P1YN2AQJZQHY
 created: 2026-10-06T10:45:14.135607Z
-updated: 2026-11-25T22:57:57.73039Z
+updated: 2026-11-26T01:04:47.008572Z
 type: task
 title: A person opens instantly — the popup's roles, apps and licences come from the mirror, as of the last read
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -12,7 +12,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 **On the chain** (the API response changes). Stacks on COM-2172 (app assignments held in Compass).
 

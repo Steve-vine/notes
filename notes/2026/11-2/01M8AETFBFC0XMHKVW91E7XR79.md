@@ -1,16 +1,36 @@
 ---
 id: 01M8AETFBFC0XMHKVW91E7XR79
 created: 2026-11-25T22:57:01.80752Z
-updated: 2026-11-25T23:05:15.562794Z
+updated: 2026-11-26T01:04:45.868387Z
 type: task
 title: Who's assigned to each enterprise app is held in Compass — shown on a person and reportable
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2172
+comments:
+- id: 01M8AP48KK40RN26689NM90C8D
+  author: Steve Vine
+  at: 2026-11-26T01:04:42.610903Z
+  text: |-
+    Done — PR #2179, merged to main (d1d5baaf). Goes to staging with the rest of the sprint-0 batch.
+
+    What to look at:
+    - **Access ▸ Reports ▸ new report:** a new subject, **App assignments**. One row per person per app per route: Application, Person, App role (*Default access* when the assignment carries no particular role), and How (*Direct* or *Through group X*). Someone assigned both ways appears twice. Filter on Application for "who can use app X?". There are extra columns for sign-in name, department, account enabled, assigned on, and whether the app requires assignment.
+    - **Access ▸ Reports:** the standard report **Who can use each enterprise app**.
+    - **Admin ▸ Integrations ▸ Microsoft:** the read list has a new **App assignments** row (Current / Stale since… / Never read). Read hourly at :55.
+    - If the read was refused or has never run, the report says so in a yellow note above the table, in the wizard preview, and at the top of CSV, PDF and mailed copies — never an empty list that looks like nobody.
+    - The person popup's Applications panel is unchanged here; COM-850 moves it onto this data.
+
+    Found while doing this, not changed:
+    - Entra doesn't pass an app assignment down to nested groups, so *Through group* means a direct member of that group. Members of groups nested inside it are not listed (that's how Entra itself behaves).
+    - The existing Application permissions report shows permission IDs instead of names: the app read doesn't ask Microsoft for the role names.
+    - Nothing is excluded. If the volume on production is large, the likely candidates to leave off screen are the big *Default access* lists on Microsoft first-party apps — the new Integrations row shows the count to judge by.
+
+    Technical: migration 0928 (`directory_app_assignments` + 4 sync-status columns); hourly sweep `sweep_app_assignments` at :55; shared helper `core/app_assignments.py`; ADR 0048 amended (apps are mirrored; app assignments now are too).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 Split out of COM-850 (review of what the mirror holds). **On the chain** (migration + API). COM-850 stacks on this.
 
