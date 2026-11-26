@@ -1,0 +1,22 @@
+---
+id: 01M8AW5X8V7GAQ6JMT5B49B2F4
+created: 2026-11-26T02:50:27.995656Z
+updated: 2026-11-26T02:50:27.995656Z
+type: task
+title: A role's Shared mailboxes card names send on behalf, and says where each right is changed
+assignee: steve
+priority: low
+label: bug
+task_status: active
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 2176
+---
+Found in the pre-UAT pass of the sprint-0 batch on staging 30d00690 (26 Nov), on COM-2174. **Independent** (screen text only).
+
+**Access ▸ Role matrix ▸ a role ▸ Shared mailboxes** now offers *Can send on behalf* on each mailbox (COM-2174), but the card's intro still reads "Access to these mailboxes is what this role grants — can open, can send as, or both. JML applies it through Exchange Online." That's no longer the whole story: send on behalf is a third right, and for a mailbox synchronised from AD it's changed in AD or as an on-prem to-do, not through Exchange. Each mailbox's summary line also counts only *can open* and *can send as*.
+
+## What people should see
+- The intro names all three rights and says where they're changed: Can open and Can send as through Exchange Online; Can send on behalf through Exchange for a cloud mailbox, or in AD (by Compass, or as a to-do) for one synchronised from AD.
+- Each mailbox's summary line also counts who can send on behalf (or says *not read* when it hasn't been read yet), like the Shared mailboxes list.
+
+**Done when:** on staging, a role's Shared mailboxes card reads as above.
