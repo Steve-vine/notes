@@ -1,7 +1,7 @@
 ---
 id: 01M8AF47C354MTPQM0WHDJ4M81
 created: 2026-11-25T23:02:21.315891Z
-updated: 2026-11-25T23:36:49.996742Z
+updated: 2026-11-26T02:57:11.091357Z
 type: task
 title: A shared mailbox and a directory role open in a popup like a person, group or device — and all five popups are wider
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,19 @@ comments:
     Found while doing this, not changed: in a group's popup, the "Grants directory roles" pill still goes to the Directory roles list, so it leaves the popup. It names no single role; the roles it grants are listed in the orange note just below it. The Conditional access popup keeps its old width, since it never opens beside these five.
 
     Technical: one shared popup frame, `access/AccessPopup.tsx`, with the width constant in `accessPopupContext.ts`. The role and mailbox pages are now a thin route plus a content component used by both the page and the popup. A note was added to `brief/information-architecture.md`. No migration, no API change.
+- id: 01M8AWJ6XKRS8ZYQFYR3XX0E44
+  author: Steve Vine
+  at: 2026-11-26T02:57:11.091156Z
+  text: |-
+    **Pre-UAT: Passed** — staging 30d00690, 26 Nov 02:45, as E2E Admin A (E2E Test Company). Browser smoke 41/41 green.
+
+    - Directory roles ▸ Application Administrator: opened in a popup over the list (960px; list still underneath). Clicking a holder (C Forster) opened Account details on top, also 960px. Escape closed only the person; the role stayed.
+    - Users ▸ C Forster ▸ the Application Administrator pill: the role opened over the person; Escape went back to the person, nothing reloaded.
+    - Shared mailboxes ▸ Accounts: popup over the list, 960px; a holder (Alison Stanworth) opened on top.
+    - Group and device popups: both 960px. All five the same width.
+    - Pasting `/access/directory-roles/<id>` and `/access/shared-mailboxes/<id>` into a fresh tab opened the full pages.
+
+    Screenshots: ~/compass-uat/sprint-0/COM-2175/
 assignee: steve
 label:
 - improvement
