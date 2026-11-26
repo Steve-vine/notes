@@ -1,7 +1,7 @@
 ---
 id: 01M88E582QGH4C8DNQQW2H57NX
 created: 2026-11-25T04:06:57.367699Z
-updated: 2026-11-26T00:19:02.633745Z
+updated: 2026-11-26T02:57:23.237068Z
 type: task
 title: 'Some screens ask for data the account can''t see: dashboard for Analyst and Vendor Admin, portal vendor flags for a requester'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,17 @@ comments:
     Found while doing this, not changed: the dashboard's *Open gaps* card links to Gaps for everyone, including people who can't open Gaps.
 
     Technical: the dashboard checks `posture.view` before asking for `/risk-overview` and `/checks`. The Flags card asks for `/vendor-flags` only when editing. `app/e2e`: `crawlMenu` checks the home screen first, and there is a new `crawlPortalVendor` step. No allowed-failure exceptions were added. No migration, no API change.
+- id: 01M8AWJJS5A7N6VP2P7G8D28PH
+  author: Steve Vine
+  at: 2026-11-26T02:57:23.236872Z
+  text: |-
+    **Pre-UAT: Passed** — staging 30d00690, 26 Nov.
+
+    - Browser smoke (41/41 green, 02:43) now checks every account's start screen on its first load and opens a vendor's record on every tab for E2E Asset Owner; any failed request, 403 included, fails it. All green.
+    - As **E2E Analyst**, Dashboard: no failed requests (the only 401 is the signed-out check before login); no request for risk overview or checks; no *Risks above appetite* card or *Evidence Collection* tile.
+    - E2E Vendor Admin and E2E Asset Owner: covered by the smoke's new checks above, not repeated by hand.
+
+    Screenshot: ~/compass-uat/sprint-0/COM-2163/
 assignee: steve
 label:
 - bug

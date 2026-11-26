@@ -1,7 +1,7 @@
 ---
 id: 01M48D2JRQRN39P1YN2AQJZQHY
 created: 2026-10-06T10:45:14.135607Z
-updated: 2026-11-26T02:06:04.803598Z
+updated: 2026-11-26T02:57:42.514249Z
 type: task
 title: A person opens instantly — the popup's roles, apps and licences come from the mirror, as of the last read
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,25 @@ comments:
     - If reading activations is refused, the Active panel only says so where eligible roles can be read — without PIM nobody can activate a role, so the warning would be noise on every person.
 
     Technical: migration 0930_role_activation (activation flag and end time on role assignments; last role read time, activation read status and licence names on the sync status). The 15-minute pass now reads roleAssignmentScheduleInstances (Activated only) and subscribedSkus. The live Graph reads and the per-pod caches are gone; tests make any outbound request fail. Polaris's person tool is unchanged.
+- id: 01M8AWK5KJGX8A4NH7T3VAMCSK
+  author: Steve Vine
+  at: 2026-11-26T02:57:42.513976Z
+  text: |-
+    **Pre-UAT: Passed · Couldn't check (a PIM activation)** — staging 30d00690, 26 Nov, as E2E Admin A.
+
+    Passed — Users ▸ C Forster:
+    - **Active assignments (13)**: e.g. Application Administrator, Exchange Administrator; "Developer Production · through Developers". As of 26 Nov 2026, 02:30.
+    - **Eligible assignments (1)**: Global Administrator. As of 02:30.
+    - **Licenses (2)**: SPE_F1, SPE_F5_SECCOMP. As of 02:30.
+    - **Applications**:
+      - Before the first app-assignment read it said "Applications unavailable — … has not been read from Microsoft yet. It is read every hour." That's the stated reason, not an empty list.
+      - After the 02:55 read: 35 apps, e.g. "AWS IAM Identity Center — User · through aws-chinwag-admin".
+    - Matches Directory roles: C Forster is listed as a direct holder of Application Administrator there.
+    - The person's data request took **132 ms**. No call to Microsoft is made on open (the tests make any outbound request fail).
+
+    Couldn't check — for Steve (needs PIM / Entra ID P2 in the real tenant): activate an eligible role, wait up to 15 minutes, and open the person. The role should show with "Activated until …".
+
+    Screenshot: ~/compass-uat/sprint-0/COM-850/
 assignee: steve
 label:
 - feature

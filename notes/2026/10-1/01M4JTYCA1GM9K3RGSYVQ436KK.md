@@ -1,7 +1,7 @@
 ---
 id: 01M4JTYCA1GM9K3RGSYVQ436KK
 created: 2026-10-10T12:00:00.833462Z
-updated: 2026-11-25T23:54:28.31638Z
+updated: 2026-11-26T02:57:16.753479Z
 type: task
 title: Trusted accounts — changes made by an account an Access admin trusts are recorded, not sent for validation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,25 @@ comments:
     - Trusted accounts is its own card directly under *What Compass watches*, with its own link (`#trusted-accounts`) that Polaris uses.
 
     Technical: migration 0926 (the trusted accounts table; each unrequested change now keeps the Entra id of whoever made it, plus the trust's name and reason); ADR 0180; matched on the Entra id (an app also by its application id), never the sign-in name; new Polaris tool access_list_trusted_accounts. The item's due date is kept but nothing reads it once the item is recorded.
+- id: 01M8AWJCEHE456JZZR96FMERMJ
+  author: Steve Vine
+  at: 2026-11-26T02:57:16.75327Z
+  text: |-
+    **Pre-UAT: Passed (on screen) · Couldn't check (the Entra half)** — staging 30d00690, 26 Nov 02:47, as E2E Admin A.
+
+    Passed:
+    - Access Control ▸ Admin ▸ **Trusted accounts** card is under *What Compass watches*, with the Entra-only and not-retroactive lines.
+    - **Add trusted account**: the picker found "Accounts User (Accounts@MP7400.onmicrosoft.com · Disabled)"; *Trust this account* stayed disabled until a reason was given. Added with the reason "E2E pre-UAT check of COM-902 — removed straight after"; the list showed it with "E2E Admin A, 26 Nov 2026, 02:47".
+    - **Stop trusting Accounts User** removed it in one click; the card went back to "No trusted accounts".
+    - Activity log: "trusted Accounts User: its changes are recorded, not validated — …" and "stopped trusting Accounts User", both as E2E Admin A.
+
+    Couldn't check — needs a real change in Entra, for Steve:
+    1. Trust the account a script signs in as (or a test account).
+    2. Have it change the membership of a group a business role maps (an unmapped group lands in Recorded changes anyway, so it proves nothing).
+    3. After Microsoft reports who made it (minutes to hours), the item should move from Unrequested to **Recorded changes**, labelled "Made by trusted account … — reason", and not be in anyone's Actions.
+    4. Stop trusting it; its next change should stay in Unrequested changes.
+
+    Screenshots: ~/compass-uat/sprint-0/COM-902/
 assignee: steve
 label:
 - feature

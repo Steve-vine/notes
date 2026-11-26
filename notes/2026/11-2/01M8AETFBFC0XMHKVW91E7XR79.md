@@ -1,7 +1,7 @@
 ---
 id: 01M8AETFBFC0XMHKVW91E7XR79
 created: 2026-11-25T22:57:01.80752Z
-updated: 2026-11-26T01:04:45.868387Z
+updated: 2026-11-26T02:57:27.591487Z
 type: task
 title: Who's assigned to each enterprise app is held in Compass — shown on a person and reportable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,21 @@ comments:
     - Nothing is excluded. If the volume on production is large, the likely candidates to leave off screen are the big *Default access* lists on Microsoft first-party apps — the new Integrations row shows the count to judge by.
 
     Technical: migration 0928 (`directory_app_assignments` + 4 sync-status columns); hourly sweep `sweep_app_assignments` at :55; shared helper `core/app_assignments.py`; ADR 0048 amended (apps are mirrored; app assignments now are too).
+- id: 01M8AWJQ17SP0YKSQH74ZRYB47
+  author: Steve Vine
+  at: 2026-11-26T02:57:27.591207Z
+  text: |-
+    **Pre-UAT: Passed (on screen) · Couldn't check (a fresh assignment)** — staging 30d00690, 26 Nov, as E2E Admin A.
+
+    Passed:
+    - Before the first read, the standard report **Who can use each enterprise app** showed the yellow "has not been read from Microsoft yet" note over an empty table.
+    - The first hourly read ran at 02:55 and took 18 seconds: **3,054 assignments**. The report then filled in, e.g. "15Five · Sarah Reilly · User · Through group 15Five Users", and the note went away.
+    - Admin ▸ Integrations ▸ Microsoft ▸ Configure: **App assignments — Current**.
+    - A person's popup (C Forster) ▸ Applications: 35 apps from this data (COM-850).
+
+    Couldn't check — for Steve: assign a test user to an enterprise app directly and once through a group in Entra, wait for the next :55 read, and confirm they appear twice in App assignments with the right *How*; remove one and it drops out the next hour.
+
+    Screenshots: ~/compass-uat/sprint-0/COM-2172/
 assignee: steve
 label:
 - feature

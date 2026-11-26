@@ -1,7 +1,7 @@
 ---
 id: 01M8AETSYW70DYZVKYBHMSDCRR
 created: 2026-11-25T22:57:12.668332Z
-updated: 2026-11-26T00:39:55.093913Z
+updated: 2026-11-26T02:57:32.645001Z
 type: task
 title: Send on behalf on a shared mailbox is held, shown and watched — like Full Access and Send As
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,21 @@ comments:
     Not yet: requesting it, roles, leavers and recertification (COM-2174). Until then nothing removes it or asks why someone has it.
 
     Technical: migration 0927 (a third mailbox access kind, plus when send on behalf was last read and why not); ADR 0181 (supersedes the last sentence of ADR 0075 §5; amendment appended to 0075); Exchange script reads GrantSendOnBehalfTo; AD read of publicDelegates per synchronised mailbox in the same hourly pass. A synchronised mailbox outside the parts of AD Compass reads shows "not found in AD". The PowerShell change can't run in CI — the first real hourly read on staging is its proof.
+- id: 01M8AWJVZ48WTSNFG01TDFXJ6P
+  author: Steve Vine
+  at: 2026-11-26T02:57:32.644806Z
+  text: |-
+    **Pre-UAT: Passed (on screen) · Couldn't check (a hand-made change)** — staging 30d00690, 26 Nov, as E2E Admin A.
+
+    Passed:
+    - Before the first read, the Shared mailboxes list's new **Can send on behalf** column read *Not read*, and a mailbox popup said "Not read yet — it is read with the next hourly pass".
+    - The first read after the deploy ran 02:50–02:52 (266 mailboxes). The column then had real counts: Accounts 7, Absence Reporting 41, 24 Hour 22, Admin Team 13 …
+    - Accounts popup ▸ **Can send on behalf (7)**: Alison Stanworth, James Horn, Jen Bancroft, Josie Lees, Mark Williams … each matched to a person, with *Identity in AD* showing their AD DN. These mailboxes are synchronised from AD, so this is the AD read working.
+    - The first read raised **no** unrequested changes. The only send-on-behalf item on Validation is an old list item from 30 Oct.
+
+    Couldn't check — for Steve: grant send on behalf by hand on a test shared mailbox (in the admin centre for a cloud one, in AD for a synchronised one); after the next :50 read it should show on the mailbox and in the person's popup, and as an unrequested change. Then switch **Shared mailboxes ▸ access granted** off and the next one shouldn't be raised.
+
+    Screenshot: ~/compass-uat/sprint-0/COM-2173/
 assignee: steve
 label:
 - feature
