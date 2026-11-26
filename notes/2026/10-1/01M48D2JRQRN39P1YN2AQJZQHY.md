@@ -1,18 +1,37 @@
 ---
 id: 01M48D2JRQRN39P1YN2AQJZQHY
 created: 2026-10-06T10:45:14.135607Z
-updated: 2026-11-26T01:04:47.008572Z
+updated: 2026-11-26T02:06:04.803598Z
 type: task
 title: A person opens instantly — the popup's roles, apps and licences come from the mirror, as of the last read
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 850
 blocked_by:
 - 01M8AETFBFC0XMHKVW91E7XR79
+comments:
+- id: 01M8ASMDDRVKJZPC4H5YC8Z5HJ
+  author: Steve Vine
+  at: 2026-11-26T02:05:57.560514Z
+  text: |-
+    Done — PR #2183, merged to main (30d00690). Goes to staging with the rest of the sprint-0 batch.
+
+    What to look at:
+    - **Access ▸ open any person:** the popup opens without waiting on Microsoft. Active assignments, Eligible assignments, Applications and Licenses now come from Compass's copy, so they match Directory roles and the App assignments report. Each panel ends with "As of …", the last read that worked.
+    - **A role activated through PIM:** an "Activated until …" pill appears beside it. A role held through a group says "through <group>". An app shows its role and the group it comes through ("Payroll — Approver · through Finance Users").
+    - **When a read fails:** if the latest read failed, the panel still shows what it has, with the reason underneath. If something has never been read, or eligible roles need Entra ID P2, the panel says so instead of showing an empty list. People who have left, or who have no Entra account, see the same messages as before.
+
+    Found while doing this, not changed: Compass already raises PIM activations as "gained a directory role" unrequested changes, because Microsoft lists an activation as an ordinary role assignment. That behaviour is the same as before.
+
+    Decided while building:
+    - Licence names were never stored; the 15-minute pass now reads them (one request) and keeps the last good list. Until the first pass after the upgrade, licences show by their ID — at most 15 minutes.
+    - If reading activations is refused, the Active panel only says so where eligible roles can be read — without PIM nobody can activate a role, so the warning would be noise on every person.
+
+    Technical: migration 0930_role_activation (activation flag and end time on role assignments; last role read time, activation read status and licence names on the sync status). The 15-minute pass now reads roleAssignmentScheduleInstances (Activated only) and subscribedSkus. The live Graph reads and the per-pod caches are gone; tests make any outbound request fail. Polaris's person tool is unchanged.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **On the chain** (the API response changes). Stacks on COM-2172 (app assignments held in Compass).
 
