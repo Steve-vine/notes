@@ -1,17 +1,31 @@
 ---
 id: 01M8EJ64S3YC91ZZZX9G6WNGWQ
 created: 2026-11-27T13:12:47.651503Z
-updated: 2026-11-27T13:27:43.778561Z
+updated: 2026-11-27T13:56:25.840268Z
 type: task
 title: '"Their roles have changed since this was raised" shows only on a request that hasn''t run yet — never on one already carried out'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2188
 sprint: smq8t5s
+comments:
+- id: 01M8EMNYFTA9F8ASVBKFC0MA8B
+  author: Steve Vine
+  at: 2026-11-27T13:56:22.650077Z
+  text: |-
+    Built — PR #2186, merged to main as 5c25fbd67 (not yet on staging; goes with the sprint deploy).
+
+    What changed: a mover's "Their roles have changed since this was raised" warning now shows only while the request is still to be carried out — a draft, awaiting approval, or approved (or expedited) and waiting for its scheduled time. Once it has run (executing, executed, awaiting validation, validated, amended, failed) there's no warning: the roles moved because of the request itself, and validation re-runs nothing. "Held when raised" stays as the record. The last line now reads "…so when it runs it will undo that change too" rather than "approving it will undo…", which also fits a scheduled request nobody approves again.
+
+    "Changed again since: ACR-3…" note: not added — the page can't find the later request from what it already loads, so it would need an API change (said so in the PR).
+
+    For you to consider: a failed request shows no warning, as the task asked — but a failed request can be retried, which runs the whole set again and could undo a newer change silently. If you want the warning before a retry too, it's a one-line addition.
+
+    Tests: an executed and an awaiting-validation mover with drift show no warning; an awaiting-approval one still does.
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 **Independent** (screen only — no migration, no API change).
 
