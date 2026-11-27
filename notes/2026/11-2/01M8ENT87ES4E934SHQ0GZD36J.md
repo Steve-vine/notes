@@ -1,7 +1,7 @@
 ---
 id: 01M8ENT87ES4E934SHQ0GZD36J
 created: 2026-11-27T14:16:12.270567Z
-updated: 2026-11-27T14:27:58.76913Z
+updated: 2026-11-27T20:29:17.734885Z
 type: task
 title: 'The joiner form only accepts what the directory can create: every field held to its limit and allowed characters as it''s typed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 **On the chain** (the joiner form's limits come from the API; the request API takes on new refusals).
 
