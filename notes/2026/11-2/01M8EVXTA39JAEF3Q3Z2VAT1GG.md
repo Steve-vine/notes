@@ -1,15 +1,17 @@
 ---
 id: 01M8EVXTA39JAEF3Q3Z2VAT1GG
 created: 2026-11-27T16:03:00.54741Z
-updated: 2026-11-27T16:03:00.54741Z
+updated: 2026-11-27T16:03:52.856928Z
 type: task
 title: Workflow triggers before and after a joiner, a mover and a leaver, per person, each publishing the values it provides; plus Outcome and Business role conditions
-task_status: todo
-assignee: steve
-priority: high
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2197
+sprint: snt3b17
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 **On the chain** (workflow definitions and run records widen beyond evidence; API change). ADR 0185. Can be built alongside COM-2194–2196; COM-2198 needs both.
 

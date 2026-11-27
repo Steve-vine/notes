@@ -1,15 +1,17 @@
 ---
 id: 01M8EVYY51BS2A7VW7E2F5V61T
 created: 2026-11-27T16:03:37.249403Z
-updated: 2026-11-27T16:03:37.249403Z
+updated: 2026-11-27T16:03:55.519641Z
 type: task
 title: An access request shows the scripts run for each person, before and after, with their outcome and outputs; Polaris can say what ran
-priority: medium
-assignee: steve
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2199
+sprint: snt3b17
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 **On the chain** (the request's API gains its script runs; new Polaris read tools). After COM-2198. ADR 0185.
 
