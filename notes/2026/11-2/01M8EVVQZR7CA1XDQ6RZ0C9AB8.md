@@ -1,7 +1,7 @@
 ---
 id: 01M8EVVQZR7CA1XDQ6RZ0C9AB8
 created: 2026-11-27T16:01:52.63207Z
-updated: 2026-11-27T16:52:20.612176Z
+updated: 2026-11-27T19:30:18.337214Z
 type: task
 title: 'Action integrations: a new kind of integration that can make changes, defined on screen. The first type is a SQL Server database'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 2194
 sprint: snt3b17
 blocked_by:
 - 01M8EVTSMYCWN977F49XWV61RH
+comments:
+- id: 01M8F7SBRH2PJQRW6NKX9HADYA
+  author: Steve Vine
+  at: 2026-11-27T19:30:17.489628Z
+  text: |-
+    Built: PR #2199, merged to main as 1860e670 (not on staging yet; it goes with the sprint deploy).
+
+    What's there:
+    - Admin ▸ Integrations has a new Action tab, beside Collection and Core: connections that scripts use to make changes in other systems.
+    - Add an action integration: one kind for now, SQL Server database. You give the address and port (not an instance name), the database, a SQL login and a password (entered once, never shown again). Encryption is on by default, with the certificate checked against the name you typed, and you can paste a CA certificate if needed.
+    - Test connection signs in from the worker and says which login, database and server it reached: "Connected as compass_svc to CRM on SQL01: SQL Server 2022 (16.0…)". It changes nothing. When it can't connect, it says why: an unapproved private address (pointing at Internal addresses), unreachable, a wrong password, a missing database, or an untrusted or wrong-name certificate.
+    - The page says plainly that "Compass can do whatever this login is allowed to do". You can switch it off or delete it. Its password appears in the Secrets register (default company).
+    - Proven against a real SQL Server 2022, including encryption with a pasted CA.
+
+    For you to look at:
+    - Windows (Kerberos) sign-in isn't in. Proving it needs a SQL Server joined to a domain, and none was available. SQL logins work.
+    - "Which scripts use it" and "can't be deleted while a script uses it" arrive with COM-2195.
+    - For pre-UAT I'll put a small test SQL Server in staging, for the E2E Test Company only.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (new tables and API). ADR 0185 (COM-2192).
 
