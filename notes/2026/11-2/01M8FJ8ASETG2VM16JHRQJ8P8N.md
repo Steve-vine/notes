@@ -1,0 +1,30 @@
+---
+id: 01M8FJ8ASETG2VM16JHRQJ8P8N
+created: 2026-11-27T22:33:13.774808Z
+updated: 2026-11-27T22:33:13.774808Z
+type: task
+title: 'Linux exact matching: each Linux server''s installed packages are compared with its own distribution''s fixed versions, so a server lists exactly which security fixes it''s missing'
+priority: high
+assignee: steve
+label: feature
+task_status: todo
+project: 01KXGC5PTGYHV30VM3E78G76S1
+number: 2215
+---
+**On the chain** (API, possibly columns on discovered software). ADR 0188. After COM-2214, and needs the Server Agent sprint's package lists (COM-2205).
+
+## What people see
+- On a Linux server's **Patch level**, a **Missing security fixes** list: each CVE with severity (the distribution's and NVD's), known-exploited flag, the package, the installed version and the fixed version ("openssl 3.0.2-0ubuntu1.15 → 3.0.2-0ubuntu1.18 · USN-7123-1"). Or **None missing**.
+- A separate, collapsed **No fix available yet** list for CVEs the distribution hasn't fixed for that release (e.g. "deferred"), so they're visible but not mixed with what can be patched.
+- On the Security Feed item, the server reads **Affects us — exact match** or **Not affected — exact match**.
+- A Linux server on a distribution or release the source doesn't cover (e.g. CentOS 7, Ubuntu 18.04 without Pro) reads "This release isn't covered by the distribution data: can't tell exactly".
+- Works for cloud Linux servers too, wherever their discovery reports packages with full versions (AWS SSM Inventory, Azure Change Tracking).
+- No vulnerabilities are raised by this task; automatic raising is the next task.
+
+## Notes (technical)
+- Each package row needs: **source package name**, **full version** (epoch:version-release, or Debian's version with revision) and the server's **distribution and release**. osquery: `deb_packages` (`name`, `version`, `source`, `arch`), `rpm_packages` (`name`, `version`, `release`, `epoch`, `source`), `os_version` (`platform`, `version`, `codename`). If COM-2205 doesn't keep `source`/epoch/release, add them (columns on `DiscoveredSoftware` or a companion table) and make sure ADR 0114's update filter and product+major grain don't drop or merge Linux packages.
+- Match per server: its ecosystem + release → distribution fixes for the source package (COM-2214) → compare installed full version with the fixed version using the ecosystem's rules (dpkg / rpm). Installed < fixed → missing; ≥ → not affected; status without a fixed version → no fix yet.
+- Results kept per server per item, recomputed when the feed or the server's read changes (shared with COM-2213's per-server results).
+- Cloud sources: map SSM / Change Tracking package fields where they give full versions; otherwise "can't tell exactly".
+
+**Done when:** on staging, a test-rig container pinned to an older OpenSSL (or another package with a published fix) lists that CVE under Missing security fixes with installed and fixed versions; after the package is upgraded in the container and Read now, it's gone; CI covers Ubuntu, Debian and Rocky examples including an epoch and a `~` version.
