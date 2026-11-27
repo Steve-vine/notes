@@ -1,7 +1,7 @@
 ---
 id: 01M8EH1WB7QY4DH2HF42C3QCS9
 created: 2026-11-27T12:52:59.367614Z
-updated: 2026-11-27T16:27:06.486574Z
+updated: 2026-11-27T17:30:01.194211Z
 type: task
 title: A joiner Compass can't create becomes a "create this account in AD" to-do — and the joiner carries on once the account appears
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,40 @@ number: 2185
 sprint: smq8t5s
 blocked_by:
 - 01M8EED1JWZH5K8NNQBTA6ZDGZ
+comments:
+- id: 01M8F0X3J37NCYD7GETZC86YR5
+  author: Steve Vine
+  at: 2026-11-27T17:30:00.131432Z
+  text: |-
+    Done — merged to main in PR #2197. Not on staging yet; it goes with the sprint.
+
+    What changes:
+    - A joiner no longer fails when Compass may not create the account in AD (the role's OU isn't ticked, Compass's account can't create accounts there, or AD refuses). Instead:
+      - It raises an urgent to-do: "Create Grace New's account in AD — in OU=Staff,… as grace.new@…".
+      - The to-do lists the details Compass would have written and why it's manual. It's in Actions and emailed at once, like a leaver step.
+      - The request reads Waiting on manual steps, and the person reads "Waiting for the account to be created in AD — whoever creates it sets its first password and hands it over".
+    - The next AD read (every 5 minutes) that finds an account with that sign-in name picks it up, and the joiner carries on: groups, shared mailboxes, list rights and licences, by the usual rules. In hybrid, the cloud side follows once the account reaches Entra, as for any joiner made in AD.
+    - The account's creation is recorded as requested, so it never shows as an unrequested "account created".
+    - No one-time password is shown for an account Compass didn't create.
+    - Can't do this fails the joiner with its reason, as any to-do does.
+    - The joiner form says under the role when an admin will be asked to create the account, instead of refusing it. It still refuses when there's nowhere to put them (no OU and no default).
+    - If the account is created under a different sign-in name, the to-do stays open saying what it's looking for. The request's sign-in name can be corrected as usual.
+
+    Checks:
+    - New tests:
+      - With no right to create: the form says so and raising is allowed. Approving makes the to-do, with nothing created and the request waiting. Once the account appears in AD, the AD read picks it up, gives its group, completes the request, and records the creation as requested.
+      - When AD refuses: a to-do, and Can't do this fails it with the reason.
+    - AD joiner suite: 14 passed.
+    - To-do and AD suites: 44 passed.
+    - Unit suite: passed.
+    - All ten CI jobs passed.
+
+    For pre-UAT on staging: needs a test OU in E2E Test Company without the create right. If staging has none, that part is Couldn't check.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **On the chain** (migration for a new to-do kind). Builds on COM-2178 (to-dos say why they're manual; ADR 0182).
 
