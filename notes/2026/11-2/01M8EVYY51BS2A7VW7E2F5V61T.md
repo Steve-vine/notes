@@ -1,7 +1,7 @@
 ---
 id: 01M8EVYY51BS2A7VW7E2F5V61T
 created: 2026-11-27T16:03:37.249403Z
-updated: 2026-11-27T19:41:19.960356Z
+updated: 2026-11-27T22:56:09.826203Z
 type: task
 title: An access request shows the scripts run for each person, before and after, with their outcome and outputs; Polaris can say what ran
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 2199
 sprint: snt3b17
 blocked_by:
 - 01M8EVYHS49E0CSHCNPAR0KVVP
+comments:
+- id: 01M8FKJADDRAG3C1GF3VY461K6
+  author: Steve Vine
+  at: 2026-11-27T22:56:09.644965Z
+  text: |-
+    Built: PR #2207, merged to main (not on staging yet; it goes with the sprint deploy).
+
+    What's there:
+    - **On an access request, each person has a Scripts section**, shown only when a script ran for them:
+      - **Before their changes** and **After their changes**: each script with its outcome, what it handed back ("CrmUserId: 4512"), when it ran, and links to the script run and the workflow run.
+      - **A held person** reads "Waiting on a script", with the reason. Script Managers get **Retry the script**. **Carry on without it…** opens the workflow run, where anyone allowed (approvers or Script Managers) can carry on, giving a reason.
+    - **The requests list** has a filter chip, **A script failed** (shown only when a request has one), and an "A script failed" pill on the row. It counts any failure that hasn't been retried or dealt with, and anyone held by a failed before-script.
+    - **A person's view** (Access Control ▸ People) has **Scripts run for them**: each script, before or after, the request it was for, when, and what it handed back. That answers "when was Ada's CRM account made, and what ID did it get?".
+    - **Polaris** (read only) now says, for each person on a request, which scripts ran, when, what they handed back, and any hold. It also has three new tools: list scripts, read a script (its inputs, outputs, integration and published text), and list a script's runs (failed ones only, if asked).
+
+    For you to look at:
+    - **Evidence export**: Compass has no per-request evidence export today. A script's runs export as a CSV from its Runs tab, naming who each run was for. Say if you want an export of the request itself.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **On the chain** (the request's API gains its script runs; new Polaris read tools). After COM-2198. ADR 0185.
 
