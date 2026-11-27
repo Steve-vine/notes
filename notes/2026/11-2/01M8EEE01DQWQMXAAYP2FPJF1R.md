@@ -1,7 +1,7 @@
 ---
 id: 01M8EEE01DQWQMXAAYP2FPJF1R
 created: 2026-11-27T12:07:10.637565Z
-updated: 2026-11-27T12:07:16.793548Z
+updated: 2026-11-27T14:51:40.196936Z
 type: task
 title: AD's built-in containers (Users, Builtin and the like) can be ticked for Compass to manage, like an OU
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 **On the chain** (probably a migration so the OU list can hold containers too). Goes with COM-2178 (refusals become to-dos) and COM-2179 (protection).
 
