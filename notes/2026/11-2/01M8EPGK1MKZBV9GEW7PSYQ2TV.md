@@ -1,7 +1,7 @@
 ---
 id: 01M8EPGK1MKZBV9GEW7PSYQ2TV
 created: 2026-11-27T14:28:24.24447Z
-updated: 2026-11-27T14:28:34.184457Z
+updated: 2026-11-27T21:10:00.070966Z
 type: task
 title: 'A new starter can''t share a logon name, email address or display name with anyone already in AD or Entra ID: checked before the request can be submitted, and Compass never changes what was typed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - improvement
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain** (a new logon name field on the joiner request; new refusals in the request API). Build after **COM-2190** (same form).
 
