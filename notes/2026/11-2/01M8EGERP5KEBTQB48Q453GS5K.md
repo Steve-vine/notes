@@ -1,7 +1,7 @@
 ---
 id: 01M8EGERP5KEBTQB48Q453GS5K
 created: 2026-11-27T12:42:33.029791Z
-updated: 2026-11-27T20:08:31.634007Z
+updated: 2026-11-27T20:33:45.351971Z
 type: task
 title: Compass changes Entra directory roles itself when its app has been given the permission — otherwise a to-do confirmed by the next Entra read
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,6 +47,17 @@ comments:
     For Steve: on a test role holder, approve a review removal and remove the role by hand in Entra. Within 15 minutes the row should close on its own, without Confirm removed.
 
     Screenshots: ~/compass-uat/sprint-128/COM-2182/ (01 the notice, 02 the Entra card).
+- id: 01M8FBDJC7DZ7Y4KHBWPX6ZAF4
+  author: Steve Vine
+  at: 2026-11-27T20:33:45.351773Z
+  text: |-
+    Correction to my earlier comment.
+
+    When the permission isn't granted, the Entra ID card shows only the standard grey "Optional permission not granted" notice. There's no dedicated "Change directory roles" line, and nothing yet on how to grant it. The pre-UAT pass caught this.
+
+    When the permission is granted, the yellow "Change directory roles" warning is shown, as described.
+
+    The fix-forward is COM-2201 (PR #2208). It adds how to grant the permission and what granting it means to the not-granted notice, and goes to staging with the next deploy.
 assignee: steve
 label:
 - feature
