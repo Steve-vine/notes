@@ -1,17 +1,39 @@
 ---
 id: 01M8EVTSMYCWN977F49XWV61RH
 created: 2026-11-27T16:01:21.566241Z
-updated: 2026-11-27T16:49:43.663316Z
+updated: 2026-11-27T16:52:09.556719Z
 type: task
 title: 'ADR 0185: Scripting — Compass runs scripts people write, against action integrations, from workflows triggered before and after joiners, movers and leavers'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2192
 sprint: snt3b17
+comments:
+- id: 01M8EYQSGRB22K0CR83CPVCSFZ
+  author: Steve Vine
+  at: 2026-11-27T16:52:08.856652Z
+  text: |-
+    Written: PR #2198, merged to main as 67221f357. decisions/0185-scripting.md, Status: Proposed.
+
+    What it records:
+    - Action integrations: connections that can make changes, defined on screen (SQL Server first, a web service such as Cloudflare's API later). No code knows a service. Compass assumes the service is reachable (Twingate). Private addresses go on the approved internal addresses list, so an action integration can never point at Compass's own database. Credentials are write-only.
+    - Scripts: declared inputs and outputs; inputs always passed as values, never pasted into the text. Draft, then publish; every version kept. Preview shows what would be sent; Run now runs for real after a confirmation. No automatic undo. SQL now, then PowerShell and Python, which must run in a sealed-off container.
+    - Script Manager role: one person can write, publish and run.
+    - Before/after triggers for joiners, movers and leavers, per person, each publishing its values. Outcome, Business role and Company conditions. A Run script step whose outputs pass to later steps.
+    - A failed before-script holds a joiner or mover (Retry / Carry on without it). A failed after-script raises an Action with Retry and never changes the request. Compass never retries by itself.
+    - §9 answers each objection ADR 0062 made to saved SQL and uploaded scripts. Amends ADR 0062 §6, 0154 §1 and 0155 §4.
+
+    For you to decide (calls marked in the ADR, change any and I'll amend it):
+    1. The built-in Admin doesn't hold Script Manager automatically (like Access Privilege Approver).
+    2. A failed before-script never holds a leaver.
+    3. Scripts and action integrations are organisation-wide; each company's workflows choose which to run.
+    4. Default time limit 2 minutes, at most 15.
+
+    Mark it Accepted once you're happy with those.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 **Independent** (a decision record only). Write it first; every other Scripting task builds on it. Mark it Proposed, and Steve accepts it.
 
