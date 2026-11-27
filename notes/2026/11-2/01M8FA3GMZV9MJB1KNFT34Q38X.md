@@ -1,7 +1,7 @@
 ---
 id: 01M8FA3GMZV9MJB1KNFT34Q38X
 created: 2026-11-27T20:10:47.327707Z
-updated: 2026-11-27T20:50:34.330254Z
+updated: 2026-11-27T21:56:33.228527Z
 type: task
 title: The built-in Admin role no longer says it is "everything", and the Entra card says how to let Compass change directory roles
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,20 @@ comments:
       - that the app could make anyone a Global Administrator.
 
     Checks: tests for the how-to text and Admin's new description; Entra and roles suites pass (50); unit suite passes; all CI jobs passed.
+- id: 01M8FG55TCTWM01HS8WYFY45BK
+  author: Steve Vine
+  at: 2026-11-27T21:56:33.228297Z
+  text: |-
+    Pre-UAT on staging 44dd66b5e: Passed
+
+    Steps (E2E Test Company, as E2E Admin A; nothing changed):
+    1. Admin ▸ Roles. The built-in Admin reads "Every permission but the few reserved to a built-in role of their own (Access Privilege Approver, Script Manager) — and Compass refuses to be left without a holder of it." Access Privilege Approver and Script Manager are listed as built-in roles, each saying Admin does not include it.
+    2. The "Some rules are not permissions" note ends: "And a few permissions belong to one built-in role alone — approving a privileged change Compass makes itself to Access Privilege Approver, writing scripts to Script Manager — so even Admin doesn't hold them; give people those roles by name."
+    3. Admin ▸ Integrations ▸ Core ▸ Microsoft 365 ▸ Configure ▸ Entra ID access (Healthy). The grey "Optional permission not granted" notice for RoleManagement.ReadWrite.Directory now adds: "To let Compass make role changes itself, grant this application permission to the Access app registration in Entra and give admin consent (see scripts/entra/README.md). Each change it makes then needs an Access Privilege Approver's approval. An app with this permission can make anyone, itself included, a Global Administrator — Microsoft can't limit it to particular roles."
+
+    All three points from the task are on screen.
+
+    Screenshots: ~/compass-uat/sprint-128/COM-2201/
 assignee: steve
 label:
 - improvement
