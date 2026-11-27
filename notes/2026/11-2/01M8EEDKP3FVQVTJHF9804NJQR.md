@@ -1,7 +1,7 @@
 ---
 id: 01M8EEDKP3FVQVTJHF9804NJQR
 created: 2026-11-27T12:06:57.987329Z
-updated: 2026-11-27T12:07:17.676816Z
+updated: 2026-11-27T12:43:16.646915Z
 type: task
 title: Compass knows which AD groups and accounts AD protects — and changes them only if its account has been given rights on protected objects
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,12 @@ number: 2179
 sprint: smq8t5s
 blocked_by:
 - 01M8EED1JWZH5K8NNQBTA6ZDGZ
+- 01M8EGE7NVV4QKKWT3C06JEJHP
+comments:
+- id: 01M8EGG3964VBRETBSRCYZRQAV
+  author: Steve Vine
+  at: 2026-11-27T12:43:16.646714Z
+  text: 'Added 27 Nov (Steve): a change to a protected group or account that Compass will make **itself** (its account has rights on protected objects) needs an **Access Privilege Approver** to approve it — COM-2181, which this now waits on. When it becomes a to-do instead, approval is as today. The Protected objects line on Admin ▸ Active Directory should say so: "Changes Compass makes here need an Access Privilege Approver."'
 assignee: steve
 label:
 - feature

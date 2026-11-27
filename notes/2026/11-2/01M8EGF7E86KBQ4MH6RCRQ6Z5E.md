@@ -1,15 +1,19 @@
 ---
 id: 01M8EGF7E86KBQ4MH6RCRQ6Z5E
 created: 2026-11-27T12:42:48.13651Z
-updated: 2026-11-27T12:42:48.13651Z
+updated: 2026-11-27T12:43:08.854321Z
 type: task
 title: A request can give someone an Entra directory role — eligible through PIM, with an end date
-task_status: todo
-priority: medium
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2183
+sprint: smq8t5s
+blocked_by:
+- 01M8EGERP5KEBTQB48Q453GS5K
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 **On the chain** (migration + API). Stacks on COM-2182 (Compass changes roles when permitted) and COM-2181 (Access Privilege Approver).
 

@@ -1,15 +1,17 @@
 ---
 id: 01M8EGE7NVV4QKKWT3C06JEJHP
 created: 2026-11-27T12:42:15.611185Z
-updated: 2026-11-27T12:42:15.611185Z
+updated: 2026-11-27T12:43:04.450541Z
 type: task
 title: Access Privilege Approver — only its members can approve a privileged change Compass will make itself; the one role Admin doesn't hold
-task_status: todo
-priority: high
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2181
+sprint: smq8t5s
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 **On the chain** (migration seeds the role; API changes who may approve). Build this **before** anything that lets Compass change privileged access itself: COM-2179 (AD protected objects) and the Entra role tasks (COM-2182–2184).
 

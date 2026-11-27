@@ -1,15 +1,20 @@
 ---
 id: 01M8EGERP5KEBTQB48Q453GS5K
 created: 2026-11-27T12:42:33.029791Z
-updated: 2026-11-27T12:42:33.029791Z
+updated: 2026-11-27T12:43:07.857712Z
 type: task
 title: Compass changes Entra directory roles itself when its app has been given the permission — otherwise a to-do confirmed by the next Entra read
-assignee: steve
-task_status: todo
-label: feature
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2182
+sprint: smq8t5s
+blocked_by:
+- 01M8EGE7NVV4QKKWT3C06JEJHP
+- 01M8EED1JWZH5K8NNQBTA6ZDGZ
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 **On the chain** (migration + API). Stacks on COM-2181 (Access Privilege Approver) and COM-2178 (to-dos say why they're manual; ADR 0182). COM-2183 (granting) and COM-2184 (leavers) build on this.
 

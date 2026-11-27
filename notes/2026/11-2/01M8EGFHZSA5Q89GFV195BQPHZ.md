@@ -1,15 +1,19 @@
 ---
 id: 01M8EGFHZSA5Q89GFV195BQPHZ
 created: 2026-11-27T12:42:58.937094Z
-updated: 2026-11-27T12:42:58.937094Z
+updated: 2026-11-27T12:43:09.80353Z
 type: task
 title: A leaver loses their Entra directory roles, not just their sign-in
-task_status: todo
-priority: medium
-label: feature
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2184
+sprint: smq8t5s
+blocked_by:
+- 01M8EGERP5KEBTQB48Q453GS5K
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 **On the chain** (API; possibly a migration for new change kinds). Stacks on COM-2182 (Compass changes roles when permitted) and COM-2181 (Access Privilege Approver).
 
