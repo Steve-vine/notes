@@ -1,15 +1,17 @@
 ---
 id: 01M8EVVQZR7CA1XDQ6RZ0C9AB8
 created: 2026-11-27T16:01:52.63207Z
-updated: 2026-11-27T16:01:52.63207Z
+updated: 2026-11-27T16:03:49.182111Z
 type: task
 title: 'Action integrations: a new kind of integration that can make changes, defined on screen. The first type is a SQL Server database'
-label: feature
-assignee: steve
-priority: high
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2194
+sprint: snt3b17
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 **On the chain** (new tables and API). ADR 0185 (COM-2192).
 
