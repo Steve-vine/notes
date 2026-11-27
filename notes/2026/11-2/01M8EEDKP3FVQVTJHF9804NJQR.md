@@ -1,7 +1,7 @@
 ---
 id: 01M8EEDKP3FVQVTJHF9804NJQR
 created: 2026-11-27T12:06:57.987329Z
-updated: 2026-11-27T14:28:20.707534Z
+updated: 2026-11-27T15:20:52.361813Z
 type: task
 title: Compass knows which AD groups and accounts AD protects — and changes them only if its account has been given rights on protected objects
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -15,11 +15,29 @@ comments:
   author: Steve Vine
   at: 2026-11-27T12:43:16.646714Z
   text: 'Added 27 Nov (Steve): a change to a protected group or account that Compass will make **itself** (its account has rights on protected objects) needs an **Access Privilege Approver** to approve it — COM-2181, which this now waits on. When it becomes a to-do instead, approval is as today. The Protected objects line on Admin ▸ Active Directory should say so: "Changes Compass makes here need an Access Privilege Approver."'
+- id: 01M8ESGMKEXBPTZ9XTFJ6F8JKG
+  author: Steve Vine
+  at: 2026-11-27T15:20:51.565909Z
+  text: |-
+    Built — PR #2190, merged to main as 5daaf39d2 (not yet on staging; goes with the sprint deploy). ADR 0182 gains §4 on protected objects.
+
+    What changed:
+    - Compass reads AD's protection mark (adminCount) on every user and group. The upgrade makes the next AD read a full one, so every protected object is marked straight away. The person and group popups show a **Protected by AD** pill with the line you specified; Polaris's person/group tools say it too.
+    - **Admin ▸ Active Directory ▸ Protected objects**: Compass's rights there (change groups / accounts / senders, from the same check as the OUs, on the same cadence), how many groups and accounts AD protects, and — when nothing is granted — how to grant it (rights on AdminSDHolder) with the domain-admin warning. When something is granted it says "Changes Compass makes here need an Access Privilege Approver."
+    - Routing: a protected object in a ticked OU goes by the rights on protected objects, not the OU's. Without them the change is a to-do **before anything is tried**: "Protected by AD — Compass's account has no rights on protected objects". With them, Compass makes it — but only on an **Access Privilege Approver's** approval (COM-2181): the request page asks for one, and if a request reaches AD without it, the change goes to a person ("…only on an Access Privilege Approver's approval"). Covers membership, leaver disable and delete, detail changes, send on behalf.
+    - An object AD no longer protects is routed by its OU again after the next AD read.
+
+    Choices I made:
+    - A protected object still has to sit in a **ticked OU** (or container, COM-2180) for Compass to touch it — the tick says where Compass may act at all, the rights say whether it can. Your note said "whatever its OU"; I read that as "the OU's rights don't count", not "outside the ticked OUs too". Say if you meant the latter.
+    - "Rights not checked yet" counts as no rights for protected objects (a to-do, not a try).
+    - Not done: the "link to see them" from the Protected objects counts — the people/group lists have no protected filter yet, and adding one is an API change. Easy follow-up if you want it.
+
+    For pre-UAT: Domain Server Access and a protected account should show the pill after staging's first full read.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **On the chain** (migration + API). Stacks on COM-2178 (refusals become to-dos; ADR 0182). Goes with COM-2180 (built-in containers can be ticked).
 
