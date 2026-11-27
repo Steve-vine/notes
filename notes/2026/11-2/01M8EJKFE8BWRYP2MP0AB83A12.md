@@ -1,17 +1,61 @@
 ---
 id: 01M8EJKFE8BWRYP2MP0AB83A12
 created: 2026-11-27T13:20:04.5521Z
-updated: 2026-11-27T15:43:13.66251Z
+updated: 2026-11-27T18:12:11.900535Z
 type: task
 title: Adopt unrequested changes automatically (privileged changes excepted) — a switch on Access Control ▸ Admin, with the choice to adopt everything already waiting
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2189
 sprint: smq8t5s
+comments:
+- id: 01M8F3AB3PBQRET5H8P8DBA2F9
+  author: Steve Vine
+  at: 2026-11-27T18:12:10.99814Z
+  text: |-
+    Done — merged to main in PR #2194 (ADR 0186). Not on staging yet; it goes with the sprint.
+
+    What changes:
+    - Access Control ▸ Admin ▸ What Compass watches has a new switch, Adopt unrequested changes automatically. It's off by default. Anyone who can explain or reverse unrequested changes can switch it.
+    - Switching it on asks first. It says how many changes are waiting and how many of those are privileged, and offers:
+      - "Yes, adopt the N and turn on"
+      - "Turn on, leave them all for review"
+      - Cancel
+      If nothing non-privileged is waiting, it offers just Turn on / Cancel.
+    - While it's on, each new unrequested change that isn't privileged is adopted the moment Compass finds it. It's marked "Adopted automatically — automatic adoption switched on by <name> on <date>". It never reaches Actions and never goes overdue.
+    - Privileged changes still wait for a person, as today. Privileged here means:
+      - directory roles;
+      - groups that grant an Entra role, including creating or deleting one;
+      - groups or accounts AD protects, e.g. an admin account added to an ordinary group.
+      This is a little wider than your text, on purpose: the cost of a mistake is an admin change adopted unseen.
+    - Validation shows a yellow banner while it's on, and has a new Adopted changes section. It lists changes adopted by a person (with their name) and those adopted automatically. The section is always shown.
+    - The activity log records switching on, switching off, "adopted N waiting unrequested changes automatically", and each automatic adoption as made by Compass.
+    - The setting covers every company, so the counts and "adopt what's waiting" are tenant-wide.
+    - Switching it off keeps what was already adopted.
+
+    Notes:
+    - The ADR is 0186. 0185 went to the Scripting sprint, whose ADR has landed on main.
+    - Polaris reads show "Adopted automatically" and report the setting.
+
+    Checks:
+    - New integration tests cover:
+      - who may switch it;
+      - the dialog counts;
+      - adopting only non-privileged waiting changes;
+      - new changes adopted, with each privileged kind still raised;
+      - not in Actions;
+      - switching off;
+      - the log lines;
+      - Polaris.
+    - Frontend tests cover the dialog, the banner and the Adopted changes section.
+    - Unit suite and the unrequested-change suites (46) pass.
+    - All CI jobs passed. One unrelated registers test flaked on its first run and passed on rerun.
+
+    For Steve to check: the wording above, and that the wider "privileged" rule is what you want.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (migration for the setting and an "adopted automatically" mark; API). Independent of the rest of sprint 128.
 
