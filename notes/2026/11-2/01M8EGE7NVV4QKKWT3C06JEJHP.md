@@ -1,17 +1,35 @@
 ---
 id: 01M8EGE7NVV4QKKWT3C06JEJHP
 created: 2026-11-27T12:42:15.611185Z
-updated: 2026-11-27T13:27:44.428355Z
+updated: 2026-11-27T14:12:41.942763Z
 type: task
 title: Access Privilege Approver — only its members can approve a privileged change Compass will make itself; the one role Admin doesn't hold
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2181
 sprint: smq8t5s
+comments:
+- id: 01M8ENKSVDH9M0VS457ZDHD6PP
+  author: Steve Vine
+  at: 2026-11-27T14:12:40.941703Z
+  text: |-
+    Built — PR #2188, merged to main as 0749b8e2c (not yet on staging; goes with the sprint deploy). ADR 0183 added and marked Accepted on your decision in this task — worth a read.
+
+    What changed:
+    - New built-in role **Access Privilege Approver** with one permission, "Approve privileged changes Compass makes itself". Admin doesn't include it and no other role can tick it (the roles screen greys it: "Access Privilege Approver only"). The role itself can't be edited or deleted, only who holds it. Nobody holds it after the upgrade.
+    - A privileged change Compass will make itself (an Entra directory role, a group that grants one, an object AD protects) can be approved only by a member of the role who didn't raise it — even with Approve their own requests. The request page says "Compass will make this change itself — it needs an Access Privilege Approver" and greys Approve & execute for everyone else. Break-glass on such a change also needs the role. A review owner who signed it off can't approve its privileged removals.
+    - Safety net: if Compass gains a right after an ordinary approval, it won't make the privileged change on that approval.
+    - Giving the role: anyone who can manage users, never to themselves, except the very first holder. A sign-in group mapping that would give it to a group its editor is in is refused. Every grant and removal goes in the activity log. Polaris says when the role is needed and whether one approved.
+
+    Important for checking: **nothing is automatic yet**. Compass only makes these privileged changes itself once COM-2179 (AD protected objects) and COM-2182 (Entra role writes) give it the rights, so until those land the Access Admin gate works exactly as today. The "Done when" items about a request needing an Access Privilege Approver can only be seen on staging after 2179/2182; the role, the reserved tick and the self-grant rule can be checked now.
+
+    One part deferred: "This will be a to-do for an admin" on the request page — only true once 2179/2182 route those changes to to-dos, so it comes with them.
+
+    If your own production account is Entra-provisioned, the role reaches you through a sign-in group mapping (the very first holder may set that up for a group they're in).
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (migration seeds the role; API changes who may approve). Build this **before** anything that lets Compass change privileged access itself: COM-2179 (AD protected objects) and the Entra role tasks (COM-2182–2184).
 
