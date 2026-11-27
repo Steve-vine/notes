@@ -1,7 +1,7 @@
 ---
 id: 01M8EVYHS49E0CSHCNPAR0KVVP
 created: 2026-11-27T16:03:24.580231Z
-updated: 2026-11-27T16:04:35.789396Z
+updated: 2026-11-27T19:05:05.388107Z
 type: task
 title: 'Workflow action Run script: each input filled from a trigger value, an earlier step''s output or a fixed value; outputs passed on; a failed before-script holds a joiner or mover (never a leaver)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain.** After COM-2196 (running a script) and COM-2197 (triggers). ADR 0185.
 
