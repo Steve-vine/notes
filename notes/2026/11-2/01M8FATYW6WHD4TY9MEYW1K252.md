@@ -1,12 +1,14 @@
 ---
 id: 01M8FATYW6WHD4TY9MEYW1K252
 created: 2026-11-27T20:23:35.558518Z
-updated: 2026-11-27T20:25:14.944936Z
+updated: 2026-11-27T20:25:26.428552Z
 type: task
 title: 'Patch level: each reporting server shows its build and revision, its installed updates and when it was last updated, and is Behind after a company''s number of days (default 35)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2206
 sprint: smfrbak
+blocked_by:
+- 01M8FATKBRPVSNTVEM5E7C89ZT
 assignee: steve
 label:
 - feature

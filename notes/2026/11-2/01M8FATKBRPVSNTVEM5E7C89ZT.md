@@ -1,12 +1,14 @@
 ---
 id: 01M8FATKBRPVSNTVEM5E7C89ZT
 created: 2026-11-27T20:23:23.768165Z
-updated: 2026-11-27T20:25:13.980286Z
+updated: 2026-11-27T20:25:24.758187Z
 type: task
 title: 'Inventory from the agent: a reporting server''s operating system, hardware, addresses and installed software arrive every 6 hours and on Read now, on the same entry the directory found'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2205
 sprint: smfrbak
+blocked_by:
+- 01M8FAT451SNMBHNVNB32AHC0P
 assignee: steve
 label:
 - feature
