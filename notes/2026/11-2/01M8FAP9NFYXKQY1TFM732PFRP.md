@@ -1,7 +1,7 @@
 ---
 id: 01M8FAP9NFYXKQY1TFM732PFRP
 created: 2026-11-27T20:21:02.767705Z
-updated: 2026-11-27T20:21:07.43505Z
+updated: 2026-11-27T22:14:58.307143Z
 type: task
 title: 'ADR 0187: the server agent — on-premises servers report through osquery to a narrow public door; Compass reads, never acts'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: review
 ---
 **Independent** (decision record only).
 
