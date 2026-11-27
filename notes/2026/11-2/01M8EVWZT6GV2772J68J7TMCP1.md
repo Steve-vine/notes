@@ -1,7 +1,7 @@
 ---
 id: 01M8EVWZT6GV2772J68J7TMCP1
 created: 2026-11-27T16:02:33.414673Z
-updated: 2026-11-27T16:04:33.499026Z
+updated: 2026-11-27T18:02:59.914676Z
 type: task
 title: 'Running a script: Run now (for real, after confirming), a time limit, outputs read back, and every run recorded with its inputs, outputs and error'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain** (new run table and API). After COM-2195. ADR 0185.
 
