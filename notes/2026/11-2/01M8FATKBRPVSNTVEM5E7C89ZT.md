@@ -1,7 +1,7 @@
 ---
 id: 01M8FATKBRPVSNTVEM5E7C89ZT
 created: 2026-11-27T20:23:23.768165Z
-updated: 2026-11-27T20:25:24.758187Z
+updated: 2026-11-27T23:40:25.717966Z
 type: task
 title: 'Inventory from the agent: a reporting server''s operating system, hardware, addresses and installed software arrive every 6 hours and on Read now, on the same entry the directory found'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain** (API, possibly a migration for new facts). ADR 0187 §5, §6. After COM-2204.
 

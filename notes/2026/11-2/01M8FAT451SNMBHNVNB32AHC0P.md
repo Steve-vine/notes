@@ -1,7 +1,7 @@
 ---
 id: 01M8FAT451SNMBHNVNB32AHC0P
 created: 2026-11-27T20:23:08.193833Z
-updated: 2026-11-27T20:25:23.588926Z
+updated: 2026-11-27T23:40:11.959342Z
 type: task
 title: 'Servers join with one install per company: a joining code, Windows and Linux install scripts that fetch osquery from the agent door, directory matching, and Waiting to join for anything else'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain** (new tables and API). ADR 0187 §4, §6, §9. After COM-2203.
 
