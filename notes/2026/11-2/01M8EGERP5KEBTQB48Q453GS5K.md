@@ -1,7 +1,7 @@
 ---
 id: 01M8EGERP5KEBTQB48Q453GS5K
 created: 2026-11-27T12:42:33.029791Z
-updated: 2026-11-27T15:04:22.225735Z
+updated: 2026-11-27T16:46:02.102605Z
 type: task
 title: Compass changes Entra directory roles itself when its app has been given the permission — otherwise a to-do confirmed by the next Entra read
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,31 @@ sprint: smq8t5s
 blocked_by:
 - 01M8EGE7NVV4QKKWT3C06JEJHP
 - 01M8EED1JWZH5K8NNQBTA6ZDGZ
+comments:
+- id: 01M8EYCKBP5777FYG8E1BHGCE3
+  author: Steve Vine
+  at: 2026-11-27T16:46:02.102434Z
+  text: |-
+    Done — merged to main in PR #2192 (ADR 0184). Not on staging yet; it goes with the sprint.
+
+    What changes:
+    - Admin ▸ Integrations ▸ Microsoft has a "Change directory roles" line. It says whether Compass's app holds the permission. If it does, it warns that Microsoft can't limit it to particular roles. If it doesn't, it says how to grant it.
+    - With the permission, and an Access Privilege Approver's approval, Compass makes three kinds of change itself:
+      - a review's removal of a role holder (active or eligible);
+      - undoing an unrequested role assignment made straight to a person;
+      - membership changes to groups that grant roles.
+    - Without the permission, or without that approval, each becomes a to-do saying why, e.g. "Compass's app can't change directory roles".
+    - A review's role removal closes only when the next Entra read (every 15 minutes) shows the role gone, whoever made the change. Confirm removed alone no longer closes it.
+    - Business roles still can't grant directory roles.
+
+    Checks: the unit and integration suites are green, and all ten CI jobs passed. One Polaris approval test was updated: a role-granting group change without the permission now waits on a person instead of executing.
+
+    For pre-UAT on staging: the staging tenant probably doesn't have the permission. In that case the "with the permission" half will be marked Couldn't check.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **On the chain** (migration + API). Stacks on COM-2181 (Access Privilege Approver) and COM-2178 (to-dos say why they're manual; ADR 0182). COM-2183 (granting) and COM-2184 (leavers) build on this.
 
