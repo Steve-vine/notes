@@ -1,7 +1,7 @@
 ---
 id: 01M8EH1WB7QY4DH2HF42C3QCS9
 created: 2026-11-27T12:52:59.367614Z
-updated: 2026-11-27T12:53:21.462873Z
+updated: 2026-11-27T16:27:06.486574Z
 type: task
 title: A joiner Compass can't create becomes a "create this account in AD" to-do — and the joiner carries on once the account appears
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 **On the chain** (migration for a new to-do kind). Builds on COM-2178 (to-dos say why they're manual; ADR 0182).
 
