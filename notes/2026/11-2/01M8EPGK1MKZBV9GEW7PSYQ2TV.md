@@ -1,7 +1,7 @@
 ---
 id: 01M8EPGK1MKZBV9GEW7PSYQ2TV
 created: 2026-11-27T14:28:24.24447Z
-updated: 2026-11-27T21:10:00.070966Z
+updated: 2026-11-27T23:30:33.426702Z
 type: task
 title: 'A new starter can''t share a logon name, email address or display name with anyone already in AD or Entra ID: checked before the request can be submitted, and Compass never changes what was typed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,35 @@ number: 2191
 sprint: snt3b17
 blocked_by:
 - 01M8ENT87ES4E934SHQ0GZD36J
+comments:
+- id: 01M8FNH5YFHYMK30ZAFYK6QYYZ
+  author: Steve Vine
+  at: 2026-11-27T23:30:29.455647Z
+  text: |-
+    Built: PR #2211, merged to main (not on staging yet; it goes with the sprint deploy).
+
+    What's there:
+    - **As the joiner form is filled in**, it says under each box whose the name already is: "The display name John Smith already belongs to John Smith (john.smith@moneypenny.com, Sales)". It checks:
+      - the sign-in name, as anyone's sign-in name;
+      - the sign-in name as any address held by a person, group, mail contact or shared mailbox;
+      - the display name, anywhere in the directory;
+      - the logon name, in AD.
+
+      Disabled accounts count. Two joiners on one request can't share a name. **Submit stays unavailable** while anything clashes.
+    - **AD joiners have a Logon name box**: required, 20 characters at most, AD's allowed characters. It's filled from the sign-in name only when that's a valid logon name exactly as it stands, and it's always editable. **What's typed is what's created**: Compass no longer picks, shortens or numbers it.
+    - **Checked against the directories themselves** (aliases included, AD and Entra ID both in hybrid) when the joiner is submitted or corrected, when it's approved, and just before the account is created. A clash stops the joiner **before anything is created**, saying what clashed and who has it. A directory that can't be asked holds the request; it's never waved through.
+    - **Compass no longer takes over an existing account.** Until now, an account that already had the sign-in name was adopted as the new starter's. Only two accounts are adopted now: one an earlier attempt of this request made (Retry still finishes it), and one a person made for this joiner's "create this account" to-do (COM-2185).
+    - **A joiner raised before this** is checked at approval. An approver can correct it, including giving it a logon name. Correcting or amending a joiner never counts their own account as a clash.
+    - **Polaris** raising an AD joiner takes a logon name. It uses the name before the @ only if that's valid as it stands, and otherwise asks. It gets the same refusals, naming who has the name.
+
+    For you to look at:
+    - **Renaming in a mover**: Compass can't change a display name or sign-in name in a mover today, so there's nothing to check there yet.
+    - **The live checks are tested against fakes.** Pre-UAT can show the form and Compass's own copy of the directory. Checking a real alias clash needs the real AD or Entra connection, so that one is for you on staging.
 assignee: steve
 label:
 - improvement
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (a new logon name field on the joiner request; new refusals in the request API). Build after **COM-2190** (same form).
 
