@@ -1,17 +1,36 @@
 ---
 id: 01M8ENT87ES4E934SHQ0GZD36J
 created: 2026-11-27T14:16:12.270567Z
-updated: 2026-11-27T20:29:17.734885Z
+updated: 2026-11-27T23:14:31.794577Z
 type: task
 title: 'The joiner form only accepts what the directory can create: every field held to its limit and allowed characters as it''s typed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2190
 sprint: snt3b17
+comments:
+- id: 01M8FMKXPD4YZFZBBS52544AD8
+  author: Steve Vine
+  at: 2026-11-27T23:14:30.732936Z
+  text: |-
+    Built: PR #2210, merged to main (not on staging yet; it goes with the sprint deploy).
+
+    What's there:
+    - **Display name**: 64 characters at most where new starters are made in Active Directory (AD names the account after it), and 256 in Entra ID. The box stops at the limit and shows a count as you near it ("58 / 64"). The server refuses a longer one with the reason, rather than AD refusing it after approval. Compass never shortens it.
+    - **Sign-in name**: the name before the @ takes exactly what Entra ID allows: letters A to Z, digits and ' . - _ ! # ^ ~, with no accents or spaces, 64 characters at most, and no full stop at either end. Each problem is said under the box as you type, naming the characters it can't have. Before, accented letters and $ % & got through.
+    - **Every extra detail** is held to its directory's limit as it's typed, with a count near the limit and an example where a format applies (preferred language).
+      - **Entra ID details now have limits**, taken from Microsoft's documentation (job title 128, department 64, employee ID 16, postal code 40, other emails 250 each, and so on).
+      - Where Microsoft documents none (office, fax, business phone, employee type, division), the AD attribute it syncs from sets the limit.
+    - **Submit stays unavailable** while anything is over a limit. The same limits apply when correcting a request, in a role's joiner defaults (Save stays unavailable) and in a mover's account details.
+    - **A joiner raised before this** that is now over a limit shows each problem under the person, and approval is refused until it's corrected.
+    - **Polaris** is told every limit and the sign-in name rule, and that nothing is shortened to fit. It gets the same refusals in words.
+
+    For you to look at:
+    - **Cost center** has no documented Entra limit and no AD equivalent, so I set it to 64. Say if your tenant takes more.
 assignee: steve
 label:
 - improvement
 priority: medium
-task_status: active
+task_status: review
 ---
 **On the chain** (the joiner form's limits come from the API; the request API takes on new refusals).
 
