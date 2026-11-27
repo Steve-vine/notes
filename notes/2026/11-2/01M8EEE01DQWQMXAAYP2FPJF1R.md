@@ -1,17 +1,32 @@
 ---
 id: 01M8EEE01DQWQMXAAYP2FPJF1R
 created: 2026-11-27T12:07:10.637565Z
-updated: 2026-11-27T14:51:40.196936Z
+updated: 2026-11-27T16:07:31.600634Z
 type: task
 title: AD's built-in containers (Users, Builtin and the like) can be ticked for Compass to manage, like an OU
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2180
 sprint: smq8t5s
+comments:
+- id: 01M8EW61Y3PRCGRS9A23DW5YJZ
+  author: Steve Vine
+  at: 2026-11-27T16:07:30.499205Z
+  text: |-
+    Built — PR #2191, merged to main as 42b93dd55 (not yet on staging; goes with the sprint deploy).
+
+    What changed:
+    - Admin ▸ Active Directory now lists the domain's built-in containers alongside the OUs — Users, Builtin, Computers, and any other top-level container someone lives in — each marked **Container**. AD's own machinery (System, Program Data, ForeignSecurityPrincipals…) isn't offered. They appear after the next AD read.
+    - Ticking a container works exactly like ticking an OU: Compass checks what its account may do there and shows it; changes to objects inside are made by Compass with the right, or become a to-do with its reason (COM-2178).
+    - A container holding protected groups says so: "N of the groups here are protected by AD — see Protected objects" (those also need the rights on protected objects, COM-2179).
+    - Builtin is never offered as where new starters go (AD refuses user accounts there), as the default or on a role, and is refused if sent.
+    - The AD setup notes (docs/active-directory) now cover containers, protected objects and refusals becoming to-dos.
+
+    Done-when on staging: after the next AD read, Users/Builtin/Computers should appear as containers; ticking Users runs its rights check.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **On the chain** (probably a migration so the OU list can hold containers too). Goes with COM-2178 (refusals become to-dos) and COM-2179 (protection).
 
