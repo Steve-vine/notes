@@ -1,7 +1,7 @@
 ---
 id: 01M8FATYW6WHD4TY9MEYW1K252
 created: 2026-11-27T20:23:35.558518Z
-updated: 2026-11-27T20:25:26.428552Z
+updated: 2026-11-27T23:55:08.987286Z
 type: task
 title: 'Patch level: each reporting server shows its build and revision, its installed updates and when it was last updated, and is Behind after a company''s number of days (default 35)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain** (new table and API). ADR 0187 §7. After COM-2205.
 
