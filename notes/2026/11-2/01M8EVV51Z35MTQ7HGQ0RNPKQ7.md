@@ -1,7 +1,7 @@
 ---
 id: 01M8EVV51Z35MTQ7HGQ0RNPKQ7
 created: 2026-11-27T16:01:33.247105Z
-updated: 2026-11-27T16:04:30.03654Z
+updated: 2026-11-27T17:29:26.787831Z
 type: task
 title: 'A new built-in role, Script Manager: the only people who can write, publish and run scripts'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain** (a new permission and built-in role; the API checks it). ADR 0185 (COM-2192).
 
