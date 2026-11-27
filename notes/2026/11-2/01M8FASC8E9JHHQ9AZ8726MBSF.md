@@ -1,7 +1,7 @@
 ---
 id: 01M8FASC8E9JHHQ9AZ8726MBSF
 created: 2026-11-27T20:22:43.726808Z
-updated: 2026-11-27T22:43:47.522923Z
+updated: 2026-11-27T23:59:25.0656Z
 type: task
 title: 'The agent door: a separate public address that serves only osquery''s requests, from allowed IP addresses only, with Admin ▸ Integrations ▸ Server agent showing its health'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 2203
 sprint: smfrbak
 blocked_by:
 - 01M8FAP9NFYXKQY1TFM732PFRP
+comments:
+- id: 01M8FQ638JRBKXKG84ENAPD6P7
+  author: Steve Vine
+  at: 2026-11-27T23:59:23.410205Z
+  text: |-
+    Built: PR #2214, merged to main (not on staging yet; it goes with the sprint's deploy).
+
+    What's there:
+    - The agent door: osquery's own requests (join, settings, questions, answers, logs) under /api/agent/, on a separate address. A request from an address that isn't allowed is refused before it's read, and with nothing allowed everything is refused. An address a client writes into the forwarding header itself is never believed.
+    - A server joins with its company's joining code and gets a key of its own. Compass keeps only a fingerprint of the key.
+    - Admin ▸ Integrations ▸ Server agent (from the Core tab), for whoever manages integrations: the agent address (from the install's settings), the osquery version (5.24.1), allowed addresses (add one with a reason, or remove it; nothing broader than /8 is accepted), and health (the last request, and refusals by reason over the last 24 hours).
+    - Chart: the agent address gets its own hostname, where only /api/agent/ is served. /api/agent/ is refused on every other host, the employee app's included. Off by default.
+    - Proven with a real osquery 5.24.1 (the official package, checksum checked) joining and checking in. That test caught a real problem: osquery reports a CPU name with stray NUL characters that the database refuses, so everything a server sends is now cleaned first.
+
+    For you to look at:
+    - Nothing is visible on staging until COM-2208 switches the agent address on there.
+    - The certificate authority to trust and the company's joining code arrive with COM-2204.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (new tables and API). ADR 0187 §1–§3 (COM-2202). First build task of the sprint.
 
