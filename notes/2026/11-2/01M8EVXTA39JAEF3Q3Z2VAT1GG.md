@@ -1,12 +1,14 @@
 ---
 id: 01M8EVXTA39JAEF3Q3Z2VAT1GG
 created: 2026-11-27T16:03:00.54741Z
-updated: 2026-11-27T16:03:52.856928Z
+updated: 2026-11-27T16:04:34.584021Z
 type: task
 title: Workflow triggers before and after a joiner, a mover and a leaver, per person, each publishing the values it provides; plus Outcome and Business role conditions
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2197
 sprint: snt3b17
+blocked_by:
+- 01M8EVTSMYCWN977F49XWV61RH
 assignee: steve
 label:
 - feature

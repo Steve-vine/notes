@@ -1,12 +1,15 @@
 ---
 id: 01M8EVYHS49E0CSHCNPAR0KVVP
 created: 2026-11-27T16:03:24.580231Z
-updated: 2026-11-27T16:03:55.427689Z
+updated: 2026-11-27T16:04:35.789396Z
 type: task
 title: 'Workflow action Run script: each input filled from a trigger value, an earlier step''s output or a fixed value; outputs passed on; a failed before-script holds a joiner or mover (never a leaver)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2198
 sprint: snt3b17
+blocked_by:
+- 01M8EVWZT6GV2772J68J7TMCP1
+- 01M8EVXTA39JAEF3Q3Z2VAT1GG
 assignee: steve
 label:
 - feature

@@ -1,12 +1,14 @@
 ---
 id: 01M8EVVQZR7CA1XDQ6RZ0C9AB8
 created: 2026-11-27T16:01:52.63207Z
-updated: 2026-11-27T16:03:49.182111Z
+updated: 2026-11-27T16:04:33.212792Z
 type: task
 title: 'Action integrations: a new kind of integration that can make changes, defined on screen. The first type is a SQL Server database'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2194
 sprint: snt3b17
+blocked_by:
+- 01M8EVTSMYCWN977F49XWV61RH
 assignee: steve
 label:
 - feature

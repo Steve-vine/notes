@@ -1,12 +1,15 @@
 ---
 id: 01M8EVWB720QQ5GJX27MZQHCJD
 created: 2026-11-27T16:02:12.322671Z
-updated: 2026-11-27T16:04:12.270356Z
+updated: 2026-11-27T16:04:33.40337Z
 type: task
 title: 'Automation ▸ Scripts: a script with declared inputs and outputs, written in SQL against an action integration, versioned (draft, then publish), with Preview of exactly what would be sent'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2195
 sprint: snt3b17
+blocked_by:
+- 01M8EVV51Z35MTQ7HGQ0RNPKQ7
+- 01M8EVVQZR7CA1XDQ6RZ0C9AB8
 assignee: steve
 label:
 - feature
