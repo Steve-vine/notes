@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-27T13:20:04.554164Z
+updated: 2026-11-27T13:42:12.82829Z
 type: project
 title: Compass
 identifier: COM
@@ -1100,6 +1100,8 @@ sprints:
 - id: smq8t5s
   title: Access - Tweaks and Improvements
   description: 'Small changes to Access Control found while Steve uses it: clearer wording on the on-premises to-dos and the screens around them.'
+- id: snt3b17
+  title: Scripting
 assignee: steve
 priority: medium
 project_status: active
