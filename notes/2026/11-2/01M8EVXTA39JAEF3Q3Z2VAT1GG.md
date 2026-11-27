@@ -1,7 +1,7 @@
 ---
 id: 01M8EVXTA39JAEF3Q3Z2VAT1GG
 created: 2026-11-27T16:03:00.54741Z
-updated: 2026-11-27T18:27:13.595248Z
+updated: 2026-11-27T22:22:18.448873Z
 type: task
 title: Workflow triggers before and after a joiner, a mover and a leaver, per person, each publishing the values it provides; plus Outcome and Business role conditions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,30 @@ number: 2197
 sprint: snt3b17
 blocked_by:
 - 01M8EVTSMYCWN977F49XWV61RH
+comments:
+- id: 01M8FHM9CNWAYRZRCB04019WG0
+  author: Steve Vine
+  at: 2026-11-27T22:22:16.981229Z
+  text: |-
+    Built: PR #2203, merged to main (not on staging yet; it goes with the sprint deploy).
+
+    What's there:
+    - **Six new workflow triggers**, in their own group in the builder: before and after a joiner, a mover and a leaver. Each runs once per person on the request.
+      - **Before** runs when Compass starts that person's changes, before it makes any of them.
+      - **After** runs when that person's changes are finished, including any AD to-do done by hand.
+    - **Each trigger says what it hands on**, listed in the builder, so a script step knows what it can use. For example: the person's display name, sign-in name, logon name, roles, business role, manager, department, the request's reference and who raised it, and for a mover what changes.
+    - **New conditions**: **Outcome** (after a change: the person's changes succeeded, failed or partly) and **Business role** (the person's primary role is, or isn't, one of these).
+    - **A workflow run about a person** shows who and which request in the Runs list and the run view.
+    - Access triggers can't be mixed with evidence conditions or actions: the builder says so instead of saving something that can't run.
+
+    For you to look at:
+    - "Test against a past person", from this task's Done when, was built with COM-2198 and is in its comment.
+    - I dropped a "Company is" condition, because a workflow already belongs to one company.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (workflow definitions and run records widen beyond evidence; API change). ADR 0185. Can be built alongside COM-2194–2196; COM-2198 needs both.
 
