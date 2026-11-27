@@ -1,7 +1,7 @@
 ---
 id: 01M8EJ64S3YC91ZZZX9G6WNGWQ
 created: 2026-11-27T13:12:47.651503Z
-updated: 2026-11-27T13:12:51.655632Z
+updated: 2026-11-27T13:27:43.778561Z
 type: task
 title: '"Their roles have changed since this was raised" shows only on a request that hasn''t run yet — never on one already carried out'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 **Independent** (screen only — no migration, no API change).
 
