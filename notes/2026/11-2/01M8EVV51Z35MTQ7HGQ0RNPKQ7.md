@@ -1,7 +1,7 @@
 ---
 id: 01M8EVV51Z35MTQ7HGQ0RNPKQ7
 created: 2026-11-27T16:01:33.247105Z
-updated: 2026-11-27T17:29:26.787831Z
+updated: 2026-11-27T20:06:01.160671Z
 type: task
 title: 'A new built-in role, Script Manager: the only people who can write, publish and run scripts'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,26 @@ number: 2193
 sprint: snt3b17
 blocked_by:
 - 01M8EVTSMYCWN977F49XWV61RH
+comments:
+- id: 01M8F9TRH36R7N3Z5DV8WWTNB1
+  author: Steve Vine
+  at: 2026-11-27T20:06:00.483529Z
+  text: |-
+    Built: PR #2200, merged to main (not on staging yet; it goes with the sprint deploy).
+
+    What's there:
+    - A new built-in role, **Script Manager**, under Admin ▸ Roles. It is the only role that holds the new right **Manage scripts** (write, publish and run scripts, and retry or dismiss failed runs).
+    - **Admin doesn't hold it**, so an administrator must give the role to someone, or to themselves, deliberately. Seeing scripts and their runs needs only the right to see Automation.
+    - **Manage scripts can't be put in a custom role**, and a custom role can't be called "Script Manager". The role is the one place this right is held, so "who can change our CRM?" is answered by the list of people with that role.
+    - Giving or removing the role is recorded in the activity log, as for any role.
+
+    For you to look at:
+    - These are calls I made in ADR 0185, to confirm or change: Admin not holding it, and the right being kept out of custom roles.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (a new permission and built-in role; the API checks it). ADR 0185 (COM-2192).
 
