@@ -1,7 +1,7 @@
 ---
 id: 01M8EH2ASNF383C49AEJW51EP9
 created: 2026-11-27T12:53:14.165899Z
-updated: 2026-11-27T15:43:14.433564Z
+updated: 2026-11-27T18:44:03.453573Z
 type: task
 title: At recertification, mailbox access held through a group is removed the way the reviewer chooses — take them out of the group, or take the group's access away
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,45 @@ number: 2186
 sprint: smq8t5s
 blocked_by:
 - 01M8EED1JWZH5K8NNQBTA6ZDGZ
+comments:
+- id: 01M8F54P3TZMCS88MPQC6QB1G9
+  author: Steve Vine
+  at: 2026-11-27T18:44:02.810081Z
+  text: |-
+    Done — merged to main in PR #2193. Not on staging yet; it goes with the sprint.
+
+    What changes:
+    - When a reviewer flags someone whose shared-mailbox access comes through a group, they choose how it goes, under "How should it go?":
+      - "Remove them from Finance Team". Under it: what else that takes away (other groups, mailbox and list rights, apps, directory roles — only what nothing else still gives them), or "Takes nothing else away". Where a role gives them the group: "From role Finance — they'll be an exception without it".
+      - "Take Finance Team's access to this mailbox away", e.g. "12 people lose Full Access to Accounts".
+      - "Leave it to an access admin". This is the default; the row reads "No removal chosen — an access admin will decide how it goes".
+    - The review's removals request shows the choice to the approver, marked "As the reviewer chose". The usual approval rules apply.
+      - Taking someone out of a group that grants an Entra role, or one AD protects, needs an Access Privilege Approver.
+      - Taking a group's access away, or leaving it to an admin, doesn't.
+    - Compass carries out either choice:
+      - Removing from the group is a normal membership change (Entra or AD, a to-do where Compass can't).
+      - Taking the group's access away goes through Exchange; send on behalf follows COM-2174's routing.
+      - Both are recorded, so neither comes back as an unrequested change. Two rows choosing the same group's access take it away once.
+    - The internal review page shows each row's choice, read-only: owners flag in the portal.
+    - Only shared-mailbox reviews offer the choice, since person-centred and group reviews don't show mailbox access.
+    - Someone in the group only through a nested group: "Remove them from…" names their group inside the trustee group, one option per path.
+
+    For Steve to check:
+    - Wording, approver view: "remove from Finance Team (mailbox Accounts, held through the group)" and "Finance Team — take away Full Access to Accounts (12 people)". The flagged person stays in the Person column.
+    - Taking a group's access away in Exchange passes the group itself. That hasn't been tried against real Exchange yet.
+    - Before this change, a mailbox row reached through a role-granting or AD-protected group triggered the privileged rules even though Compass changed nothing. It now does so only when the reviewer chooses to remove the person from that group.
+    - The evidence CSV has no column for the choice; it's in the row's history and the removal detail.
+
+    Checks:
+    - New integration tests cover the choices, approval and both ways of carrying them out.
+    - Recert suites passed (55), and the unit suite passed.
+    - Merging with this sprint's directory-role removals needed one combined change in the review-removal code, covered by those suites.
+    - All CI jobs passed.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **On the chain** (migration for the reviewer's choice on a review row; API). Builds on COM-2178 (refusals become to-dos).
 
