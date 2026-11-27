@@ -1,7 +1,7 @@
 ---
 id: 01M8EVWB720QQ5GJX27MZQHCJD
 created: 2026-11-27T16:02:12.322671Z
-updated: 2026-11-27T16:04:33.40337Z
+updated: 2026-11-27T17:38:13.989754Z
 type: task
 title: 'Automation ▸ Scripts: a script with declared inputs and outputs, written in SQL against an action integration, versioned (draft, then publish), with Preview of exactly what would be sent'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain** (new tables and API). After COM-2193 (role) and COM-2194 (integrations). ADR 0185.
 
