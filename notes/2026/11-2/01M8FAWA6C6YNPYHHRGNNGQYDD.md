@@ -1,11 +1,12 @@
 ---
 id: 01M8FAWA6C6YNPYHHRGNNGQYDD
 created: 2026-11-27T20:24:19.916627Z
-updated: 2026-11-27T20:24:34.610949Z
+updated: 2026-11-27T20:25:16.185261Z
 type: task
 title: 'Staging test rig and the production setup guide: an osquery agent in a container reporting to staging for the E2E Test Company, and the steps to publish the agent door in production'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2208
+sprint: smfrbak
 assignee: steve
 label:
 - chore

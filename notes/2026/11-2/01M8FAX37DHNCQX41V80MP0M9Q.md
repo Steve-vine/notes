@@ -1,15 +1,17 @@
 ---
 id: 01M8FAX37DHNCQX41V80MP0M9Q
 created: 2026-11-27T20:24:45.549715Z
-updated: 2026-11-27T20:24:45.549715Z
+updated: 2026-11-27T20:25:18.545909Z
 type: task
 title: 'Polaris knows about the server agent: "which servers aren''t reporting?", "which servers are behind on patches?", "is SRV01 compliant?" — read-only, never a joining code'
-label: feature
-priority: medium
-assignee: steve
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2209
+sprint: smfrbak
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 **On the chain** (new chat tools reading the new tables). ADR 0187 §9. After COM-2207.
 

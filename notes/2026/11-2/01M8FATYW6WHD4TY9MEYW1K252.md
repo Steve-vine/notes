@@ -1,15 +1,17 @@
 ---
 id: 01M8FATYW6WHD4TY9MEYW1K252
 created: 2026-11-27T20:23:35.558518Z
-updated: 2026-11-27T20:23:35.558518Z
+updated: 2026-11-27T20:25:14.944936Z
 type: task
 title: 'Patch level: each reporting server shows its build and revision, its installed updates and when it was last updated, and is Behind after a company''s number of days (default 35)'
-task_status: todo
-assignee: steve
-label: feature
-priority: high
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2206
+sprint: smfrbak
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 **On the chain** (new table and API). ADR 0187 §7. After COM-2205.
 

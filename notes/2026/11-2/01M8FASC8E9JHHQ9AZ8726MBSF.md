@@ -1,15 +1,19 @@
 ---
 id: 01M8FASC8E9JHHQ9AZ8726MBSF
 created: 2026-11-27T20:22:43.726808Z
-updated: 2026-11-27T20:22:43.726808Z
+updated: 2026-11-27T20:25:22.541316Z
 type: task
 title: 'The agent door: a separate public address that serves only osquery''s requests, from allowed IP addresses only, with Admin ▸ Integrations ▸ Server agent showing its health'
-label: feature
-task_status: todo
-priority: high
-assignee: steve
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2203
+sprint: smfrbak
+blocked_by:
+- 01M8FAP9NFYXKQY1TFM732PFRP
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 **On the chain** (new tables and API). ADR 0187 §1–§3 (COM-2202). First build task of the sprint.
 
