@@ -1,17 +1,34 @@
 ---
 id: 01M8EED1JWZH5K8NNQBTA6ZDGZ
 created: 2026-11-27T12:06:39.452661Z
-updated: 2026-11-27T13:56:32.382537Z
+updated: 2026-11-27T14:50:46.293373Z
 type: task
 title: Compass makes every AD change its account has the rights for — anything AD refuses becomes an on-premises to-do, never a failed change
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2178
 sprint: smq8t5s
+comments:
+- id: 01M8EQSGKXR6D4BY2140HVTRQT
+  author: Steve Vine
+  at: 2026-11-27T14:50:45.245858Z
+  text: |-
+    Built — PR #2189, merged to main as 47a08d4e9 (not yet on staging; goes with the sprint deploy). ADR 0182 added and marked Accepted on your principle in this task.
+
+    What changed:
+    - When Compass tries a change in AD and AD refuses it for lack of permission, it becomes an on-premises to-do, not a failed request: membership adds/removes, a leaver's disable (the rest of the leaver still runs, sessions still ended) and the later delete, account detail corrections, send on behalf, and recertification removals. The request carries on waiting on AD; the next AD read closes the to-do once it's done by hand.
+    - After a refusal, that object's next change goes straight to a person without asking AD again, until the next rights check (which runs after each healthy AD connection check).
+    - Every to-do says why it's manual, on the request, the review row, and in brackets on the Actions title: "Outside the OUs Compass manages", "Compass's account can't change groups in this OU" (or accounts / who sends on behalf of a list), "AD refused the change: insufficient access rights". In an install where Compass doesn't change AD at all, the request says "Compass doesn't change on-premises AD in this setup" but Actions titles leave it out (every to-do would say it).
+    - The person and group popups say "AD refused Compass a change to it — changes are to-dos until the next rights check" when that's the case.
+    - Unchanged: an unreachable domain controller still fails and is retried; a joiner Compass can't create still fails (COM-2185).
+
+    To-dos raised before this have no reason and show none.
+
+    For the Done-when on staging: needs a group in a ticked OU whose permission is narrowed on that group alone — if staging's AD has none, it can be checked with a protected group once COM-2179 is in (that reason reads "Protected by AD…" instead).
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **On the chain** (likely a migration for the to-do's reason; API gains the reason). First of three, with COM-2179 (AD protection) and COM-2180 (built-in containers).
 
