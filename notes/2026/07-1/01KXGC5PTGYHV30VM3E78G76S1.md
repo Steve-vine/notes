@@ -1,11 +1,11 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-26T02:50:27.997763Z
+updated: 2026-11-27T11:55:10.108874Z
 type: project
 title: Compass
 identifier: COM
-next_task_number: 2177
+next_task_number: 2178
 roadmap:
 - id: rboze66
   title: Internal POC
@@ -1097,6 +1097,9 @@ sprints:
 - id: s4qjpqd
   title: Access Control Review
   description: Two changes to how access changes are approved. Every completed recertification with removals raises a request on the Requests tab, approved there by someone with the right access however many people reviewed it. And Access Admins' own requests go through on submission without a second person (unlike expedited, nothing is owed afterwards).
+- id: smq8t5s
+  title: Access - Tweaks and Improvements
+  description: 'Small changes to Access Control found while Steve uses it: clearer wording on the on-premises to-dos and the screens around them.'
 assignee: steve
 priority: medium
 project_status: active
