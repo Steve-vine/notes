@@ -1,7 +1,7 @@
 ---
 id: 01M8EVTSMYCWN977F49XWV61RH
 created: 2026-11-27T16:01:21.566241Z
-updated: 2026-11-27T16:03:47.048905Z
+updated: 2026-11-27T16:49:43.663316Z
 type: task
 title: 'ADR 0185: Scripting — Compass runs scripts people write, against action integrations, from workflows triggered before and after joiners, movers and leavers'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 **Independent** (a decision record only). Write it first; every other Scripting task builds on it. Mark it Proposed, and Steve accepts it.
 
