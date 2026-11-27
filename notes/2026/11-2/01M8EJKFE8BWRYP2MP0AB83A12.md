@@ -1,7 +1,7 @@
 ---
 id: 01M8EJKFE8BWRYP2MP0AB83A12
 created: 2026-11-27T13:20:04.5521Z
-updated: 2026-11-27T20:09:12.631007Z
+updated: 2026-11-27T22:31:18.425216Z
 type: task
 title: Adopt unrequested changes automatically (privileged changes excepted) — a switch on Access Control ▸ Admin, with the choice to adopt everything already waiting
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -75,7 +75,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: review
+task_status: done
 ---
 **On the chain** (migration for the setting and an "adopted automatically" mark; API). Independent of the rest of sprint 128.
 

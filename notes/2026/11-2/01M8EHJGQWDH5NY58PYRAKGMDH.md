@@ -1,7 +1,7 @@
 ---
 id: 01M8EHJGQWDH5NY58PYRAKGMDH
 created: 2026-11-27T13:02:04.540993Z
-updated: 2026-11-27T20:09:02.489604Z
+updated: 2026-11-27T22:31:18.39578Z
 type: task
 title: A recertification removals request names the directory role it takes away — "Global Administrator (eligible)", not "Eligible"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,7 +38,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: review
+task_status: done
 ---
 **Independent** (wording only — no migration, no API shape change).
 

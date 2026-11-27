@@ -1,7 +1,7 @@
 ---
 id: 01M8FA2Z667XVARXCTZM1GTB95
 created: 2026-11-27T20:10:29.446385Z
-updated: 2026-11-27T21:56:28.976993Z
+updated: 2026-11-27T22:31:18.437704Z
 type: task
 title: A request for a directory role on its own can be submitted — and its end date reads "27 May 2027"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - bug
 priority: high
-task_status: review
+task_status: done
 ---
 **Independent** (screen only — no migration, no API change). Fix-forward for COM-2183, found in Claude's pre-UAT pass on staging 30786db4f (27 Nov 2026).
 

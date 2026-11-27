@@ -1,7 +1,7 @@
 ---
 id: 01M8EH2ASNF383C49AEJW51EP9
 created: 2026-11-27T12:53:14.165899Z
-updated: 2026-11-27T20:08:58.593915Z
+updated: 2026-11-27T22:31:18.384122Z
 type: task
 title: At recertification, mailbox access held through a group is removed the way the reviewer chooses — take them out of the group, or take the group's access away
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -62,7 +62,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 **On the chain** (migration for the reviewer's choice on a review row; API). Builds on COM-2178 (refusals become to-dos).
 
