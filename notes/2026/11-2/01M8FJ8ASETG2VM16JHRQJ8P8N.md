@@ -1,12 +1,15 @@
 ---
 id: 01M8FJ8ASETG2VM16JHRQJ8P8N
 created: 2026-11-27T22:33:13.774808Z
-updated: 2026-11-27T22:34:55.263134Z
+updated: 2026-11-27T22:35:08.590875Z
 type: task
 title: 'Linux exact matching: each Linux server''s installed packages are compared with its own distribution''s fixed versions, so a server lists exactly which security fixes it''s missing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2215
 sprint: s51yxk5
+blocked_by:
+- 01M8FJ7TFNQFWW8YNYWRTBFJFY
+- 01M8FATKBRPVSNTVEM5E7C89ZT
 assignee: steve
 label:
 - feature

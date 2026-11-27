@@ -1,12 +1,15 @@
 ---
 id: 01M8FJ9AFEMSNFME70S1WX6SVT
 created: 2026-11-27T22:33:46.222329Z
-updated: 2026-11-27T22:34:56.823837Z
+updated: 2026-11-27T22:35:10.993597Z
 type: task
 title: 'Patch level is judged by missing security fixes: a server is Behind when it''s missing a fix released more than the company''s days ago; the update-age check uses it, with last-update age as the fallback'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2217
 sprint: s51yxk5
+blocked_by:
+- 01M8FJ8W5Y57VY8Y254C4R2F4J
+- 01M8FAVGBYEAE17CNZBWV1KZEE
 assignee: steve
 label:
 - improvement

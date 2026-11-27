@@ -1,12 +1,15 @@
 ---
 id: 01M8FJ9P6TDZVCCK8XR9WY46RN
 created: 2026-11-27T22:33:58.234473Z
-updated: 2026-11-27T22:34:57.264907Z
+updated: 2026-11-27T22:35:12.450349Z
 type: task
 title: 'Staging test data for software matching: a test-rig server pinned to a package with a published fix, so exact matching, automatic raising and closing can be seen end to end in the E2E Test Company'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2218
 sprint: s51yxk5
+blocked_by:
+- 01M8FJ8ASETG2VM16JHRQJ8P8N
+- 01M8FAWA6C6YNPYHHRGNNGQYDD
 assignee: steve
 label:
 - chore
