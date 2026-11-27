@@ -1,7 +1,7 @@
 ---
 id: 01M8EJKFE8BWRYP2MP0AB83A12
 created: 2026-11-27T13:20:04.5521Z
-updated: 2026-11-27T18:12:11.900535Z
+updated: 2026-11-27T20:09:12.631007Z
 type: task
 title: Adopt unrequested changes automatically (privileged changes excepted) — a switch on Access Control ▸ Admin, with the choice to adopt everything already waiting
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -51,6 +51,26 @@ comments:
     - All CI jobs passed. One unrelated registers test flaked on its first run and passed on rerun.
 
     For Steve to check: the wording above, and that the wider "privileged" rule is what you want.
+- id: 01M8FA0M5P6P53XTGN6KMTDN1D
+  author: Steve Vine
+  at: 2026-11-27T20:09:12.630536Z
+  text: |-
+    Pre-UAT on staging 30786db4f: Passed (the switch, its dialog, Cancel, and the Adopted changes section); Couldn't check (switching it on and what follows).
+
+    Steps and what I saw, as E2E Admin A:
+    - Access Control ▸ Admin ▸ What Compass watches: the switch "Adopt unrequested changes automatically" is off. Under it: "Privileged changes still need validating: directory roles, groups that grant Entra roles, and AD's protected admin groups and accounts."
+    - Clicking the switch opens "Turn on automatic adoption?": "From now on every unrequested change is adopted as soon as Compass finds it, apart from privileged ones. There are 364 waiting now (27 of them privileged, which will still need validating) — adopt the other 337 too?" The buttons are Cancel, "Turn on, leave them all for review" and "Yes, adopt the 337 and turn on". I pressed Cancel, and the switch stayed off.
+    - Validation has no banner, which is right while it's off. It has a new "Adopted changes" section (54): "Unrequested changes someone explained and adopted, and those Compass adopted automatically while that was switched on." The rows show "Observed … — adopted …", who made the change, and the comment ("OK").
+    - Small point: the rows say "adopted 5 Sep 2026, 14:42" with no "by <name>". The build comment says person-adopted rows carry their name. These older items may simply not record who adopted them; worth a glance.
+
+    Couldn't check (each would adopt real items in the tenant-wide queue):
+    - Yes clearing only non-privileged items, marked "Adopted automatically";
+    - new changes adopted at once, with a directory-role change still raised;
+    - switching it off;
+    - the banner;
+    - the activity-log lines.
+
+    Screenshots: ~/compass-uat/sprint-128/COM-2189/ (01 the switch, 02 the dialog, 03 Adopted changes).
 assignee: steve
 label:
 - feature
