@@ -1,7 +1,7 @@
 ---
 id: 01M8EGE7NVV4QKKWT3C06JEJHP
 created: 2026-11-27T12:42:15.611185Z
-updated: 2026-11-27T14:12:41.942763Z
+updated: 2026-11-27T20:08:25.960656Z
 type: task
 title: Access Privilege Approver — only its members can approve a privileged change Compass will make itself; the one role Admin doesn't hold
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -25,6 +25,28 @@ comments:
     One part deferred: "This will be a to-do for an admin" on the request page — only true once 2179/2182 route those changes to to-dos, so it comes with them.
 
     If your own production account is Entra-provisioned, the role reaches you through a sign-in group mapping (the very first holder may set that up for a group they're in).
+- id: 01M8F9Z6K8ZJBPF147HM59N8SC
+  author: Steve Vine
+  at: 2026-11-27T20:08:25.960266Z
+  text: |-
+    Pre-UAT on staging 30786db4f: Passed (the role, the reserved permission, no self-grant); Couldn't check (the approval gate, since nothing is automatic on staging).
+
+    Steps and what I saw, as E2E Admin A:
+    - Admin ▸ Roles lists "Access Privilege Approver — Built in". It has 1 permission and 0 holders, and its Edit and Delete are greyed. Description: "Approves the privileged changes Compass makes itself… Admin does not include it, and nobody can give it to themselves."
+    - Admin has 95 permissions. In the Edit Access Admin dialog, "Approve privileged changes Compass makes itself" is greyed with the badge "Access Privilege Approver only" and the explanation "not even Admin has it". I pressed Cancel; nothing was saved.
+    - Admin ▸ Users: Admin A's own Roles field is disabled, so no one can give themselves the role here. For Admin B, the roles list offers Access Privilege Approver. I closed it with Escape without choosing anything, and Admin B stayed Admin only.
+    - On ACR-207, a request with a directory role, Admin B was offered Approve & execute, with "needs an Access Admin: it changes directory roles: Message Center Reader". That's right for a change that will be a to-do, because the Entra role-write permission isn't granted. I rejected it.
+
+    Couldn't check:
+    - "Compass will make this change itself — it needs an Access Privilege Approver", and the greyed approve button for everyone else. On staging, AD has no AdminSDHolder rights and Entra has no role-write permission, so no change is automatic.
+    - An Admin being refused the role once someone holds it. Nobody holds it, and making a test account the first holder would change staging's set-up.
+    Also not shown: the line "This will be a to-do for an admin", which you deferred to 2179/2182. It doesn't appear on ACR-207 either.
+
+    Minor wording (not blocking):
+    - The built-in Admin role's description still reads "Everything. The one built-in role — it is the whole catalogue". There are now two built-in roles, and Admin no longer holds everything.
+    - The roles screen's "Some rules are not permissions" note doesn't mention the Access Privilege Approver rule.
+
+    Screenshots: ~/compass-uat/sprint-128/COM-2181/ (01 roles list, 02 reserved permission greyed).
 assignee: steve
 label:
 - feature

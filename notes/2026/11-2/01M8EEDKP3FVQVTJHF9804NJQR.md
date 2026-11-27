@@ -1,7 +1,7 @@
 ---
 id: 01M8EEDKP3FVQVTJHF9804NJQR
 created: 2026-11-27T12:06:57.987329Z
-updated: 2026-11-27T15:20:52.361813Z
+updated: 2026-11-27T20:08:12.249993Z
 type: task
 title: Compass knows which AD groups and accounts AD protects — and changes them only if its account has been given rights on protected objects
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,23 @@ comments:
     - Not done: the "link to see them" from the Protected objects counts — the people/group lists have no protected filter yet, and adding one is an API change. Easy follow-up if you want it.
 
     For pre-UAT: Domain Server Access and a protected account should show the pill after staging's first full read.
+- id: 01M8F9YS6SQZ9B8KAWZ3S0S033
+  author: Steve Vine
+  at: 2026-11-27T20:08:12.24939Z
+  text: |-
+    Pre-UAT on staging 30786db4f: Passed (on screen); Couldn't check (the to-do needs an approved change).
+
+    Steps and what I saw, as E2E Admin A:
+    - Access Control ▸ Groups ▸ Domain Server Access popup: a Protection line with the "Protected by AD" pill and "AD manages this object's permissions itself; Compass changes it only if its account has rights on protected objects." Changes in AD: "Protected by AD, and Compass's account has no rights on protected objects — changes are to-dos".
+    - Domain Admins popup: same pill. It sits in CN=Users, so Changes in AD reads "Outside the OUs Compass manages".
+    - Protected account: Access Control ▸ Users ▸ Nessus Scan (a Domain Admins member, in a MyBusiness OU) shows the same pill and the protected routing line.
+    - Admin ▸ Integrations ▸ Active Directory ▸ Configure: a Protected objects line beside Managed OUs. "AD protects 16 groups and 53 accounts — its admin groups, groups nested in them, and their members. Their permissions come from AdminSDHolder, not their OU." Then "Change groups: no / Change accounts: no / Change senders: no", and the how-to with the domain-admin warning (rights on CN=AdminSDHolder,CN=System).
+    - As noted in your comment, there is no link from the counts to the protected groups and accounts.
+
+    Couldn't check: a membership change to Domain Server Access becoming a "Protected by AD" to-do instead of failing. That needs an approved request, which would run against the real AD.
+    For Steve: approve a test change to Domain Server Access (or a test protected group) and check that the request waits on a to-do with that reason.
+
+    Screenshots: ~/compass-uat/sprint-128/COM-2179/ (01 protected-objects line, 02 Domain Server Access, 03 Domain Admins, 04 protected account).
 assignee: steve
 label:
 - feature

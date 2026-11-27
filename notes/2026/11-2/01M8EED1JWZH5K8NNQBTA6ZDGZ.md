@@ -1,7 +1,7 @@
 ---
 id: 01M8EED1JWZH5K8NNQBTA6ZDGZ
 created: 2026-11-27T12:06:39.452661Z
-updated: 2026-11-27T14:50:46.293373Z
+updated: 2026-11-27T20:08:05.909941Z
 type: task
 title: Compass makes every AD change its account has the rights for — anything AD refuses becomes an on-premises to-do, never a failed change
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,21 @@ comments:
     To-dos raised before this have no reason and show none.
 
     For the Done-when on staging: needs a group in a ticked OU whose permission is narrowed on that group alone — if staging's AD has none, it can be checked with a protected group once COM-2179 is in (that reason reads "Protected by AD…" instead).
+- id: 01M8F9YK0N2F23Q7XX1X426V6A
+  author: Steve Vine
+  at: 2026-11-27T20:08:05.909535Z
+  text: |-
+    Pre-UAT on staging 30786db4f: Passed (the "why it's manual" lines on screen); Couldn't check (needs a real AD refusal).
+
+    Steps and what I saw, as E2E Admin A:
+    - The group and person popups say why a change would be manual. Domain Admins: "Changes in AD — Outside the OUs Compass manages — changes are to-dos". Domain Server Access, and the protected account Nessus Scan: "Protected by AD, and Compass's account has no rights on protected objects — changes are to-dos". Compass Test: "Changed in AD by Compass".
+    - Admin ▸ Integrations ▸ Active Directory ▸ Managed OUs: the ticked OU shows its rights check ("MyBusiness — RIGHTS OK"). The Protected objects line shows Change groups / accounts / senders: no.
+    - Actions has no on-premises to-dos at all, so I couldn't see a to-do's reason on Actions or on a request.
+
+    Couldn't check: a change AD refuses becoming a to-do reading "AD refused the change: insufficient access rights", and that to-do closing on the next AD read. That needs a group in a ticked OU whose permission has been narrowed, and an approved change.
+    For Steve: try it with a test group whose ACL denies Compass's account. Or, more simply, approve a test membership change to a protected group such as Domain Server Access. That should give a "Protected by AD…" to-do, not a failed request.
+
+    Screenshots: ~/compass-uat/sprint-128/COM-2179/ (popups and the AD tile, shared with 2179).
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M8EEE01DQWQMXAAYP2FPJF1R
 created: 2026-11-27T12:07:10.637565Z
-updated: 2026-11-27T16:07:31.600634Z
+updated: 2026-11-27T20:08:17.320949Z
 type: task
 title: AD's built-in containers (Users, Builtin and the like) can be ticked for Compass to manage, like an OU
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -22,6 +22,25 @@ comments:
     - The AD setup notes (docs/active-directory) now cover containers, protected objects and refusals becoming to-dos.
 
     Done-when on staging: after the next AD read, Users/Builtin/Computers should appear as containers; ticking Users runs its rights check.
+- id: 01M8F9YY5879E0JY6N87NRW17Y
+  author: Steve Vine
+  at: 2026-11-27T20:08:17.320579Z
+  text: |-
+    Pre-UAT on staging 30786db4f: Passed (the list); Couldn't check (ticking a container, and a change inside one).
+
+    Steps and what I saw, as E2E Admin A: Admin ▸ Integrations ▸ Active Directory ▸ Configure ▸ Managed OUs, expanded "Organisational units 454" (it was 449 OUs before; the rest are the containers).
+    - Builtin, Computers, Managed Service Accounts, Microsoft Exchange System Objects and Users each carry a CONTAINER mark. Domain Controllers and Microsoft Exchange Security Groups are real OUs and correctly have no mark.
+    - Builtin: "6 of the groups here are protected by AD — see Protected objects".
+    - Users: "7 of the groups here are protected by AD — see Protected objects".
+    - System, Program Data and ForeignSecurityPrincipals aren't offered.
+    - I only looked, as instructed. Nothing was ticked.
+
+    Couldn't check:
+    - ticking Users and seeing its rights check;
+    - a membership change to an unprotected group in a ticked container being made by Compass.
+    Both change what Compass may do in the real AD. For Steve: tick Users (or Computers) yourself, check that the rights line appears beside it, then untick it if it isn't wanted.
+
+    Screenshots: ~/compass-uat/sprint-128/COM-2180/ (01 Builtin and Computers, 02 Users).
 assignee: steve
 label:
 - feature
