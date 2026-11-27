@@ -1,7 +1,7 @@
 ---
 id: 01M4WY7VJTRJ8X8KGXA9VS64PN
 created: 2026-10-14T10:10:01.434555Z
-updated: 2026-11-27T09:37:42.682323Z
+updated: 2026-11-27T09:37:48.355193Z
 type: memo
 title: 2027 Objectives
 category:
@@ -20,7 +20,7 @@ scope:
 -  Cloud cost (reservations etc.)
 -  Dev permissions in Azure prod
 -  SRE Standards
--  Network Policies
+-  Kubernetes Network Policies
 
 Joe
 - Shadow IT (Atlassian Loom and other applications, what strategies can we put in place)
