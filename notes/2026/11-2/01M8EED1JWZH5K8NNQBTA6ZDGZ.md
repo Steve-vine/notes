@@ -1,15 +1,17 @@
 ---
 id: 01M8EED1JWZH5K8NNQBTA6ZDGZ
 created: 2026-11-27T12:06:39.452661Z
-updated: 2026-11-27T12:06:39.452661Z
+updated: 2026-11-27T12:07:15.227219Z
 type: task
 title: Compass makes every AD change its account has the rights for — anything AD refuses becomes an on-premises to-do, never a failed change
-priority: medium
-assignee: steve
-task_status: todo
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2178
+sprint: smq8t5s
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 **On the chain** (likely a migration for the to-do's reason; API gains the reason). First of three, with COM-2179 (AD protection) and COM-2180 (built-in containers).
 
