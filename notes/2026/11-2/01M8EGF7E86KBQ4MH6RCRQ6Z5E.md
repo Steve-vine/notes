@@ -1,7 +1,7 @@
 ---
 id: 01M8EGF7E86KBQ4MH6RCRQ6Z5E
 created: 2026-11-27T12:42:48.13651Z
-updated: 2026-11-27T17:11:11.401122Z
+updated: 2026-11-27T20:08:45.197478Z
 type: task
 title: A request can give someone an Entra directory role — eligible through PIM, with an end date
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -35,6 +35,31 @@ comments:
     For pre-UAT on staging:
     - The to-do path is checkable on a test account.
     - Compass making the change itself needs the role-write permission in the staging tenant. If it isn't granted, that part is Couldn't check.
+- id: 01M8F9ZSCDKWZQ94GZGSEDNAAJ
+  author: Steve Vine
+  at: 2026-11-27T20:08:45.193534Z
+  text: |-
+    Pre-UAT on staging 30786db4f: Failed (a request for a directory role alone can't be submitted); Passed (the role shows on the request and makes it privileged); Couldn't check (carrying it out).
+
+    Steps and what I saw:
+    1. As E2E Access Manager: Access Control ▸ New request ▸ Membership change. The Change access window has a "Directory roles" section: "A role is made eligible through PIM until a date… never permanently. Needs an Access Admin, or an Access Privilege Approver where Compass makes the change itself." "Until" defaults to 27 May 2027, six months away.
+    2. I chose Compass Test, made them eligible for Message Center Reader and gave a reason. The row reads "Message Center Reader — eligible until 2027-05-27".
+       DEFECT: Submit for approval stays greyed. The summary on the right says "Nothing is changed yet — choose a group or a shared mailbox to add or remove." A directory role on its own doesn't count as a change, so a role-only request can't be raised at all. (Technical: in RaiseRequestModal.tsx, `complete` for membership_change counts groups, mailboxes and list rights but not roleGrants / roleRemovals. The summary has no Directory roles line.)
+    3. To get past that, I also added the group Intune.Users.Application.UniPrintDownRight. Submit then became available, and I raised ACR-207.
+    4. ACR-207, seen as the Access Manager: "Made eligible for — Message Center Reader — until 2027-05-27", and "This touches privileged access, so it needs an Access Admin: it changes directory roles: Message Center Reader." The Access Manager isn't offered a decision; only Cancel request.
+    5. As E2E Admin B (Admin, not an Access Privilege Approver): Approve & execute and Reject are both offered, with the same line. That's right: the role-write permission isn't granted, so it would be a to-do approvable by an Access Admin. I rejected it: "Pre-UAT check, not to be carried out".
+
+    Smaller points:
+    - The date shows as 2027-05-27, on the request page and in the form's row, not as "27 May 2027".
+    - The window's subtitle still reads "Add or remove groups and shared mailboxes".
+    - No "Remove a role" field appeared. That's expected, since Compass Test holds no roles.
+
+    Couldn't check:
+    - the role becoming an Entra to-do and closing once seen ("Make … eligible for … until …, in Entra");
+    - Compass making it itself with an Access Privilege Approver (the permission isn't granted);
+    - the role then showing under Eligible assignments with its end date.
+
+    Screenshots: ~/compass-uat/sprint-128/COM-2183/ (01 the form, with Submit greyed and "Nothing is changed yet"; 02 ACR-207 as the Access Manager; 03 ACR-207 as Admin B before rejecting).
 assignee: steve
 label:
 - feature

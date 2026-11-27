@@ -1,7 +1,7 @@
 ---
 id: 01M8EH1WB7QY4DH2HF42C3QCS9
 created: 2026-11-27T12:52:59.367614Z
-updated: 2026-11-27T17:30:01.194211Z
+updated: 2026-11-27T20:08:54.822166Z
 type: task
 title: A joiner Compass can't create becomes a "create this account in AD" to-do — and the joiner carries on once the account appears
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -38,6 +38,21 @@ comments:
     - All ten CI jobs passed.
 
     For pre-UAT on staging: needs a test OU in E2E Test Company without the create right. If staging has none, that part is Couldn't check.
+- id: 01M8FA02S6AS24DB5HQ1ZNRZ7C
+  author: Steve Vine
+  at: 2026-11-27T20:08:54.821544Z
+  text: |-
+    Pre-UAT on staging 30786db4f: Passed (the line under the role, where Compass can create); Couldn't check (an OU without the create right).
+
+    Steps and what I saw, as E2E Access Manager: New request ▸ Joiner, Primary role "E2E Starter" (the only role offered). Under the role it reads "Created in MyBusiness › Users › UK › Non PA › Security Users", and the summary on the right repeats it. I pressed Cancel ▸ Discard changes; nothing was submitted.
+
+    Couldn't check:
+    - the line saying an admin will be asked to create the account (the E2E Starter role's OU allows creating accounts);
+    - the urgent "Create … account in AD" to-do;
+    - the account being picked up on the next AD read and the joiner finishing its groups.
+    For Steve: point a test role at an OU Compass's account can't create users in (or an unticked OU) and open the joiner form. The line under the role should say an admin will create it. Submitting and approving it is then the real check.
+
+    Screenshot: ~/compass-uat/sprint-128/COM-2185/01-joiner-form-role-line.png
 assignee: steve
 label:
 - feature

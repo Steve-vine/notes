@@ -1,7 +1,7 @@
 ---
 id: 01M8EH2ASNF383C49AEJW51EP9
 created: 2026-11-27T12:53:14.165899Z
-updated: 2026-11-27T18:44:03.453573Z
+updated: 2026-11-27T20:08:58.593915Z
 type: task
 title: At recertification, mailbox access held through a group is removed the way the reviewer chooses — take them out of the group, or take the group's access away
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -43,6 +43,21 @@ comments:
     - Recert suites passed (55), and the unit suite passed.
     - Merging with this sprint's directory-role removals needed one combined change in the review-removal code, covered by those suites.
     - All CI jobs passed.
+- id: 01M8FA06F1AQJPBMHMRZ0NZSTF
+  author: Steve Vine
+  at: 2026-11-27T20:08:58.593502Z
+  text: |-
+    Pre-UAT on staging 30786db4f: Couldn't check (E2E Test Company has no shared-mailbox review).
+
+    Steps: as E2E Admin A, opened Access Control ▸ Recertification. Schedules: three directory-role schedules and one technology-asset schedule. Instances: a group review (Intune.Users.Application.UniPrintDownRight) and the directory-role and asset reviews. None is a shared-mailbox review, so there is no row with access held through a group to try "How should it go?" on.
+
+    For Steve:
+    - Start a shared-mailbox review of a mailbox where someone holds access through a group.
+    - In the portal, flag that person and check the three choices with their side effects ("also takes away…", "N people lose Full Access to …").
+    - Check that the removals request shows "As the reviewer chose".
+    - Taking a group's access away in Exchange hasn't been tried against real Exchange yet, as the build comment says.
+
+    Screenshots: none. Folder ~/compass-uat/sprint-128/COM-2186/
 assignee: steve
 label:
 - feature

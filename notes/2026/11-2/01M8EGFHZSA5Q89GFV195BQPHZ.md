@@ -1,7 +1,7 @@
 ---
 id: 01M8EGFHZSA5Q89GFV195BQPHZ
 created: 2026-11-27T12:42:58.937094Z
-updated: 2026-11-27T17:27:59.167565Z
+updated: 2026-11-27T20:08:50.701108Z
 type: task
 title: A leaver loses their Entra directory roles, not just their sign-in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -36,6 +36,24 @@ comments:
     For pre-UAT on staging:
     - The to-do path is checkable with an E2E leaver holding a test role.
     - Compass removing the role itself needs the role-write permission in the staging tenant. If it isn't granted, that part is Couldn't check.
+- id: 01M8F9ZYRDJ4ZH99DV50AXWMSW
+  author: Steve Vine
+  at: 2026-11-27T20:08:50.700519Z
+  text: |-
+    Pre-UAT on staging 30786db4f: Couldn't check (Compass Test holds no directory roles).
+
+    Steps and what I saw:
+    - As E2E Access Manager, I opened Compass Test's popup (Access Control ▸ Users). It shows Active assignments 0 ("No active directory-role assignments") and Eligible assignments 0 ("No eligible (PIM) assignments").
+    - New request ▸ Leaver ▸ Compass Test. The form lists the account disable, sessions revoked, no managed-group changes and 7 other groups. There is no directory-roles line, which is correct because they hold none.
+    - I raised it as ACR-208. The request page lists only the leaver (no "Losing directory roles"). As E2E Admin B, I rejected it: "Pre-UAT check, not to be carried out".
+
+    Couldn't check:
+    - the form and request listing "Global Administrator (eligible, direct)" style lines;
+    - the account disabled at once with the role left as an urgent "Remove …'s … in Entra" to-do that closes on the next Entra read.
+    That needs a test person holding a directory role assigned straight to them, and an approved leaver.
+    For Steve: give a test account a low-privilege eligible role (e.g. Message Center Reader), raise a leaver for it, and check the roles appear under what they lose.
+
+    Screenshots: ~/compass-uat/sprint-128/COM-2184/ (01 the leaver form, 02 ACR-208, 03 Compass Test with no roles, 04 ACR-208 rejected).
 assignee: steve
 label:
 - feature

@@ -1,7 +1,7 @@
 ---
 id: 01M8EJ64S3YC91ZZZX9G6WNGWQ
 created: 2026-11-27T13:12:47.651503Z
-updated: 2026-11-27T13:56:25.840268Z
+updated: 2026-11-27T20:09:06.185731Z
 type: task
 title: '"Their roles have changed since this was raised" shows only on a request that hasn''t run yet — never on one already carried out'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -21,6 +21,17 @@ comments:
     For you to consider: a failed request shows no warning, as the task asked — but a failed request can be retried, which runs the whole set again and could undo a newer change silently. If you want the warning before a retry too, it's a one-line addition.
 
     Tests: an executed and an awaiting-validation mover with drift show no warning; an awaiting-approval one still does.
+- id: 01M8FA0DW9RQBZPXZBG2BV5A0P
+  author: Steve Vine
+  at: 2026-11-27T20:09:06.185275Z
+  text: |-
+    Pre-UAT on staging 30786db4f: Couldn't check (E2E Test Company has no mover).
+
+    Steps: as E2E Admin A, went through E2E Test Company's requests (132 leavers, 1 joiner, 1 recertification removals, plus my two from today). There is no mover, expedited or pending, so the warning can't be seen on either side of the change. The one executed request, ACR-72 (a joiner), shows no warning, but joiners never had one.
+
+    For Steve: on production, ACR-2 and ACR-3 (Arnold Rimmer's expedited movers, awaiting validation) should no longer show "Their roles have changed since this was raised". A pending mover for someone whose roles changed after it was raised should still show it, ending "…so when it runs it will undo that change too".
+
+    Screenshots: none. Folder ~/compass-uat/sprint-128/COM-2188/
 assignee: steve
 label:
 - bug

@@ -1,7 +1,7 @@
 ---
 id: 01M8EHJGQWDH5NY58PYRAKGMDH
 created: 2026-11-27T13:02:04.540993Z
-updated: 2026-11-27T13:59:59.708853Z
+updated: 2026-11-27T20:09:02.489604Z
 type: task
 title: A recertification removals request names the directory role it takes away — "Global Administrator (eligible)", not "Eligible"
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -23,6 +23,17 @@ comments:
     For you to look at:
     - Held through a group, the Loses line shows both forms joined by a dash (the brief gave both) — it's long on screen.
     - Anyone reading the export's role column by machine will now see "Global Administrator (eligible)" where it said "Eligible" (directory-role reviews only).
+- id: 01M8FA0A8SRB3EXEJ9VNKXX67P
+  author: Steve Vine
+  at: 2026-11-27T20:09:02.489038Z
+  text: |-
+    Pre-UAT on staging 30786db4f: Couldn't check (E2E Test Company has no removals request for a directory role).
+
+    Steps: as E2E Admin A, opened Access Control ▸ Requests for E2E Test Company. There are 134 requests (before mine): 132 leavers, 1 joiner and 1 recertification removals request (ACR-197). ACR-197 comes from a group review (Intune.Users.Application.UniPrintDownRight). Its "Loses" column names the group, which is unchanged, as it should be. No directory-role review in E2E Test Company has produced a removals request. The Domain Name Administrator review was withdrawn; Yammer and Viva Pulse had nobody holding them.
+
+    For Steve: on production, ACR-37 should now read "loses: Global Administrator (eligible)", with the approval reason "takes away a directory role: Global Administrator (eligible)". No data fix is needed; it's worked out when the page is shown.
+
+    Screenshots: none. Folder ~/compass-uat/sprint-128/COM-2187/
 assignee: steve
 label:
 - bug
