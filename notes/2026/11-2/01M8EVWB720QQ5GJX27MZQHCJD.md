@@ -1,7 +1,7 @@
 ---
 id: 01M8EVWB720QQ5GJX27MZQHCJD
 created: 2026-11-27T16:02:12.322671Z
-updated: 2026-11-27T17:38:13.989754Z
+updated: 2026-11-27T20:49:55.235116Z
 type: task
 title: 'Automation ▸ Scripts: a script with declared inputs and outputs, written in SQL against an action integration, versioned (draft, then publish), with Preview of exactly what would be sent'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,32 @@ sprint: snt3b17
 blocked_by:
 - 01M8EVV51Z35MTQ7HGQ0RNPKQ7
 - 01M8EVVQZR7CA1XDQ6RZ0C9AB8
+comments:
+- id: 01M8FCB21ACDY6Q4TGAZDH21WC
+  author: Steve Vine
+  at: 2026-11-27T20:49:51.658515Z
+  text: |-
+    Built: PR #2201, merged to main (not on staging yet; it goes with the sprint deploy).
+
+    What's there:
+    - **Automation ▸ Scripts** is a new page (in the menu under Automation), listing every script: its name, what it runs against, its published version, owner, and whether it has unpublished changes.
+    - **A script** has a name, description, owner and the action integration it runs against (one SQL Server database today). It declares:
+      - **Inputs**: each has a name, type (text, whole number, decimal, yes/no, date), whether it's required, and whether it's **hidden** (never shown back or recorded, e.g. a password).
+      - **Outputs**: what the script hands back by name, for a workflow to use.
+      - **The SQL itself**, in an editor with highlighting. Inputs are used as @Name; outputs are returned as one row with those columns.
+    - **Draft, then publish.** Edits are a draft until someone publishes them with a note. Each published version is kept, with who published it and when, and can be read later. Only a published version ever runs.
+    - **Preview** shows exactly what would be sent (the SQL and each value, hidden ones masked) without connecting to anything.
+    - **Retire** takes a script out of use; it can be brought back.
+    - An action integration now lists the scripts that use it, and **can't be deleted while a published script uses it**.
+    - Only Script Managers can create, edit, publish or retire. Anyone who can see Automation can read scripts and their versions.
+
+    For you to look at:
+    - These are calls I made in ADR 0185, to confirm or change: scripts are organisation-wide (not per company), with a default time limit of 2 minutes and at most 15.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (new tables and API). After COM-2193 (role) and COM-2194 (integrations). ADR 0185.
 
