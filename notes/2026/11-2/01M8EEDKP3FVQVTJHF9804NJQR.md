@@ -1,7 +1,7 @@
 ---
 id: 01M8EEDKP3FVQVTJHF9804NJQR
 created: 2026-11-27T12:06:57.987329Z
-updated: 2026-11-27T12:43:16.646915Z
+updated: 2026-11-27T14:28:20.707534Z
 type: task
 title: Compass knows which AD groups and accounts AD protects — and changes them only if its account has been given rights on protected objects
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -19,7 +19,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 **On the chain** (migration + API). Stacks on COM-2178 (refusals become to-dos; ADR 0182). Goes with COM-2180 (built-in containers can be ticked).
 
