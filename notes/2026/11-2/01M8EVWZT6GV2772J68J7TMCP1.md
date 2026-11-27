@@ -1,7 +1,7 @@
 ---
 id: 01M8EVWZT6GV2772J68J7TMCP1
 created: 2026-11-27T16:02:33.414673Z
-updated: 2026-11-27T18:02:59.914676Z
+updated: 2026-11-27T22:06:06.512922Z
 type: task
 title: 'Running a script: Run now (for real, after confirming), a time limit, outputs read back, and every run recorded with its inputs, outputs and error'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,28 @@ number: 2196
 sprint: snt3b17
 blocked_by:
 - 01M8EVWB720QQ5GJX27MZQHCJD
+comments:
+- id: 01M8FGPNHRKBA9R761WR1HAWVS
+  author: Steve Vine
+  at: 2026-11-27T22:06:06.392199Z
+  text: |-
+    Built: PR #2202, merged to main (not on staging yet; it goes with the sprint deploy).
+
+    What's there:
+    - **Run now** on a published script (Script Managers only). You fill in its inputs (hidden ones masked as you type) and confirm that this really changes the other system. It runs on the worker, and the result appears in the script's **Runs** tab.
+    - **Each script has a time limit**: 2 minutes unless changed, at most 15. A run that goes over is stopped, and SQL Server undoes it, because the script runs as one transaction.
+    - **Outputs** are read from the result's first row by name. If a declared output is missing, the run fails and says which.
+    - **Every run is recorded**: when it ran, which version, who or what started it (Run now, a workflow, a retry), who it was for, the values it was given (hidden ones never recorded), what it handed back, and how it ended. If it failed, the run also shows the system's own message. The runs can be downloaded as a CSV.
+    - **A failed run raises an Action** for the script's owner, "Script · Retry". **Retry** runs the same version again with the same values (re-entering any hidden ones), and **Mark as dealt with** closes it with a note.
+    - Proven against a real SQL Server 2022: a success with outputs read back, a script error, a timeout, a retry and dismissing a failure.
+
+    For you to look at:
+    - These are calls I made in ADR 0185, to confirm or change: the 2-minute default and 15-minute maximum.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (new run table and API). After COM-2195. ADR 0185.
 
