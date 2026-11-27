@@ -1,11 +1,14 @@
 ---
 id: 01M8FJ7TFNQFWW8YNYWRTBFJFY
 created: 2026-11-27T22:32:57.077322Z
-updated: 2026-11-27T22:34:31.00306Z
+updated: 2026-11-27T22:35:07.137793Z
 type: task
 title: 'A new Security Feed source, Linux distributions (OSV.dev): Ubuntu, Debian, Red Hat, Rocky and Alma security data, with each distribution''s fixed package versions and Debian/RPM version rules'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2214
+sprint: s51yxk5
+blocked_by:
+- 01M8FJ7ATFYZVSZW01YS927GWC
 assignee: steve
 label:
 - feature

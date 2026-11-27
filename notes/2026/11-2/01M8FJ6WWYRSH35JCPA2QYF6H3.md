@@ -1,15 +1,20 @@
 ---
 id: 01M8FJ6WWYRSH35JCPA2QYF6H3
 created: 2026-11-27T22:32:26.782728Z
-updated: 2026-11-27T22:32:26.782728Z
+updated: 2026-11-27T22:35:04.391995Z
 type: task
 title: 'The Security Feed checks each server''s own version: "Everything we run" compares the exact version discovered on every server, and a match names each server with its version'
-priority: high
-task_status: todo
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2212
+sprint: s51yxk5
+blocked_by:
+- 01M8FJ6FP65A48HF2SCP8MPF4K
+- 01M8FATKBRPVSNTVEM5E7C89ZT
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 **On the chain** (API). ADR 0188 (COM-2211). First build task of the sprint.
 

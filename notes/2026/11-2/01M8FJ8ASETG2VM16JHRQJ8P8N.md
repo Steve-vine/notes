@@ -1,15 +1,17 @@
 ---
 id: 01M8FJ8ASETG2VM16JHRQJ8P8N
 created: 2026-11-27T22:33:13.774808Z
-updated: 2026-11-27T22:33:13.774808Z
+updated: 2026-11-27T22:34:55.263134Z
 type: task
 title: 'Linux exact matching: each Linux server''s installed packages are compared with its own distribution''s fixed versions, so a server lists exactly which security fixes it''s missing'
-priority: high
-assignee: steve
-label: feature
-task_status: todo
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2215
+sprint: s51yxk5
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 **On the chain** (API, possibly columns on discovered software). ADR 0188. After COM-2214, and needs the Server Agent sprint's package lists (COM-2205).
 

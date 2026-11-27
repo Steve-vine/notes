@@ -1,11 +1,15 @@
 ---
 id: 01M8FJ7ATFYZVSZW01YS927GWC
 created: 2026-11-27T22:32:41.039196Z
-updated: 2026-11-27T22:34:21.602976Z
+updated: 2026-11-27T22:35:06.038473Z
 type: task
 title: 'Windows exact matching: each Windows server''s full build is compared with Microsoft''s fixed build for every security update, so a server lists exactly which fixes it''s missing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2213
+sprint: s51yxk5
+blocked_by:
+- 01M8FJ6WWYRSH35JCPA2QYF6H3
+- 01M8FATYW6WHD4TY9MEYW1K252
 assignee: steve
 label:
 - feature
