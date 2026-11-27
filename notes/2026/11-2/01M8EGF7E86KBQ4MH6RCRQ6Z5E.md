@@ -1,7 +1,7 @@
 ---
 id: 01M8EGF7E86KBQ4MH6RCRQ6Z5E
 created: 2026-11-27T12:42:48.13651Z
-updated: 2026-11-27T15:44:30.383336Z
+updated: 2026-11-27T17:11:11.401122Z
 type: task
 title: A request can give someone an Entra directory role — eligible through PIM, with an end date
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,37 @@ number: 2183
 sprint: smq8t5s
 blocked_by:
 - 01M8EGERP5KEBTQB48Q453GS5K
+comments:
+- id: 01M8EZTJ8BA4HG1QP2V9FZ5ZCJ
+  author: Steve Vine
+  at: 2026-11-27T17:11:08.299546Z
+  text: |-
+    Done — merged to main in PR #2195. Not on staging yet; it goes with the sprint.
+
+    What changes:
+    - A membership request has a new Directory roles part. It can:
+      - make someone eligible for a directory role through PIM, with an end date (required, never permanent);
+      - take a role away (active or eligible).
+    - Either one makes the request privileged: an Access Admin approves it, and a second Access Manager isn't enough.
+    - With Compass's app holding the role-write permission and an Access Privilege Approver approving, Compass makes the change in Entra itself and records it. Otherwise each role is an Entra to-do saying why, e.g. "Make Grace eligible for Exchange Administrator until 27 Dec 2026, in Entra". The next role read (every 15 minutes) closes it once it's seen.
+    - A role Compass removed, or one a person removed for a to-do, doesn't come back as an unrequested "role lost".
+    - The request page shows the roles asked for, and the user and group popups show when an eligible role ends.
+    - Business roles still can't grant directory roles.
+
+    Checks:
+    - Unit suite green.
+    - Request integration suites green.
+    - All ten CI jobs passed.
+    - A screen-convention test now lists the role end-date calendar, which sits inside the request window and so closes on Escape correctly.
+
+    For pre-UAT on staging:
+    - The to-do path is checkable on a test account.
+    - Compass making the change itself needs the role-write permission in the staging tenant. If it isn't granted, that part is Couldn't check.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **On the chain** (migration + API). Stacks on COM-2182 (Compass changes roles when permitted) and COM-2181 (Access Privilege Approver).
 
