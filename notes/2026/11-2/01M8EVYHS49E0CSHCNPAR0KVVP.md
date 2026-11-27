@@ -1,7 +1,7 @@
 ---
 id: 01M8EVYHS49E0CSHCNPAR0KVVP
 created: 2026-11-27T16:03:24.580231Z
-updated: 2026-11-27T19:05:05.388107Z
+updated: 2026-11-27T22:40:32.738768Z
 type: task
 title: 'Workflow action Run script: each input filled from a trigger value, an earlier step''s output or a fixed value; outputs passed on; a failed before-script holds a joiner or mover (never a leaver)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,29 @@ sprint: snt3b17
 blocked_by:
 - 01M8EVWZT6GV2772J68J7TMCP1
 - 01M8EVXTA39JAEF3Q3Z2VAT1GG
+comments:
+- id: 01M8FJNQ6TTDW8WTPFZ9QV76SH
+  author: Steve Vine
+  at: 2026-11-27T22:40:32.474198Z
+  text: |-
+    Built: PR #2204, merged to main (not on staging yet; it goes with the sprint deploy).
+
+    What's there:
+    - **A new action, Run script**, for access workflows. Choose a published script, then say where each input comes from: a value the trigger hands on, an output of an earlier Run script step ("CRM user ID from Create CRM user"), or a typed value. **A hidden input can never be typed in.** A workflow can't be enabled while a required input is unmapped.
+    - **Steps run one after another**, and each script's outputs reach the steps after it. A script that fails fails the run, the steps after it don't run, and its "Script · Retry" Action is raised. **A Retry that works carries the workflow run on** from that step, through the rest.
+    - **Before-workflows hold a joiner or mover.** If a before-script fails, that person is marked failed with "Held by a script that runs before their changes: … Retry the script, or carry on without it, then retry the request". Other people on the same request aren't held. **A leaver is never held**: their account is disabled regardless.
+    - **Carry on without it** is on the workflow run view, for anyone who can approve requests or a Script Manager. It asks why, records who and why, marks the failed scripts as dealt with and re-queues the request. A before-script retried successfully re-queues it too.
+    - **Test against a past person** (held over from COM-2197): for an access workflow, the builder's Test picks someone from a recent request of that kind. It shows what the trigger would hand on, the path, and what each step would do ("Would run Create CRM user (version 1) with SignInName=…"). No script runs.
+    - Script runs are recorded on their own, so what was done to another system is never lost if a later step fails.
+    - Proven against a real SQL Server 2022: two scripts in a row with an output passed on, a failure and then a retry that carries on, a before-script holding a joiner and then carried on without, and testing against a past person running nothing.
+
+    For you to look at:
+    - These are calls I made in ADR 0185, to confirm or change: a leaver is never held, and Carry on is open to approvers as well as Script Managers.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain.** After COM-2196 (running a script) and COM-2197 (triggers). ADR 0185.
 
