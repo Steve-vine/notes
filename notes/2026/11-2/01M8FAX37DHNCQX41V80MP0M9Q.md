@@ -1,7 +1,7 @@
 ---
 id: 01M8FAX37DHNCQX41V80MP0M9Q
 created: 2026-11-27T20:24:45.549715Z
-updated: 2026-11-27T20:25:28.884674Z
+updated: 2026-11-27T22:13:15.990815Z
 type: task
 title: 'Polaris knows about the server agent: "which servers aren''t reporting?", "which servers are behind on patches?", "is SRV01 compliant?" — read-only, never a joining code'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,7 @@ number: 2209
 sprint: smfrbak
 blocked_by:
 - 01M8FAVGBYEAE17CNZBWV1KZEE
+- 01M8FH3GY56ZX1EJHRGMFC3Z32
 assignee: steve
 label:
 - feature
