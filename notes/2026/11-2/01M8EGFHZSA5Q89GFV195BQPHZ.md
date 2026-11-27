@@ -1,7 +1,7 @@
 ---
 id: 01M8EGFHZSA5Q89GFV195BQPHZ
 created: 2026-11-27T12:42:58.937094Z
-updated: 2026-11-27T16:18:41.820884Z
+updated: 2026-11-27T17:27:56.442292Z
 type: task
 title: A leaver loses their Entra directory roles, not just their sign-in
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,6 +9,33 @@ number: 2184
 sprint: smq8t5s
 blocked_by:
 - 01M8EGERP5KEBTQB48Q453GS5K
+comments:
+- id: 01M8F0SARTT28NWVR345TVHZJ5
+  author: Steve Vine
+  at: 2026-11-27T17:27:56.442101Z
+  text: |-
+    Done — merged to main in PR #2196. Not on staging yet; it goes with the sprint.
+
+    What changes:
+    - A leaver request lists the directory roles the person is losing, e.g. "Global Administrator (eligible, direct)" and "Exchange Administrator (active, through Exchange Admins)". A role held through a group goes when they leave the group, as before. Roles assigned straight to them are now taken away too.
+    - Leavers stay urgent. The disable, sign-out and memberships happen first, at once; role removal comes after and never holds them up. A scheduled leaver loses the roles at the leave time with everything else.
+    - Each direct role is handled one of two ways:
+      - Compass removes it itself when its app holds the role-write permission and an Access Privilege Approver (not the requester) approved the leaver.
+      - Otherwise, or if Microsoft refuses, it becomes an urgent to-do: "Remove Sam Jones's Global Administrator (eligible), in Entra". It's emailed straight away like any leaver step and closed by the next Entra read.
+    - Approval order, my decision: an Access Admin's approval runs the leaver at once, leaving the roles as urgent to-dos for a person. The leaver is never held waiting for an Access Privilege Approver; an Approver's approval only lets Compass do the role part itself.
+
+    Checks:
+    - Three new tests:
+      - without the permission: roles listed, account disabled at once, urgent to-do with its reason;
+      - with the permission and an Approver: Compass removes the role;
+      - with the permission and only an Access Admin: account disabled at once, role left to a person.
+    - Leaver suites passed (19).
+    - Unit suite passed.
+    - All ten CI jobs passed.
+
+    For pre-UAT on staging:
+    - The to-do path is checkable with an E2E leaver holding a test role.
+    - Compass removing the role itself needs the role-write permission in the staging tenant. If it isn't granted, that part is Couldn't check.
 assignee: steve
 label:
 - feature
