@@ -1,15 +1,17 @@
 ---
 id: 01M8FA3GMZV9MJB1KNFT34Q38X
 created: 2026-11-27T20:10:47.327707Z
-updated: 2026-11-27T20:10:47.327707Z
+updated: 2026-11-27T20:10:56.813996Z
 type: task
 title: The built-in Admin role no longer says it is "everything", and the Entra card says how to let Compass change directory roles
-priority: medium
-label: improvement
-assignee: steve
-task_status: active
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2201
+sprint: smq8t5s
+assignee: steve
+label:
+- improvement
+priority: medium
+task_status: active
 ---
 **Independent** (wording only — no migration; a route or schema description may change). Fix-forward for COM-2181 and COM-2182, found in Claude's pre-UAT pass on staging 30786db4f (27 Nov 2026).
 
