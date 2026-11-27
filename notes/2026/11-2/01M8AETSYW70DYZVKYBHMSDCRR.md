@@ -1,7 +1,7 @@
 ---
 id: 01M8AETSYW70DYZVKYBHMSDCRR
 created: 2026-11-25T22:57:12.668332Z
-updated: 2026-11-26T02:57:32.645001Z
+updated: 2026-11-27T11:25:05.557168Z
 type: task
 title: Send on behalf on a shared mailbox is held, shown and watched — like Full Access and Send As
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -42,7 +42,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Split out of COM-850 (review of what the mirror holds). **On the chain** (migration + API). The second half — requesting, roles, carrying it out, recertification — follows in its own task.
 

@@ -1,7 +1,7 @@
 ---
 id: 01M4JTYCA1GM9K3RGSYVQ436KK
 created: 2026-10-10T12:00:00.833462Z
-updated: 2026-11-26T02:57:16.753479Z
+updated: 2026-11-27T11:25:05.508969Z
 type: task
 title: Trusted accounts — changes made by an account an Access admin trusts are recorded, not sent for validation
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -47,7 +47,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 **On the chain** (migration + API). Independent of the COM-850 group of tasks.
 

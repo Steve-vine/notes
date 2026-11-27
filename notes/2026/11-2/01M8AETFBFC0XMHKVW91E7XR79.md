@@ -1,7 +1,7 @@
 ---
 id: 01M8AETFBFC0XMHKVW91E7XR79
 created: 2026-11-25T22:57:01.80752Z
-updated: 2026-11-26T02:57:27.591487Z
+updated: 2026-11-27T11:25:05.529213Z
 type: task
 title: Who's assigned to each enterprise app is held in Compass — shown on a person and reportable
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -45,7 +45,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: review
+task_status: done
 ---
 Split out of COM-850 (review of what the mirror holds). **On the chain** (migration + API). COM-850 stacks on this.
 
