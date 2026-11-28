@@ -1,17 +1,22 @@
 ---
 id: 01M8GKK8MX8TSKVP0R9DRJ82S3
 created: 2026-11-28T08:15:55.037388Z
-updated: 2026-11-28T10:54:01.033715Z
+updated: 2026-11-28T11:17:16.048541Z
 type: task
 title: 'The script editor is hard to read in dark mode: its text colours are light mode''s'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2224
 sprint: s09wwd3
+comments:
+- id: 01M8GXYZ53HP7JR65C6YWHF0XR
+  author: Steve Vine
+  at: 2026-11-28T11:17:04.291521Z
+  text: 'Done in PR #2232 (merged, with COM-2223). The editor''s colours all come from Compass''s own colour scheme now: keywords blue, table and type names purple, text in quotes teal, numbers orange, comments dimmed, @inputs cyan. Plain text, the background, line numbers and the placeholder follow the page too. Switching scheme updates it at once, with no reload. A test makes sure no fixed colour comes back. Preview and Versions show SQL in the page''s standard code box, which already suited both schemes. Check on staging in dark mode: New script, Edit draft, and a script''s Script tab.'
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 **Independent** (frontend only). Found by Steve testing the Scripting sprint on staging 89c46a222, 28 Nov 2026. Same editor as COM-2223 (no visible cursor); build them together.
 

@@ -1,17 +1,22 @@
 ---
 id: 01M8GKE48KB4GHJ8JA5P71EX0Y
 created: 2026-11-28T08:13:06.707145Z
-updated: 2026-11-28T10:54:00.386894Z
+updated: 2026-11-28T11:17:15.054044Z
 type: task
 title: The script editor shows no cursor while you type
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2223
 sprint: s09wwd3
+comments:
+- id: 01M8GXYW12EJHSB09JVFW0JD41
+  author: Steve Vine
+  at: 2026-11-28T11:17:01.090109Z
+  text: 'Done in PR #2232 (merged, with COM-2224). The script editor now draws its own cursor and selection in the page''s text colour, so both show in light and dark mode. Check on staging: Automation ▸ Scripts ▸ New script — type in the SQL box and select some text, in both colour schemes.'
 assignee: steve
 label:
 - bug
 priority: medium
-task_status: active
+task_status: review
 ---
 **Independent** (frontend only). Found by Steve testing the Scripting sprint on staging 89c46a222, 28 Nov 2026.
 
