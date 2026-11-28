@@ -1,7 +1,7 @@
 ---
 id: 01M8EVYY51BS2A7VW7E2F5V61T
 created: 2026-11-27T16:03:37.249403Z
-updated: 2026-11-27T22:56:09.826203Z
+updated: 2026-11-28T00:24:04.958861Z
 type: task
 title: An access request shows the scripts run for each person, before and after, with their outcome and outputs; Polaris can say what ran
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,16 @@ comments:
 
     For you to look at:
     - **Evidence export**: Compass has no per-request evidence export today. A script's runs export as a CSV from its Runs tab, naming who each run was for. Say if you want an export of the request itself.
+- id: 01M8FRKA2YNFDE0R9QAWF5X8DG
+  author: Steve Vine
+  at: 2026-11-28T00:24:04.958483Z
+  text: |-
+    Pre-UAT, staging 20261127-2345: **Couldn't check.**
+
+    - No request on staging has script runs yet. That needs a joiner carried out with an after-joiner workflow enabled, which creates a real account in the staging tenant. So the request page's Scripts section, the "A script failed" filter and the person page's list are there but empty. The requests list correctly shows no "A script failed" chip.
+    - Polaris's three new script tools: this session's connection to staging Polaris was opened before the deploy, so it doesn't offer them yet. Please ask Polaris "what scripts ran for <request>?" and "what does the Create CRM user script do?" once a joiner has run.
+
+    All of this is proven end to end against a real SQL Server in the integration tests.
 assignee: steve
 label:
 - feature

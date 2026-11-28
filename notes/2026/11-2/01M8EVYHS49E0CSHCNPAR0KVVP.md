@@ -1,7 +1,7 @@
 ---
 id: 01M8EVYHS49E0CSHCNPAR0KVVP
 created: 2026-11-27T16:03:24.580231Z
-updated: 2026-11-27T22:40:32.738768Z
+updated: 2026-11-28T00:24:04.903405Z
 type: task
 title: 'Workflow action Run script: each input filled from a trigger value, an earlier step''s output or a fixed value; outputs passed on; a failed before-script holds a joiner or mover (never a leaver)'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,25 @@ comments:
 
     For you to look at:
     - These are calls I made in ADR 0185, to confirm or change: a leaver is never held, and Carry on is open to approvers as well as Script Managers.
+- id: 01M8FRKA171100WNYYZJGSTDT4
+  author: Steve Vine
+  at: 2026-11-28T00:24:04.903064Z
+  text: |-
+    Pre-UAT, staging 20261127-2345, as E2E Admin B: **Passed for what staging can show; Couldn't check the rest.**
+
+    Passed:
+    - Run script, choosing Create CRM user, asked where each input comes from, and offered the trigger's values and "Type a value". Mapping Sign-in name and Display name cleared the "Say where … comes from" problems.
+    - Test against a past person (ACR-72): "Yes: The outcome was Succeeded", then "Would run Create CRM user (version 1) with SignInName=Compass.Test@moneypenny.co.uk, DisplayName=Compass Test". The test database's row count didn't change, so no script ran.
+
+    Couldn't check (all need a joiner, mover or leaver actually carried out on staging, which creates or changes a real account in the staging tenant):
+    - the after-joiner run;
+    - the hold from a failing before-script;
+    - Carry on without it;
+    - a leaver not being held.
+
+    These are proven against a real SQL Server in the integration tests. Please try one on staging.
+
+    Screenshots: ~/compass-uat/scripting/COM-2198/.
 assignee: steve
 label:
 - feature

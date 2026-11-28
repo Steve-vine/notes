@@ -1,7 +1,7 @@
 ---
 id: 01M8EVWZT6GV2772J68J7TMCP1
 created: 2026-11-27T16:02:33.414673Z
-updated: 2026-11-27T22:06:06.512922Z
+updated: 2026-11-28T00:23:59.813951Z
 type: task
 title: 'Running a script: Run now (for real, after confirming), a time limit, outputs read back, and every run recorded with its inputs, outputs and error'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,22 @@ comments:
 
     For you to look at:
     - These are calls I made in ADR 0185, to confirm or change: the 2-minute default and 15-minute maximum.
+- id: 01M8FRK525H8MGHHR4KP758WAB
+  author: Steve Vine
+  at: 2026-11-28T00:23:59.813709Z
+  text: |-
+    Pre-UAT, staging 20261127-2345, as E2E Admin B: **Passed.**
+
+    1. Run now on Create CRM user, after the confirmation "This runs version 1 against E2E test CRM database for real. There's no undo. Run it?" → Succeeded, "Handed back: CrmUserId: 1000". The row is in the test database exactly as given.
+    2. The same sign-in name again → Failed: "SQL Server refused the script, so nothing it did was kept", then the database's own message ("That sign-in name is already in the CRM"). Retry and "Mark as dealt with" are offered. The owner's Actions show "Script failed: Create CRM user…" with Retry, linking to the run.
+    3. A second script with a 5-second limit and a hidden input, waiting 10 seconds → Timed out: "It ran past its time limit of 5 seconds and was stopped. SQL Server undid what it had done". The run shows "TempPassword: (hidden)", and Retry asks for it again. I marked it as dealt with, and it records who and why.
+
+    Findings (fix-forward task to follow):
+    - The confirmation is the browser's own pop-up, not Compass's dialog.
+    - The SQL driver logs every connection step on the worker.
+    - Once, a run showed Running for about 30 seconds after it had finished (the server records it as done in 0.1 s). I couldn't reproduce it, and it was most likely the test browser slowing the page's timers.
+
+    Screenshots: ~/compass-uat/scripting/COM-2196/.
 assignee: steve
 label:
 - feature

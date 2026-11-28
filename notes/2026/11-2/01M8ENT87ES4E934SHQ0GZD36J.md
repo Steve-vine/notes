@@ -1,7 +1,7 @@
 ---
 id: 01M8ENT87ES4E934SHQ0GZD36J
 created: 2026-11-27T14:16:12.270567Z
-updated: 2026-11-27T23:14:31.794577Z
+updated: 2026-11-28T00:24:05.02813Z
 type: task
 title: 'The joiner form only accepts what the directory can create: every field held to its limit and allowed characters as it''s typed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -26,6 +26,18 @@ comments:
 
     For you to look at:
     - **Cost center** has no documented Entra limit and no AD equivalent, so I set it to 64. Say if your tenant takes more.
+- id: 01M8FRKA54PS0WNCW34CNTX1XV
+  author: Steve Vine
+  at: 2026-11-28T00:24:05.027789Z
+  text: |-
+    Pre-UAT, staging 20261127-2345, as E2E Access Manager (New request ▸ Joiner; nothing submitted): **Passed for the form; Couldn't check Polaris or a role's defaults.**
+
+    1. Staging makes new starters in AD. Typing a 65-character display name stopped at 64, with "64 / 64" shown. Compass never shortened anything already there.
+    2. The sign-in name "ada lovelace" → "The name before the @ can't contain a space — only letters A to Z, digits and ' . - _ ! # ^ ~", and Submit stayed unavailable.
+
+    Couldn't check: the same limits through Polaris (this session's staging Polaris connection predates the deploy) and in a role's joiner defaults. Both are covered by tests.
+
+    Screenshot: ~/compass-uat/scripting/COM-2190/.
 assignee: steve
 label:
 - improvement

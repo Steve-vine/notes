@@ -1,7 +1,7 @@
 ---
 id: 01M8EVXTA39JAEF3Q3Z2VAT1GG
 created: 2026-11-27T16:03:00.54741Z
-updated: 2026-11-27T22:22:18.448873Z
+updated: 2026-11-28T00:24:17.440244Z
 type: task
 title: Workflow triggers before and after a joiner, a mover and a leaver, per person, each publishing the values it provides; plus Outcome and Business role conditions
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -28,6 +28,23 @@ comments:
     For you to look at:
     - "Test against a past person", from this task's Done when, was built with COM-2198 and is in its comment.
     - I dropped a "Company is" condition, because a workflow already belongs to one company.
+- id: 01M8FRK53ZB1AX7W3ABTSJ0T0M
+  author: Steve Vine
+  at: 2026-11-28T00:23:59.871423Z
+  text: |-
+    Pre-UAT, staging 20261127-2345, as E2E Admin B in E2E Test Company: **Passed for what staging can show; Couldn't check the rest.**
+
+    Passed:
+    - The workflow builder offers all six access triggers (before and after a joiner, mover and leaver) with their descriptions, plus the Outcome is and Business role is conditions.
+    - Built WFL-14: After a joiner → Outcome is Succeeded → Run script. It saved with nothing to put right.
+    - Test against a past person (ACR-72, Compass Test) listed everything the trigger hands on: request, company, requested and approved by, display name, sign-in name, email, primary role, logon name, outcome, Entra object ID and AD object GUID.
+
+    Couldn't check:
+    - A workflow actually running for a joiner, mover or leaver. On staging that means carrying out a real joiner, which creates a real account in the staging tenant. Please check it with a joiner you're happy to create.
+
+    Small finding (fix-forward task to follow): the test lists the values by their internal keys ("sign_in_name:") rather than their labels ("Sign-in name").
+
+    Screenshots: ~/compass-uat/scripting/COM-2198/.
 assignee: steve
 label:
 - feature

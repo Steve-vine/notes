@@ -1,7 +1,7 @@
 ---
 id: 01M8EPGK1MKZBV9GEW7PSYQ2TV
 created: 2026-11-27T14:28:24.24447Z
-updated: 2026-11-27T23:30:33.426702Z
+updated: 2026-11-28T00:24:06.5067Z
 type: task
 title: 'A new starter can''t share a logon name, email address or display name with anyone already in AD or Entra ID: checked before the request can be submitted, and Compass never changes what was typed'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -33,6 +33,30 @@ comments:
     For you to look at:
     - **Renaming in a mover**: Compass can't change a display name or sign-in name in a mover today, so there's nothing to check there yet.
     - **The live checks are tested against fakes.** Pre-UAT can show the form and Compass's own copy of the directory. Checking a real alias clash needs the real AD or Entra connection, so that one is for you on staging.
+- id: 01M8FRKBKA9HC47JTYW2ADM72V
+  author: Steve Vine
+  at: 2026-11-28T00:24:06.506357Z
+  text: |-
+    Pre-UAT, staging 20261127-2345, as E2E Access Manager (New request ▸ Joiner; nothing submitted): **Passed for the form; Couldn't check the live checks.**
+
+    1. The form has the new **Logon name** box (required, "DOMAIN\name — 20 characters at most"). It's filled from the sign-in name only when that's valid as it stands.
+    2. Display name "Compass Test" with sign-in name "Compass.Test" (an existing account) showed, under each box:
+       - "The display name Compass Test already belongs to Compass Test (Compass.Test@moneypenny.co.uk)";
+       - "The sign-in name Compass.Test@moneypenny.co.uk already belongs to …";
+       - "The logon name Compass.Test already belongs to …".
+
+       Submit stayed unavailable.
+    3. Changing to free names cleared all three.
+
+    Couldn't check:
+    - the checks against the directories themselves (aliases);
+    - a clash appearing after approval stopping the joiner before anything is created.
+
+    Both need the real AD and Entra connections and a submitted joiner, and both are proven against fakes in the tests. Please try one with a shared mailbox's alias.
+
+    Small finding (fix-forward task to follow): just after you change a name, the old message lingers for a moment until the check for the new name comes back. Submit stays unavailable meanwhile, so it's safe.
+
+    Screenshots: ~/compass-uat/scripting/COM-2191/.
 assignee: steve
 label:
 - improvement
