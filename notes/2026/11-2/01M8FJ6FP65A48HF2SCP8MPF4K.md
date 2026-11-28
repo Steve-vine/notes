@@ -1,7 +1,7 @@
 ---
 id: 01M8FJ6FP65A48HF2SCP8MPF4K
 created: 2026-11-27T22:32:13.254289Z
-updated: 2026-11-27T22:34:52.508817Z
+updated: 2026-11-28T02:50:43.340559Z
 type: task
 title: 'ADR 0188: known vulnerabilities from discovered software — exact matches (Windows builds, Linux distribution packages) raise and close vulnerabilities by themselves; other software stays "possibly affects us"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - brief
 priority: high
-task_status: todo
+task_status: active
 ---
 **Independent** (decision record only). Sprint 131 "Vulnerabilities - Software matching". Follows the Server Agent sprint (ADR 0187), which gives on-premises servers a software list, a full build and installed updates. Built in COM-2212 to COM-2219.
 
