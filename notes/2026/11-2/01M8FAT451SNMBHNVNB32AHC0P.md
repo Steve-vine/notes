@@ -1,7 +1,7 @@
 ---
 id: 01M8FAT451SNMBHNVNB32AHC0P
 created: 2026-11-27T20:23:08.193833Z
-updated: 2026-11-27T23:40:11.959342Z
+updated: 2026-11-28T00:27:29.284357Z
 type: task
 title: 'Servers join with one install per company: a joining code, Windows and Linux install scripts that fetch osquery from the agent door, directory matching, and Waiting to join for anything else'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 2204
 sprint: smfrbak
 blocked_by:
 - 01M8FASC8E9JHHQ9AZ8726MBSF
+comments:
+- id: 01M8FRSGMZ6HNNK5AB7EV8VHTF
+  author: Steve Vine
+  at: 2026-11-28T00:27:28.287165Z
+  text: |-
+    Built: PR #2215, merged to main (not on staging yet; it goes with the sprint's deploy).
+
+    What's there:
+    - Admin ▸ Integrations ▸ Server agent now also shows "Servers from the agent" for the company chosen at the top of the screen, for Inventory admins. Switch the agent on, and Compass makes the company's joining code (shown on request, changeable, listed in the Secrets register).
+    - Two install scripts to download: Windows (PowerShell) and Linux (Bash, for both dpkg and rpm). Each downloads osquery 5.24.1 from the agent address itself, checks its checksum (and its signature on Windows) before installing, writes the settings (including the ones that keep the agent read-only) and the joining code, and restarts osquery. Running the same script again upgrades osquery and keeps the server's key, so Automox can push it as-is.
+    - A server whose name matches a server the directory already found for the company joins by itself. Anything else waits under "Waiting to join" with the reason: not in the directory, a name matching several servers, or "SRV01 already reports through the agent; last seen …". Accept, Replace the old one, or Refuse; a refused server can't join again. Reporting servers show last seen, Not reporting after 24 hours, Out of date when on an older osquery, and Remove.
+    - An optional certificate authority for the agent address, install-wide. Empty means the public authorities osquery ships with, which is right behind Cloudflare.
+
+    Tested for real: the Linux script, run in an Ubuntu container against a TLS copy of the door, downloaded osquery from Compass, installed it, and the server joined. The Windows script parses cleanly in PowerShell, but I couldn't run it on a real Windows server.
+
+    For you to look at:
+    - Run the Windows script on a test server (Couldn't check for me).
+    - Staging needs the agent address and the test servers (COM-2208) before you can see it there.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (new tables and API). ADR 0187 §4, §6, §9. After COM-2203.
 
