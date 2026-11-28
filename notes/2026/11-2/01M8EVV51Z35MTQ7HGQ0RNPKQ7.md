@@ -1,7 +1,7 @@
 ---
 id: 01M8EVV51Z35MTQ7HGQ0RNPKQ7
 created: 2026-11-27T16:01:33.247105Z
-updated: 2026-11-27T20:06:01.160671Z
+updated: 2026-11-28T00:23:59.197038Z
 type: task
 title: 'A new built-in role, Script Manager: the only people who can write, publish and run scripts'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -24,6 +24,18 @@ comments:
 
     For you to look at:
     - These are calls I made in ADR 0185, to confirm or change: Admin not holding it, and the right being kept out of custom roles.
+- id: 01M8FRK4EXKH1HCTZAXCD91JQD
+  author: Steve Vine
+  at: 2026-11-28T00:23:59.196819Z
+  text: |-
+    Pre-UAT, staging 20261127-2345: **Passed, with one correction to my earlier comment.**
+
+    1. As E2E Admin A (Admin, no Script Manager): Automation ▸ Scripts opens and reads "No script has been written yet. Writing one needs the Script Manager role", with no New script button.
+    2. Admin ▸ Roles lists Script Manager as a built-in role. The Admin role's text says it holds every permission except those reserved to Access Privilege Approver and Script Manager.
+    3. **Correction:** an Admin can't give the role to themselves. Admin ▸ Users never lets anyone change their own roles, so another admin has to grant it. That's Compass's existing rule for every role, so I've left it. Say if Script Manager should be an exception.
+    4. E2E Admin A gave Script Manager to E2E Admin B, and B then got New script (see COM-2195).
+
+    Screenshots: ~/compass-uat/scripting/COM-2193/.
 assignee: steve
 label:
 - feature

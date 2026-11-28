@@ -1,7 +1,7 @@
 ---
 id: 01M8EVVQZR7CA1XDQ6RZ0C9AB8
 created: 2026-11-27T16:01:52.63207Z
-updated: 2026-11-27T19:30:18.337214Z
+updated: 2026-11-28T00:23:59.104138Z
 type: task
 title: 'Action integrations: a new kind of integration that can make changes, defined on screen. The first type is a SQL Server database'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -27,6 +27,18 @@ comments:
     - Windows (Kerberos) sign-in isn't in. Proving it needs a SQL Server joined to a domain, and none was available. SQL logins work.
     - "Which scripts use it" and "can't be deleted while a script uses it" arrive with COM-2195.
     - For pre-UAT I'll put a small test SQL Server in staging, for the E2E Test Company only.
+- id: 01M8FRK4C0QQ69P493T5ZNA2WG
+  author: Steve Vine
+  at: 2026-11-28T00:23:59.103904Z
+  text: |-
+    Pre-UAT, staging 20261127-2345 (cb5b5e49f), as E2E Admin A: **Passed.**
+
+    1. Admin ▸ Integrations ▸ Action ▸ Add: SQL Server database "E2E test CRM database", pointing at the staging test server (sqlserver-test.compass.svc.cluster.local:1433, CRM_TEST, login compass_svc, Encrypt off because its certificate is self-signed). Saved. The page says "Compass can do whatever this login is allowed to do…" and "Not encrypted: the password and everything a script sends can be read on the network."
+    2. Test connection, before approving the address → "Couldn't connect: …is a private address Compass hasn't been allowed to reach. An administrator can approve an internal address under Admin ▸ Integrations ▸ Internal addresses".
+    3. Approved the address under Internal addresses, tested again → "Connected as compass_svc to CRM_TEST on sqlserver-test-…: SQL Server 2022 (16.0.4325.4)".
+    4. The password can't be read back; the page shows only when it was set. It also shows the password's last four characters, the same way Collection integrations show a key's ending.
+
+    Screenshots: ~/compass-uat/scripting/COM-2194/.
 assignee: steve
 label:
 - feature

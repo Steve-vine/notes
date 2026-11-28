@@ -1,7 +1,7 @@
 ---
 id: 01M8EVWB720QQ5GJX27MZQHCJD
 created: 2026-11-27T16:02:12.322671Z
-updated: 2026-11-27T20:49:55.235116Z
+updated: 2026-11-28T00:23:59.244453Z
 type: task
 title: 'Automation ▸ Scripts: a script with declared inputs and outputs, written in SQL against an action integration, versioned (draft, then publish), with Preview of exactly what would be sent'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -31,6 +31,21 @@ comments:
 
     For you to look at:
     - These are calls I made in ADR 0185, to confirm or change: scripts are organisation-wide (not per company), with a default time limit of 2 minutes and at most 15.
+- id: 01M8FRK4GCN6A7W9CZ6CS1R23H
+  author: Steve Vine
+  at: 2026-11-28T00:23:59.244114Z
+  text: |-
+    Pre-UAT, staging 20261127-2345, as E2E Admin B (Script Manager): **Passed.**
+
+    1. New script "Create CRM user" against E2E test CRM database, with two inputs (@SignInName, @DisplayName) and one output (CrmUserId).
+    2. With the script using an undeclared @Department, Save was refused: "The script uses @Department, which isn't an input or declared in the script. Add an input of that name, or DECLARE it".
+    3. Rewritten to DECLARE its own @Count: it saved as a draft.
+    4. Preview with O'Brien values showed the text exactly as written, with each value bound as nvarchar(max). The test database still had 0 rows afterwards, so nothing was sent.
+    5. Published as version 1 with a note.
+
+    Small finding (fix-forward task to follow): the script page lists the output as "@CrmUserId", although outputs are column names, not @ values.
+
+    Screenshots: ~/compass-uat/scripting/COM-2195/.
 assignee: steve
 label:
 - feature
