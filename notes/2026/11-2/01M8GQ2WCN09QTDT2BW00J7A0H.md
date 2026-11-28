@@ -1,7 +1,7 @@
 ---
 id: 01M8GQ2WCN09QTDT2BW00J7A0H
 created: 2026-11-28T09:16:52.501109Z
-updated: 2026-11-28T09:49:06.778063Z
+updated: 2026-11-28T12:09:18.364486Z
 type: task
 title: 'A sealed-off runner for PowerShell and Python generators: one container per run, no network, no credentials, only the run''s input values in'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain.** After the Scripting phase 2 ADR (COM-2225). **A condition of adding either language** (ADR 0185 §9).
 
