@@ -1,17 +1,44 @@
 ---
 id: 01M8FJ6FP65A48HF2SCP8MPF4K
 created: 2026-11-27T22:32:13.254289Z
-updated: 2026-11-28T02:50:43.340559Z
+updated: 2026-11-28T03:16:08.591538Z
 type: task
 title: 'ADR 0188: known vulnerabilities from discovered software — exact matches (Windows builds, Linux distribution packages) raise and close vulnerabilities by themselves; other software stays "possibly affects us"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2211
 sprint: s51yxk5
+comments:
+- id: 01M8G2EATT555XA6E18H862ERD
+  author: Steve Vine
+  at: 2026-11-28T03:16:07.642742Z
+  text: |-
+    Done: ADR 0188 is on main as Proposed (PR #2223, decisions/0188-known-vulnerabilities-from-discovered-software.md).
+
+    What it records:
+    - The Security Feed matches each server at its own version, cloud and agent alike, not the one version on the Software register.
+    - Exact matches need no person to say what the software is:
+      - Windows: the server's full build against Microsoft's fixed build. Updates are cumulative, so the same build at or above the fixed revision is fixed.
+      - Linux packages: each package against its own distribution's fixed version, from a new Security Feed source (OSV.dev), using that distribution's version rules. NVD's upstream ranges are never used for distribution packages, because their fixes are backported.
+    - Other software (third-party programs) stays "possibly affects us", through the product link a person confirmed, now naming each server and its version.
+    - Exact matches with a fix raise vulnerabilities by themselves, under a new source, Version match:
+      - one per CVE per server, through the same path the scanners use;
+      - they join a Nessus sighting rather than duplicating it;
+      - they close as Fixed only for servers that reported, and reopen if the problem comes back;
+      - your Accepted and False positive decisions stand.
+      - A raised match creates no Security Feed action.
+    - Patch level is judged by missing security fixes, with the age of the last update as the fallback.
+
+    Your five calls are listed in it for you to overturn:
+    1. A vulnerability is raised only when a fix is available.
+    2. Every severity is raised by default; each company can set a minimum, or switch raising off.
+    3. OSV.dev is the Linux source.
+    4. A Windows server with no full build is never an exact match.
+    5. Security fixes are due within 14 days of release (7 for known-exploited); the 35-day rule becomes the fallback.
 assignee: steve
 label:
 - brief
 priority: high
-task_status: active
+task_status: review
 ---
 **Independent** (decision record only). Sprint 131 "Vulnerabilities - Software matching". Follows the Server Agent sprint (ADR 0187), which gives on-premises servers a software list, a full build and installed updates. Built in COM-2212 to COM-2219.
 
