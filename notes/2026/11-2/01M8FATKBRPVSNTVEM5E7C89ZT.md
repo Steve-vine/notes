@@ -1,7 +1,7 @@
 ---
 id: 01M8FATKBRPVSNTVEM5E7C89ZT
 created: 2026-11-27T20:23:23.768165Z
-updated: 2026-11-27T23:40:25.717966Z
+updated: 2026-11-28T01:16:13.648957Z
 type: task
 title: 'Inventory from the agent: a reporting server''s operating system, hardware, addresses and installed software arrive every 6 hours and on Read now, on the same entry the directory found'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,30 @@ number: 2205
 sprint: smfrbak
 blocked_by:
 - 01M8FAT451SNMBHNVNB32AHC0P
+comments:
+- id: 01M8FVJRKXWX2965KKKACFPDPH
+  author: Steve Vine
+  at: 2026-11-28T01:16:12.796923Z
+  text: |-
+    Built: PR #2216, merged to main (not on staging yet; it goes with the sprint's deploy).
+
+    What's there:
+    - Each server reporting through the agent is asked its questions when it checks in: when its last read is six hours old, or when someone presses Read now on the company's server agent card (answered within five minutes).
+    - What it reports lands on the same entry the directory found for it: operating system with version, build and revision, when it was installed and last started, make, model, serial number, processor, memory and IP addresses. These show on the discovered server with their own labels ("…, as the server reports it"), and a directory server reporting through the agent gets a "Reports through the agent" chip. A directory read no longer wipes what the agent said: the two sit side by side.
+    - Installed software (Windows programs, Linux packages and the operating system itself) appears like any other source's, marked as reported by the server, with support dates and the asset's worst-of support. Updates and hotfixes stay out (they're COM-2206's). An uninstalled program is gone at the next read.
+    - The server's IP addresses are added to its technology asset, as discovery does for clouds.
+    - Each reporting server on the card shows when it was last read, and why its answer couldn't be used, if it couldn't.
+
+    Proven with a real osquery 5.24.1 answering with this machine's own packages.
+
+    For you to look at:
+    - A Windows server's programs list once one reports (Couldn't check for me).
+    - CI caught one of my own slips first: COM-2203's door test still expected a joined server to be asked nothing. That's fixed in the same PR.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (API, possibly a migration for new facts). ADR 0187 §5, §6. After COM-2204.
 
