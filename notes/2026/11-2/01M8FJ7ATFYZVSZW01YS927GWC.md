@@ -1,7 +1,7 @@
 ---
 id: 01M8FJ7ATFYZVSZW01YS927GWC
 created: 2026-11-27T22:32:41.039196Z
-updated: 2026-11-27T22:35:06.038473Z
+updated: 2026-11-28T06:39:58.938029Z
 type: task
 title: 'Windows exact matching: each Windows server''s full build is compared with Microsoft''s fixed build for every security update, so a server lists exactly which fixes it''s missing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain** (API, possibly a table for per-server results). ADR 0188. After COM-2212, and needs the Server Agent sprint's full build (COM-2206).
 
