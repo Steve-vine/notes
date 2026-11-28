@@ -1,7 +1,7 @@
 ---
 id: 01M8FJ7TFNQFWW8YNYWRTBFJFY
 created: 2026-11-27T22:32:57.077322Z
-updated: 2026-11-27T22:35:07.137793Z
+updated: 2026-11-28T06:58:11.807879Z
 type: task
 title: 'A new Security Feed source, Linux distributions (OSV.dev): Ubuntu, Debian, Red Hat, Rocky and Alma security data, with each distribution''s fixed package versions and Debian/RPM version rules'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain** (new tables and API). ADR 0188. After COM-2213.
 
