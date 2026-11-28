@@ -1,7 +1,7 @@
 ---
 id: 01M8FAWA6C6YNPYHHRGNNGQYDD
 created: 2026-11-27T20:24:19.916627Z
-updated: 2026-11-28T00:52:21.468906Z
+updated: 2026-11-28T01:37:56.301466Z
 type: task
 title: 'Staging test rig and the production setup guide: an osquery agent in a container reporting to staging for the E2E Test Company, and the steps to publish the agent door in production'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,25 @@ number: 2208
 sprint: smfrbak
 blocked_by:
 - 01M8FAT451SNMBHNVNB32AHC0P
+comments:
+- id: 01M8FWTEYW0TM7B3GJC90W3XHB
+  author: Steve Vine
+  at: 2026-11-28T01:37:53.628768Z
+  text: |-
+    Built: PR #2218, merged to main (it goes to staging with the sprint's deploy).
+
+    What's there:
+    - Staging publishes the agent address at agent.citops.net, with its own certificate. No public DNS record is needed: the test servers reach it from inside the cluster.
+    - Two test servers for the E2E Test Company, an Ubuntu 24.04 and a Rocky Linux 9 container, kept apart from the app (scripts/infra/server-agent-test.yaml, applied by hand, never in production). Each runs the company's real Linux install script, which downloads osquery from the agent address, checks it, installs it and joins. They run as root because installing a package is the point, with privilege escalation off.
+    - The browser tests open Admin ▸ Integrations ▸ Server agent.
+    - The production guide (scripts/infra/production/README.md): the setting for the agent address, the Cloudflare Tunnel route and a rule that blocks everything but your servers' fixed addresses, the allowed addresses in Compass, and an Automox worklet (paste the company's script as the fix; the check looks for osquery 5.24.1 running).
+
+    For you to do in production: the four steps in that guide. Staging I set up myself at the sprint's deploy (allow the pod network, switch the agent on for the E2E Test Company, load its script, start the two servers).
 assignee: steve
 label:
 - chore
 priority: medium
-task_status: active
+task_status: review
 ---
 **Independent** (staging values, test rig, docs; no migration or API). ADR 0187 Consequences. After COM-2204 (needs the install script).
 
