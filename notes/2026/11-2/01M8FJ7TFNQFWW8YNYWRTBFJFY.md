@@ -1,7 +1,7 @@
 ---
 id: 01M8FJ7TFNQFWW8YNYWRTBFJFY
 created: 2026-11-27T22:32:57.077322Z
-updated: 2026-11-28T06:58:11.807879Z
+updated: 2026-11-28T07:51:39.787056Z
 type: task
 title: 'A new Security Feed source, Linux distributions (OSV.dev): Ubuntu, Debian, Red Hat, Rocky and Alma security data, with each distribution''s fixed package versions and Debian/RPM version rules'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,29 @@ number: 2214
 sprint: s51yxk5
 blocked_by:
 - 01M8FJ7ATFYZVSZW01YS927GWC
+comments:
+- id: 01M8GJ6TJPJ6A5WW3ZHG0NVS6J
+  author: Steve Vine
+  at: 2026-11-28T07:51:38.83794Z
+  text: |-
+    Built: PR #2226, merged to main (not on staging yet; it goes with the sprints' deploy).
+
+    What's there:
+    - Security Feed ▸ Sources gains "Linux distributions (OSV.dev)", with health like the others. It covers Ubuntu, Debian, Red Hat Enterprise Linux, Rocky Linux and AlmaLinux, each release separately.
+    - Each distribution's advisory joins the existing item for every CVE it names. The item page gains a "Linux distributions" panel: release, package, the version that fixes it there (or "No fix yet"), a link to the advisory (USN, DSA, RHSA, RLSA, ALSA or the distribution's own CVE page), and the distribution's own rating beside the item's where they differ ("Ubuntu: Medium · overall: High").
+    - Debian and RPM version rules are written from dpkg and rpm. Every one of 140 published reference cases passes, and the Debian ones are also checked against dpkg itself.
+    - The agent's package lists are now kept as each server answered them, with source package, epoch and release, so packages can be looked up the way their distribution's advisories name them.
+
+    One decision, different from the task's notes: the source doesn't copy OSV's whole exports. Ubuntu's alone is 850 MB, and nearly every record is rewritten each month, so a full read would mean hundreds of thousands of downloads a month. Instead it asks OSV about exactly what our servers run, every distinct package and version, a thousand at a time. It then reads each advisory that comes back once, and again only when it changes. The feed holds what matters to someone here and stays small. The cost: a CVE shows distribution data only once some server runs an affected package.
+
+    Left out: Ubuntu Pro streams, Red Hat's extended-support streams, and Red Hat's bug-fix and enhancement advisories. Only RHSA security advisories are read.
+
+    For you to look at: on staging, once the test servers report, an OpenSSL CVE's item should show Ubuntu 24.04 and Rocky 9 fixes. I'll check this in the pre-UAT pass. The task said Ubuntu 22.04, but the staging test servers run Ubuntu 24.04.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (new tables and API). ADR 0188. After COM-2213.
 
