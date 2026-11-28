@@ -1,15 +1,17 @@
 ---
 id: 01M8HMWQC4NT5KS3HHD9N4MWX0
 created: 2026-11-28T17:57:48.036516Z
-updated: 2026-11-28T17:57:48.036516Z
+updated: 2026-11-28T17:57:57.225403Z
 type: task
 title: 'Scripting polish from pre-UAT: wording written for SQL on Web/API and generator screens, New script opening scrolled past its heading, selected text in dark mode, and two Event log details'
-priority: low
-task_status: active
-assignee: steve
-label: bug
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2243
+sprint: s09wwd3
+assignee: steve
+label:
+- bug
+priority: low
+task_status: active
 ---
 **Small defects from the sprint 132 pre-UAT pass.** Independent: no migration, no API change.
 
