@@ -1,7 +1,7 @@
 ---
 id: 01KXGC5PTGYHV30VM3E78G76S1
 created: 2026-07-14T13:13:30.704987Z
-updated: 2026-11-28T09:17:13.105439Z
+updated: 2026-11-28T09:48:25.863333Z
 type: project
 title: Compass
 identifier: COM
@@ -1106,6 +1106,9 @@ sprints:
   title: Server Agent
 - id: s51yxk5
   title: Vulnerabilities - Software matching
+- id: s09wwd3
+  title: Scripting - Phase 2
+  description: Integrations come as Web/API or Server for Collection and Action; PowerShell and Python run in Compass to build API calls and SQL; an Event log, and a Log Event workflow action.
 assignee: steve
 priority: medium
 project_status: active
