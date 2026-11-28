@@ -1,7 +1,7 @@
 ---
 id: 01M8GQ2M65C4ZYHPCFFMZN6KXH
 created: 2026-11-28T09:16:44.101469Z
-updated: 2026-11-28T09:50:05.115544Z
+updated: 2026-11-28T11:49:33.790771Z
 type: task
 title: 'Collection feeds from a SQL Server database: rows into Inventory, Vulnerabilities or Secrets through each area''s own rules'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: low
-task_status: todo
+task_status: active
 ---
 **On the chain.** After the Server-family Collection integration task. ADR 0147 (feeds are configuration, never code that knows a service).
 
