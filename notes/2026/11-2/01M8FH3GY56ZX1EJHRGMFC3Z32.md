@@ -1,7 +1,7 @@
 ---
 id: 01M8FH3GY56ZX1EJHRGMFC3Z32
 created: 2026-11-27T22:13:07.653442Z
-updated: 2026-11-27T22:13:14.742324Z
+updated: 2026-11-28T00:29:13.041381Z
 type: task
 title: 'Linux server configuration checks: built-in checks modelled on the CIS Linux benchmarks (SSH, accounts, firewall, services, SELinux/AppArmor, audit, time, kernel), sharing the cross-platform checks with Windows'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain** (checks, settings, API). ADR 0187 §8 (as amended for Linux). After COM-2207. Steve, 27 Nov 2026: "add configuration checks for Linux."
 
