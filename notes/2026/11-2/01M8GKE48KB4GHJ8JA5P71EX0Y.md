@@ -1,7 +1,7 @@
 ---
 id: 01M8GKE48KB4GHJ8JA5P71EX0Y
 created: 2026-11-28T08:13:06.707145Z
-updated: 2026-11-28T09:50:05.39753Z
+updated: 2026-11-28T10:54:00.386894Z
 type: task
 title: The script editor shows no cursor while you type
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 **Independent** (frontend only). Found by Steve testing the Scripting sprint on staging 89c46a222, 28 Nov 2026.
 

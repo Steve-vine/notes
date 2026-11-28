@@ -1,7 +1,7 @@
 ---
 id: 01M8GKK8MX8TSKVP0R9DRJ82S3
 created: 2026-11-28T08:15:55.037388Z
-updated: 2026-11-28T09:50:05.564876Z
+updated: 2026-11-28T10:54:01.033715Z
 type: task
 title: 'The script editor is hard to read in dark mode: its text colours are light mode''s'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - bug
 priority: medium
-task_status: todo
+task_status: active
 ---
 **Independent** (frontend only). Found by Steve testing the Scripting sprint on staging 89c46a222, 28 Nov 2026. Same editor as COM-2223 (no visible cursor); build them together.
 
