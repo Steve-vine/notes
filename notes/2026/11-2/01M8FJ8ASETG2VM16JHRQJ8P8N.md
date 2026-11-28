@@ -1,7 +1,7 @@
 ---
 id: 01M8FJ8ASETG2VM16JHRQJ8P8N
 created: 2026-11-27T22:33:13.774808Z
-updated: 2026-11-28T07:22:19.729332Z
+updated: 2026-11-28T07:56:47.382624Z
 type: task
 title: 'Linux exact matching: each Linux server''s installed packages are compared with its own distribution''s fixed versions, so a server lists exactly which security fixes it''s missing'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,29 @@ sprint: s51yxk5
 blocked_by:
 - 01M8FJ7TFNQFWW8YNYWRTBFJFY
 - 01M8FATKBRPVSNTVEM5E7C89ZT
+comments:
+- id: 01M8GJG569DYAYN2WXH2GQDXCD
+  author: Steve Vine
+  at: 2026-11-28T07:56:44.617245Z
+  text: |-
+    Built: PR #2227, merged to main (not on staging yet; it goes with the sprints' deploy).
+
+    What's there:
+    - Each Linux server's packages are compared with its own distribution and release's fixed versions, by that distribution's own rules (dpkg for Ubuntu and Debian, rpm for Red Hat, Rocky and Alma).
+    - A Linux server's Patch level card lists its missing security fixes, each linking to its feed item: "CVE-2026-1001 · High · distribution: Medium · openssl 3.0.2-0ubuntu1.15 → 3.0.2-0ubuntu1.18 · USN-9000-1 · released …". Otherwise it says "none missing".
+    - A separate "No fix available yet" list, folded away, shows CVEs the distribution hasn't fixed for that release. They're visible, but kept apart from what can be patched.
+    - A release the distribution data doesn't cover reads "This release isn't covered by the distribution data: can't tell exactly…".
+    - On the Security Feed item, "Everything we run" reads "Affects us: exact match" per release ("Ubuntu 22.04"), with each server's package and version. A server that has the fix appears under "Why it doesn't match what we run" as "not affected, exact match".
+    - When a server's packages change, its company's matches are worked out again.
+
+    One thing differs from the task: cloud servers (AWS Systems Manager, Azure Change Tracking) aren't judged exactly. Their package lists don't keep the source package or the release, so only servers reporting through the agent are. Cloud servers keep the "possible" route.
+
+    For you to look at: on staging, the Ubuntu test server once its packages are read. I'll check this in the pre-UAT pass.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (API, possibly columns on discovered software). ADR 0188. After COM-2214, and needs the Server Agent sprint's package lists (COM-2205).
 
