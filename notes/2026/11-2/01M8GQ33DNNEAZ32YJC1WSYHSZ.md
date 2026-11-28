@@ -1,7 +1,7 @@
 ---
 id: 01M8GQ33DNNEAZ32YJC1WSYHSZ
 created: 2026-11-28T09:16:59.701926Z
-updated: 2026-11-28T09:49:14.328115Z
+updated: 2026-11-28T12:27:45.4226Z
 type: task
 title: 'PowerShell scripts: generators that run in Compass, turning inputs into values for later steps, or into a SQL command or API call Compass sends'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain.** After the sealed-off runner (COM-2230) and the Web/API action integration (COM-2227). ADR COM-2225.
 
