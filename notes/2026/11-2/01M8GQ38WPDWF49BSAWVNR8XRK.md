@@ -1,7 +1,7 @@
 ---
 id: 01M8GQ38WPDWF49BSAWVNR8XRK
 created: 2026-11-28T09:17:05.302924Z
-updated: 2026-11-28T14:22:01.516075Z
+updated: 2026-11-28T14:22:02.43369Z
 type: task
 title: 'Python scripts: generators that run in Compass, turning inputs into values for later steps, or into a SQL command or API call Compass sends'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -18,7 +18,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **On the chain.** After PowerShell (COM-2231), with the same shape. ADR COM-2225.
 
