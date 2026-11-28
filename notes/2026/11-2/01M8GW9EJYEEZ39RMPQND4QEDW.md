@@ -1,17 +1,33 @@
 ---
 id: 01M8GW9EJYEEZ39RMPQND4QEDW
 created: 2026-11-28T10:47:50.622895Z
-updated: 2026-11-28T14:04:19.125695Z
+updated: 2026-11-28T14:46:37.402152Z
 type: task
 title: 'Polaris helps with scripting: knows it exists, reads action integrations, drafts scripts and script workflows for a person to save, previews; never publishes or runs'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2237
 sprint: s09wwd3
+comments:
+- id: 01M8H9YME9KTCK6SM2QB3N05E1
+  author: Steve Vine
+  at: 2026-11-28T14:46:36.233232Z
+  text: |-
+    Done in PR #2245 (merged). Polaris can now help with scripting. What it does:
+    - Lists the action integrations: each one's kind, where it connects, its owner, its last Test and the scripts that use it. Never a password or key.
+    - Drafts a script (SQL, PowerShell or Python) from a description. The draft is checked as the script editor checks it (an undeclared @name is refused), then held for a week behind a link. The link opens New script already filled in, with a note "Drafted by Polaris… nothing is saved until you do". A Script Manager reads it, changes it, saves it and publishes it.
+    - Previews exactly what a script would send for given values.
+    - Tries a PowerShell or Python script (Script Managers only): it shows what it would send or hand back, and sends nothing.
+    - Explains a failed run: what was sent, what the system answered, and that a Script Manager can Retry it or mark it dealt with.
+    - Reads the Event log ("what alerts were logged this week?").
+    - Helps draft an After a joiner workflow that runs a script: it lists what the trigger hands on and what earlier steps output, so the inputs can be mapped (including lists and lookups), and knows Log Event.
+    - Tests an access workflow against someone a past request was for. Nothing runs.
+    What it refuses: publishing, Run now, Retry, marking a run dealt with, carrying on without a held before-script, enabling a workflow, and adding or changing an action integration. Compass itself refuses each of these when the request comes through Polaris, so it can't be talked round. Polaris says who does it, on which page.
+    Checked in a test through Polaris: the list, a draft (and a refused one), opening and saving the draft, the preview, the Event log, and every refusal.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **On the chain** (new MCP tools). After the Scripting phase 2 ADR (COM-2225 §8, the decision ADR 0185 left for later). Raised by Steve on 28 Nov 2026: does the MCP have what Polaris needs to help with scripting? Today it can only read scripts and runs (COM-2199).
 
