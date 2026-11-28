@@ -1,7 +1,7 @@
 ---
 id: 01M8GQ3GGDGM2Z6Y6VFCDJ945T
 created: 2026-11-28T09:17:13.101638Z
-updated: 2026-11-28T09:57:30.675939Z
+updated: 2026-11-28T13:26:14.949692Z
 type: task
 title: 'Workflow action Log Event: free text with values picked from the workflow, and a type the person chooses (Info, Warning, Alert), written to the Event log'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 **On the chain.** After the Event log (COM-2234) and the Scripting phase 2 ADR (COM-2225). Steve, 28 Nov 2026: "Log Event", replacing the "Raise Alert" first suggested, with the person deciding the type.
 
