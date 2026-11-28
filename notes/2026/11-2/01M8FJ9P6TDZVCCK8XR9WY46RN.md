@@ -1,7 +1,7 @@
 ---
 id: 01M8FJ9P6TDZVCCK8XR9WY46RN
 created: 2026-11-27T22:33:58.234473Z
-updated: 2026-11-27T22:35:12.450349Z
+updated: 2026-11-28T08:23:24.139247Z
 type: task
 title: 'Staging test data for software matching: a test-rig server pinned to a package with a published fix, so exact matching, automatic raising and closing can be seen end to end in the E2E Test Company'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - chore
 priority: medium
-task_status: todo
+task_status: active
 ---
 **Independent** (staging rig and test data; no migration or API). ADR 0188. After COM-2215; builds on the Server Agent rig (COM-2208).
 
