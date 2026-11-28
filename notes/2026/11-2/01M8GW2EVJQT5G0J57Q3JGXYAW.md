@@ -1,17 +1,27 @@
 ---
 id: 01M8GW2EVJQT5G0J57Q3JGXYAW
 created: 2026-11-28T10:44:01.522958Z
-updated: 2026-11-28T13:43:37.82002Z
+updated: 2026-11-28T14:29:39.772254Z
 type: task
 title: 'Scripts read a document''s named list: a List input for PowerShell and Python, and a single lookup from a list to fill any script''s input'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2236
 sprint: s09wwd3
+comments:
+- id: 01M8H8ZK8B0WSTK8G8XKEQBQK6
+  author: Steve Vine
+  at: 2026-11-28T14:29:39.210847Z
+  text: |-
+    Done in PR #2244 (merged). Scripts can now use a document's named lists (the tables marked as lists in Content):
+    - **List input** (PowerShell and Python): a new input type. The script gets the whole list: every row, each with its reference and columns. The input is filled from the latest published version of whichever document and list a workflow or Run now chooses (a picker shows each published document's lists). Under the ADR, the list's values count as the script's own text when checking what it would send, so a table or column name looked up in the list may appear in the generated SQL.
+    - **Lookup** (any script, including SQL): a new source for a single input's value in a workflow's Run script mapping. Choose the document and list, the column to match, what to match it against (a trigger value or an earlier step's output), and the column to take. For example, find the row whose Department is the joiner's department and take its "CRM role". If nothing matches, the run fails, saying what it looked for.
+    - Each run records the document, list and version it used, so it can be shown what a run read.
+    Checked in tests against a real database: a list read in full, a lookup that found its row, one that didn't, and a list value allowed in the SQL a Python script generated.
 assignee: steve
 label:
 - feature
 priority: medium
-task_status: active
+task_status: review
 ---
 **On the chain.** After the Scripting phase 2 ADR (COM-2225) and PowerShell (COM-2231). Raised by Steve on 28 Nov 2026: refer to a lookup table kept in Content from a script.
 
