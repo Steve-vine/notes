@@ -1,7 +1,7 @@
 ---
 id: 01M8GQ27P6XK2R4YMHKVP8BCAR
 created: 2026-11-28T09:16:31.302973Z
-updated: 2026-11-28T09:49:24.431612Z
+updated: 2026-11-28T11:14:53.662673Z
 type: task
 title: 'Action integration of the Web/API family: a web service scripts can change things in, signed in the ways a Collection integration can be'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain.** After the Scripting phase 2 ADR (COM-2225) and the Web/API-or-Server task (COM-2226).
 
