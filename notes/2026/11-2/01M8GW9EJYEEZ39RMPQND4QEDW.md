@@ -1,7 +1,7 @@
 ---
 id: 01M8GW9EJYEEZ39RMPQND4QEDW
 created: 2026-11-28T10:47:50.622895Z
-updated: 2026-11-28T10:47:54.176454Z
+updated: 2026-11-28T14:04:19.125695Z
 type: task
 title: 'Polaris helps with scripting: knows it exists, reads action integrations, drafts scripts and script workflows for a person to save, previews; never publishes or runs'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 **On the chain** (new MCP tools). After the Scripting phase 2 ADR (COM-2225 §8, the decision ADR 0185 left for later). Raised by Steve on 28 Nov 2026: does the MCP have what Polaris needs to help with scripting? Today it can only read scripts and runs (COM-2199).
 
