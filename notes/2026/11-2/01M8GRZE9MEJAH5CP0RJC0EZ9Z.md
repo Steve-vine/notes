@@ -1,7 +1,7 @@
 ---
 id: 01M8GRZE9MEJAH5CP0RJC0EZ9Z
 created: 2026-11-28T09:49:56.916459Z
-updated: 2026-11-28T09:50:02.938971Z
+updated: 2026-11-28T13:13:28.784168Z
 type: task
 title: 'Scripts and workflows write to the Event log: runs succeeded or failed, retried or dealt with, scripts published or retired, workflows enabled or disabled'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 **On the chain.** After the Event log task. ADR COM-2225 settles the list; this is the proposal.
 
