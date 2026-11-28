@@ -1,7 +1,7 @@
 ---
 id: 01M8FJ6WWYRSH35JCPA2QYF6H3
 created: 2026-11-27T22:32:26.782728Z
-updated: 2026-11-28T02:51:14.773054Z
+updated: 2026-11-28T06:56:50.313264Z
 type: task
 title: 'The Security Feed checks each server''s own version: "Everything we run" compares the exact version discovered on every server, and a match names each server with its version'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -10,11 +10,33 @@ sprint: s51yxk5
 blocked_by:
 - 01M8FJ6FP65A48HF2SCP8MPF4K
 - 01M8FATKBRPVSNTVEM5E7C89ZT
+comments:
+- id: 01M8GF2E1X8JJ4GTTXTHJQQW1R
+  author: Steve Vine
+  at: 2026-11-28T06:56:49.213008Z
+  text: |-
+    Built: PR #2224, merged to main (not on staging yet; it goes with the sprints' deploy).
+
+    What's there:
+    - On a Security Feed item that matches "Everything we run", each system shows its own server's version and verdict: "AST-1 SRV01 — 129.0.6668.59 (affected; fixed in 130.0.6723.58)". The version comes from what discovery found on that server, agent or cloud.
+    - A server that reports no version uses the register's, marked "version from the Software register".
+    - Servers checked and not affected are listed last, greyed, so it's clear they were looked at.
+    - A server that discovery found running the software is named too, even if the register entry doesn't list it.
+    - If every server is on a fixed version, there's no match, whatever the register says.
+    - Raise offers only the affected servers.
+    - The Products tab shows "12 servers · 4 versions" under each entry's systems, and says matching uses each server's own version.
+    - When a read changes a version that a register entry claims, the company's matches are worked out again. One rematch is queued per company, held for five minutes.
+
+    One deliberate exception: a distribution's own Linux package (Ubuntu's PHP, say) isn't compared with NVD's ranges. Its version carries the distribution's backported fixes, so it would read affected for ever. It keeps the register's version until Linux exact matching (COM-2215) judges it by the distribution's own data.
+
+    Matches are still "possibly affects us" until a person confirms them.
+
+    For you to look at: on staging, a feed item for software the test servers report at two versions, once they're running.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (API). ADR 0188 (COM-2211). First build task of the sprint.
 
