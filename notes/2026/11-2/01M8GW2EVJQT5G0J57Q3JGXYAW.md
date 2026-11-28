@@ -1,7 +1,7 @@
 ---
 id: 01M8GW2EVJQT5G0J57Q3JGXYAW
 created: 2026-11-28T10:44:01.522958Z
-updated: 2026-11-28T10:44:05.094879Z
+updated: 2026-11-28T13:43:37.82002Z
 type: task
 title: 'Scripts read a document''s named list: a List input for PowerShell and Python, and a single lookup from a list to fill any script''s input'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 **On the chain.** After the Scripting phase 2 ADR (COM-2225) and PowerShell (COM-2231). Raised by Steve on 28 Nov 2026: refer to a lookup table kept in Content from a script.
 
