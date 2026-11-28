@@ -1,7 +1,7 @@
 ---
 id: 01M8FAVGBYEAE17CNZBWV1KZEE
 created: 2026-11-27T20:23:53.470049Z
-updated: 2026-11-28T00:07:44.226796Z
+updated: 2026-11-28T01:57:21.114747Z
 type: task
 title: 'Server configuration checks: thirteen built-in checks modelled on the CIS Windows Server benchmark, run through the agent, with per-company settings, results per server, evidence on their controls and a gap when one fails'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,43 @@ number: 2207
 sprint: smfrbak
 blocked_by:
 - 01M8FATYW6WHD4TY9MEYW1K252
+comments:
+- id: 01M8FXY259PMBW31FXZ5H7B7NZ
+  author: Steve Vine
+  at: 2026-11-28T01:57:20.169616Z
+  text: |-
+    Built: PR #2220, merged to main (not on staging yet; it goes with the sprint's deploy).
+
+    What's there:
+    - Evidence Collection gets a "Server agent" group of 13 built-in checks, CHB-13 to CHB-25:
+      - system drive encrypted;
+      - host firewall on;
+      - SMBv1 off;
+      - Guest disabled;
+      - only allowed local administrators;
+      - minimum password length (14);
+      - account lockout (10 attempts);
+      - Remote Desktop requires NLA;
+      - Microsoft Defender on with signatures no more than 7 days old;
+      - TLS 1.0/1.1 off;
+      - Print Spooler off;
+      - an update within the company's days;
+      - coverage: every server the directory found reports through the agent.
+    - Each check is linked to the matching library control (for example the firewall check to END.7, patching to VUM.1).
+    - Each check judges every reporting server from what it last answered. A check fails if any server fails, and names those servers with what was seen ("Windows Firewall is off for the Public profile"). Results become evidence on the controls and raise gaps like every built-in check.
+    - A fact that can't be read is "Couldn't tell", never a pass. A Linux server isn't failed by Windows-only checks.
+    - Thresholds are set in each check's own settings. The allowed local administrators are listed on the server agent card, and each Windows server has a "Print server" switch (the Spooler check doesn't apply to it).
+    - A technology asset with such a server shows a Configuration card: every check, its result and what was seen.
+
+    For you to look at (Couldn't check for me, no Windows server on staging):
+    - Three facts have no osquery table and are read from Windows' local account database: Guest disabled, password length and lockout. Please run the agent on one real Windows server and compare those three results with what you know of it.
+    - Microsoft Defender is read from its service and registry, because Windows Server has no Security Center.
+    - The administrators check covers local accounts; domain membership is governed through Access Control.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (checks, settings, API). ADR 0187 §8. After COM-2206. Linux rules follow in COM-2210.
 
