@@ -1,7 +1,7 @@
 ---
 id: 01M8FJ9AFEMSNFME70S1WX6SVT
 created: 2026-11-27T22:33:46.222329Z
-updated: 2026-11-27T22:35:10.993597Z
+updated: 2026-11-28T07:57:14.904374Z
 type: task
 title: 'Patch level is judged by missing security fixes: a server is Behind when it''s missing a fix released more than the company''s days ago; the update-age check uses it, with last-update age as the fallback'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -14,7 +14,7 @@ assignee: steve
 label:
 - improvement
 priority: medium
-task_status: todo
+task_status: active
 ---
 **On the chain** (settings, checks, API). ADR 0188 (revises ADR 0187 §7). After COM-2216.
 
