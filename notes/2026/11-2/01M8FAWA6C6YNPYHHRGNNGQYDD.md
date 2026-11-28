@@ -1,7 +1,7 @@
 ---
 id: 01M8FAWA6C6YNPYHHRGNNGQYDD
 created: 2026-11-27T20:24:19.916627Z
-updated: 2026-11-27T20:25:28.101106Z
+updated: 2026-11-28T00:52:21.468906Z
 type: task
 title: 'Staging test rig and the production setup guide: an osquery agent in a container reporting to staging for the E2E Test Company, and the steps to publish the agent door in production'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - chore
 priority: medium
-task_status: todo
+task_status: active
 ---
 **Independent** (staging values, test rig, docs; no migration or API). ADR 0187 Consequences. After COM-2204 (needs the install script).
 
