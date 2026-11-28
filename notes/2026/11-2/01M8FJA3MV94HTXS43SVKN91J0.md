@@ -1,7 +1,7 @@
 ---
 id: 01M8FJA3MV94HTXS43SVKN91J0
 created: 2026-11-27T22:34:11.995764Z
-updated: 2026-11-27T22:35:13.094651Z
+updated: 2026-11-28T08:11:37.952781Z
 type: task
 title: 'Polaris knows which servers are missing which fixes: "which servers are exposed to CVE-2026-1234?", "what''s SRV01 missing?", "which exploited CVEs are we missing fixes for?"'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: medium
-task_status: todo
+task_status: active
 ---
 **On the chain** (chat tools reading the new results). ADR 0188. After COM-2217.
 
