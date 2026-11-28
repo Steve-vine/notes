@@ -1,17 +1,34 @@
 ---
 id: 01M8GRZ7GJ21N0GEESWV09P8NG
 created: 2026-11-28T09:49:49.970815Z
-updated: 2026-11-28T13:00:05.169852Z
+updated: 2026-11-28T14:23:41.81703Z
 type: task
 title: 'The Event log: a record of what happens in Compass (time, type Info/Warning/Alert, entity, detail), kept in OpenTelemetry JSON so it can be sent to Datadog later'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2234
 sprint: s09wwd3
+comments:
+- id: 01M8H8MNHYK0EC026MWA8H4E41
+  author: Steve Vine
+  at: 2026-11-28T14:23:41.118693Z
+  text: |-
+    Done in PR #2241 (merged). Admin ▸ Event log is a new page, after Activity in the menu. Events are listed newest first, each with:
+    - when it happened;
+    - its type (Info, Warning or Alert, each a coloured pill);
+    - what it's about, linked where Compass has a page for it;
+    - the detail;
+    - its company;
+    - who or what caused it.
+    You can filter by type, by what it's about, by company and by dates, and search the words. Opening an event shows its full record. Export downloads the filtered events as JSON lines, one event per line.
+    Each event is kept in the OpenTelemetry log format: severity INFO 9, WARN 13, ALERT 21, plus event.name, entity.type/id/name, compass.company.id and compass.actor, with service.name=compass. That way it can be sent to Datadog later as it is (sending isn't part of this task).
+    Nothing can change or delete an event, Admin included. An event is written only once the work behind it is saved, and writing one never fails that work.
+    Who can read it: whoever can see the Activity log. Compass doesn't limit people to particular companies, so they see every company's events, as with the Activity log.
+    Polaris reads it with COM-2237.
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (a new table and API). After the Scripting phase 2 ADR (COM-2225). Steve, 28 Nov 2026: Compass has no event log today. The Activity log records changes people make to records; this records what happens.
 
