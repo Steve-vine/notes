@@ -1,7 +1,7 @@
 ---
 id: 01M8FH3GY56ZX1EJHRGMFC3Z32
 created: 2026-11-27T22:13:07.653442Z
-updated: 2026-11-28T00:29:13.041381Z
+updated: 2026-11-28T02:15:05.432965Z
 type: task
 title: 'Linux server configuration checks: built-in checks modelled on the CIS Linux benchmarks (SSH, accounts, firewall, services, SELinux/AppArmor, audit, time, kernel), sharing the cross-platform checks with Windows'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -9,11 +9,40 @@ number: 2210
 sprint: smfrbak
 blocked_by:
 - 01M8FAVGBYEAE17CNZBWV1KZEE
+comments:
+- id: 01M8FYYHHBHRR2PJ5EG3QHZJQ3
+  author: Steve Vine
+  at: 2026-11-28T02:15:04.491301Z
+  text: |-
+    Built: PR #2221, merged to main (not on staging yet; it goes with the sprint's deploy).
+
+    What's there:
+    - Nine Linux checks join the Server agent group, CHB-26 to CHB-34:
+      - SSH doesn't let root sign in (a setting allows root by key; off by default);
+      - SSH doesn't allow password sign-in;
+      - only root has user ID 0;
+      - no empty passwords;
+      - no telnet, rsh, TFTP or plain FTP;
+      - SELinux or AppArmor enforcing;
+      - the audit daemon running;
+      - time synchronisation running;
+      - kernel hardening (full address randomisation; IP forwarding off unless the server is marked a router).
+    - The shared checks now judge Linux too: host firewall (firewalld, nftables or iptables rules), administrators (sudo, wheel and admin members and sudoers rules, against an allowed Linux list on the agent card), and updates.
+    - A Linux server never fails a Windows-only check, and the other way round.
+
+    Two things differ from the task, because osquery can't read them:
+    - Linux password length (pwquality) has no reader in osquery, so that check reads "Couldn't tell" on Linux. SSH password sign-in is checked instead, which is the bigger risk.
+    - On a server whose SSH settings come from drop-in files (Ubuntu's sshd_config.d), the agent can't read them, so the two SSH checks read "Couldn't tell" rather than risk a false pass. I found this by running every query against real osquery on a real Ubuntu machine before writing the rules.
+
+    Disk encryption isn't checked on Linux, as planned (my call; say if you want it).
+
+    For you to look at:
+    - One real Linux server's results (Couldn't check for me beyond the staging test servers).
 assignee: steve
 label:
 - feature
 priority: high
-task_status: active
+task_status: review
 ---
 **On the chain** (checks, settings, API). ADR 0187 §8 (as amended for Linux). After COM-2207. Steve, 27 Nov 2026: "add configuration checks for Linux."
 
