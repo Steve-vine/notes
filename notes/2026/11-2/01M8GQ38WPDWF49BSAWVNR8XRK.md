@@ -1,12 +1,19 @@
 ---
 id: 01M8GQ38WPDWF49BSAWVNR8XRK
 created: 2026-11-28T09:17:05.302924Z
-updated: 2026-11-28T12:51:58.449687Z
+updated: 2026-11-28T14:22:01.516075Z
 type: task
 title: 'Python scripts: generators that run in Compass, turning inputs into values for later steps, or into a SQL command or API call Compass sends'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2232
 sprint: s09wwd3
+comments:
+- id: 01M8H8HM9C1ED40T08EGZ31M7J
+  author: Steve Vine
+  at: 2026-11-28T14:22:01.515927Z
+  text: |-
+    Done in PR #2240 (merged). A script's language can be Python, with Python highlighting. Inputs arrive as inputs["DisplayName"], and the script ends with return {...}. It returns values, or {sql, parameters} for a SQL Server database, or {method, path, query, body} for a web service. A syntax error is refused when you save, with its line. It runs sealed off like PowerShell: standard library only, no network, no credentials. Everything else is shared with PowerShell (COM-2231): the rule check, sending, Try it, the run showing exactly what was sent, and hidden values as "(hidden)".
+    Tested end to end through the API against a real SQL Server: "Ada Lovelace" became "ada.lovelace" and the INSERT was built. Try it (Script Managers only) showed the command, with the hidden value hidden, and nothing was sent: the table stayed empty. Run now sent it, handed back the new ID, and the run showed the command as sent.
 assignee: steve
 label:
 - feature
