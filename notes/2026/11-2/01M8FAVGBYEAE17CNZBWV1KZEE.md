@@ -1,7 +1,7 @@
 ---
 id: 01M8FAVGBYEAE17CNZBWV1KZEE
 created: 2026-11-27T20:23:53.470049Z
-updated: 2026-11-27T22:13:31.886084Z
+updated: 2026-11-28T00:07:44.226796Z
 type: task
 title: 'Server configuration checks: thirteen built-in checks modelled on the CIS Windows Server benchmark, run through the agent, with per-company settings, results per server, evidence on their controls and a gap when one fails'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -13,7 +13,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain** (checks, settings, API). ADR 0187 §8. After COM-2206. Linux rules follow in COM-2210.
 
