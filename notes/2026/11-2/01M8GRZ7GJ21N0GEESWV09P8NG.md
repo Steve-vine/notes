@@ -1,7 +1,7 @@
 ---
 id: 01M8GRZ7GJ21N0GEESWV09P8NG
 created: 2026-11-28T09:49:49.970815Z
-updated: 2026-11-28T09:49:59.772164Z
+updated: 2026-11-28T13:00:05.169852Z
 type: task
 title: 'The Event log: a record of what happens in Compass (time, type Info/Warning/Alert, entity, detail), kept in OpenTelemetry JSON so it can be sent to Datadog later'
 project: 01KXGC5PTGYHV30VM3E78G76S1
@@ -11,7 +11,7 @@ assignee: steve
 label:
 - feature
 priority: high
-task_status: todo
+task_status: active
 ---
 **On the chain** (a new table and API). After the Scripting phase 2 ADR (COM-2225). Steve, 28 Nov 2026: Compass has no event log today. The Activity log records changes people make to records; this records what happens.
 
