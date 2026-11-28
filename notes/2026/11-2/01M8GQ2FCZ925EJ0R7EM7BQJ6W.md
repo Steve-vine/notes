@@ -1,15 +1,17 @@
 ---
 id: 01M8GQ2FCZ925EJ0R7EM7BQJ6W
 created: 2026-11-28T09:16:39.199926Z
-updated: 2026-11-28T09:16:39.199926Z
+updated: 2026-11-28T09:50:03.2438Z
 type: task
 title: 'Collection integration of the Server family: a SQL Server database read with a login Compass proves can''t write; a check is a SELECT'
-task_status: todo
-label: feature
-assignee: steve
-priority: medium
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2228
+sprint: s09wwd3
+assignee: steve
+label:
+- feature
+priority: medium
+task_status: todo
 ---
 **On the chain.** After the Scripting phase 2 ADR and the Web/API-or-Server task. ADR 0154 (evidence reads only through credentials that can't change anything).
 

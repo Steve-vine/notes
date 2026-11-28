@@ -1,15 +1,17 @@
 ---
 id: 01M8GQ21FYBV4W1AK1GYSTRJE9
 created: 2026-11-28T09:16:24.958786Z
-updated: 2026-11-28T09:16:24.958786Z
+updated: 2026-11-28T09:50:02.97851Z
 type: task
 title: Adding an integration asks Web/API or Server first, on the Collection and Action tabs alike
-task_status: todo
-priority: high
-assignee: steve
-label: feature
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2226
+sprint: s09wwd3
+assignee: steve
+label:
+- feature
+priority: high
+task_status: todo
 ---
 **On the chain** (integration kinds in the API). After the Scripting phase 2 ADR.
 

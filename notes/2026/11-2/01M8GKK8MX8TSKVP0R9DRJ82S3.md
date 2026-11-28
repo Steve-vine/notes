@@ -1,12 +1,12 @@
 ---
 id: 01M8GKK8MX8TSKVP0R9DRJ82S3
 created: 2026-11-28T08:15:55.037388Z
-updated: 2026-11-28T08:15:57.916389Z
+updated: 2026-11-28T09:50:05.564876Z
 type: task
 title: 'The script editor is hard to read in dark mode: its text colours are light mode''s'
 project: 01KXGC5PTGYHV30VM3E78G76S1
 number: 2224
-sprint: snt3b17
+sprint: s09wwd3
 assignee: steve
 label:
 - bug
